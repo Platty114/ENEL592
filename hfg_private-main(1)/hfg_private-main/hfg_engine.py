@@ -4,7 +4,7 @@ import warnings
 from codetiming import Timer
 import os
 import pyslang as ps
-assert ps.__version__ == "3.0.310"
+assert ps.__version__ == "3.0.0"
 
 import pickle
 import codecs
