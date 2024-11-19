@@ -4,6 +4,7 @@
 
 module test_00 (
     input  i_clk,
+    input  a_test_signal,
     input  i_rst,
     input  i_a,
     input  i_b,
@@ -32,7 +33,7 @@ always @(posedge i_clk) begin
         reg_b <= 1'b0;
         reg_c <= 2'b00;
     end else begin
-        reg_a <= i_a;
+        reg_a <= a_test_signal;
         reg_b <= i_b;
         reg_c[i_c] <= i_c ? 0 : 
                       i_a ? 0 : 1;
