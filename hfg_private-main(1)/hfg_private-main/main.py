@@ -17,18 +17,38 @@ for curr_flist, curr_pkl in demos:
 #Leave this set to 2 for proper execution of the cells below
 demo_index = 0
 
-demo_hfg_a = HFG(os.path.join(path_to_flist_dir, "test_1234.f")) #Build HFG from scratch using RTL 
-#demo_hfg_b = HFG("", i_fp_to_hfg_pickle_file=demos[demo_index][1])      #Build HFG from saved pickle/serialization file
+demo_hfg_a = HFG(os.path.join(path_to_flist_dir, "cwe-1231.f")) #Build HFG from scratch using RTL 
 
-#assert demo_hfg_a == demo_hfg_b
+demo_hfg_b = HFG(os.path.join(path_to_flist_dir, "cwe-1231_fixed.f")) #Build HFG from scratch using RTL 
 
+print("--------hfg_a_signals--------")
 print(demo_hfg_a.get_signals())
+print("--------hfg_b_signals--------")
+print(demo_hfg_b.get_signals())
 
-results_a_sigs, results_a_path_to_sigs = demo_hfg_a.get_descendant_signals_and_paths("Locked_register_example.debug_unlocked", False)
-pprint(results_a_sigs)
-pprint(results_a_path_to_sigs)
+
+for signal_name in demo_hfg_a.get_signals():
+    print("++++++++" + signal_name + "+++++++")
+    results_a_sigs, results_a_path_to_sigs = demo_hfg_a.get_descendant_signals_and_paths(signal_name, False)
+#pprint(results_a_sigs)
+#pprint(results_a_path_to_sigs)
 #print(HFGEdge(demo_hfg_a.__hfg__['Locked_register_example.debug_unlocked']['Locked_register_example.Data_out'][0]))
-for i in results_a_path_to_sigs:
-    print("---------")
-    for j in i:
-        print(j)
+    for i in results_a_path_to_sigs:
+        print("---------")
+        for j in i:
+            print(j)
+
+print("========PATCHED FLOWS========")
+for signal_name in demo_hfg_b.get_signals():
+    print("++++++++" + signal_name + "+++++++")
+    results_b_sigs, results_b_path_to_sigs = demo_hfg_b.get_descendant_signals_and_paths(signal_name, False)
+#pprint(results_a_sigs)
+#pprint(results_a_path_to_sigs)
+#print(HFGEdge(demo_hfg_a.__hfg__['Locked_register_example.debug_unlocked']['Locked_register_example.Data_out'][0]))
+    for i in results_b_path_to_sigs:
+        print("---------")
+        for j in i:
+            print(j)
+
+
+
