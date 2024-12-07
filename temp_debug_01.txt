@@ -1,0 +1,19 @@
+Syntax Tree #1
+	START###########################################
+		l_ids: [232]
+		r_ids: []
+		cwe_1231_fixed.rst_ni --I--> cwe_1231_fixed.reglk_mem
+		cwe_1231_fixed.jtag_unlock --I--> cwe_1231_fixed.reglk_mem
+	END#############################################
+	START###########################################
+		l_ids: [209]
+		r_ids: [224]
+		[nid = 224] j
+		[('~(rst_ni && ~jtag_unlock)', True)]
+		j=j+1
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_1231_fixed.j --E--> cwe_1231_fixed.j
+
+		cwe_1231_fixed.rst_ni --I--> cwe_1231_fixed.j
+		cwe_1231_fixed.jtag_unlock --I--> cwe_1231_fixed.j
+	END#############################################

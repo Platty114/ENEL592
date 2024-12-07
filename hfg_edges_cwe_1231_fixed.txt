@@ -1,0 +1,85 @@
+┌──────────────────────────────┐
+│  HyperFlow Graph Edge Info.  │
+├──────────────────────────────┤
+╞═ HFG Edge/Flow ID           ═╪═ 0
+╞═ HFG Edge/Flow Type         ═╪═ 'Implicit'
+╞═ Necessary Conditions       ═╪═ []
+╞═ Source      Signal (Head)  ═╪═ 'cwe_1231_fixed.rst_ni'
+╞═ Destination Signal (Tail)  ═╪═ 'cwe_1231_fixed.reglk_mem'
+╞═ Source Assignment (SA)     ═╪═ "reglk_mem[j] <= 'h0"
+╞═ SA Location - Start File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - Start Line   ═╪═ 24
+╞═ SA Location - Start Column ═╪═ 11
+╞═ SA Location - End   File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - End   Line   ═╪═ 24
+╞═ SA Location - End   Column ═╪═ 30
+└──────────────────────────────┘
+
+┌──────────────────────────────┐
+│  HyperFlow Graph Edge Info.  │
+├──────────────────────────────┤
+╞═ HFG Edge/Flow ID           ═╪═ 1
+╞═ HFG Edge/Flow Type         ═╪═ 'Implicit'
+╞═ Necessary Conditions       ═╪═ []
+╞═ Source      Signal (Head)  ═╪═ 'cwe_1231_fixed.jtag_unlock'
+╞═ Destination Signal (Tail)  ═╪═ 'cwe_1231_fixed.reglk_mem'
+╞═ Source Assignment (SA)     ═╪═ "reglk_mem[j] <= 'h0"
+╞═ SA Location - Start File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - Start Line   ═╪═ 24
+╞═ SA Location - Start Column ═╪═ 11
+╞═ SA Location - End   File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - End   Line   ═╪═ 24
+╞═ SA Location - End   Column ═╪═ 30
+└──────────────────────────────┘
+
+┌──────────────────────────────┐
+│  HyperFlow Graph Edge Info.  │
+├──────────────────────────────┤
+╞═ HFG Edge/Flow ID           ═╪═ 2
+╞═ HFG Edge/Flow Type         ═╪═ 'Explicit'
+╞═ Necessary Conditions       ═╪═ [('~(rst_ni && ~jtag_unlock)', True)]
+╞═ Source      Signal (Head)  ═╪═ 'cwe_1231_fixed.j'
+╞═ Destination Signal (Tail)  ═╪═ 'cwe_1231_fixed.j'
+╞═ Source Assignment (SA)     ═╪═ 'j=j+1'
+╞═ SA Location - Start File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - Start Line   ═╪═ 23
+╞═ SA Location - Start Column ═╪═ 32
+╞═ SA Location - End   File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - End   Line   ═╪═ 23
+╞═ SA Location - End   Column ═╪═ 37
+└──────────────────────────────┘
+
+┌──────────────────────────────┐
+│  HyperFlow Graph Edge Info.  │
+├──────────────────────────────┤
+╞═ HFG Edge/Flow ID           ═╪═ 3
+╞═ HFG Edge/Flow Type         ═╪═ 'Implicit'
+╞═ Necessary Conditions       ═╪═ []
+╞═ Source      Signal (Head)  ═╪═ 'cwe_1231_fixed.rst_ni'
+╞═ Destination Signal (Tail)  ═╪═ 'cwe_1231_fixed.j'
+╞═ Source Assignment (SA)     ═╪═ 'j=j+1'
+╞═ SA Location - Start File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - Start Line   ═╪═ 23
+╞═ SA Location - Start Column ═╪═ 32
+╞═ SA Location - End   File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - End   Line   ═╪═ 23
+╞═ SA Location - End   Column ═╪═ 37
+└──────────────────────────────┘
+
+┌──────────────────────────────┐
+│  HyperFlow Graph Edge Info.  │
+├──────────────────────────────┤
+╞═ HFG Edge/Flow ID           ═╪═ 4
+╞═ HFG Edge/Flow Type         ═╪═ 'Implicit'
+╞═ Necessary Conditions       ═╪═ []
+╞═ Source      Signal (Head)  ═╪═ 'cwe_1231_fixed.jtag_unlock'
+╞═ Destination Signal (Tail)  ═╪═ 'cwe_1231_fixed.j'
+╞═ Source Assignment (SA)     ═╪═ 'j=j+1'
+╞═ SA Location - Start File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - Start Line   ═╪═ 23
+╞═ SA Location - Start Column ═╪═ 32
+╞═ SA Location - End   File   ═╪═ 'src/rtl/example_vulnerabilities/cwe-1231_fixed.sv'
+╞═ SA Location - End   Line   ═╪═ 23
+╞═ SA Location - End   Column ═╪═ 37
+└──────────────────────────────┘
+
