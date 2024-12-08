@@ -1,7 +1,7 @@
 import os
 from pprint import pprint
 from hfg_engine import HFG, HFGEdge
-from detection_engine import compare_vuln_to_patched
+from detection_engine import setup_vuln_detection 
 
 path_to_flist_dir = "./flists"
 demos = [
@@ -27,4 +27,4 @@ print("--------hfg_b_signals--------")
 print(pathced_module.get_signals())
 
 #compared vulnerable module to patched module
-compare_vuln_to_patched(vulnerable_module, pathced_module)
+setup_vuln_detection(vulnerable_module, pathced_module)
