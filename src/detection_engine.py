@@ -91,19 +91,49 @@ def compare_path_sets(vulnerable_paths, patched_paths, common_paths):
 
 
 def compare_flows(patched_flow, vuln_flows):
-    print(patched_flow)
+    #print(patched_flow)
+    #for edge in patched_flow:
+        #print(edge)
     print("-----------\n")
     print(vuln_flows)
+    #for edges in vuln_flows:
+        #for edge in edges:
+            #print(edge)
     common = False
+    num_com_edges = 0
+    num_com_edges_req = len(patched_flow)
+
+    for flow in vuln_flows:
+        for edge in flow:
+            print(num_com_edges)
+            #detect sequence of edges
+            if num_com_edges == num_com_edges_req:
+                print("here 1")
+                break
+            elif compare_edges(edge, patched_flow[num_com_edges]):
+                print("here2")
+                num_com_edges += 1
+            else:
+                num_com_edges = 0
+
+    if num_com_edges == num_com_edges_req:
+        common = True
     #each flow is an array of edges, need to see if the flows match
-     
+    print(common) 
     assert(True == False)
 
 
 
 
 
-
+def compare_edges(edge_1, edge_2):
+    print(edge_1)
+    print(edge_2)
+    if edge_1.type == edge_2.type and edge_1.conds == edge_2.conds  and edge_1.sa == edge_2.sa:
+        print("COMPARED = True")
+        return True 
+    print("COMPARED = False")
+    return False
 
 
 
