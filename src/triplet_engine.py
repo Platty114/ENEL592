@@ -5,7 +5,8 @@ from hfg_engine import HFG, HFGEdge
 #returns 3 lists of signal paths, ones that are in both,
 #ones that are only in the vulnerable hfg and ones
 #that are only in the patched hfg
-def create_vuln_triplets (vulnerable_hfg, patched_hfg, triplets):
+def create_vuln_triplets (vulnerable_hfg, patched_hfg):
+    triplets = {}
     common_paths = {}
     vulnerable_paths = {}
     patched_paths = {}
@@ -41,9 +42,11 @@ def create_vuln_triplets (vulnerable_hfg, patched_hfg, triplets):
     # now we need to go through and perform some sort of comparison 
     common_paths, patched_paths, vulnerable_paths = compare_path_sets(vulnerable_paths, patched_paths)
 
-    triplets["vulnerable"] = vulnerable_paths,
-    triplets["patched"] = patched_paths,
+    triplets["vulnerable"] = vulnerable_paths
+    triplets["patched"] = patched_paths
     triplets["common"] = common_paths 
+
+    return triplets
 
 #compares two sets of paths, returning three dictionaries. 
 # one contains the patched paths,

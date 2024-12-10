@@ -25,9 +25,7 @@ print(vulnerable_module.get_signals())
 print("--------hfg_b_signals--------")
 print(pathced_module.get_signals())
 
-triplets = {}
-
 #compared vulnerable module to patched module
-create_vuln_triplets(vulnerable_module, pathced_module, triplets)
+triplets = create_vuln_triplets(vulnerable_module, pathced_module)
 
 print(triplets)
