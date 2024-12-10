@@ -20,12 +20,9 @@ vulnerable_module = HFG(os.path.join(path_to_flist_dir, "cwe-1231.f"))
 #build an HFG for patched module
 pathced_module = HFG(os.path.join(path_to_flist_dir, "cwe-1231_fixed.f")) 
 
-print("--------hfg_a_signals--------")
-print(vulnerable_module.get_signals())
-print("--------hfg_b_signals--------")
-print(pathced_module.get_signals())
-
-#compared vulnerable module to patched module
+#generate triplets for the vulnerability
 triplets = create_vuln_triplets(vulnerable_module, pathced_module)
 
-print(triplets)
+design_hfg = HFG(os.path.join(path_to_flist_dir, "reglk_test.f"))
+
+print(design_hfg)
