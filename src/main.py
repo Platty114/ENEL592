@@ -3,7 +3,7 @@ from pprint import pprint
 from hfg_engine import HFG, HFGEdge
 from triplet_engine import create_vuln_triplets 
 from detection_engine import detect_vulnerability 
-path_to_flist_dir = "./flists"
+path_to_flist_dir = "./src/flists"
 demos = [
     ("test_00.f"            , "./hfg_edges_test_00.pkl"             ),
     ("test_01_FWRISC-MDS.f" , "./hfg_edges_fwrisc_mul_div_shift.pkl"),
@@ -23,6 +23,6 @@ pathced_module = HFG(os.path.join(path_to_flist_dir, "cwe-1231_fixed.f"))
 #generate triplets for the vulnerability
 triplets = create_vuln_triplets(vulnerable_module, pathced_module)
 
-design_hfg = HFG(os.path.join(path_to_flist_dir, "cwe-1231.f"))
+design_hfg = HFG(os.path.join(path_to_flist_dir, "cwe-1231_fixed.f"))
 
 detect_vulnerability(design_hfg, triplets)

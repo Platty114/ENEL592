@@ -109,6 +109,7 @@ def compare_flows(patched_flow, vuln_flows):
     num_com_edges_req = len(patched_flow)
 
     for flow in vuln_flows:
+        num_com_edges = 0
         for edge in flow:
             #detect sequence of edges
             if num_com_edges == num_com_edges_req:
@@ -117,6 +118,9 @@ def compare_flows(patched_flow, vuln_flows):
                 num_com_edges += 1
             else:
                 num_com_edges = 0
+        if num_com_edges == num_com_edges_req:
+                break
+
 
     #each flow is an array of edges, need to see if the flows match
     if num_com_edges == num_com_edges_req:

@@ -5,11 +5,12 @@ from triplet_engine import compare_flows
 # a design 
 def detect_vulnerability(design_hfg, triplet):
 
-    #for signal in triplet["vulnerable"]:
-    #    for flow in triplet["vulnerable"][signal]:
-    #        for edge in flow:
-    #            print(edge)
-    #        print("__________________________")
+    for signal in triplet["patched"]:
+       for flow in triplet["patched"][signal]:
+           for edge in flow:
+               print(edge)
+           print("__________________________")
+    print("======= end! ======= \n")
     #assert(True == False)
     design_signal_paths = {}
     
@@ -46,9 +47,7 @@ def detect_vulnerability(design_hfg, triplet):
                         vuln_flow,
                         design_signal_paths[module_name][signal_name]
                     ) == True:
-                        for edge in vuln_flow:
-                            print(edge)
-                        print("-----")
+                        
                         vulnerable_count += 1
                         
             if signal_name in triplet["patched"]:
@@ -57,6 +56,9 @@ def detect_vulnerability(design_hfg, triplet):
                         patch_flow, 
                         design_signal_paths[module_name][signal_name]
                     ) == True:
+                        for edge in patch_flow:
+                            print(edge)
+                        print("-----")
                         patched_count += 1
 
     print(vulnerable_count)
