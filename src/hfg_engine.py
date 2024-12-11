@@ -356,6 +356,8 @@ class VisitorForNode:
                 module_to_port_to_direction[self.node_id_to_node[module_decl_headers[i]].name.__str__().strip()] = dict()
 
             ports = self.extract_kinds_from_descendants(curr_nid, desired_kinds=[ps.SyntaxKind.ImplicitAnsiPort])
+            if len(ports) < 1:
+                print(curr_nid)
             assert len(ports) >= 1
             module_decl_header_ports.append(ports)
 

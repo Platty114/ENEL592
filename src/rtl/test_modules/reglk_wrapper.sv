@@ -16,19 +16,15 @@ module reglk_wrapper #(
            reglk_ctrl_i,
            acct_ctrl_i,
            reglk_ctrl_o,
-           axi_req_i, 
-           axi_resp_o,
            rst_9
        );
 
 
     input  logic                   clk_i;
-    input  logic                   rst_ni;
+    input  logic                   rst_ni; 
     input  logic                   jtag_unlock;
     input logic [7 :0]             reglk_ctrl_i; // register lock values
     input logic                    acct_ctrl_i;
-    input  ariane_axi::req_t       axi_req_i;
-    output ariane_axi::resp_t      axi_resp_o;
     output logic [8*NB_PERIPHERALS-1 :0]   reglk_ctrl_o; // register lock values
     input logic rst_9;
 
@@ -53,22 +49,8 @@ assign reglk_ctrl = reglk_ctrl_i;
     // -----------------------------
     // AXI Interface Logic
     // -----------------------------
-    axi_lite_interface #(
-        .AXI_ADDR_WIDTH ( AXI_ADDR_WIDTH ),
-        .AXI_DATA_WIDTH ( AXI_DATA_WIDTH ),
-        .AXI_ID_WIDTH   ( AXI_ID_WIDTH    )
-    ) axi_lite_interface_i (
-        .clk_i      ( clk_i      ),
-        .rst_ni     ( rst_ni     ),
-        .axi_req_i  ( axi_req_i  ),
-        .axi_resp_o ( axi_resp_o ),
-        .address_o  ( address    ),
-        .en_o       ( en_acct    ),
-        .we_o       ( we         ),
-        .data_i     ( rdata      ),
-        .data_o     ( wdata      )
-    );
-
+    
+    
     assign en = en_acct && acct_ctrl_i; 
 
 ///////////////////////////////////////////////////////////////////////////
