@@ -3,6 +3,7 @@ from pprint import pprint
 from hfg_engine import HFG, HFGEdge
 from triplet_engine import create_vuln_triplets 
 from detection_engine import detect_vulnerability 
+from stats_engine import generate_triplet_statistics, display_module_stats
 path_to_flist_dir = "./src/flists"
 demos = [
     ("test_00.f"            , "./hfg_edges_test_00.pkl"             ),
@@ -25,4 +26,8 @@ triplets = create_vuln_triplets(vulnerable_module, pathced_module)
 
 design_hfg = HFG(os.path.join(path_to_flist_dir, "reglk_test.f"))
 
-detect_vulnerability(design_hfg, triplets)
+vulnerability_data = detect_vulnerability(design_hfg, triplets)
+
+#generate statistics about the triplet and display both triplet and module data
+generate_triplet_statistics(triplets)
+display_module_stats(vulnerability_data)

@@ -4,14 +4,6 @@ from triplet_engine import compare_flows, determine_triplet_length
 # detects the presence of a unpatched vulnerability within
 # a design 
 def detect_vulnerability(design_hfg, triplet):
-
-    #for signal in triplet["patched"]:
-    #for flow in triplet["patched"][signal]:
-        #for edge in flow:
-            #print(edge)
-            #print("__________________________")
-    #print("======= end! ======= \n")
-    #assert(True == False)
     design_signal_paths = {}
     
     # build dictionary of descendant paths for each signal in the design 
@@ -30,22 +22,24 @@ def detect_vulnerability(design_hfg, triplet):
             design_signal_paths[module_name][signal_name].append(i)
 
     #determine the simularity to vulnerable or patched flows
-    #for module_name in design_signal_paths:
-    #    for signal_name in design_signal_paths[module_name]:
-    #        for flow in design_signal_paths[module_name][signal_name]:
-    #            for edge in flow:
-    #                print(edge)
-    #assert(True == False)
+
+    system_vulnerability_data = {}
+
     total_vuln_flows = determine_triplet_length(triplet["vulnerable"])
     total_patched_flows = determine_triplet_length(triplet["patched"])
     total_common_flows = determine_triplet_length(triplet["common"])
-    threshold_vuln = 0.0
-    threshold_patch = 0.0
-    threshould_common = 0.0
+
     for module_name in design_signal_paths:
+        
         num_vuln_flows = 0
         num_patched_flows = 0
         num_common_flows = 0
+        threshold_vuln = 0.0
+        threshold_patch = 0.0
+        threshould_common = 0.0
+
+        system_vulnerability_data[module_name] = {}
+
         for signal_name in design_signal_paths[module_name]:
             #now compare flows 
             if signal_name in triplet["vulnerable"]:
@@ -75,12 +69,15 @@ def detect_vulnerability(design_hfg, triplet):
         threshold_vuln = num_vuln_flows / total_vuln_flows
         threshold_patch = num_patched_flows / total_patched_flows
         threshold_common = num_common_flows / total_common_flows
+        vulnerability_found = False
         if (threshold_vuln > threshold_patch) and (threshold_common > 0.8):
-            print(module_name + " is vulnerable!")
-        else:
-            print(module_name + " is not vulnerable!")
+            vulnerability_found = True
 
-        print(threshold_vuln)
-        print(threshold_patch)
-        print(threshold_common)
-     
+        system_vulnerability_data[module_name]["vulnerability_threshold"] = threshold_vuln
+        system_vulnerability_data[module_name]["patched_threshold"] = threshold_patch
+        system_vulnerability_data[module_name]["common_threshold"] = threshold_common
+        system_vulnerability_data[module_name]["vulnerability_found"] = vulnerability_found
+
+
+    
+    return system_vulnerability_data
