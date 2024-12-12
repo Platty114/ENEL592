@@ -1,11 +1,16 @@
 module reglk_wrapper(
     input   logic         clk,
+    input   logic         clk_i,
+    input   logic         rst_ni,
+    input   logic         jtag_unlock,
+    input   logic         rst_9,
     input   logic         write_enable,
     input   logic [2:0]   mem_width,
     input   logic [31:0]  addr,
     input   logic [31:0]  write_data,
     output  logic [31:0]  read_data,
-    output  logic [31:0]  address_100
+    output  logic [31:0]  address_100,
+    output  logic [31:0]  reglk_mem [5:0]
 );
     //values for decoding memory read //write width
     localparam 
@@ -14,12 +19,6 @@ module reglk_wrapper(
         SIGNED_W  = 3'b010,
         USIGNED_B = 3'b100,
         USIGNED_H = 3'b101;
-    
-    logic         clk_i;
-    logic         rst_ni;
-    logic         jtag_unlock;
-    logic         rst_9;
-    logic [31:0]  reglk_mem [5:0];
 
     //create a memory cell that is 32 bits x 200  registers
     logic [31:0] data [199:0];

@@ -136,10 +136,10 @@ def compare_edges(edge_1, edge_2):
     types_match = edge_1.type == edge_2.type
     conds_match = edge_1.conds == edge_2.conds
     #TODO: make this less error prone
-    edge_1_src = edge_1.src_sig.split(".")[1]
-    edge_2_src = edge_2.src_sig.split(".")[1]
-    edge_1_dst = edge_1.dst_sig.split(".")[1]
-    edge_2_dst = edge_2.dst_sig.split(".")[1]
+    edge_1_src = edge_1.src_sig.rsplit(".", 1)[1]
+    edge_2_src = edge_2.src_sig.rsplit(".", 1)[1]
+    edge_1_dst = edge_1.dst_sig.rsplit(".", 1)[1]
+    edge_2_dst = edge_2.dst_sig.rsplit(".", 1)[1]
     srcs_match = edge_1_src == edge_2_src
     dsts_match = edge_1_dst == edge_2_dst
 
@@ -149,8 +149,14 @@ def compare_edges(edge_1, edge_2):
     return False
 
 
+#takes a triplet type (vulnerable, patched, common), returns the number of flows held within it
+def determine_triplet_length(triplet):
+    
+    triplet_length = 0
 
+    for signal_name in triplet:
+        triplet_length += len(triplet[signal_name])
 
-
+    return triplet_length
 
 
