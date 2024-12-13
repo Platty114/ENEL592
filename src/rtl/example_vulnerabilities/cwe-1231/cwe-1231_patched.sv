@@ -1,7 +1,7 @@
 //example for cwe-1231
 //patched
 
-module cwe_1231_fixed(
+module cwe_1231_patched(
   input logic clk_i,
   input logic rst_ni,
   input logic jtag_unlock,

@@ -29,6 +29,8 @@ def detect_vulnerability(design_hfg, triplet):
     total_patched_flows = determine_triplet_length(triplet["patched"])
     total_common_flows = determine_triplet_length(triplet["common"])
 
+    print(triplet)
+
     for module_name in design_signal_paths:
         
         num_vuln_flows = 0
@@ -70,7 +72,7 @@ def detect_vulnerability(design_hfg, triplet):
         threshold_patch = num_patched_flows / total_patched_flows
         threshold_common = num_common_flows / total_common_flows
         vulnerability_found = False
-        if (threshold_vuln > threshold_patch) and (threshold_common > 0.8):
+        if (threshold_vuln > threshold_patch) and (threshold_common > 0.4):
             vulnerability_found = True
 
         system_vulnerability_data[module_name]["vulnerability_threshold"] = threshold_vuln

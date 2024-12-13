@@ -13,14 +13,13 @@ module cwe_1232(
   output logic [31:0] reglk_mem [5:0]
 );
 
-  always @(posedge clk_i)
+  always_ff @(posedge clk_i)
   begin
     if(~(rst_ni && ~jtag_unlock && ~rst_9))
     begin
-      for (j=0; j < 6; j=j+1) begin
-      //solution: set the locks to 1
-      //reglk_mem[j] <= 'hffffffff;
-      reglk_mem[j] <= 'h0;
+      for (int j=0; j < 6; j=j+1) begin
+        reglk_mem[j] <= 'h0;
+      end
     end
   end
 

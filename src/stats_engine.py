@@ -1,18 +1,21 @@
+import os
 from hfg_engine import HFG, HFGEdge
+
+path_to_output_folder = "./output/"
 
 # calculates and presents statistics related to the given 
 # triplet set. Provides statistics such as the average length
 # of vulnerable, common and patched information flows,
 # the minimum length and the maximum length of each, as well as
 # the number of flows in each
-def generate_triplet_statistics(triplet):
+def triplet_statistics_as_string(triplet):
     triplet_stats = {
         "vulnerable": generate_flow_statistics(triplet["vulnerable"]),
         "patched": generate_flow_statistics(triplet["patched"]),
         "common": generate_flow_statistics(triplet["common"])
     }
 
-    display_triplet_statistics(triplet_stats) 
+    return create_triplet_statistics_string(triplet_stats) 
 
 # generates the minimum, max, and average number of flows, 
 # and total number for a given of infromation flows
@@ -46,29 +49,44 @@ def generate_flow_statistics(set_of_flows):
     }
 
 #displays the given triplet statistics
-def display_triplet_statistics(stats):
-
-    print("----------------------------")
+def create_triplet_statistics_string(stats):
+    string = ""
+    string += "----------------------------\n"
     for triplet_type in stats:
-        print("statistics for " + triplet_type + " flows:")
-        print("----------------------------")
+        string += "statistics for " + triplet_type + " flows:" + "\n"
+        string += "----------------------------\n"
         for data_point in stats[triplet_type]:
-            print(data_point + ": " + str(stats[triplet_type][data_point]))
-        print("----------------------------")
+            string += data_point + ": " + str(stats[triplet_type][data_point]) + "\n"
+        string += "----------------------------\n"
+
+    return string
 
 #display vulnerability_data for a given detection routine
-def display_module_stats(vulnerability_data):
-
-    print("----------------------------")
+def module_stats_as_string(vulnerability_data):
+    string = ""
+    string += "----------------------------\n"
     for module in vulnerability_data:
-        print("vulnerability statistics for " + module)
-        print("----------------------------")
+        string += "vulnerability statistics for " + module + "\n"
+        string += "----------------------------\n"
         for data_point in vulnerability_data[module]:
-            print(data_point + ": " + str(vulnerability_data[module][data_point]))
-        print("----------------------------")
+            string += data_point + ": " + str(vulnerability_data[module][data_point]) + "\n"
+        string += "----------------------------\n"
+
+    return string
 
 
 
+#writes a statistics_string to a file
+def write_statistics(statistics_string, file_name):
+
+    if not os.path.exists(path_to_output_folder):
+        os.makedirs(path_to_output_folder)
+
+    file = open(path_to_output_folder + file_name + ".txt", "w")
+
+    file.write(statistics_string)
+
+    file.close()
 
 
 

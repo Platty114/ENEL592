@@ -135,6 +135,7 @@ def compare_edges(edge_1, edge_2):
     #source signal and destination signal 
     types_match = edge_1.type == edge_2.type
     conds_match = edge_1.conds == edge_2.conds
+    sa_match = edge_1.sa == edge_2.sa
     #TODO: make this less error prone
     edge_1_src = edge_1.src_sig.rsplit(".", 1)[1]
     edge_2_src = edge_2.src_sig.rsplit(".", 1)[1]
@@ -143,7 +144,7 @@ def compare_edges(edge_1, edge_2):
     srcs_match = edge_1_src == edge_2_src
     dsts_match = edge_1_dst == edge_2_dst
 
-    if types_match and conds_match and srcs_match and dsts_match:
+    if types_match and conds_match and srcs_match and dsts_match and sa_match:
         return True 
     
     return False
