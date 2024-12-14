@@ -1,0 +1,25 @@
+----------------------------
+statistics for vulnerable flows:
+----------------------------
+min_flow_length: inf
+max_flow_length: 0
+avg_flow_length: 0.0
+total_num_flows: 0
+total_flow_length: 0
+----------------------------
+statistics for patched flows:
+----------------------------
+min_flow_length: 1
+max_flow_length: 0
+avg_flow_length: 1.0
+total_num_flows: 1
+total_flow_length: 1
+----------------------------
+statistics for common flows:
+----------------------------
+min_flow_length: 1
+max_flow_length: 2
+avg_flow_length: 1.1666666666666667
+total_num_flows: 6
+total_flow_length: 7
+----------------------------

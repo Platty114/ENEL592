@@ -1,0 +1,8 @@
+----------------------------
+vulnerability statistics for program_counter
+----------------------------
+vulnerability_threshold: 0.0
+patched_threshold: 0.0
+common_threshold: 1.0
+vulnerability_found: True
+----------------------------

@@ -1,0 +1,8 @@
+----------------------------
+vulnerability statistics for reg_file
+----------------------------
+vulnerability_threshold: 0.0
+patched_threshold: 0.0
+common_threshold: 0.0
+vulnerability_found: False
+----------------------------

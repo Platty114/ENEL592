@@ -68,11 +68,11 @@ def detect_vulnerability(design_hfg, triplet):
                     ) == True:
                         num_common_flows += 1.0
 
-        threshold_vuln = num_vuln_flows / total_vuln_flows
-        threshold_patch = num_patched_flows / total_patched_flows
-        threshold_common = num_common_flows / total_common_flows
+        threshold_vuln = num_vuln_flows / total_vuln_flows if (total_vuln_flows != 0.0) else 0.0 
+        threshold_patch = num_patched_flows / total_patched_flows if (total_patched_flows != 0) else 0.0
+        threshold_common = num_common_flows / total_common_flows if (total_common_flows != 0) else 0.0
         vulnerability_found = False
-        if (threshold_vuln > threshold_patch) and (threshold_common > 0.4):
+        if (threshold_vuln >= threshold_patch) and (threshold_common > 0.4):
             vulnerability_found = True
 
         system_vulnerability_data[module_name]["vulnerability_threshold"] = threshold_vuln

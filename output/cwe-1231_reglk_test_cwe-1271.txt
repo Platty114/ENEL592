@@ -1,0 +1,15 @@
+----------------------------
+vulnerability statistics for top
+----------------------------
+vulnerability_threshold: 0.0
+patched_threshold: 0.0
+common_threshold: 0.0
+vulnerability_found: False
+----------------------------
+vulnerability statistics for top.REGLK
+----------------------------
+vulnerability_threshold: 0.0
+patched_threshold: 0.0
+common_threshold: 0.0
+vulnerability_found: False
+----------------------------

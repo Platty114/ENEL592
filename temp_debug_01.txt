@@ -1,381 +1,52 @@
 Syntax Tree #1
-Syntax Tree #2
 	START###########################################
-		l_ids: [794]
-		r_ids: [795]
-		[nid = 795]  write_data
-		[("write_enable == 1'b1 & addr == 32'h0000_0064", True)]
-		address_100 <= write_data
+		l_ids: [178]
+		r_ids: [179]
+		[nid = 179]  RAM
+		[]
+		rd_instr = RAM[addr[31:2]]
 		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.address_100
+		instruction_memory.RAM --E--> instruction_memory.rd_instr
 
-		top.REGLK.write_enable --I--> top.REGLK.address_100
-		top.REGLK.addr --I--> top.REGLK.address_100
 	END#############################################
 	START###########################################
-		l_ids: [1071]
-		r_ids: [1073]
-		[nid = 1073]  data_to_write
-		[('write_enable', True)]
-		data[addr[31:2]] <= data_to_write
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.data_to_write --E--> top.REGLK.data
-
-		top.REGLK.write_enable --I--> top.REGLK.data
-	END#############################################
-	START###########################################
-		l_ids: [1329]
+		l_ids: [306]
 		r_ids: []
-		top.REGLK.rst_ni --I--> top.REGLK.reglk_mem
-		top.REGLK.rst_9 --I--> top.REGLK.reglk_mem
-		top.REGLK.jtag_unlock --I--> top.REGLK.reglk_mem
+		instruction_memory.rst_n --I--> instruction_memory.data_out
 	END#############################################
 	START###########################################
-		l_ids: [400]
-		r_ids: [401]
-		[nid = 401]  addr
-		[]
-		byte_select = addr[1:0]
+		l_ids: [370]
+		r_ids: [387, 388]
+		[nid = 387]  data_in
+		[('!rst_n', False), (' (grant_access)', True)]
+		//here in lies the vulnerability
+        //grant access allows data_out to be written to if
+        //usr_id = 4, but grant_access is written to in a different
+        //cycle than data_out due to the use of blocking assignments
+        //could be fixed by reversing the order of assignments,
+        data_out = (grant_access) ? data_in : data_out
 		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.addr --E--> top.REGLK.byte_select
+		instruction_memory.data_in --E--> instruction_memory.data_out
 
+		[nid = 388]  data_out
+		[('!rst_n', False), (' (grant_access)', False)]
+		//here in lies the vulnerability
+        //grant access allows data_out to be written to if
+        //usr_id = 4, but grant_access is written to in a different
+        //cycle than data_out due to the use of blocking assignments
+        //could be fixed by reversing the order of assignments,
+        data_out = (grant_access) ? data_in : data_out
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		instruction_memory.data_out --E--> instruction_memory.data_out
+
+		instruction_memory.rst_n --I--> instruction_memory.data_out
+		instruction_memory.grant_access --I--> instruction_memory.data_out
+		instruction_memory.grant_access --I--> instruction_memory.data_out
 	END#############################################
 	START###########################################
-		l_ids: [403]
-		r_ids: [404]
-		[nid = 404]  addr
-		[]
-		halfword_select = addr[1]
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.addr --E--> top.REGLK.halfword_select
-
-	END#############################################
-	START###########################################
-		l_ids: [406]
-		r_ids: [407]
-		[nid = 407]  data
-		[]
-		existing_word = data[addr[31:2]]
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.data --E--> top.REGLK.existing_word
-
-	END#############################################
-	START###########################################
-		l_ids: [602]
-		r_ids: [603]
-		[nid = 603]  existing_word
-		[]
-		//default
-        //pass full word
-        read_data = existing_word
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [900]
-		r_ids: [901]
-		[nid = 901]  existing_word
-		[]
-		read_data = existing_word
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [938]
-		r_ids: [939]
-		[nid = 939]  write_data
-		[]
-		data_to_write = write_data
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-	END#############################################
-	START###########################################
-		l_ids: [940]
-		r_ids: [941]
-		[nid = 941]  write_data
-		[]
-		data_to_write = write_data
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-	END#############################################
-	START###########################################
-		l_ids: [1087]
-		r_ids: [1242]
-		[nid = 1242] j
-		[('~(rst_ni && ~jtag_unlock && ~rst_9)', True)]
-		j=j+1
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.j --E--> top.REGLK.j
-
-		top.REGLK.rst_ni --I--> top.REGLK.j
-		top.REGLK.rst_9 --I--> top.REGLK.j
-		top.REGLK.jtag_unlock --I--> top.REGLK.j
-	END#############################################
-	START###########################################
-		l_ids: [1248]
-		r_ids: [1399, 1670]
-		[nid = 1399]  existing_word
-		[]
-		read_data = {{24{existing_word[7]}}, existing_word[7:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-		[nid = 1670] existing_word
-		[]
-		read_data = {{24{existing_word[7]}}, existing_word[7:0]}
-		assert len(set(r_hps)) == len(set(l_hps)) | (1) == (1) == True
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1252]
-		r_ids: [1405, 1675]
-		[nid = 1405]  existing_word
-		[]
-		read_data = {{24{existing_word[15]}}, existing_word[15:8]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-		[nid = 1675] existing_word
-		[]
-		read_data = {{24{existing_word[15]}}, existing_word[15:8]}
-		assert len(set(r_hps)) == len(set(l_hps)) | (1) == (1) == True
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1256]
-		r_ids: [1411, 1680]
-		[nid = 1411]  existing_word
-		[]
-		read_data = {{24{existing_word[23]}}, existing_word[23:16]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-		[nid = 1680] existing_word
-		[]
-		read_data = {{24{existing_word[23]}}, existing_word[23:16]}
-		assert len(set(r_hps)) == len(set(l_hps)) | (1) == (1) == True
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1260]
-		r_ids: [1417, 1685]
-		[nid = 1417]  existing_word
-		[]
-		read_data = {{24{existing_word[31]}}, existing_word[31:24]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-		[nid = 1685] existing_word
-		[]
-		read_data = {{24{existing_word[31]}}, existing_word[31:24]}
-		assert len(set(r_hps)) == len(set(l_hps)) | (1) == (1) == True
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1264]
-		r_ids: [1423, 1690]
-		[nid = 1423]  existing_word
-		[]
-		read_data = {{16{existing_word[15]}}, existing_word[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-		[nid = 1690] existing_word
-		[]
-		read_data = {{16{existing_word[15]}}, existing_word[15:0]}
-		assert len(set(r_hps)) == len(set(l_hps)) | (1) == (1) == True
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1268]
-		r_ids: [1429, 1695]
-		[nid = 1429]  existing_word
-		[]
-		read_data = {{16{existing_word[31]}}, existing_word[31:16]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-		[nid = 1695] existing_word
-		[]
-		read_data = {{16{existing_word[31]}}, existing_word[31:16]}
-		assert len(set(r_hps)) == len(set(l_hps)) | (1) == (1) == True
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1272]
-		r_ids: [1435]
-		[nid = 1435]  existing_word
-		[]
-		read_data = {{24{1'b0}}, existing_word[7:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1276]
-		r_ids: [1441]
-		[nid = 1441]  existing_word
-		[]
-		read_data = {{24{1'b0}}, existing_word[15:8]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1280]
-		r_ids: [1447]
-		[nid = 1447]  existing_word
-		[]
-		read_data = {{24{1'b0}}, existing_word[23:16]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1284]
-		r_ids: [1453]
-		[nid = 1453]  existing_word
-		[]
-		read_data = {{24{1'b0}}, existing_word[31:24]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1288]
-		r_ids: [1459]
-		[nid = 1459]  existing_word
-		[]
-		read_data = {{16{1'b0}}, existing_word[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1292]
-		r_ids: [1465]
-		[nid = 1465]  existing_word
-		[]
-		read_data = {{16{1'b0}}, existing_word[31:16]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.read_data
-
-	END#############################################
-	START###########################################
-		l_ids: [1296]
-		r_ids: [1467, 1469]
-		[nid = 1467] existing_word
-		[]
-		data_to_write = {existing_word[31:8], write_data[7:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
-		[nid = 1469]  write_data
-		[]
-		data_to_write = {existing_word[31:8], write_data[7:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-	END#############################################
-	START###########################################
-		l_ids: [1300]
-		r_ids: [1471, 1473, 1475]
-		[nid = 1471] existing_word
-		[]
-		data_to_write = {existing_word[31:16], write_data[7:0], existing_word[7:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
-		[nid = 1473]  write_data
-		[]
-		data_to_write = {existing_word[31:16], write_data[7:0], existing_word[7:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-		[nid = 1475]  existing_word
-		[]
-		data_to_write = {existing_word[31:16], write_data[7:0], existing_word[7:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
-	END#############################################
-	START###########################################
-		l_ids: [1304]
-		r_ids: [1477, 1479, 1481]
-		[nid = 1477] existing_word
-		[]
-		data_to_write = {existing_word[31:24], write_data[7:0], existing_word[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
-		[nid = 1479]  write_data
-		[]
-		data_to_write = {existing_word[31:24], write_data[7:0], existing_word[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-		[nid = 1481]  existing_word
-		[]
-		data_to_write = {existing_word[31:24], write_data[7:0], existing_word[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
-	END#############################################
-	START###########################################
-		l_ids: [1308]
-		r_ids: [1483, 1485]
-		[nid = 1483] write_data
-		[]
-		data_to_write = {write_data[7:0], existing_word[23:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-		[nid = 1485]  existing_word
-		[]
-		data_to_write = {write_data[7:0], existing_word[23:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
-	END#############################################
-	START###########################################
-		l_ids: [1312]
-		r_ids: [1487, 1489]
-		[nid = 1487] existing_word
-		[]
-		data_to_write = {existing_word[31:16], write_data[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
-		[nid = 1489]  write_data
-		[]
-		data_to_write = {existing_word[31:16], write_data[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-	END#############################################
-	START###########################################
-		l_ids: [1316]
-		r_ids: [1491, 1493]
-		[nid = 1491] write_data
-		[]
-		data_to_write = {write_data[15:0], existing_word[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.write_data --E--> top.REGLK.data_to_write
-
-		[nid = 1493]  existing_word
-		[]
-		data_to_write = {write_data[15:0], existing_word[15:0]}
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		top.REGLK.existing_word --E--> top.REGLK.data_to_write
-
+		l_ids: [377]
+		r_ids: []
+		instruction_memory.usr_id --I--> instruction_memory.grant_access
+		instruction_memory.usr_id --I--> instruction_memory.grant_access
+		instruction_memory.rst_n --I--> instruction_memory.grant_access
 	END#############################################

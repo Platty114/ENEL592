@@ -38,7 +38,7 @@ def generate_flow_statistics(set_of_flows):
             elif cur_flow_length > max_flow_length:
                 max_flow_length = cur_flow_length
 
-    avg_flow_length = total_flow_length / total_num_flows
+    avg_flow_length = total_flow_length / total_num_flows if (total_num_flows != 0) else 0.0
 
     return {
         "min_flow_length": min_flow_length,

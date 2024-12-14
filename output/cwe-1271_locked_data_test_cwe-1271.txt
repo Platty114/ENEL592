@@ -1,0 +1,8 @@
+----------------------------
+vulnerability statistics for data_memory
+----------------------------
+vulnerability_threshold: 0.5
+patched_threshold: 0.0
+common_threshold: 0.0
+vulnerability_found: False
+----------------------------
