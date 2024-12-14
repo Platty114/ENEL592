@@ -14,6 +14,6 @@ design_flists = [
     ("cwe-1232_reglk_test", "cwe-1232_reglk_test.f"),
     ("cwe-1234_regfile_test", "cwe-1234_regfile_test.f"),
     ("cwe-1245_pc_test", "cwe-1245_pc_test.f"),
-    ("cwe-1271_locked_data_test", "cwe-1271_locked_data_test.f"),
+    ("cwe-1271_data_memory_test", "cwe-1271_data_memory_test.f"),
     ("cwe-1280_instruction_mem_test", "cwe-1280_instruction_mem_test.f")
 ]

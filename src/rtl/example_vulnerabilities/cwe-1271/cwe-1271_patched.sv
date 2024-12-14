@@ -3,8 +3,8 @@ module cwe1271(
   input logic en,
   input logic reset,
   input logic lock_input,
-  input logic [5:0] write_data,
-  output logic [5:0] data
+  input logic [5:0] wr_data,
+  output logic [5:0] o_data
 );  
 
   logic lock_jtag;
@@ -19,9 +19,9 @@ module cwe1271(
 
   always_ff @(posedge clk) begin 
     if(reset) 
-      data <= 5'b00000;
+      o_data <= 5'b00000;
     else if(lock_jtag)
-      data <= write_data;
+      o_data <= wr_data;
   end
 
 endmodule

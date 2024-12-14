@@ -18,9 +18,9 @@ module cwe1271(
 
   always_ff @(posedge clk) begin 
     if(reset) 
-      data <= 5'b00000;
+      o_data <= 5'b00000;
     else if(lock_jtag)
-      data <= write_data;
+      o_data <= wr_data;
   end
 
 endmodule

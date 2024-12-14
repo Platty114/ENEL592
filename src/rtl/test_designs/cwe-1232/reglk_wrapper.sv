@@ -56,7 +56,7 @@ module reglk_wrapper(
       if(~(rst_ni && ~jtag_unlock && ~rst_9))
       begin
         for (int j=0; j < 6; j=j+1) begin
-        reglk_mem[j] <= 'hffffffff;
+        reglk_mem[j] <= 'h0;
         end
       end
     end

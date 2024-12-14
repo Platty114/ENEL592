@@ -14,6 +14,8 @@ module data_memory(
     input logic en,
     input logic reset,
     input logic lock_input,
+    input logic [5:0] wr_data,
+    output logic [5:0] o_data,
     output  logic [31:0]  read_data,
     output  logic [31:0]  address_100
 );
@@ -63,12 +65,10 @@ module data_memory(
 
     always_ff @(posedge clk) begin 
       if(reset) 
-        data <= 5'b00000;
+        o_data <= 5'b00000;
       else if(lock_jtag)
-        data <= write_data;
+        o_data <= wr_data;
     end
-
-
 
      
     //assign read data based on width

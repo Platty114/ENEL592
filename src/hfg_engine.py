@@ -523,6 +523,9 @@ class __HFGEnginePyslangTopdown__:
         #S: Create clean data structure for exporting
         to_export_nodes = dict()
         to_export_edges = dict()
+        
+        if not os.path.exists("./src/text_flows"):
+            os.makedirs("./src/text_flows")
 
         with open(f"src/text_flows/hfg_edges_{self.compilation.getRoot().topInstances[0].name}.txt", "w") as output_file:
             for i, (k,v) in enumerate(all_hfg_edges.items()):
@@ -570,6 +573,9 @@ class __HFGEnginePyslangTopdown__:
                         to_export_edges[src_sig][dst_sig] = [curr_edge]
         
         #S: Pickle hfg_edges
+        if not os.path.exists("./src/pickles"):
+            os.makedirs("./src/pickles")
+
         pickle_object(to_export_edges, f"src/pickles/hfg_edges_{self.compilation.getRoot().topInstances[0].name}.pkl")
         
         self.to_export_edges = to_export_edges
