@@ -36,4 +36,25 @@
 
 ## Examples
 
+### Adding a vulnerability for analysis
+- To add a new vulnerability to the tool for analysis against the designs, please perform the following procedure.
+
+1. Add the example vulnerble module and it's asssociated patched module to the src/rtl folder.
+
+At the moment, all vulnerabilities are being stored in src/rtl/example_vulnerabilities. Feel to free to add any new vulnerabilities to that folder, or create a new folder in the rtl folder for it. For an example of how to organize your vulnerable and patched modules, please see src/rtl/example_vulnerabilities/cwe-1231.
+
+2. Create two new file list definiton files in the src/flists folder.
+
+These files will be respobsible for telling the tool where your vulnerability example or patched module are located in your file system. Create a new file with the .f extension, and give it the contents shown in the following screenshot. This is an example from src/flists/cwe-1231.f, but please modify the last line to match the location of your desired file. 
+
+![An example flist file for cwe-1231](src/screenshot/flist_example.png)
+
+3. Add the name of the vulnerability, and the path to it's associated vulnerability example / patch flist files to src/data.py
+
+This tool uses a file called data.py to store the names and locations of all the files it will be working with. This all done in a signle place to make adding or removing vulnerabilities and designs easy. Please insert the name of vulnerability, the path to it's vulnerable flist, and then the path to it's patch flist into the following list .
+
+![A screen shot of data.py](src/screenshot/vuln_data.png)
+
+That should be all thats required! Now when you run the tool using the script file, your vulnerability will automatically be used for analysis performed on the designs.
+
 ## Credits
