@@ -29,8 +29,6 @@ def detect_vulnerability(design_hfg, triplet):
     total_patched_flows = determine_triplet_length(triplet["patched"])
     total_common_flows = determine_triplet_length(triplet["common"])
 
-    print(triplet)
-
     for module_name in design_signal_paths:
         
         num_vuln_flows = 0
