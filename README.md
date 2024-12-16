@@ -39,7 +39,7 @@
 ### Adding a vulnerability for analysis
 - To add a new vulnerability to the tool for analysis against the designs, please perform the following procedure.
 
-1. Add the example vulnerble module and it's asssociated patched module to the src/rtl folder.
+1. Add the example vulnerable module and it's asssociated patched module to the src/rtl folder.
 
 At the moment, all vulnerabilities are being stored in src/rtl/example_vulnerabilities. Feel to free to add any new vulnerabilities to that folder, or create a new folder in the rtl folder for it. For an example of how to organize your vulnerable and patched modules, please see src/rtl/example_vulnerabilities/cwe-1231.
 
@@ -57,4 +57,26 @@ This tool uses a file called data.py to store the names and locations of all the
 
 That should be all thats required! Now when you run the tool using the script file, your vulnerability will automatically be used for analysis performed on the designs.
 
-## Credits
+### Addding a design for analysis
+
+- To add a new design to the tool for analysis, please perform the following steps.
+
+1. Add the design to the src/rtl folder.
+
+At the moment, all designs are being stored in src/rtl/test_designs. Feel to free to add any new designs to that folder, or create a new folder in the rtl folder for it. Please see the src/rtl/test_designs/cwe-1231 for an example design.
+
+2. Create a new file list definiton files in the src/flists folder.
+
+This file will be respobsible for telling the tool where your design is located in your file system. Create a new file with the .f extension, and give it the contents shown in the following screenshot. This is an example from src/flists/cwe-1231_reglk_test.f. This design contains two modules, top.sv and reglk.sv. You can all the modules associated with your design in similar fasion, using a new line for each module. 
+
+![An example flist file for cwe-1231](./screenshots/design_flist.png "an flist file")
+
+3. Add the name of the design, and the path to it's associated flist file to src/data.py
+
+This tool uses a file called data.py to store the names and locations of all the files it will be working with. This all done in a signle place to make adding or removing vulnerabilities and designs easy. Please insert the name of the design, the path to it's flist file into the following list in data.py.
+
+![A screen shot of data.py](./screenshots/design_data.png "design data")
+
+That should be all thats required! Now when you run the tool using the script file, your vulnerability will automatically be used for analysis performed on the designs.
+
+
