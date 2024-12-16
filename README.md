@@ -79,4 +79,28 @@ This tool uses a file called data.py to store the names and locations of all the
 
 That should be all thats required! Now when you run the tool using the script file, your vulnerability will automatically be used for analysis performed on the designs.
 
+## Output and Results
+
+### Output
+
+All data from the analysis that this tool produces is stored in ./output. After running the tool using a few vulnerabilties and designs, you will notice this folder is populated with many files. These files contain information on the vulnerability detection results for each design, as well as some stastics on the Vulnerability Triplets.
+
+There are two main type of file produced by this tool.
+
+1. Triplet information files.
+
+These are files that only contain statistics and data associated with the triplet generated for a vulnerability. You can tell these files apart from other files, as their nname will strictly be the name of the vulnerability given in the data.py file. The following is an example of a Triplet information file for CWE-1231
+
+This file provides information on the minimum, maximum, average, total number and total length of all flows for vulernable, patched and common flows associated with the vulnerability.
+
+![A text file containing info for the triplet associated with cwe-1231](./screenshots/triplet_info.png "cwe-1231 triplet info")
+
+2. Design Analysis Result Files.
+
+These files only contain results pertaining to the identification of a specific vulnerability within them. You can tell these files apart from others, as they are named starting with the name associated with the design given in the data.py file, follow by the vulnerability name that was scanned for in that file. For the example, the follow is a analysis result file for an analsys performed on the cwe-1231_reglk_test desing, scanning for cwe-1280.
+
+This file provides information on the vulnerability status (True or False), as well the vulnerability, patch, and common threshold associated with the files analysis
+
+![A text file containing info for a design analysis](./screenshots/analysis.png "cwe-1231_reglk_test cwe-1280 analysis")
+
 
