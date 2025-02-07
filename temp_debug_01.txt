@@ -1,52 +1,19 @@
 Syntax Tree #1
 	START###########################################
-		l_ids: [178]
-		r_ids: [179]
-		[nid = 179]  RAM
-		[]
-		rd_instr = RAM[addr[31:2]]
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		instruction_memory.RAM --E--> instruction_memory.rd_instr
-
-	END#############################################
-	START###########################################
-		l_ids: [306]
+		l_ids: [232]
 		r_ids: []
-		instruction_memory.rst_n --I--> instruction_memory.data_out
+		cwe_1231_patched.rst_ni --I--> cwe_1231_patched.reglk_mem
+		cwe_1231_patched.jtag_unlock --I--> cwe_1231_patched.reglk_mem
 	END#############################################
 	START###########################################
-		l_ids: [370]
-		r_ids: [387, 388]
-		[nid = 387]  data_in
-		[('!rst_n', False), (' (grant_access)', True)]
-		//here in lies the vulnerability
-        //grant access allows data_out to be written to if
-        //usr_id = 4, but grant_access is written to in a different
-        //cycle than data_out due to the use of blocking assignments
-        //could be fixed by reversing the order of assignments,
-        data_out = (grant_access) ? data_in : data_out
+		l_ids: [209]
+		r_ids: [224]
+		[nid = 224] j
+		[('~(rst_ni && ~jtag_unlock)', True)]
+		j=j+1
 		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		instruction_memory.data_in --E--> instruction_memory.data_out
+		cwe_1231_patched.j --E--> cwe_1231_patched.j
 
-		[nid = 388]  data_out
-		[('!rst_n', False), (' (grant_access)', False)]
-		//here in lies the vulnerability
-        //grant access allows data_out to be written to if
-        //usr_id = 4, but grant_access is written to in a different
-        //cycle than data_out due to the use of blocking assignments
-        //could be fixed by reversing the order of assignments,
-        data_out = (grant_access) ? data_in : data_out
-		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
-		instruction_memory.data_out --E--> instruction_memory.data_out
-
-		instruction_memory.rst_n --I--> instruction_memory.data_out
-		instruction_memory.grant_access --I--> instruction_memory.data_out
-		instruction_memory.grant_access --I--> instruction_memory.data_out
-	END#############################################
-	START###########################################
-		l_ids: [377]
-		r_ids: []
-		instruction_memory.usr_id --I--> instruction_memory.grant_access
-		instruction_memory.usr_id --I--> instruction_memory.grant_access
-		instruction_memory.rst_n --I--> instruction_memory.grant_access
+		cwe_1231_patched.rst_ni --I--> cwe_1231_patched.j
+		cwe_1231_patched.jtag_unlock --I--> cwe_1231_patched.j
 	END#############################################

@@ -4,7 +4,7 @@ import warnings
 from codetiming import Timer
 import os
 import pyslang as ps
-assert ps.__version__ == "3.0.0"
+#assert ps.__version__ == "3.0.0"
 
 import pickle
 import codecs
@@ -477,7 +477,7 @@ class __HFGEnginePyslangTopdown__:
         # logging.debug('Building Tree')
         self.driver = ps.Driver()
         self.driver.addStandardArgs()
-        self.driver.processCommandFiles(self.flist_fp, makeRelative=True)
+        self.driver.processCommandFiles(self.flist_fp, makeRelative=True, separateUnit=False)
         self.driver.processOptions()
         self.driver.parseAllSources()
         
