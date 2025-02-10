@@ -443,7 +443,10 @@ class VisitorForNode:
                     hp_port = self.node_id_to_name[connection_name_id[0]][1:] + "." + connection_name_ob.__str__().strip()
                     identifiers_in_expr = self.extract_kinds_from_descendants(connection_expr_id[0], desired_kinds=[ps.TokenKind.Identifier])
                     hp_identifiers_in_expr = [self.get_hp_for_identifier(nid)[0] for nid in identifiers_in_expr]
-
+                    #hp_identifiers_in_expr = []
+                    #for nid in identifiers_in_expr:
+                        #if len(self.get_hp_for_identifier(nid)) > 0:
+                            #hp_identifiers_in_expr.append(self.get_hp_for_identifier(nid)[0]) 
                     src_hps = None
                     dst_hps = None
                     if connection_dir=="input":
@@ -571,6 +574,78 @@ class __HFGEnginePyslangTopdown__:
                     except KeyError:
                         to_export_edges[src_sig] = dict()
                         to_export_edges[src_sig][dst_sig] = [curr_edge]
+
+        with open(f"src/graph/hfg_edges_{self.compilation.getRoot().topInstances[0].name}.html", "w") as output_file:
+            nodes = dict()
+            edges = dict()
+            for i, (k,v) in enumerate(all_hfg_edges.items()):
+                src_sig, dst_sig, e_type, e_id = k
+
+                nodes[src_sig] = True
+                nodes[dst_sig] = True
+                edges[e_id] = dict()
+                edges[e_id]["id"] = e_id
+                edges[e_id]["src"] = src_sig 
+                edges[e_id]["dst"] = dst_sig 
+
+
+            print("""<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [""", file=output_file)
+
+            for i, (k) in enumerate(nodes):
+                print("""\t\t{ data: { id: '""" + k +"""' } },""", file=output_file)
+
+
+            for i, (v) in enumerate(edges):
+                print("\t\t{", file=output_file)
+                print("\t\t\tdata: {", file=output_file)
+                print(f"""\t\t\t\tid: '{edges[v]["id"]}',""", file=output_file) 
+                print(f"""\t\t\t\tsource: '{edges[v]["src"]}',""", file=output_file) 
+                print(f"""\t\t\t\ttarget: '{edges[v]["dst"]}',""", file=output_file) 
+                print("\t\t\t}", file=output_file)
+                print("\t\t},", file=output_file)
+
+            print("""],
+      style: [
+          {
+              selector: 'node',
+              style: {
+                  shape: 'hexagon',
+                  'background-color': 'red',
+                  label: 'data(id)'
+              }
+          }],
+      layout: {
+          name: 'circle'
+      }
+      });
+    </script>
+</body>
+</html>""", file=output_file)
+
         
         #S: Pickle hfg_edges
         if not os.path.exists("./src/pickles"):

@@ -16,5 +16,6 @@ design_flists = [
     ("cwe-1245_pc_test", "cwe-1245_pc_test.f"),
     ("cwe-1271_data_memory_test", "cwe-1271_data_memory_test.f"),
     ("cwe-1280_instruction_mem_test", "cwe-1280_instruction_mem_test.f"),
-    ("hack-dack-2021-jtag", "hack_dac_21_jtag.f")
+    #("ultraembedded", "ultraembedded.f"),
+    #("picorv32", "picorv32.f") 
 ]
