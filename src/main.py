@@ -10,7 +10,7 @@ path_to_flist_dir = "./src/flists"
 
 #detect vulnerabilities in each design in flists
 for design_name, design in design_flists:
-    
+
     #check for each vulnerability in flists within the design
     for vuln_name, vuln, patch in vunerabilities_and_patches:
 

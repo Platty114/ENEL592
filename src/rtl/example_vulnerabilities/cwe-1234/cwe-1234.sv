@@ -1,4 +1,4 @@
-module cwe_1234 
+module cwe_1234
 (
   input logic [15:0] Data_in,
   input logic clk,
