@@ -25,9 +25,9 @@
         elements: [
 		{ data: { id: 'cwe_1280.rst_n' } },
 		{ data: { id: 'cwe_1280.data_out' } },
-		{ data: { id: 'cwe_1280.usr_id' } },
-		{ data: { id: 'cwe_1280.grant_access' } },
 		{ data: { id: 'cwe_1280.data_in' } },
+		{ data: { id: 'cwe_1280.grant_access' } },
+		{ data: { id: 'cwe_1280.usr_id' } },
 		{
 			data: {
 				id: '0',
@@ -38,35 +38,35 @@
 		{
 			data: {
 				id: '1',
-				source: 'cwe_1280.usr_id',
-				target: 'cwe_1280.grant_access',
-			}
-		},
-		{
-			data: {
-				id: '2',
-				source: 'cwe_1280.rst_n',
-				target: 'cwe_1280.grant_access',
-			}
-		},
-		{
-			data: {
-				id: '3',
-				source: 'cwe_1280.usr_id',
-				target: 'cwe_1280.grant_access',
-			}
-		},
-		{
-			data: {
-				id: '4',
 				source: 'cwe_1280.data_in',
 				target: 'cwe_1280.data_out',
 			}
 		},
 		{
 			data: {
-				id: '5',
+				id: '2',
 				source: 'cwe_1280.data_out',
+				target: 'cwe_1280.data_out',
+			}
+		},
+		{
+			data: {
+				id: '3',
+				source: 'cwe_1280.grant_access',
+				target: 'cwe_1280.data_out',
+			}
+		},
+		{
+			data: {
+				id: '4',
+				source: 'cwe_1280.rst_n',
+				target: 'cwe_1280.data_out',
+			}
+		},
+		{
+			data: {
+				id: '5',
+				source: 'cwe_1280.grant_access',
 				target: 'cwe_1280.data_out',
 			}
 		},
@@ -74,21 +74,21 @@
 			data: {
 				id: '6',
 				source: 'cwe_1280.rst_n',
-				target: 'cwe_1280.data_out',
+				target: 'cwe_1280.grant_access',
 			}
 		},
 		{
 			data: {
 				id: '7',
-				source: 'cwe_1280.grant_access',
-				target: 'cwe_1280.data_out',
+				source: 'cwe_1280.usr_id',
+				target: 'cwe_1280.grant_access',
 			}
 		},
 		{
 			data: {
 				id: '8',
-				source: 'cwe_1280.grant_access',
-				target: 'cwe_1280.data_out',
+				source: 'cwe_1280.usr_id',
+				target: 'cwe_1280.grant_access',
 			}
 		},
 ],

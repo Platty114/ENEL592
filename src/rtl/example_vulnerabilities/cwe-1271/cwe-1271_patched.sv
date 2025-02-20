@@ -1,4 +1,4 @@
-module cwe1271(
+module cwe1271_patched(
   input logic clk,
   input logic en,
   input logic reset,

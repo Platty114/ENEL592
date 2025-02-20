@@ -1,4 +1,4 @@
-module cwe_1234_type2(
+module cwe_1245_type2(
   output logic [2:0] out, 
   input logic [2:0] data_input, 
   input clk,
@@ -23,5 +23,5 @@ module cwe_1234_type2(
         endcase
     end
 
-  assign out = {1'h1, state};
+  assign out = {1'h1, fsm_state};
 endmodule

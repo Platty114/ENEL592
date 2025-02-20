@@ -5,11 +5,14 @@
 
 
 module cwe_226 (
-    input logic		clk_i,
-    input logic [3:0] 	reglk_ctrl_i,
-    input logic [31:0] 	wdata,
-    input logic 	rst_ni,
-    input logic 	rst_1,
+    input logic		    clk_i,
+    input logic [3:0]   reglk_ctrl_i,
+    input logic [31:0]  wdata,
+    input logic         rst_ni,
+    input logic         rst_1,
+    input logic         en,
+    input logic         we,
+    input logic [31:0]  address,
     output logic [31:0] p_c [0:3]
 );
     

@@ -23,42 +23,159 @@
       var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [
-		{ data: { id: 'cwe_1234.state' } },
-		{ data: { id: 'cwe_1234.out' } },
-		{ data: { id: 'cwe_1234.rst_n' } },
+		{ data: { id: 'cwe_1234.resetn' } },
+		{ data: { id: 'cwe_1234.lock_status' } },
+		{ data: { id: 'cwe_1234.Data_out' } },
+		{ data: { id: 'cwe_1234.Lock' } },
+		{ data: { id: 'cwe_1234.Data_in' } },
+		{ data: { id: 'cwe_1234.write' } },
+		{ data: { id: 'cwe_1234.debug_unlocked' } },
+		{ data: { id: 'cwe_1234.scan_mode' } },
 		{
 			data: {
 				id: '0',
-				source: 'cwe_1234.state',
-				target: 'cwe_1234.out',
+				source: 'cwe_1234.resetn',
+				target: 'cwe_1234.lock_status',
 			}
 		},
 		{
 			data: {
 				id: '1',
-				source: 'cwe_1234.rst_n',
-				target: 'cwe_1234.state',
+				source: 'cwe_1234.resetn',
+				target: 'cwe_1234.Data_out',
 			}
 		},
 		{
 			data: {
 				id: '2',
-				source: 'cwe_1234.rst_n',
-				target: 'cwe_1234.state',
+				source: 'cwe_1234.resetn',
+				target: 'cwe_1234.lock_status',
 			}
 		},
 		{
 			data: {
 				id: '3',
-				source: 'cwe_1234.rst_n',
-				target: 'cwe_1234.state',
+				source: 'cwe_1234.Lock',
+				target: 'cwe_1234.lock_status',
 			}
 		},
 		{
 			data: {
 				id: '4',
-				source: 'cwe_1234.rst_n',
-				target: 'cwe_1234.state',
+				source: 'cwe_1234.Data_in',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '5',
+				source: 'cwe_1234.resetn',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '6',
+				source: 'cwe_1234.write',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '7',
+				source: 'cwe_1234.debug_unlocked',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '8',
+				source: 'cwe_1234.scan_mode',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '9',
+				source: 'cwe_1234.lock_status',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '10',
+				source: 'cwe_1234.lock_status',
+				target: 'cwe_1234.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '11',
+				source: 'cwe_1234.resetn',
+				target: 'cwe_1234.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '12',
+				source: 'cwe_1234.Lock',
+				target: 'cwe_1234.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '13',
+				source: 'cwe_1234.Lock',
+				target: 'cwe_1234.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '14',
+				source: 'cwe_1234.Data_out',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '15',
+				source: 'cwe_1234.resetn',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '16',
+				source: 'cwe_1234.write',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '17',
+				source: 'cwe_1234.debug_unlocked',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '18',
+				source: 'cwe_1234.scan_mode',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '19',
+				source: 'cwe_1234.lock_status',
+				target: 'cwe_1234.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '20',
+				source: 'cwe_1234.write',
+				target: 'cwe_1234.Data_out',
 			}
 		},
 ],

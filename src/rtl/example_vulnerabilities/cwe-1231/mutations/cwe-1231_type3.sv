@@ -4,7 +4,7 @@
 module cwe_1231_type3(
   input logic clk_i,
   input logic rst_reg_lck,
-  input logic [31:0] jtag_unlock [5:0],
+  output logic [31:0] jtag_unlock [5:0],
   input logic rst_low,
   output logic [31:0] reglk_mem [5:0]
 );

@@ -1,1 +1,113 @@
 Syntax Tree #1
+	START###########################################
+		l_ids: [319]
+		r_ids: []
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+	END#############################################
+	START###########################################
+		l_ids: [322]
+		r_ids: []
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+	END#############################################
+	START###########################################
+		l_ids: [325]
+		r_ids: []
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+	END#############################################
+	START###########################################
+		l_ids: [328]
+		r_ids: []
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+	END#############################################
+	START###########################################
+		l_ids: [429]
+		r_ids: [467, 469]
+		[nid = 467]  p_c
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[3]', True)]
+		p_c[3] <= reglk_ctrl_i[3] ? p_c[3] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.p_c --E--> cwe_226.p_c
+
+		[nid = 469]  wdata
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[3]', False)]
+		p_c[3] <= reglk_ctrl_i[3] ? p_c[3] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.wdata --E--> cwe_226.p_c
+
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.en --I--> cwe_226.p_c
+		cwe_226.we --I--> cwe_226.p_c
+	END#############################################
+	START###########################################
+		l_ids: [437]
+		r_ids: [473, 475]
+		[nid = 473]  p_c
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[2]', True)]
+		p_c[2] <= reglk_ctrl_i[2] ? p_c[2] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.p_c --E--> cwe_226.p_c
+
+		[nid = 475]  wdata
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[2]', False)]
+		p_c[2] <= reglk_ctrl_i[2] ? p_c[2] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.wdata --E--> cwe_226.p_c
+
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.en --I--> cwe_226.p_c
+		cwe_226.we --I--> cwe_226.p_c
+	END#############################################
+	START###########################################
+		l_ids: [445]
+		r_ids: [479, 481]
+		[nid = 479]  p_c
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[1]', True)]
+		p_c[1] <= reglk_ctrl_i[1] ? p_c[1] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.p_c --E--> cwe_226.p_c
+
+		[nid = 481]  wdata
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[1]', False)]
+		p_c[1] <= reglk_ctrl_i[1] ? p_c[1] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.wdata --E--> cwe_226.p_c
+
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.en --I--> cwe_226.p_c
+		cwe_226.we --I--> cwe_226.p_c
+	END#############################################
+	START###########################################
+		l_ids: [453]
+		r_ids: [485, 487]
+		[nid = 485]  p_c
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[0]', True)]
+		p_c[0] <= reglk_ctrl_i[0] ? p_c[0] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.p_c --E--> cwe_226.p_c
+
+		[nid = 487]  wdata
+		[('~(rst_ni && ~rst_1)', False), ('en && we', True), (' reglk_ctrl_i[0]', False)]
+		p_c[0] <= reglk_ctrl_i[0] ? p_c[0] : wdata[31:0]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		cwe_226.wdata --E--> cwe_226.p_c
+
+		cwe_226.rst_ni --I--> cwe_226.p_c
+		cwe_226.rst_1 --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.reglk_ctrl_i --I--> cwe_226.p_c
+		cwe_226.en --I--> cwe_226.p_c
+		cwe_226.we --I--> cwe_226.p_c
+	END#############################################

@@ -23,64 +23,50 @@
       var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [
-		{ data: { id: 'cwe1271.reset' } },
-		{ data: { id: 'cwe1271.lock_jtag' } },
-		{ data: { id: 'cwe1271.o_data' } },
 		{ data: { id: 'cwe1271.lock_input' } },
+		{ data: { id: 'cwe1271.lock_jtag' } },
 		{ data: { id: 'cwe1271.en' } },
+		{ data: { id: 'cwe1271.reset' } },
+		{ data: { id: 'cwe1271.o_data' } },
 		{ data: { id: 'cwe1271.wr_data' } },
 		{
 			data: {
 				id: '0',
-				source: 'cwe1271.reset',
-				target: 'cwe1271.lock_jtag',
-			}
-		},
-		{
-			data: {
-				id: '1',
-				source: 'cwe1271.reset',
-				target: 'cwe1271.o_data',
-			}
-		},
-		{
-			data: {
-				id: '2',
 				source: 'cwe1271.lock_input',
 				target: 'cwe1271.lock_jtag',
 			}
 		},
 		{
 			data: {
-				id: '3',
+				id: '1',
 				source: 'cwe1271.en',
 				target: 'cwe1271.lock_jtag',
 			}
 		},
 		{
 			data: {
-				id: '4',
+				id: '2',
 				source: 'cwe1271.reset',
-				target: 'cwe1271.lock_jtag',
+				target: 'cwe1271.o_data',
 			}
 		},
 		{
 			data: {
-				id: '5',
+				id: '3',
 				source: 'cwe1271.wr_data',
 				target: 'cwe1271.o_data',
 			}
 		},
 		{
 			data: {
-				id: '6',
+				id: '4',
 				source: 'cwe1271.reset',
 				target: 'cwe1271.o_data',
 			}
 		},
 		{
 			data: {
-				id: '7',
+				id: '5',
 				source: 'cwe1271.lock_jtag',
 				target: 'cwe1271.o_data',
 			}

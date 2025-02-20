@@ -1,4 +1,4 @@
-module cwe_1234_patched(
+module cwe_1245_patched(
   output logic [2:0] out, 
   input logic [2:0] user_input, 
   input clk,

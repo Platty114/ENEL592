@@ -1,4 +1,4 @@
-module cwe_1262 (
+module cwe_1262_patched (
     input logic 	csr_we,
     input logic 	csr_read,
     input logic [1:0] 	priv_lvl_o,

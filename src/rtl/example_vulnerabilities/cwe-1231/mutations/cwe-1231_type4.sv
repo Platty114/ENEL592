@@ -1,6 +1,6 @@
 // type 4 mutation of CWE-1231 example vulnerability
 
-module cwe_1231(
+module cwe_1231_type4(
   input logic clk_i,
   input logic rst_reg_lck,
   input logic jtag_unlock,

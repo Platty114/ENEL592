@@ -1,4 +1,4 @@
-module cwe_1280(
+module cwe_1280_patched(
   input logic [2:0] usr_id,
   input logic [7:0] data_in,
   input logic clk, 

@@ -1,7 +1,7 @@
     
 
 
-module cwe_1244 (
+module cwe_1244_type2 (
     input logic 	debug,
     input logic [1:0]	usr_mode, 
     input logic 	password_correct,

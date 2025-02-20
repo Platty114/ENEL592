@@ -23,49 +23,129 @@
       var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [
-		{ data: { id: 'cwe_1234_patched.state' } },
-		{ data: { id: 'cwe_1234_patched.out' } },
-		{ data: { id: 'cwe_1234_patched.rst_n' } },
+		{ data: { id: 'cwe_1234_patched.resetn' } },
+		{ data: { id: 'cwe_1234_patched.lock_status' } },
+		{ data: { id: 'cwe_1234_patched.Data_out' } },
+		{ data: { id: 'cwe_1234_patched.Lock' } },
+		{ data: { id: 'cwe_1234_patched.Data_in' } },
+		{ data: { id: 'cwe_1234_patched.write' } },
 		{
 			data: {
 				id: '0',
-				source: 'cwe_1234_patched.state',
-				target: 'cwe_1234_patched.out',
+				source: 'cwe_1234_patched.resetn',
+				target: 'cwe_1234_patched.lock_status',
 			}
 		},
 		{
 			data: {
 				id: '1',
-				source: 'cwe_1234_patched.rst_n',
-				target: 'cwe_1234_patched.state',
+				source: 'cwe_1234_patched.resetn',
+				target: 'cwe_1234_patched.Data_out',
 			}
 		},
 		{
 			data: {
 				id: '2',
-				source: 'cwe_1234_patched.rst_n',
-				target: 'cwe_1234_patched.state',
+				source: 'cwe_1234_patched.resetn',
+				target: 'cwe_1234_patched.lock_status',
 			}
 		},
 		{
 			data: {
 				id: '3',
-				source: 'cwe_1234_patched.rst_n',
-				target: 'cwe_1234_patched.state',
+				source: 'cwe_1234_patched.Lock',
+				target: 'cwe_1234_patched.lock_status',
 			}
 		},
 		{
 			data: {
 				id: '4',
-				source: 'cwe_1234_patched.rst_n',
-				target: 'cwe_1234_patched.state',
+				source: 'cwe_1234_patched.Data_in',
+				target: 'cwe_1234_patched.Data_out',
 			}
 		},
 		{
 			data: {
 				id: '5',
-				source: 'cwe_1234_patched.rst_n',
-				target: 'cwe_1234_patched.state',
+				source: 'cwe_1234_patched.resetn',
+				target: 'cwe_1234_patched.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '6',
+				source: 'cwe_1234_patched.write',
+				target: 'cwe_1234_patched.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '7',
+				source: 'cwe_1234_patched.lock_status',
+				target: 'cwe_1234_patched.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '8',
+				source: 'cwe_1234_patched.lock_status',
+				target: 'cwe_1234_patched.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '9',
+				source: 'cwe_1234_patched.resetn',
+				target: 'cwe_1234_patched.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '10',
+				source: 'cwe_1234_patched.Lock',
+				target: 'cwe_1234_patched.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '11',
+				source: 'cwe_1234_patched.Lock',
+				target: 'cwe_1234_patched.lock_status',
+			}
+		},
+		{
+			data: {
+				id: '12',
+				source: 'cwe_1234_patched.Data_out',
+				target: 'cwe_1234_patched.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '13',
+				source: 'cwe_1234_patched.resetn',
+				target: 'cwe_1234_patched.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '14',
+				source: 'cwe_1234_patched.write',
+				target: 'cwe_1234_patched.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '15',
+				source: 'cwe_1234_patched.lock_status',
+				target: 'cwe_1234_patched.Data_out',
+			}
+		},
+		{
+			data: {
+				id: '16',
+				source: 'cwe_1234_patched.write',
+				target: 'cwe_1234_patched.Data_out',
 			}
 		},
 ],

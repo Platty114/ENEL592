@@ -1,0 +1,169 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+		{ data: { id: 'cwe_1282_type4.KEY' } },
+		{ data: { id: 'cwe_1282_type4.memory' } },
+		{ data: { id: 'cwe_1282_type4.reset' } },
+		{ data: { id: 'cwe_1282_type4.wd' } },
+		{ data: { id: 'cwe_1282_type4.we' } },
+		{ data: { id: 'cwe_1282_type4.address' } },
+		{ data: { id: 'cwe_1282_type4.HASH' } },
+		{ data: { id: 'cwe_1282_type4.data_out' } },
+		{
+			data: {
+				id: '0',
+				source: 'cwe_1282_type4.KEY',
+				target: 'cwe_1282_type4.memory',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'cwe_1282_type4.reset',
+				target: 'cwe_1282_type4.memory',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'cwe_1282_type4.wd',
+				target: 'cwe_1282_type4.memory',
+			}
+		},
+		{
+			data: {
+				id: '3',
+				source: 'cwe_1282_type4.reset',
+				target: 'cwe_1282_type4.memory',
+			}
+		},
+		{
+			data: {
+				id: '4',
+				source: 'cwe_1282_type4.we',
+				target: 'cwe_1282_type4.memory',
+			}
+		},
+		{
+			data: {
+				id: '5',
+				source: 'cwe_1282_type4.address',
+				target: 'cwe_1282_type4.memory',
+			}
+		},
+		{
+			data: {
+				id: '6',
+				source: 'cwe_1282_type4.HASH',
+				target: 'cwe_1282_type4.memory',
+			}
+		},
+		{
+			data: {
+				id: '7',
+				source: 'cwe_1282_type4.wd',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '8',
+				source: 'cwe_1282_type4.reset',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '9',
+				source: 'cwe_1282_type4.we',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '10',
+				source: 'cwe_1282_type4.address',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '11',
+				source: 'cwe_1282_type4.HASH',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '12',
+				source: 'cwe_1282_type4.memory',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '13',
+				source: 'cwe_1282_type4.we',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '14',
+				source: 'cwe_1282_type4.address',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '15',
+				source: 'cwe_1282_type4.HASH',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+		{
+			data: {
+				id: '16',
+				source: 'cwe_1282_type4.reset',
+				target: 'cwe_1282_type4.data_out',
+			}
+		},
+],
+      style: [
+          {
+              selector: 'node',
+              style: {
+                  shape: 'hexagon',
+                  'background-color': 'red',
+                  label: 'data(id)'
+              }
+          }],
+      layout: {
+          name: 'circle'
+      }
+      });
+    </script>
+</body>
+</html>
