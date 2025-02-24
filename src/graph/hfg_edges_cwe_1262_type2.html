@@ -23,6 +23,62 @@
       var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [
+		{ data: { id: 'cwe_1262_type2.priv_state' } },
+		{ data: { id: 'cwe_1262_type2.except' } },
+		{ data: { id: 'cwe_1262_type2.MACHINE_PRIV' } },
+		{ data: { id: 'cwe_1262_type2.address' } },
+		{ data: { id: 'cwe_1262_type2.STACK_REG' } },
+		{ data: { id: 'cwe_1262_type2.write' } },
+		{ data: { id: 'cwe_1262_type2.read' } },
+		{
+			data: {
+				id: '0',
+				source: 'cwe_1262_type2.priv_state',
+				target: 'cwe_1262_type2.except',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'cwe_1262_type2.MACHINE_PRIV',
+				target: 'cwe_1262_type2.except',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'cwe_1262_type2.MACHINE_PRIV',
+				target: 'cwe_1262_type2.except',
+			}
+		},
+		{
+			data: {
+				id: '3',
+				source: 'cwe_1262_type2.address',
+				target: 'cwe_1262_type2.except',
+			}
+		},
+		{
+			data: {
+				id: '4',
+				source: 'cwe_1262_type2.STACK_REG',
+				target: 'cwe_1262_type2.except',
+			}
+		},
+		{
+			data: {
+				id: '5',
+				source: 'cwe_1262_type2.write',
+				target: 'cwe_1262_type2.except',
+			}
+		},
+		{
+			data: {
+				id: '6',
+				source: 'cwe_1262_type2.read',
+				target: 'cwe_1262_type2.except',
+			}
+		},
 ],
       style: [
           {

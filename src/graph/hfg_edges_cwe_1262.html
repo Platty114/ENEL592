@@ -23,6 +23,62 @@
       var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [
+		{ data: { id: 'cwe_1262.priv_lvl_o' } },
+		{ data: { id: 'cwe_1262.exception' } },
+		{ data: { id: 'cwe_1262.EXPECTED_PRIV_LEVEL' } },
+		{ data: { id: 'cwe_1262.csr_addr' } },
+		{ data: { id: 'cwe_1262.PROTECTED_REG' } },
+		{ data: { id: 'cwe_1262.csr_we' } },
+		{ data: { id: 'cwe_1262.csr_read' } },
+		{
+			data: {
+				id: '0',
+				source: 'cwe_1262.priv_lvl_o',
+				target: 'cwe_1262.exception',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'cwe_1262.EXPECTED_PRIV_LEVEL',
+				target: 'cwe_1262.exception',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'cwe_1262.EXPECTED_PRIV_LEVEL',
+				target: 'cwe_1262.exception',
+			}
+		},
+		{
+			data: {
+				id: '3',
+				source: 'cwe_1262.csr_addr',
+				target: 'cwe_1262.exception',
+			}
+		},
+		{
+			data: {
+				id: '4',
+				source: 'cwe_1262.PROTECTED_REG',
+				target: 'cwe_1262.exception',
+			}
+		},
+		{
+			data: {
+				id: '5',
+				source: 'cwe_1262.csr_we',
+				target: 'cwe_1262.exception',
+			}
+		},
+		{
+			data: {
+				id: '6',
+				source: 'cwe_1262.csr_read',
+				target: 'cwe_1262.exception',
+			}
+		},
 ],
       style: [
           {

@@ -23,44 +23,58 @@
       var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [
-		{ data: { id: 'cwe_1262_patched.priv_lvl_o' } },
-		{ data: { id: 'cwe_1262_patched.exception' } },
-		{ data: { id: 'cwe_1262_patched.EXPECTED_PRIV_LEVEL' } },
-		{ data: { id: 'cwe_1262_patched.csr_we' } },
-		{ data: { id: 'cwe_1262_patched.csr_read' } },
+		{ data: { id: 'cwe_1232_type2.rst_low' } },
+		{ data: { id: 'cwe_1232_type2.register_lcks' } },
+		{ data: { id: 'cwe_1232_type2.rst_reg_lck' } },
+		{ data: { id: 'cwe_1232_type2.jtag_unlock' } },
+		{ data: { id: 'cwe_1232_type2.j' } },
 		{
 			data: {
 				id: '0',
-				source: 'cwe_1262_patched.priv_lvl_o',
-				target: 'cwe_1262_patched.exception',
+				source: 'cwe_1232_type2.rst_low',
+				target: 'cwe_1232_type2.register_lcks',
 			}
 		},
 		{
 			data: {
 				id: '1',
-				source: 'cwe_1262_patched.EXPECTED_PRIV_LEVEL',
-				target: 'cwe_1262_patched.exception',
+				source: 'cwe_1232_type2.rst_reg_lck',
+				target: 'cwe_1232_type2.register_lcks',
 			}
 		},
 		{
 			data: {
 				id: '2',
-				source: 'cwe_1262_patched.EXPECTED_PRIV_LEVEL',
-				target: 'cwe_1262_patched.exception',
+				source: 'cwe_1232_type2.jtag_unlock',
+				target: 'cwe_1232_type2.register_lcks',
 			}
 		},
 		{
 			data: {
 				id: '3',
-				source: 'cwe_1262_patched.csr_we',
-				target: 'cwe_1262_patched.exception',
+				source: 'cwe_1232_type2.j',
+				target: 'cwe_1232_type2.j',
 			}
 		},
 		{
 			data: {
 				id: '4',
-				source: 'cwe_1262_patched.csr_read',
-				target: 'cwe_1262_patched.exception',
+				source: 'cwe_1232_type2.rst_low',
+				target: 'cwe_1232_type2.j',
+			}
+		},
+		{
+			data: {
+				id: '5',
+				source: 'cwe_1232_type2.rst_reg_lck',
+				target: 'cwe_1232_type2.j',
+			}
+		},
+		{
+			data: {
+				id: '6',
+				source: 'cwe_1232_type2.jtag_unlock',
+				target: 'cwe_1232_type2.j',
 			}
 		},
 ],

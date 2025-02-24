@@ -614,11 +614,11 @@ class __HFGEnginePyslangTopdown__:
       var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [""", file=output_file)
-
+            print(len(nodes))
             for i, (k) in enumerate(nodes):
                 print("""\t\t{ data: { id: '""" + k +"""' } },""", file=output_file)
 
-
+            print(len(edges))
             for i, (v) in enumerate(edges):
                 print("\t\t{", file=output_file)
                 print("\t\t\tdata: {", file=output_file)

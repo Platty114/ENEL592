@@ -2,7 +2,8 @@ module cwe_1262 (
     input logic 	csr_we,
     input logic 	csr_read,
     input logic [1:0] 	priv_lvl_o,
-    input logic [11:0]	csr_addr
+    input logic [11:0]	csr_addr,
+    output logic exception
 );
 
     localparam logic[1:0] EXPECTED_PRIV_LEVEL = 2'b11;
@@ -10,6 +11,7 @@ module cwe_1262 (
 
     always_comb begin : priv_check 
 	// -----------------
+        exception = 1'b0;
         // Privilege Check
         // -----------------
         // if we are reading or writing, check for the correct privilege level this has
@@ -21,6 +23,7 @@ module cwe_1262 (
 	    //though it should be protected
             if ((priv_lvl_o & EXPECTED_PRIV_LEVEL != EXPECTED_PRIV_LEVEL) && !(csr_addr == PROTECTED_REG)) begin   
 		//raise excetption
+                exception = 1'b1;
             end
         end	
     end

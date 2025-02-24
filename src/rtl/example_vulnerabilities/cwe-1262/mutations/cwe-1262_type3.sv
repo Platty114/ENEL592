@@ -2,7 +2,8 @@ module cwe_1262_type3 (
     input logic 	write,
     input logic 	read,
     input logic [1:0] 	priv_state,
-    input logic [11:0]	address
+    input logic [11:0]	address,
+    output logic        except
 );
 
     localparam logic[1:0] MACHINE_PRIV = 2'b11;
@@ -12,6 +13,7 @@ module cwe_1262_type3 (
     always_comb begin : priv_check 
 	// -----------------
         // Privilege Check
+        except = 1'b0;
         // -----------------
         // if we are reading or writing, check for the correct privilege level this has
         // precedence over interrupts
@@ -22,6 +24,7 @@ module cwe_1262_type3 (
 	    //though it should be protected
             if ((priv_state & MACHINE_PRIV != MACHINE_PRIV) && !(address == STACK_REG && address != PC_REG)) begin   
 		//raise excetption
+                except = 1'b1;
             end
         end	
     end
