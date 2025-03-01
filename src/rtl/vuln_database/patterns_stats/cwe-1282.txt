@@ -1,0 +1,28 @@
+regex pattern for cwe-1245 and occurance stats for each SoC analyzed
+
+------------------------------------- regex pattern ----------------------------------------
+
+    localparam logic [31:0] HASH_KEY = 32'h1035_9987;
+    localparam logic [5:0]  HASH_ADDR = 6'b00_0000;
+    logic [5:0] ram [31:0];
+
+
+    always_ff @(posedge clk) begin
+
+        if(reset == 1'b1) begin
+            ram[HASH_ADDR] <= HASH_KEY;
+        end
+        else if(write == 1'b1 || addr[31:2] != HASH_ADDR) begin
+            ram[addr[31:2]] <= write_data;
+        end
+        data = ram[addr[31:2]];
+    end
+
+this vulnerability has to do with how the memory check for the HASH_ADDR is performed. Rather
+then preventing a write from occuring at the address which stores the hash key, instead a 
+or is used, allowing a write to happen anywhere in memory, as long as the write signal is
+held high. To detect this pattern using a regex, we will look for the following pattern
+
+if *[(] *[~a-zA-Z0-9_\-\.]+ *(==|!=) *(1'b1|1'b0) *[|]+[|]* *[~a-zA-Z0-9_\-\.]+(\[[0-9]+:[0-9]+\]) (==|!=) *[~a-zA-Z0-9_\-\.\']+[)]
+
+----------------------------------- occurance stats -----------------------------------------

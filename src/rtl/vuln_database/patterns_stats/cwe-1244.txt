@@ -1,0 +1,17 @@
+regex pattern for cwe-1244 and occurance stats for each SoC analyzed
+
+------------------------------------- regex pattern ----------------------------------------
+
+ // in debug mode we execute with privilege level M
+    assign priv_lvl_o = (debug_mode_q || umode_i) ? PRIV_LVL_M : priv_lvl_q;
+
+this vulnerability is based on a priveledge level being assigned to a signal,
+based on either the debug mode being enable or the user correctly inputting
+the priveledge escalation passwrod. Instead, the priviledge should be based
+on debug mode and password, or just password. to capture this, we want to use a 
+regex that identifies a signal being assigned using an or to select the value. The following
+regex fufills this need
+
+[~a-zA-Z0-9_\-\.]+ *(<=|=) *[(]([~a-zA-Z0-9_\-\.]+ *([|]|[|][|]) *[~a-zA-Z0-9_\-\.]+ *)+[)]
+
+----------------------------------- occurance stats -----------------------------------------

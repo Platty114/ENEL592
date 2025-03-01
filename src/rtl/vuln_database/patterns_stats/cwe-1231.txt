@@ -1,0 +1,21 @@
+regex pattern for cwe-1231 and occurance stats for each SoC analyzed
+
+------------------------------------- regex pattern ----------------------------------------
+
+if(~(rst_ni && ~jtag_unlock && ~rst_9))
+    begin
+      for (int j=0; j < 6; j=j+1) begin
+      reglk_mem[j] <= 'h0;
+      end
+    end
+
+ultimately, this vulnerability is based on something being reset by more than one signal. To find
+this vulnerability in the wild, we mostly care about the 'if(...)' statement, specifically ones
+that are responsible for reseting another register using a flip flop. Thus, the following pattern
+is used 
+
+if.*[a-zA-Z0-9_\-\.].*[&&|&].*[a-zA-Z0-9_\-\.].*
+
+
+
+----------------------------------- occurance stats -----------------------------------------

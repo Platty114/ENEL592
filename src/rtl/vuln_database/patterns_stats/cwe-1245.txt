@@ -1,0 +1,34 @@
+regex pattern for cwe-1245 and occurance stats for each SoC analyzed
+
+------------------------------------- regex pattern ----------------------------------------
+
+always_ff @ (posedge clk or negedge rst_n )
+    begin
+      if (!rst_n)
+        state = 3'h0;
+      else
+        case (user_input)
+          3'h3: state = 2'h3;
+          3'h4: state = 2'h2;
+          3'h5: state = 2'h1;
+          // no default case, user input is able to put 
+          // FSM into states with no path out, ie 3'h6 and 3'h7
+          // can be fixed by defining all possible states 
+          // default: state = 2'h0;
+        endcase
+    end
+
+this vulnerability is based around state machines that do not define outputs for all possible 
+states they could possible be in. This means that the state machine could be put into a dead
+end, or unrecoverable state, leading to denial of service, or other, worse outcomes. This can be
+solved by simply just defining a default case for all state machines, without fail. To get an estimate
+of the number of statemachines possible vulnerable, we could look at comparing the number of case 
+statements vs the number of defualt keywords found within a project. This can be done using 
+the following two regex patterns.
+
+state machines
+( *[0-9]+'[h|b][0-9]+: [~a-zA-Z0-9_\-\.]+ *(<=|=) *[~a-zA-Z0-9_\-\.\']+; *\n)+
+
+state machines wtih default
+( *[0-9]+'[h|b][0-9]+: [~a-zA-Z0-9_\-\.]+ *(<=|=) *[~a-zA-Z0-9_\-\.\']+; *\n)+( *default: [~a-zA-Z0-9_\-\.]+ *(<=|=) *[~a-zA-Z0-9_\-\.\']+;)
+----------------------------------- occurance stats -----------------------------------------
