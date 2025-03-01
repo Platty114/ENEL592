@@ -1,0 +1,17 @@
+regex pattern for cwe-1262 and occurance stats for each SoC analyzed
+
+------------------------------------- regex pattern ----------------------------------------
+
+    if ((priv_lvl_o & EXPECTED_PRIV_LEVEL != EXPECTED_PRIV_LEVEL) && !(csr_addr == PROTECTED_REG)) begin   
+		//raise excetption
+                exception = 1'b1;
+            end
+
+this vulnerability is related to preventing an exception from being raised when trying to access a
+specific protected register in a csr unit. Instead, the vulnerability should be raised when trying
+to access the register. To detect this pattern, we use a regex that is looking for a condition check
+paired with another check. This can be found using the following regex
+
+if *[(]+ *[~a-zA-Z0-9_\-\.]+ * (&|&&) *[~a-zA-Z0-9_\-\.]+ *(==|!=) *[~a-zA-Z0-9_\-\.]+[)]* *(&&|&) *!*[(]*[~a-zA-Z0-9_\-\.]+ *(!=|==) *[~a-zA-Z0-9_\-\.]+[)]+
+
+----------------------------------- occurance stats -----------------------------------------

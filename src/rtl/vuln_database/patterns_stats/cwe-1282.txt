@@ -1,4 +1,4 @@
-regex pattern for cwe-1245 and occurance stats for each SoC analyzed
+regex pattern for cwe-1282 and occurance stats for each SoC analyzed
 
 ------------------------------------- regex pattern ----------------------------------------
 
