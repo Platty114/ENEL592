@@ -1,0 +1,282 @@
+doc/source/core/core.rst:55:  | e203_ifu          |  Top module of fetch unit                                         |
+riscv-tools/riscv-tests/mt/av_matmul.c:17:			if(coreid == 1 || ncores == 1 )
+riscv-tools/riscv-tests/mt/bj_matmul.c:61:    if(coreid == 1  || ncores == 1) {
+riscv-tools/riscv-tests/mt/bk_matmul.c:51:  if(coreid == 1 || ncores == 1) {
+riscv-tools/riscv-tests/mt/bh_matmul.c:61:    if(coreid == 1 || ncores == 1) {
+riscv-tools/riscv-tests/mt/al_matmul.c:69:   if( coreid == 1 || ncores == 1) {
+riscv-tools/riscv-tests/mt/df_matmul.c:129:   if(coreid == 1 || ncores == 1)   {
+riscv-tools/riscv-tests/mt/bo_matmul.c:61:    if (coreid == 1 || ncores == 1) {
+riscv-tools/riscv-tests/mt/bc_matmul.c:34:  if (ncores == NCORES && lda == LDA) {
+riscv-tools/riscv-tests/mt/cl_matmul.c:70:   if(coreid == 1 || ncores == 1)  {
+riscv-tools/riscv-tests/mt/cm_matmul.c:53:    if (coreid==1 || ncores == 1){
+riscv-tools/riscv-tests/mt/bf_matmul.c:72:   if(coreid == 1 || ncores == 1)  {
+riscv-tools/riscv-tests/mt/dv_matmul.c:16:  if (coreid || ncores == 1) { 
+riscv-tools/riscv-tests/mt/cv_matmul.c:14:	if(coreid == 1 || ncores == 1)
+riscv-tools/riscv-tests/mt/dc_matmul.c:34:  if (ncores == NCORES && lda == LDA) {
+riscv-tools/riscv-tests/mt/cf_matmul.c:55:    if(coreid == 1 || ncores == 1) {
+riscv-tools/riscv-tests/env/v/vm.c:129:    if (!(user_l3pt[addr/PGSIZE] & PTE_A)) {
+riscv-tools/riscv-tests/env/v/vm.c:186:  else if (tf->cause == CAUSE_FETCH_PAGE_FAULT || tf->cause == CAUSE_LOAD_PAGE_FAULT || tf->cause == CAUSE_STORE_PAGE_FAULT)
+riscv-tools/riscv-tests/env/v/vm.c:201:    if (random & 1) // perform a no-op write
+riscv-tools/riscv-tests/env/v/vm.c:218:#if (MAX_TEST_PAGES > PTES_PER_PT) || (DRAM_BASE % MEGAPAGE_SIZE) != 0
+riscv-tools/riscv-tests/env/v/string.c:7:  if ((((uintptr_t)dest | (uintptr_t)src | len) & (sizeof(uintptr_t)-1)) == 0) {
+riscv-tools/riscv-tests/env/v/string.c:23:  if ((((uintptr_t)dest | len) & (sizeof(uintptr_t)-1)) == 0) {
+riscv-tools/riscv-tests/env/v/string.c:62:  if ((((uintptr_t)s1 | (uintptr_t)s2) & (sizeof(uintptr_t)-1)) == 0) {
+riscv-tools/riscv-tests/env/v/string.c:103:  if (*str == '-' || *str == '+') {
+riscv-tools/riscv-tests/benchmarks/towers/towers_main.c:170:  if ( list_getSize(&this->pegA) != 0 ) {
+riscv-tools/riscv-tests/benchmarks/towers/towers_main.c:174:  if ( list_getSize(&this->pegB) != 0 ) {
+riscv-tools/riscv-tests/benchmarks/towers/towers_main.c:178:  if ( list_getSize(&this->pegC) != this->numDiscs ) {
+riscv-tools/riscv-tests/benchmarks/towers/towers_main.c:232:  return towers_verify( &towers );
+riscv-tools/riscv-tests/benchmarks/mm/mm.c:148:  if (__builtin_expect(m <= 2*CBM && n <= 2*CBN && p <= 2*CBK, 1))
+riscv-tools/riscv-tests/benchmarks/common/util.h:23:  if (n % 2 != 0 && test[n-1] != verify[n-1])
+riscv-tools/riscv-tests/benchmarks/common/util.h:37:    if (!(eq1 & eq2)) return i+1+eq1;
+riscv-tools/riscv-tests/benchmarks/common/util.h:39:  if (n % 2 != 0 && test[n-1] != verify[n-1])
+riscv-tools/riscv-tests/benchmarks/common/util.h:53:  if (__sync_fetch_and_add(&count, 1) == ncores-1)
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:134:  if (ch == '\n' || buflen == sizeof(buf))
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:249:        if (ch < '0' || ch > '9')
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:286:      if (width > 0 && padc != '-')
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:382:  if ((((uintptr_t)dest | (uintptr_t)src | len) & (sizeof(uintptr_t)-1)) == 0) {
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:398:  if ((((uintptr_t)dest | len) & (sizeof(uintptr_t)-1)) == 0) {
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:459:  if (*str == '-' || *str == '+') {
+riscv-tools/riscv-tests/benchmarks/multiply/multiply.c:14:   if ((x & 0x1) == 1)
+riscv-tools/riscv-tests/benchmarks/dhrystone/dhrystone.c:146:  if (Ch_Loc >= 'W' && Ch_Loc < 'Z')
+riscv-tools/riscv-tests/isa/rv32ud/move.S:7:# This test verifies that fmv.d.x, fmv.x.d, and fsgnj[x|n].d work properly.
+riscv-tools/riscv-tests/isa/rv64si/ma_fetch.S:86:  # verify that epc == &jalr (== t0 - 4)
+riscv-tools/riscv-tests/isa/rv64uf/move.S:7:# This test verifies that the fmv.s.x, fmv.x.s, and fsgnj[x|n].d instructions
+riscv-tools/riscv-tests/isa/rv64ud/move.S:7:# This test verifies that fmv.d.x, fmv.x.d, and fsgnj[x|n].d work properly.
+riscv-tools/riscv-tests/configure:17:if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then :
+riscv-tools/riscv-tests/configure:137:  if test x"${_as_can_reexec}" != xno && test "x$CONFIG_SHELL" != x; then
+riscv-tools/riscv-tests/configure:161:  as_bourne_compatible="if test -n \"\${ZSH_VERSION+set}\" && (emulate sh) >/dev/null 2>&1; then :
+riscv-tools/riscv-tests/configure:188:if ( set x; as_fn_ret_success y && test x = \"\$1\" ); then :
+riscv-tools/riscv-tests/configure:204:  if test x$as_have_required = xyes && (eval "$as_suggested") 2>/dev/null; then :
+riscv-tools/riscv-tests/configure:219:	     if { test -f "$as_shell" || test -f "$as_shell.exe"; } &&
+riscv-tools/riscv-tests/configure:222:		   if { $as_echo "$as_bourne_compatible""$as_suggested" | as_run=a "$as_shell"; } 2>/dev/null; then :
+riscv-tools/riscv-tests/configure:230:$as_found || { if { test -f "$SHELL" || test -f "$SHELL.exe"; } &&
+riscv-tools/riscv-tests/configure:418:if expr a : '\(a\)' >/dev/null 2>&1 &&
+riscv-tools/riscv-tests/configure:425:if (basename -- /) >/dev/null 2>&1 && test "X`basename -- / 2>&1`" = "X/"; then
+riscv-tools/riscv-tests/configure:431:if (as_dir=`dirname -- /` && test "X$as_dir" = X/) >/dev/null 2>&1; then
+riscv-tools/riscv-tests/configure:1636:  if test /dev/null != "$ac_site_file" && test -r "$ac_site_file"; then
+riscv-tools/riscv-tests/configure:1651:  if test /dev/null != "$cache_file" && test -f "$cache_file"; then
+riscv-tools/riscv-tests/configure:2123:	if test "${ac_cv_exeext+set}" = set && test "$ac_cv_exeext" != no;
+riscv-tools/riscv-tests/configure:2602:if diff "$cache_file" confcache >/dev/null 2>&1; then :; else
+riscv-tools/riscv-tests/configure:2607:      if test ! -f "$cache_file" || test -h "$cache_file"; then
+riscv-tools/riscv-tests/configure:2714:if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then :
+riscv-tools/riscv-tests/configure:2912:if expr a : '\(a\)' >/dev/null 2>&1 &&
+riscv-tools/riscv-tests/configure:2919:if (basename -- /) >/dev/null 2>&1 && test "X`basename -- / 2>&1`" = "X/"; then
+riscv-tools/riscv-tests/configure:2925:if (as_dir=`dirname -- /` && test "X$as_dir" = X/) >/dev/null 2>&1; then
+riscv-tools/riscv-tests/configure:3411:if sed "s/$ac_cr//" < /dev/null > /dev/null 2>&1; then
+riscv-tools/riscv-tests/configure:3690:if test -n "$ac_unrecognized_opts" && test "$enable_option_checking" != no; then
+riscv-tools/riscv-tests/debug/testlib.py:657:            if self.target.misa & (1<<i):
+riscv-tools/riscv-tests/debug/gdbserver.py:592:            if tdata1 & dmode:
+riscv-tools/riscv-tests/debug/gdbserver.py:722:#        if misa & (1<<20):
+riscv-tools/riscv-tests/debug/gdbserver.py:724:#        if misa & (1<<18):
+riscv-tools/riscv-tests/debug/gdbserver.py:726:#        if misa & (1<<7):
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:347:  if ((align & (align - 1)) != 0
+riscv-tools/riscv-tests/debug/programs/debug.c:29:        if ((*buf >= 'a' && *buf <= 'm') ||
+riscv-tools/riscv-tests/debug/programs/debug.c:32:        } else if ((*buf >= 'n' && *buf <= 'z') ||
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_2.c:156:  if (Ch_Loc >= 'W' && Ch_Loc < 'Z')
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:154:			if (this_find->info->data16 & 0x1) /* use found value */
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:460:				} else if (qsize == 0 || !q) {
+riscv-tools/fpga_test4sim/coremark4sim/core_util.c:72:	if ((valstring[0] == '0') && (valstring[1] == 'x')) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:125:	if ((results[0].seed1==0) && (results[0].seed2==0) && (results[0].seed3==0)) { /* validation run */
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:130:	if ((results[0].seed1==1) && (results[0].seed2==0) && (results[0].seed3==0)) { /* perfromance run */
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:172:		if ((1<<(ee_u32)i) & results[0].execs)
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:180:		if ((1<<(ee_u32)i) & results[0].execs) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:188:		if (results[i].execs & ID_LIST) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:191:		if (results[i].execs & ID_MATRIX) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:194:		if (results[i].execs & ID_STATE) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:270:			if ((results[i].execs & ID_LIST) && 
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:275:			if ((results[i].execs & ID_MATRIX) &&
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:280:			if ((results[i].execs & ID_STATE) &&
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:316:	if (results[0].execs & ID_LIST)
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:319:	if (results[0].execs & ID_MATRIX) 
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:322:	if (results[0].execs & ID_STATE)
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:332:#if defined(MEM_LOCATION) && !defined(MEM_LOCATION_UNSPEC)
+riscv-tools/fpga_test4sim/coremark4sim/core_state.c:199:			else if( NEXT_SYMBOL == '+' || NEXT_SYMBOL == '-' ) {
+riscv-tools/fpga_test4sim/coremark4sim/core_state.c:236:			if( NEXT_SYMBOL == 'E' || NEXT_SYMBOL == 'e' ) {
+riscv-tools/fpga_test4sim/coremark4sim/core_state.c:246:			if( NEXT_SYMBOL == '+' || NEXT_SYMBOL == '-' ) {
+riscv-tools/fpga_test4sim/coremark4sim/core_portme.h:53:#if !defined(PROFILE_RUN) && !defined(PERFORMANCE_RUN) && !defined(VALIDATION_RUN)
+rtl/e203/core/e203_exu_alu_muldiv.v:552:      assert property (@(posedge clk) disable iff ((~rst_n) | (~muldiv_o_valid))  ((golden0_mul_res == golden1_mul_res)))
+rtl/e203/core/e203_exu_alu_muldiv.v:572:      assert property (@(posedge clk) disable iff ((~rst_n) | (~muldiv_o_valid))
+rtl/e203/core/e203_exu_alu_muldiv.v:582: //     assert property (@(posedge clk) disable iff ((~rst_n) | (~muldiv_o_valid))
+rtl/e203/core/e203_exu_alu_muldiv.v:614:    assert property (@(negedge clk) disable iff ((~rst_n) | flush_pulse)
+rtl/e203/core/e203_clk_ctrl.v:77:  wire ifu_clk_en = core_cgstop | (core_ifu_active & (~core_wfi));
+rtl/e203/core/e203_exu_excp.v:135:  wire wfi_req_hsked = (wfi_halt_ifu_req & wfi_halt_ifu_ack & wfi_halt_exu_req & wfi_halt_exu_ack)
+rtl/e203/core/e203_exu_excp.v:163:  assign wfi_halt_ifu_req = (wfi_halt_req_r & (~wfi_halt_req_clr))
+rtl/e203/core/e203_exu_excp.v:443:  wire alu_excp_flush_req_ifu_misalgn = (alu_excp_flush_req & alu_excp_i_ifu_misalgn);
+rtl/e203/core/e203_exu_excp.v:444:  wire alu_excp_flush_req_ifu_buserr  = (alu_excp_flush_req & alu_excp_i_ifu_buserr);
+rtl/e203/core/e203_exu_excp.v:445:  wire alu_excp_flush_req_ifu_ilegl   = (alu_excp_flush_req & alu_excp_i_ifu_ilegl);
+rtl/e203/core/e203_ifu_ift2icb.v:366:  wire ifu_req_lane_same = ifu_req_seq & (ifu_req_lane_begin ? req_lane_cross_r : 1'b1);
+rtl/e203/core/e203_ifu_ift2icb.v:371:            | (ifu_req_pc2itcm & ifu2itcm_holdup & (~itcm_nohold)) 
+rtl/e203/core/e203_ifu_ift2icb.v:375:  wire ifu_req_hsked = ifu_req_valid & ifu_req_ready;
+rtl/e203/core/e203_ifu_ift2icb.v:376:  wire i_ifu_rsp_hsked = i_ifu_rsp_valid & i_ifu_rsp_ready;
+rtl/e203/core/e203_ifu_ift2icb.v:379:  wire ifu_icb_cmd_hsked = ifu_icb_cmd_valid & ifu_icb_cmd_ready;
+rtl/e203/core/e203_ifu_ift2icb.v:382:  wire ifu_icb_rsp_hsked = ifu_icb_rsp_valid & ifu_icb_rsp_ready;
+rtl/e203/core/e203_ifu_ift2icb.v:480:  wire req_same_cross_holdup = ifu_req_lane_same & ifu_req_lane_cross & ifu_req_lane_holdup;
+rtl/e203/core/e203_ifu_ift2icb.v:481:  wire req_need_2uop         = (  ifu_req_lane_same  & ifu_req_lane_cross & (~ifu_req_lane_holdup))
+rtl/e203/core/e203_ifu_ift2icb.v:482:                             | ((~ifu_req_lane_same) & ifu_req_lane_cross);
+rtl/e203/core/e203_ifu_ift2icb.v:483:  wire req_need_0uop         = ifu_req_lane_same & (~ifu_req_lane_cross) & ifu_req_lane_holdup;
+rtl/e203/core/e203_ifu_ift2icb.v:503:  wire icb_cmd_addr_2_1_ena = ifu_icb_cmd_hsked | ifu_req_hsked;
+rtl/e203/core/e203_ifu_ift2icb.v:520:  wire holdup2leftover_ena = ifu_req_hsked & holdup2leftover_sel;
+rtl/e203/core/e203_ifu_ift2icb.v:532:  wire uop1st2leftover_ena = ifu_icb_rsp_hsked & uop1st2leftover_sel;
+rtl/e203/core/e203_ifu_ift2icb.v:675:  assign ifu_icb_rsp2leftover = req_need_2uop_r & icb_sta_is_1st;
+rtl/e203/core/e203_ifu_ift2icb.v:682:  assign i_ifu_rsp_valid = holdup_gen_fake_rsp_valid | ifu_icb_rsp2ir_valid;
+rtl/e203/core/e203_ifu_ift2icb.v:725:                   (ifu_req_valid_pos & (~req_need_0uop))
+rtl/e203/core/e203_ifu_ift2icb.v:784:  assign ifu_req_ready     = ifu_icb_cmd_ready & ifu_req_ready_condi; 
+rtl/e203/core/e203_ifu_ift2icb.v:785:  assign ifu_req_valid_pos = ifu_req_valid     & ifu_req_ready_condi; // Handshake valid
+rtl/e203/core/e203_ifu_ift2icb.v:796:  assign ifu2itcm_icb_cmd_valid = ifu_icb_cmd_valid & ifu_icb_cmd2itcm;
+rtl/e203/core/e203_ifu_ift2icb.v:808:  wire ifu2biu_icb_cmd_valid_pre  = ifu_icb_cmd_valid & ifu_icb_cmd2biu;
+rtl/e203/core/e203_ifu_ift2icb.v:818:        | (ifu_icb_cmd2itcm & ifu2itcm_icb_cmd_ready) 
+rtl/e203/core/e203_ifu_ift2icb.v:821:        | (ifu_icb_cmd2biu  & ifu2biu_icb_cmd_ready_pre ) 
+rtl/e203/core/e203_lsu_ctrl.v:581:  wire splt_fifo_wen = arbt_icb_cmd_valid & arbt_icb_cmd_ready;
+rtl/e203/core/e203_lsu_ctrl.v:582:  wire splt_fifo_ren = arbt_icb_rsp_valid & arbt_icb_rsp_ready;
+rtl/e203/core/e203_lsu_ctrl.v:592:  wire excl_flg_set = splt_fifo_wen & arbt_icb_cmd_usr[USR_PACK_EXCL] & arbt_icb_cmd_read & arbt_icb_cmd_excl;
+rtl/e203/core/e203_lsu_ctrl.v:595:  wire excl_flg_clr = (splt_fifo_wen & (~arbt_icb_cmd_read) & icb_cmdaddr_eq_excladdr & excl_flg_r) 
+rtl/e203/core/e203_lsu_ctrl.v:661:          } = splt_fifo_rdat & {SPLT_FIFO_W{splt_fifo_o_valid}};
+rtl/e203/core/e203_lsu_ctrl.v:719:  wire arbt_icb_cmd_addi_condi = (~splt_fifo_full) & (~cmd_diff_branch);
+rtl/e203/core/e203_exu_alu_dpath.v:184:  wire op_shift = op_sra | op_sll | op_srl; 
+rtl/e203/core/e203_exu_alu_dpath.v:203:  assign shifter_in2 = {5{op_shift}} & shifter_op2[4:0];
+rtl/e203/core/e203_exu_alu_dpath.v:222:               (srl_res & eff_mask) | ({32{shifter_op1[31]}} & (~eff_mask));
+rtl/e203/core/e203_ifu_ifetch.v:109:  wire ifu_req_hsked  = (ifu_req_valid & ifu_req_ready) ;
+rtl/e203/core/e203_ifu_ifetch.v:110:  wire ifu_rsp_hsked  = (ifu_rsp_valid & ifu_rsp_ready) ;
+rtl/e203/core/e203_ifu_ifetch.v:111:  wire ifu_ir_o_hsked = (ifu_o_valid & ifu_o_ready) ;
+rtl/e203/core/e203_ifu_ifetch.v:156:  assign halt_ack_set = ifu_halt_req & (~halt_ack_r) & ifu_no_outs;
+rtl/e203/core/e203_ifu_ifetch.v:227:  assign ir_valid_set  = ifu_rsp_hsked & (~pipe_flush_req_real) & (~ifu_rsp_need_replay);
+rtl/e203/core/e203_ifu_ifetch.v:228:  assign ir_pc_vld_set = pc_newpend_r & ifu_ir_i_ready & (~pipe_flush_req_real) & (~ifu_rsp_need_replay);
+rtl/e203/core/e203_ifu_ifetch.v:231:  assign ir_valid_clr  = ifu_ir_o_hsked | (pipe_flush_hsked & ir_valid_r);
+rtl/e203/core/e203_ifu_ifetch.v:312:  assign ifu_ir_i_ready   = (~ir_valid_r) | ir_valid_clr;
+rtl/e203/core/e203_ifu_ifetch.v:461:  assign ifu_req_seq = (~pipe_flush_req_real) & (~ifu_reset_req) & (~ifetch_replay_req) & (~bjp_req);
+rtl/e203/core/e203_ifu_ifetch.v:478:  wire ifu_new_req = (~bpu_wait) & (~ifu_halt_req) & (~reset_flag_r) & (~ifu_rsp_need_replay);
+rtl/e203/core/e203_ifu_ifetch.v:483:  wire ifu_req_valid_pre = ifu_new_req | ifu_reset_req | pipe_flush_req_real | ifetch_replay_req;
+rtl/e203/core/e203_ifu_ifetch.v:490:  assign ifu_no_outs   = (~out_flag_r) | ifu_rsp_valid;
+rtl/e203/core/e203_ifu_ifetch.v:495:  assign ifu_req_valid = ifu_req_valid_pre & new_req_condi;
+rtl/e203/core/e203_ifu_ifetch.v:497:  //wire ifu_rsp2ir_ready = (ifu_rsp_replay | pipe_flush_req_real) ? 1'b1 : (ifu_ir_i_ready & (~bpu_wait));
+rtl/e203/core/e203_ifu_ifetch.v:498:  wire ifu_rsp2ir_ready = (pipe_flush_req_real) ? 1'b1 : (ifu_ir_i_ready & ifu_req_ready & (~bpu_wait));
+rtl/e203/core/e203_ifu_ifetch.v:505:  wire pc_ena = ifu_req_hsked | pipe_flush_hsked;
+rtl/e203/core/e203_itcm_ctrl.v:435:  wire sram_sel_ifu  = sram_ready2ifu  & ifu2itcm_icb_cmd_valid;
+rtl/e203/core/e203_itcm_ctrl.v:441:  assign ifu2itcm_icb_cmd_ready = sram_ready2ifu   & sram_icb_cmd_ready;
+rtl/e203/core/e203_itcm_ctrl.v:451:  assign sram_icb_cmd_valid = (sram_sel_ifu   & ifu2itcm_icb_cmd_valid)
+rtl/e203/core/e203_itcm_ctrl.v:454:  assign sram_icb_cmd_addr  = ({`E203_ITCM_ADDR_WIDTH{sram_sel_ifu  }} & ifu2itcm_icb_cmd_addr)
+rtl/e203/core/e203_itcm_ctrl.v:456:  assign sram_icb_cmd_read  = (sram_sel_ifu   & ifu2itcm_icb_cmd_read)
+rtl/e203/core/e203_itcm_ctrl.v:458:  assign sram_icb_cmd_wdata = ({`E203_ITCM_DATA_WIDTH{sram_sel_ifu  }} & ifu2itcm_icb_cmd_wdata)
+rtl/e203/core/e203_itcm_ctrl.v:460:  assign sram_icb_cmd_wmask = ({`E203_ITCM_WMSK_WIDTH{sram_sel_ifu  }} & ifu2itcm_icb_cmd_wmask)
+rtl/e203/core/e203_itcm_ctrl.v:529:  assign ifu2itcm_icb_rsp_valid = sram_icb_rsp_valid & sram_icb_rsp_ifu;
+rtl/e203/core/e203_itcm_ctrl.v:553:  wire ifu_holdup_set =   sram_icb_cmd_ifu & itcm_ram_cs;
+rtl/e203/core/e203_itcm_ctrl.v:555:  wire ifu_holdup_clr = (~sram_icb_cmd_ifu) & itcm_ram_cs;
+rtl/e203/core/e203_itcm_ctrl.v:556:  wire ifu_holdup_ena = ifu_holdup_set | ifu_holdup_clr;
+rtl/e203/core/e203_itcm_ctrl.v:557:  wire ifu_holdup_nxt = ifu_holdup_set & (~ifu_holdup_clr);
+rtl/e203/core/e203_itcm_ctrl.v:563:  assign itcm_active = ifu2itcm_icb_cmd_valid | lsu2itcm_icb_cmd_valid | itcm_sram_ctrl_active
+rtl/e203/core/e203_exu_alu.v:182:  wire ifu_excp_op = i_ilegl | i_buserr | i_misalgn;
+rtl/e203/core/e203_exu_alu.v:183:  wire alu_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_ALU); 
+rtl/e203/core/e203_exu_alu.v:184:  wire agu_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_AGU); 
+rtl/e203/core/e203_exu_alu.v:185:  wire bjp_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_BJP); 
+rtl/e203/core/e203_exu_alu.v:186:  wire csr_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_CSR); 
+rtl/e203/core/e203_exu_alu.v:188:  wire mdv_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_MULDIV); 
+rtl/e203/core/e203_exu_alu.v:191:  wire nice_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_NICE);
+rtl/e203/core/e203_exu_alu.v:207:  wire ifu_excp_i_valid = i_valid & ifu_excp_op;
+rtl/e203/core/e203_exu_alu.v:226:                   | (ifu_excp_i_ready & ifu_excp_op)
+rtl/e203/core/e203_exu_alu.v:794:                     | (o_sel_ifu_excp & ifu_excp_o_valid)
+rtl/e203/core/e203_exu_alu.v:803:  assign ifu_excp_o_ready = o_sel_ifu_excp & o_ready;
+rtl/e203/core/e203_exu_alu.v:823:                  | ({`E203_XLEN{o_sel_ifu_excp}} & ifu_excp_o_wbck_wdat)
+rtl/e203/core/e203_exu_alu.v:839:                  | ({1{o_sel_ifu_excp}} & ifu_excp_o_wbck_err)
+rtl/e203/core/e203_exu.v:881:  assign dec2ifu_rden  = disp_oitf_rdwen & (~disp_oitf_rdfpu); 
+rtl/e203/core/e203_exu.v:882:  assign dec2ifu_rs1en = disp_oitf_rs1en & (~disp_oitf_rs1fpu);
+rtl/e203/core/e203_biu.v:507:  //wire ifu_replay_set = (arbt_icb_cmd_valid & arbt_icb_cmd_ready & lsu2biu_icb_cmd_valid)
+rtl/e203/core/e203_biu.v:510:  //wire ifu_replay_clr = (arbt_icb_cmd_valid & arbt_icb_cmd_ready & ifu2biu_icb_cmd_valid);
+rtl/e203/core/e203_biu.v:511:  //wire ifu_replay_ena = ifu_replay_set | ifu_replay_clr;
+rtl/e203/core/e203_biu.v:512:  //wire ifu_replay_nxt = ifu_replay_set | (~ifu_replay_clr);
+rtl/e203/core/e203_biu.v:932:  assign biu_active = ifu2biu_icb_cmd_valid | lsu2biu_icb_cmd_valid | icb_buffer_active; 
+rtl/e203/core/e203_exu_nice.v:94: wire itag_fifo_wen = nice_o_longpipe & (nice_req_valid & nice_req_ready); 
+rtl/e203/core/e203_exu_nice.v:95: wire itag_fifo_ren = nice_rsp_multicyc_valid & nice_rsp_multicyc_ready; 
+rtl/e203/core/e203_exu_nice.v:103:assign nice_o_itag_valid = fifo_o_vld & nice_rsp_multicyc_valid;
+rtl/e203/general/sirv_gnrl_icbs.v:259:    assign rspid_fifo_wen = o_icb_cmd_valid & o_icb_cmd_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:260:    assign rspid_fifo_ren = o_icb_rsp_valid & o_icb_rsp_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:264:        assign rspid_fifo_bypass = rspid_fifo_empty & rspid_fifo_wen & rspid_fifo_ren;
+rtl/e203/general/sirv_gnrl_icbs.v:273:        assign o_icb_rsp_valid_pre = (~rspid_fifo_empty) & o_icb_rsp_valid;
+rtl/e203/general/sirv_gnrl_icbs.v:274:        assign o_icb_rsp_ready     = (~rspid_fifo_empty) & o_icb_rsp_ready_pre;
+rtl/e203/general/sirv_gnrl_icbs.v:277:    assign rspid_fifo_i_valid = rspid_fifo_wen & (~rspid_fifo_bypass);
+rtl/e203/general/sirv_gnrl_icbs.v:279:    assign rspid_fifo_o_ready = rspid_fifo_ren & (~rspid_fifo_bypass);
+rtl/e203/general/sirv_gnrl_icbs.v:559:    wire n2w_fifo_wen = i_icb_cmd_valid & i_icb_cmd_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:560:    wire n2w_fifo_ren = i_icb_rsp_valid & i_icb_rsp_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:618:  assign o_icb_cmd_valid = (~n2w_fifo_full) & i_icb_cmd_valid; 
+rtl/e203/general/sirv_gnrl_icbs.v:619:  assign i_icb_cmd_ready = (~n2w_fifo_full) & o_icb_cmd_ready; 
+rtl/e203/general/sirv_gnrl_icbs.v:830:       wire cmd_diff_branch = (~rspid_fifo_empty) & (~(rspid_fifo_wdat == rspid_fifo_rdat));
+rtl/e203/general/sirv_gnrl_icbs.v:831:       assign i_icb_cmd_valid_pre = i_icb_cmd_valid     & (~cmd_diff_branch) & (~rspid_fifo_full);
+rtl/e203/general/sirv_gnrl_icbs.v:832:       assign i_icb_cmd_ready     = i_icb_cmd_ready_pre & (~cmd_diff_branch) & (~rspid_fifo_full);
+rtl/e203/general/sirv_gnrl_icbs.v:849:    assign rspid_fifo_wen = i_icb_cmd_valid & i_icb_cmd_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:850:    assign rspid_fifo_ren = i_icb_rsp_valid & i_icb_rsp_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:853:        assign rspid_fifo_bypass = rspid_fifo_empty & rspid_fifo_wen & rspid_fifo_ren;
+rtl/e203/general/sirv_gnrl_icbs.v:862:        assign i_icb_rsp_valid     = (~rspid_fifo_empty) & i_icb_rsp_valid_pre;
+rtl/e203/general/sirv_gnrl_icbs.v:863:        assign i_icb_rsp_ready_pre = (~rspid_fifo_empty) & i_icb_rsp_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:866:    assign rspid_fifo_i_valid = rspid_fifo_wen & (~rspid_fifo_bypass);
+rtl/e203/general/sirv_gnrl_icbs.v:868:    assign rspid_fifo_o_ready = rspid_fifo_ren & (~rspid_fifo_bypass);
+rtl/e203/general/sirv_gnrl_icbs.v:1161:  wire rw_fifo_wen = i_icb_cmd_valid & i_icb_cmd_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:1162:  wire rw_fifo_ren = i_icb_rsp_valid & i_icb_rsp_ready;
+rtl/e203/general/sirv_gnrl_bufs.v:359:  assign o_vld = fifo_o_vld | i_vld;
+rtl/e203/general/sirv_gnrl_bufs.v:367:  assign fifo_i_vld = i_vld & (~byp);
+rtl/e203/general/sirv_gnrl_bufs.v:491:      assign fifo_rf_en[i] = wen & wptr_vec_r[i];
+rtl/e203/debug/sirv_jtag_dtm.v:280:      end else if (i_dtm_resp_valid & i_dtm_resp_ready) begin //only in CAPTURE_DR
+rtl/e203/perips/sirv_queue.v:145:    if(ram_read_T_69_en & ram_read_T_69_mask) begin
+rtl/e203/perips/sirv_queue.v:148:    if(ram_index_T_69_en & ram_index_T_69_mask) begin
+rtl/e203/perips/sirv_queue.v:151:    if(ram_data_T_69_en & ram_data_T_69_mask) begin
+rtl/e203/perips/sirv_queue.v:154:    if(ram_mask_T_69_en & ram_mask_T_69_mask) begin
+rtl/e203/perips/sirv_queue.v:157:    if(ram_extra_T_69_en & ram_extra_T_69_mask) begin
+rtl/e203/perips/apb_adv_timer/adv_timer_apb_if.v:625:        end else if ((PSEL && PENABLE) && PWRITE) begin
+rtl/e203/perips/apb_adv_timer/up_down_counter.v:80:        if (ctrl_update_i || r_pending_update) begin
+rtl/e203/perips/apb_adv_timer/up_down_counter.v:81:            if (ctrl_update_i && !ctrl_active_i) begin
+rtl/e203/perips/apb_adv_timer/up_down_counter.v:111:        end else if (counter_event_i && ctrl_active_i) begin
+rtl/e203/perips/apb_adv_timer/up_down_counter.v:112:            if (!r_direction && (r_counter == r_end)) begin
+rtl/e203/perips/apb_adv_timer/up_down_counter.v:120:	    end else if (r_direction && (r_counter == r_start)) begin
+rtl/e203/perips/apb_adv_timer/up_down_counter.v:140:            if (s_do_update || (counter_event_i && ctrl_active_i)) begin
+rtl/e203/perips/apb_adv_timer/input_stage.v:131:            if (!cfg_sel_clk_i || (cfg_sel_clk_i && s_rise_ls_clk))
+rtl/e203/perips/apb_adv_timer/timer_cntrl.v:42:        if (cfg_start_i && !r_active) begin
+rtl/e203/perips/apb_adv_timer/timer_cntrl.v:64:            if (cnt_update_i && !cfg_update_i)
+rtl/e203/perips/apb_adv_timer/comparator.v:69:        end else if (timer_valid_i && ctrl_active_i) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:81:			if(s_match && !r_is_2nd_event) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:84:			end else if(s_match && r_is_2nd_event) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:98:		        if(s_match && !r_is_2nd_event) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:101:		        end else if(s_match && r_is_2nd_event) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:119:		        if(s_match && !r_is_2nd_event) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:122:		        end else if(s_match && r_is_2nd_event) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:136:		        if(s_match && !r_is_2nd_event) begin
+rtl/e203/perips/apb_adv_timer/comparator.v:139:		        end else if(s_match && r_is_2nd_event) begin
+rtl/e203/perips/sirv_flash_qspi.v:2167:  assign T_1915 = fifo_io_ip_txwm & ie_txwm;
+rtl/e203/perips/sirv_flash_qspi.v:2168:  assign T_1916 = fifo_io_ip_rxwm & ie_rxwm;
+rtl/e203/perips/sirv_queue_1.v:100:    if(ram_T_35_en & ram_T_35_mask) begin
+rtl/e203/perips/apb_uart/uart_rx.v:189:            if (!start_bit && (baud_cnt == cfg_div_i)) begin
+rtl/e203/perips/apb_uart/uart_rx.v:192:	    end else if (start_bit && (baud_cnt == {1'b0, cfg_div_i[15:1]})) begin
+rtl/e203/perips/apb_uart/apb_uart.v:179:        if (PSEL && PENABLE && PWRITE)
+rtl/e203/perips/apb_uart/apb_uart.v:222:        if (PSEL && PENABLE && !PWRITE)
+rtl/e203/perips/apb_uart/uart_interrupt.v:63:            if (IER_i[2] & error_i)
+rtl/e203/perips/apb_uart/uart_interrupt.v:66:            else if (IER_i[0] & trigger_level_reached)
+rtl/e203/perips/apb_uart/uart_interrupt.v:69:            else if (IER_i[1] & (tx_elements_i == 0))
+rtl/e203/perips/apb_uart/io_generic_fifo.v:52:        else if ((ready_i && valid_o) && (!valid_i || full))
+rtl/e203/perips/apb_uart/io_generic_fifo.v:55:        else if (((!valid_o || !ready_i) && valid_i) && !full)
+rtl/e203/perips/apb_uart/io_generic_fifo.v:66:        end else if (valid_i && !full) begin
+rtl/e203/perips/apb_uart/io_generic_fifo.v:84:	    if (valid_i && !full) begin
+rtl/e203/perips/apb_uart/io_generic_fifo.v:97:	    if (ready_i && valid_o) begin
+rtl/e203/perips/apb_uart/uart_tx.v:187:        if ((tx_valid_i & tx_ready_o) & rstn_i)
+rtl/e203/perips/apb_spi_master/spi_master_tx.v:75:                if (en && data_valid) begin
+rtl/e203/perips/apb_spi_master/spi_master_tx.v:91:                        if (en && data_valid) begin
+rtl/e203/perips/apb_spi_master/spi_master_apb_if.v:101:	end else if (PSEL && PENABLE && PWRITE) begin
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:55:        else if ((ready_i && valid_o) && (!valid_i || full))
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:58:        else if (((!valid_o || !ready_i) && valid_i) && !full)
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:69:        else if (valid_i && !full)
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:87:	    if (valid_i && !full) begin
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:99:	    if (ready_i && valid_o) begin
+rtl/e203/perips/apb_spi_master/spi_master_clkgen.v:65:            if (!((spi_clk == 1'b0) && ~en)) begin
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:220:                if (spi_rd || spi_wr || spi_qrd || spi_qwr) begin
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:241:                        if (spi_rd || spi_qrd) begin
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:474:            if (spi_qrd || spi_qwr)
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:479:            if (spi_rd || spi_qrd) begin
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:482:	    end else if (spi_wr || spi_qwr) begin
+rtl/e203/perips/sirv_qspi_physical.v:321:  assign shift = setup_d | T_151;
+rtl/e203/perips/apb_i2c/i2c_master_bit_ctrl.v:210:      else if (~|cnt || !ena || scl_sync)
+rtl/e203/perips/apb_i2c/i2c_master_bit_ctrl.v:327:      if (sSCL & ~dSCL) dout <= sSDA;
+rtl/e203/perips/apb_i2c/apb_i2c.v:88:	end else if (PSEL && PENABLE && PWRITE) begin
+rtl/e203/perips/apb_i2c/apb_i2c.v:89:            if (s_done | i2c_al)
+rtl/e203/perips/apb_i2c/apb_i2c.v:105:            if (s_done | i2c_al)
+rtl/e203/perips/apb_gpio/apb_gpio.v:98:	end else if (!interrupt && s_rise_int) begin //rise interrupt if not already rise
+rtl/e203/perips/apb_gpio/apb_gpio.v:101:	end else if ((((interrupt && PSEL) && PENABLE) && !PWRITE) && (s_apb_addr == `REG_INTSTATUS)) begin    //clears int if status is read
+rtl/e203/perips/apb_gpio/apb_gpio.v:131:        end else if ((PSEL && PENABLE) && PWRITE) begin
+tb/tb_top.v:39:    else if (pc_vld & (pc == `PC_WRITE_TOHOST)) begin
+tb/tb_top.v:66:    else if(i_valid & i_ready & (pc_write_to_host_flag == 1'b0)) begin

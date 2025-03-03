@@ -15,3 +15,11 @@ paired with another check. This can be found using the following regex
 if *[(]+ *[~a-zA-Z0-9_\-\.]+ * (&|&&) *[~a-zA-Z0-9_\-\.]+ *(==|!=) *[~a-zA-Z0-9_\-\.]+[)]* *(&&|&) *!*[(]*[~a-zA-Z0-9_\-\.]+ *(!=|==) *[~a-zA-Z0-9_\-\.]+[)]+
 
 ----------------------------------- occurance stats -----------------------------------------
+
+Hack@DAC 2018 SoC: 0 occurances
+Hack@DAC 2019 SoC: 0 occurances
+Hack@DAC 2021 SoC: 0 occurances
+PicoRV32:          0 occurances
+Hummingbirdv2:     0 occurances
+UltraembeddedOld:  0 occurances
+UltraembeddedNew:  0 occurances

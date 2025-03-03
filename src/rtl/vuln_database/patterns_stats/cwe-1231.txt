@@ -19,3 +19,12 @@ if.*[a-zA-Z0-9_\-\.].*[&&|&].*[a-zA-Z0-9_\-\.].*
 
 
 ----------------------------------- occurance stats -----------------------------------------
+
+Hack@DAC 2018 SoC: 318 occurances
+Hack@DAC 2019 SoC: 493 occurances
+Hack@DAC 2021 SoC: 4595 occurances
+PicoRV32:          251 occurances
+Hummingbirdv2:     282 occurances
+UltraembeddedOld:  456 occurances
+UltraembeddedNew:  305 occurances
+

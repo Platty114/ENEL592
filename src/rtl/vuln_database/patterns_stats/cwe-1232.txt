@@ -18,4 +18,10 @@ characters lk, lck, lock in it, being driven to 0. This is done using the follow
 
 ----------------------------------- occurance stats -----------------------------------------
 
-
+Hack@DAC 2018 SoC: 0 occurances
+Hack@DAC 2019 SoC: 0 occurances
+Hack@DAC 2021 SoC: 0 occurances
+PicoRV32:          0 occurances
+Hummingbirdv2:     0 occurances
+UltraembeddedOld:  0 occurances
+UltraembeddedNew:  0 occurances
