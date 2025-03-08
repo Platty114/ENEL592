@@ -12,7 +12,7 @@ specific protected register in a csr unit. Instead, the vulnerability should be 
 to access the register. To detect this pattern, we use a regex that is looking for a condition check
 paired with another check. This can be found using the following regex
 
-if *[(]+ *[~a-zA-Z0-9_\-\.]+ * (&|&&) *[~a-zA-Z0-9_\-\.]+ *(==|!=) *[~a-zA-Z0-9_\-\.]+[)]* *(&&|&) *!*[(]*[~a-zA-Z0-9_\-\.]+ *(!=|==) *[~a-zA-Z0-9_\-\.]+[)]+
+[~a-zA-Z0-9_\-\.].* *(&|&&) *[~a-zA-Z0-9_\-\.].* *(==|!=) *[~a-zA-Z0-9_\-\.].* *(&&|&) *!*[(]*[~a-zA-Z0-9_\-\.].* *(!=|==) *[~a-zA-Z0-9_\-\.].*[)]+
 
 ----------------------------------- occurance stats -----------------------------------------
 

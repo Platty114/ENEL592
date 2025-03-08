@@ -12,7 +12,7 @@ on debug mode and password, or just password. to capture this, we want to use a
 regex that identifies a signal being assigned using an or to select the value. The following
 regex fufills this need
 
-[~a-zA-Z0-9_\-\.]+ *(<=|=) *[(]([~a-zA-Z0-9_\-\.]+ *([|]|[|][|]) *[~a-zA-Z0-9_\-\.]+ *)+[)]
+[~a-zA-Z0-9_\-\.]+.*(<=|=).*([~a-zA-Z0-9_\-\.]+ *([|]|[|][|]) *[~a-zA-Z0-9_\-\.]+.*[?])+
 
 ----------------------------------- occurance stats -----------------------------------------
 

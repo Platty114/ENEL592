@@ -13,7 +13,7 @@ this vulnerability revolves around a lock of some sort being driven to 0 on rese
 To find this, we need to find a lock being driven to 0. We do that by matching a signal with the 
 characters lk, lck, lock in it, being driven to 0. This is done using the following regex pattern
 
-([l|L][k|K]|[l|L][c|C][k|K]|[l|L][o|O][c|C][k|K])+.* *<= *.*[^1-9]0+;
+[a-zA-Z0-9_\-\.].* *<= *.*[^1-9]0+;
 
 
 ----------------------------------- occurance stats -----------------------------------------
