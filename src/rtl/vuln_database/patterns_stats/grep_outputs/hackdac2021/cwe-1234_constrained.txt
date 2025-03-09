@@ -1,0 +1,4 @@
+piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:1471:  wire wr_en  = active_win_thr_rd_w_neg_wr_en & (~rst_tri_en | ~rst_tri_en_neg);
+piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:1472:  wire wr_en2 = active_win_thr_rd_w2_neg_wr_en & (~rst_tri_en | ~rst_tri_en_neg);
+piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:3705:      if (active_win_thr_rd_w_neg_wr_en & (~rst_tri_en | ~rst_tri_en_neg)) begin
+piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:3708:      if (active_win_thr_rd_w2_neg_wr_en & (~rst_tri_en | ~rst_tri_en_neg)) begin

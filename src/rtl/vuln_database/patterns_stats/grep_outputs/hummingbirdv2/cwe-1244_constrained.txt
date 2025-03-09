@@ -1,0 +1,1 @@
+rtl/e203/core/e203_ifu_litebpu.v:110:  assign prdt_pc_add_op1 = (dec_bxx | dec_jal) ? pc[`E203_PC_SIZE-1:0]

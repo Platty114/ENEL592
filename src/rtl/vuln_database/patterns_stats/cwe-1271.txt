@@ -25,18 +25,18 @@ of occurances of this pattern, we can first find the number of signals written t
 an enable signal, and then remove the number that don't feature an associated reset clause.
 This can be found using the following two regexs.
 
-find all instances of a gaurded assignment in a flip flop:
-if *[(]+[~a-zA-Z0-9_\-\.]+[)]+ *[~a-zA-Z0-9_\-\.]+ * <= *[~a-zA-Z0-9_\-\.]+
+find all instances of a gaurded assignment in a flip flop
+if *[(]+[~a-zA-Z0-9_\-\.\[\]]+[)]+ *[~a-zA-Z0-9_\-\.\[\]]+ * <= *[~a-zA-Z0-9_\-\.\[\]]+
 
 find all instances of a gaurded assignment in a flip flop that have possibly a reset before:
 if *[(]+[~a-zA-Z0-9_\-\.]+[)]+ *[~a-zA-Z0-9_\-\.]+ * <= *[~a-zA-Z0-9_\-\.']+ *;[ *|\n]*else if *[(]+[~a-zA-Z0-9_\-\.]+[)]+ *[~a-zA-Z0-9_\-\.]+ * <= *[~a-zA-Z0-9_\-\.]+
 
 ----------------------------------- occurance stats -----------------------------------------
 
-
+Standard Guarded Assignments
 Hack@DAC 2018 SoC: 0 and 0 occurances
 Hack@DAC 2019 SoC: 0 and 0 occurances
-Hack@DAC 2021 SoC:  0 and 0 occurances
+Hack@DAC 2021 SoC:  94 and 0 occurances
 PicoRV32:           0 and 0 occurances
 Hummingbirdv2:      0 and 0 occurances
 UltraembeddedOld:   0 and 0 occurances

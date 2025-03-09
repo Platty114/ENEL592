@@ -1,0 +1,8 @@
+isa_sim/riscv.cpp:417:            else if (!(pte & (PAGE_READ | PAGE_WRITE | PAGE_EXEC)))
+isa_sim/riscv.cpp:479:    if (((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == PAGE_WRITE) ||
+isa_sim/riscv.cpp:480:        ((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == (PAGE_EXEC | PAGE_WRITE)))
+isa_sim/riscv.cpp:503:        if ((pte & (PAGE_EXEC | PAGE_USER)) != (PAGE_EXEC | PAGE_USER))
+isa_sim/riscv.cpp:542:    if (((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == PAGE_WRITE) ||
+isa_sim/riscv.cpp:543:        ((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == (PAGE_EXEC | PAGE_WRITE)))
+isa_sim/riscv.cpp:564:        if ((writeNotRead  && ((pte & (PAGE_WRITE | PAGE_USER)) != (PAGE_WRITE | PAGE_USER))) || 
+isa_sim/riscv.cpp:565:            (!writeNotRead && ((pte & (PAGE_READ | PAGE_USER))  != (PAGE_READ | PAGE_USER))))

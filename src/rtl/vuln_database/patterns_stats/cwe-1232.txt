@@ -13,15 +13,28 @@ this vulnerability revolves around a lock of some sort being driven to 0 on rese
 To find this, we need to find a lock being driven to 0. We do that by matching a signal with the 
 characters lk, lck, lock in it, being driven to 0. This is done using the following regex pattern
 
-[a-zA-Z0-9_\-\.].* *<= *.*[^1-9]0+;
+simplified
+[a-zA-Z0-9_\-\.\[\]]+ *<= *.*[^1-9]0+
+
+more constrained 
+[a-zA-Z0-9_\-\.\[\]]*(lock|lck|ck|lk)+[a-zA-Z0-9_\-\.\[\]]* *<= *.*[^1-9]0+
 
 
 ----------------------------------- occurance stats -----------------------------------------
+simplified
+Hack@DAC 2018 SoC: 2770 occurances
+Hack@DAC 2019 SoC: 1326 occurances
+Hack@DAC 2021 SoC: 5536 occurances
+PicoRV32:          436 occurances
+Hummingbirdv2:     647 occurances
+UltraembeddedOld:  472 occurances
+UltraembeddedNew:  500 occurances
 
-Hack@DAC 2018 SoC: 0 occurances
-Hack@DAC 2019 SoC: 0 occurances
-Hack@DAC 2021 SoC: 0 occurances
-PicoRV32:          0 occurances
-Hummingbirdv2:     0 occurances
-UltraembeddedOld:  0 occurances
-UltraembeddedNew:  0 occurances
+constrained
+Hack@DAC 2018 SoC: 143 occurances
+Hack@DAC 2019 SoC: 39 occurances
+Hack@DAC 2021 SoC: 227 occurances
+PicoRV32:          8 occurances
+Hummingbirdv2:     35 occurances
+UltraembeddedOld:  13 occurances
+UltraembeddedNew:  11 occurances

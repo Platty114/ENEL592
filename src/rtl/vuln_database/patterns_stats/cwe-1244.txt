@@ -12,14 +12,28 @@ on debug mode and password, or just password. to capture this, we want to use a
 regex that identifies a signal being assigned using an or to select the value. The following
 regex fufills this need
 
-[~a-zA-Z0-9_\-\.]+.*(<=|=).*([~a-zA-Z0-9_\-\.]+ *([|]|[|][|]) *[~a-zA-Z0-9_\-\.]+.*[?])+
+simple 
+[a-zA-Z0-9_\-\.\[\]]+ *(<=|=).*([a-zA-Z0-9_\-\.\[\]]+ *([|]|[|][|]) *[a-zA-Z0-9_\-\.\[\]]+.*[?])+
+
+constrained 
+[a-zA-Z0-9_\-\.\[\]]*(pr|pri|priv)[a-zA-Z0-9_\-\.\[\]]* (<=|=).*([a-zA-Z0-9_\-\.\[\]]+ *([|]|[|][|]) *[a-zA-Z0-9_\-\.\[\]]+.*[?])+
 
 ----------------------------------- occurance stats -----------------------------------------
 
+Simple
+Hack@DAC 2018 SoC: 6 occurances
+Hack@DAC 2019 SoC: 15 occurances
+Hack@DAC 2021 SoC: 74 occurances
+PicoRV32:          13 occurances
+Hummingbirdv2:     14 occurances
+UltraembeddedOld:  2 occurances
+UltraembeddedNew:  2 occurances
+
+Constrained
 Hack@DAC 2018 SoC: 0 occurances
 Hack@DAC 2019 SoC: 0 occurances
-Hack@DAC 2021 SoC: 0 occurances
+Hack@DAC 2021 SoC: 1 occurances
 PicoRV32:          0 occurances
-Hummingbirdv2:     0 occurances
+Hummingbirdv2:     1 occurances
 UltraembeddedOld:  0 occurances
 UltraembeddedNew:  0 occurances

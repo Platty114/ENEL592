@@ -1,0 +1,13 @@
+picorv32.v:382:	assign mem_la_addr = (mem_do_prefetch || mem_do_rinst) ? {next_pc[31:2] + mem_la_firstword_xfer, 2'b00} : {reg_op1[31:2], 2'b00};
+picorv32.v:384:	assign mem_rdata_latched_noshuffle = (mem_xfer || LATCHED_MEM_RDATA) ? mem_rdata : mem_rdata_q;
+picorv32.v:617:							mem_state <= mem_do_rinst || mem_do_rdata ? 0 : 3;
+picorv32.v:1236:			alu_shr <= $signed({instr_sra || instr_srai ? reg_op1[31] : 1'b0, reg_op1}) >>> reg_op2[4:0];
+picorv32.v:1245:			alu_shr = $signed({instr_sra || instr_srai ? reg_op1[31] : 1'b0, reg_op1}) >>> reg_op2[4:0];
+picorv32.v:2474:			dividend <= (instr_div || instr_rem) && pcpi_rs1[31] ? -pcpi_rs1 : pcpi_rs1;
+picorv32.v:2475:			divisor <= ((instr_div || instr_rem) && pcpi_rs2[31] ? -pcpi_rs2 : pcpi_rs2) << 31;
+picosoc/spimemio.v:310:						state <= config_qspi || config_ddr ? 8 : 9;
+scripts/smtbmc/axicheck.v:78:		timeout_aw <= !mem_axi_awvalid || mem_axi_awready ? 0 : timeout_aw + 1;
+scripts/smtbmc/axicheck.v:79:		timeout_w  <= !mem_axi_wvalid  || mem_axi_wready  ? 0 : timeout_w  + 1;
+scripts/smtbmc/axicheck.v:80:		timeout_b  <= !mem_axi_bvalid  || mem_axi_bready  ? 0 : timeout_b  + 1;
+scripts/smtbmc/axicheck.v:81:		timeout_ar <= !mem_axi_arvalid || mem_axi_arready ? 0 : timeout_ar + 1;
+scripts/smtbmc/axicheck.v:82:		timeout_r  <= !mem_axi_rvalid  || mem_axi_rready  ? 0 : timeout_r  + 1;

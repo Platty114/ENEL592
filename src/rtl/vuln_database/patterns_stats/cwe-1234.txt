@@ -13,14 +13,27 @@ this vulnerability in the wild, we mostly care about the 'if(...)' statement, sp
 that are responsible for reseting another register using a flip flop. Thus, the following pattern
 is used 
 
+simple
 [~a-zA-Z0-9_\-\.]+ *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+
 
+constrained
+[~a-zA-Z0-9_\-\.]*(wr|write|wri)+[~a-zA-Z0-9_\-\.]* *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+
 
 ----------------------------------- occurance stats -----------------------------------------
 
+Simple
+Hack@DAC 2018 SoC: 22 occurances
+Hack@DAC 2019 SoC: 0 occurances
+Hack@DAC 2021 SoC: 121 occurances
+PicoRV32:          0 occurances
+Hummingbirdv2:     16 occurances
+UltraembeddedOld:  2 occurances
+UltraembeddedNew:  8 occurances
+
+Constrained
 Hack@DAC 2018 SoC: 0 occurances
 Hack@DAC 2019 SoC: 0 occurances
-Hack@DAC 2021 SoC: 0 occurances
+Hack@DAC 2021 SoC: 4 occurances
 PicoRV32:          0 occurances
 Hummingbirdv2:     0 occurances
 UltraembeddedOld:  0 occurances

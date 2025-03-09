@@ -1,0 +1,6 @@
+ips/udma/udma_qspi/rtl/udma_spim_ctrl.sv:985:    assign s_cs = (s_is_repeating | r_is_repeating) ? r_rpt_cs : s_cfg_cs;
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:189:  assign stream_o.strb = (int_valid | ctrl_i.last) ? int_strb : int_strb_q;
+ips/riscv/riscv_alu.sv:441:  assign sel_minmax[3:0]      = ((operator_i == ALU_FMIN || operator_i == ALU_FMAX) ? f_is_greater : is_greater) ^ {4{do_min}};
+ips/riscv/riscv_prefetch_L0_buffer.sv:136:  assign rdata = (use_last || use_hwlp) ? rdata_last_q : rdata_L0[addr_o[3:2]];
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:123:   assign divsqrt_operand_a = (div_start | sqrt_start) ? operand_a_i : '0;
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:83:  assign Leading_one_D =  (Sign_amt_DI | Mant_in_DI[3*C_MANT+4]) ? 0 :  (Leading_one_DI);

@@ -1,0 +1,14 @@
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:225:                        s_spi_mode       = (spi_qrd | spi_qwr) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:233:                    	s_spi_mode       = (spi_qrd | spi_qwr) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/core/e203_exu_excp.v:240:  assign alu_excp_i_ready =  (alu_ebreakm_flush_req_novld | alu_dbgtrig_flush_req_novld) ? alu_excp_i_ready4dbg : alu_excp_i_ready4nondbg;
+rtl/e203/core/e203_exu_alu_muldiv.v:111:  wire mul_rs2_sign = (i_mulhsu | i_mulhu) ? 1'b0 : muldiv_i_rs2[`E203_XLEN-1];
+rtl/e203/core/e203_exu_alu_muldiv.v:325:  wire div_rs1_sign = (i_divu | i_remu) ? 1'b0 : muldiv_i_rs1[`E203_XLEN-1];
+rtl/e203/core/e203_exu_alu_muldiv.v:326:  wire div_rs2_sign = (i_divu | i_remu) ? 1'b0 : muldiv_i_rs2[`E203_XLEN-1];
+rtl/e203/core/e203_exu_alu_muldiv.v:420:  wire[`E203_XLEN-1:0] div_res = (i_div | i_divu) ? div_quot[`E203_XLEN-1:0] : div_remd[`E203_XLEN-1:0];
+rtl/e203/core/e203_exu_alu_muldiv.v:431:  wire[`E203_XLEN-1:0] div_by_0_res = (i_div | i_divu) ? div_by_0_res_quot : div_by_0_res_remd;
+rtl/e203/core/e203_exu_alu_muldiv.v:435:  wire[`E203_XLEN-1:0] div_ovf_res = (i_div | i_divu) ? div_ovf_res_quot : div_ovf_res_remd;
+rtl/e203/core/e203_exu_alu_muldiv.v:464:  wire wbck_condi = (back2back_seq | special_cases) ? 1'b1 : 
+rtl/e203/core/e203_ifu_litebpu.v:110:  assign prdt_pc_add_op1 = (dec_bxx | dec_jal) ? pc[`E203_PC_SIZE-1:0]
+rtl/e203/core/e203_ifu_ifetch.v:497:  //wire ifu_rsp2ir_ready = (ifu_rsp_replay | pipe_flush_req_real) ? 1'b1 : (ifu_ir_i_ready & (~bpu_wait));
+rtl/e203/core/e203_exu_decode.v:1031:  wire [`E203_RFIDX_WIDTH-1:0] rv16_cr_rd  = (rv16_jalr | rv16_jr)? 
+rtl/e203/core/e203_exu_decode.v:1043:  wire [`E203_RFIDX_WIDTH-1:0] rv16_ci_rs1 = (rv16_lwsp | rv16_flwsp | rv16_fldsp) ? `E203_RFIDX_WIDTH'd2 :

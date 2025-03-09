@@ -1,0 +1,2 @@
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3705:                                (SR1_V[4]==0 && SR1_V[3]==0 && SR1_V[2]==0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4465:                        if (SR1_V[4]==0 && SR1_V[3]==0 && SR1_V[2]==0)
