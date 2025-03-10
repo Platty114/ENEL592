@@ -1,0 +1,33 @@
+dhrystone/testbench.v:109:		if (resetn && trap) begin
+dhrystone/testbench_nola.v:89:		if (resetn && trap) begin
+picorv32.v:1338:		if (resetn && cpuregs_write && latched_rd)
+picorv32.v:1424:			if (resetn && pcpi_valid && !pcpi_int_wait) begin
+picorv32.v:1872:					if (!mem_do_prefetch && mem_done) begin
+picorv32.v:1900:					if (!mem_do_prefetch && mem_done) begin
+picorv32.v:2227:		if (resetn && pcpi_valid && pcpi_insn[6:0] == 7'b0110011 && pcpi_insn[31:25] == 7'b0000001) begin
+picorv32.v:2444:		if (resetn && pcpi_valid && !pcpi_ready && pcpi_insn[6:0] == 7'b0110011 && pcpi_insn[31:25] == 7'b0000001) begin
+picorv32.v:2795:			if (mem_axi_awready && mem_axi_awvalid)
+picorv32.v:2797:			if (mem_axi_arready && mem_axi_arvalid)
+picorv32.v:2799:			if (mem_axi_wready && mem_axi_wvalid)
+picosoc/spiflash.v:128:			if (powered_up && spi_cmd == 'h 03) begin
+picosoc/spiflash.v:144:			if (powered_up && spi_cmd == 'h bb) begin
+picosoc/spiflash.v:169:			if (powered_up && spi_cmd == 'h eb) begin
+picosoc/spiflash.v:194:			if (powered_up && spi_cmd == 'h ed) begin
+scripts/quartus/system_tb.v:30:		if (resetn && out_byte_en) begin
+scripts/quartus/system_tb.v:34:		if (resetn && trap) begin
+scripts/vivado/system_tb.v:30:		if (resetn && out_byte_en) begin
+scripts/vivado/system_tb.v:34:		if (resetn && trap) begin
+scripts/icestorm/example.v:59:		if (resetn && mem_valid && !mem_ready) begin
+scripts/romload/testbench.v:134:		if (resetn && trap) begin
+scripts/tomthumbtg/testbench.v:55:		if (resetn && trap) begin
+scripts/presyn/testbench.v:40:		if (resetn && mem_valid && !mem_ready) begin
+scripts/presyn/testbench.v:57:		if (resetn && trap) begin
+scripts/cxxdemo/testbench.v:108:		if (resetn && trap) begin
+scripts/smtbmc/mulcmp.v:59:			if (pcpi_ready_0 && pcpi_ready_1) begin
+scripts/smtbmc/notrap_validop.v:17:		if (resetn && mem_valid && mem_ready) begin
+scripts/smtbmc/tracecmp3.v:72:		if (resetn && cpu0_mem_ready) begin
+scripts/smtbmc/tracecmp.v:25:		if (resetn && mem_valid_0 && mem_ready_0) begin
+scripts/smtbmc/tracecmp.v:31:		if (resetn && mem_valid_1 && mem_ready_1) begin
+scripts/csmith/testbench.v:94:		if (resetn && trap) begin
+testbench.v:259:		if (resetn && trap) begin
+testbench_wb.v:152:		if (!wb_rst && trap) begin

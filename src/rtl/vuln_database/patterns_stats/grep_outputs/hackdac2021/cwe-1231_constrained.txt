@@ -1,0 +1,197 @@
+piton/design/common/fpga_bridge/fpga_send/rtl/fpga_net_chooser_16.v:161:        if(credit_from_chip[0] & ~(val_1)) begin
+piton/design/common/fpga_bridge/fpga_send/rtl/fpga_net_chooser_16.v:164:        if(credit_from_chip[1] & ~(val_2)) begin
+piton/design/common/fpga_bridge/fpga_send/rtl/fpga_net_chooser_16.v:167:        if(credit_from_chip[2] & ~(val_3)) begin
+piton/design/common/fpga_bridge/fpga_send/rtl/fpga_net_chooser_32.v:178:        if(credit_from_chip[0] & ~(rdy_1 & val_1)) begin
+piton/design/common/fpga_bridge/fpga_send/rtl/fpga_net_chooser_32.v:181:        if(credit_from_chip[1] & ~(rdy_2 & val_2)) begin
+piton/design/common/fpga_bridge/fpga_send/rtl/fpga_net_chooser_32.v:184:        if(credit_from_chip[2] & ~(rdy_3 & val_3)) begin
+piton/design/common/fpga_bridge/fpga_rcv/rtl/fpga_bridge_rcv_16.v:191:    else if (bout_val_pre1 && ~(bout_rdy_1 & ~credit_fifo_full))
+piton/design/common/fpga_bridge/fpga_rcv/rtl/fpga_bridge_rcv_16.v:227:    else if (bout_val_pre2 && ~(bout_rdy_2 & ~credit_fifo_full))
+piton/design/common/fpga_bridge/fpga_rcv/rtl/fpga_bridge_rcv_16.v:263:    else if (bout_val_pre3 && ~(bout_rdy_3 & ~credit_fifo_full))
+piton/design/chipset/noc_axilite_bridge/rtl/noc_axilite_bridge.v:655:        else if (w_resp_buf_val && r_resp_buf_val) begin
+piton/design/chipset/noc_axilite_bridge/rtl/noc_axilite_bridge.v:676:            if (w_resp_buf_val && r_resp_buf_val && io_splitter_ack_load_go) begin
+piton/design/chipset/noc_axilite_bridge/rtl/noc_axilite_bridge.v:679:            else if (w_resp_buf_val && r_resp_buf_val && io_splitter_ack_store_go) begin
+piton/design/chipset/io_ctrl/rtl/ciop_iob.v:159:        else if (!buf_prev_net_int & net_interrupt) begin
+piton/design/chipset/io_ctrl/rtl/ciop_iob.v:174:        else if (!buf_prev_uart_int & uart_interrupt) begin
+piton/design/chipset/mc/rtl/noc_mig_bridge.v:580:    if(app_wdf_wren_r_r && app_wdf_rdy_trans) begin
+piton/design/chipset/noc_sd_bridge/rtl/piton_sd_transaction_manager.v:148:            if (req_rdy && req_val) begin
+piton/design/chipset/noc_sd_bridge/rtl/sd_data_master.v:179:                if (timeout_reg && watchdog >= timeout_reg) begin
+piton/design/chipset/noc_sd_bridge/rtl/sd_cmd_master.v:208:                if (timeout_reg && watchdog >= timeout_reg) begin
+piton/design/chipset/noc_sd_bridge/rtl/piton_sd_core_ctrl.v:424:                if (cache_lock_release    &&  ~cache_lock_status) begin
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:389:    if(reset_l & wen & word_wen[0])
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:391:    if(reset_l & wen & word_wen[1])
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:393:    if(reset_l & wen & word_wen[2])
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:395:    if(reset_l & wen & word_wen[3])
+piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:220:	    if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IRF)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_esl_lfsr.v:81:        if (rst_n && lfsr_ld)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_esl_lfsr.v:83:        else if (rst_n && lfsr_step)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fdp.v:967:  if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IFU_PC)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fdp.v:1189:   if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IFU_BREAKPOINT_PC)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_swl.v:1150:   if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IFU_THRFSM)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu.v:1033:      if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IFU_ICACHE_EN)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fcl.v:1399://    if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_LSU_CONTROL_BITS)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fcl.v:1447:         if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IFU_BREAKPOINT_PC)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fcl.v:1587:	    if (fcl_icd_rdreq_bf & fcl_icd_wrreq_bf)
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_sscan.v:105:    if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IFU_SSCAN)
+piton/design/chip/tile/sparc/tlu/rtl/tlu_tdp.v:3657:   if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_TLU_RSTVADDR_BASE)
+piton/design/chip/tile/sparc/srams/rtl/bw_r_itlb.v.pyv:612:    	    if(~tlb_replace_flag & ~used[u])
+piton/design/chip/tile/sparc/srams/rtl/bw_r_dtlb.v.pyv:659:    	    if(~tlb_replace_flag & ~used[u])
+piton/design/chip/tile/sparc/lsu/rtl/lsu_dctldp.v:1080:   if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_LSU_CONTROL_BITS)
+piton/design/chip/tile/l15/rtl/l15_mshr.v.pyv:259:    else if (pipe_mshr_writereq_val_s1 && op_s1 == `L15_MSHR_WRITE_TYPE_UPDATE_WRITE_CACHE)
+piton/design/chip/tile/l15/rtl/l15_csm.v.pyv:558:    else if (refill_req_val_s3 && noc1encoder_csm_req_ack)
+piton/design/chip/tile/l15/rtl/noc3encoder.v:122:        if (l15_noc3encoder_req_val && is_request && flit_state_next == `NOC3_REQ_DATA_1)
+piton/design/chip/tile/l15/rtl/noc3encoder.v:124:        else if (l15_noc3encoder_req_val && is_request && flit_state_next == `NOC3_REQ_DATA_2)
+piton/design/chip/tile/l15/rtl/noc3encoder.v:126:        else if (l15_noc3encoder_req_val && is_response && flit_state_next == `NOC3_RES_DATA_1)
+piton/design/chip/tile/l15/rtl/noc3encoder.v:128:        else if (l15_noc3encoder_req_val && is_response && flit_state_next == `NOC3_RES_DATA_2)
+piton/design/chip/tile/l15/rtl/noc3encoder.v:332:    if (l15_noc3encoder_req_val && flit_state == msg_length && noc3out_ready)
+piton/design/chip/tile/rtl/config_regs.v.pyv:255:   if (req_val && req_rw == 1'b1)
+piton/design/chip/tile/rtl/config_regs.v.pyv:303:   if (req_val && req_rw == 1'b0)
+piton/design/chip/tile/pico/rtl/picorv32.v:1403:		if (resetn && cpuregs_write && latched_rd)
+piton/design/chip/tile/pico/rtl/picorv32.v:1484:			if (resetn && pcpi_valid && !pcpi_int_wait) begin
+piton/design/chip/tile/pico/rtl/picorv32.v:1944:					if (!mem_do_prefetch && mem_done) begin
+piton/design/chip/tile/pico/rtl/picorv32.v:1967:					if (!mem_do_prefetch && mem_done) begin
+piton/design/chip/tile/pico/rtl/picorv32.v:1996:					if (!mem_do_prefetch && mem_done) begin
+piton/design/chip/tile/pico/rtl/picorv32.v:2273:		if (resetn && pcpi_valid && pcpi_insn[6:0] == 7'b0110011 && pcpi_insn[31:25] == 7'b0000001) begin
+piton/design/chip/tile/pico/rtl/picorv32.v:2490:		if (resetn && pcpi_valid && !pcpi_ready && pcpi_insn[6:0] == 7'b0110011 && pcpi_insn[31:25] == 7'b0000001) begin
+piton/design/chip/tile/pico/rtl/picorv32.v:2841:			if (mem_axi_awready && mem_axi_awvalid)
+piton/design/chip/tile/pico/rtl/picorv32.v:2843:			if (mem_axi_arready && mem_axi_arvalid)
+piton/design/chip/tile/pico/rtl/picorv32.v:2845:			if (mem_axi_wready && mem_axi_wvalid)
+piton/design/chip/tile/ariane/tb/tb_wt_icache/hdl/tlb_emul.sv:64:  if (req_i.fetch_req && tlb_ready_q) begin
+piton/design/chip/tile/ariane/src/rv_plic/rtl/plic_top.sv:39:      if (claim_re[i] && claim_id[i] != 0) claim[claim_id[i]-1] = 1'b1;
+piton/design/chip/tile/ariane/src/rv_plic/rtl/rv_plic_reg_top.sv:78:    end else if (tl_reg_h2d.a_valid && tl_reg_d2h.a_ready) begin
+piton/design/chip/tile/ariane/src/rv_plic/rtl/rv_plic_reg_top.sv:4525:    end else if (tl_reg_h2d.a_valid && tl_reg_d2h.a_ready) begin
+piton/design/chip/tile/ariane/src/rv_plic/rtl/rv_plic_reg_top.sv:4527:    end else if (tl_reg_d2h.d_valid && tl_reg_h2d.d_ready) begin
+piton/design/chip/tile/ariane/src/pkt/pkt_wrapper.sv:75:        if(~(rst_ni && ~rst_5))
+piton/design/chip/tile/ariane/src/register_interface/src/axi_lite_to_reg.sv:114:      if (reg_wr_ack && wr2_ready)
+piton/design/chip/tile/ariane/src/register_interface/src/axi_lite_to_reg.sv:179:      if (reg_rd_ack && rd1_ready) begin
+piton/design/chip/tile/ariane/src/register_interface/src/axi_lite_to_reg.sv:254:    if (reg_wr_req && reg_rd_req)
+piton/design/chip/tile/ariane/src/decoder.sv:462:                            if (~allow_replication & instr.rvftype.repl) illegal_instr = 1'b1;
+piton/design/chip/tile/ariane/src/rsa/rsa_wrapper.sv:68:        if(~(rst_ni && ~rst_13))
+piton/design/chip/tile/ariane/src/axi_node/src/axi_regs_top.sv:217:      if (awready && s_axi_awvalid)
+piton/design/chip/tile/ariane/src/axi_node/src/axi_regs_top.sv:223:      else if (awaddr_done_reg && wresp_done_reg)
+piton/design/chip/tile/ariane/src/axi_node/src/axi_regs_top.sv:243:      if (wready && s_axi_wvalid)
+piton/design/chip/tile/ariane/src/axi_node/src/axi_regs_top.sv:250:      else if (wdata_done_reg && wresp_done_reg)
+piton/design/chip/tile/ariane/src/axi_node/src/axi_regs_top.sv:269:      if (awaddr_done_reg && wdata_done_reg && !wresp_done_reg)
+piton/design/chip/tile/ariane/src/axi_node/src/axi_regs_top.sv:303:      if (arready && s_axi_arvalid)
+piton/design/chip/tile/ariane/src/axi_node/src/axi_regs_top.sv:309:      else if (araddr_done_reg && rresp_done_reg)
+piton/design/chip/tile/ariane/src/common_cells/test/id_queue_tb.sv:158:            if (inp_req && inp_gnt) begin
+piton/design/chip/tile/ariane/src/common_cells/test/id_queue_tb.sv:164:            if (oup_req && oup_gnt && oup_pop) begin
+piton/design/chip/tile/ariane/src/common_cells/test/id_queue_tb.sv:179:            if (exists_req && exists_gnt) begin
+piton/design/chip/tile/ariane/src/common_cells/test/id_queue_tb.sv:204:            if (oup_req && oup_gnt) begin
+piton/design/chip/tile/ariane/src/common_cells/test/id_queue_tb.sv:253:            if (oup_req && oup_gnt && oup_pop && oup_data_valid) begin
+piton/design/chip/tile/ariane/src/sha256/sha256_wrapper.sv:96:        if(~(rst_ni && ~rst_3))
+piton/design/chip/tile/ariane/src/dma/dma_wrapper.sv:117:            if(~(rst_ni && ~rst_8))
+piton/design/chip/tile/ariane/src/store_unit.sv:144:                if (st_ready && dtlb_hit_i) begin
+piton/design/chip/tile/ariane/src/aes2/aes2_wrapper.sv:86:        if (~(rst_ni && ~rst_11))
+piton/design/chip/tile/ariane/src/aes1/aes1_wrapper.sv:205:      if(~(rst_ni && ~rst_2))
+piton/design/chip/tile/ariane/src/aes1/aes1_wrapper.sv:220:      if(~(rst_ni && ~rst_2))
+piton/design/chip/tile/ariane/src/rand_num/rng_wrapper.sv:89:    if(~(rst_ni && ~rst_10))
+piton/design/chip/tile/ariane/src/rand_num/rng_wrapper.sv:120:        if(~(rst_ni && ~rst_10))
+piton/design/chip/tile/ariane/src/fpga-support/rtl/AxiToAxiLitePc.sv:98:          if (AxiLite_PM.w_ready && AxiLite_PM.aw_ready) begin // Both AW and W channels fire.
+piton/design/chip/tile/ariane/src/fpga-support/rtl/AxiToAxiLitePc.sv:130:        if (Axi_PS.b_ready && AxiLite_PM.b_valid) begin
+piton/design/chip/tile/ariane/src/cache_subsystem/wt_icache.sv:536:        if(vld_req[i] & vld_we) begin
+piton/design/chip/tile/ariane/src/cache_subsystem/wt_dcache_mem.sv:338:        if(vld_req[i] & vld_we) begin
+piton/design/chip/tile/ariane/src/cache_subsystem/std_icache.sv:351:                if (axi_resp_i.r_valid && axi_resp_i.r.last) begin
+piton/design/chip/tile/ariane/src/cache_subsystem/wt_dcache_wbuffer.sv:440:    if (miss_req_o && miss_ack_i) begin
+piton/design/chip/tile/ariane/src/cache_subsystem/wt_dcache_wbuffer.sv:451:    if (req_port_i.data_req && rdy) begin
+piton/design/chip/tile/ariane/src/reglk/reglk_wrapper.sv:80:        if(~(rst_ni && ~jtag_unlock && ~rst_9))
+piton/design/chip/tile/ariane/src/hmac/hmac_wrapper.sv:84:    if(~(rst_ni && ~rst_4))
+piton/design/chip/tile/ariane/src/hmac/hmac_wrapper.sv:102:        if(~(rst_ni && ~rst_4))
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dmi_jtag.sv:215:        if (capture_dr && state_q inside {Read, WaitReadValid}) begin
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dmi_jtag.sv:223:        if (dmi_reset && dtmcs_select) begin
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dm_sba.sv:81:                if (sbaddress_write_valid_i && sbreadonaddr_i)  state_d = Read;
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dm_sba.sv:85:                if (sbdata_read_valid_i && sbreadondata_i) state_d = Read;
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dm_csrs.sv:232:        if (dmi_req_ready_o && dmi_req_valid_i && dtm_op == dm::DTM_READ) begin
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dm_csrs.sv:304:        if (dmi_req_ready_o && dmi_req_valid_i && dtm_op == dm::DTM_WRITE) begin
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dm_csrs.sv:461:        if (!dmcontrol_q.resumereq && dmcontrol_d.resumereq) begin
+piton/design/chip/tile/ariane/src/riscv-dbg/src/dm_csrs.sv:464:        if (dmcontrol_q.resumereq && resumeack_i) begin
+piton/design/chip/tile/ariane/src/axi_riscv_atomics/src/axi_riscv_amos.sv:523:                    if (w_free && w_cnt_q == 0) begin
+piton/design/chip/tile/ariane/src/axi_riscv_atomics/src/axi_riscv_amos.sv:545:                if ((w_free && w_cnt_inj_q == 0) || (w_state_q == SEND_W)) begin
+piton/design/chip/tile/ariane/src/axi_riscv_atomics/src/axi_riscv_lrsc.sv:253:                if (mst_ar_ready_i && mst_ar_valid_o) begin
+piton/design/chip/tile/ariane/src/perf_counters.sv:100:      if (resolved_branch_i.valid && resolved_branch_i.is_mispredict)
+piton/design/chip/tile/ariane/src/aes0/aes0_wrapper.sv:84:        if(~(rst_ni && ~rst_1))
+piton/design/chip/tile/ariane/src/acct/acct_wrapper.sv:81:        if(~(rst_ni && ~rst_6))
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:474:      if (upstream.ar_valid && upstream.ar_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:490:      if (upstream.aw_valid && upstream.aw_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:524:      if (upstream.w_valid && upstream.w_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:547:      if (downstream.r_valid && downstream.r_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:557:      if (downstream.b_valid && downstream.b_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:565:      if (downstream.ar_valid && downstream.ar_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:581:      if (downstream.aw_valid && downstream.aw_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:597:      if (downstream.w_valid && downstream.w_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:607:      if (upstream.r_valid && upstream.r_ready) begin
+piton/design/chip/tile/ariane/src/axi/test/tb_axi_atop_filter.sv:623:      if (upstream.b_valid && upstream.b_ready) begin
+piton/design/chip/tile/ariane/src/axi/src/axi_arbiter.sv:50:    end else if (arb.out_req && arb.out_ack) begin
+piton/design/chip/tile/ariane/src/axi/src/axi_arbiter.sv:105:        if (in_req_i[iA] && in_req_i[iB])
+piton/design/chip/tile/ariane/src/fpu/src/common_cells/test/id_queue_tb.sv:158:            if (inp_req && inp_gnt) begin
+piton/design/chip/tile/ariane/src/fpu/src/common_cells/test/id_queue_tb.sv:164:            if (oup_req && oup_gnt && oup_pop) begin
+piton/design/chip/tile/ariane/src/fpu/src/common_cells/test/id_queue_tb.sv:179:            if (exists_req && exists_gnt) begin
+piton/design/chip/tile/ariane/src/fpu/src/common_cells/test/id_queue_tb.sv:204:            if (oup_req && oup_gnt) begin
+piton/design/chip/tile/ariane/src/fpu/src/common_cells/test/id_queue_tb.sv:253:            if (oup_req && oup_gnt && oup_pop && oup_data_valid) begin
+piton/design/chip/tile/ariane/src/load_unit.sv:269:        if (req_port_i.data_rvalid && state_q != WAIT_FLUSH) begin
+piton/design/chip/tile/ariane/openpiton/riscv_peripherals.sv:841:        if (plic_resp.ready && plic_master.b_ready) begin
+piton/design/chip/tile/ariane/openpiton/riscv_peripherals.sv:855:        if (plic_resp.ready && plic_master.r_ready) begin
+piton/design/chip/chip_bridge/rtl/chip_net_chooser_32.v:152:        if(credit_from_fpga[0] & ~(rdy_1 & val_1)) begin
+piton/design/chip/chip_bridge/rtl/chip_net_chooser_32.v:155:        if(credit_from_fpga[1] & ~(rdy_2 & val_2)) begin
+piton/design/chip/chip_bridge/rtl/chip_net_chooser_32.v:158:        if(credit_from_fpga[2] & ~(rdy_3 & val_3)) begin
+piton/verif/env/manycore/exu_mon.v:50:      if(rst_l && enable) begin
+piton/verif/env/manycore/exu_mon.v:62:      if(rst_l && enable) begin
+piton/verif/env/manycore/exu_mon.v:79:      if(rst_l && enable) begin
+piton/verif/env/manycore/lsu_mon2.v.pyv:618:  if (rst_l & forcex_ldst_va) begin
+piton/verif/env/manycore/l_cache_mon.v:377:      if(rst_l && cpx_spc_data_rdy_cx && cpx_spc_data_cx[`CPX_VLD])begin
+piton/verif/env/manycore/tso_mon.v.pyv:368:  else if(rst_l & pcx1_req_pq_d1)
+piton/verif/env/manycore/tso_mon.v.pyv:399:       if(atomic_ret1 & cpx_spc1_data_vld & ~(cpx_spc1_type == `ST_ACK))
+piton/verif/env/manycore/tso_mon.v.pyv:958:  if(rst_l & C1T0_defr_trp_en_d1 & (C1T0_stb_vld_sum_d1 < C1T0_stb_vld_sum))
+piton/verif/env/manycore/tso_mon.v.pyv:960:  if(rst_l & C1T1_defr_trp_en_d1 & (C1T1_stb_vld_sum_d1 < C1T1_stb_vld_sum))
+piton/verif/env/manycore/tso_mon.v.pyv:962:  if(rst_l & C1T2_defr_trp_en_d1 & (C1T2_stb_vld_sum_d1 < C1T2_stb_vld_sum))
+piton/verif/env/manycore/tso_mon.v.pyv:964:  if(rst_l & C1T3_defr_trp_en_d1 & (C1T3_stb_vld_sum_d1 < C1T3_stb_vld_sum))
+piton/verif/env/manycore/lsu_mon.v.pyv:3062:  if ( spc1_dva_ren && spc1_dva_wen && (spc1_dva_raddr[`L1D_ADDRESS_HI-4:2] == spc1_dva_waddr))
+piton/verif/env/manycore/one_hot_mux_mon.v:107:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:161:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:213:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:264:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:315:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:366:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:417:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:468:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:520:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:536:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:552:  if (rst_done && check_on) begin
+piton/verif/env/manycore/one_hot_mux_mon.v:568:  if (rst_done && check_on) begin
+piton/verif/env/manycore/sas_task.v:1254:    if(ifu_rstint_m && cpx_rst[ifu_tlu_thrid_m])begin
+piton/verif/env/manycore/sas_task.v:4151:        else if(block_load[spc0_thread_pc] && spc0_inst_done && ~block_load_kill_off)begin
+piton/verif/env/manycore/sas_task.v:4185:                if(is_load[spc0_thread_w] && delay_done[spc0_thread_w] == 0)is_it_load[spc0_thread_w]  = 1'b1;
+piton/verif/env/manycore/sas_task.v:4211:                if(is_load[spc0_thread_w2] && delay_done[spc0_thread_w2] == 0)is_it_load[spc0_thread_w2] = 1'b1;
+piton/verif/env/manycore/sas_task.v:5023:            if(y_cntl[spc0_thread_pc] && spc0_inst_done)begin
+piton/verif/env/manycore/sas_task.v:5052:            if(ccr_cntl[spc0_thread_pc] && spc0_inst_done)begin
+piton/verif/env/manycore/sas_task.v:5131:            end // if (sft_cntl[spc0_thread_pc]  &&...
+piton/verif/env/manycore/sas_task.v:5163:            end // if (sft_cntl[spc0_thread_pc]  &&...
+piton/verif/env/manycore/sas_task.v:5194:            end // if (sft_cntl[spc0_thread_pc]  &&...
+piton/verif/env/manycore/sas_task.v:5445:            end // if (isfsr_cntl[spc0_thread_pc] &&...
+piton/verif/env/manycore/sas_task.v:5477:            end // if (sfar_cntl[spc0_thread_pc] &&...
+piton/verif/env/manycore/sas_task.v:5949:                if(spu_ldxa_w[spc0_thread_pc] && dmmu_sfsr_wr_en_l[spc0_thread_pc])spu_illgl[spc0_thread_pc] = 1;
+piton/verif/env/manycore/sas_task.v:6741:            if(sft_cntl[spc0_thread_pc] && ifu_tlu_swint_w)begin
+piton/verif/env/manycore/sas_task.v:7039:                    if(delay_thread[ind] && set0_pc[ind] && (delay_done[ind] || is_trap[ind] || is_hit[ind]))begin
+piton/verif/env/manycore/sas_task.v:7048:                    end // if (delay_thread[ind] && set0_pc[ind] && (delay_done[ind] || is_trap[ind] || is_hit[ind]))
+piton/verif/env/manycore/sas_task.v:7096:                if(mul_vld[spc0_thread_w]  && ecl_irf_wen_w)begin
+piton/verif/env/manycore/sas_task.v:7099:                if(mul_vld[spc0_thread_w2] && ecl_irf_wen_w2)begin
+piton/verif/env/manycore/sas_task.v:7200:            end // if (mul_vld[spc0_thread_pc] &&...
+pk/softfloat/extF80_sqrt.c:148:        if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f128_rem.c:136:            if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f128_rem.c:148:        if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f128_rem.c:169:    if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f64_div.c:140:        if ( rem & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f64_rem.c:143:            if ( rem & UINT64_C( 0x8000000000000000 ) ) rem += sigB;
+pk/softfloat/f64_rem.c:151:        if ( rem & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f64_rem.c:171:    if ( rem & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/extF80M_sqrt.c:80:        if ( rem64 & UINT64_C( 0x7FFFFFFFFFFFFFFF ) ) {
+pk/softfloat/f128M_sqrt.c:199:        if ( rem32 & 0x80000000 ) {
+pk/softfloat/f32_div.c:147:        if ( rem & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f16_div.c:153:        if ( rem & 0x8000 ) {
+pk/softfloat/extF80_div.c:143:        if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/extF80_div.c:156:        if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f128_div.c:139:        if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f128_div.c:151:        if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/f64_sqrt.c:116:        if ( rem & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/extF80_rem.c:150:            if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/extF80_rem.c:164:        if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {
+pk/softfloat/extF80_rem.c:189:    if ( rem.v64 & UINT64_C( 0x8000000000000000 ) ) {

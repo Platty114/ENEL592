@@ -14,17 +14,29 @@ this vulnerability in the wild, we mostly care about the 'if(...)' statement, sp
 that are responsible for reseting another register using a flip flop. Thus, the following pattern
 is used 
 
-if.*[a-zA-Z0-9_\-\.].*[&&|&].*[a-zA-Z0-9_\-\.].*
+simple
+if *[(][~!]*[(]*( *[~a-zA-Z0-9_\-\.\[\]]+ *(&&|&) *[~a-zA-Z0-9_\-\.\[\]]+)+( *(&&|&) *[~a-zA-Z0-9_\-\.\[\]]+)* *[)]*
 
+constrained
+if *[(][~!]*[(]*( *([~a-zA-Z0-9_\-\.\[\]]*(re|res|reset|rst)[~a-zA-Z0-9_\-\.\[\]]*) *(&&|&) *[~a-zA-Z0-9_\-\.\[\]]+)+( *(&&|&) *([~a-zA-Z0-9_\-\.\[\]]*(re|res|reset|rst)[~a-zA-Z0-9_\-\.\[\]]*))* *[)]*
 
 
 ----------------------------------- occurance stats -----------------------------------------
 
-Hack@DAC 2018 SoC: 318 occurances
-Hack@DAC 2019 SoC: 493 occurances
-Hack@DAC 2021 SoC: 4595 occurances
-PicoRV32:          251 occurances
-Hummingbirdv2:     282 occurances
+Simple
+Hack@DAC 2018 SoC: 298 occurances
+Hack@DAC 2019 SoC: 167 occurances
+Hack@DAC 2021 SoC: 1125 occurances
+PicoRV32:          97 occurances
+Hummingbirdv2:     44 occurances
 UltraembeddedOld:  456 occurances
-UltraembeddedNew:  305 occurances
+UltraembeddedNew:  132 occurances
 
+Constrained
+Hack@DAC 2018 SoC: 62 occurances
+Hack@DAC 2019 SoC: 32 occurances
+Hack@DAC 2021 SoC: 197 occurances
+PicoRV32:          33 occurances
+Hummingbirdv2:     15 occurances
+UltraembeddedOld:  20 occurances
+UltraembeddedNew:  23 occurances

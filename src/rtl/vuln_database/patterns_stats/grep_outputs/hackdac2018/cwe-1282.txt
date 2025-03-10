@@ -1,0 +1,12 @@
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:248:	if ( s_cfg_lo_reg[`RESET_BIT] == 1'b1 | s_reset_timer_lo == 1'b1 )
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:271:	if ( s_cfg_hi_reg[`RESET_BIT] == 1'b1 | s_reset_timer_hi == 1'b1 )
+ips/riscv/riscv_compressed_decoder.sv:216:            if (instr_i[12] == 1'b1 || instr_i[6:2] == 5'b0)  illegal_instr_o = 1'b1;
+ips/riscv/tb/serDiv/tb.sv:102:     end while(SigToWaitFor_S == 1'b0 || SigToWaitFor2_S == 1'b0);
+ips/riscv/riscv_cs_registers.sv:801:      if (is_pccr == 1'b1 && (pccr_all_sel == 1'b1 || pccr_index == i)) begin
+ips/zero-riscy/zeroriscy_cs_registers.sv:408:      if (is_pccr == 1'b1 && (pccr_all_sel == 1'b1 || pccr_index == i)) begin
+ips/zero-riscy/zeroriscy_compressed_decoder.sv:180:            if (instr_i[12] == 1'b1 || instr_i[6:2] == 5'b0)  illegal_instr_o = 1'b1;
+ips/timer_unit/timer_unit.sv:319:	if ( s_cfg_lo_reg[`RESET_BIT] == 1'b1 | s_reset_timer_lo == 1'b1 )
+ips/timer_unit/timer_unit.sv:342:	if ( s_cfg_hi_reg[`RESET_BIT] == 1'b1 | s_reset_timer_hi == 1'b1 )
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3450:        if (RST_out == 1'b0 || SWRST_out == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3484:                                (CR1_in[5] == 1'b1 || CR1_in[3] == 1'b1 ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4127:                                (CR1_in[5] == 1'b1 || CR1_in[3] == 1'b1 ||

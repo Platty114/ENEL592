@@ -1,0 +1,11 @@
+piton/design/chipset/axi_sd_bridge/rtl/sm_fifo_rtl.v:87:        if (rst_sync_to_wr_clk == 1'b1 || force_empty_sync_to_wr_clk == 1'b1) begin
+piton/design/chipset/axi_sd_bridge/rtl/sm_fifo_rtl.v:109:        if (rst_sync_to_rd_clk == 1'b1 || force_empty_sync_to_rd_clk == 1'b1) begin
+piton/design/chipset/axi_sd_bridge/rtl/status_register_control.v:183:        if (rst_i == 1'b1 || rst_from_bus == 1'b1)
+piton/design/chipset/axi_sd_bridge/rtl/init_sd.v:228:              if ((resp_tout == 1'b1 || resp_byte != 8'h01) && loop_cnt != 8'hff)begin
+piton/design/chipset/axi_sd_bridge/rtl/init_sd.v:231:              else if (resp_tout == 1'b1 || resp_byte != 8'h01) begin
+piton/design/chipset/axi_sd_bridge/rtl/init_sd.v:246:              if ((resp_tout == 1'b1 || resp_byte != 8'h00) && loop_cnt != 8'hff) begin
+piton/design/chipset/axi_sd_bridge/rtl/init_sd.v:249:              else if (resp_tout == 1'b1 || resp_byte != 8'h00) begin
+piton/design/chipset/axi_sd_bridge/rtl/read_write_sd_block.v:249:            if ((send_cmd_rdy == 1'b1) && (resp_tout == 1'b1 || resp_byte != 8'h00)) begin
+piton/design/chipset/axi_sd_bridge/rtl/read_write_sd_block.v:354:            if ((send_cmd_rdy == 1'b1) && (resp_tout == 1'b1 || resp_byte != 8'h00)) begin
+piton/design/chipset/axi_sd_bridge/rtl/spi_tx_rx_data.v:109:        if (rx1_data_rdy_clr == 1'b1 || rx2_data_rdy_clr == 1'b1 || rx3_data_rdy_clr == 1'b1 || rx4_data_rdy_clr == 1'b1) begin
+piton/design/chip/tile/ariane/fpga/src/apb_timer/timer.sv:75:        if (irq_o[0] == 1'b1 || irq_o[1] == 1'b1)

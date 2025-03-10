@@ -1,0 +1,15 @@
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:188:		if (results[i].execs & ID_LIST) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:191:		if (results[i].execs & ID_MATRIX) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:194:		if (results[i].execs & ID_STATE) {
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:270:			if ((results[i].execs & ID_LIST) && 
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:275:			if ((results[i].execs & ID_MATRIX) &&
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:280:			if ((results[i].execs & ID_STATE) &&
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:316:	if (results[0].execs & ID_LIST)
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:319:	if (results[0].execs & ID_MATRIX) 
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:322:	if (results[0].execs & ID_STATE)
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:55:        else if ((ready_i && valid_o) && (!valid_i || full))
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:99:	    if (ready_i && valid_o) begin
+rtl/e203/perips/apb_uart/io_generic_fifo.v:52:        else if ((ready_i && valid_o) && (!valid_i || full))
+rtl/e203/perips/apb_uart/io_generic_fifo.v:97:	    if (ready_i && valid_o) begin
+rtl/e203/perips/sirv_queue.v:145:    if(ram_read_T_69_en & ram_read_T_69_mask) begin
+rtl/e203/debug/sirv_jtag_dtm.v:280:      end else if (i_dtm_resp_valid & i_dtm_resp_ready) begin //only in CAPTURE_DR

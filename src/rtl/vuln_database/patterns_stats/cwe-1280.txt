@@ -27,7 +27,7 @@ unauthorized party. To fix this, the order of assignments should be reversed. to
 of this pattern in designs, the following regex can be used. This regex looks for two signals written one
 after the other, where second signal is writen to using a bit or hex pattern.
 
-[~a-zA-Z0-9_\-\.]+ *= *[(]*[~a-zA-Z0-9_\-\.]+[)]* *[?] *[~a-zA-Z0-9_\-\.]+ *: *[~a-zA-Z0-9_\-\.]+ *;[ |\n]*[~a-zA-Z0-9_\-\.]+ *= *[(]*[~a-zA-Z0-9_\-\.]+ *(==|!=) *[~a-zA-Z0-9_\-\.']+ *[)]* *[?] *[~a-zA-Z0-9_\-\.']+ *: *[~a-zA-Z0-9_\-\.']+
+[~a-zA-Z0-9_\-\.\[\]]+ *= *[(]*[~a-zA-Z0-9_\-\.\[\]]+[)]* *[?] *[~a-zA-Z0-9_\-\.\[\]]+ *: *[~a-zA-Z0-9_\-\.\[\]]+ *;[ |\n]*[~a-zA-Z0-9_\-\.\[\]]+ *= *[(]*[~a-zA-Z0-9_\-\.\[\]]+ *(==|!=) *[~a-zA-Z0-9_\-\.'\[\]]+ *[)]* *[?] *[~a-zA-Z0-9_\-\.'\[\]]+ *: *[~a-zA-Z0-9_\-\.'\[\]]+
 
 ----------------------------------- occurance stats -----------------------------------------
 

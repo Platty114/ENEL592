@@ -27,10 +27,9 @@ statements vs the number of defualt keywords found within a project. This can be
 the following two regex patterns.
 
 state machines
-( *[0-9]+'[h|b][0-9]+: [~a-zA-Z0-9_\-\.]+ *(<=|=) *[~a-zA-Z0-9_\-\.\']+; *\n)+
+( *([0-9]+'[h|b][0-9]+|[~a-zA-Z0-9_\-\.]+): [~a-zA-Z0-9_\-\.]+ *(<=|=) *[~a-zA-Z0-9_\-\.\']+; *\n)+
 
-state machines wtih default
-( *[0-9]+'[h|b][0-9]+: [~a-zA-Z0-9_\-\.]+ *(<=|=) *[~a-zA-Z0-9_\-\.\']+; *\n)+( *default: [~a-zA-Z0-9_\-\.]+ *(<=|=) *[~a-zA-Z0-9_\-\.\']+;)
+
 ----------------------------------- occurance stats -----------------------------------------
 
 State machines
@@ -42,11 +41,4 @@ Hummingbirdv2:     0 and 0 occurances
 UltraembeddedOld:  0 and 0 occurances
 UltraembeddedNew:  0 and 0 occurances
 
-State machines with default
-Hack@DAC 2018 SoC: 0 and 0 occurances
-Hack@DAC 2019 SoC: 0 and 0 occurances
-Hack@DAC 2021 SoC: 0 and 0 occurances
-PicoRV32:          0 and 0 occurances
-Hummingbirdv2:     0 and 0 occurances
-UltraembeddedOld:  0 and 0 occurances
-UltraembeddedNew:  0 and 0 occurances
+

@@ -23,14 +23,26 @@ then preventing a write from occuring at the address which stores the hash key, 
 or is used, allowing a write to happen anywhere in memory, as long as the write signal is
 held high. To detect this pattern using a regex, we will look for the following pattern
 
-[(] *[~a-zA-Z0-9_\-\.].* *(==|!=) *(1'b1|1'b0) *[|]+[|]* *[~a-zA-Z0-9_\-\.]+(\[[0-9]+:[0-9]+\]) (==|!=) *[~a-zA-Z0-9_\-\.\']+ *[)]
+simple
+[~a-zA-Z0-9_\-\.\[\]]+ *(==|!=) *(1'b1|1'b0) *[|]+[|]* *[~a-zA-Z0-9_\-\.\[\]:]+ (==|!=) *[~a-zA-Z0-9_\-\.\'\[\]]+
 
+constrained
+[~a-zA-Z0-9_\-\.\[\]~]*(wr|write|en)[~a-zA-Z0-9_\-\.\[\]]* *(==|!=) *(1'b1|1'b0) *[|]+[|]* *[~a-zA-Z0-9_\-\.\[\]:]+ (==|!=) *[~a-zA-Z0-9_\-\.\']+
 ----------------------------------- occurance stats -----------------------------------------
 
+simple
+Hack@DAC 2018 SoC: 12 occurances
+Hack@DAC 2019 SoC: 0 occurances
+Hack@DAC 2021 SoC: 11 occurances
+PicoRV32:          0 occurances
+Hummingbirdv2:     0 occurances
+UltraembeddedOld:  0 occurances
+UltraembeddedNew:  0 occurances
 
+Constrained
 Hack@DAC 2018 SoC: 0 occurances
 Hack@DAC 2019 SoC: 0 occurances
-Hack@DAC 2021 SoC: 0 occurances
+Hack@DAC 2021 SoC: 1 occurances
 PicoRV32:          0 occurances
 Hummingbirdv2:     0 occurances
 UltraembeddedOld:  0 occurances

@@ -1,0 +1,298 @@
+ips/pulp_soc/rtl/fc/fc_demux.sv:99:                    if(req_slave & gnt_slave) begin
+ips/pulp_soc/rtl/fc/fc_demux.sv:115:                        if(req_slave & gnt_slave) begin
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:190:            if (PSEL && PENABLE && PWRITE) begin
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:221:            else if (PSEL && PENABLE && ~PWRITE) begin
+ips/pulp_soc/rtl/pulp_soc/soc_event_arbiter.sv:101:            if (anyGnt && grant_ack_i) begin
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:116:        else if ((apb_psel & apb_pwrite) && (apb_paddr[4:0] == `APB_ADDR_CONFIG)) begin
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:121:        else if ((apb_psel & apb_pwrite) && (apb_paddr[4:0] == `APB_ADDR_ERRCLR)) begin
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:107:        if (PSEL && PENABLE && PWRITE)
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:207:        if (PSEL && PENABLE && !PWRITE)
+ips/pulp_soc/rtl/components/apb_clkdiv.sv:62:         if (PSEL && PENABLE && PWRITE)
+ips/pulp_soc/rtl/components/apb_soc_ctrl.sv:184:        if (PSEL && PENABLE && PWRITE)
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:130:        if(cmd_start_i && data_en_i && (data_block_num_i == 0))
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:136:        else if(cmd_start_i && data_en_i)
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:200:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:664:            if (tx_start_i && rx_start_i)
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:666:            else if (s_tx_idle && s_rx_idle)
+ips/udma/udma_qspi/rtl/udma_spim_reg_if.sv:133:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:201:            if (s_ws_edge & cfg_pdm_ddr_i)
+ips/udma/udma_i2s/rtl/i2s_rx.sv:246:        if (cfg0_pdm_en_i && cfg0_pdm_ddr_i)
+ips/udma/udma_i2s/rtl/i2s_rx.sv:250:        if (cfg1_pdm_en_i && cfg1_pdm_ddr_i)
+ips/udma/udma_i2s/rtl/i2s_rx.sv:270:                else if(cfg_enable_i[i] && r_datavalid[i] && ~fifo_data_ready_i[i] && s_shift[i] )
+ips/udma/udma_i2s/rtl/i2s_rx.sv:279:                            if((cfg_select_i[i] & ~s_dataready1) || (~cfg_select_i[i] & ~s_dataready0))
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:220:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:114:                if ((req_o && gnt_i) && (~valid_i || ~ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:126:                if ((req_o && gnt_i) && (~valid_i || ~ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:136:            if(req_o && gnt_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:141:            else if (valid_i && ready_o)
+ips/udma/udma_core/rtl/common/io_tx_fifo.sv:82:            if(req_o && gnt_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo.sv:87:            else if (valid_i && ready_o)
+ips/udma/udma_core/rtl/common/io_generic_fifo.sv:73:                if (ready_i && valid_o && (!valid_i || full))
+ips/udma/udma_core/rtl/common/io_generic_fifo.sv:131:                    if (ready_i && valid_o)
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:227:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo_dc.sv:90:            if(src_req_o && src_gnt_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo_dc.sv:95:            else if (src_valid_i && src_ready_o)
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:126:            if (s_data_rx_valid && s_data_rx_ready)
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:144:            if (s_data_rx_valid && s_data_rx_ready)
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:174:            if (s_data_rx_valid && s_data_rx_ready)
+ips/udma/udma_core/rtl/core/udma_tx_channels.sv:287:          if (l2_req_o && l2_gnt_i)
+ips/udma/udma_core/rtl/core/udma_filter_bincu.sv:95:				if(~cfg_out_enable_i && s_th_event && input_valid_i)
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:105:      else if (r_en && int_ch_grant_i && int_not_stall_i && (r_counters <= s_datasize_toadd))
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:141:        if (int_not_stall_i && r_en && int_ch_grant_i) //if granted and channel enabled then
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:214:          if (int_not_stall_i && r_en && int_ch_grant_i) //if granted and channel enabled then
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:155:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:176:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:211:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_arbiter.sv:116:        if (anyGnt && grant_ack_i) begin  
+ips/udma/udma_uart/rtl/udma_uart_reg_if.sv:152:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:310:        if (sSCL & ~dSCL)
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:143:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:173:            if(cfg_valid_i && cfg_rwn_i && (s_rd_addr == `REG_STATUS))
+ips/udma/udma_camera/rtl/camera_reg_if.sv:130:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_camera/rtl/camera_if.sv:354:        if(s_framevalid && r_enable)
+ips/udma/udma_camera/rtl/camera_if.sv:397:        else if(cam_hsync_i & r_enable) begin
+ips/udma/udma_camera/rtl/camera_if.sv:414:            else if(cam_hsync_i & r_enable)
+ips/udma/udma_camera/rtl/camera_if.sv:418:                if (!r_sample_msb  && s_cfg_frameslice_en)
+ips/udma/udma_camera/rtl/camera_if.sv:436:            if(s_sof && r_enable)
+ips/common_cells/clock_divider_counter.sv:191:            else if (en2 && is_odd && !bypass)
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:204:        if(out.valid & out.ready)
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:210:        if(out.valid & out.ready)
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:218:        if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:248:    else if(in.valid & in.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:258:    if(ctrl.first & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:263:    else if(ctrl.last & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:280:    else if(in.valid & in.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:313:    else if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:321:    if(gold_valid_out & gold_valid_in) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:203:        if(out.valid & out.ready)
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:210:        if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:216:        if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:244:    if(ctrl.first & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:261:    else if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:294:    else if(in.valid & in.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:302:    if(gold_valid_out & gold_valid_in) begin
+ips/hwpe-stream/tb/tb_dummy_memory.sv:99:      if ((tcdm_req[i] & enable_i) == 1'b0) begin
+ips/hwpe-stream/tb/tb_dummy_memory.sv:105:        if (tcdm_gnt[i] & tcdm_wen[i]) begin
+ips/hwpe-stream/tb/tb_dummy_memory.sv:110:        else if (tcdm_gnt[i] & ~tcdm_wen[i]) begin
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_fifo_load.sv:82:      if(tcdm_master_r_valid_w & stream_incoming_push.ready)
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_fifo_load.sv:86:      else if(tcdm_master_r_valid_r & stream_incoming_push.ready)
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:62:    else if(ctrl_i.first & ~stream_i.ready)
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:140:    else if (stream_i.valid & stream_i.ready) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:189:        if(stream.valid & stream.ready) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:193:        else if(flags_o.addressgen_flags.realign_flags.enable & flags_o.addressgen_flags.realign_flags.last) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:197:        else if(~flags_o.addressgen_flags.in_progress & tcdm_inflight_any) begin // if transactions in flight, let them end
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:76:    else if (~ctrl_i.last_packet & ctrl_i.first) begin
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:91:    else if (~ctrl_i.last_packet & stream_i.valid & stream_i.ready)
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:134:          if(stream_valid_w & split_streams[ii].ready)
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:138:          else if(stream_valid_r & split_streams[ii].ready)
+ips/jtag_pulp/src/tap_top.v:217:  if(~tms_i & sel_dr_scan)
+ips/jtag_pulp/src/tap_top.v:273:  if(tms_i & pause_dr)
+ips/jtag_pulp/src/tap_top.v:301:  if(tms_i & sel_dr_scan)
+ips/jtag_pulp/src/tap_top.v:315:  if(~tms_i & sel_ir_scan)
+ips/jtag_pulp/src/tap_top.v:371:  if(tms_i & pause_ir)
+ips/jtag_pulp/src/tap_top.v:437:  if(idcode_sel & shift_dr)
+ips/jtag_pulp/src/jtag_axi_wrap.sv:123:	   if (jtag_master.r_valid & jtag_master.r_last) begin
+ips/jtag_pulp/src/bscell.sv:41:	     if (update_dr_i & enable_i)
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:146:      if (r_int[i] && r_mask[i])
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:205:      if (s_event_fifo_valid && s_event_fifo_ready)
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/RR_Flag_Req_L2.sv:30:            if( data_req_i  & data_gnt_i )
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/RR_Flag_Req_BRIDGE.sv:30:          if( data_req_i  & data_gnt_i )
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:178:                        if(WVALID_i & grant_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:220:                if(grant_i & WVALID_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:263:                                if(WVALID_i & grant_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:317:                    if(WVALID_i & grant_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/lint64_to_32.sv:73:         if(data_req_i & data_gnt_o)
+ips/L2_tcdm_hybrid_interco/TB/L2_SP_RAM_STALL.sv:86:               if(~CEN & gnt_o & r_gnt_int)
+ips/L2_tcdm_hybrid_interco/TB/TGEN_32.sv:52:         if(data_req_o & data_gnt_i)
+ips/hwpe-ctrl/rtl/hwpe_ctrl_regfile_latch.sv:145:             else if(WriteEnable & WriteBE[m])
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:114:        if(accum_int & flags_o.valid)
+ips/riscv/riscv_if_stage.sv:263:          if (req_i && if_valid) begin
+ips/riscv/riscv_int_controller.sv:85:          if(irq_enable_ext & irq_i) begin
+ips/riscv/riscv_int_controller.sv:122:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/riscv/riscv_ex_stage.sv:202:      if(regfile_alu_we_i & ~apu_en_i) begin
+ips/riscv/riscv_prefetch_buffer.sv:132:          if(valid_o & unaligned_is_compressed & instr_addr_q[1]) begin
+ips/riscv/riscv_prefetch_buffer.sv:185:          if (valid_o & is_hwlp_o)
+ips/riscv/riscv_prefetch_buffer.sv:198:        if (valid_o & is_hwlp_o)
+ips/riscv/riscv_prefetch_buffer.sv:238:        else if(hwlp_masked & valid_stored)
+ips/riscv/riscv_prefetch_buffer.sv:245:          if (hwlp_masked & valid_stored) begin
+ips/riscv/riscv_prefetch_buffer.sv:266:        end else if (hwlp_masked & valid_stored) begin
+ips/riscv/riscv_prefetch_buffer.sv:310:            end else if (hwlp_masked & valid_o) begin
+ips/riscv/riscv_tracer.sv:695:        if (ex_data_req && ex_data_gnt) begin
+ips/riscv/riscv_controller.sv:185:    if (is_decoding_o && illegal_insn_i) begin
+ips/riscv/riscv_controller.sv:324:        if (irq_req_ctrl_i & irq_enable_int) begin
+ips/riscv/riscv_controller.sv:541:        if(irq_req_ctrl_i & irq_enable_int) begin
+ips/riscv/riscv_hwloop_regs.sv:119:          if (hwlp_dec_cnt_i[i] && valid_i)
+ips/riscv/riscv_fetch_fifo.sv:192:    if (out_ready_i && out_valid_o) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:103:      if (a_i.valid & b_i.valid & a_i.ready & b_i.ready) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:120:      if ((a_i.valid & b_i.valid) | (r_mult_valid & r_mult_ready)) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:136:      if (c_i.valid & c_i.ready) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:140:      else if (r_mult_valid & r_mult_ready) begin
+ips/hwpe-mac-engine/rtl/padder.v:68:      else if (state & out_ready)
+ips/zero-riscy/zeroriscy_int_controller.sv:68:          if(irq_enable_ext & irq_i) begin
+ips/zero-riscy/zeroriscy_int_controller.sv:102:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/zero-riscy/zeroriscy_if_stage.sv:185:                if (req_i && if_valid_o) begin
+ips/zero-riscy/zeroriscy_fetch_fifo.sv:169:    if (out_ready_i && out_valid_o) begin
+ips/zero-riscy/zeroriscy_controller.sv:136:    if (is_decoding_o && illegal_insn_i) begin
+ips/zero-riscy/zeroriscy_controller.sv:270:        if (irq_req_ctrl_i & irq_enable_int) begin
+ips/zero-riscy/zeroriscy_controller.sv:290:              if (branch_set_i & ~jump_set_i & ~(mret_insn_i | ecall_insn_i | pipe_flush_i | ebrk_insn_i | illegal_insn_i | csr_status_i))
+ips/zero-riscy/zeroriscy_controller.sv:299:              else if (~branch_set_i & jump_set_i & ~(mret_insn_i | ecall_insn_i | pipe_flush_i | ebrk_insn_i | illegal_insn_i | csr_status_i))
+ips/zero-riscy/zeroriscy_controller.sv:306:              else if (~branch_set_i & ~jump_set_i & (mret_insn_i | ecall_insn_i | pipe_flush_i | ebrk_insn_i | illegal_insn_i | csr_status_i))
+ips/zero-riscy/zeroriscy_controller.sv:316:                if ((irq_req_ctrl_i & irq_enable_int & ~instr_multicyle_i & ~branch_in_id_i) & ~(dbg_req_i & ~branch_taken_ex_i))
+ips/zero-riscy/zeroriscy_controller.sv:322:                else if (~(irq_req_ctrl_i & irq_enable_int & ~instr_multicyle_i & ~branch_in_id_i) & (dbg_req_i & ~branch_taken_ex_i))
+ips/zero-riscy/zeroriscy_controller.sv:335:              if (irq_req_ctrl_i & irq_enable_int) begin
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:333:    if(strobe_i && rdy_o) begin
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:346:    else if(strobe_i && rdy_o) str_sync <= ~str_sync;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:370:      if(strobe_i && rdy_o)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:533:        if (wr_reg && axi_master_aw_ready)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:535:        else if (!wr_reg && axi_master_ar_ready)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:550:        if (wr_reg && axi_master_b_valid)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:556:        else if (!wr_reg && axi_master_r_valid)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:584:           if(module_cmd && module_select_i && update_dr_i && burst_read) 
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:586:           else if(module_cmd && module_select_i && update_dr_i && burst_write) 
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:602:         if(module_select_i && capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:622:           else  if(bit_count_max && word_count_zero)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:641:          else if(module_select_i && capture_dr_i) 
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:651:           else   if (module_select_i && data_register_i[63])
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:737:         if(module_select_i & shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:739:         if(module_select_i & capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:744:         if(module_select_i & module_cmd & update_dr_i)
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:246:    if(strobe_i && rdy_o) begin
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:259:    else if(strobe_i && rdy_o) str_sync <= ~str_sync;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:283:      if(strobe_i && rdy_o)
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:441:           if(module_cmd && module_select_i && update_dr_i && burst_instruction && operation_in[2])
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:443:           else if(module_cmd && module_select_i && update_dr_i && burst_instruction)
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:456:           if(module_select_i && capture_dr_i) module_next_state <= STATE_Rstatus;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:468:           else if(bit_count_max && word_count_zero) module_next_state <= STATE_Rcrc;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:481:           else if(module_select_i && capture_dr_i) module_next_state <= STATE_Wwait;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:487:           else if(module_select_i && data_register_i[56]) module_next_state <= STATE_Wburst; // Got a start bit
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:563:           if(module_select_i & shift_dr_i) out_reg_shift_en <= 1'b1; // For module regs
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:564:           if(module_select_i & capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:569:           if(module_select_i & module_cmd & update_dr_i) begin
+ips/adv_dbg_if/rtl/adbg_top.sv:169:        else if(debug_select_i && select_cmd && update_dr_i && !select_inhibit)       // Chain select
+ips/adv_dbg_if/rtl/adbg_top.sv:191:  else if(debug_select_i && shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:443:  else if(idcode_select & capture_dr)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:445:  else if(idcode_select & shift_dr)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:473:  else if (bypass_select & capture_dr)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:475:  else if(bypass_select & shift_dr)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:438:           if(module_cmd && module_select_i && update_dr_i && burst_read)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:440:           else if(module_cmd && module_select_i && update_dr_i && burst_write)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:452:           if(module_select_i && capture_dr_i) module_next_state <= STATE_Rstatus;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:464:           else if(bit_count_max && word_count_zero) module_next_state <= STATE_Rcrc;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:477:           else if(module_select_i && capture_dr_i) module_next_state <= STATE_Wwait;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:483:           else if(module_select_i && data_register_i[63]) module_next_state <= STATE_Wburst; // Got a start bit
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:560:            if(module_select_i & shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:562:            if(module_select_i & capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:567:            if(module_select_i & module_cmd & update_dr_i)
+ips/adv_dbg_if/rtl/adbg_axionly_top.sv:160:        else if(debug_select_i && select_cmd && update_dr_i && !select_inhibit)       // Chain select
+ips/adv_dbg_if/rtl/adbg_axionly_top.sv:182:  else if(debug_select_i && shift_dr_i)
+ips/adv_dbg_if/rtl/bytefifo.v:119:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:129:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:139:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:149:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:159:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:169:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:179:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:189:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:201:	else if(EN & PUSH_POPn & push_ok)  counter <= counter + 4'h1;
+ips/adv_dbg_if/rtl/adbg_lintonly_top.sv:85:        else if(debug_select_i && select_cmd && update_dr_i && !select_inhibit)       // Chain select
+ips/adv_dbg_if/rtl/adbg_lintonly_top.sv:107:  else if(debug_select_i && shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:134:      if(strobe_i && rdy_o) begin
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:147:        else if(strobe_i && rdy_o) 
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:167:            if(strobe_i && rdy_o) 
+ips/axi/axi_node/axi_DW_allocator.sv:177:                      if(wvalid_i[ID_int_BIN] & wready_i)
+ips/axi/axi_node/axi_DW_allocator.sv:216:                      if(wvalid_i[ID_int_BIN] & wready_i)
+ips/axi/axi_node/axi_RR_Flag_Req.sv:66:          if( data_req_i  & data_gnt_i )
+ips/axi/axi_node/axi_regs_top.sv:217:      if (awready && s_axi_awvalid)
+ips/axi/axi_node/axi_regs_top.sv:223:      else if (awaddr_done_reg && wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:243:      if (wready && s_axi_wvalid)
+ips/axi/axi_node/axi_regs_top.sv:250:      else if (wdata_done_reg && wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:269:      if (awaddr_done_reg && wdata_done_reg && !wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:303:      if (arready && s_axi_arvalid)
+ips/axi/axi_node/axi_regs_top.sv:309:      else if (araddr_done_reg && rresp_done_reg)
+ips/axi/axi_node/apb_regs_top.sv:123:            if (PSEL_i && PENABLE_i && PWRITE_i)
+ips/axi/axi_node/apb_regs_top.sv:152:            if (PSEL_i && PENABLE_i && ~PWRITE_i)
+ips/axi/axi_node/axi_address_decoder_DW.sv:114:          if(wvalid_i & valid_DEST)
+ips/axi/axi_slice/axi_buffer.sv:54:             if (ready_i && valid_o && (!valid_i || full))
+ips/axi/axi_slice/axi_buffer.sv:104:             if (ready_i && valid_o)
+ips/timer_unit/timer_unit.sv:180:        if (req_i && ~wen_i)
+ips/timer_unit/timer_unit.sv:278:        if (s_req && s_wen)
+ips/scm/latch_scm/register_file_1r_1w_be.sv:133:            if(WriteEnable & WriteBE[m])
+ips/scm/latch_scm/register_file_3r_2w_be.sv:86:        if(WriteEnable_A && WriteEnable_B)
+ips/scm/latch_scm/register_file_3r_2w_be.sv:198:            if(WriteEnable_A & WriteBE_A[m])
+ips/scm/latch_scm/register_file_3r_2w_be.sv:200:            if(WriteEnable_B & WriteBE_B[m])
+ips/scm/latch_scm/register_file_1w_multi_port_read_be.sv:144:            if(WriteEnable & WriteBE[m])
+ips/scm/latch_scm/register_file_1r_1w_all.sv:136:             if(WriteEnable & WriteBE[m])
+ips/scm/latch_scm/register_file_2r_1w_asymm.sv:195:            if(WriteEnable & WriteBE[m])
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:121:          if(Div_enable_SI&&Inf_b_SI)                     //Inf/Inf
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:145:      else if(Div_enable_SI&&Inf_b_SI)
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:159:         if(Div_enable_SI&&Zero_b_SI)
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:195:      else if(Sign_in_DI&&Sqrt_enable_SI)   //sqrt(-a)
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:116:               if (((Inf_a_S & Inf_b_S) & (Sign_a_DI ^ Sign_b_DI)) | NaN_a_S | NaN_b_S)
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:121:            if (((Inf_a_S & Zero_b_S) | (Inf_b_S & Zero_a_S)) | NaN_a_S | NaN_b_S)
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:138:            if ((Inf_a_S & ~Zero_b_S) | (Inf_b_S & ~Zero_a_S))
+ips/fpu/hdl/fpu_v0.1/riscv_fpu.sv:99:        if (enable_i && ~stall_i)
+ips/apb/apb_gpio/apb_gpio.sv:130:            else if (PSEL && PENABLE && !PWRITE && (s_apb_addr == `REG_INTSTATUS)) //clears int if status is read
+ips/apb/apb_gpio/apb_gpio.sv:298:            if (PSEL && PENABLE && PWRITE)
+ips/apb/apb_adv_timer/lut_4x4.sv:46:			else if (!cfg_en_i && r_active)
+ips/apb/apb_adv_timer/comparator.sv:82:			else if (timer_valid_i && ctrl_active_i)
+ips/apb/apb_adv_timer/comparator.sv:103:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/comparator.sv:126:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/comparator.sv:153:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/comparator.sv:176:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:638:            if (PSEL && PENABLE && PWRITE)
+ips/apb/apb_adv_timer/up_down_counter.sv:114:		else if(counter_event_i && ctrl_active_i)
+ips/apb/apb_fll_if/apb_fll_if.sv:237:      if (PSEL && PENABLE && PWRITE) begin
+ips/apb/apb_fll_if/apb_fll_if.sv:284:      if (PSEL && PENABLE && (~PWRITE)) begin
+rtl/pulpissimo/safe_domain_reg_if.sv:211:	else if (s_rise & ~reg_if_wrn_i)
+rtl/pulpissimo/safe_domain_reg_if.sv:268:	  else if (s_rise & reg_if_wrn_i)
+rtl/vip/i2s/i2c_if.v:417:         if (WrCycle & ADLO_Rcvd) begin
+rtl/vip/i2s/i2s_vip_channel.sv:422:        if(i2s_snap_enable_i & ~pdm_en_i & ~mode_i)
+rtl/vip/i2s/i2s_vip_channel.sv:673:        if(do_load & ~sck)
+rtl/vip/i2s/i2s_vip_channel.sv:810:            if(enable_i & ~mode_i & ~pdm_en_i & i2s_snap_enable_i)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:684:   if (rd_slow && ~glitch)           (SCK => SO) = tpd_SCK_SO_sdr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:687:   if (dual && ~glitch) (SCK => SI) = tpd_SCK_SO_ddr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:689:   if (QUAD && ~CSNeg && ~glitch) (SCK => RESETNeg) = tpd_SCK_SO_ddr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:690:   if (QUAD && ~glitch)           (SCK => WPNeg)    = tpd_SCK_SO_ddr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:692:   if (CSNeg && ~rst_quad)    (CSNeg => SO)     = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:693:   if (CSNeg &&  rst_quad)    (CSNeg => SO)     = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:695:   if (CSNeg && dual && ~rst_quad) (CSNeg => SI) = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:696:   if (CSNeg && dual &&  rst_quad) (CSNeg => SI) = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:698:   if (CSNeg && ~rst_quad) (CSNeg => RESETNeg) = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:699:   if (CSNeg &&  rst_quad) (CSNeg => RESETNeg) = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:701:   if (CSNeg && ~rst_quad) (CSNeg => WPNeg)    = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:702:   if (CSNeg &&  rst_quad) (CSNeg => WPNeg)    = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1410:            else if (((~RESETNeg_in && reset_act) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3224:            if (rising_edge_PSTART && PDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3276:            if (rising_edge_WSTART && WDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3299:            if (CSSTART && CSDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3327:            if (rising_edge_EESSTART && EESDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3483:                            else if (~(PWDMLB && PSTMLB) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3542:                            else if (~(PWDMLB && PSTMLB))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3647:                            	if ((UniformSec && sect_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3663:								if ((UniformSec && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3719:                            if (PPBOTP && PPB_LOCK && PERMLB)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3726:                            if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3747:                            if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3754:                            if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3782:                    if (PRGSUSP_out_event && PRGSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3805:                    if (ERSSUSP_out_event && ERSSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3858:                    else if (PRGSUSP_out_event && PRGSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4116:                        if (~(SRWD && ~WPNeg_in && ~QUAD))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4126:                            else if (~(PWDMLB && PSTMLB) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4150:                        if (~(SRWD && ~WPNeg_in && ~QUAD &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4182:                            else if (~(PWDMLB && PSTMLB))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4370:                            if ((UniformSec && sect_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4398:							if ((UniformSec && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4507:                            if (PPBOTP && PPB_LOCK && PERMLB)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4523:                        if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4571:                        if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4590:                        if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5287:                    if ((~LOCK_O && SECURE_OPN == 1) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5483:                if (WDONE && CSDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5909:                if(current_state_event && current_state == PAGE_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6003:                if (PRGSUSP_out && PRGSUSP_in)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6463:                if(current_state_event && current_state == OTP_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6607:                if(current_state_event && current_state == SECTOR_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6765:                if(current_state_event && current_state == BULK_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7436:                if(current_state_event && current_state == ERS_SUSP_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7528:                if (PRGSUSP_out && PRGSUSP_in)

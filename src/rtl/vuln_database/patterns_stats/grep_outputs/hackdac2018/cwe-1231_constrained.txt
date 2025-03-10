@@ -1,0 +1,62 @@
+ips/pulp_soc/rtl/fc/fc_demux.sv:99:                    if(req_slave & gnt_slave) begin
+ips/pulp_soc/rtl/fc/fc_demux.sv:115:                        if(req_slave & gnt_slave) begin
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:114:                if ((req_o && gnt_i) && (~valid_i || ~ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:126:                if ((req_o && gnt_i) && (~valid_i || ~ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:136:            if(req_o && gnt_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo.sv:82:            if(req_o && gnt_i)
+ips/udma/udma_core/rtl/common/io_generic_fifo.sv:73:                if (ready_i && valid_o && (!valid_i || full))
+ips/udma/udma_core/rtl/common/io_generic_fifo.sv:131:                    if (ready_i && valid_o)
+ips/udma/udma_core/rtl/common/io_tx_fifo_dc.sv:90:            if(src_req_o && src_gnt_i)
+ips/udma/udma_core/rtl/core/udma_tx_channels.sv:287:          if (l2_req_o && l2_gnt_i)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:155:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:176:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:211:          if (s_data_tx_req && s_data_tx_gnt)
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:258:    if(ctrl.first & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:244:    if(ctrl.first & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_dummy_memory.sv:99:      if ((tcdm_req[i] & enable_i) == 1'b0) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:62:    else if(ctrl_i.first & ~stream_i.ready)
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:140:    else if (stream_i.valid & stream_i.ready) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:189:        if(stream.valid & stream.ready) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:193:        else if(flags_o.addressgen_flags.realign_flags.enable & flags_o.addressgen_flags.realign_flags.last) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:197:        else if(~flags_o.addressgen_flags.in_progress & tcdm_inflight_any) begin // if transactions in flight, let them end
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:134:          if(stream_valid_w & split_streams[ii].ready)
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:138:          else if(stream_valid_r & split_streams[ii].ready)
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/RR_Flag_Req_L2.sv:30:            if( data_req_i  & data_gnt_i )
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/RR_Flag_Req_BRIDGE.sv:30:          if( data_req_i  & data_gnt_i )
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/lint64_to_32.sv:73:         if(data_req_i & data_gnt_o)
+ips/L2_tcdm_hybrid_interco/TB/TGEN_32.sv:52:         if(data_req_o & data_gnt_i)
+ips/riscv/riscv_if_stage.sv:263:          if (req_i && if_valid) begin
+ips/riscv/riscv_int_controller.sv:122:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/riscv/riscv_ex_stage.sv:202:      if(regfile_alu_we_i & ~apu_en_i) begin
+ips/riscv/riscv_tracer.sv:695:        if (ex_data_req && ex_data_gnt) begin
+ips/riscv/riscv_controller.sv:324:        if (irq_req_ctrl_i & irq_enable_int) begin
+ips/riscv/riscv_controller.sv:541:        if(irq_req_ctrl_i & irq_enable_int) begin
+ips/riscv/riscv_fetch_fifo.sv:192:    if (out_ready_i && out_valid_o) begin
+ips/zero-riscy/zeroriscy_int_controller.sv:102:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/zero-riscy/zeroriscy_if_stage.sv:185:                if (req_i && if_valid_o) begin
+ips/zero-riscy/zeroriscy_fetch_fifo.sv:169:    if (out_ready_i && out_valid_o) begin
+ips/zero-riscy/zeroriscy_controller.sv:270:        if (irq_req_ctrl_i & irq_enable_int) begin
+ips/zero-riscy/zeroriscy_controller.sv:316:                if ((irq_req_ctrl_i & irq_enable_int & ~instr_multicyle_i & ~branch_in_id_i) & ~(dbg_req_i & ~branch_taken_ex_i))
+ips/zero-riscy/zeroriscy_controller.sv:322:                else if (~(irq_req_ctrl_i & irq_enable_int & ~instr_multicyle_i & ~branch_in_id_i) & (dbg_req_i & ~branch_taken_ex_i))
+ips/zero-riscy/zeroriscy_controller.sv:335:              if (irq_req_ctrl_i & irq_enable_int) begin
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:533:        if (wr_reg && axi_master_aw_ready)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:535:        else if (!wr_reg && axi_master_ar_ready)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:550:        if (wr_reg && axi_master_b_valid)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:556:        else if (!wr_reg && axi_master_r_valid)
+ips/axi/axi_node/axi_RR_Flag_Req.sv:66:          if( data_req_i  & data_gnt_i )
+ips/axi/axi_node/axi_regs_top.sv:217:      if (awready && s_axi_awvalid)
+ips/axi/axi_node/axi_regs_top.sv:223:      else if (awaddr_done_reg && wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:243:      if (wready && s_axi_wvalid)
+ips/axi/axi_node/axi_regs_top.sv:250:      else if (wdata_done_reg && wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:269:      if (awaddr_done_reg && wdata_done_reg && !wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:303:      if (arready && s_axi_arvalid)
+ips/axi/axi_node/axi_regs_top.sv:309:      else if (araddr_done_reg && rresp_done_reg)
+ips/axi/axi_slice/axi_buffer.sv:54:             if (ready_i && valid_o && (!valid_i || full))
+ips/axi/axi_slice/axi_buffer.sv:104:             if (ready_i && valid_o)
+ips/timer_unit/timer_unit.sv:180:        if (req_i && ~wen_i)
+ips/timer_unit/timer_unit.sv:278:        if (s_req && s_wen)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5909:                if(current_state_event && current_state == PAGE_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6463:                if(current_state_event && current_state == OTP_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6607:                if(current_state_event && current_state == SECTOR_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6765:                if(current_state_event && current_state == BULK_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7436:                if(current_state_event && current_state == ERS_SUSP_PG)

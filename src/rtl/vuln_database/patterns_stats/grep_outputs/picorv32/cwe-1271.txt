@@ -1,0 +1,1 @@
+scripts/presyn/testbench.v:79:		if (B1EN) memory[B1ADDR] <= B1DATA;
