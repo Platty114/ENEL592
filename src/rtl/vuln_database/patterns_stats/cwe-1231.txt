@@ -40,3 +40,11 @@ PicoRV32:          33 occurances
 Hummingbirdv2:     15 occurances
 UltraembeddedOld:  20 occurances
 UltraembeddedNew:  23 occurances
+
+----------------------------------- insertion information ------------------------------------
+
+number, type, filename, line num, soc name
+1. Type 2, bw_r_rf16x160.v, 390, hackdac21
+2. Type 3, bw_r_rf16x160.v, 394, hackdac21
+3. Type 4, bw_r_rf16x160.v, 397, hackdac21
+4. Type 3, bw_r_rf32x80.v, 272, hackdac21

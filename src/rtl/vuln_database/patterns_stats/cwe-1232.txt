@@ -1,4 +1,4 @@
-regex pattern for cwe-1232 and occurance stats for each SoC analyzed
+regex pattern for cwe-1232 and occurence stats for each SoC analyzed
 
 ------------------------------------- regex pattern ----------------------------------------
 
@@ -20,7 +20,7 @@ more constrained
 [a-zA-Z0-9_\-\.\[\]]*(lock|lck|ck|lk)+[a-zA-Z0-9_\-\.\[\]]* *<= *.*[^1-9]0+
 
 
------------------------------------ occurance stats -----------------------------------------
+----------------------------------- occurence stats -----------------------------------------
 simplified
 Hack@DAC 2018 SoC: 2770 occurances
 Hack@DAC 2019 SoC: 1326 occurances
@@ -38,3 +38,13 @@ PicoRV32:          8 occurances
 Hummingbirdv2:     35 occurances
 UltraembeddedOld:  13 occurances
 UltraembeddedNew:  11 occurances
+
+----------------------------------- insertion information ------------------------------------
+
+potential instance?
+ips/apb/apb_gpio/apb_gpio.sv:292:	    r_gpio_lock     <=  '0;
+
+number, type, filename, line num, soc name
+1. Type 3, apb_gpio.sv, 296, hackdac18
+2. Type 2, safe_domain_reg_if.sv, 142, hackdac18
+3. place for insertion, rtc_clock : 98
