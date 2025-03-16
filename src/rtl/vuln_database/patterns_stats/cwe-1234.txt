@@ -12,6 +12,9 @@ Ultimately, this vulnerability is bassed on a write to some data register being 
 by a lock, and that lock is held in a conditional with other signals, allowing a write to
 occur even if the lock is prohibiting it.
 
+biggest catch
+ *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *([|]* *[~a-zA-Z0-9_\-\.] *)*
+
 simple
 [~a-zA-Z0-9_\-\.]+ *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+
 
@@ -42,19 +45,19 @@ UltraembeddedNew:  0 occurances
 
 number, type, filename, line num, soc name
 hackdac21
-1. Type 3,
+1. Type 3, bw_r_rf16x160.v, 412, hackdac21
 
 hackdac19
-1. Type 4,
+1. Type 4, dmi_jtag.sv, 127, hackdac19
 
 hackdac18
-1. Type 2,
+1. Type 2, tap_top.v, 186, hackdac18
 
 picorv32
-1. Type 3,
+1. Type 3, spimemo.v, 117, picorv32
 
 hummingbird
-1. Type 4,
+1. Type 4, 
 
 ultraembedded(old)
 1. Type 2,
