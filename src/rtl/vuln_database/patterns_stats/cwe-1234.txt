@@ -8,10 +8,9 @@ else if (write & (~lock_status | scan_mode | debug_unlocked) ) // Register prote
       end
 
 
-ultimately, this vulnerability is based on something being reset by more than one signal. To find
-this vulnerability in the wild, we mostly care about the 'if(...)' statement, specifically ones
-that are responsible for reseting another register using a flip flop. Thus, the following pattern
-is used 
+Ultimately, this vulnerability is bassed on a write to some data register being protected
+by a lock, and that lock is held in a conditional with other signals, allowing a write to
+occur even if the lock is prohibiting it.
 
 simple
 [~a-zA-Z0-9_\-\.]+ *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+
@@ -38,3 +37,27 @@ PicoRV32:          0 occurances
 Hummingbirdv2:     0 occurances
 UltraembeddedOld:  0 occurances
 UltraembeddedNew:  0 occurances
+
+----------------------------------- insertion information ------------------------------------
+
+number, type, filename, line num, soc name
+hackdac21
+1. Type 3,
+
+hackdac19
+1. Type 4,
+
+hackdac18
+1. Type 2,
+
+picorv32
+1. Type 3,
+
+hummingbird
+1. Type 4,
+
+ultraembedded(old)
+1. Type 2,
+
+ultraembedded(new)
+1. Type 3, 

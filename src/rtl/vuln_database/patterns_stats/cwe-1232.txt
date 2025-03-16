@@ -45,6 +45,32 @@ potential instance?
 ips/apb/apb_gpio/apb_gpio.sv:292:	    r_gpio_lock     <=  '0;
 
 number, type, filename, line num, soc name
-1. Type 3, apb_gpio.sv, 296, hackdac18
+hackdac21
+1. Type 2, piton_sd_cache_manager.v, 171, hackdac21
+
+hackdac19
+1. Type 3, rrabiter.sv, 137, hackdac19 
+
+hackdac18
+1. Type 3, apb_gpio.sv, 305, hackdac18
 2. Type 2, safe_domain_reg_if.sv, 142, hackdac18
-3. place for insertion, rtc_clock : 98
+3. Type 4, apb_gpio.sv, 301, hackdac18
+
+picorv32
+1. Potential bug found, icebreaker.v, 106
+
+hummingbird
+1. Type 3, sirv_pmu_core.sv, 500, hummingbirdv2
+
+ultraembedded(old)
+1. Type 4, tcm_mem_pmem.sv, 165, ultraembedded(old)
+
+ultraembedded(new)
+Unable to insert a good bug in this design, without completely
+and arbitrarily changing it. Will revisit.
+
+
+
+
+
+
