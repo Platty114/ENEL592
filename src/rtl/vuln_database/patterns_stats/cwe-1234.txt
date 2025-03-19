@@ -12,8 +12,10 @@ Ultimately, this vulnerability is bassed on a write to some data register being 
 by a lock, and that lock is held in a conditional with other signals, allowing a write to
 occur even if the lock is prohibiting it.
 
-biggest catch
- *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *([|]* *[~a-zA-Z0-9_\-\.] *)*
+modified
+ [~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
+
+modified constrained
 
 simple
 [~a-zA-Z0-9_\-\.]+ *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+

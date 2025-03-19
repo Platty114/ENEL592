@@ -68,6 +68,7 @@ hummingbird
 1. Type 3, spi_master_fifo.v, 47, hummingbirdv2
 2. Type 4, sirv_qspi_arbiter.v, 218, hummingbirdv2
 3. Type 2, e203_subsys_hclkgen_rstsync.v, 51, hummingbirdv2
+
 ultraembedded(old)
 1. Type 3, dcache_axi.v, 308, ultraembeddedold
 
