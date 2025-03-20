@@ -43,6 +43,9 @@ Hummingbirdv2:     0 occurances
 UltraembeddedOld:  0 occurances
 UltraembeddedNew:  0 occurances
 
+Modified
+Humingbirdv2:	   1936 occurences
+
 ----------------------------------- insertion information ------------------------------------
 
 number, type, filename, line num, soc name
@@ -59,10 +62,10 @@ picorv32
 1. Type 3, spimemo.v, 117, picorv32
 
 hummingbird
-1. Type 4, 
+1. Type 4, sirv_pmu_core.v, 339, humingbirdv2 
 
 ultraembedded(old)
-1. Type 2,
+1. Type 2, dcache_axi_axi.v, 115, ultraembedded(old)
 
 ultraembedded(new)
-1. Type 3, 
+1. Type 3, biriscv_lsu.v, 311, ultraemebedded(new)

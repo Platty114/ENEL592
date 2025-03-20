@@ -1,0 +1,500 @@
+bootrom/gen_rom.py:65:    assign rdata_o = (addr_q < RomSize) ? mem[addr_q] : '0;
+bootrom/gen_rom.py:89:    align = (int(len(rom) / 8) + 1) * 8;
+bootrom/bootrom.sv:270:    assign rdata_o = (raddr_q < RomSize) ? mem[raddr_q] : '0;
+fpga/src/ariane_xilinx.sv:87:localparam NumWords = (24 * 1024 * 1024) / 8;
+fpga/src/ariane_xilinx.sv:89:localparam CacheStartAddr = (1 << 31);
+fpga/src/axi2apb/src/axi2apb_64_32.sv:621:                RLAST    = (ARLEN_Q == 0) ? 1'b1 : 1'b0;
+fpga/src/bootrom/src/gpt.c:32:    gpt_pth_t *lba1 = (gpt_pth_t *)lba1_buf;
+fpga/src/bootrom/src/gpt.c:72:        partition_entries_t *part_entry = (partition_entries_t *)(lba2_buf + (i * 128));
+fpga/src/bootrom/src/gpt.c:93:    partition_entries_t *boot = (partition_entries_t *)(lba2_buf);
+fpga/src/bootrom/src/uart.c:5:    volatile uint8_t *loc_addr = (volatile uint8_t *)addr;
+fpga/src/bootrom/src/uart.c:62:        uint8_t cur = (addr >> (i * 8)) & 0xff;
+fpga/src/bootrom/src/uart.c:75:        uint8_t cur = (addr >> (i * 8)) & 0xff;
+fpga/src/bootrom/src/spi.c:7:    volatile uint32_t *loc_addr = (volatile uint32_t *)addr;
+fpga/src/bootrom/src/sd.c:134:    crc = (uint8_t)(crc >> 8) | (crc << 8);
+fpga/src/bootrom/src/sd.c:158:    crc = (crc << 1) | 1;
+fpga/src/bootrom/gen_rom.py:65:    assign rdata_o = (addr_q < RomSize) ? mem[addr_q] : '0;
+fpga/src/bootrom/gen_rom.py:89:    align = (int(len(rom) / 8) + 1) * 8;
+fpga/src/bootrom/bootrom.sv:980:    assign rdata_o = (addr_q < RomSize) ? mem[addr_q] : '0;
+fpga/src/apb_uart/src/slib_mv_filter.vhd:55:            iCounter  <= (others => '0');
+fpga/src/apb_uart/src/slib_mv_filter.vhd:67:                iCounter  <= (others => '0');
+fpga/src/apb_uart/src/slib_input_sync.vhd:43:            iD <= (others => '0');
+fpga/src/apb_uart/src/slib_counter.vhd:53:            iCounter <= (others => '0');                -- Reset counter register
+fpga/src/apb_uart/src/slib_counter.vhd:56:                iCounter <= (others => '0');            -- Clear counter register
+fpga/src/apb_uart/src/slib_fifo.vhd:68:            iWRAddr <= (others => '0');
+fpga/src/apb_uart/src/slib_fifo.vhd:69:            iRDAddr <= (others => '0');
+fpga/src/apb_uart/src/slib_fifo.vhd:81:                iWRAddr <= (others => '0');
+fpga/src/apb_uart/src/slib_fifo.vhd:82:                iRDAddr <= (others => '0');
+fpga/src/apb_uart/src/slib_fifo.vhd:98:            Q <= (others => '0');
+fpga/src/apb_uart/src/slib_fifo.vhd:111:            iUSAGE <= (others => '0');
+fpga/src/apb_uart/src/slib_fifo.vhd:114:                iUSAGE <= (others => '0');
+fpga/src/apb_uart/src/uart_baudgen.vhd:48:            iCounter <= (others => '0');
+fpga/src/apb_uart/src/uart_baudgen.vhd:52:                iCounter <= (others => '0');
+fpga/src/apb_uart/src/uart_baudgen.vhd:59:                iCounter <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:413:            iDLL <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:414:            iDLM <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:487:            iTimeoutCount <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:491:                iTimeoutCount <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:518:            iFCR_RXTrigger      <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:557:            iLCR <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:736:            iSCR <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:870:            iTSR        <= (others => '0');
+fpga/src/apb_uart/src/apb_uart.vhd:913:            iRXFIFOD     <= (others => '0');
+fpga/src/apb_uart/src/slib_clock_div.vhd:56:                if (iCounter = (RATIO-1)) then
+fpga/src/apb_uart/src/uart_receiver.vhd:183:            iDOUT <= (others => '0');
+fpga/src/apb_uart/src/uart_receiver.vhd:187:                iDOUT <= (others => '0');
+include/ariane_pkg.sv:108:    localparam logic [63:0] ISA_CODE = (RVA <<  0)  // A - Atomic Instructions extension
+include/riscv_pkg.sv:322:    localparam logic [63:0] MIP_SSIP = (1 << IRQ_S_SOFT);
+include/riscv_pkg.sv:323:    localparam logic [63:0] MIP_MSIP = (1 << IRQ_M_SOFT);
+include/riscv_pkg.sv:324:    localparam logic [63:0] MIP_STIP = (1 << IRQ_S_TIMER);
+include/riscv_pkg.sv:325:    localparam logic [63:0] MIP_MTIP = (1 << IRQ_M_TIMER);
+include/riscv_pkg.sv:326:    localparam logic [63:0] MIP_SEIP = (1 << IRQ_S_EXT);
+include/riscv_pkg.sv:327:    localparam logic [63:0] MIP_MEIP = (1 << IRQ_M_EXT);
+include/riscv_pkg.sv:329:    localparam logic [63:0] S_SW_INTERRUPT    = (1 << 63) | IRQ_S_SOFT;
+include/riscv_pkg.sv:330:    localparam logic [63:0] M_SW_INTERRUPT    = (1 << 63) | IRQ_M_SOFT;
+include/riscv_pkg.sv:331:    localparam logic [63:0] S_TIMER_INTERRUPT = (1 << 63) | IRQ_S_TIMER;
+include/riscv_pkg.sv:332:    localparam logic [63:0] M_TIMER_INTERRUPT = (1 << 63) | IRQ_M_TIMER;
+include/riscv_pkg.sv:333:    localparam logic [63:0] S_EXT_INTERRUPT   = (1 << 63) | IRQ_S_EXT;
+include/riscv_pkg.sv:334:    localparam logic [63:0] M_EXT_INTERRUPT   = (1 << 63) | IRQ_M_EXT;
+openpiton/ariane_verilog_wrap.sv:102:  assign wake_up_cnt_d = (wake_up_cnt_q[$high(wake_up_cnt_q)]) ? wake_up_cnt_q : wake_up_cnt_q + 1;
+src/frontend/frontend.sv:369:    assign fifo_credits_d       =  (flush_i) ? FETCH_FIFO_DEPTH :
+src/frontend/frontend.sv:375:    assign s2_in_flight_d      = (flush_i)             ? 1'b0 :
+src/frontend/bht.sv:46:    assign bht_prediction_o.strongly_taken = (bht_q[index].saturation_counter == 2'b11);
+src/frontend/instr_scan.sv:35:    assign is_rvc_o     = (instr_i[1:0] != 2'b11);
+src/frontend/instr_scan.sv:38:    assign rvi_call_o   = (rvi_jalr_o | rvi_jump_o) & instr_i[7]; // TODO: check that this captures calls
+src/frontend/instr_scan.sv:40:    assign rvi_imm_o    = (instr_i[3]) ? ariane_pkg::uj_imm(instr_i) : ariane_pkg::sb_imm(instr_i);
+src/frontend/instr_scan.sv:41:    assign rvi_branch_o = (instr_i[6:0] == riscv::OpcodeBranch) ? 1'b1 : 1'b0;
+src/frontend/instr_scan.sv:42:    assign rvi_jalr_o   = (instr_i[6:0] == riscv::OpcodeJalr)   ? 1'b1 : 1'b0;
+src/frontend/instr_scan.sv:43:    assign rvi_jump_o   = (instr_i[6:0] == riscv::OpcodeJal)    ? 1'b1 : 1'b0;
+src/frontend/instr_scan.sv:45:    assign rvc_jump_o   = (instr_i[15:13] == riscv::OpcodeC1J) & is_rvc_o & (instr_i[1:0] == riscv::OpcodeC1);
+src/frontend/instr_scan.sv:47:    assign rvc_jr_o     = (instr_i[15:13] == riscv::OpcodeC2JalrMvAdd)
+src/frontend/instr_scan.sv:58:    assign rvc_jalr_o   = (instr_i[15:13] == riscv::OpcodeC2JalrMvAdd)
+src/frontend/instr_scan.sv:64:    assign rvc_imm_o    = (instr_i[14]) ? {{56{instr_i[12]}}, instr_i[6:5], instr_i[2], instr_i[11:10], instr_i[4:3], 1'b0}
+src/ptw.sv:99:    assign ptw_active_o    = (state_q != IDLE);
+src/ptw.sv:114:    assign itlb_update_o.is_2M = (ptw_lvl_q == LVL2);
+src/ptw.sv:115:    assign itlb_update_o.is_1G = (ptw_lvl_q == LVL1);
+src/ptw.sv:116:    assign dtlb_update_o.is_2M = (ptw_lvl_q == LVL2);
+src/ptw.sv:117:    assign dtlb_update_o.is_1G = (ptw_lvl_q == LVL1);
+src/plic/plic_interface.sv:59:    localparam int num_gateway_bundles = (NUM_GATEWAYS-1) / DATA_WIDTH + 1;       // how many bundles we have to consider
+src/plic/plic_interface.sv:94:    assign write_active      = (external_bus_io.valid &  external_bus_io.write) ? external_bus_io.wstrb : '0;
+src/plic/plic_gateway.sv:45:    assign irq_trigger = (~wait_completion_q | completed_i) & irq_source_i;
+src/plic/plic_gateway.sv:78:    assign irq_pending_o = (irq_pending_q | irq_trigger) & ~claim_i;
+src/clint/clint.sv:39:    localparam AddrSelWidth = (NR_CORES == 1) ? 1 : $clog2(NR_CORES);
+src/mmu.sv:253:    assign lsu_dtlb_hit_o = (en_ld_st_translation_i) ? dtlb_lu_hit :  1'b1;
+src/mmu.sv:275:        daccess_err = (ld_st_priv_lvl_i == riscv::PRIV_LVL_S && !sum_i && dtlb_pte_q.u) || // SUM is not set and we are trying to access a user page in supervisor mode
+src/load_store_unit.sv:403:    assign empty = (status_cnt_q == 0);
+src/alu.sv:114:    assign shift_left = (fu_data_i.operator == SLL) | (fu_data_i.operator == SLLW);
+src/alu.sv:116:    assign shift_arithmetic = (fu_data_i.operator == SRA) | (fu_data_i.operator == SRAW);
+src/instr_realigner.sv:66:        fetch_entry_o.ex.tval        = (fetch_entry_i.page_fault) ? fetch_entry_i.address : '0;
+src/instr_realigner.sv:67:        fetch_entry_o.ex.cause       = (fetch_entry_i.page_fault) ? riscv::INSTR_PAGE_FAULT : '0;
+src/axi_adapter.sv:73:        axi_req_o.aw.burst  = (type_i == ariane_axi::SINGLE_REQ) ? 2'b00 :  2'b01;  // fixed size for single request and incremental transfer for everything else
+src/axi_adapter.sv:83:        axi_req_o.ar.addr   = (CRITICAL_WORD_FIRST || type_i == ariane_axi::SINGLE_REQ) ? addr_i : { addr_i[63:CACHELINE_BYTE_OFFSET], {{CACHELINE_BYTE_OFFSET}{1'b0}}};
+src/axi_adapter.sv:88:        axi_req_o.ar.burst  = (type_i == ariane_axi::SINGLE_REQ) ? 2'b00 : (CRITICAL_WORD_FIRST ? 2'b10 : 2'b01);  // wrapping transfer in case of a critical word first strategy
+src/axi_adapter.sv:172:                            state_d = (type_i == ariane_axi::SINGLE_REQ) ? WAIT_R_VALID : WAIT_R_VALID_MULTIPLE;
+src/axi_adapter.sv:192:                axi_req_o.w.last   = (cnt_q == '0);
+src/register_interface/src/reg_uniform.sv:70:  localparam int NUM_BUS_WORDS = (NUM_REG * REG_WIDTH + DATA_WIDTH - 1) / DATA_WIDTH;
+src/csr_regfile.sv:399:                    mstatus_d = (mstatus_q & ~mask) | (csr_wdata & mask);
+src/csr_regfile.sv:413:                    mie_d = (mie_q & ~mideleg_q) | (csr_wdata & mideleg_q);
+src/csr_regfile.sv:419:                    mip_d = (mip_q & ~mask) | (csr_wdata & mask);
+src/csr_regfile.sv:455:                    mask = (1 << riscv::INSTR_ADDR_MISALIGNED) |
+src/csr_regfile.sv:461:                    medeleg_d = (medeleg_q & ~mask) | (csr_wdata & mask);
+src/csr_regfile.sv:467:                    mideleg_d = (mideleg_q & ~mask) | (csr_wdata & mask);
+src/csr_regfile.sv:472:                    mie_d = (mie_q & ~mask) | (csr_wdata & mask); // we only support supervisor and M-mode interrupts
+src/csr_regfile.sv:489:                    mip_d = (mip_q & ~mask) | (csr_wdata & mask);
+src/csr_regfile.sv:556:                trap_to_priv_lvl = (priv_lvl_o == riscv::PRIV_LVL_M) ? riscv::PRIV_LVL_M : riscv::PRIV_LVL_S;
+src/csr_regfile.sv:571:                stval_d        = (ariane_pkg::ZERO_TVAL
+src/csr_regfile.sv:590:                mtval_d        = (ariane_pkg::ZERO_TVAL
+src/csr_regfile.sv:689:        ld_st_priv_lvl_o = (mprv) ? mstatus_q.mpp : priv_lvl_o;
+src/csr_regfile.sv:748:            CSR_CLEAR: csr_wdata = (~csr_wdata_i) & csr_rdata;
+src/csr_regfile.sv:827:        interrupt_global_enable = (~debug_mode_q)
+src/csr_regfile.sv:938:    assign priv_lvl_o       = (debug_mode_q || umode_i) ? riscv::PRIV_LVL_M : priv_lvl_q;
+src/csr_regfile.sv:948:    assign en_translation_o = (satp_q.mode == 4'h8 && priv_lvl_o != riscv::PRIV_LVL_M)
+src/csr_regfile.sv:959:    assign mprv             = (debug_mode_q && !dcsr_q.mprven) ? 1'b0 : mstatus_q.mprv;
+src/decoder.sv:155:                                        illegal_instr    = (priv_lvl_i inside {riscv::PRIV_LVL_M, riscv::PRIV_LVL_S}) ? 1'b0 : 1'b1;
+src/decoder.sv:477:                        instruction_o.fu  = (instr.rtype.funct7 == 7'b000_0001) ? MULT : ALU;
+src/decoder.sv:513:                    instruction_o.fu  = (instr.rtype.funct7 == 7'b000_0001) ? MULT : ALU;
+src/decoder.sv:1059:            instruction_o.ex.tval  = (is_compressed_i) ? {48'b0, compressed_instr_i} : {32'b0, instruction_i};
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:360:    assign WEN = (write_req) ? 1'b0 : 1'b1;
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:408:                                NS           = (ARBURST == 2'b01) ? BURST_RD : WRAP_RD;
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:427:                                        NS            = (AWBURST == 2'b01) ? BURST_WR : WRAP_WR;
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:439:                                        NS           =  (AWBURST == 2'b01) ? WAIT_WDATA_BURST : WAIT_WDATA_BURST_WRAP;
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:464:                                    NS              = (AWBURST == 2'b01) ? BURST_WR : WRAP_WR;
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:475:                                    NS           =  (AWBURST == 2'b01) ? WAIT_WDATA_BURST : WAIT_WDATA_BURST_WRAP;
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:489:                                NS             = (ARBURST == 2'b01) ? BURST_RD : WRAP_RD;
+src/axi_mem_if/src/deprecated/axi_mem_if.sv:623:                    NS           = (CS == WAIT_WDATA_BURST) ? BURST_WR : WRAP_WR;
+src/axi_mem_if/src/axi2mem.sv:151:                        state_d        = (slave.w_last) ? SEND_B : WRITE;
+src/axi_mem_if/src/axi2mem.sv:167:                    state_d        = (slave.w_last) ? SEND_B : WRITE;
+src/axi_mem_if/src/axi2mem.sv:180:                slave.r_last  = (cnt_q == ax_req_q.len + 1);
+src/axi_node/src/axi_BW_allocator.sv:121:assign outstanding_trans_o = (outstanding_counter == '0) ? 1'b0 : 1'b1;
+src/axi_node/src/axi_BW_allocator.sv:125:assign full_counter_o = (outstanding_counter == '1) ? 1'b1 : 1'b0;
+src/axi_node/src/axi_regs_top.sv:189:  assign write_en = (wdata_done_rise & awaddr_done_reg) | (awaddr_done_rise & wdata_done_reg);
+src/axi_node/src/axi_regs_top.sv:423:                  for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+src/axi_node/src/axi_FanInPrimitive_Req.sv:78:            data_req_o   = (SEL_EXCLUSIVE) ? data_req1_i : data_req0_i;
+src/axi_node/src/axi_FanInPrimitive_Req.sv:79:            data_gnt0_o  = (SEL_EXCLUSIVE) ? 1'b0        : data_gnt_i;
+src/axi_node/src/axi_FanInPrimitive_Req.sv:80:            data_gnt1_o  = (SEL_EXCLUSIVE) ? data_gnt_i  : 1'b0;
+src/axi_node/src/axi_BR_allocator.sv:129:assign outstanding_trans_o = (outstanding_counter == '0) ? 1'b0 : 1'b1;
+src/axi_node/src/axi_BR_allocator.sv:133:assign full_counter_o = (outstanding_counter == '1) ? 1'b1 : 1'b0;
+src/common_cells/src/cdc_fifo_gray.sv:56:  localparam pointer_t PTR_FULL  = (1 << LOG_DEPTH);
+src/common_cells/src/fifo_v3.sv:19:    parameter int unsigned ADDR_DEPTH   = (DEPTH > 1) ? $clog2(DEPTH) : 1
+src/common_cells/src/fifo_v3.sv:38:    localparam int unsigned FIFO_DEPTH = (DEPTH > 0) ? DEPTH : 1;
+src/common_cells/src/fifo_v3.sv:54:        assign full_o       = (status_cnt_q == FIFO_DEPTH[ADDR_DEPTH:0]);
+src/common_cells/src/fifo_v3.sv:55:        assign empty_o      = (status_cnt_q == 0) & ~(FALL_THROUGH & push_i);
+src/common_cells/src/fifo_v3.sv:65:        data_o          = (DEPTH == 0) ? data_i : mem_q[read_pointer_q];
+src/common_cells/src/cdc_fifo_2phase.sv:52:  localparam pointer_t PTR_FULL  = (1 << LOG_DEPTH);
+src/common_cells/src/fifo_v2.sv:21:    parameter int unsigned ADDR_DEPTH   = (DEPTH > 1) ? $clog2(DEPTH) : 1
+src/common_cells/src/fifo_v2.sv:47:        assign alm_full_o   = (usage >= ALM_FULL_TH[ADDR_DEPTH-1:0]);
+src/common_cells/src/fifo_v2.sv:48:        assign alm_empty_o  = (usage <= ALM_EMPTY_TH[ADDR_DEPTH-1:0]);
+src/common_cells/src/deprecated/clock_divider_counter.sv:83:    //        assign clk_cnt_odd  = {1'b0,clk_cnt_odd_incr[7:1]}; //if odd divider than clk_cnt = (clk_div+1)/2
+src/common_cells/src/deprecated/clock_divider_counter.sv:85:    assign clk_cnt_even = (clk_div == 8'h2) ? 8'h0 : ({1'b0,clk_div[7:1]} - 8'h1);   //if even divider than clk_cnt = clk_div/2
+src/common_cells/src/sync_wedge.sv:26:   assign f_edge_o = (~r_reg[1]) & r_reg[0];
+src/common_cells/src/cdc_2phase.sv:109:  assign ready_o = (req_src_q == ack_q);
+src/common_cells/src/cdc_2phase.sv:170:  assign valid_o = (ack_dst_q != req_q1);
+src/common_cells/src/rrarbiter.sv:114:    assign next_idx   = (no_lower_ones)      ? upper_idx      :
+src/common_cells/src/rrarbiter.sv:116:    assign arb_sel_d  = (lock_q)             ? arb_sel_lock_q :
+src/common_cells/header/register_defines.svh:30:      __q <= (__reset_value);                        \
+src/common_cells/header/register_defines.svh:32:      __q <= (__d);                                  \
+src/common_cells/header/register_defines.svh:45:      __q <= (__reset_value);                            \
+src/common_cells/header/register_defines.svh:47:      __q <= (__d);                                      \
+src/common_cells/header/register_defines.svh:60:      __q <= (__reset_value);                              \
+src/common_cells/header/register_defines.svh:62:      __q <= (__d);                                        \
+src/common_cells/header/register_defines.svh:75:    __q <= (__reset_clk) ? (__reset_value) : (__d);       \
+src/common_cells/header/register_defines.svh:96:    __q <= (__d);                    \
+src/common_cells/header/register_defines.svh:110:      __q <= (__reset_value);                        \
+src/common_cells/header/register_defines.svh:112:      __q <= (__load) ? (__d) : (__q);               \
+src/common_cells/header/register_defines.svh:126:      __q <= (__reset_value);                                 \
+src/common_cells/header/register_defines.svh:128:      __q <= (__load) ? (__d) : (__q);                        \
+src/common_cells/header/register_defines.svh:142:      __q <= (__reset_value);                                    \
+src/common_cells/header/register_defines.svh:144:      __q <= (__load) ? (__d) : (__q);                           \
+src/common_cells/header/register_defines.svh:158:    __q <= (__reset_clk) ? (__reset_value) : ((__load) ? (__d) : (__q)); \
+src/common_cells/header/register_defines.svh:181:    __q <= (__load) ? (__d) : (__q);   \
+src/compressed_decoder.sv:235:                                illegal_instr_o = (instr_i[11:7] != '0) ? 1'b0 : 1'b1;
+src/debug/dmi_jtag.sv:86:    assign dmi_req.op   = (state_q == Write) ? dm::DTM_WRITE : dm::DTM_READ;
+src/debug/dm_sba.sv:56:    assign sbbusy_o = (state_q != Idle) ? 1'b1 : 1'b0;
+src/debug/dm_csrs.sv:78:    localparam HartSelLen = (NrHarts == 1) ? 1 : $clog2(NrHarts);
+src/debug/dm_csrs.sv:186:        dmstatus.allnonexistent = (hartsel_o > NrHarts[19:0] - 1) ? 1'b1 : 1'b0;
+src/debug/dm_csrs.sv:187:        dmstatus.anynonexistent = (hartsel_o > NrHarts[19:0] - 1) ? 1'b1 : 1'b0;
+src/debug/dm_csrs.sv:280:                        sbdata_read_valid_o = (sbcs_q.sberror == '0);
+src/debug/dm_csrs.sv:381:                        sbaddress_write_valid_o = (sbcs_q.sberror == '0);
+src/debug/dm_csrs.sv:398:                        sbdata_write_valid_o = (sbcs_q.sberror == '0);
+src/debug/dmi_jtag_tap.sv:233:            tdo_oe_o <= (shift_ir | shift_dr_o);
+src/debug/dmi_jtag_tap.sv:254:                tap_state_d = (tms_i) ? TestLogicReset : RunTestIdle;
+src/debug/dmi_jtag_tap.sv:257:                tap_state_d = (tms_i) ? SelectDrScan : RunTestIdle;
+src/debug/dmi_jtag_tap.sv:261:                tap_state_d = (tms_i) ? SelectIrScan : CaptureDr;
+src/debug/dmi_jtag_tap.sv:265:                tap_state_d = (tms_i) ? Exit1Dr : ShiftDr;
+src/debug/dmi_jtag_tap.sv:269:                tap_state_d = (tms_i) ? Exit1Dr : ShiftDr;
+src/debug/dmi_jtag_tap.sv:272:                tap_state_d = (tms_i) ? UpdateDr : PauseDr;
+src/debug/dmi_jtag_tap.sv:275:                tap_state_d = (tms_i) ? Exit2Dr : PauseDr;
+src/debug/dmi_jtag_tap.sv:278:                tap_state_d = (tms_i) ? UpdateDr : ShiftDr;
+src/debug/dmi_jtag_tap.sv:282:                tap_state_d = (tms_i) ? SelectDrScan : RunTestIdle;
+src/debug/dmi_jtag_tap.sv:286:                tap_state_d = (tms_i) ? TestLogicReset : CaptureIr;
+src/debug/dmi_jtag_tap.sv:294:                tap_state_d = (tms_i) ? Exit1Ir : ShiftIr;
+src/debug/dmi_jtag_tap.sv:302:                tap_state_d = (tms_i) ? Exit1Ir : ShiftIr;
+src/debug/dmi_jtag_tap.sv:305:                tap_state_d = (tms_i) ? UpdateIr : PauseIr;
+src/debug/dmi_jtag_tap.sv:309:                tap_state_d = (tms_i) ? Exit2Ir : PauseIr;
+src/debug/dmi_jtag_tap.sv:312:                tap_state_d = (tms_i) ? UpdateIr : ShiftIr;
+src/debug/dmi_jtag_tap.sv:320:                tap_state_d = (tms_i) ? SelectDrScan : RunTestIdle;
+src/debug/debug_rom/debug_rom.sv:51:    assign rdata_o = (addr_q<RomSize) ? mem[addr_q] : '0;
+src/debug/debug_rom/gen_rom.py:65:    assign rdata_o = (addr_q < RomSize) ? mem[addr_q] : '0;
+src/debug/debug_rom/gen_rom.py:89:    align = (int(len(rom) / 8) + 1) * 8;
+src/debug/dm_mem.sv:57:    localparam int HartSelLen = (NrHarts == 1) ? 1 : $clog2(NrHarts);
+src/debug/dm_mem.sv:59:    localparam logic [DbgAddressBits-1:0] DataBase = (dm::DataAddr);
+src/debug/dm_mem.sv:60:    localparam logic [DbgAddressBits-1:0] DataEnd = (dm::DataAddr + 4*dm::DataCount);
+src/debug/dm_mem.sv:61:    localparam logic [DbgAddressBits-1:0] ProgBufBase = (dm::DataAddr - 4*dm::ProgBufSize);
+src/debug/dm_mem.sv:62:    localparam logic [DbgAddressBits-1:0] ProgBufEnd = (dm::DataAddr - 1);
+src/debug/dm_mem.sv:63:    localparam logic [DbgAddressBits-1:0] AbstractCmdBase = (ProgBufBase - 4*6);
+src/debug/dm_mem.sv:64:    localparam logic [DbgAddressBits-1:0] AbstractCmdEnd = (ProgBufBase - 1);
+src/debug/dm_mem.sv:365:    assign fwd_rom_d = (addr_i[DbgAddressBits-1:0] >= dm::HaltAddress[DbgAddressBits-1:0]) ? 1'b1 : 1'b0;
+src/mult.sv:34:    assign div_ready_i      = (mul_valid) ? 1'b0         : 1'b1;
+src/mult.sv:35:    assign mult_trans_id_o  = (mul_valid) ? mul_trans_id : div_trans_id;
+src/mult.sv:36:    assign result_o         = (mul_valid) ? mul_result   : div_result;
+src/mult.sv:127:    assign div_result = (word_op_q) ? sext32(result) : result;
+src/serdiv.sv:82:  assign op_b_zero = (op_b_i == 0);
+src/serdiv.sv:86:  assign lzc_a_input = (opcode_i[0] & op_a_sign) ? {~op_a_i, 1'b0} : op_a_i;
+src/serdiv.sv:87:  assign lzc_b_input = (opcode_i[0] & op_b_sign) ? ~op_b_i         : op_b_i;
+src/serdiv.sv:107:  assign shift_a      = (lzc_a_no_one) ? WIDTH : lzc_a_result;
+src/serdiv.sv:108:  assign div_shift    = (lzc_b_no_one) ? WIDTH : lzc_b_result-shift_a;
+src/serdiv.sv:113:  assign div_res_zero_d = (load_en) ? ($signed(div_shift) < 0) : div_res_zero_q;
+src/serdiv.sv:122:  assign add_mux     = (load_en)   ? op_a_i  : op_b_q;
+src/serdiv.sv:125:  assign b_mux       = (load_en)   ? op_b : {comp_inv_q, (op_b_q[$high(op_b_q):1])};
+src/serdiv.sv:128:  assign out_mux     = (rem_sel_q) ? op_a_q : res_q;
+src/serdiv.sv:129:  // assign out_mux     = (rem_sel_q) ? op_a_d : res_d;
+src/serdiv.sv:132:  assign res_o       = (res_inv_q) ? -$signed(out_mux) : out_mux;
+src/serdiv.sv:138:  assign add_tmp     = (load_en) ? 0 : op_a_q;
+src/serdiv.sv:139:  assign add_out     = (pm_sel)  ? add_tmp + add_mux : add_tmp - $signed(add_mux);
+src/serdiv.sv:145:  assign cnt_zero = (cnt_q == 0);
+src/serdiv.sv:146:  assign cnt_d    = (load_en)   ? div_shift  :
+src/serdiv.sv:215:  assign rem_sel_d    = (load_en) ? opcode_i[1]               : rem_sel_q;
+src/serdiv.sv:216:  assign comp_inv_d   = (load_en) ? opcode_i[0] & op_b_sign   : comp_inv_q;
+src/serdiv.sv:217:  assign op_b_zero_d  = (load_en) ? op_b_zero                 : op_b_zero_q;
+src/serdiv.sv:218:  assign res_inv_d    = (load_en) ? (~op_b_zero | opcode_i[1]) & opcode_i[0] & (op_a_sign ^ op_b_sign) : res_inv_q;
+src/serdiv.sv:221:  assign id_d = (load_en) ? id_i : id_q;
+src/serdiv.sv:224:  assign op_a_d   = (a_reg_en)   ? add_out : op_a_q;
+src/serdiv.sv:225:  assign op_b_d   = (b_reg_en)   ? b_mux   : op_b_q;
+src/serdiv.sv:226:  assign res_d    = (load_en)   ? '0       :
+src/scoreboard.sv:81:    assign issue_full = (issue_cnt_q == NR_ENTRIES-1);
+src/rom2/rom2.sv:47:    assign rdata_o = (raddr_q < RomSize) ? secure_reg[raddr_q] : '0;
+src/aes/AES.h:73:    for(int i = (BLOCK_WORDS - 1); i >= 0; --i) {
+src/aes/aes_192.v:74:assign out_valid = (validCounter == 0);
+src/store_buffer.sv:77:        ready_o = (speculative_status_cnt_q < (DEPTH_SPEC - 1)) || commit_i;
+src/store_buffer.sv:144:        commit_ready_o = (commit_status_cnt_q < DEPTH_COMMIT);
+src/store_buffer.sv:146:        no_st_pending_o         = (commit_status_cnt_q == 0);
+src/axi_adapter2.sv:80:    assign wr_single_req       = (wr_blen_i == 0);
+src/axi_adapter2.sv:83:    assign axi_req_o.aw.burst  = (wr_single_req) ? 2'b00 : 2'b01;  // fixed size for single request and incremental transfer for everything else
+src/axi_adapter2.sv:105:    assign wr_cnt_done         = (wr_cnt_q == wr_blen_i);
+src/axi_adapter2.sv:106:    assign wr_cnt_d            = (wr_cnt_clr) ? '0         :
+src/axi_adapter2.sv:242:    assign rd_single_req       = (rd_blen_i == 0);
+src/axi_adapter2.sv:247:    assign axi_req_o.ar.burst  = (rd_single_req)       ? 2'b00 :
+src/axi_adapter2.sv:282:    assign rd_cnt_d            = (rd_cnt_clr) ? '0         :
+src/cache_subsystem/serpent_l15_adapter.sv:124:assign l15_req_o.l15_nc                   = (arb_idx)        ? dcache_data.nc    : icache_data.nc;
+src/cache_subsystem/serpent_l15_adapter.sv:126:assign l15_req_o.l15_size                 = (arb_idx)        ? dcache_data.size  :
+src/cache_subsystem/serpent_l15_adapter.sv:128:assign l15_req_o.l15_threadid             = (arb_idx)        ? dcache_data.tid   : icache_data.tid;
+src/cache_subsystem/serpent_l15_adapter.sv:133:assign l15_req_o.l15_l1rplway             = (arb_idx) ? dcache_data.way   : icache_data.way;
+src/cache_subsystem/serpent_l15_adapter.sv:134:// assign tmp_paddr                          = (arb_idx) ? dcache_data.paddr :
+src/cache_subsystem/serpent_l15_adapter.sv:138:assign l15_req_o.l15_address              = (arb_idx) ? dcache_data.paddr :
+src/cache_subsystem/serpent_dcache_missunit.sv:117:    assign cnt_d           = (flush_en) ? cnt_q + 1 : '0;
+src/cache_subsystem/serpent_dcache_missunit.sv:118:    assign flush_done      = (cnt_q == serpent_cache_pkg::DCACHE_NUM_WORDS-1);
+src/cache_subsystem/serpent_dcache_missunit.sv:120:    assign miss_req_masked_d = ( lock_reqs  ) ? miss_req_masked_q      :
+src/cache_subsystem/serpent_dcache_missunit.sv:164:    assign repl_way               = (all_ways_valid) ? rnd_way : inv_way;
+src/cache_subsystem/serpent_dcache_missunit.sv:166:    assign mshr_d.size            = (mshr_allocate)  ? miss_size_i    [miss_port_idx] : mshr_q.size;
+src/cache_subsystem/serpent_dcache_missunit.sv:167:    assign mshr_d.paddr           = (mshr_allocate)  ? miss_paddr_i   [miss_port_idx] : mshr_q.paddr;
+src/cache_subsystem/serpent_dcache_missunit.sv:168:    assign mshr_d.vld_bits        = (mshr_allocate)  ? miss_vld_bits_i[miss_port_idx] : mshr_q.vld_bits;
+src/cache_subsystem/serpent_dcache_missunit.sv:169:    assign mshr_d.id              = (mshr_allocate)  ? miss_id_i      [miss_port_idx] : mshr_q.id;
+src/cache_subsystem/serpent_dcache_missunit.sv:170:    assign mshr_d.nc              = (mshr_allocate)  ? miss_nc_i      [miss_port_idx] : mshr_q.nc;
+src/cache_subsystem/serpent_dcache_missunit.sv:171:    assign mshr_d.repl_way        = (mshr_allocate)  ? repl_way                       : mshr_q.repl_way;
+src/cache_subsystem/serpent_dcache_missunit.sv:172:    assign mshr_d.miss_port_idx   = (mshr_allocate)  ? miss_port_idx                  : mshr_q.miss_port_idx;
+src/cache_subsystem/serpent_dcache_missunit.sv:175:    assign mshr_vld_d = (mshr_allocate) ? 1'b1 :
+src/cache_subsystem/serpent_dcache_missunit.sv:179:    assign miss_o     = (mshr_allocate) ? ~miss_nc_i[miss_port_idx] : 1'b0;
+src/cache_subsystem/serpent_dcache_missunit.sv:191:    assign mshr_rdwr_collision = (mshr_q.paddr[63:DCACHE_OFFSET_WIDTH] == miss_paddr_i[NumPorts-1][63:DCACHE_OFFSET_WIDTH]) && mshr_vld_q;
+src/cache_subsystem/serpent_dcache_missunit.sv:206:    assign amo_data = (amo_req_i.size==2'b10)         ? {amo_req_i.operand_b[0 +: 32],
+src/cache_subsystem/serpent_dcache_missunit.sv:213:    assign amo_resp_o.result = (amo_req_i.size==2'b10) ? {{32{amo_rtrn_mux[amo_req_i.operand_a[2]*32 + 31]}},
+src/cache_subsystem/serpent_dcache_missunit.sv:218:    assign mem_data_o.tid    = (amo_sel) ? AmoTxId             : miss_id_i[miss_port_idx];
+src/cache_subsystem/serpent_dcache_missunit.sv:219:    assign mem_data_o.nc     = (amo_sel) ? 1'b1                : miss_nc_i[miss_port_idx];
+src/cache_subsystem/serpent_dcache_missunit.sv:220:    assign mem_data_o.way    = (amo_sel) ? '0                  : repl_way;
+src/cache_subsystem/serpent_dcache_missunit.sv:221:    assign mem_data_o.data   = (amo_sel) ? amo_data            : miss_wdata_i[miss_port_idx];
+src/cache_subsystem/serpent_dcache_missunit.sv:222:    assign mem_data_o.size   = (amo_sel) ? amo_req_i.size      : miss_size_i [miss_port_idx];
+src/cache_subsystem/serpent_dcache_missunit.sv:223:    assign mem_data_o.amo_op = (amo_sel) ? amo_req_i.amo_op    : AMO_NONE;
+src/cache_subsystem/serpent_dcache_missunit.sv:225:    assign tmp_paddr         = (amo_sel) ? amo_req_i.operand_a : miss_paddr_i[miss_port_idx];
+src/cache_subsystem/serpent_dcache_missunit.sv:277:   assign wr_cl_we_o       = ( flush_en    )   ? '1                                    :
+src/cache_subsystem/serpent_dcache_missunit.sv:283:    assign wr_vld_bits_o   = ( flush_en    )   ? '0                                    :
+src/cache_subsystem/serpent_dcache_missunit.sv:288:    assign wr_cl_idx_o     = ( flush_en ) ? cnt_q                                                        :
+src/cache_subsystem/serpent_dcache_missunit.sv:295:    assign wr_cl_data_be_o = ( cl_write_en ) ? '1 : '0;// we only write complete cachelines into the memory
+src/cache_subsystem/serpent_icache.sv:103:    assign cl_tag_d  = (areq_i.fetch_valid) ? areq_i.fetch_paddr[ICACHE_TAG_WIDTH+ICACHE_INDEX_WIDTH-1:ICACHE_INDEX_WIDTH] : cl_tag_q;
+src/cache_subsystem/serpent_icache.sv:106:    assign paddr_is_nc = (cl_tag_d <  (CachedAddrBeg>>ICACHE_INDEX_WIDTH)) ||
+src/cache_subsystem/serpent_icache.sv:115:    assign vaddr_d = (dreq_o.ready & dreq_i.req) ? dreq_i.vaddr : vaddr_q;
+src/cache_subsystem/serpent_icache.sv:124:            assign cl_offset_d = ( dreq_o.ready & dreq_i.req)      ? {dreq_i.vaddr>>2, 2'b0} :
+src/cache_subsystem/serpent_icache.sv:128:            assign mem_data_o.paddr = (paddr_is_nc) ? {cl_tag_d, vaddr_q[ICACHE_INDEX_WIDTH-1:3], 3'b0} :                                         // align to 32bit
+src/cache_subsystem/serpent_icache.sv:134:            assign cl_offset_d = ( dreq_o.ready & dreq_i.req)      ? {dreq_i.vaddr>>2, 2'b0} :
+src/cache_subsystem/serpent_icache.sv:138:            assign mem_data_o.paddr = (paddr_is_nc) ? {cl_tag_d, vaddr_q[ICACHE_INDEX_WIDTH-1:2], 2'b0} :                                         // align to 32bit
+src/cache_subsystem/serpent_icache.sv:266:                            miss_o         = (~paddr_is_nc);
+src/cache_subsystem/serpent_icache.sv:359:    assign flush_cnt_d = (flush_done) ? '0               :
+src/cache_subsystem/serpent_icache.sv:363:    assign flush_done  = (flush_cnt_q==(ICACHE_NUM_WORDS-1));
+src/cache_subsystem/serpent_icache.sv:367:    assign vld_addr = (flush_en)       ? flush_cnt_q        :
+src/cache_subsystem/serpent_icache.sv:371:    assign vld_req  = (flush_en | cache_rden)         ? '1                                    :
+src/cache_subsystem/serpent_icache.sv:376:    assign vld_wdata = (cache_wren) ? '1 : '0;
+src/cache_subsystem/serpent_icache.sv:378:    assign vld_we    = (cache_wren | inv_en | flush_en);
+src/cache_subsystem/serpent_icache.sv:379:    // assign vld_req   = (vld_we | cache_rden);
+src/cache_subsystem/serpent_icache.sv:384:    assign repl_way      = (all_ways_valid) ? rnd_way : inv_way;
+src/cache_subsystem/serpent_icache.sv:385:    assign repl_way_oh_d = (cmp_en_q) ? icache_way_bin2oh(repl_way) : repl_way_oh_q;
+src/cache_subsystem/serpent_icache.sv:388:    assign cl_req   = (cache_rden) ? '1            :
+src/cache_subsystem/serpent_icache.sv:436:    assign dreq_o.data = ( cmp_en_q ) ? cl_sel[hit_idx] :
+src/cache_subsystem/cache_ctrl.sv:85:    assign busy_o = (state_q != IDLE);
+src/cache_subsystem/cache_ctrl.sv:145:                        state_d = (req_port_i.data_we) ? WAIT_REFILL_GNT : WAIT_TAG_BYPASSED;
+src/cache_subsystem/cache_ctrl.sv:147:                        req_port_o.data_gnt = (req_port_i.data_we) ? 1'b0 : 1'b1;
+src/cache_subsystem/cache_ctrl.sv:169:                tag_o = (state_q == WAIT_TAG_SAVED || mem_req_q.we) ? mem_req_q.tag
+src/cache_subsystem/serpent_cache_subsystem.sv:195:assign ifill = (l15_req.l15_rqtype==serpent_cache_pkg::L15_IMISS_RQ);
+src/cache_subsystem/serpent_cache_subsystem.sv:205:assign rd_pending_d = (axi_rd_valid ) ? '0 : rd_pending_q | axi_rd_gnt;
+src/cache_subsystem/serpent_cache_subsystem.sv:210:assign axi_rd_size = (ifill) ? 2'b11 : l15_req.l15_size[1:0];// always request 64bit words in case of ifill
+src/cache_subsystem/serpent_cache_subsystem.sv:213:assign axi_rd_blen = (l15_req.l15_size[2]) ? ((ifill) ? ariane_pkg::ICACHE_LINE_WIDTH/64-1  :
+src/cache_subsystem/serpent_cache_subsystem.sv:218:assign axi_wr_be   = (axi_wr_req) ? serpent_cache_pkg::toByteEnable8(axi_wr_addr[2:0], axi_wr_size) : '0;
+src/cache_subsystem/serpent_cache_subsystem.sv:239:  id_tmp                     = (axi_rd_valid) ? axi_rd_id_out : axi_wr_id_out;
+src/cache_subsystem/serpent_cache_subsystem.sv:240:  l15_rtrn.l15_returntype    = (axi_rd_valid && id_tmp[1]) ? L15_IFILL_RET :
+src/cache_subsystem/std_icache.sv:163:    assign axi_req_o.ar.len    = (2**NR_AXI_REFILLS) - 1;
+src/cache_subsystem/std_icache.sv:178:    assign addr = (state_q==FLUSH) ? cnt_q : vaddr_d[ICACHE_INDEX_WIDTH-1:ICACHE_BYTE_OFFSET];
+src/cache_subsystem/std_icache.sv:329:                    state_d = (dreq_i.kill_s2 || (state_q == WAIT_KILLED_REFILL)) ? WAIT_KILLED_AXI_R_RESP : WAIT_AXI_R_RESP;
+src/cache_subsystem/std_icache.sv:352:                    state_d = (dreq_i.kill_s2) ? IDLE : REDO_REQ;
+src/cache_subsystem/serpent_dcache_mem.sv:128:    assign vld_addr   = (wr_cl_vld_i) ? wr_cl_idx_i   : rd_idx_i[vld_sel_d];
+src/cache_subsystem/serpent_dcache_mem.sv:130:    assign bank_off_d = (wr_cl_vld_i) ? wr_cl_off_i   : rd_off_i[vld_sel_d];
+src/cache_subsystem/serpent_dcache_mem.sv:131:    assign bank_idx_d = (wr_cl_vld_i) ? wr_cl_idx_i   : rd_idx_i[vld_sel_d];
+src/cache_subsystem/serpent_dcache_mem.sv:132:    assign vld_req    = (wr_cl_vld_i) ? wr_cl_we_i    : (rd_acked) ? '1 : '0;  
+src/cache_subsystem/serpent_dcache_mem.sv:199:    assign wbuffer_cmp_addr = (wr_cl_vld_i) ? {wr_cl_tag_i, wr_cl_idx_i, wr_cl_off_i} : 
+src/cache_subsystem/serpent_dcache_mem.sv:235:    assign wr_cl_off     = (wr_cl_nc_i)     ? '0 : wr_cl_off_i[DCACHE_OFFSET_WIDTH-1:3];
+src/cache_subsystem/serpent_dcache_mem.sv:236:    assign rdata         = (wr_cl_vld_i)    ? wr_cl_data_i[wr_cl_off*64 +: 64] :
+src/cache_subsystem/tag_cmp.sv:76:            id_d     = (1'b1 << i);
+src/cache_subsystem/std_cache_subsystem.sv:174:    assign w_select_arbiter = (w_fifo_empty) ? 0 : w_select_fifo;
+src/cache_subsystem/serpent_dcache_wbuffer.sv:139:assign addr_is_nc = (req_port_i.address_tag <  (CachedAddrBeg>>DCACHE_INDEX_WIDTH)) ||
+src/cache_subsystem/serpent_dcache_ctrl.sv:72:    assign vld_data_d    = (rd_req_q)            ? rd_vld_bits_i                                                      : vld_data_q;
+src/cache_subsystem/serpent_dcache_ctrl.sv:73:    assign address_tag_d = (save_tag)            ? req_port_i.address_tag                                             : address_tag_q;
+src/cache_subsystem/serpent_dcache_ctrl.sv:74:    assign address_idx_d = (req_port_o.data_gnt) ? req_port_i.address_index[DCACHE_INDEX_WIDTH-1:DCACHE_OFFSET_WIDTH] : address_idx_q;
+src/cache_subsystem/serpent_dcache_ctrl.sv:75:    assign address_off_d = (req_port_o.data_gnt) ? req_port_i.address_index[DCACHE_OFFSET_WIDTH-1:0]                  : address_off_q;
+src/cache_subsystem/serpent_dcache_ctrl.sv:76:    assign data_size_d   = (req_port_o.data_gnt) ? req_port_i.data_size                                               : data_size_q;
+src/cache_subsystem/serpent_dcache_ctrl.sv:86:    assign miss_size_o           = (miss_nc_o) ? data_size_q : 3'b111;
+src/cache_subsystem/serpent_dcache_ctrl.sv:88:    assign miss_nc_o = (address_tag_q <  (CachedAddrBeg>>DCACHE_INDEX_WIDTH)) || 
+src/cache_subsystem/serpent_dcache_ctrl.sv:142:                    save_tag = (state_q!=REPLAY_READ);
+src/cache_subsystem/miss_handler.sv:324:                    state_d = (state_q == WB_CACHELINE_MISS) ? MISS : FLUSH_REQ_STATUS;
+src/branch_unit.sv:39:        jump_base = (fu_data_i.operator == JALR) ? fu_data_i.operand_a : pc_i;
+src/branch_unit.sv:67:        resolved_branch_o.pc = (is_compressed_instr_i || pc_i[1] == 1'b0) ? pc_i : ({pc_i[63:2], 2'b0} + 64'h4);
+src/branch_unit.sv:71:            resolved_branch_o.target_address = (branch_comp_res_i) ? target_address : next_pc;
+src/ex_stage.sv:130:    assign alu_data = (alu_valid_i | branch_valid_i) ? fu_data_i  : '0;
+src/fpu_div_sqrt_mvp/hdl/norm_div_sqrt_mvp.sv:450:  assign Mant_res_round_D = (Mant_renorm_S)?Mant_upperRounded_D[C_MANT_FP64:1]:Mant_upperRounded_D[C_MANT_FP64-1:0]; // including the process of the hidden bit
+src/fpu_div_sqrt_mvp/hdl/norm_div_sqrt_mvp.sv:481:assign In_Exact_S = (~Full_precision_SI) | Mant_rounded_S;
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:139:   assign FP32_SO = (Format_sel_S==2'b00);
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:140:   assign FP64_SO = (Format_sel_S==2'b01);
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:141:   assign FP16_SO = (Format_sel_S==2'b10);
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:142:   assign FP16ALT_SO = (Format_sel_S==2'b11);
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:166:  assign Full_precision_SO = (Precision_ctl_S==6'h00);
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:578:   assign     Final_state_S= (Crtl_cnt_S==State_ctl_S);
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:2256:  assign First_iteration_cell_div_a_D=(Div_start_dly_S)?{Numerator_se_D[C_MANT_FP64+1:C_MANT_FP64-C_MANT_FP16ALT],{FP16ALT_SO?FP16ALT_SO:Numerator_se_D[C_MANT_FP64-C_MANT_FP16ALT-1]},
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:2264:  assign Sel_b_for_first_S=(Div_start_dly_S)?1:Quotient_DP[0];
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:3389://For division, exponent=(Exp_a_D-LZ1)-(Exp_b_D-LZ2)+BIAS
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:3390://For square root, exponent=(Exp_a_D-LZ1)/2+(Exp_a_D-LZ1)%2+C_HALF_BIAS
+src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:3396:  assign Exp_result_prenorm_DN  = (Start_dly_S)?{Exp_add_a_D + Exp_add_b_D + Exp_add_c_D}:Exp_result_prenorm_DP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:162:   assign Mant_a_prenorm_SNaN_S=(~Mant_a_NonH_D[C_MANT_FP64-1])&&((|Mant_a_NonH_D[C_MANT_FP64-2:0]));
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:164:   assign Mant_b_prenorm_SNaN_S=(~Mant_b_NonH_D[C_MANT_FP64-1])&&((|Mant_b_NonH_D[C_MANT_FP64-2:0]));
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:171:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP32-1:0] == C_MANT_ZERO_FP32);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:172:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP32-1:0] == C_MANT_ZERO_FP32);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:173:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP32-2:C_MANT_FP32] == C_EXP_INF_FP32);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:174:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP32-2:C_MANT_FP32] == C_EXP_INF_FP32);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:178:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP64-1:0] == C_MANT_ZERO_FP64);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:179:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP64-1:0] == C_MANT_ZERO_FP64);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:180:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP64-2:C_MANT_FP64] == C_EXP_INF_FP64);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:181:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP64-2:C_MANT_FP64] == C_EXP_INF_FP64);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:185:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP16-1:0] == C_MANT_ZERO_FP16);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:186:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP16-1:0] == C_MANT_ZERO_FP16);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:187:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP16-2:C_MANT_FP16] == C_EXP_INF_FP16);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:188:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP16-2:C_MANT_FP16] == C_EXP_INF_FP16);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:192:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP16ALT-1:0] == C_MANT_ZERO_FP16ALT);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:193:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP16ALT-1:0] == C_MANT_ZERO_FP16ALT);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:194:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP16ALT-2:C_MANT_FP16ALT] == C_EXP_INF_FP16ALT);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:195:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP16ALT-2:C_MANT_FP16ALT] == C_EXP_INF_FP16ALT);
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:211:   assign Zero_a_SN = (Start_S&&Ready_SI)?(Exp_a_prenorm_zero_S&&Mant_a_prenorm_zero_S):Zero_a_SP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:212:   assign Zero_b_SN = (Start_S&&Ready_SI)?(Exp_b_prenorm_zero_S&&Mant_b_prenorm_zero_S):Zero_b_SP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:213:   assign Inf_a_SN = (Start_S&&Ready_SI)?(Exp_a_prenorm_Inf_NaN_S&&Mant_a_prenorm_zero_S):Inf_a_SP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:214:   assign Inf_b_SN = (Start_S&&Ready_SI)?(Exp_b_prenorm_Inf_NaN_S&&Mant_b_prenorm_zero_S):Inf_b_SP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:215:   assign NaN_a_SN = (Start_S&&Ready_SI)?(Exp_a_prenorm_Inf_NaN_S&&(~Mant_a_prenorm_zero_S)):NaN_a_SP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:216:   assign NaN_b_SN = (Start_S&&Ready_SI)?(Exp_b_prenorm_Inf_NaN_S&&(~Mant_b_prenorm_zero_S)):NaN_b_SP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:217:   assign SNaN_SN = (Start_S&&Ready_SI) ? ((Mant_a_prenorm_SNaN_S&&NaN_a_SN) | (Mant_b_prenorm_SNaN_S&&NaN_b_SN)) : SNaN_SP;
+src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:247:   assign Special_case_SBO=(~{(Div_start_SI)?(Zero_a_SN | Zero_b_SN |  Inf_a_SN | Inf_b_SN | NaN_a_SN | NaN_b_SN): (Zero_a_SN | Inf_a_SN | NaN_a_SN | Sign_a_D) })&&(Start_S&&Ready_SI);
+src/util/instruction_trace_item.svh:49:        this.priv_lvl = (debug_mode) ? "D" : getPrivLevel(priv_lvl);
+src/axi/test/synth_bench.sv:25:    localparam DW = (2**i) * 8;
+src/axi/test/tb_axi_lite_xbar.sv:46:  localparam int SLAVE_SHIFT = (AW-$clog2(NUM_SLAVE));
+src/axi/src/axi_arbiter.sv:51:      count_q <= (count_d == NUM_REQ ? '0 : count_d);
+src/axi/src/axi_arbiter.sv:86:  localparam logic [ID_WIDTH:0] ID_MASK = (1 << ID_WIDTH) - 1;
+src/tlb.sv:193:                new_index =  (i >> (shift-1)) & 32'b1;
+src/fpu/doc/doxyfile:862:# *.ext= (so without naming a filter).
+src/fpu/src/fpnew.vhd:406:      RoundRobin_SP <= (others => '0');
+src/fpu/src/subunits/divsqrt_multifmt_slice.vhd:268:      Result_D <= (others => '0') when LaneZext_S(0) = '1' else
+src/fpu/src/subunits/noncomp_fmt_slice.vhd:221:      LaneResult_D <= (others => '0') when LaneZext_S(0) = '1' else
+src/fpu/src/subunits/divsqrt_block.vhd:269:    FmtOutReady_S <= (others => '-');
+src/fpu/src/subunits/divsqrt_block.vhd:307:      RoundRobin_SP <= (others => '0');
+src/fpu/src/subunits/noncomp_block.vhd:256:    FmtOutReady_S <= (others => '-');
+src/fpu/src/subunits/noncomp_block.vhd:294:      RoundRobin_SP <= (others => '0');
+src/fpu/src/subunits/conv_block.vhd:395:    FmtOutReady_S <= (others => '-');
+src/fpu/src/subunits/conv_block.vhd:433:      RoundRobin_SP <= (others => '0');
+src/fpu/src/subunits/addmul_fmt_slice.vhd:212:      LaneResult_D      <= (others => '1');
+src/fpu/src/subunits/conv_fmt_slice.vhd:146:  IsCPKOp_S        <= (Op_SI = CPKAB or Op_SI = CPKCD);
+src/fpu/src/subunits/addmul_block.vhd:255:    FmtOutReady_S <= (others => '-');
+src/fpu/src/subunits/addmul_block.vhd:294:      RoundRobin_SP <= (others => '0');
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:166:  InputInf_S      <= (InputExp_D = signed("0" & MAXEXP(SRCENCODING))) and InputMantZero_S;
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:169:  InputZero_S     <= (InputExp_D = 0) and InputMantZero_S;
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:178:    InputMant_D <= (others => '0');
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:201:  SpecialStatus_D <= (NV => to_sl(InputNan_S and SigNan_S),
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:279:      MantPreshift_D  <= (others => '1');
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:284:      FinalExp_D     <= (others => '0');
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:313:    PreRndRes_D <= (others => '1');
+src/fpu/src/ops/fp_f2fcasts_fmt.vhd:358:  RegularStatus_D <= (NV  => '0',
+src/fpu/src/ops/fp_i2fcasts_fmt.vhd:220:  InternalExp_D <= (INTWIDTH - 1) - signed(resize(InputLeadingZeroes_S, EXPWIDTH));
+src/fpu/src/ops/fp_i2fcasts_fmt.vhd:250:      MantPreshift_D  <= (others => '1');
+src/fpu/src/ops/fp_i2fcasts_fmt.vhd:275:    PreRndRes_D <= (others => '1');
+src/fpu/src/ops/fp_i2fcasts_fmt.vhd:322:  RegularStatus_D <= (NX     => or_reduce(RoundSticky_S),
+src/fpu/src/ops/fp_i2fcasts_fmt.vhd:331:  Result_D <= (others => '0') when InputZero_S else
+src/fpu/src/ops/fp_i2fcasts_fmt.vhd:334:  Status_D <= (others => '0') when InputZero_S else
+src/fpu/src/ops/fp_f2icasts_fmt.vhd:185:  InputInf_S      <= (InputExp_D = signed("0" & MAXEXP(SRCENCODING.ExpBits))) and InputMantZero_S;
+src/fpu/src/ops/fp_f2icasts_fmt.vhd:187:  InputZero_S     <= (InputExp_D = 0) and InputMantZero_S;
+src/fpu/src/ops/fp_f2icasts_fmt.vhd:196:    InputMant_D <= (others => '0');
+src/fpu/src/ops/fp_f2icasts_fmt.vhd:220:  SpecialStatus_D <= (NV     => '1',
+src/fpu/src/ops/fp_f2icasts_fmt.vhd:336:  RegularStatus_D <= (NX => or_reduce(RoundSticky_S), others => '0');
+src/fpu/src/ops/fp_noncomp.vhd:178:  INFEXP  <= (others => '1');
+src/fpu/src/ops/fp_noncomp.vhd:179:  INFMANT <= (others => '0');
+src/fpu/src/ops/fp_noncomp.vhd:195:  IsNaNA_S <= (unsigned(ExpA_DI) = MAXEXP and unsigned(MantA_DI) /= 0) or ABox_SI = '0';
+src/fpu/src/ops/fp_noncomp.vhd:196:  IsNaNB_S <= (unsigned(ExpB_DI) = MAXEXP and unsigned(MantB_DI) /= 0) or BBox_SI = '0';
+src/fpu/src/ops/fp_noncomp.vhd:210:  SignalingNaNA_S <= (IsNaNA_S and ABox_SI = '1' and MantA_DI(QUIETBIT) = '0');
+src/fpu/src/ops/fp_noncomp.vhd:279:    ScalarClassRes_D             <= (others => '0');
+src/fpu/src/ops/fp_noncomp.vhd:282:    VecClassRes_D             <= (others => '0');
+src/fpu/src/ops/fp_noncomp.vhd:349:  OperandsEqual_S   <= (signed(A_DI) = signed(B_DI)) or (IsZeroA_S and IsZeroB_S);
+src/fpu/src/ops/fp_noncomp.vhd:350:  OperandASmaller_S <= (signed(A_DI) < signed(B_DI)) xor (SignA_DI and SignB_DI) = '1';
+src/fpu/src/ops/fma_core.vhd:209:    if (ExpDiff_S <= (-2*PREC_BITS + 1)) then
+src/fpu/src/ops/fma_core.vhd:211:    elsif (ExpDiff_S <= (PREC_BITS + 2)) then
+src/fpu/src/ops/fma_core.vhd:214:      AddShamt_S <= (others  => '0');
+src/fpu/src/ops/fma_core.vhd:236:        ExpSum_D   <= (others => '0');
+src/fpu/src/ops/fma_core.vhd:338:        ExpFinal_D <= (others => '0');
+src/fpu/src/ops/fp_f2fcasts.vhd:282:  SpecialStatus_D <= (NV     => to_sl(InputNan_S(SrcFmt_S) and SigNan_S(SrcFmt_S)),
+src/fpu/src/ops/fp_f2fcasts.vhd:337:      MantPreshift_D  <= (others => '1');
+src/fpu/src/ops/fp_f2fcasts.vhd:342:      FinalExp_D     <= (others => '0');
+src/fpu/src/ops/fp_f2fcasts.vhd:405:  RegularStatus_D <= (NV  => '0',
+src/fpu/src/ops/fp_fma.vhd:212:  INFEXP    <= (others => '1');
+src/fpu/src/ops/fp_fma.vhd:213:  INFMANT   <= (others => '0');
+src/fpu/src/ops/fp_fma.vhd:214:  DENORMEXP <= (others => '0');
+src/fpu/src/ops/fp_fma.vhd:254:      C_D <= (not SignC_DI) & AbsC_DI;
+src/fpu/src/ops/fp_fma.vhd:266:        A_D <= (not SignA_DI) & AbsA_DI;
+src/fpu/src/ops/fp_fma.vhd:282:        A_D <= (others => '-');
+src/fpu/src/ops/fp_fma.vhd:283:        B_D <= (others => '-');
+src/fpu/src/ops/fp_fma.vhd:284:        C_D <= (others => '-');
+src/fpu/src/ops/fp_fma.vhd:311:  IsNaNA_S <= (unsigned(ExpA_D) = MAXEXP and unsigned(MantA_D) /= 0) or ABox_S = '0';
+src/fpu/src/ops/fp_fma.vhd:312:  IsNaNB_S <= (unsigned(ExpB_D) = MAXEXP and unsigned(MantB_D) /= 0) or BBox_S = '0';
+src/fpu/src/ops/fp_fma.vhd:313:  IsNaNC_S <= (unsigned(ExpC_D) = MAXEXP and unsigned(MantC_D) /= 0) or CBox_S = '0';
+src/fpu/src/ops/fp_fma.vhd:328:  SignalingNaN_S <= (IsNaNA_S and ABox_S = '1' and MantA_D(QUIETBIT) = '0')
+src/fpu/src/ops/fp_fma.vhd:333:  EffSub_S <= (SignA_D xor SignB_D) /= SignC_D;  -- 3-way xor to boolean
+src/fpu/src/ops/fp_fma.vhd:350:    SpecialFlags_D <= (others => '0');
+src/fpu/src/ops/fp_fma.vhd:488:  StatusFlags_D <= (NV  => '0',         -- We only handle valid cases here
+src/fpu/src/ops/fp_i2fcasts.vhd:258:  InternalExp_D <= (INTWIDTH - 1) - signed(resize(InputLeadingZeroes_S, EXPWIDTH));
+src/fpu/src/ops/fp_i2fcasts.vhd:288:      MantPreshift_D  <= (others => '1');
+src/fpu/src/ops/fp_i2fcasts.vhd:345:  RegularStatus_D <= (NX     => or_reduce(RoundSticky_S),
+src/fpu/src/ops/fp_i2fcasts.vhd:354:  Result_D <= (others => '0') when InputZero_S else
+src/fpu/src/ops/fp_i2fcasts.vhd:357:  Status_D <= (others => '0') when InputZero_S else
+src/fpu/src/ops/fp_divsqrt_multi.vhd:281:      CurrentTag_DP <= (others => '0');
+src/fpu/src/ops/fp_divsqrt_multi.vhd:284:      HoldResult_DP <= (others => '0');
+src/fpu/src/ops/fp_divsqrt_multi.vhd:285:      HoldStatus_DP <= (others => '0');
+src/fpu/src/ops/fp_f2icasts.vhd:291:  SpecialStatus_D <= (NV     => '1',
+src/fpu/src/ops/fp_f2icasts.vhd:368:  RegularStatus_D <= (NX => or_reduce(RoundSticky_S), others => '0');
+src/fpu/src/utils/fp_arbiter.vhd:217:    LeftOutIdx_S <= (others => '0');
+src/fpu/src/utils/fp_arbiter.vhd:224:    LeftOutResult_D <= (others => '-');  -- don't care
+src/fpu/src/utils/fp_arbiter.vhd:225:    LeftOutStatus_D <= (others => '-');  -- don't care
+src/fpu/src/utils/fp_arbiter.vhd:226:    LeftOutTag_D    <= (others => '-');  -- don't care
+src/fpu/src/utils/fp_arbiter.vhd:227:    LeftOutIdx_S    <= (others => '-');  -- don't care
+src/fpu/src/utils/fp_arbiter.vhd:281:    RightOutIdx_S <= (others => '0');
+src/fpu/src/utils/fp_arbiter.vhd:288:    RightOutResult_D <= (others => '-');  -- don't care
+src/fpu/src/utils/fp_arbiter.vhd:289:    RightOutStatus_D <= (others => '-');  -- don't care
+src/fpu/src/utils/fp_arbiter.vhd:290:    RightOutTag_D    <= (others => '-');  -- don't care
+src/fpu/src/utils/fp_arbiter.vhd:291:    RightOutIdx_S    <= (others => '-');  -- don't care
+src/load_unit.sv:305:    assign idx_d     = (load_data_d.operator inside {LW, FLW}) ? load_data_d.address_offset + 3 :
+tb/tb_serdiv/hdl/tb.sv:273:        ok = (res==act);
+tb/common/core_mem.sv:38:    assign data_if_data_rdata_o = (data_address_q >= DRAM_BASE) ? data_ram : data_rom;
+tb/common/uart.sv:27:  localparam time BIT_PERIOD = (1000000000 / BAUD_RATE) * 1ns;
+tb/common/SimJTAG.sv:37:   assign tickCounterNxt = (tickCounterReg == 0) ? TICK_DELAY :  (tickCounterReg - 1);
+tb/tb_serpent_dcache/hdl/tb_writeport.sv:143:      val = (val + 8) % (MemWords<<3);
+tb/tb_serpent_dcache/hdl/tb_writeport.sv:169:      val = (val + 8) % (1*(DCACHE_LINE_WIDTH/64)*8);
+tb/tb_serpent_dcache/hdl/tb_readport.sv:214:      val = (val + 8) % (MemWords<<3);
+tb/tb_serpent_dcache/hdl/tb_readport.sv:236:      val = (val + 8) % (1*(DCACHE_LINE_WIDTH/64)*8);
+tb/tb_serpent_dcache/hdl/tb_readport.sv:345:        ok=(dut_req_port_i.data_rdata ==? exp_rdata) && (exp_paddr_i == act_paddr_i);
+tb/tb_serpent_dcache/hdl/tb_mem.sv:309:                ok = (mem_array_q[k] == mem_array_shadow_q[k]) && !(|mem_array_dirty_q[k]);
+tb/dpi/elfloader.cc:73:    char* buf = (char*)mmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);
+tb/dpi/elfloader.cc:78:    const Elf64_Ehdr* eh64 = (const Elf64_Ehdr*)buf;
+tb/dpi/elfloader.cc:87:    ehdr_t* eh = (ehdr_t*)buf; \
+tb/dpi/elfloader.cc:88:    phdr_t* ph = (phdr_t*)(buf + eh->e_phoff); \
+tb/dpi/elfloader.cc:101:    shdr_t* sh = (shdr_t*)(buf + eh->e_shoff); \
+tb/dpi/elfloader.cc:119:      sym_t* sym = (sym_t*)(buf + sh[symtabidx].sh_offset); \
+tb/tb_serpent_icache/hdl/tb.sv:149:        dreq_i.kill_s1 = (val < S1KillRate);
+tb/tb_serpent_icache/hdl/tb.sv:151:        dreq_i.kill_s2 = (val < S2KillRate);
+tb/tb_serpent_icache/hdl/tb.sv:153:        flush_i = (val < FlushRate);
+tb/tb_serpent_icache/hdl/tb.sv:187:      addr = (addr + 4) % (MemBytes - TlbOffset);
+tb/tb_serpent_icache/hdl/tb.sv:266:  assign exp_pop    = (dreq_o.valid | dreq_i.kill_s2) & (~exp_empty);
+tb/tb_serpent_icache/hdl/tb.sv:391:        ok=(dreq_o.data == exp_data[FETCH_WIDTH-1:0]) && (dreq_o.vaddr == exp_vaddr);
+tb/tb_serpent_icache/hdl/mem_emul.sv:250:  assign exp_data_o  = (inv_rand_en_i) ? mem_array_shadow[(stim_addr>>2) + (tlb_offset_i>>2)] :
+tb/ariane_tb.cpp:108:  unsigned random_seed = (unsigned)time(NULL) ^ (unsigned)getpid();
+tb/ariane_tb.cpp:242:  htif_argv = (char **) malloc((htif_argc) * sizeof (char *));
+tb/ariane_testharness.sv:112:    assign debug_req_valid     = (jtag_enable[0]) ? jtag_req_valid     : dmi_req_valid;
+tb/ariane_testharness.sv:113:    assign debug_resp_ready    = (jtag_enable[0]) ? jtag_resp_ready    : dmi_resp_ready;
+tb/ariane_testharness.sv:114:    assign debug_req           = (jtag_enable[0]) ? jtag_dmi_req       : dmi_req;
+tb/ariane_testharness.sv:115:    assign exit_o              = (jtag_enable[0]) ? jtag_exit          : dmi_exit;
+tb/ariane_testharness.sv:116:    assign jtag_resp_valid     = (jtag_enable[0]) ? debug_resp_valid   : 1'b0;
+tb/ariane_testharness.sv:117:    assign dmi_resp_valid      = (jtag_enable[0]) ? 1'b0               : debug_resp_valid;

@@ -1,0 +1,109 @@
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_swl.v:719://   assign proc0 = (const_cpuid == 4'b0000) ? 1'b1 : 1'b0;
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_dec.v:1110:   assign privop_d = (op3_hi[3] & (op3_lo[14] | // done/retr
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fcl.v:2134:   assign priv_mode_f = (thr_f[0] | tlu_lsu_pstate_priv[0] |
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fcl.v:2147:   assign hpriv_mode_f = (thr_f[0] & tlu_hpstate_priv[0] |
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fcl.v:2152:   assign hpriv_mode_w = (thr_w[0] & tlu_hpstate_priv[0] |
+piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_fcl.v:2218:   assign nir_priv_s1 = (nir_privvec[0] & thr_s1[0] |
+piton/design/chip/tile/sparc/tlu/rtl/tlu_tcl.v:1301:// assign	tlu_rdpr_mx4_sel[1] = (ttype_rw_e & ttype_written) | pstate_rw_e | tl_rw_e | pil_rw_e;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_tcl.v:1346:assign	local_rdpr_mx5_sel[3] = (pcr_rsr_e | pic_rsr_e) & ~rst_tri_en;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_tcl.v:2825:// assign dside_higher_priority = (dside_sync_ttype_g[8:0] > exu_ttype_g[8:0]);
+piton/design/chip/tile/sparc/tlu/rtl/tlu_tcl.v:4281:assign	tick_npriv_r_d = (~sraddr2[4] & ~sraddr2[3] &  sraddr2[2] & ~sraddr2[1] & ~sraddr2[0] |
+piton/design/chip/tile/sparc/tlu/rtl/tlu_pib.v:264:assign pib_priv_act_trap = (pic_npriv_rw_g ) & 
+piton/design/chip/tile/sparc/tlu/rtl/tlu_mmu_ctl.v:1642://assign	pre_dtlb_dmp_by_ctxt = (ddemap_by_ctxt | dtlb_dmp_by_ctxt_pend) & ~tlu_admp_key_sel  ;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_mmu_ctl.v:1643:assign	pre_dtlb_dmp_all = (ddemap_all | dtlb_dmp_all_pend) & ~tlu_admp_key_sel ;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_mmu_ctl.v:1644:assign	pre_dtlb_dmp_pctxt = (dtlb_dmp_pctxt_pend) & ~tlu_admp_key_sel ;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_mmu_ctl.v:1645:assign	pre_dtlb_dmp_sctxt = (dtlb_dmp_sctxt_pend) & ~tlu_admp_key_sel ;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_mmu_ctl.v:1646:assign	pre_dtlb_dmp_nctxt = (dtlb_dmp_nctxt_pend) & ~tlu_admp_key_sel ;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_mmu_ctl.v:1940:assign pre_itlb_wr_vld_g = (itlb_wr_pend & ~itlb_done_d1) & tlb_write_mode ;
+piton/design/chip/tile/sparc/tlu/rtl/tlu_mmu_ctl.v:1960:assign pre_dtlb_wr_vld_g = (dtlb_wr_pend & ~dtlb_done_d1) & tlb_write_mode ;
+piton/design/chip/tile/sparc/rtl/sparc_core.v:112:// assign ctu_tst_pre_grst_l = (reset_delay > 8'd60) ? 1'b1 : 1'b0;
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:563:wire mamul_a_rd_oprnd_sel = (spu_mamul_rd_aj | spu_mamul_rd_ai) & ~spu_mactl_expop;
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:566:wire mamul_ax_rd_oprnd_sel = (spu_mamul_rd_aj | spu_mamul_rd_ai) & spu_mactl_expop;
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:572:assign spu_mamul_b_rd_oprnd_sel = (spu_mamul_rd_biminusj | 
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:580:assign spu_mamul_ba_rd_oprnd_sel = (spu_mamul_rd_biminusj | 
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:593://wire mamul_n_rd_oprnd_sel = (spu_mamul_rd_niminusj & ~spu_mamul_rd_aj & ~spu_mamul_rd_mj) | spu_mamul_rd_n0;
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:598:wire mamul_m_wr_oprnd_sel = (spu_mamul_wr_mi | spu_mamul_wr_miminuslenminus1) & 
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:602:wire mamul_me_wr_oprnd_sel = (spu_mamul_wr_mi | spu_mamul_wr_miminuslenminus1) & 
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:608:wire mamul_m_wr_oprnd2_wen = (spu_mamul_wr_mi_oprnd2_wenbyp | 
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:611:wire mamul_me_wr_oprnd2_wen = (spu_mamul_wr_mi_oprnd2_wenbyp | 
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:711:assign spu_mamul_oprnd1_mxsel[0] = (select_mamul & (~cur_nprime_state & ~spu_mamul_memrd4op1_q)) |
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:713:assign spu_mamul_oprnd1_mxsel[1] = (select_mamul & (~cur_nprime_state & spu_mamul_memrd4op1_q)) |
+piton/design/chip/tile/sparc/spu/rtl/spu_mamul.v:715://assign spu_mamul_oprnd1_mxsel[2] = (select_mamul & cur_nprime_state) | (~select_mamul & spu_maaeqb_oprnd1_mxsel[2]);
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:603:assign spu_maaeqb_a_rd_oprnd_sel = (spu_maaeqb_rd_aj | spu_maaeqb_rd_ai | 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:605:assign spu_maaeqb_ax_rd_oprnd_sel = (spu_maaeqb_rd_aj | spu_maaeqb_rd_ai | 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:613:assign spu_maaeqb_n_rd_oprnd_sel = (spu_maaeqb_rd_niminusj & ~spu_maaeqb_rd_mj) | 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:619:assign spu_maaeqb_m_wr_oprnd_sel = (spu_maaeqb_wr_mi | spu_maaeqb_wr_miminuslenminus1) &
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:621:assign spu_maaeqb_me_wr_oprnd_sel = (spu_maaeqb_wr_mi | spu_maaeqb_wr_miminuslenminus1) &
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:626:wire spu_maaeqb_m_wr_oprnd2_wen = (spu_maaeqb_wr_mi_oprnd2_wenbyp | 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:629:wire spu_maaeqb_me_wr_oprnd2_wen = (spu_maaeqb_wr_mi_oprnd2_wenbyp | 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaeqb.v:672:wire oprnd2_sel = (spu_maaeqb_rd_aj | spu_maaeqb_rd_ai |
+piton/design/chip/tile/sparc/spu/rtl/spu_wen.v:244:wire spu_wen_mast_ack_prequal = (lsu_spu_st_ack_tid_q[1:0] == 2'b00) & lsu_spu_st_asop_q &
+piton/design/chip/tile/sparc/spu/rtl/spu_wen.v:250:wire spu_wen_mald_ack_prequal = (lsu_spu_ld_ack_tid_q[1:0] == 2'b00) & lsu_spu_ld_asop_q &
+piton/design/chip/tile/sparc/spu/rtl/spu_mactl.v:674:wire delayed_allow_stxa_ack_pre = (stxa_2ctl_reg & stb_isempty & waiting_4stb_empty_set) |
+piton/design/chip/tile/sparc/spu/rtl/spu_mactl.v:1045:wire spu_lsu_stxa_ack_g2_prequal = ( spu_mactl_stxa_2ctl_reg & ~spu_mactl_disable_stxa_ack_g2) |
+piton/design/chip/tile/sparc/spu/rtl/spu_mactl.v:1152:assign spu_mactl_masync_ldxa_sel_pre = (~masync_pulse_q & spu_mactl_masync_ldxa_set) |
+piton/design/chip/tile/sparc/spu/rtl/spu_mared.v:576:wire sel_cout_frm_prev_stage = (~spu_maaddr_jptr_eqz & m_gt_n_q) & ~start_op;
+piton/design/chip/tile/sparc/spu/rtl/spu_maaddr.v:803:wire i_equ_twolenplus2_pre = (i_ptr_add[6:0] == twolenplus2[6:0]); 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaddr.v:804:wire i_equ_twolenplus1_pre = (i_ptr_add[6:0] == twolenplus1[6:0]); 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaddr.v:806:wire i_equ_twolen_pre = (i_ptr_add[6:0] == twolen[6:0]); 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaddr.v:807:wire i_equ_zero_pre = (i_ptr[6:0] == 7'b0000000); 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaddr.v:812://wire j_equ_iminus1_pre = (j_ptr_data[6:0] == i_ptr[6:0]); 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaddr.v:813:wire j_equ_len_pre = (j_ptr_data[6:0] == {1'b0,len[5:0]}); 
+piton/design/chip/tile/sparc/spu/rtl/spu_maaddr.v:987:wire spu_maaddr_len_eqmax_pre = (j_ptr_data[6:0] == maxlen[6:0]);
+piton/design/chip/tile/sparc/lsu/rtl/lsu_excpctl.v:496:   assign priv_pg_usr_mode_m = (ld_inst_vld_m | st_inst_vld_m) & ~(pstate_priv_m | hpv_priv_m);
+piton/design/chip/tile/sparc/lsu/rtl/lsu_excpctl.v:545:   assign as_if_usr_priv_pg_m = (ld_inst_vld_m | st_inst_vld_m) & as_if_user_asi_m & lsu_alt_space_m;
+piton/design/chip/tile/sparc/lsu/rtl/lsu_excpctl.v:747:/*assign  priv_action = (ld_inst_vld_unflushed | st_inst_vld_unflushed) & ~lsu_asi_state[7] & 
+piton/design/chip/tile/sparc/lsu/rtl/lsu_excpctl.v:752:assign  priv_action_m = (ld_inst_vld_m | st_inst_vld_m) & 
+piton/design/chip/tile/sparc/lsu/rtl/lsu_excpctl.v:757:/*assign  priv_action_m = (ld_inst_vld_m | st_inst_vld_m) & ~lsu_excpctl_asi_state_m[7] & 
+piton/design/chip/tile/sparc/lsu/rtl/lsu_excpctl.v:1052:assign  lsu_tlu_priv_violtn_g = (priv_pg_usr_mode | as_if_usr_priv_pg) & tlb_tte_vld_g ; 
+piton/design/chip/tile/sparc/lsu/rtl/lsu_dctl.v.pyv:4479:/*assign  priv_action = (ld_inst_vld_unflushed | st_inst_vld_unflushed) & ~lsu_asi_state[7] & 
+piton/design/chip/tile/sparc/lsu/rtl/lsu_dctl.v.pyv:4482://SC assign  priv_action_m = (ld_inst_vld_m | st_inst_vld_m) & ~lsu_dctl_asi_state_m[7] & 
+piton/design/chip/tile/sparc/lsu/rtl/lsu_dctl.v.pyv:6330:assign  bendian_pred_m = (ld_inst_vld_m | st_inst_vld_m) ?
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:369:            predecode_source_s1 = (noc2decoder_l15_val) ? `L15_PREDECODE_SOURCE_NOC2 :
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:530:                        predecode_address_s1 = (fetch_state_s1 == `L15_FETCH_STATE_ICACHE_INVAL_2) ? predecode_address_plus2_s1 :
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:536:                        predecode_address_s1 = (fetch_state_s1 == `L15_FETCH_STATE_INVAL_2) ? predecode_address_plus1_s1 :
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:551:                        predecode_address_s1 = (fetch_state_s1 == `L15_FETCH_STATE_ICACHE_INVAL_2) ? predecode_address_plus2_s1 :
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:558:                        predecode_address_s1 = (fetch_state_s1 == `L15_FETCH_STATE_INVAL_2) ? predecode_address_plus1_s1 :
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:573:                        predecode_address_s1 = (fetch_state_s1 == `L15_FETCH_STATE_ICACHE_INVAL_2) ? predecode_address_plus2_s1 :
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:579:                        predecode_address_s1 = (fetch_state_s1 == `L15_FETCH_STATE_INVAL_2) ? predecode_address_plus1_s1 :
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:820:    predecode_val_s1 = (predecode_source_s1 != `L15_PREDECODE_SOURCE_INVALID);
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:829:    // predecode_int_vec_dis_s1 = (pcxdecoder_l15_address == `L15_INT_VEC_DIS); // 40b compare
+piton/design/chip/tile/l15/rtl/l15_pipeline.v.pyv:830:    predecode_int_vec_dis_s1 = (pcxdecoder_l15_address[39:32] == constant_int_vec_dis_address[39:32] 
+piton/design/chip/tile/ariane/src/frontend/frontend.sv:127:    assign bht_prediction_shifted[0] = (serving_unaligned) ? bht_q : bht_prediction[0];
+piton/design/chip/tile/ariane/src/frontend/frontend.sv:128:    assign btb_prediction_shifted[0] = (serving_unaligned) ? btb_q : btb_prediction[0];
+piton/design/chip/tile/ariane/src/csr_regfile.sv:714:                trap_to_priv_lvl = (priv_lvl_o == riscv::PRIV_LVL_M) ? riscv::PRIV_LVL_M : riscv::PRIV_LVL_S;
+piton/design/chip/tile/ariane/src/csr_regfile.sv:846:        ld_st_priv_lvl_o = (mprv) ? mstatus_q.mpp : priv_lvl_o;
+piton/design/chip/tile/ariane/src/csr_regfile.sv:1067:    assign priv_lvl_o       = (debug_mode_q) ? riscv::PRIV_LVL_M : priv_lvl_q;
+piton/design/chip/tile/ariane/src/csr_regfile.sv:1093:    assign mprv             = (debug_mode_q && !dcsr_q.mprven) ? 1'b0 : mstatus_q.mprv;
+piton/design/chip/tile/ariane/src/util/instr_trace_item.svh:58:        this.priv_lvl = (debug_mode) ? "D" : getPrivLevel(priv_lvl);
+piton/design/chip/tile/ariane/src/fpu/src/fpnew_fma.sv:284:  assign exponent_product = (info_a.is_zero || info_b.is_zero)
+piton/design/chip/tile/ariane/src/fpu/src/fpnew_fma.sv:578:  assign pre_round_exponent = (of_before_round) ? 2**EXP_BITS-2 : unsigned'(final_exponent[EXP_BITS-1:0]);
+piton/design/chip/tile/ariane/src/fpu/src/fpnew_fma.sv:579:  assign pre_round_mantissa = (of_before_round) ? '1 : final_mantissa[MAN_BITS:1]; // bit 0 is R bit
+piton/design/chip/tile/ariane/src/fpu/src/fpnew_fma_multi.sv:365:  assign exponent_product = (info_a.is_zero || info_b.is_zero) // in case the product is zero, set minimum exp.
+piton/design/chip/tile/ariane/src/fpu/src/fpnew_fma_multi.sv:677:      assign pre_round_exponent = (of_before_round) ? 2**EXP_BITS-2 : final_exponent[EXP_BITS-1:0];
+piton/design/chip/tile/ariane/src/fpu/src/fpnew_fma_multi.sv:678:      assign pre_round_mantissa = (of_before_round) ? '1 : final_mantissa[SUPER_MAN_BITS-:MAN_BITS];
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:166:  assign Full_precision_SO = (Precision_ctl_S==6'h00);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:3396:  assign Exp_result_prenorm_DN  = (Start_dly_S)?{Exp_add_a_D + Exp_add_b_D + Exp_add_c_D}:Exp_result_prenorm_DP;
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:162:   assign Mant_a_prenorm_SNaN_S=(~Mant_a_NonH_D[C_MANT_FP64-1])&&((|Mant_a_NonH_D[C_MANT_FP64-2:0]));
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:164:   assign Mant_b_prenorm_SNaN_S=(~Mant_b_NonH_D[C_MANT_FP64-1])&&((|Mant_b_NonH_D[C_MANT_FP64-2:0]));
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:171:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP32-1:0] == C_MANT_ZERO_FP32);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:172:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP32-1:0] == C_MANT_ZERO_FP32);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:173:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP32-2:C_MANT_FP32] == C_EXP_INF_FP32);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:174:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP32-2:C_MANT_FP32] == C_EXP_INF_FP32);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:178:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP64-1:0] == C_MANT_ZERO_FP64);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:179:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP64-1:0] == C_MANT_ZERO_FP64);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:180:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP64-2:C_MANT_FP64] == C_EXP_INF_FP64);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:181:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP64-2:C_MANT_FP64] == C_EXP_INF_FP64);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:185:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP16-1:0] == C_MANT_ZERO_FP16);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:186:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP16-1:0] == C_MANT_ZERO_FP16);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:187:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP16-2:C_MANT_FP16] == C_EXP_INF_FP16);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:188:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP16-2:C_MANT_FP16] == C_EXP_INF_FP16);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:192:               Mant_a_prenorm_zero_S=(Operand_a_DI[C_MANT_FP16ALT-1:0] == C_MANT_ZERO_FP16ALT);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:193:               Mant_b_prenorm_zero_S=(Operand_b_DI[C_MANT_FP16ALT-1:0] == C_MANT_ZERO_FP16ALT);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:194:               Exp_a_prenorm_Inf_NaN_S=(Operand_a_DI[C_OP_FP16ALT-2:C_MANT_FP16ALT] == C_EXP_INF_FP16ALT);
+piton/design/chip/tile/ariane/src/fpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv:195:               Exp_b_prenorm_Inf_NaN_S=(Operand_b_DI[C_OP_FP16ALT-2:C_MANT_FP16ALT] == C_EXP_INF_FP16ALT);
+piton/verif/env/manycore/tlu_mon.v:1642:  wire [3:0] curr_priv_st = ( tlu_hpstate_enb[3:0] & (~tlu_hpstate_priv[3:0]) & tlu_pstate_priv[3:0])
+pk/pk/elf.c:19:  int prot_x = (p_flags & PF_X) ? PROT_EXEC  : PROT_NONE;
+pk/pk/elf.c:20:  int prot_w = (p_flags & PF_W) ? PROT_WRITE : PROT_NONE;
+pk/pk/elf.c:21:  int prot_r = (p_flags & PF_R) ? PROT_READ  : PROT_NONE;
+pk/machine/fdt.c:421:  plic_priorities = (uint32_t*)(uintptr_t)scan->reg;
