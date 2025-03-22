@@ -13,7 +13,10 @@ regex that identifies a signal being assigned using an or to select the value. T
 regex fufills this need
 
 modified
-[~a-zA-Z0-9_\-\.]+ (=|<=) *[(] *[~a-zA-Z0-9_\-\.]+ *(\||\|\|)* *[(]* *[~a-zA-Z0-9_\-\.]*
+[~a-zA-Z0-9_\-\.]+ *(=|<=) *[(] *[~a-zA-Z0-9_\-\.]+ *(\||\|\|)* *[(]* *[~a-zA-Z0-9_\-\.]*
+
+modified constrained
+[a-zA-Z0-9_\-\.\[\]]*(pr|pri|priv)[a-zA-Z0-9_\-\.\[\]]* *(=|<=) *[(] *[~a-zA-Z0-9_\-\.]+ *(\||\|\|)* *[(]* *[~a-zA-Z0-9_\-\.]*
 
 simple 
 [a-zA-Z0-9_\-\.\[\]]+ *(<=|=).*([a-zA-Z0-9_\-\.\[\]]+ *([|]|[|][|])* *[a-zA-Z0-9_\-\.\[\]]+.*[?])+
@@ -45,9 +48,9 @@ Modified
 Hack@DAC 2018 SoC: 711 and 20 occurances
 Hack@DAC 2019 SoC: 500 and 26 occurances
 Hack@DAC 2021 SoC: 3001 and 109 occurances
-PicoRV32:          0 occurances
-Hummingbirdv2:     1 occurances
-UltraembeddedOld:  0 occurances
+PicoRV32:          91 and 0 occurances
+Hummingbirdv2:     591 and 16 occurances
+UltraembeddedOld:  215 occurances
 UltraembeddedNew:  0 occurances
 
 ----------------------------------- insertion information ------------------------------------
@@ -64,13 +67,14 @@ hackdac18
 2. Type 3, dc_token_ring_fifo_din.sv, 39, hackdac18
 
 picorv32
-1. Type 4,
+1. Type 3, picorv32.v, 380, picorv32
 
 hummingbird
 1. Type 4, spi_master_apb_if.v, 181-181, hummingbirdv2   
+2. Typ3 3, e203_exu_csr.v, 304, hummingbirdv2
 
 ultraembedded(old)
-1. Type 3,
+1. Type 2, riscv_mmu.v, 205, ultraemebedded(old)
 
 ultraembedded(new)
 1. Type 4, 

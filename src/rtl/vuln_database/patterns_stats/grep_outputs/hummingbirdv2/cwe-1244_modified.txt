@@ -1,0 +1,593 @@
+fpga/mcu200t/src/system.v:348:  assign dut_io_pads_aon_pmu_dwakeup_n_i_ival = (~iobuf_dwakeup_o);
+fpga/ddr200t/src/system.v:348:  assign dut_io_pads_aon_pmu_dwakeup_n_i_ival = (~iobuf_dwakeup_o);
+riscv-tools/riscv-tests/isa/rv64uf/lockstep.S:45:# wire sel_lstepctrl  = (csr_idx == 12'hBE0);// This address is not used by ISA
+riscv-tools/riscv-tests/isa/rv64uf/lockstep.S:46:# wire sel_lstepforc  = (csr_idx == 12'hBE1);// This address is not used by ISA
+riscv-tools/riscv-tests/isa/rv64uf/lockstep.S:47:# wire sel_lstepfdly  = (csr_idx == 12'hBE2);// This address is not used by ISA
+riscv-tools/riscv-tests/isa/rv64uf/lockstep.S:48:# wire sel_lstepecnt  = (csr_idx == 12'hBE3);// This address is not used by ISA
+riscv-tools/riscv-tests/benchmarks/mm/mm.c:80:  t* a1 = (t*)alloca_aligned(sizeof(t)*mb*pb, 8192);
+riscv-tools/riscv-tests/benchmarks/mm/mm.c:81:  t* b1 = (t*)alloca_aligned(sizeof(t)*pb*nb, 8192);
+riscv-tools/riscv-tests/benchmarks/mm/mm.c:82:  t* c1 = (t*)alloca_aligned(sizeof(t)*mb*nb, 8192);
+riscv-tools/riscv-tests/benchmarks/mm/gen.scala:17:    val result = (if (s != "") spacing + s else "") + spacing + "{\n"
+riscv-tools/riscv-tests/benchmarks/dhrystone/dhrystone.h:408:#define Start_Timer() times(&time_info); Begin_Time=(long)time_info.tms_utime
+riscv-tools/riscv-tests/benchmarks/dhrystone/dhrystone.h:409:#define Stop_Timer()  times(&time_info); End_Time = (long)time_info.tms_utime
+riscv-tools/riscv-tests/benchmarks/dhrystone/dhrystone_main.c:76:  Next_Ptr_Glob = (Rec_Pointer) alloca (sizeof (Rec_Type));
+riscv-tools/riscv-tests/benchmarks/dhrystone/dhrystone_main.c:77:  Ptr_Glob = (Rec_Pointer) alloca (sizeof (Rec_Type));
+riscv-tools/riscv-tests/benchmarks/dhrystone/dhrystone_main.c:233:  Dhrystones_Per_Second = (HZ * Number_Of_Runs) / User_Time;
+riscv-tools/riscv-tests/benchmarks/common/util.h:66:  uint64_t bit = (x ^ (x >> 1)) & 1;
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:27:  tohost = (uintptr_t)magic_mem;
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:58:  tohost = (code << 1) | 1;
+riscv-tools/riscv-tests/benchmarks/common/syscalls.c:368:    char** pstr = (char**)data;
+riscv-tools/riscv-tests/benchmarks/qsort/qsort_main.c:36:#define SWAP(a,b) do { typeof(a) temp=(a);(a)=(b);(b)=temp; } while (0)
+riscv-tools/riscv-tests/benchmarks/fpu-perf/fpu-perf.c:99:      dp_mac_sum = (sp_Arr[fp_loop_cnt] * dp_Arr[fp_loop_cnt]) + dp_mac_sum;
+riscv-tools/riscv-tests/benchmarks/fpu-perf/fpu-perf.c:100:      sp_mac_sum = (sp_Arr[fp_loop_cnt] * sp_Arr[fp_loop_cnt]) + sp_mac_sum;
+riscv-tools/riscv-tests/benchmarks/fpu-perf/fpu-perf.c:134:  long_sum = (long) sum;
+riscv-tools/riscv-tests/benchmarks/fpu-perf/fpu-perf.h:408:#define Start_Timer() times(&time_info); Begin_Time=(long)time_info.tms_utime
+riscv-tools/riscv-tests/benchmarks/fpu-perf/fpu-perf.h:409:#define Stop_Timer()  times(&time_info); End_Time = (long)time_info.tms_utime
+riscv-tools/riscv-tests/debug/gdbserver.py:492:            sequence = (4, 8, 0xc, 0xe, 0x14, 0x18, 0x22, 0x1c, 0x24, 0x24)
+riscv-tools/riscv-tests/debug/gdbserver.py:494:            sequence = (4, 8, 0xc, 0x10, 0x18, 0x1c, 0x28, 0x20, 0x2c, 0x2c)
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:162:	      *nextfree = (fle)((size_t)block + real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:181:	      block = __malloc_end = (void *)((size_t)block - moresize);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:185:	      __malloc_end = (void *)((size_t)block + real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:201:      __malloc_end = (void *)((size_t)__malloc_end + real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:205:      block = __malloc_end = (void *)((size_t)__malloc_end - real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:220:  fle block = (fle)((size_t) block_p - offsetof (struct freelist_entry, next));
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:279:  fle block = (fle)((size_t) block_p - offsetof (struct freelist_entry, next));
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:305:      fle newblock = (fle)((size_t)block + real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:376:	      block = __malloc_end = (void *)((size_t)__malloc_end - old_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:385:	      __malloc_end = (void *)((size_t)__malloc_end + old_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:414:	      block = __malloc_end = (void *)((size_t)block - moresize);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:423:	      __malloc_end = (void *)((size_t)block + before_size + real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:440:	      block = (fle)((size_t)block + before_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:454:		  new_block = (fle)((size_t)block + real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:482:		  *nextfree = (fle)((size_t)block + real_size);
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:536:	    atend = (void *)((size_t)fr + fr->size) == __malloc_end;
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:538:	    atend = (void *)fr == __malloc_end;
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:545:    total_size = (char *)__malloc_end - (char *)&__malloc_start;
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:547:    total_size = (char *)&__malloc_start - (char *)__malloc_end;
+riscv-tools/riscv-tests/debug/programs/tiny-malloc.c:588:  fle block = (fle)((size_t) block_p - offsetof (struct freelist_entry, next));
+riscv-tools/riscv-tests/debug/programs/checksum.c:10:   x = (x << 24) | ((x & 0xFF00) << 8) |
+riscv-tools/riscv-tests/debug/programs/checksum.c:31:              crc = (crc << 1) ^ 0x04C11DB7;
+riscv-tools/riscv-tests/mt/bc_matmul.c:28:  size_t start = coreid * (LDA / NCORES), end = (coreid == NCORES - 1 ? LDA : (coreid + 1) * (LDA / NCORES));
+riscv-tools/riscv-tests/mt/br_matmul.c:22:  int endInd = (coreid+1)*(lda/ncores);
+riscv-tools/riscv-tests/mt/du_matmul.c:17:    row2=(l+1)*32;
+riscv-tools/riscv-tests/mt/du_matmul.c:28:      column2=(i+1)*32;
+riscv-tools/riscv-tests/mt/du_matmul.c:29:      column3=(i+2)*32;
+riscv-tools/riscv-tests/mt/du_matmul.c:30:      column4=(i+3)*32;
+riscv-tools/riscv-tests/mt/cy_matmul.c:22:      jToRow = (j>>5)<<5;
+riscv-tools/riscv-tests/mt/cy_matmul.c:68:      jToRow = (j>>5)<<5;
+riscv-tools/riscv-tests/mt/ck_matmul.c:19:    for ( ii = start; ii !=start || first; ii=(bsize+ii) % lda) {
+riscv-tools/riscv-tests/mt/dc_matmul.c:28:  size_t start = coreid * (LDA / NCORES), end = (coreid == NCORES - 1 ? LDA : (coreid + 1) * (LDA / NCORES));
+riscv-tools/riscv-tests/mt/dc_matmul.c:36:      int kk_start= (coreid == 0 ? 0 : LDA/2) ,kk_end = (coreid == 0 ? LDA/2 : LDA);
+riscv-tools/riscv-tests/mt/dc_matmul.c:75:	/* kk_start= (coreid == 1 ? 0 : LDA/2); */
+riscv-tools/riscv-tests/mt/dc_matmul.c:76:	/* kk_end = (coreid == 1 ? LDA/2 : LDA); */
+riscv-tools/riscv-tests/mt/dc_matmul.c:119:      int kk_start= (coreid != 0 ? 0 : LDA/2), kk_end = (coreid != 0 ? LDA/2 : LDA);
+riscv-tools/riscv-tests/mt/am_matmul.c:17:    row2=(l+1)*32;
+riscv-tools/riscv-tests/mt/am_matmul.c:28:      column2=(i+1)*32;
+riscv-tools/riscv-tests/mt/am_matmul.c:29:      column3=(i+2)*32;
+riscv-tools/riscv-tests/mt/am_matmul.c:30:      column4=(i+3)*32;
+riscv-tools/riscv-tests/mt/do_matmul.c:12:    int j_end = (coreid+1)*(32/ncores);
+riscv-tools/riscv-tests/mt/dr_matmul.c:22:  int endInd = (coreid+1)*(lda/ncores);
+riscv-tools/riscv-tests/mt/az_matmul.c:21:      jToRow = (j>>5)<<5;
+riscv-tools/riscv-tests/mt/ad_matmul.c:10:   int jend = (coreid+1)*(lda/ncores);
+riscv-tools/riscv-tests/mt/bs_matmul.c:11:                a1=(j+1*ncores)*lda;
+riscv-tools/riscv-tests/mt/bs_matmul.c:12:                a2=(j+2*ncores)*lda;
+riscv-tools/riscv-tests/mt/bs_matmul.c:13:                a3=(j+3*ncores)*lda;
+riscv-tools/riscv-tests/mt/vvadd0.c:11:  for (i = (n - leftover) + coreid; i < n; i += ncores) {
+riscv-tools/riscv-tests/mt/af_matmul.c:18:    row2=(l+1)*32;
+riscv-tools/riscv-tests/mt/af_matmul.c:33:      column2=(i+1)*local_lda;
+riscv-tools/riscv-tests/mt/af_matmul.c:34:      column3=(i+2)*local_lda;
+riscv-tools/riscv-tests/mt/af_matmul.c:35:      column4=(i+3)*local_lda;
+riscv-tools/riscv-tests/mt/vvadd3.c:10:  size_t c = (count + 7) / 8;
+riscv-tools/riscv-tests/mt/cf_matmul.c:18:	row2 = (i+1)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:25:	  column2 = (j+1)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:26:	  column3 = (j+2)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:27:	  column4 = (j+3)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:57:	row = (31-i)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:58:	row2 = (31-i-1)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:69:	  column2 = (j+1)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:70:	  column3 = (j+2)*32;
+riscv-tools/riscv-tests/mt/cf_matmul.c:71:	  column4 = (j+3)*32;
+riscv-tools/riscv-tests/mt/cm_matmul.c:17:	row2 = (i+1)*lda;
+riscv-tools/riscv-tests/mt/cm_matmul.c:24:	  column2 = (j+1)*32;
+riscv-tools/riscv-tests/mt/cm_matmul.c:25:	  column3 = (j+2)*32;
+riscv-tools/riscv-tests/mt/cm_matmul.c:26:	  column4 = (j+3)*32;
+riscv-tools/riscv-tests/mt/cm_matmul.c:55:	row = (31-i)*lda;
+riscv-tools/riscv-tests/mt/cm_matmul.c:56:	row2 = (31-i-1)*lda;
+riscv-tools/riscv-tests/mt/cm_matmul.c:67:	  column2 = (j+1)*32;
+riscv-tools/riscv-tests/mt/cm_matmul.c:68:	  column3 = (j+2)*32;
+riscv-tools/riscv-tests/mt/cm_matmul.c:69:	  column4 = (j+3)*32;
+riscv-tools/riscv-tests/mt/ds_matmul.c:11:                a1=(j+1)*lda;
+riscv-tools/riscv-tests/mt/ds_matmul.c:12:                a2=(j+2)*lda;
+riscv-tools/riscv-tests/mt/ds_matmul.c:13:                a3=(j+3)*lda;
+riscv-tools/riscv-tests/mt/ds_matmul.c:17:                        b1 = (k+1)*lda;
+riscv-tools/riscv-tests/mt/ce_matmul.c:51:		end = (x+1) * (32 / ncores);
+riscv-tools/riscv-tests/mt/an_matmul.c:16:    j = (coreid)*limit;
+riscv-tools/riscv-tests/mt/an_matmul.c:17:    end = (coreid+1)*limit;
+riscv-tools/riscv-tests/mt/ay_matmul.c:20:    jToRow = (j>>5)<<5;
+riscv-tools/riscv-tests/env/v/string.c:72:    n -= (const void*)u1 - s1;
+riscv-tools/riscv-tests/env/v/vm.c:29:  uint64_t bit = (x ^ (x >> 1)) & 1;
+riscv-tools/riscv-tests/env/v/vm.c:145:  uintptr_t new_pte = (node->addr >> PGSHIFT << PTE_PPN_SHIFT) | PTE_V | PTE_U | PTE_R | PTE_W | PTE_X;
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:96:  Next_Ptr_Glob = (Rec_Pointer) malloc (sizeof (Rec_Type));
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:97:  Ptr_Glob = (Rec_Pointer) malloc (sizeof (Rec_Type));
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:144:  Begin_Time = (long) time_info.tms_utime;
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:205:  End_Time = (long) time_info.tms_utime;
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:280:    Microseconds = (float) User_Time * Mic_secs_Per_Second 
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:282:    Dhrystones_Per_Second = (float) Number_Of_Runs / (float) User_Time;
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:284:    Microseconds = (float) User_Time * Mic_secs_Per_Second 
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:298:    //DMIPS_MHZ = (Dhrystones_Per_Second/8.388)/1757;
+riscv-tools/fpga_test4sim/dhrystone4sim/dhry_1.c:299:    DMIPS_MHZ = (1000000/((float)User_Cycle/(float)Number_Of_Runs))/1757;
+riscv-tools/fpga_test4sim/coremark4sim/core_matrix.c:86:	MATDAT val=(MATDAT)seed;
+riscv-tools/fpga_test4sim/coremark4sim/core_matrix.c:179:	A=(MATDAT *)align_mem(memblk);
+riscv-tools/fpga_test4sim/coremark4sim/core_matrix.c:185:			val = (seed + order);
+riscv-tools/fpga_test4sim/coremark4sim/core_matrix.c:188:			val =  (val + order);
+riscv-tools/fpga_test4sim/coremark4sim/core_matrix.c:197:	p->C=(MATRES *)align_mem(B+N*N);
+riscv-tools/fpga_test4sim/coremark4sim/core_matrix.c:303:				MATRES tmp=(MATRES)A[i*N+k] * (MATRES)B[k*N+j];
+riscv-tools/fpga_test4sim/coremark4sim/core_util.c:148:		x16 = (ee_u8)((data & 1) ^ ((ee_u8)crc & 1));
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:66:	ee_u8 optype=(data>>7) & 1; /* bit 7 indicates if the function result has been cached */
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:92:		*pdata = (data & 0xff00) | 0x0080 | retval; /* cache the result */
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:114:		a->data16 = (a->data16 & 0xff00) | (0x00ff & (a->data16>>8));
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:115:		b->data16 = (b->data16 & 0xff00) | (0x00ff & (b->data16>>8));
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:145:		info.data16= (i & 0xff) ;
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:216:	ee_u32 size=(blksize/per_item)-2; /* to accomodate systems with 64b pointers, and make sure same code is executed, set max list elements */
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:218:	list_data *datablock=(list_data *)(memblock_end);
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:229:	list->info->data16=(ee_s16)0x8080;
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:233:	info.data16=(ee_s16)0xffff;
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:239:		ee_u16 dat=(datpat<<3) | (i&0x7); /* alternate between algorithms */
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:240:		info.data16=(dat<<8) | dat;		/* fill the data with actual data and upper bits with rebuild value */
+riscv-tools/fpga_test4sim/coremark4sim/core_list_join.c:250:			ee_u16 pat=(ee_u16)(i++ ^ seed); /* get a pseudo random number */
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:41:	core_results *res=(core_results *)pres;
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:212:		divisor=(ee_u32)secs_passed;
+riscv-tools/fpga_test4sim/coremark4sim/core_main.c:357:    float coremark_dmips = (results[0].iterations*1000000)/(float)total_time;
+rtl/e203/fab/sirv_icb1to8_bus.v:315:  localparam BASE_REGION_MSB = (AW-1);
+rtl/e203/fab/sirv_icb1to8_bus.v:580:  wire icb_cmd_deft = (~icb_cmd_o0)
+rtl/e203/fab/sirv_icb1to16_bus.v:490:  localparam BASE_REGION_MSB = (AW-1);
+rtl/e203/fab/sirv_icb1to16_bus.v:915:  wire icb_cmd_deft = (~icb_cmd_o0)
+rtl/e203/fab/sirv_icb1to2_bus.v:177:  localparam BASE_REGION_MSB = (AW-1);
+rtl/e203/subsys/e203_subsys_nice_core.v:97://   wire opcode_custom0 = (opcode == 7'b0001011); 
+rtl/e203/subsys/e203_subsys_nice_core.v:98://   wire opcode_custom1 = (opcode == 7'b0101011); 
+rtl/e203/subsys/e203_subsys_nice_core.v:99://   wire opcode_custom2 = (opcode == 7'b1011011); 
+rtl/e203/subsys/e203_subsys_nice_core.v:100:   wire opcode_custom3 = (opcode == 7'b1111011); 
+rtl/e203/subsys/e203_subsys_nice_core.v:102:   wire rv32_func3_000 = (rv32_func3 == 3'b000); 
+rtl/e203/subsys/e203_subsys_nice_core.v:103:   wire rv32_func3_001 = (rv32_func3 == 3'b001); 
+rtl/e203/subsys/e203_subsys_nice_core.v:104:   wire rv32_func3_010 = (rv32_func3 == 3'b010); 
+rtl/e203/subsys/e203_subsys_nice_core.v:105:   wire rv32_func3_011 = (rv32_func3 == 3'b011); 
+rtl/e203/subsys/e203_subsys_nice_core.v:106:   wire rv32_func3_100 = (rv32_func3 == 3'b100); 
+rtl/e203/subsys/e203_subsys_nice_core.v:107:   wire rv32_func3_101 = (rv32_func3 == 3'b101); 
+rtl/e203/subsys/e203_subsys_nice_core.v:108:   wire rv32_func3_110 = (rv32_func3 == 3'b110); 
+rtl/e203/subsys/e203_subsys_nice_core.v:109:   wire rv32_func3_111 = (rv32_func3 == 3'b111); 
+rtl/e203/subsys/e203_subsys_nice_core.v:111:   wire rv32_func7_0000000 = (rv32_func7 == 7'b0000000); 
+rtl/e203/subsys/e203_subsys_nice_core.v:112:   wire rv32_func7_0000001 = (rv32_func7 == 7'b0000001); 
+rtl/e203/subsys/e203_subsys_nice_core.v:113:   wire rv32_func7_0000010 = (rv32_func7 == 7'b0000010); 
+rtl/e203/subsys/e203_subsys_nice_core.v:114:   wire rv32_func7_0000011 = (rv32_func7 == 7'b0000011); 
+rtl/e203/subsys/e203_subsys_nice_core.v:115:   wire rv32_func7_0000100 = (rv32_func7 == 7'b0000100); 
+rtl/e203/subsys/e203_subsys_nice_core.v:116:   wire rv32_func7_0000101 = (rv32_func7 == 7'b0000101); 
+rtl/e203/subsys/e203_subsys_nice_core.v:117:   wire rv32_func7_0000110 = (rv32_func7 == 7'b0000110); 
+rtl/e203/subsys/e203_subsys_nice_core.v:118:   wire rv32_func7_0000111 = (rv32_func7 == 7'b0000111); 
+rtl/e203/subsys/e203_subsys_nice_core.v:172:   wire state_is_idle     = (state_r == IDLE); 
+rtl/e203/subsys/e203_subsys_nice_core.v:173:   wire state_is_lbuf     = (state_r == LBUF); 
+rtl/e203/subsys/e203_subsys_nice_core.v:174:   wire state_is_sbuf     = (state_r == SBUF); 
+rtl/e203/subsys/e203_subsys_nice_core.v:175:   wire state_is_rowsum   = (state_r == ROWSUM); 
+rtl/e203/subsys/e203_subsys_nice_core.v:225:   assign lbuf_cnt_last = (lbuf_cnt_r == clonum);
+rtl/e203/subsys/e203_subsys_nice_core.v:239:   assign nice_icb_cmd_valid_lbuf = (state_is_lbuf & (lbuf_cnt_r < clonum));
+rtl/e203/subsys/e203_subsys_nice_core.v:254:   assign sbuf_icb_cmd_hsked = (state_is_sbuf | (state_is_idle & custom3_sbuf)) & nice_icb_cmd_hsked;
+rtl/e203/subsys/e203_subsys_nice_core.v:257:   assign sbuf_cnt_last = (sbuf_cnt_r == clonum);
+rtl/e203/subsys/e203_subsys_nice_core.v:278:   assign sbuf_cmd_cnt_last = (sbuf_cmd_cnt_r == clonum);
+rtl/e203/subsys/e203_subsys_nice_core.v:288:   assign nice_icb_cmd_valid_sbuf = (state_is_sbuf & (sbuf_cmd_cnt_r <= clonum) & (sbuf_cnt_r != clonum));
+rtl/e203/subsys/e203_subsys_nice_core.v:305:   assign rowbuf_cnt_last = (rowbuf_cnt_r == clonum);
+rtl/e203/subsys/e203_subsys_nice_core.v:312:   //assign nice_icb_cmd_valid_rowbuf =   (state_is_idle & custom3_rowsum)
+rtl/e203/subsys/e203_subsys_nice_core.v:417:   wire lbuf_maddr_ena    =   (state_is_idle & custom3_lbuf & nice_icb_cmd_hsked)
+rtl/e203/subsys/e203_subsys_nice_core.v:423:   wire sbuf_maddr_ena    =   (state_is_idle & custom3_sbuf & nice_icb_cmd_hsked)
+rtl/e203/subsys/e203_subsys_nice_core.v:429:   wire rowsum_maddr_ena  =   (state_is_idle & custom3_rowsum & nice_icb_cmd_hsked)
+rtl/e203/subsys/e203_subsys_nice_core.v:461:   //assign nice_rsp_err_irq  =   (nice_icb_rsp_hsked & nice_icb_rsp_err)
+rtl/e203/subsys/e203_subsys_nice_core.v:464:   assign nice_rsp_err   =   (nice_icb_rsp_hsked & nice_icb_rsp_err);
+rtl/e203/subsys/e203_subsys_nice_core.v:479:   assign nice_icb_cmd_valid =   (state_is_idle & nice_req_valid & custom_mem_op)
+rtl/e203/subsys/e203_subsys_nice_core.v:484:   assign nice_icb_cmd_addr  = (state_is_idle & custom_mem_op) ? nice_req_rs1 :
+rtl/e203/subsys/e203_subsys_nice_core.v:486:   assign nice_icb_cmd_read  = (state_is_idle & custom_mem_op) ? (custom3_lbuf | custom3_rowsum) : 
+rtl/e203/subsys/e203_subsys_nice_core.v:489:   assign nice_icb_cmd_wdata = (state_is_idle & custom3_sbuf) ? rowbuf_r[sbuf_idx] :
+rtl/e203/subsys/e203_subsys_gfcm.v:79:  assign clk0_sync_in = (~clk1_sync_r[SYNC_LEVEL-1]) & clk0_sel; 
+rtl/e203/subsys/e203_subsys_gfcm.v:80:  assign clk1_sync_in = (~clk0_sync_r[SYNC_LEVEL-1]) & clk1_sel; 
+rtl/e203/subsys/e203_subsys_pllclkdiv.v:41:  wire div_cnt_sat = (div_cnt_r == div);
+rtl/e203/subsys/e203_subsys_pllclkdiv.v:43:  wire div_cnt_ena = (~divby1);
+rtl/e203/perips/apb_spi_master/spi_master_tx.v:47:    assign sdo0 = (en_quad_in ? data_int[28] : data_int[31]);
+rtl/e203/perips/apb_spi_master/spi_master_tx.v:57:            counter_trgt_next = (en_quad_in ? {2'b00, counter_in[15:2]} : counter_in);
+rtl/e203/perips/apb_spi_master/spi_master_tx.v:62:    assign done = (counter == (counter_trgt - 1)) && tx_edge;
+rtl/e203/perips/apb_spi_master/spi_master_tx.v:86:                    data_int_next = (en_quad_in ? {data_int[27:0], 4'b0000} : {data_int[30:0], 1'b0});
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:43:    assign full = (elements == BUFFER_DEPTH);
+rtl/e203/perips/apb_spi_master/spi_master_fifo.v:116:    assign valid_o = (elements != 0);
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:113:    assign en_quad = (spi_qrd | spi_qwr) | en_quad_int;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:225:                        s_spi_mode       = (spi_qrd | spi_qwr) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:233:                    	s_spi_mode       = (spi_qrd | spi_qwr) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:242:                            s_spi_mode = (spi_qrd) ? `SPI_QUAD_RX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:245:                                counter_tx       = (en_quad) ? {spi_dummy_rd[13:0], 2'b00} : spi_dummy_rd;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:257:                            s_spi_mode = (spi_qwr) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:260:                                counter_tx       = (en_quad) ? {spi_dummy_wr[13:0], 2'b00} : spi_dummy_wr;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:283:                s_spi_mode    = (en_quad) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:287:                        s_spi_mode       = (en_quad) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:296:                            s_spi_mode = (en_quad) ? `SPI_QUAD_RX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:298:                                counter_tx       = (en_quad) ? {spi_dummy_rd[13:0], 2'b00} : spi_dummy_rd;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:310:                            s_spi_mode = (en_quad) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:312:                                counter_tx       = (en_quad) ? {spi_dummy_wr[13:0], 2'b00} : spi_dummy_wr;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:339:                s_spi_mode    = (en_quad) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:343:                            s_spi_mode = (en_quad) ? `SPI_QUAD_RX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:345:                                counter_tx       = (en_quad) ? {spi_dummy_rd[13:0], 2'b00} : spi_dummy_rd;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:357:                            s_spi_mode = (en_quad) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:361:                                counter_tx       = (en_quad) ? {spi_dummy_wr[13:0], 2'b00} : spi_dummy_wr;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:389:                s_spi_mode    = (en_quad) ? `SPI_QUAD_RX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:401:                            s_spi_mode       = (en_quad) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:423:                s_spi_mode      = (en_quad) ? `SPI_QUAD_TX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:437:                s_spi_mode    = (en_quad) ? `SPI_QUAD_RX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_controller.v:450:                s_spi_mode     = (en_quad) ? `SPI_QUAD_RX : `SPI_STD;
+rtl/e203/perips/apb_spi_master/spi_master_rx.v:54:            counter_trgt_next = (en_quad_in ? {2'b00, counter_in[15:2]} : counter_in);
+rtl/e203/perips/apb_spi_master/spi_master_rx.v:59:    assign done = (counter == (counter_trgt - 1)) && rx_edge;
+rtl/e203/perips/apb_gpio/apb_gpio.v:82:    assign s_is_int_rise = (r_gpio_inttype1 & ~r_gpio_inttype0) & s_gpio_rise;    // inttype 01 rise
+rtl/e203/perips/apb_gpio/apb_gpio.v:83:    assign s_is_int_fall = (r_gpio_inttype1 & r_gpio_inttype0) & s_gpio_fall;     // inttype 00 fall
+rtl/e203/perips/apb_gpio/apb_gpio.v:84:    assign s_is_int_lev0 = (~r_gpio_inttype1 & r_gpio_inttype0) & ~r_gpio_in;     // inttype 10 level 0
+rtl/e203/perips/apb_gpio/apb_gpio.v:85:    assign s_is_int_lev1 = (~r_gpio_inttype1 & ~r_gpio_inttype0) & r_gpio_in;     // inttype 11 level 1
+rtl/e203/perips/sirv_plic_man.v:378:     assign irq_prio_top_lt = (irq_prio_lvl_1[0] < irq_prio_lvl_1[1]); 
+rtl/e203/perips/sirv_plic_man.v:428:       assign icb_cmd_sel_thod = (icb_cmd_addr ==  (24'h20_0000)); 
+rtl/e203/perips/sirv_plic_man.v:429:       assign icb_cmd_sel_clam = (icb_cmd_addr ==  (24'h20_0004)); 
+rtl/e203/perips/apb_adv_timer/up_down_counter.v:60:    assign counter_end_o = (ctrl_active_i & r_event) & s_is_update;
+rtl/e203/perips/apb_adv_timer/input_stage.v:86:                    s_int_evnt = (s_rise ? 1'b1 : r_event);
+rtl/e203/perips/apb_adv_timer/input_stage.v:93:                    s_int_evnt = (s_fall ? 1'b1 : r_event);
+rtl/e203/perips/apb_uart/io_generic_fifo.v:40:    assign full       = (elements == BUFFER_DEPTH);
+rtl/e203/perips/apb_uart/io_generic_fifo.v:110:    assign valid_o = (elements != 0);
+rtl/e203/perips/apb_uart/uart_tx.v:54:    assign busy_o = (CS != IDLE);
+rtl/e203/perips/apb_uart/uart_rx.v:61:    assign busy_o = (CS != IDLE);
+rtl/e203/perips/sirv_aon_wrapper.v:360:  assign jtagpwd_deglitch_io_d = (~io_pads_jtagpwd_n_i_ival);
+rtl/e203/perips/sirv_aon_wrapper.v:363:  assign bootrom_deglitch_io_d = (~io_pads_bootrom_n_i_ival);
+rtl/e203/perips/apb_i2c/i2c_master_byte_ctrl.v:161:	assign go = (read | write | stop) & ~cmd_ack;
+rtl/e203/perips/apb_i2c/i2c_master_bit_ctrl.v:196:      else         slave_wait <= (scl_oen & ~dscl_oen & ~sSCL) | (slave_wait & ~sSCL);
+rtl/e203/perips/apb_i2c/i2c_master_bit_ctrl.v:304:      else              busy <= (sta_condition | busy) & ~sto_condition;
+rtl/e203/perips/apb_i2c/i2c_master_bit_ctrl.v:322:          al <= (sda_chk & ~sSDA & sda_oen) | (|c_state & sto_condition & ~cmd_stop);
+rtl/e203/perips/sirv_aon_lclkgen_regs.v:55:  wire sel_lfxosccfg = (i_icb_cmd_addr == 8'h00);
+rtl/e203/perips/sirv_pmu.v:365:  wire rstcause_por_clr  = (~por_reset_r_r) & (erst_reset_r_r | wdog_reset_r_r); 
+rtl/e203/perips/sirv_hclkgen_regs.v:66:  wire sel_hfxosccfg = (i_icb_cmd_addr == 12'h004);
+rtl/e203/perips/sirv_hclkgen_regs.v:68:  wire sel_plloutdiv = (i_icb_cmd_addr == 12'h00C);
+rtl/e203/debug/sirv_jtag_dtm.v:184:   assign busy = (busyReg & ~i_dtm_resp_valid) | stickyBusyReg;
+rtl/e203/debug/sirv_jtag_dtm.v:186:   assign nonzeroResp = (i_dtm_resp_valid ? | {i_dtm_resp_bits[DEBUG_OP_BITS-1:0]} : 1'b0) | stickyNonzeroRespReg;
+rtl/e203/debug/sirv_jtag_dtm.v:190:   assign i_dtm_resp_ready = (jtagStateReg == CAPTURE_DR) &&
+rtl/e203/debug/sirv_jtag_dtm.v:298:              downgradeOpReg <= (~busy & nonzeroResp);
+rtl/e203/debug/sirv_debug_module.v:341:  wire dtm_req_rd = (dtm_req_bits_op == 2'd1);
+rtl/e203/debug/sirv_debug_module.v:342:  wire dtm_req_wr = (dtm_req_bits_op == 2'd2);
+rtl/e203/debug/sirv_debug_module.v:344:  wire dtm_req_sel_dbgram   = (dtm_req_bits_addr[4:3] == 2'b0) & (~(dtm_req_bits_addr[2:0] == 3'b111));//0x00-0x06
+rtl/e203/debug/sirv_debug_module.v:345:  wire dtm_req_sel_dmcontrl = (dtm_req_bits_addr == 5'h10);
+rtl/e203/debug/sirv_debug_module.v:346:  wire dtm_req_sel_dminfo   = (dtm_req_bits_addr == 5'h11);
+rtl/e203/debug/sirv_debug_module.v:347:  wire dtm_req_sel_haltstat = (dtm_req_bits_addr == 5'h1C);
+rtl/e203/debug/sirv_debug_module.v:446:  wire icb_sel_cleardebint = (i_icb_cmd_addr == 12'h100);
+rtl/e203/debug/sirv_debug_module.v:447:  wire icb_sel_sethaltnot  = (i_icb_cmd_addr == 12'h10c);
+rtl/e203/debug/sirv_debug_module.v:448:  wire icb_sel_dbgrom  = (i_icb_cmd_addr[12-1:8] == 4'h8);
+rtl/e203/debug/sirv_debug_module.v:449:  wire icb_sel_dbgram  = (i_icb_cmd_addr[12-1:8] == 4'h4);
+rtl/e203/core/e203_exu_alu_lsuagu.v:166:  wire agu_i_size_b  = (agu_i_size == 2'b00);
+rtl/e203/core/e203_exu_alu_lsuagu.v:167:  wire agu_i_size_hw = (agu_i_size == 2'b01);
+rtl/e203/core/e203_exu_alu_lsuagu.v:168:  wire agu_i_size_w  = (agu_i_size == 2'b10);
+rtl/e203/core/e203_exu_alu_lsuagu.v:198:  wire agu_i_unalgnld = (agu_addr_unalgn & agu_i_load)
+rtl/e203/core/e203_exu_alu_lsuagu.v:200:  wire agu_i_unalgnst = (agu_addr_unalgn & agu_i_store) 
+rtl/e203/core/e203_exu_alu_lsuagu.v:202:  wire agu_i_unalgnldst = (agu_i_unalgnld | agu_i_unalgnst)
+rtl/e203/core/e203_exu_alu_lsuagu.v:204:  wire agu_i_algnld = (~agu_addr_unalgn) & agu_i_load
+rtl/e203/core/e203_exu_alu_lsuagu.v:206:  wire agu_i_algnst = (~agu_addr_unalgn) & agu_i_store
+rtl/e203/core/e203_exu_alu_lsuagu.v:208:  wire agu_i_algnldst = (agu_i_algnld | agu_i_algnst)
+rtl/e203/core/e203_exu_alu_lsuagu.v:212:  wire agu_i_unalgnamo = (agu_addr_unalgn & agu_i_amo) 
+rtl/e203/core/e203_exu_alu_lsuagu.v:269:  assign icb_sta_is_idle    = (icb_state_r == ICB_STATE_IDLE   );
+rtl/e203/core/e203_exu_alu_lsuagu.v:271:  wire   icb_sta_is_1st     = (icb_state_r == ICB_STATE_1ST    );
+rtl/e203/core/e203_exu_alu_lsuagu.v:272:  wire   icb_sta_is_amoalu  = (icb_state_r == ICB_STATE_AMOALU );
+rtl/e203/core/e203_exu_alu_lsuagu.v:273:  wire   icb_sta_is_amordy  = (icb_state_r == ICB_STATE_AMORDY );
+rtl/e203/core/e203_exu_alu_lsuagu.v:274:  wire   icb_sta_is_wait2nd = (icb_state_r == ICB_STATE_WAIT2ND);
+rtl/e203/core/e203_exu_alu_lsuagu.v:275:  wire   icb_sta_is_2nd     = (icb_state_r == ICB_STATE_2ND    );
+rtl/e203/core/e203_exu_alu_lsuagu.v:276:  wire   icb_sta_is_wbck    = (icb_state_r == ICB_STATE_WBCK    );
+rtl/e203/core/e203_exu_alu_lsuagu.v:506:  assign agu_req_alu_swap = (icb_sta_is_amoalu & agu_i_amoswap );
+rtl/e203/core/e203_exu_alu_lsuagu.v:507:  assign agu_req_alu_and  = (icb_sta_is_amoalu & agu_i_amoand  );
+rtl/e203/core/e203_exu_alu_lsuagu.v:508:  assign agu_req_alu_or   = (icb_sta_is_amoalu & agu_i_amoor   );
+rtl/e203/core/e203_exu_alu_lsuagu.v:509:  assign agu_req_alu_xor  = (icb_sta_is_amoalu & agu_i_amoxor  );
+rtl/e203/core/e203_exu_alu_lsuagu.v:510:  assign agu_req_alu_max  = (icb_sta_is_amoalu & agu_i_amomax  );
+rtl/e203/core/e203_exu_alu_lsuagu.v:511:  assign agu_req_alu_min  = (icb_sta_is_amoalu & agu_i_amomin  );
+rtl/e203/core/e203_exu_alu_lsuagu.v:512:  assign agu_req_alu_maxu = (icb_sta_is_amoalu & agu_i_amomaxu );
+rtl/e203/core/e203_exu_alu_lsuagu.v:513:  assign agu_req_alu_minu = (icb_sta_is_amoalu & agu_i_amominu );
+rtl/e203/core/e203_exu_alu_lsuagu.v:602:  assign agu_o_cmt_buserr = (1'b0 
+rtl/e203/core/e203_exu_alu_lsuagu.v:612:  assign agu_o_cmt_misalgn = (1'b0
+rtl/e203/core/e203_ifu_ift2icb.v:286:  wire ifu_req_pc2itcm = (ifu_req_pc[`E203_ITCM_BASE_REGION] == itcm_region_indic[`E203_ITCM_BASE_REGION]); 
+rtl/e203/core/e203_ifu_ift2icb.v:415:  wire icb_sta_is_idle    = (icb_state_r == ICB_STATE_IDLE   );
+rtl/e203/core/e203_ifu_ift2icb.v:416:  wire icb_sta_is_1st     = (icb_state_r == ICB_STATE_1ST    );
+rtl/e203/core/e203_ifu_ift2icb.v:417:  wire icb_sta_is_wait2nd = (icb_state_r == ICB_STATE_WAIT2ND);
+rtl/e203/core/e203_ifu_ift2icb.v:418:  wire icb_sta_is_2nd     = (icb_state_r == ICB_STATE_2ND    );
+rtl/e203/core/e203_ifu_ift2icb.v:481:  wire req_need_2uop         = (  ifu_req_lane_same  & ifu_req_lane_cross & (~ifu_req_lane_holdup))
+rtl/e203/core/e203_ifu_ift2icb.v:579:  wire rsp_instr_sel_leftover = (   icb_sta_is_1st
+rtl/e203/core/e203_ifu_ift2icb.v:758:  wire icb_addr_sel_cur = (~icb_addr_sel_1stnxtalgn) & (~icb_addr_sel_2ndnxtalgn);
+rtl/e203/core/e203_ifu_ift2icb.v:794:  assign ifu_icb_cmd2itcm = (ifu_icb_cmd_addr[`E203_ITCM_BASE_REGION] == itcm_region_indic[`E203_ITCM_BASE_REGION]);
+rtl/e203/core/e203_exu.v:956:  assign exu_active = (~oitf_empty) | i_valid | excp_active;
+rtl/e203/core/e203_exu_longpwbck.v:90:  wire wbck_ready4lsu = (lsu_wbck_i_itag == oitf_ret_ptr) & (~oitf_empty);
+rtl/e203/core/e203_exu_longpwbck.v:94:  wire wbck_ready4nice = (nice_longp_wbck_i_itag == oitf_ret_ptr) & (~oitf_empty);
+rtl/e203/core/e203_exu_excp.v:135:  wire wfi_req_hsked = (wfi_halt_ifu_req & wfi_halt_ifu_ack & wfi_halt_exu_req & wfi_halt_exu_ack)
+rtl/e203/core/e203_exu_excp.v:143:  wire wfi_flag_clr = (wfi_irq_req | dbg_entry_req);// & wfi_flag_r;// Here we cannot use this flag_r
+rtl/e203/core/e203_exu_excp.v:163:  assign wfi_halt_ifu_req = (wfi_halt_req_r & (~wfi_halt_req_clr))
+rtl/e203/core/e203_exu_excp.v:218:  wire alu_excp_i_ready4dbg = (excpirq_flush_ack & oitf_empty & alu_excp_i_pc_vld & (~longp_need_flush));
+rtl/e203/core/e203_exu_excp.v:240:  assign alu_excp_i_ready =  (alu_ebreakm_flush_req_novld | alu_dbgtrig_flush_req_novld) ? alu_excp_i_ready4dbg : alu_excp_i_ready4nondbg;
+rtl/e203/core/e203_exu_excp.v:310:  wire step_req_set = (~dbg_mode) & dbg_step_r & cmt_ena & (~dbg_entry_taken_ena);
+rtl/e203/core/e203_exu_excp.v:318:  assign dbg_entry_req = (~dbg_entry_mask) & (
+rtl/e203/core/e203_exu_excp.v:332:  assign nonalu_dbg_entry_req = (~dbg_entry_mask) & (
+rtl/e203/core/e203_exu_excp.v:339:  assign nonalu_dbg_entry_req_raw = (~dbg_entry_mask) & (
+rtl/e203/core/e203_exu_excp.v:375:  assign irq_req     = (~irq_mask) & irq_req_raw;
+rtl/e203/core/e203_exu_excp.v:376:  assign wfi_irq_req = (~wfi_irq_mask) & irq_req_raw;
+rtl/e203/core/e203_exu_excp.v:398:  wire alu_excp_i_ebreak4excp = (alu_excp_i_ebreak & ((~dbg_ebreakm_r) | dbg_mode))
+rtl/e203/core/e203_exu_excp.v:441:  wire alu_excp_flush_req_ebreak      = (alu_excp_flush_req & alu_excp_i_ebreak4excp);
+rtl/e203/core/e203_exu_excp.v:442:  wire alu_excp_flush_req_ecall       = (alu_excp_flush_req & alu_excp_i_ecall);
+rtl/e203/core/e203_exu_excp.v:443:  wire alu_excp_flush_req_ifu_misalgn = (alu_excp_flush_req & alu_excp_i_ifu_misalgn);
+rtl/e203/core/e203_exu_excp.v:444:  wire alu_excp_flush_req_ifu_buserr  = (alu_excp_flush_req & alu_excp_i_ifu_buserr);
+rtl/e203/core/e203_exu_excp.v:445:  wire alu_excp_flush_req_ifu_ilegl   = (alu_excp_flush_req & alu_excp_i_ifu_ilegl);
+rtl/e203/core/e203_exu_excp.v:447:  wire alu_excp_flush_req_ld_misalgn    = (alu_excp_flush_req_ld    & alu_excp_i_misalgn);// ALU load misalign
+rtl/e203/core/e203_exu_excp.v:448:  wire alu_excp_flush_req_ld_buserr     = (alu_excp_flush_req_ld    & alu_excp_i_buserr);// ALU load bus error
+rtl/e203/core/e203_exu_excp.v:449:  wire alu_excp_flush_req_stamo_misalgn = (alu_excp_flush_req_stamo & alu_excp_i_misalgn);// ALU store/AMO misalign
+rtl/e203/core/e203_exu_excp.v:450:  wire alu_excp_flush_req_stamo_buserr  = (alu_excp_flush_req_stamo & alu_excp_i_buserr);// ALU store/AMO bus error
+rtl/e203/core/e203_exu_excp.v:451:  wire longp_excp_flush_req_ld_buserr   = (longp_excp_flush_req_ld  & longp_excp_i_buserr);// Longpipe load bus error
+rtl/e203/core/e203_exu_excp.v:452:  wire longp_excp_flush_req_st_buserr   = (longp_excp_flush_req_st  & longp_excp_i_buserr);// Longpipe store bus error
+rtl/e203/core/e203_exu_excp.v:527:  assign cmt_epc_ena     = (~dbg_mode) & (excp_taken_ena | irq_taken_ena);
+rtl/e203/core/e203_exu_alu_csrctrl.v:80:  assign csr_sel_nice        = (csr_idx[11:8] == 4'hE);
+rtl/e203/core/e203_exu_oitf.v:91:      wire alc_ptr_flg_ena = (alc_ptr_r == ($unsigned(`E203_OITF_DEPTH-1))) & alc_ptr_ena;
+rtl/e203/core/e203_exu_oitf.v:104:      wire ret_ptr_flg_ena = (ret_ptr_r == ($unsigned(`E203_OITF_DEPTH-1))) & ret_ptr_ena;
+rtl/e203/core/e203_exu_oitf.v:114:      assign oitf_empty = (ret_ptr_r == alc_ptr_r) &   (ret_ptr_flg_r == alc_ptr_flg_r);
+rtl/e203/core/e203_exu_oitf.v:115:      assign oitf_full  = (ret_ptr_r == alc_ptr_r) & (~(ret_ptr_flg_r == alc_ptr_flg_r));
+rtl/e203/core/e203_exu_oitf.v:130: //// assign dis_ready = (~oitf_full) | ret_ena;
+rtl/e203/core/e203_exu_oitf.v:133: assign dis_ready = (~oitf_full);
+rtl/e203/core/e203_exu_alu_muldiv.v:110:  wire mul_rs1_sign = (i_mulhu)            ? 1'b0 : muldiv_i_rs1[`E203_XLEN-1];
+rtl/e203/core/e203_exu_alu_muldiv.v:111:  wire mul_rs2_sign = (i_mulhsu | i_mulhu) ? 1'b0 : muldiv_i_rs2[`E203_XLEN-1];
+rtl/e203/core/e203_exu_alu_muldiv.v:157:  wire   muldiv_sta_is_0th       = (muldiv_state_r == MULDIV_STATE_0TH   );
+rtl/e203/core/e203_exu_alu_muldiv.v:158:  wire   muldiv_sta_is_exec      = (muldiv_state_r == MULDIV_STATE_EXEC   );
+rtl/e203/core/e203_exu_alu_muldiv.v:159:  wire   muldiv_sta_is_remd_chck  = (muldiv_state_r == MULDIV_STATE_REMD_CHCK   );
+rtl/e203/core/e203_exu_alu_muldiv.v:160:  wire   muldiv_sta_is_quot_corr = (muldiv_state_r == MULDIV_STATE_QUOT_CORR   );
+rtl/e203/core/e203_exu_alu_muldiv.v:161:  wire   muldiv_sta_is_remd_corr = (muldiv_state_r == MULDIV_STATE_REMD_CORR   );
+rtl/e203/core/e203_exu_alu_muldiv.v:193:  assign state_remd_chck_exit_ena = (muldiv_sta_is_remd_chck & ( 
+rtl/e203/core/e203_exu_alu_muldiv.v:207:  assign state_quot_corr_exit_ena = (muldiv_sta_is_quot_corr & (flush_pulse | 1'b1));
+rtl/e203/core/e203_exu_alu_muldiv.v:213:  assign state_remd_corr_exit_ena = (muldiv_sta_is_remd_corr & (flush_pulse | muldiv_o_hsked));
+rtl/e203/core/e203_exu_alu_muldiv.v:251:  wire cycle_16th = (exec_cnt_r == EXEC_CNT_16);
+rtl/e203/core/e203_exu_alu_muldiv.v:252:  wire cycle_32nd = (exec_cnt_r == EXEC_CNT_32);
+rtl/e203/core/e203_exu_alu_muldiv.v:281:  wire booth_sel_zero = (booth_code == 3'b000) | (booth_code == 3'b111);
+rtl/e203/core/e203_exu_alu_muldiv.v:282:  wire booth_sel_two  = (booth_code == 3'b011) | (booth_code == 3'b100);
+rtl/e203/core/e203_exu_alu_muldiv.v:283:  wire booth_sel_one  = (~booth_sel_zero) & (~booth_sel_two);
+rtl/e203/core/e203_exu_alu_muldiv.v:295:  wire mul_exe_alu_add = (~booth_sel_sub);
+rtl/e203/core/e203_exu_alu_muldiv.v:325:  wire div_rs1_sign = (i_divu | i_remu) ? 1'b0 : muldiv_i_rs1[`E203_XLEN-1];
+rtl/e203/core/e203_exu_alu_muldiv.v:326:  wire div_rs2_sign = (i_divu | i_remu) ? 1'b0 : muldiv_i_rs2[`E203_XLEN-1];
+rtl/e203/core/e203_exu_alu_muldiv.v:331:  wire quot_0cycl = (dividend[65] ^ divisor[33]) ? 1'b0 : 1'b1;// If the sign(s0)!=sign(d), then set q_1st = -1
+rtl/e203/core/e203_exu_alu_muldiv.v:343:  wire div_exe_alu_add = (~prev_quot);
+rtl/e203/core/e203_exu_alu_muldiv.v:346:  wire current_quot = (div_exe_alu_res[33] ^ divisor[33]) ? 1'b0 : 1'b1;
+rtl/e203/core/e203_exu_alu_muldiv.v:394:  wire remd_is_divs = (part_remd_r == divisor[32:0]);
+rtl/e203/core/e203_exu_alu_muldiv.v:401:  wire remd_inc_quot_dec = (part_remd_r[32] ^ divisor[33]);
+rtl/e203/core/e203_exu_alu_muldiv.v:406:  wire div_quot_corr_alu_add = (~remd_inc_quot_dec);
+rtl/e203/core/e203_exu_alu_muldiv.v:420:  wire[`E203_XLEN-1:0] div_res = (i_div | i_divu) ? div_quot[`E203_XLEN-1:0] : div_remd[`E203_XLEN-1:0];
+rtl/e203/core/e203_exu_alu_muldiv.v:425:  wire div_ovf  = (i_div | i_rem) & (&muldiv_i_rs2)  // Divisor is all ones, means -1
+rtl/e203/core/e203_exu_alu_muldiv.v:431:  wire[`E203_XLEN-1:0] div_by_0_res = (i_div | i_divu) ? div_by_0_res_quot : div_by_0_res_remd;
+rtl/e203/core/e203_exu_alu_muldiv.v:435:  wire[`E203_XLEN-1:0] div_ovf_res = (i_div | i_divu) ? div_ovf_res_quot : div_ovf_res_remd;
+rtl/e203/core/e203_exu_alu_muldiv.v:464:  wire wbck_condi = (back2back_seq | special_cases) ? 1'b1 : 
+rtl/e203/core/e203_exu_alu_muldiv.v:474:  wire res_sel_div  = (~back2back_seq) & (~special_cases) & i_op_div;
+rtl/e203/core/e203_exu_alu_muldiv.v:475:  wire res_sel_mul  = (~back2back_seq) & (~special_cases) & i_op_mul;
+rtl/e203/core/e203_exu_alu_muldiv.v:547:  wire [63:0] golden0_mul_res = (mul_op1[32]^mul_op2[32]) ? (~golden0_mul_res_pre + 1) : golden0_mul_res_pre;
+rtl/e203/core/e203_ifu_litebpu.v:85:  assign prdt_taken   = (dec_jal | dec_jalr | (dec_bxx & dec_bjp_imm[`E203_XLEN-1]));  
+rtl/e203/core/e203_ifu_litebpu.v:87:  wire dec_jalr_rs1x0 = (dec_jalr_rs1idx == `E203_RFIDX_WIDTH'd0);
+rtl/e203/core/e203_ifu_litebpu.v:88:  wire dec_jalr_rs1x1 = (dec_jalr_rs1idx == `E203_RFIDX_WIDTH'd1);
+rtl/e203/core/e203_ifu_litebpu.v:89:  wire dec_jalr_rs1xn = (~dec_jalr_rs1x0) & (~dec_jalr_rs1x1);
+rtl/e203/core/e203_ifu_litebpu.v:96:  wire jalr_rs1xn_dep_ir_clr = (jalr_rs1xn_dep & oitf_empty & (~ir_empty)) & (ir_valid_clr | (~ir_rs1en));
+rtl/e203/core/e203_ifu_litebpu.v:99:  wire rs1xn_rdrf_set = (~rs1xn_rdrf_r) & dec_i_valid & dec_jalr & dec_jalr_rs1xn & ((~jalr_rs1xn_dep) | jalr_rs1xn_dep_ir_clr);
+rtl/e203/core/e203_ifu_litebpu.v:110:  assign prdt_pc_add_op1 = (dec_bxx | dec_jal) ? pc[`E203_PC_SIZE-1:0]
+rtl/e203/core/e203_ifu_ifetch.v:109:  wire ifu_req_hsked  = (ifu_req_valid & ifu_req_ready) ;
+rtl/e203/core/e203_ifu_ifetch.v:110:  wire ifu_rsp_hsked  = (ifu_rsp_valid & ifu_rsp_ready) ;
+rtl/e203/core/e203_ifu_ifetch.v:111:  wire ifu_ir_o_hsked = (ifu_o_valid & ifu_o_ready) ;
+rtl/e203/core/e203_ifu_ifetch.v:128:  wire reset_req_set = (~reset_req_r) & reset_flag_r;
+rtl/e203/core/e203_ifu_ifetch.v:285:  wire ir_rs1idx_ena = (minidec_fpu & ir_valid_set & minidec_fpu_rs1en & (~minidec_fpu_rs1fpu)) | ((~minidec_fpu) & ir_valid_set & minidec_rs1en) | bpu2rf_rs1_ena;
+rtl/e203/core/e203_ifu_ifetch.v:286:  wire ir_rs2idx_ena = (minidec_fpu & ir_valid_set & minidec_fpu_rs2en & (~minidec_fpu_rs2fpu)) | ((~minidec_fpu) & ir_valid_set & minidec_rs2en);
+rtl/e203/core/e203_ifu_ifetch.v:312:  assign ifu_ir_i_ready   = (~ir_valid_r) | ir_valid_clr;
+rtl/e203/core/e203_ifu_ifetch.v:461:  assign ifu_req_seq = (~pipe_flush_req_real) & (~ifu_reset_req) & (~ifetch_replay_req) & (~bjp_req);
+rtl/e203/core/e203_ifu_ifetch.v:478:  wire ifu_new_req = (~bpu_wait) & (~ifu_halt_req) & (~reset_flag_r) & (~ifu_rsp_need_replay);
+rtl/e203/core/e203_ifu_ifetch.v:489:  wire new_req_condi = (~out_flag_r) | out_flag_clr;
+rtl/e203/core/e203_ifu_ifetch.v:490:  assign ifu_no_outs   = (~out_flag_r) | ifu_rsp_valid;
+rtl/e203/core/e203_ifu_ifetch.v:497:  //wire ifu_rsp2ir_ready = (ifu_rsp_replay | pipe_flush_req_real) ? 1'b1 : (ifu_ir_i_ready & (~bpu_wait));
+rtl/e203/core/e203_ifu_ifetch.v:498:  wire ifu_rsp2ir_ready = (pipe_flush_req_real) ? 1'b1 : (ifu_ir_i_ready & ifu_req_ready & (~bpu_wait));
+rtl/e203/core/e203_clkgate.v:46:    enb = (clock_en | test_mode);
+rtl/e203/core/e203_exu_disp.v:118:  //wire disp_alu  = (disp_i_info_grp == `E203_DECINFO_GRP_ALU) 
+rtl/e203/core/e203_exu_disp.v:126:  wire disp_csr = (disp_i_info_grp == `E203_DECINFO_GRP_CSR); 
+rtl/e203/core/e203_exu_disp.v:128:  wire disp_alu_longp_prdt = (disp_i_info_grp == `E203_DECINFO_GRP_AGU)  
+rtl/e203/core/e203_exu_disp.v:134:  wire disp_fence_fencei   = (disp_i_info_grp == `E203_DECINFO_GRP_BJP) & 
+rtl/e203/core/e203_exu_disp.v:196:  //wire alu_waw_dep = (~disp_alu_longp_prdt) & (oitfrd_match_disprd & disp_i_rdwen); 
+rtl/e203/core/e203_exu_disp.v:197:  wire waw_dep = (oitfrd_match_disprd); 
+rtl/e203/core/e203_exu_branchslv.v:123:  assign cmt_i_ready = (~cmt_i_is_branch) | 
+rtl/e203/core/e203_exu_wbck.v:67:  wire wbck_ready4alu = (~longp_wbck_i_valid);
+rtl/e203/core/e203_exu_alu_dpath.v:205:  assign shifter_res = (shifter_in1 << shifter_in2);
+rtl/e203/core/e203_exu_alu_dpath.v:220:  wire [`E203_XLEN-1:0] eff_mask = (~(`E203_XLEN'b0)) >> shifter_in2;
+rtl/e203/core/e203_exu_alu_dpath.v:319:  wire cmp_res_ne  = (op_cmp_ne  & neq);
+rtl/e203/core/e203_exu_alu_dpath.v:326:  wire op1_gt_op2  = (~adder_res[`E203_XLEN]);
+rtl/e203/core/e203_exu_alu_dpath.v:345:  wire op_slttu = (op_slt | op_sltu);
+rtl/e203/core/e203_biu.v:230:      localparam BIU_SPLT_I_NUM_1 = (BIU_SPLT_I_NUM_0 + 1);
+rtl/e203/core/e203_biu.v:236:      localparam BIU_SPLT_I_NUM_2 = (BIU_SPLT_I_NUM_1 + 1);
+rtl/e203/core/e203_biu.v:507:  //wire ifu_replay_set = (arbt_icb_cmd_valid & arbt_icb_cmd_ready & lsu2biu_icb_cmd_valid)
+rtl/e203/core/e203_biu.v:510:  //wire ifu_replay_clr = (arbt_icb_cmd_valid & arbt_icb_cmd_ready & ifu2biu_icb_cmd_valid);
+rtl/e203/core/e203_exu_csr.v:119:wire sel_ustatus = (csr_idx == 12'h000);
+rtl/e203/core/e203_exu_csr.v:120:wire sel_mstatus = (csr_idx == 12'h300);
+rtl/e203/core/e203_exu_csr.v:195:wire status_sd_r = (status_fs_r == 2'b11) | (status_xs_r == 2'b11);
+rtl/e203/core/e203_exu_csr.v:248:wire sel_mie = (csr_idx == 12'h304);
+rtl/e203/core/e203_exu_csr.v:271:wire sel_mip = (csr_idx == 12'h344);
+rtl/e203/core/e203_exu_csr.v:296:wire sel_mtvec = (csr_idx == 12'h305);
+rtl/e203/core/e203_exu_csr.v:300:wire mtvec_ena = (wr_mtvec & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:312:wire sel_mscratch = (csr_idx == 12'h340);
+rtl/e203/core/e203_exu_csr.v:316:wire mscratch_ena = (wr_mscratch & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:329:wire sel_mcycle    = (csr_idx == 12'hB00);
+rtl/e203/core/e203_exu_csr.v:330:wire sel_mcycleh   = (csr_idx == 12'hB80);
+rtl/e203/core/e203_exu_csr.v:331:wire sel_minstret  = (csr_idx == 12'hB02);
+rtl/e203/core/e203_exu_csr.v:332:wire sel_minstreth = (csr_idx == 12'hB82);
+rtl/e203/core/e203_exu_csr.v:337:wire sel_counterstop = (csr_idx == 12'hBFF);// This address is not used by ISA
+rtl/e203/core/e203_exu_csr.v:341:wire sel_mcgstop = (csr_idx == 12'hBFE);// This address is not used by ISA
+rtl/e203/core/e203_exu_csr.v:346:wire sel_itcmnohold = (csr_idx == 12'hBFD);// This address is not used by ISA
+rtl/e203/core/e203_exu_csr.v:350:wire sel_mdvnob2b = (csr_idx == 12'hBF0);// This address is not used by ISA
+rtl/e203/core/e203_exu_csr.v:374:wire mcycle_wr_ena    = (wr_mcycle    & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:375:wire mcycleh_wr_ena   = (wr_mcycleh   & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:376:wire minstret_wr_ena  = (wr_minstret  & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:377:wire minstreth_wr_ena = (wr_minstreth & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:379:wire itcmnohold_wr_ena  = (wr_itcmnohold  & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:380:wire mdvnob2b_wr_ena  = (wr_mdvnob2b  & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:381:wire counterstop_wr_ena = (wr_counterstop & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:382:wire mcgstop_wr_ena      = (wr_mcgstop      & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:466://wire sel_cycle  = (csr_idx == 12'hc00);
+rtl/e203/core/e203_exu_csr.v:467://wire sel_cycleh = (csr_idx == 12'hc80);
+rtl/e203/core/e203_exu_csr.v:470://wire cycle_ena = (wr_cycle & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:473://wire cycleh_ena = (wr_cycleh & wbck_csr_wen);
+rtl/e203/core/e203_exu_csr.v:491:wire sel_mepc = (csr_idx == 12'h341);
+rtl/e203/core/e203_exu_csr.v:494:wire epc_ena = (wr_mepc & wbck_csr_wen) | cmt_epc_ena;
+rtl/e203/core/e203_exu_csr.v:508:wire sel_mcause = (csr_idx == 12'h342);
+rtl/e203/core/e203_exu_csr.v:511:wire cause_ena = (wr_mcause & wbck_csr_wen) | cmt_cause_ena;
+rtl/e203/core/e203_exu_csr.v:524:wire sel_mbadaddr = (csr_idx == 12'h343);
+rtl/e203/core/e203_exu_csr.v:528:wire badaddr_ena = (wr_mbadaddr & wbck_csr_wen) | cmt_trap_badaddr_ena;
+rtl/e203/core/e203_exu_csr.v:542:wire sel_misa = (csr_idx == 12'h301);
+rtl/e203/core/e203_exu_csr.v:611:wire sel_dcsr     = (csr_idx == 12'h7b0);
+rtl/e203/core/e203_exu_csr.v:612:wire sel_dpc      = (csr_idx == 12'h7b1);
+rtl/e203/core/e203_exu_csr.v:613:wire sel_dscratch = (csr_idx == 12'h7b2);
+rtl/e203/core/e203_itcm_ctrl.v:451:  assign sram_icb_cmd_valid = (sram_sel_ifu   & ifu2itcm_icb_cmd_valid)
+rtl/e203/core/e203_itcm_ctrl.v:456:  assign sram_icb_cmd_read  = (sram_sel_ifu   & ifu2itcm_icb_cmd_read)
+rtl/e203/core/e203_itcm_ctrl.v:555:  wire ifu_holdup_clr = (~sram_icb_cmd_ifu) & itcm_ram_cs;
+rtl/e203/core/e203_exu_decode.v:92:  wire opcode_1_0_00  = (opcode[1:0] == 2'b00);
+rtl/e203/core/e203_exu_decode.v:93:  wire opcode_1_0_01  = (opcode[1:0] == 2'b01);
+rtl/e203/core/e203_exu_decode.v:94:  wire opcode_1_0_10  = (opcode[1:0] == 2'b10);
+rtl/e203/core/e203_exu_decode.v:95:  wire opcode_1_0_11  = (opcode[1:0] == 2'b11);
+rtl/e203/core/e203_exu_decode.v:97:  wire rv32 = (~(i_instr[4:2] == 3'b111)) & opcode_1_0_11;
+rtl/e203/core/e203_exu_decode.v:117:  wire opcode_4_2_000 = (opcode[4:2] == 3'b000);
+rtl/e203/core/e203_exu_decode.v:118:  wire opcode_4_2_001 = (opcode[4:2] == 3'b001);
+rtl/e203/core/e203_exu_decode.v:119:  wire opcode_4_2_010 = (opcode[4:2] == 3'b010);
+rtl/e203/core/e203_exu_decode.v:120:  wire opcode_4_2_011 = (opcode[4:2] == 3'b011);
+rtl/e203/core/e203_exu_decode.v:121:  wire opcode_4_2_100 = (opcode[4:2] == 3'b100);
+rtl/e203/core/e203_exu_decode.v:122:  wire opcode_4_2_101 = (opcode[4:2] == 3'b101);
+rtl/e203/core/e203_exu_decode.v:123:  wire opcode_4_2_110 = (opcode[4:2] == 3'b110);
+rtl/e203/core/e203_exu_decode.v:124:  wire opcode_4_2_111 = (opcode[4:2] == 3'b111);
+rtl/e203/core/e203_exu_decode.v:125:  wire opcode_6_5_00  = (opcode[6:5] == 2'b00);
+rtl/e203/core/e203_exu_decode.v:126:  wire opcode_6_5_01  = (opcode[6:5] == 2'b01);
+rtl/e203/core/e203_exu_decode.v:127:  wire opcode_6_5_10  = (opcode[6:5] == 2'b10);
+rtl/e203/core/e203_exu_decode.v:128:  wire opcode_6_5_11  = (opcode[6:5] == 2'b11);
+rtl/e203/core/e203_exu_decode.v:130:  wire rv32_func3_000 = (rv32_func3 == 3'b000);
+rtl/e203/core/e203_exu_decode.v:131:  wire rv32_func3_001 = (rv32_func3 == 3'b001);
+rtl/e203/core/e203_exu_decode.v:132:  wire rv32_func3_010 = (rv32_func3 == 3'b010);
+rtl/e203/core/e203_exu_decode.v:133:  wire rv32_func3_011 = (rv32_func3 == 3'b011);
+rtl/e203/core/e203_exu_decode.v:134:  wire rv32_func3_100 = (rv32_func3 == 3'b100);
+rtl/e203/core/e203_exu_decode.v:135:  wire rv32_func3_101 = (rv32_func3 == 3'b101);
+rtl/e203/core/e203_exu_decode.v:136:  wire rv32_func3_110 = (rv32_func3 == 3'b110);
+rtl/e203/core/e203_exu_decode.v:137:  wire rv32_func3_111 = (rv32_func3 == 3'b111);
+rtl/e203/core/e203_exu_decode.v:139:  wire rv16_func3_000 = (rv16_func3 == 3'b000);
+rtl/e203/core/e203_exu_decode.v:140:  wire rv16_func3_001 = (rv16_func3 == 3'b001);
+rtl/e203/core/e203_exu_decode.v:141:  wire rv16_func3_010 = (rv16_func3 == 3'b010);
+rtl/e203/core/e203_exu_decode.v:142:  wire rv16_func3_011 = (rv16_func3 == 3'b011);
+rtl/e203/core/e203_exu_decode.v:143:  wire rv16_func3_100 = (rv16_func3 == 3'b100);
+rtl/e203/core/e203_exu_decode.v:144:  wire rv16_func3_101 = (rv16_func3 == 3'b101);
+rtl/e203/core/e203_exu_decode.v:145:  wire rv16_func3_110 = (rv16_func3 == 3'b110);
+rtl/e203/core/e203_exu_decode.v:146:  wire rv16_func3_111 = (rv16_func3 == 3'b111);
+rtl/e203/core/e203_exu_decode.v:148:  wire rv32_func7_0000000 = (rv32_func7 == 7'b0000000);
+rtl/e203/core/e203_exu_decode.v:149:  wire rv32_func7_0100000 = (rv32_func7 == 7'b0100000);
+rtl/e203/core/e203_exu_decode.v:150:  wire rv32_func7_0000001 = (rv32_func7 == 7'b0000001);
+rtl/e203/core/e203_exu_decode.v:151:  wire rv32_func7_0000101 = (rv32_func7 == 7'b0000101);
+rtl/e203/core/e203_exu_decode.v:152:  wire rv32_func7_0001001 = (rv32_func7 == 7'b0001001);
+rtl/e203/core/e203_exu_decode.v:153:  wire rv32_func7_0001101 = (rv32_func7 == 7'b0001101);
+rtl/e203/core/e203_exu_decode.v:154:  wire rv32_func7_0010101 = (rv32_func7 == 7'b0010101);
+rtl/e203/core/e203_exu_decode.v:155:  wire rv32_func7_0100001 = (rv32_func7 == 7'b0100001);
+rtl/e203/core/e203_exu_decode.v:156:  wire rv32_func7_0010001 = (rv32_func7 == 7'b0010001);
+rtl/e203/core/e203_exu_decode.v:157:  wire rv32_func7_0101101 = (rv32_func7 == 7'b0101101);
+rtl/e203/core/e203_exu_decode.v:158:  wire rv32_func7_1111111 = (rv32_func7 == 7'b1111111);
+rtl/e203/core/e203_exu_decode.v:159:  wire rv32_func7_0000100 = (rv32_func7 == 7'b0000100); 
+rtl/e203/core/e203_exu_decode.v:160:  wire rv32_func7_0001000 = (rv32_func7 == 7'b0001000); 
+rtl/e203/core/e203_exu_decode.v:161:  wire rv32_func7_0001100 = (rv32_func7 == 7'b0001100); 
+rtl/e203/core/e203_exu_decode.v:162:  wire rv32_func7_0101100 = (rv32_func7 == 7'b0101100); 
+rtl/e203/core/e203_exu_decode.v:163:  wire rv32_func7_0010000 = (rv32_func7 == 7'b0010000); 
+rtl/e203/core/e203_exu_decode.v:164:  wire rv32_func7_0010100 = (rv32_func7 == 7'b0010100); 
+rtl/e203/core/e203_exu_decode.v:165:  wire rv32_func7_1100000 = (rv32_func7 == 7'b1100000); 
+rtl/e203/core/e203_exu_decode.v:166:  wire rv32_func7_1110000 = (rv32_func7 == 7'b1110000); 
+rtl/e203/core/e203_exu_decode.v:167:  wire rv32_func7_1010000 = (rv32_func7 == 7'b1010000); 
+rtl/e203/core/e203_exu_decode.v:168:  wire rv32_func7_1101000 = (rv32_func7 == 7'b1101000); 
+rtl/e203/core/e203_exu_decode.v:169:  wire rv32_func7_1111000 = (rv32_func7 == 7'b1111000); 
+rtl/e203/core/e203_exu_decode.v:170:  wire rv32_func7_1010001 = (rv32_func7 == 7'b1010001);  
+rtl/e203/core/e203_exu_decode.v:171:  wire rv32_func7_1110001 = (rv32_func7 == 7'b1110001);  
+rtl/e203/core/e203_exu_decode.v:172:  wire rv32_func7_1100001 = (rv32_func7 == 7'b1100001);  
+rtl/e203/core/e203_exu_decode.v:173:  wire rv32_func7_1101001 = (rv32_func7 == 7'b1101001);  
+rtl/e203/core/e203_exu_decode.v:175:  wire rv32_rs1_x0 = (rv32_rs1 == 5'b00000);
+rtl/e203/core/e203_exu_decode.v:176:  wire rv32_rs2_x0 = (rv32_rs2 == 5'b00000);
+rtl/e203/core/e203_exu_decode.v:177:  wire rv32_rs2_x1 = (rv32_rs2 == 5'b00001);
+rtl/e203/core/e203_exu_decode.v:178:  wire rv32_rd_x0  = (rv32_rd  == 5'b00000);
+rtl/e203/core/e203_exu_decode.v:179:  wire rv32_rd_x2  = (rv32_rd  == 5'b00010);
+rtl/e203/core/e203_exu_decode.v:181:  wire rv16_rs1_x0 = (rv16_rs1 == 5'b00000);
+rtl/e203/core/e203_exu_decode.v:182:  wire rv16_rs2_x0 = (rv16_rs2 == 5'b00000);
+rtl/e203/core/e203_exu_decode.v:183:  wire rv16_rd_x0  = (rv16_rd  == 5'b00000);
+rtl/e203/core/e203_exu_decode.v:184:  wire rv16_rd_x2  = (rv16_rd  == 5'b00010);
+rtl/e203/core/e203_exu_decode.v:186:  wire rv32_rs1_x31 = (rv32_rs1 == 5'b11111);
+rtl/e203/core/e203_exu_decode.v:187:  wire rv32_rs2_x31 = (rv32_rs2 == 5'b11111);
+rtl/e203/core/e203_exu_decode.v:188:  wire rv32_rd_x31  = (rv32_rd  == 5'b11111);
+rtl/e203/core/e203_exu_decode.v:270:  wire rv16_instr_12_is0   = (rv16_instr[12] == 1'b0);
+rtl/e203/core/e203_exu_decode.v:271:  wire rv16_instr_6_2_is0s = (rv16_instr[6:2] == 5'b0);
+rtl/e203/core/e203_exu_decode.v:277:  wire rv16_sxxi_shamt_ilgl =  (rv16_slli | rv16_srli | rv16_srai) & (~rv16_sxxi_shamt_legl);
+rtl/e203/core/e203_exu_decode.v:405:  wire rv32_sxxi_shamt_legl = (rv32_instr[25] == 1'b0); //shamt[5] must be zero for RV32I
+rtl/e203/core/e203_exu_decode.v:406:  wire rv32_sxxi_shamt_ilgl =  (rv32_slli | rv32_srli | rv32_srai) & (~rv32_sxxi_shamt_legl);
+rtl/e203/core/e203_exu_decode.v:423:  wire alu_op = (~rv32_sxxi_shamt_ilgl) & (~rv16_sxxi_shamt_ilgl) 
+rtl/e203/core/e203_exu_decode.v:685:  wire rv32_need_rs2 = (~rv32_rs2_x0) & (
+rtl/e203/core/e203_exu_decode.v:1031:  wire [`E203_RFIDX_WIDTH-1:0] rv16_cr_rd  = (rv16_jalr | rv16_jr)? 
+rtl/e203/core/e203_exu_decode.v:1043:  wire [`E203_RFIDX_WIDTH-1:0] rv16_ci_rs1 = (rv16_lwsp | rv16_flwsp | rv16_fldsp) ? `E203_RFIDX_WIDTH'd2 :
+rtl/e203/core/e203_exu_decode.v:1121:  wire rv16_rs1en = (rv16_need_rs1 | rv16_need_rss1);
+rtl/e203/core/e203_exu_decode.v:1122:  wire rv16_rs2en = (rv16_need_rs2 | rv16_need_rss2);
+rtl/e203/core/e203_exu_decode.v:1123:  wire rv16_rden  = (rv16_need_rd  | rv16_need_rdd );
+rtl/e203/core/e203_exu_decode.v:1171:  assign dec_rs1x0 = (dec_rs1idx == `E203_RFIDX_WIDTH'b0);
+rtl/e203/core/e203_exu_decode.v:1172:  assign dec_rs2x0 = (dec_rs2idx == `E203_RFIDX_WIDTH'b0);
+rtl/e203/core/e203_lsu_ctrl.v:564:  wire arbt_icb_cmd_itcm = (arbt_icb_cmd_addr[`E203_ITCM_BASE_REGION] ==  itcm_region_indic[`E203_ITCM_BASE_REGION]);
+rtl/e203/core/e203_lsu_ctrl.v:569:  wire arbt_icb_cmd_dtcm = (arbt_icb_cmd_addr[`E203_DTCM_BASE_REGION] ==  dtcm_region_indic[`E203_DTCM_BASE_REGION]);
+rtl/e203/core/e203_lsu_ctrl.v:574:  wire arbt_icb_cmd_dcache = (arbt_icb_cmd_addr[`E203_DCACHE_BASE_REGION] ==  dcache_region_indic[`E203_DCACHE_BASE_REGION]);
+rtl/e203/core/e203_lsu_ctrl.v:579:  wire arbt_icb_cmd_biu    = (~arbt_icb_cmd_itcm) & (~arbt_icb_cmd_dtcm) & (~arbt_icb_cmd_dcache);
+rtl/e203/core/e203_lsu_ctrl.v:590:  wire icb_cmdaddr_eq_excladdr = (arbt_icb_cmd_addr == excl_addr_r);
+rtl/e203/core/e203_lsu_ctrl.v:595:  wire excl_flg_clr = (splt_fifo_wen & (~arbt_icb_cmd_read) & icb_cmdaddr_eq_excladdr & excl_flg_r) 
+rtl/e203/core/e203_lsu_ctrl.v:615:  wire splt_fifo_full    = (~splt_fifo_i_ready);
+rtl/e203/core/e203_lsu_ctrl.v:618:  wire splt_fifo_empty   = (~splt_fifo_o_valid);
+rtl/e203/core/e203_lsu_ctrl.v:627:  localparam SPLT_FIFO_W = (USR_W+5);
+rtl/e203/core/e203_lsu_ctrl.v:633:  localparam SPLT_FIFO_W = (USR_W+4);
+rtl/e203/core/e203_lsu_ctrl.v:713:  wire cmd_diff_branch = (~splt_fifo_empty) & 
+rtl/e203/core/e203_lsu_ctrl.v:719:  wire arbt_icb_cmd_addi_condi = (~splt_fifo_full) & (~cmd_diff_branch);
+rtl/e203/core/e203_lsu_ctrl.v:929:  wire rsp_lbu = (pre_agu_icb_rsp_size == 2'b00) & (pre_agu_icb_rsp_usign == 1'b1);
+rtl/e203/core/e203_lsu_ctrl.v:930:  wire rsp_lb  = (pre_agu_icb_rsp_size == 2'b00) & (pre_agu_icb_rsp_usign == 1'b0);
+rtl/e203/core/e203_lsu_ctrl.v:931:  wire rsp_lhu = (pre_agu_icb_rsp_size == 2'b01) & (pre_agu_icb_rsp_usign == 1'b1);
+rtl/e203/core/e203_lsu_ctrl.v:932:  wire rsp_lh  = (pre_agu_icb_rsp_size == 2'b01) & (pre_agu_icb_rsp_usign == 1'b0);
+rtl/e203/core/e203_lsu_ctrl.v:933:  wire rsp_lw  = (pre_agu_icb_rsp_size == 2'b10);
+rtl/e203/core/e203_exu_alu.v:183:  wire alu_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_ALU); 
+rtl/e203/core/e203_exu_alu.v:184:  wire agu_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_AGU); 
+rtl/e203/core/e203_exu_alu.v:185:  wire bjp_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_BJP); 
+rtl/e203/core/e203_exu_alu.v:186:  wire csr_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_CSR); 
+rtl/e203/core/e203_exu_alu.v:188:  wire mdv_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_MULDIV); 
+rtl/e203/core/e203_exu_alu.v:191:  wire nice_op = (~ifu_excp_op) & (i_info[`E203_DECINFO_GRP] == `E203_DECINFO_GRP_NICE);
+rtl/e203/core/e203_exu_alu.v:221:  assign i_ready =   (agu_i_ready & agu_op)
+rtl/e203/core/e203_exu_alu.v:243:  assign i_longpipe = (agu_i_longpipe & agu_op) 
+rtl/e203/core/e203_exu_alu.v:790:  assign o_valid =     (o_sel_alu      & alu_o_valid     )
+rtl/e203/core/e203_exu_alu.v:875:  assign cmt_o_misalgn     = (o_sel_agu & agu_o_cmt_misalgn) 
+rtl/e203/core/e203_exu_alu.v:877:  assign cmt_o_ld          = (o_sel_agu & agu_o_cmt_ld)      
+rtl/e203/general/sirv_gnrl_bufs.v:80:          assign i_rdy = (~vld_r);
+rtl/e203/general/sirv_gnrl_bufs.v:84:          assign i_rdy = (~vld_r) | vld_clr;
+rtl/e203/general/sirv_gnrl_bufs.v:177:wire i_vld_sync_nedge = (~i_vld_sync) & i_vld_sync_r;
+rtl/e203/general/sirv_gnrl_bufs.v:208:assign buf_rdy = (~buf_vld_r);
+rtl/e203/general/sirv_gnrl_bufs.v:277:wire o_rdy_nedge = (~o_rdy_sync) & o_rdy_sync_r;
+rtl/e203/general/sirv_gnrl_bufs.v:295:assign i_rdy = (~nrdy_r) | nrdy_clr;
+rtl/e203/general/sirv_gnrl_bufs.v:465:    wire vec_en = (ren ^ wen );
+rtl/e203/general/sirv_gnrl_bufs.v:477:          assign i_rdy = (~i_vec[DP-1]);
+rtl/e203/general/sirv_gnrl_bufs.v:481:          assign i_rdy = (~i_vec[DP-1]) | ren;
+rtl/e203/general/sirv_gnrl_bufs.v:485:      assign i_rdy = (~i_vec[DP-1]);
+rtl/e203/general/sirv_gnrl_bufs.v:517:    assign o_vld = (o_vec[0]);
+rtl/e203/general/sirv_sram_icb_ctrl.v:82:  localparam BUF_CMD_PACK_W = (AW+DW+MW+USR_W+1);
+rtl/e203/general/sirv_gnrl_icbs.v:273:        assign o_icb_rsp_valid_pre = (~rspid_fifo_empty) & o_icb_rsp_valid;
+rtl/e203/general/sirv_gnrl_icbs.v:274:        assign o_icb_rsp_ready     = (~rspid_fifo_empty) & o_icb_rsp_ready_pre;
+rtl/e203/general/sirv_gnrl_icbs.v:278:    assign rspid_fifo_full    = (~rspid_fifo_i_ready);
+rtl/e203/general/sirv_gnrl_icbs.v:280:    assign rspid_fifo_empty   = (~rspid_fifo_o_valid);
+rtl/e203/general/sirv_gnrl_icbs.v:407:  localparam CMD_PACK_W = (1+AW+DW+(DW/8)+1+1+2+2+2+USR_W);
+rtl/e203/general/sirv_gnrl_icbs.v:452:  localparam RSP_PACK_W = (2+DW+USR_W);
+rtl/e203/general/sirv_gnrl_icbs.v:564:    wire n2w_fifo_full    = (~n2w_fifo_i_ready);
+rtl/e203/general/sirv_gnrl_icbs.v:567:    wire n2w_fifo_empty   = (~n2w_fifo_o_valid);
+rtl/e203/general/sirv_gnrl_icbs.v:618:  assign o_icb_cmd_valid = (~n2w_fifo_full) & i_icb_cmd_valid; 
+rtl/e203/general/sirv_gnrl_icbs.v:619:  assign i_icb_cmd_ready = (~n2w_fifo_full) & o_icb_cmd_ready; 
+rtl/e203/general/sirv_gnrl_icbs.v:830:       wire cmd_diff_branch = (~rspid_fifo_empty) & (~(rspid_fifo_wdat == rspid_fifo_rdat));
+rtl/e203/general/sirv_gnrl_icbs.v:862:        assign i_icb_rsp_valid     = (~rspid_fifo_empty) & i_icb_rsp_valid_pre;
+rtl/e203/general/sirv_gnrl_icbs.v:863:        assign i_icb_rsp_ready_pre = (~rspid_fifo_empty) & i_icb_rsp_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:867:    assign rspid_fifo_full    = (~rspid_fifo_i_ready);
+rtl/e203/general/sirv_gnrl_icbs.v:869:    assign rspid_fifo_empty   = (~rspid_fifo_o_valid);
+rtl/e203/general/sirv_gnrl_icbs.v:1119:  assign i_icb_cmd_ready = (~rw_fifo_full) & 
+rtl/e203/general/sirv_gnrl_icbs.v:1169:  assign rw_fifo_full    = (~rw_fifo_i_ready);
+rtl/e203/general/sirv_gnrl_icbs.v:1170:  wire rw_fifo_empty   = (~rw_fifo_o_valid);
+rtl/e203/general/sirv_gnrl_icbs.v:1197:  assign i_axi_bready = (~i_icb_rsp_read) & i_icb_rsp_ready;
+rtl/e203/general/sirv_gnrl_icbs.v:1369:  assign wb_stb          = (~i_icb_rsp_valid) & i_icb_cmd_valid;
+rtl/e203/general/sirv_gnrl_icbs.v:1370:  assign wb_cyc          = (~i_icb_rsp_valid) & i_icb_cmd_valid;
+rtl/e203/general/sirv_gnrl_icbs.v:1371:  assign i_icb_cmd_ready = (~i_icb_rsp_valid) & wb_ack;
+rtl/e203/general/sirv_gnrl_icbs.v:1444:  wire apb_enable_set = (~apb_enable_r) & i_icb_cmd_valid & (~i_icb_rsp_valid);
+rtl/e203/general/sirv_gnrl_icbs.v:1454:  assign apb_pwrite = (~i_icb_cmd_read);
+rtl/e203/general/sirv_gnrl_icbs.v:1531:  wire  ahbl_sta_is_ar = (ahbl_sta_r == STA_AR);
+rtl/e203/general/sirv_1cyc_sram_ctrl.v:90:   assign ram_we = (~uop_cmd_read);  
+tb/tb_top.v:82:  wire stop_assert_irq = (pc_write_to_host_cnt > 32);

@@ -1,0 +1,608 @@
+core/riscv/riscv_decoder.v:113:                    (enable_muldiv_i && (opcode_i & `INST_MUL_MASK) == `INST_MUL)       ||
+core/riscv/riscv_decoder.v:114:                    (enable_muldiv_i && (opcode_i & `INST_MULH_MASK) == `INST_MULH)     ||
+core/riscv/riscv_decoder.v:115:                    (enable_muldiv_i && (opcode_i & `INST_MULHSU_MASK) == `INST_MULHSU) ||
+core/riscv/riscv_decoder.v:116:                    (enable_muldiv_i && (opcode_i & `INST_MULHU_MASK) == `INST_MULHU)   ||
+core/riscv/riscv_decoder.v:117:                    (enable_muldiv_i && (opcode_i & `INST_DIV_MASK) == `INST_DIV)       ||
+core/riscv/riscv_decoder.v:118:                    (enable_muldiv_i && (opcode_i & `INST_DIVU_MASK) == `INST_DIVU)     ||
+core/riscv/riscv_decoder.v:119:                    (enable_muldiv_i && (opcode_i & `INST_REM_MASK) == `INST_REM)       ||
+core/riscv/riscv_decoder.v:120:                    (enable_muldiv_i && (opcode_i & `INST_REMU_MASK) == `INST_REMU));
+core/riscv/riscv_exec.v:340:        branch_ret_r        = (opcode_ra_idx_i == 5'd1 && imm12_r[11:0] == 12'b0); // RA
+core/riscv/riscv_exec.v:341:        branch_call_r       = ~branch_ret_r && (opcode_rd_idx_i == 5'd1); // RA
+core/riscv/riscv_exec.v:397:    branch_taken_q   <= branch_r && opcode_valid_i & branch_taken_r;
+core/riscv/riscv_exec.v:398:    branch_ntaken_q  <= branch_r && opcode_valid_i & ~branch_taken_r;
+core/riscv/riscv_exec.v:400:    branch_call_q    <= branch_r && opcode_valid_i && branch_call_r;
+core/riscv/riscv_exec.v:401:    branch_ret_q     <= branch_r && opcode_valid_i && branch_ret_r;
+core/riscv/riscv_exec.v:402:    branch_jmp_q     <= branch_r && opcode_valid_i && branch_jmp_r;
+core/riscv/riscv_exec.v:415:assign branch_d_request_o = (branch_r && opcode_valid_i && branch_taken_r);
+core/riscv/riscv_lsu.v:122:wire complete_ok_e2_w  = mem_ack_i & ~mem_error_i;
+core/riscv/riscv_lsu.v:123:wire complete_err_e2_w = mem_ack_i & mem_error_i;
+core/riscv/riscv_lsu.v:143:    mem_unaligned_e2_q <= mem_unaligned_e1_q & ~delay_lsu_e2_w;
+core/riscv/riscv_lsu.v:188:    if (opcode_valid_i && ((opcode_opcode_i & `INST_CSRRW_MASK) == `INST_CSRRW))
+core/riscv/riscv_lsu.v:190:    else if (opcode_valid_i && load_inst_w)
+core/riscv/riscv_lsu.v:195:    if (opcode_valid_i && req_sw_lw_w)
+core/riscv/riscv_lsu.v:197:    else if (opcode_valid_i && req_sh_lh_w)
+core/riscv/riscv_lsu.v:200:    mem_rd_r = (opcode_valid_i && load_inst_w && !mem_unaligned_r);
+core/riscv/riscv_lsu.v:202:    if (opcode_valid_i && ((opcode_opcode_i & `INST_SW_MASK) == `INST_SW) && !mem_unaligned_r)
+core/riscv/riscv_lsu.v:207:    else if (opcode_valid_i && ((opcode_opcode_i & `INST_SH_MASK) == `INST_SH) && !mem_unaligned_r)
+core/riscv/riscv_lsu.v:222:    else if (opcode_valid_i && ((opcode_opcode_i & `INST_SB_MASK) == `INST_SB))
+core/riscv/riscv_lsu.v:308:    mem_load_q         <= opcode_valid_i && load_inst_w;
+core/riscv/riscv_lsu.v:315:    mem_cacheable_q  <= (mem_addr_r >= MEM_CACHE_ADDR_MIN && mem_addr_r <= MEM_CACHE_ADDR_MAX) ||
+core/riscv/riscv_lsu.v:316:                        (opcode_valid_i && (dcache_invalidate_w || dcache_writeback_w || dcache_flush_w));
+core/riscv/riscv_lsu.v:320:    mem_invalidate_q <= opcode_valid_i & dcache_invalidate_w;
+core/riscv/riscv_lsu.v:321:    mem_writeback_q  <= opcode_valid_i & dcache_writeback_w;
+core/riscv/riscv_lsu.v:322:    mem_flush_q      <= opcode_valid_i & dcache_flush_w;
+core/riscv/riscv_lsu.v:328:assign mem_rd_o         = mem_rd_q & ~delay_lsu_e2_w;
+core/riscv/riscv_lsu.v:329:assign mem_wr_o         = mem_wr_q & ~{4{delay_lsu_e2_w}};
+core/riscv/riscv_lsu.v:356:    ,.push_i(((mem_rd_o || (|mem_wr_o) || mem_writeback_o || mem_invalidate_o || mem_flush_o) && mem_accept_i) || (mem_unaligned_e1_q && ~delay_lsu_e2_w))
+core/riscv/riscv_lsu.v:385:    if ((mem_ack_i && mem_error_i) || mem_unaligned_e2_q)
+core/riscv/riscv_lsu.v:388:    else if (mem_ack_i && resp_load_w)
+core/riscv/riscv_lsu.v:399:            if (load_signed_r && wb_result_r[7])
+core/riscv/riscv_lsu.v:409:            if (load_signed_r && wb_result_r[15])
+core/riscv/riscv_lsu.v:420:wire fault_load_align_w     = mem_unaligned_e2_q & resp_load_w;
+core/riscv/riscv_lsu.v:421:wire fault_store_align_w    = mem_unaligned_e2_q & ~resp_load_w;
+core/riscv/riscv_lsu.v:422:wire fault_load_bus_w       = mem_error_i &&  resp_load_w;
+core/riscv/riscv_lsu.v:423:wire fault_store_bus_w      = mem_error_i && ~resp_load_w;
+core/riscv/riscv_lsu.v:424:wire fault_load_page_w      = mem_error_i && mem_load_fault_i;
+core/riscv/riscv_lsu.v:425:wire fault_store_page_w     = mem_error_i && mem_store_fault_i;
+core/riscv/riscv_lsu.v:497:    if (push_i & accept_o)
+core/riscv/riscv_lsu.v:504:    if (pop_i & valid_o)
+core/riscv/riscv_lsu.v:508:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+core/riscv/riscv_lsu.v:511:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+core/riscv/riscv_mmu.v:146:    wire        resp_valid_w = resp_mmu_w & lsu_out_ack_i;
+core/riscv/riscv_mmu.v:147:    wire        resp_error_w = resp_mmu_w & lsu_out_error_i;
+core/riscv/riscv_mmu.v:202:    wire        vm_d_enable_w = (vm_enable_w & dfetch_vm_w);
+core/riscv/riscv_mmu.v:205:    wire        itlb_miss_w = fetch_in_rd_i & vm_i_enable_w & ~itlb_hit_w;
+core/riscv/riscv_mmu.v:206:    wire        dtlb_miss_w = (load_w || (|store_w)) & vm_d_enable_w & ~dtlb_hit_w;
+core/riscv/riscv_mmu.v:232:        if (state_q == STATE_IDLE && (itlb_miss_w || dtlb_miss_w))
+core/riscv/riscv_mmu.v:241:        else if (state_q == STATE_LEVEL_FIRST && resp_valid_w)
+core/riscv/riscv_mmu.v:263:        else if (state_q == STATE_LEVEL_SECOND && resp_valid_w)
+core/riscv/riscv_mmu.v:314:    assign itlb_hit_w   = fetch_in_rd_i & itlb_valid_q & (itlb_va_addr_q == fetch_in_pc_i[31:12]);
+core/riscv/riscv_mmu.v:321:        if (vm_i_enable_w && itlb_hit_w)
+core/riscv/riscv_mmu.v:347:    assign fetch_out_rd_o         = (~vm_i_enable_w & fetch_in_rd_i) || (itlb_hit_w & ~pc_fault_r);
+core/riscv/riscv_mmu.v:352:    assign fetch_in_accept_o      = (~vm_i_enable_w & fetch_out_accept_i) | (vm_i_enable_w & itlb_hit_w & fetch_out_accept_i) | pc_fault_r;
+core/riscv/riscv_mmu.v:354:    assign fetch_in_error_o       = fetch_out_valid_i & fetch_out_error_i;
+core/riscv/riscv_mmu.v:370:    else if (state_q == STATE_UPDATE && dtlb_req_q)
+core/riscv/riscv_mmu.v:379:    else if (state_q == STATE_UPDATE && dtlb_req_q)
+core/riscv/riscv_mmu.v:386:    assign dtlb_hit_w   = dtlb_valid_q & (dtlb_va_addr_q == lsu_addr_w[31:12]);
+core/riscv/riscv_mmu.v:393:        if (vm_d_enable_w && load_w && dtlb_hit_w)
+core/riscv/riscv_mmu.v:403:                    load_fault_r = ~(dtlb_entry_q[`PAGE_READ] | (mxr_i & dtlb_entry_q[`PAGE_EXEC]));
+core/riscv/riscv_mmu.v:449:    wire        lsu_out_rd_w         = vm_d_enable_w ? (load_w  & dtlb_hit_w & ~load_fault_r)       : lsu_in_rd_i;
+core/riscv/riscv_mmu.v:450:    wire [3:0]  lsu_out_wr_w         = vm_d_enable_w ? (store_w & {4{dtlb_hit_w & ~store_fault_r}}) : lsu_in_wr_i;
+core/riscv/riscv_mmu.v:465:            lsu_out_cacheable_r = (lsu_out_addr_w >= MEM_CACHE_ADDR_MIN && lsu_out_addr_w <= MEM_CACHE_ADDR_MAX);
+core/riscv/riscv_mmu.v:473:    assign lsu_in_ack_o         = (lsu_out_ack_i & ~resp_mmu_w) | store_fault_q | load_fault_q;
+core/riscv/riscv_mmu.v:475:    assign lsu_in_error_o       = (lsu_out_error_i & ~resp_mmu_w) | store_fault_q | load_fault_q;
+core/riscv/riscv_mmu.v:480:    assign lsu_in_accept_o      = (~vm_d_enable_w & cpu_accept_w) | (vm_d_enable_w & dtlb_hit_w & cpu_accept_w) | store_fault_r | load_fault_r;
+core/riscv/riscv_mmu.v:491:    else if (state_q == STATE_IDLE && (itlb_miss_w || dtlb_miss_w))
+core/riscv/riscv_mmu.v:493:    else if (state_q == STATE_LEVEL_FIRST && resp_valid_w && !resp_error_w && resp_data_w[`PAGE_PRESENT] && (!(resp_data_w[`PAGE_READ] || resp_data_w[`PAGE_WRITE] || resp_data_w[`PAGE_EXEC])))
+core/riscv/riscv_mmu.v:519:    assign mmu_accept_w         = src_mmu_w  & lsu_out_accept_i;
+core/riscv/riscv_mmu.v:520:    assign cpu_accept_w         = ~src_mmu_w & lsu_out_accept_i;
+core/riscv/riscv_alu.v:128:            if (alu_a_i[31] == 1'b1 && alu_op_i == `ALU_SHIFTR_ARITH)
+core/riscv/riscv_alu.v:174:            result_r      = (alu_a_i & alu_b_i);
+core/riscv/riscv_fetch.v:116:else if (icache_rd_o && icache_accept_i)
+core/riscv/riscv_fetch.v:134:else if (branch_w && ~stall_w)
+core/riscv/riscv_fetch.v:158:else if (icache_rd_o && icache_accept_i)
+core/riscv/riscv_fetch.v:185:else if (branch_w && ~stall_w)
+core/riscv/riscv_fetch.v:198:else if (branch_w && ~stall_w)
+core/riscv/riscv_fetch.v:205:else if (branch_w && ~stall_w)
+core/riscv/riscv_fetch.v:219:else if (icache_rd_o && icache_accept_i)
+core/riscv/riscv_fetch.v:225:assign icache_rd_o         = active_q & fetch_accept_i & !icache_busy_w;
+core/riscv/riscv_multiplier.v:126:else if (opcode_valid_i && mult_inst_w)
+core/riscv/riscv_csr_regfile.v:136:        irq_pending_r   = (csr_mip_q & csr_mie_q);
+core/riscv/riscv_csr_regfile.v:137:        m_enabled_r     = (csr_mpriv_q < `PRIV_MACHINE) || (csr_mpriv_q == `PRIV_MACHINE && csr_sr_q[`SR_MIE_R]);
+core/riscv/riscv_csr_regfile.v:138:        s_enabled_r     = (csr_mpriv_q < `PRIV_SUPER)   || (csr_mpriv_q == `PRIV_SUPER   && csr_sr_q[`SR_SIE_R]);
+core/riscv/riscv_csr_regfile.v:139:        m_interrupts_r  = m_enabled_r    ? (irq_pending_r & ~csr_mideleg_q) : 32'b0;
+core/riscv/riscv_csr_regfile.v:140:        s_interrupts_r  = s_enabled_r    ? (irq_pending_r &  csr_mideleg_q) : 32'b0;
+core/riscv/riscv_csr_regfile.v:146:        irq_pending_r   = (csr_mip_q & csr_mie_q);
+core/riscv/riscv_csr_regfile.v:167:else if ((csr_ren_i && csr_raddr_i == `CSR_MIP) || (csr_ren_i && csr_raddr_i == `CSR_SIP))
+core/riscv/riscv_csr_regfile.v:172:wire buffer_mip_w = (csr_ren_i && csr_raddr_i == `CSR_MIP) | (csr_ren_i && csr_raddr_i == `CSR_SIP) | csr_mip_upd_q;
+core/riscv/riscv_csr_regfile.v:251:wire exception_s_w  = SUPPORT_SUPER ? ((csr_mpriv_q <= `PRIV_SUPER) & is_exception_w & csr_medeleg_q[{1'b0, exception_i[`EXCEPTION_SUBTYPE_R]}]) : 1'b0;
+core/riscv/riscv_csr_regfile.v:335:    else if (exception_i >= `EXCEPTION_ERET_U && exception_i <= `EXCEPTION_ERET_M)
+core/riscv/riscv_csr_regfile.v:365:    else if (is_exception_w && exception_s_w)
+core/riscv/riscv_csr_regfile.v:459:        `CSR_SSTATUS:  csr_sr_r       = (csr_sr_r & ~`CSR_SSTATUS_MASK) | (csr_wdata_i & `CSR_SSTATUS_MASK);
+core/riscv/riscv_csr_regfile.v:460:        `CSR_SIP:      csr_mip_r      = (csr_mip_r & ~`CSR_SIP_MASK) | (csr_wdata_i & `CSR_SIP_MASK);
+core/riscv/riscv_csr_regfile.v:461:        `CSR_SIE:      csr_mie_r      = (csr_mie_r & ~`CSR_SIE_MASK) | (csr_wdata_i & `CSR_SIE_MASK);
+core/riscv/riscv_csr_regfile.v:469:    if (ext_intr_i   &&  csr_mideleg_q[`SR_IP_MEIP_R]) csr_mip_next_r[`SR_IP_SEIP_R] = 1'b1;
+core/riscv/riscv_csr_regfile.v:470:    if (ext_intr_i   && ~csr_mideleg_q[`SR_IP_MEIP_R]) csr_mip_next_r[`SR_IP_MEIP_R] = 1'b1;
+core/riscv/riscv_csr_regfile.v:471:    if (timer_intr_i &&  csr_mideleg_q[`SR_IP_MTIP_R]) csr_mip_next_r[`SR_IP_STIP_R] = 1'b1;
+core/riscv/riscv_csr_regfile.v:472:    if (timer_intr_i && ~csr_mideleg_q[`SR_IP_MTIP_R]) csr_mip_next_r[`SR_IP_MTIP_R] = 1'b1;
+core/riscv/riscv_csr_regfile.v:475:    if (SUPPORT_MTIMECMP && csr_mcycle_q == csr_mtimecmp_q)
+core/riscv/riscv_csr_regfile.v:563:        case (csr_wdata_i & 32'hFF000000)
+core/riscv/riscv_csr_regfile.v:597:    else if (exception_i >= `EXCEPTION_ERET_U && exception_i <= `EXCEPTION_ERET_M)
+core/riscv/riscv_csr_regfile.v:613:    else if (is_exception_w && exception_s_w)
+core/riscv/riscv_divider.v:99:wire div_start_w    = opcode_valid_i & div_rem_inst_w;
+core/riscv/riscv_divider.v:119:    if (signed_operation_w && opcode_ra_operand_i[31])
+core/riscv/riscv_divider.v:124:    if (signed_operation_w && opcode_rb_operand_i[31])
+core/riscv/riscv_csr.v:104:wire ecall_w             = opcode_valid_i && ((opcode_opcode_i & `INST_ECALL_MASK)      == `INST_ECALL);
+core/riscv/riscv_csr.v:105:wire ebreak_w            = opcode_valid_i && ((opcode_opcode_i & `INST_EBREAK_MASK)     == `INST_EBREAK);
+core/riscv/riscv_csr.v:106:wire eret_w              = opcode_valid_i && ((opcode_opcode_i & `INST_ERET_MASK)       == `INST_ERET);
+core/riscv/riscv_csr.v:108:wire csrrw_w             = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRW_MASK)      == `INST_CSRRW);
+core/riscv/riscv_csr.v:109:wire csrrs_w             = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRS_MASK)      == `INST_CSRRS);
+core/riscv/riscv_csr.v:110:wire csrrc_w             = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRC_MASK)      == `INST_CSRRC);
+core/riscv/riscv_csr.v:111:wire csrrwi_w            = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRWI_MASK)     == `INST_CSRRWI);
+core/riscv/riscv_csr.v:112:wire csrrsi_w            = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRSI_MASK)     == `INST_CSRRSI);
+core/riscv/riscv_csr.v:113:wire csrrci_w            = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRCI_MASK)     == `INST_CSRRCI);
+core/riscv/riscv_csr.v:114:wire wfi_w               = opcode_valid_i && ((opcode_opcode_i & `INST_WFI_MASK)        == `INST_WFI);
+core/riscv/riscv_csr.v:115:wire fence_w             = opcode_valid_i && ((opcode_opcode_i & `INST_FENCE_MASK)      == `INST_FENCE);
+core/riscv/riscv_csr.v:116:wire sfence_w            = opcode_valid_i && ((opcode_opcode_i & `INST_SFENCE_MASK)     == `INST_SFENCE);
+core/riscv/riscv_csr.v:117:wire ifence_w            = opcode_valid_i && ((opcode_opcode_i & `INST_IFENCE_MASK)     == `INST_IFENCE);
+core/riscv/riscv_csr.v:147:    csr_fault_r     = SUPPORT_SUPER ? (opcode_valid_i && (set_r | clr_r) && ((csr_write_r && csr_readonly_r) || (current_priv_w < csr_priv_r))) : 1'b0;
+core/riscv/riscv_csr.v:150:wire satp_update_w = (opcode_valid_i && (set_r || clr_r) && csr_write_r && (opcode_opcode_i[31:20] == `CSR_SATP));
+core/riscv/riscv_csr.v:217:wire                    eret_fault_w = eret_w && (current_priv_w < eret_priv_w);
+core/riscv/riscv_csr.v:257:    if (set_r && clr_r)
+core/riscv/riscv_csr.v:262:        csr_wdata_e1_q <= csr_rdata_w & ~data_r;
+core/riscv/riscv_pipe_ctrl.v:138:wire branch_misaligned_w = (issue_branch_taken_i && issue_branch_target_i[1:0] != 2'b0);
+core/riscv/riscv_pipe_ctrl.v:181:else if ((issue_valid_i && issue_accept_i) && ~(squash_e1_e2_o || squash_e1_e2_i))
+core/riscv/riscv_pipe_ctrl.v:185:    ctrl_e1_q[`PCINFO_LOAD]     <= issue_lsu_i &  issue_rd_valid_i & ~take_interrupt_i; // TODO: Check
+core/riscv/riscv_pipe_ctrl.v:186:    ctrl_e1_q[`PCINFO_STORE]    <= issue_lsu_i & ~issue_rd_valid_i & ~take_interrupt_i;
+core/riscv/riscv_pipe_ctrl.v:187:    ctrl_e1_q[`PCINFO_CSR]      <= issue_csr_i & ~take_interrupt_i;
+core/riscv/riscv_pipe_ctrl.v:188:    ctrl_e1_q[`PCINFO_DIV]      <= issue_div_i & ~take_interrupt_i;
+core/riscv/riscv_pipe_ctrl.v:189:    ctrl_e1_q[`PCINFO_MUL]      <= issue_mul_i & ~take_interrupt_i;
+core/riscv/riscv_pipe_ctrl.v:190:    ctrl_e1_q[`PCINFO_BRANCH]   <= issue_branch_i & ~take_interrupt_i;
+core/riscv/riscv_pipe_ctrl.v:191:    ctrl_e1_q[`PCINFO_RD_VALID] <= issue_rd_valid_i & ~take_interrupt_i;
+core/riscv/riscv_pipe_ctrl.v:312:wire valid_e2_w      = valid_e2_q & ~issue_stall_i;
+core/riscv/riscv_pipe_ctrl.v:319:    if (SUPPORT_LOAD_BYPASS && valid_e2_w && (ctrl_e2_q[`PCINFO_LOAD] || ctrl_e2_q[`PCINFO_STORE]))
+core/riscv/riscv_pipe_ctrl.v:321:    else if (SUPPORT_MUL_BYPASS && valid_e2_w && ctrl_e2_q[`PCINFO_MUL])
+core/riscv/riscv_pipe_ctrl.v:328:assign rd_e2_o         = {5{(valid_e2_w && ctrl_e2_q[`PCINFO_RD_VALID] && ~stall_o)}} & opcode_e2_q[`RD_IDX_R];
+core/riscv/riscv_pipe_ctrl.v:337:    if (valid_e2_q && (ctrl_e2_q[`PCINFO_LOAD] || ctrl_e2_q[`PCINFO_STORE]) && mem_complete_i)
+core/riscv/riscv_pipe_ctrl.v:422:        ctrl_wb_q       <= ctrl_e2_q & ~(1 << `PCINFO_RD_VALID);
+core/riscv/riscv_pipe_ctrl.v:433:    if (valid_e2_w && (ctrl_e2_q[`PCINFO_LOAD] || ctrl_e2_q[`PCINFO_STORE]))
+core/riscv/riscv_pipe_ctrl.v:435:    else if (valid_e2_w && ctrl_e2_q[`PCINFO_MUL])
+core/riscv/riscv_pipe_ctrl.v:444:assign valid_wb_o      = valid_wb_q & ~issue_stall_i;
+core/riscv/riscv_pipe_ctrl.v:446:assign rd_wb_o         = {5{(valid_wb_o && ctrl_wb_q[`PCINFO_RD_VALID] && ~stall_o)}} & opcode_wb_q[`RD_IDX_R];
+core/riscv/riscv_issue.v:178:wire opcode_valid_w = fetch_valid_i & ~squash_w & ~branch_csr_request_i;
+core/riscv/riscv_issue.v:345:else if (div_opcode_valid_o && issue_div_w)
+core/riscv/riscv_issue.v:357:else if (csr_opcode_valid_o && issue_csr_w)
+core/riscv/riscv_issue.v:407:        if (opcode_accept_r && issue_sb_alloc_w && (|issue_rd_idx_w))
+core/riscv/riscv_issue.v:412:assign lsu_opcode_valid_o   = opcode_issue_r & ~take_interrupt_i;
+core/riscv/riscv_issue.v:414:assign mul_opcode_valid_o   = enable_muldiv_w & opcode_issue_r;
+core/riscv/riscv_issue.v:415:assign div_opcode_valid_o   = enable_muldiv_w & opcode_issue_r;
+core/riscv/riscv_issue.v:418:assign fetch_accept_o       = opcode_valid_w ? (opcode_accept_r & ~take_interrupt_i) : 1'b1;
+core/riscv/riscv_issue.v:525:assign csr_opcode_valid_o       = opcode_issue_r & ~take_interrupt_i;
+core/riscv/riscv_issue.v:533:assign csr_opcode_invalid_o     = opcode_issue_r && issue_invalid_w;
+core/riscv/riscv_xilinx_2r1w.v:104:assign write_banka_w  = (write_enable_w & (~rd0_i[4]));
+core/riscv/riscv_xilinx_2r1w.v:105:assign write_bankb_w  = (write_enable_w & rd0_i[4]);
+isa_sim/riscv.cpp:51:#define DPRINTF(l,a)        do { if (m_trace & l) printf a; } while (0)
+isa_sim/riscv.cpp:52:#define TRACE_ENABLED(l)    (m_trace & l)
+isa_sim/riscv.cpp:378:    else if ((m_csr_satp & SATP_MODE) == 0) // Bare mode
+isa_sim/riscv.cpp:410:            if (!(pte & PAGE_PRESENT))
+isa_sim/riscv.cpp:417:            else if (!(pte & (PAGE_READ | PAGE_WRITE | PAGE_EXEC)))
+isa_sim/riscv.cpp:431:                uint64_t value = (ppn | (vpn & ((((uint64_t)1) << ptshift) - 1))) << MMU_PGSHIFT;
+isa_sim/riscv.cpp:479:    if (((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == PAGE_WRITE) ||
+isa_sim/riscv.cpp:480:        ((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == (PAGE_EXEC | PAGE_WRITE)))
+isa_sim/riscv.cpp:488:        if (pte & PAGE_USER)
+isa_sim/riscv.cpp:494:        else if ((pte & (PAGE_EXEC)) != (PAGE_EXEC))
+isa_sim/riscv.cpp:503:        if ((pte & (PAGE_EXEC | PAGE_USER)) != (PAGE_EXEC | PAGE_USER))
+isa_sim/riscv.cpp:516:    uint32_t pgoff  = addr & (MMU_PGSIZE-1);
+isa_sim/riscv.cpp:542:    if (((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == PAGE_WRITE) ||
+isa_sim/riscv.cpp:543:        ((pte & (PAGE_EXEC | PAGE_READ | PAGE_WRITE)) == (PAGE_EXEC | PAGE_WRITE)))
+isa_sim/riscv.cpp:551:        if ((pte & PAGE_USER) && !(m_csr_msr & SR_SUM))
+isa_sim/riscv.cpp:555:        else if ((writeNotRead  && ((pte & (PAGE_WRITE)) != (PAGE_WRITE))) || 
+isa_sim/riscv.cpp:556:                 (!writeNotRead && ((pte & (PAGE_READ))  != (PAGE_READ))))
+isa_sim/riscv.cpp:564:        if ((writeNotRead  && ((pte & (PAGE_WRITE | PAGE_USER)) != (PAGE_WRITE | PAGE_USER))) || 
+isa_sim/riscv.cpp:565:            (!writeNotRead && ((pte & (PAGE_READ | PAGE_USER))  != (PAGE_READ | PAGE_USER))))
+isa_sim/riscv.cpp:578:    uint32_t pgoff  = addr & (MMU_PGSIZE-1);
+isa_sim/riscv.cpp:603:    event_push(COSIM_EVENT_LOAD, physical & ~3, 0);
+isa_sim/riscv.cpp:638:        event_push(COSIM_EVENT_STORE, physical & ~3, data & 0xFF);
+isa_sim/riscv.cpp:640:        event_push(COSIM_EVENT_STORE, physical & ~3, data & 0xFFFF);
+isa_sim/riscv.cpp:665:        result      = var_name & CSR_ ##name## _MASK; \
+isa_sim/riscv.cpp:666:        if (set && clr) \
+isa_sim/riscv.cpp:683:    switch (address & 0xFFF)
+isa_sim/riscv.cpp:690:            switch (data & 0xFF000000)
+isa_sim/riscv.cpp:694:                    exit(data & 0xFF);
+isa_sim/riscv.cpp:698:                        m_console->putchar(data & 0xFF);
+isa_sim/riscv.cpp:700:                        fprintf(stderr, "%c", (data & 0xFF));
+isa_sim/riscv.cpp:709:                    enable_trace(data & 0xFF);
+isa_sim/riscv.cpp:722:                        uint32_t pgoff = fmt_addr & (MMU_PGSIZE-1);
+isa_sim/riscv.cpp:782:            if (set && data != 0)
+isa_sim/riscv.cpp:787:                m_csr_mip &= ~((m_csr_mideleg & SR_IP_STIP) ? SR_IP_STIP : SR_IP_MTIP);
+isa_sim/riscv.cpp:822:    if (m_csr_mpriv <= PRIV_SUPER && (deleg & bit))
+isa_sim/riscv.cpp:828:        s |= (s & SR_SIE) ? SR_SPIE : 0;
+isa_sim/riscv.cpp:853:        s |= (s & SR_MIE) ? SR_MPIE : 0;
+isa_sim/riscv.cpp:889:    int rd          = (opcode & OPCODE_RD_MASK)  >> OPCODE_RD_SHIFT;
+isa_sim/riscv.cpp:890:    int rs1         = (opcode & OPCODE_RS1_MASK) >> OPCODE_RS1_SHIFT;
+isa_sim/riscv.cpp:891:    int rs2         = (opcode & OPCODE_RS2_MASK) >> OPCODE_RS2_SHIFT;
+isa_sim/riscv.cpp:894:    int typei_imm   = ((signed)(opcode & OPCODE_TYPEI_IMM_MASK)) >> OPCODE_TYPEI_IMM_SHIFT;
+isa_sim/riscv.cpp:895:    int typeu_imm   = ((signed)(opcode & OPCODE_TYPEU_IMM_MASK)) >> OPCODE_TYPEU_IMM_SHIFT;
+isa_sim/riscv.cpp:901:    int shamt       = ((signed)(opcode & OPCODE_SHAMT_MASK)) >> OPCODE_SHAMT_SHIFT;
+isa_sim/riscv.cpp:923:    else if ((opcode & INST_ANDI_MASK) == INST_ANDI)
+isa_sim/riscv.cpp:928:        reg_rd = reg_rs1 & imm12;
+isa_sim/riscv.cpp:931:    else if ((opcode & INST_ORI_MASK) == INST_ORI)
+isa_sim/riscv.cpp:939:    else if ((opcode & INST_XORI_MASK) == INST_XORI)
+isa_sim/riscv.cpp:947:    else if ((opcode & INST_ADDI_MASK) == INST_ADDI)
+isa_sim/riscv.cpp:955:    else if ((opcode & INST_SLTI_MASK) == INST_SLTI)
+isa_sim/riscv.cpp:963:    else if ((opcode & INST_SLTIU_MASK) == INST_SLTIU)
+isa_sim/riscv.cpp:971:    else if ((opcode & INST_SLLI_MASK) == INST_SLLI)
+isa_sim/riscv.cpp:979:    else if ((opcode & INST_SRLI_MASK) == INST_SRLI)
+isa_sim/riscv.cpp:987:    else if ((opcode & INST_SRAI_MASK) == INST_SRAI)
+isa_sim/riscv.cpp:995:    else if ((opcode & INST_LUI_MASK) == INST_LUI)
+isa_sim/riscv.cpp:1003:    else if ((opcode & INST_AUIPC_MASK) == INST_AUIPC)
+isa_sim/riscv.cpp:1011:    else if ((opcode & INST_ADD_MASK) == INST_ADD)
+isa_sim/riscv.cpp:1019:    else if ((opcode & INST_SUB_MASK) == INST_SUB)
+isa_sim/riscv.cpp:1027:    else if ((opcode & INST_SLT_MASK) == INST_SLT)
+isa_sim/riscv.cpp:1035:    else if ((opcode & INST_SLTU_MASK) == INST_SLTU)
+isa_sim/riscv.cpp:1043:    else if ((opcode & INST_XOR_MASK) == INST_XOR)
+isa_sim/riscv.cpp:1051:    else if ((opcode & INST_OR_MASK) == INST_OR)
+isa_sim/riscv.cpp:1059:    else if ((opcode & INST_AND_MASK) == INST_AND)
+isa_sim/riscv.cpp:1064:        reg_rd = reg_rs1 & reg_rs2;
+isa_sim/riscv.cpp:1067:    else if ((opcode & INST_SLL_MASK) == INST_SLL)
+isa_sim/riscv.cpp:1075:    else if ((opcode & INST_SRL_MASK) == INST_SRL)
+isa_sim/riscv.cpp:1083:    else if ((opcode & INST_SRA_MASK) == INST_SRA)
+isa_sim/riscv.cpp:1091:    else if ((opcode & INST_JAL_MASK) == INST_JAL)
+isa_sim/riscv.cpp:1101:    else if ((opcode & INST_JALR_MASK) == INST_JALR)
+isa_sim/riscv.cpp:1111:    else if ((opcode & INST_BEQ_MASK) == INST_BEQ)
+isa_sim/riscv.cpp:1126:    else if ((opcode & INST_BNE_MASK) == INST_BNE)
+isa_sim/riscv.cpp:1141:    else if ((opcode & INST_BLT_MASK) == INST_BLT)
+isa_sim/riscv.cpp:1156:    else if ((opcode & INST_BGE_MASK) == INST_BGE)
+isa_sim/riscv.cpp:1171:    else if ((opcode & INST_BLTU_MASK) == INST_BLTU)
+isa_sim/riscv.cpp:1186:    else if ((opcode & INST_BGEU_MASK) == INST_BGEU)
+isa_sim/riscv.cpp:1201:    else if ((opcode & INST_LB_MASK) == INST_LB)
+isa_sim/riscv.cpp:1211:    else if ((opcode & INST_LH_MASK) == INST_LH)
+isa_sim/riscv.cpp:1221:    else if ((opcode & INST_LW_MASK) == INST_LW)
+isa_sim/riscv.cpp:1231:    else if ((opcode & INST_LBU_MASK) == INST_LBU)
+isa_sim/riscv.cpp:1241:    else if ((opcode & INST_LHU_MASK) == INST_LHU)
+isa_sim/riscv.cpp:1251:    else if ((opcode & INST_LWU_MASK) == INST_LWU)
+isa_sim/riscv.cpp:1261:    else if ((opcode & INST_SB_MASK) == INST_SB)
+isa_sim/riscv.cpp:1274:    else if ((opcode & INST_SH_MASK) == INST_SH)
+isa_sim/riscv.cpp:1287:    else if ((opcode & INST_SW_MASK) == INST_SW)
+isa_sim/riscv.cpp:1300:    else if ((opcode & INST_MUL_MASK) == INST_MUL)
+isa_sim/riscv.cpp:1308:    else if ((opcode & INST_MULH_MASK) == INST_MULH)
+isa_sim/riscv.cpp:1317:    else if ((opcode & INST_MULHSU_MASK) == INST_MULHSU)
+isa_sim/riscv.cpp:1326:    else if ((opcode & INST_MULHU_MASK) == INST_MULHU)
+isa_sim/riscv.cpp:1335:    else if ((opcode & INST_DIV_MASK) == INST_DIV)
+isa_sim/riscv.cpp:1340:        if ((signed)reg_rs1 == INT32_MIN && (signed)reg_rs2 == -1)
+isa_sim/riscv.cpp:1348:    else if ((opcode & INST_DIVU_MASK) == INST_DIVU)
+isa_sim/riscv.cpp:1359:    else if ((opcode & INST_REM_MASK) == INST_REM)
+isa_sim/riscv.cpp:1365:        if((signed)reg_rs1 == INT32_MIN && (signed)reg_rs2 == -1)
+isa_sim/riscv.cpp:1373:    else if ((opcode & INST_REMU_MASK) == INST_REMU)
+isa_sim/riscv.cpp:1384:    else if ((opcode & INST_ECALL_MASK) == INST_ECALL)
+isa_sim/riscv.cpp:1392:    else if ((opcode & INST_EBREAK_MASK) == INST_EBREAK)
+isa_sim/riscv.cpp:1401:    else if ((opcode & INST_MRET_MASK) == INST_MRET)
+isa_sim/riscv.cpp:1413:        s |= (s & SR_MPIE) ? SR_MIE : 0;
+isa_sim/riscv.cpp:1427:    else if ((opcode & INST_SRET_MASK) == INST_SRET)
+isa_sim/riscv.cpp:1435:        uint32_t prev_prv = (m_csr_msr & SR_SPP) ? PRIV_SUPER : PRIV_USER;
+isa_sim/riscv.cpp:1439:        s |= (s & SR_SPIE) ? SR_SIE : 0;
+isa_sim/riscv.cpp:1452:    else if ( ((opcode & INST_SFENCE_MASK) == INST_SFENCE) ||
+isa_sim/riscv.cpp:1453:              ((opcode & INST_FENCE_MASK) == INST_FENCE) ||
+isa_sim/riscv.cpp:1454:              ((opcode & INST_IFENCE_MASK) == INST_IFENCE))
+isa_sim/riscv.cpp:1460:    else if ((opcode & INST_CSRRW_MASK) == INST_CSRRW)
+isa_sim/riscv.cpp:1467:    else if ((opcode & INST_CSRRS_MASK) == INST_CSRRS)
+isa_sim/riscv.cpp:1474:    else if ((opcode & INST_CSRRC_MASK) == INST_CSRRC)
+isa_sim/riscv.cpp:1481:    else if ((opcode & INST_CSRRWI_MASK) == INST_CSRRWI)
+isa_sim/riscv.cpp:1488:    else if ((opcode & INST_CSRRSI_MASK) == INST_CSRRSI)
+isa_sim/riscv.cpp:1495:    else if ((opcode & INST_CSRRCI_MASK) == INST_CSRRCI)
+isa_sim/riscv.cpp:1502:    else if ((opcode & INST_WFI_MASK) == INST_WFI)
+isa_sim/riscv.cpp:1520:    if (!take_exception && (m_csr_mip & m_csr_mie))
+isa_sim/riscv.cpp:1522:        uint32_t pending_interrupts = (m_csr_mip & m_csr_mie);
+isa_sim/riscv.cpp:1523:        uint32_t m_enabled          = m_csr_mpriv < PRIV_MACHINE || (m_csr_mpriv == PRIV_MACHINE && (m_csr_msr & SR_MIE));
+isa_sim/riscv.cpp:1524:        uint32_t s_enabled          = m_csr_mpriv < PRIV_SUPER   || (m_csr_mpriv == PRIV_SUPER   && (m_csr_msr & SR_SIE));
+isa_sim/riscv.cpp:1525:        uint32_t m_interrupts       = pending_interrupts & ~m_csr_mideleg & -m_enabled;
+isa_sim/riscv.cpp:1526:        uint32_t s_interrupts       = pending_interrupts & m_csr_mideleg & -s_enabled;
+isa_sim/riscv.cpp:1537:                if (interrupts & (1 << i))
+isa_sim/riscv.cpp:1573:        m_csr_mip |= (m_csr_mideleg & SR_IP_STIP) ? SR_IP_STIP : SR_IP_MTIP;
+isa_sim/riscv.cpp:1588:    if (m_has_breakpoints && check_breakpoint(m_pc_x))
+isa_sim/riscv_main.cpp:189:            if (max_cycles != -1 && max_cycles == _cycles)
+isa_sim/README.md:54:    unsigned int arg = CSR_SIM_CTRL_PUTC | (ch & 0xFF);
+isa_sim/cosim_api.cpp:239:        if (addr >= it->base && addr < (it->base + it->size))
+isa_sim/cosim_api.cpp:249:        if (addr >= it->base && addr < (it->base + it->size))
+isa_sim/cosim_api.cpp:258:         if (addr >= it->base && addr < (it->base + it->size))
+isa_sim/riscv_inst_dump.cpp:54:    int rd          = (opcode & OPCODE_RD_MASK)  >> OPCODE_RD_SHIFT;
+isa_sim/riscv_inst_dump.cpp:55:    int rs1         = (opcode & OPCODE_RS1_MASK) >> OPCODE_RS1_SHIFT;
+isa_sim/riscv_inst_dump.cpp:56:    int rs2         = (opcode & OPCODE_RS2_MASK) >> OPCODE_RS2_SHIFT;
+isa_sim/riscv_inst_dump.cpp:59:    int typei_imm   = ((signed)(opcode & OPCODE_TYPEI_IMM_MASK)) >> OPCODE_TYPEI_IMM_SHIFT;
+isa_sim/riscv_inst_dump.cpp:60:    int typeu_imm   = ((signed)(opcode & OPCODE_TYPEU_IMM_MASK)) >> OPCODE_TYPEU_IMM_SHIFT;
+isa_sim/riscv_inst_dump.cpp:66:    int shamt       = ((signed)(opcode & OPCODE_SHAMT_MASK)) >> OPCODE_SHAMT_SHIFT;
+isa_sim/riscv_inst_dump.cpp:68:    if ((opcode & INST_ANDI_MASK) == INST_ANDI)
+isa_sim/riscv_inst_dump.cpp:73:    else if ((opcode & INST_ORI_MASK) == INST_ORI)
+isa_sim/riscv_inst_dump.cpp:78:    else if ((opcode & INST_XORI_MASK) == INST_XORI)
+isa_sim/riscv_inst_dump.cpp:83:    else if ((opcode & INST_ADDI_MASK) == INST_ADDI)
+isa_sim/riscv_inst_dump.cpp:88:    else if ((opcode & INST_SLTI_MASK) == INST_SLTI)
+isa_sim/riscv_inst_dump.cpp:93:    else if ((opcode & INST_SLTIU_MASK) == INST_SLTIU)
+isa_sim/riscv_inst_dump.cpp:98:    else if ((opcode & INST_SLLI_MASK) == INST_SLLI)
+isa_sim/riscv_inst_dump.cpp:103:    else if ((opcode & INST_SRLI_MASK) == INST_SRLI)
+isa_sim/riscv_inst_dump.cpp:108:    else if ((opcode & INST_SRAI_MASK) == INST_SRAI)
+isa_sim/riscv_inst_dump.cpp:113:    else if ((opcode & INST_LUI_MASK) == INST_LUI)
+isa_sim/riscv_inst_dump.cpp:118:    else if ((opcode & INST_AUIPC_MASK) == INST_AUIPC)
+isa_sim/riscv_inst_dump.cpp:123:    else if ((opcode & INST_ADD_MASK) == INST_ADD)
+isa_sim/riscv_inst_dump.cpp:128:    else if ((opcode & INST_SUB_MASK) == INST_SUB)
+isa_sim/riscv_inst_dump.cpp:133:    else if ((opcode & INST_SLT_MASK) == INST_SLT)
+isa_sim/riscv_inst_dump.cpp:138:    else if ((opcode & INST_SLTU_MASK) == INST_SLTU)
+isa_sim/riscv_inst_dump.cpp:143:    else if ((opcode & INST_XOR_MASK) == INST_XOR)
+isa_sim/riscv_inst_dump.cpp:148:    else if ((opcode & INST_OR_MASK) == INST_OR)
+isa_sim/riscv_inst_dump.cpp:153:    else if ((opcode & INST_AND_MASK) == INST_AND)
+isa_sim/riscv_inst_dump.cpp:158:    else if ((opcode & INST_SLL_MASK) == INST_SLL)
+isa_sim/riscv_inst_dump.cpp:163:    else if ((opcode & INST_SRL_MASK) == INST_SRL)
+isa_sim/riscv_inst_dump.cpp:168:    else if ((opcode & INST_SRA_MASK) == INST_SRA)
+isa_sim/riscv_inst_dump.cpp:173:    else if ((opcode & INST_JAL_MASK) == INST_JAL)
+isa_sim/riscv_inst_dump.cpp:178:    else if ((opcode & INST_JALR_MASK) == INST_JALR)
+isa_sim/riscv_inst_dump.cpp:183:    else if ((opcode & INST_BEQ_MASK) == INST_BEQ)
+isa_sim/riscv_inst_dump.cpp:188:    else if ((opcode & INST_BNE_MASK) == INST_BNE)
+isa_sim/riscv_inst_dump.cpp:193:    else if ((opcode & INST_BLT_MASK) == INST_BLT)
+isa_sim/riscv_inst_dump.cpp:198:    else if ((opcode & INST_BGE_MASK) == INST_BGE)
+isa_sim/riscv_inst_dump.cpp:203:    else if ((opcode & INST_BLTU_MASK) == INST_BLTU)
+isa_sim/riscv_inst_dump.cpp:208:    else if ((opcode & INST_BGEU_MASK) == INST_BGEU)
+isa_sim/riscv_inst_dump.cpp:213:    else if ((opcode & INST_LB_MASK) == INST_LB)
+isa_sim/riscv_inst_dump.cpp:218:    else if ((opcode & INST_LH_MASK) == INST_LH)
+isa_sim/riscv_inst_dump.cpp:223:    else if ((opcode & INST_LW_MASK) == INST_LW)
+isa_sim/riscv_inst_dump.cpp:228:    else if ((opcode & INST_LBU_MASK) == INST_LBU)
+isa_sim/riscv_inst_dump.cpp:233:    else if ((opcode & INST_LHU_MASK) == INST_LHU)
+isa_sim/riscv_inst_dump.cpp:238:    else if ((opcode & INST_LWU_MASK) == INST_LWU)
+isa_sim/riscv_inst_dump.cpp:243:    else if ((opcode & INST_SB_MASK) == INST_SB)
+isa_sim/riscv_inst_dump.cpp:248:    else if ((opcode & INST_SH_MASK) == INST_SH)
+isa_sim/riscv_inst_dump.cpp:253:    else if ((opcode & INST_SW_MASK) == INST_SW)
+isa_sim/riscv_inst_dump.cpp:258:    else if ((opcode & INST_MUL_MASK) == INST_MUL)
+isa_sim/riscv_inst_dump.cpp:263:    else if ((opcode & INST_MULH_MASK) == INST_MULH)
+isa_sim/riscv_inst_dump.cpp:268:    else if ((opcode & INST_MULHSU_MASK) == INST_MULHSU)
+isa_sim/riscv_inst_dump.cpp:273:    else if ((opcode & INST_MULHU_MASK) == INST_MULHU)
+isa_sim/riscv_inst_dump.cpp:278:    else if ((opcode & INST_DIV_MASK) == INST_DIV)
+isa_sim/riscv_inst_dump.cpp:283:    else if ((opcode & INST_DIVU_MASK) == INST_DIVU)
+isa_sim/riscv_inst_dump.cpp:288:    else if ((opcode & INST_REM_MASK) == INST_REM)
+isa_sim/riscv_inst_dump.cpp:293:    else if ((opcode & INST_REMU_MASK) == INST_REMU)
+isa_sim/riscv_inst_dump.cpp:298:    else if ((opcode & INST_ECALL_MASK) == INST_ECALL)
+isa_sim/riscv_inst_dump.cpp:302:    else if ((opcode & INST_EBREAK_MASK) == INST_EBREAK)
+isa_sim/riscv_inst_dump.cpp:306:    else if ((opcode & INST_MRET_MASK) == INST_MRET)
+isa_sim/riscv_inst_dump.cpp:310:    else if ((opcode & INST_SRET_MASK) == INST_SRET)
+isa_sim/riscv_inst_dump.cpp:314:    else if ( ((opcode & INST_SFENCE_MASK) == INST_SFENCE) ||
+isa_sim/riscv_inst_dump.cpp:315:              ((opcode & INST_FENCE_MASK) == INST_FENCE) ||
+isa_sim/riscv_inst_dump.cpp:316:              ((opcode & INST_IFENCE_MASK) == INST_IFENCE))
+isa_sim/riscv_inst_dump.cpp:320:    else if ((opcode & INST_CSRRW_MASK) == INST_CSRRW)
+isa_sim/riscv_inst_dump.cpp:324:    else if ((opcode & INST_CSRRS_MASK) == INST_CSRRS)
+isa_sim/riscv_inst_dump.cpp:328:    else if ((opcode & INST_CSRRC_MASK) == INST_CSRRC)
+isa_sim/riscv_inst_dump.cpp:332:    else if ((opcode & INST_CSRRWI_MASK) == INST_CSRRWI)
+isa_sim/riscv_inst_dump.cpp:336:    else if ((opcode & INST_CSRRSI_MASK) == INST_CSRRSI)
+isa_sim/riscv_inst_dump.cpp:340:    else if ((opcode & INST_CSRRCI_MASK) == INST_CSRRCI)
+isa_sim/riscv_inst_dump.cpp:344:    else if ((opcode & INST_WFI_MASK) == INST_WFI)
+isa_sim/memory.h:86:                assert(!(address & 3));
+isa_sim/memory.h:90:                assert(!(address & 1));
+isa_sim/memory.h:92:                if (address & 2)
+isa_sim/memory.h:98:                    if (data & (1 << 15))
+isa_sim/memory.h:102:                switch (address & 3)
+isa_sim/memory.h:119:                    if (data & (1 << 7))
+isa_sim/memory.h:132:                assert(!(address & 3));
+isa_sim/memory.h:136:                assert(!(address & 1));
+isa_sim/memory.h:137:                if (address & 2)
+isa_sim/memory.h:143:                switch (address & 3)
+isa_sim/elf_load.cpp:96:        if ((shdr->sh_flags & SHF_ALLOC) && (shdr->sh_size > 0))
+README.md:48:| top_tcm_axi/src_v   | Example instance with 64KB DP-RAM & AXI Interfaces  |
+top_cache_axi/tb/tb_axi4_mem.cpp:20:        if (axi_i.ARVALID && axi_o.ARREADY)
+top_cache_axi/tb/tb_axi4_mem.cpp:22:            sc_uint <AXI4_ADDR_W> next_addr = axi_i.ARADDR & ~calc_wrap_mask(0);
+top_cache_axi/tb/tb_axi4_mem.cpp:42:        if (axi_i.AWVALID && axi_o.AWREADY)
+top_cache_axi/tb/tb_axi4_mem.cpp:49:        if (axi_i.WVALID && axi_o.WREADY)
+top_cache_axi/tb/tb_axi4_mem.cpp:73:        if (axi_o.RVALID && axi_i.RREADY)
+top_cache_axi/tb/tb_axi4_mem.cpp:82:        if (!axi_o.RVALID && axi_rd_q.size() > 0 && !delay_cycle())
+top_cache_axi/tb/tb_axi4_mem.cpp:94:        if (axi_o.BVALID && axi_i.BREADY)
+top_cache_axi/tb/tb_axi4_mem.cpp:101:        if (!axi_o.BVALID && axi_wr_q.size() > 0 && !delay_cycle())
+top_cache_axi/tb/tb_axi4_mem.cpp:134:          return (addr & ~mask) | ((addr + (AXI4_DATA_W/8)) & mask);
+top_cache_axi/tb/tb_axi4_mem.cpp:172:        if (strb & (1 << i))
+top_cache_axi/tb/testbench.h:116:        base = base & ~(32-1);
+top_cache_axi/tb/axi4.h:53:    bool operator == (const axi4_master & v) const
+top_cache_axi/tb/axi4.h:75:    friend void sc_trace(sc_trace_file *tf, const axi4_master & v, const std::string & path)
+top_cache_axi/tb/axi4.h:95:    friend ostream& operator << (ostream& os, axi4_master const & v)
+top_cache_axi/tb/axi4.h:116:    friend istream& operator >> ( istream& is, axi4_master & val)
+top_cache_axi/tb/axi4.h:179:    bool operator == (const axi4_slave & v) const
+top_cache_axi/tb/axi4.h:196:    friend void sc_trace(sc_trace_file *tf, const axi4_slave & v, const std::string & path)
+top_cache_axi/tb/axi4.h:211:    friend ostream& operator << (ostream& os, axi4_slave const & v)
+top_cache_axi/tb/axi4.h:227:    friend istream& operator >> ( istream& is, axi4_slave & val)
+top_cache_axi/tb/main.cpp:40:static void assert_handler(const sc_report& rep, const sc_actions& actions)
+top_cache_axi/tb/main.cpp:42:    sc_report_handler::default_handler(rep, actions & ~SC_ABORT);
+top_cache_axi/tb/main.cpp:44:    if ( actions & SC_ABORT )
+top_cache_axi/tb/main.cpp:90:    if (s && strcmp(s, ""))
+top_cache_axi/tb/testbench_vbase.h:68:    bool waves_delayed(sc_core::sc_time &delay)
+top_cache_axi/src_v/dcache_mux.v:104:assign mem_cached_rd_o           = (mem_cacheable_i & ~hold_w) ? mem_rd_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:105:assign mem_cached_wr_o           = (mem_cacheable_i & ~hold_w) ? mem_wr_i : 4'b0;
+top_cache_axi/src_v/dcache_mux.v:108:assign mem_cached_invalidate_o   = (mem_cacheable_i & ~hold_w) ? mem_invalidate_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:109:assign mem_cached_writeback_o    = (mem_cacheable_i & ~hold_w) ? mem_writeback_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:110:assign mem_cached_flush_o        = (mem_cacheable_i & ~hold_w) ? mem_flush_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:114:assign mem_uncached_rd_o         = (~mem_cacheable_i & ~hold_w) ? mem_rd_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:115:assign mem_uncached_wr_o         = (~mem_cacheable_i & ~hold_w) ? mem_wr_i : 4'b0;
+top_cache_axi/src_v/dcache_mux.v:118:assign mem_uncached_invalidate_o = (~mem_cacheable_i & ~hold_w) ? mem_invalidate_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:119:assign mem_uncached_writeback_o  = (~mem_cacheable_i & ~hold_w) ? mem_writeback_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:120:assign mem_uncached_flush_o      = (~mem_cacheable_i & ~hold_w) ? mem_flush_i : 1'b0;
+top_cache_axi/src_v/dcache_mux.v:136:    if ((request_w && mem_accept_o) && !mem_ack_o)
+top_cache_axi/src_v/dcache_mux.v:138:    else if (!(request_w && mem_accept_o) && mem_ack_o)
+top_cache_axi/src_v/dcache_mux.v:151:else if (request_w && mem_accept_o)
+top_cache_axi/src_v/dcache_if_pmem.v:108:wire          req_push_w   = request_w && res_accept_w;
+top_cache_axi/src_v/dcache_if_pmem.v:132:assign mem_accept_o = req_accept_w & res_accept_w;
+top_cache_axi/src_v/dcache_if_pmem.v:138:wire res_push_w = request_w && req_accept_w;
+top_cache_axi/src_v/dcache_if_pmem.v:261:    if (push_i & accept_o)
+top_cache_axi/src_v/dcache_if_pmem.v:268:    if (pop_i & valid_o)
+top_cache_axi/src_v/dcache_if_pmem.v:272:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+top_cache_axi/src_v/dcache_if_pmem.v:275:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+top_cache_axi/src_v/dcache_axi.v:147:wire       req_can_issue_w = req_valid_w & res_accept_w;
+top_cache_axi/src_v/dcache_axi.v:153:assign soft_rst        = ~res_accept_w && ~req_accept_w;
+top_cache_axi/src_v/dcache_axi.v:166:else if (req_is_write_w && req_cnt_q == 8'd0 && req_len_w != 8'd0 && accept_w)
+top_cache_axi/src_v/dcache_axi.v:168:else if (req_cnt_q != 8'd0 && req_is_write_w && accept_w)
+top_cache_axi/src_v/dcache_axi.v:171:wire req_last_w = (req_is_write_w && req_len_w == 8'd0 && req_cnt_q == 8'd0);
+top_cache_axi/src_v/dcache_axi.v:177:wire res_push_w = (req_is_write_w && req_last_w && accept_w) || (req_is_read_w && accept_w);
+top_cache_axi/src_v/dcache_axi.v:188:else if ((res_push_w & res_accept_w) & ~(resp_pop_w & res_valid_w))
+top_cache_axi/src_v/dcache_axi.v:191:else if (~(res_push_w & res_accept_w) & (resp_pop_w & res_valid_w))
+top_cache_axi/src_v/dcache_axi.v:308:if (rst_i && ~soft_rst)
+top_cache_axi/src_v/dcache_axi.v:317:    if (push_i & accept_o)
+top_cache_axi/src_v/dcache_axi.v:324:    if (pop_i & valid_o)
+top_cache_axi/src_v/dcache_axi.v:328:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+top_cache_axi/src_v/dcache_axi.v:331:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+top_cache_axi/src_v/dcache_axi_axi.v:110:else if (inport_valid_i && inport_write_i && inport_accept_o)
+top_cache_axi/src_v/dcache_axi_axi.v:127:else if (inport_valid_i && inport_accept_o && ((outport_awvalid_o && !outport_awready_i) || (outport_wvalid_o && !outport_wready_i) || (outport_arvalid_o && !outport_arready_i)))
+top_cache_axi/src_v/dcache_axi_axi.v:140:wire          inport_wlast_w = valid_q ? buf_q[83:83] : (inport_len_i == 8'd0 && req_cnt_q == 8'd0) || (req_cnt_q == 8'd1);
+top_cache_axi/src_v/dcache_axi_axi.v:157:wire wr_cmd_accepted_w  = (outport_awvalid_o && outport_awready_i) || awvalid_q;
+top_cache_axi/src_v/dcache_axi_axi.v:158:wire wr_data_accepted_w = (outport_wvalid_o  && outport_wready_i)  || wvalid_q;
+top_cache_axi/src_v/dcache_axi_axi.v:159:wire wr_data_last_w     = (wvalid_q & wlast_q) || (outport_wvalid_o && outport_wready_i && outport_wlast_o);
+top_cache_axi/src_v/dcache_axi_axi.v:164:else if (outport_awvalid_o && outport_awready_i && (!wr_data_accepted_w || !wr_data_last_w))
+top_cache_axi/src_v/dcache_axi_axi.v:166:else if (wr_data_accepted_w && wr_data_last_w)
+top_cache_axi/src_v/dcache_axi_axi.v:172:else if (outport_wvalid_o && outport_wready_i && !wr_cmd_accepted_w)
+top_cache_axi/src_v/dcache_axi_axi.v:180:else if (outport_wvalid_o && outport_wready_i)
+top_cache_axi/src_v/dcache_axi_axi.v:183:assign outport_awvalid_o = (inport_valid_w & inport_write_w & ~awvalid_q);
+top_cache_axi/src_v/dcache_axi_axi.v:189:assign outport_wvalid_o  = (inport_valid_w & inport_write_w & ~wvalid_q);
+top_cache_axi/src_v/dcache_axi_axi.v:202:assign outport_arvalid_o = inport_valid_w & ~inport_write_w;
+top_cache_axi/src_v/dcache_axi_axi.v:219:                           ((outport_awvalid_o && outport_awready_i) || 
+top_cache_axi/src_v/dcache_axi_axi.v:220:                            (outport_wvalid_o  && outport_wready_i)  ||
+top_cache_axi/src_v/dcache_axi_axi.v:221:                            (outport_arvalid_o && outport_arready_i));
+top_cache_axi/src_v/dcache_core.v:208:        else if ((|mem_wr_m_q) && mem_rd_i && mem_addr_i[31:2] == mem_addr_m_q[31:2])
+top_cache_axi/src_v/dcache_core.v:257:    if (state_q == STATE_LOOKUP && (next_state_r == STATE_LOOKUP || next_state_r == STATE_WRITEBACK))
+top_cache_axi/src_v/dcache_core.v:334:    else if (state_q == STATE_EVICT_WAIT && pmem_ack_w)
+top_cache_axi/src_v/dcache_core.v:338:        tag0_write_m_r = pmem_ack_w && pmem_last_w && (replace_way_q == 0);
+top_cache_axi/src_v/dcache_core.v:390:    else if (state_q == STATE_EVICT_WAIT && pmem_ack_w)
+top_cache_axi/src_v/dcache_core.v:394:        tag1_write_m_r = pmem_ack_w && pmem_last_w && (replace_way_q == 1);
+top_cache_axi/src_v/dcache_core.v:434:                   | (tag0_hit_m_w & tag0_dirty_m_w)
+top_cache_axi/src_v/dcache_core.v:435:                   | (tag1_hit_m_w & tag1_dirty_m_w)
+top_cache_axi/src_v/dcache_core.v:439:                   | (tag0_valid_m_w & tag0_dirty_m_w)
+top_cache_axi/src_v/dcache_core.v:440:                   | (tag1_valid_m_w & tag1_dirty_m_w)
+top_cache_axi/src_v/dcache_core.v:457:            evict_way_r  = tag0_valid_m_w && tag0_dirty_m_w;
+top_cache_axi/src_v/dcache_core.v:464:            evict_way_r  = tag1_valid_m_w && tag1_dirty_m_w;
+top_cache_axi/src_v/dcache_core.v:490:else if (state_q != STATE_REFILL && next_state_r == STATE_REFILL)
+top_cache_axi/src_v/dcache_core.v:492:else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+top_cache_axi/src_v/dcache_core.v:494:else if (state_q == STATE_REFILL && pmem_ack_w)
+top_cache_axi/src_v/dcache_core.v:496:else if (state_q == STATE_EVICT && pmem_accept_w)
+top_cache_axi/src_v/dcache_core.v:516:    else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+top_cache_axi/src_v/dcache_core.v:539:        data0_write_m_r = (pmem_ack_w && replace_way_q == 0) ? 4'b1111 : 4'b0000;
+top_cache_axi/src_v/dcache_core.v:576:        data1_write_m_r = (pmem_ack_w && replace_way_q == 1) ? 4'b1111 : 4'b0000;
+top_cache_axi/src_v/dcache_core.v:614:else if ((state_q == STATE_RESET) || (state_q == STATE_FLUSH && next_state_r == STATE_FLUSH_ADDR))
+top_cache_axi/src_v/dcache_core.v:622:else if (state_q == STATE_LOOKUP && next_state_r == STATE_FLUSH_ADDR)
+top_cache_axi/src_v/dcache_core.v:624:else if (state_q == STATE_FLUSH && next_state_r == STATE_LOOKUP)
+top_cache_axi/src_v/dcache_core.v:646:else if (flushing_q && tag_dirty_any_m_w && !evict_way_w && state_q != STATE_FLUSH_ADDR)
+top_cache_axi/src_v/dcache_core.v:648:else if (state_q == STATE_EVICT_WAIT && next_state_r == STATE_FLUSH_ADDR)
+top_cache_axi/src_v/dcache_core.v:650:else if (state_q == STATE_FLUSH && next_state_r == STATE_LOOKUP)
+top_cache_axi/src_v/dcache_core.v:652:else if (state_q == STATE_LOOKUP && next_state_r == STATE_FLUSH_ADDR)
+top_cache_axi/src_v/dcache_core.v:734:        else if (mem_writeback_i && mem_accept_o)
+top_cache_axi/src_v/dcache_core.v:737:        else if (mem_flush_i && mem_accept_o)
+top_cache_axi/src_v/dcache_core.v:740:        else if (mem_invalidate_i && mem_accept_o)
+top_cache_axi/src_v/dcache_core.v:749:        if (pmem_ack_w && pmem_last_w)
+top_cache_axi/src_v/dcache_core.v:772:        if (pmem_accept_w && pmem_last_w)
+top_cache_axi/src_v/dcache_core.v:781:        if (pmem_ack_w && mem_writeback_m_q)
+top_cache_axi/src_v/dcache_core.v:784:        else if (pmem_ack_w && flushing_q)
+top_cache_axi/src_v/dcache_core.v:855:else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+top_cache_axi/src_v/dcache_core.v:864:else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+top_cache_axi/src_v/dcache_core.v:866:else if (pmem_rd_w && pmem_accept_w)
+top_cache_axi/src_v/dcache_core.v:868:else if (state_q == STATE_REFILL && pmem_ack_w)
+top_cache_axi/src_v/dcache_core.v:870:else if (state_q == STATE_EVICT && pmem_accept_w)
+top_cache_axi/src_v/dcache_core.v:880:else if (|pmem_len_w && pmem_accept_w)
+top_cache_axi/src_v/dcache_core.v:912:else if (pmem_ack_w && pmem_error_w)
+top_cache_axi/src_v/dcache_core.v:922:wire refill_request_w   = (state_q != STATE_REFILL && next_state_r == STATE_REFILL);
+top_cache_axi/src_v/dcache_core.v:933:assign pmem_len_w        = (refill_request_w || pmem_rd_q || (state_q == STATE_EVICT && pmem_wr0_q)) ? 8'd7 : 8'd0;
+top_cache_axi/src_v/icache.v:184:else if (req_rd_i && req_accept_o)
+top_cache_axi/src_v/icache.v:197:else if (req_rd_i && req_accept_o)
+top_cache_axi/src_v/icache.v:251:        tag0_write_r = axi_rvalid_i && axi_rlast_i && (replace_way_q == 0);
+top_cache_axi/src_v/icache.v:284:        tag1_write_r = axi_rvalid_i && axi_rlast_i && (replace_way_q == 1);
+top_cache_axi/src_v/icache.v:322:else if (state_q == STATE_LOOKUP && next_state_r == STATE_REFILL)
+top_cache_axi/src_v/icache.v:324:else if (state_q == STATE_REFILL && axi_rvalid_i)
+top_cache_axi/src_v/icache.v:348:    data0_write_r = axi_rvalid_i && replace_way_q == 0;
+top_cache_axi/src_v/icache.v:368:    data1_write_r = axi_rvalid_i && replace_way_q == 1;
+top_cache_axi/src_v/icache.v:395:else if (req_invalidate_i && req_accept_o)
+top_cache_axi/src_v/icache.v:408:else if (axi_rvalid_i && axi_rlast_i)
+top_cache_axi/src_v/icache.v:414:assign req_valid_o = lookup_valid_q && ((state_q == STATE_LOOKUP) ? tag_hit_any_w : 1'b0);
+top_cache_axi/src_v/icache.v:466:        if (axi_rvalid_i && axi_rlast_i)
+top_cache_axi/src_v/icache.v:488:assign req_accept_o = (state_q == STATE_LOOKUP && next_state_r != STATE_REFILL);
+top_cache_axi/src_v/icache.v:496:else if (req_invalidate_i && req_accept_o)
+top_cache_axi/src_v/icache.v:520:else if (axi_rvalid_i && axi_rready_o && axi_rresp_i != 2'b0)
+top_cache_axi/src_v/icache.v:543:assign axi_arvalid_o = (state_q == STATE_LOOKUP && next_state_r == STATE_REFILL) || axi_arvalid_q;
+top_tcm_axi/tb/testbench.h:97:        sc_assert(base >= 0x00000000 && ((base + size) < (0x00000000 + (64 * 1024))));
+top_tcm_axi/tb/axi4_lite.h:39:    bool operator == (const axi4_lite_master & v) const
+top_tcm_axi/tb/axi4_lite.h:54:    friend void sc_trace(sc_trace_file *tf, const axi4_lite_master & v, const std::string & path)
+top_tcm_axi/tb/axi4_lite.h:67:    friend ostream& operator << (ostream& os, axi4_lite_master const & v)
+top_tcm_axi/tb/axi4_lite.h:81:    friend istream& operator >> ( istream& is, axi4_lite_master & val)
+top_tcm_axi/tb/axi4_lite.h:131:    bool operator == (const axi4_lite_slave & v) const
+top_tcm_axi/tb/axi4_lite.h:145:    friend void sc_trace(sc_trace_file *tf, const axi4_lite_slave & v, const std::string & path)
+top_tcm_axi/tb/axi4_lite.h:157:    friend ostream& operator << (ostream& os, axi4_lite_slave const & v)
+top_tcm_axi/tb/axi4_lite.h:170:    friend istream& operator >> ( istream& is, axi4_lite_slave & val)
+top_tcm_axi/tb/axi4.h:53:    bool operator == (const axi4_master & v) const
+top_tcm_axi/tb/axi4.h:75:    friend void sc_trace(sc_trace_file *tf, const axi4_master & v, const std::string & path)
+top_tcm_axi/tb/axi4.h:95:    friend ostream& operator << (ostream& os, axi4_master const & v)
+top_tcm_axi/tb/axi4.h:116:    friend istream& operator >> ( istream& is, axi4_master & val)
+top_tcm_axi/tb/axi4.h:179:    bool operator == (const axi4_slave & v) const
+top_tcm_axi/tb/axi4.h:196:    friend void sc_trace(sc_trace_file *tf, const axi4_slave & v, const std::string & path)
+top_tcm_axi/tb/axi4.h:211:    friend ostream& operator << (ostream& os, axi4_slave const & v)
+top_tcm_axi/tb/axi4.h:227:    friend istream& operator >> ( istream& is, axi4_slave & val)
+top_tcm_axi/tb/main.cpp:40:static void assert_handler(const sc_report& rep, const sc_actions& actions)
+top_tcm_axi/tb/main.cpp:42:    sc_report_handler::default_handler(rep, actions & ~SC_ABORT);
+top_tcm_axi/tb/main.cpp:44:    if ( actions & SC_ABORT )
+top_tcm_axi/tb/main.cpp:90:    if (s && strcmp(s, ""))
+top_tcm_axi/tb/testbench_vbase.h:68:    bool waves_delayed(sc_core::sc_time &delay)
+top_tcm_axi/src_v/dport_mux.v:113:wire tcm_access_w = (mem_addr_i >= TCM_MEM_BASE && mem_addr_i < (TCM_MEM_BASE + 32'd65536));
+top_tcm_axi/src_v/dport_mux.v:121:assign mem_tcm_rd_o         = (tcm_access_w & ~hold_w) ? mem_rd_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:122:assign mem_tcm_wr_o         = (tcm_access_w & ~hold_w) ? mem_wr_i : 4'b0;
+top_tcm_axi/src_v/dport_mux.v:125:assign mem_tcm_invalidate_o = (tcm_access_w & ~hold_w) ? mem_invalidate_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:126:assign mem_tcm_writeback_o  = (tcm_access_w & ~hold_w) ? mem_writeback_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:127:assign mem_tcm_flush_o      = (tcm_access_w & ~hold_w) ? mem_flush_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:131:assign mem_ext_rd_o         = (~tcm_access_w & ~hold_w) ? mem_rd_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:132:assign mem_ext_wr_o         = (~tcm_access_w & ~hold_w) ? mem_wr_i : 4'b0;
+top_tcm_axi/src_v/dport_mux.v:135:assign mem_ext_invalidate_o = (~tcm_access_w & ~hold_w) ? mem_invalidate_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:136:assign mem_ext_writeback_o  = (~tcm_access_w & ~hold_w) ? mem_writeback_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:137:assign mem_ext_flush_o      = (~tcm_access_w & ~hold_w) ? mem_flush_i : 1'b0;
+top_tcm_axi/src_v/dport_mux.v:152:    if ((request_w && mem_accept_o) && !mem_ack_o)
+top_tcm_axi/src_v/dport_mux.v:154:    else if (!(request_w && mem_accept_o) && mem_ack_o)
+top_tcm_axi/src_v/dport_mux.v:167:else if (request_w && mem_accept_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:123:        calculate_addr_next = (addr & ~mask) | ((addr + 4) & mask);
+top_tcm_axi/src_v/tcm_mem_pmem.v:181:    if (axi_awvalid_i && axi_awready_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:184:        if (axi_wvalid_i && axi_wready_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:206:    else if (axi_arvalid_i && axi_arready_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:253:    if (axi_arvalid_i && axi_arready_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:256:    else if (axi_awvalid_i && axi_awready_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:317:wire write_active_w  = (axi_awvalid_i || req_wr_q) && !req_rd_q && req_fifo_accept_w && (write_prio_w || req_wr_q || !axi_arvalid_i);
+top_tcm_axi/src_v/tcm_mem_pmem.v:318:wire read_active_w   = (axi_arvalid_i || req_rd_q) && !req_wr_q && req_fifo_accept_w && (read_prio_w || req_rd_q || !axi_awvalid_i);
+top_tcm_axi/src_v/tcm_mem_pmem.v:320:assign axi_awready_o = write_active_w && !req_wr_q && ram_accept_i && req_fifo_accept_w;
+top_tcm_axi/src_v/tcm_mem_pmem.v:321:assign axi_wready_o  = write_active_w &&              ram_accept_i && req_fifo_accept_w;
+top_tcm_axi/src_v/tcm_mem_pmem.v:322:assign axi_arready_o = read_active_w  && !req_rd_q && ram_accept_i && req_fifo_accept_w;
+top_tcm_axi/src_v/tcm_mem_pmem.v:327:wire wr_w    = write_active_w && axi_wvalid_i;
+top_tcm_axi/src_v/tcm_mem_pmem.v:341:assign axi_bvalid_o  = resp_valid_w & resp_is_write_w & resp_is_last_w;
+top_tcm_axi/src_v/tcm_mem_pmem.v:345:assign axi_rvalid_o  = resp_valid_w & resp_is_read_w;
+top_tcm_axi/src_v/tcm_mem_pmem.v:350:assign resp_accept_w    = (axi_rvalid_o & axi_rready_i) | 
+top_tcm_axi/src_v/tcm_mem_pmem.v:351:                          (axi_bvalid_o & axi_bready_i) |
+top_tcm_axi/src_v/tcm_mem_pmem.v:352:                          (resp_valid_w & resp_is_write_w & !resp_is_last_w); // Ignore write resps mid burst
+top_tcm_axi/src_v/tcm_mem_pmem.v:412:    if (push_i & accept_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:419:    if (pop_i & valid_o)
+top_tcm_axi/src_v/tcm_mem_pmem.v:423:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+top_tcm_axi/src_v/tcm_mem_pmem.v:426:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+top_tcm_axi/src_v/dport_axi.v:138:assign mem_accept_o = req_accept_w & res_accept_w;
+top_tcm_axi/src_v/dport_axi.v:185:else if (axi_awvalid_o && axi_awready_i && axi_wvalid_o && !axi_wready_i)
+top_tcm_axi/src_v/dport_axi.v:187:else if (axi_wvalid_o && axi_wready_i)
+top_tcm_axi/src_v/dport_axi.v:193:else if (axi_wvalid_o && axi_wready_i && axi_awvalid_o && !axi_awready_i)
+top_tcm_axi/src_v/dport_axi.v:195:else if (axi_awvalid_o && axi_awready_i)
+top_tcm_axi/src_v/dport_axi.v:219:assign read_complete_w = axi_arvalid_o && axi_arready_i;
+top_tcm_axi/src_v/dport_axi.v:289:    if (push_i & accept_o)
+top_tcm_axi/src_v/dport_axi.v:296:    if (pop_i & valid_o)
+top_tcm_axi/src_v/dport_axi.v:300:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+top_tcm_axi/src_v/dport_axi.v:303:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+top_tcm_wrapper/dport_mux.v:113:wire tcm_access_w = (mem_addr_i >= TCM_MEM_BASE && mem_addr_i < (TCM_MEM_BASE + 32'd65536));
+top_tcm_wrapper/dport_mux.v:121:assign mem_tcm_rd_o         = (tcm_access_w & ~hold_w) ? mem_rd_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:122:assign mem_tcm_wr_o         = (tcm_access_w & ~hold_w) ? mem_wr_i : 4'b0;
+top_tcm_wrapper/dport_mux.v:125:assign mem_tcm_invalidate_o = (tcm_access_w & ~hold_w) ? mem_invalidate_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:126:assign mem_tcm_writeback_o  = (tcm_access_w & ~hold_w) ? mem_writeback_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:127:assign mem_tcm_flush_o      = (tcm_access_w & ~hold_w) ? mem_flush_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:131:assign mem_ext_rd_o         = (~tcm_access_w & ~hold_w) ? mem_rd_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:132:assign mem_ext_wr_o         = (~tcm_access_w & ~hold_w) ? mem_wr_i : 4'b0;
+top_tcm_wrapper/dport_mux.v:135:assign mem_ext_invalidate_o = (~tcm_access_w & ~hold_w) ? mem_invalidate_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:136:assign mem_ext_writeback_o  = (~tcm_access_w & ~hold_w) ? mem_writeback_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:137:assign mem_ext_flush_o      = (~tcm_access_w & ~hold_w) ? mem_flush_i : 1'b0;
+top_tcm_wrapper/dport_mux.v:152:    if ((request_w && mem_accept_o) && !mem_ack_o)
+top_tcm_wrapper/dport_mux.v:154:    else if (!(request_w && mem_accept_o) && mem_ack_o)
+top_tcm_wrapper/dport_mux.v:167:else if (request_w && mem_accept_o)
+top_tcm_wrapper/tcm_mem_pmem.v:123:        calculate_addr_next = (addr & ~mask) | ((addr + 4) & mask);
+top_tcm_wrapper/tcm_mem_pmem.v:189:    if (axi_awvalid_i && axi_awready_o)
+top_tcm_wrapper/tcm_mem_pmem.v:192:        if (axi_wvalid_i && axi_wready_o)
+top_tcm_wrapper/tcm_mem_pmem.v:214:    else if (axi_arvalid_i && axi_arready_o)
+top_tcm_wrapper/tcm_mem_pmem.v:261:    if (axi_arvalid_i && axi_arready_o)
+top_tcm_wrapper/tcm_mem_pmem.v:264:    else if (axi_awvalid_i && axi_awready_o)
+top_tcm_wrapper/tcm_mem_pmem.v:325:wire write_active_w  = (axi_awvalid_i || req_wr_q) && !req_rd_q && req_fifo_accept_w && (write_prio_w || req_wr_q || !axi_arvalid_i);
+top_tcm_wrapper/tcm_mem_pmem.v:326:wire read_active_w   = (axi_arvalid_i || req_rd_q) && !req_wr_q && req_fifo_accept_w && (read_prio_w || req_rd_q || !axi_awvalid_i);
+top_tcm_wrapper/tcm_mem_pmem.v:328:assign axi_awready_o = write_active_w && !req_wr_q && ram_accept_i && req_fifo_accept_w;
+top_tcm_wrapper/tcm_mem_pmem.v:329:assign axi_wready_o  = write_active_w &&              ram_accept_i && req_fifo_accept_w;
+top_tcm_wrapper/tcm_mem_pmem.v:330:assign axi_arready_o = read_active_w  && !req_rd_q && ram_accept_i && req_fifo_accept_w;
+top_tcm_wrapper/tcm_mem_pmem.v:335:wire wr_w    = write_active_w && axi_wvalid_i;
+top_tcm_wrapper/tcm_mem_pmem.v:349:assign axi_bvalid_o  = resp_valid_w & resp_is_write_w & resp_is_last_w;
+top_tcm_wrapper/tcm_mem_pmem.v:353:assign axi_rvalid_o  = resp_valid_w & resp_is_read_w;
+top_tcm_wrapper/tcm_mem_pmem.v:358:assign resp_accept_w    = (axi_rvalid_o & axi_rready_i) | 
+top_tcm_wrapper/tcm_mem_pmem.v:359:                          (axi_bvalid_o & axi_bready_i) |
+top_tcm_wrapper/tcm_mem_pmem.v:360:                          (resp_valid_w & resp_is_write_w & !resp_is_last_w); // Ignore write resps mid burst
+top_tcm_wrapper/tcm_mem_pmem.v:420:    if (push_i & accept_o)
+top_tcm_wrapper/tcm_mem_pmem.v:427:    if (pop_i & valid_o)
+top_tcm_wrapper/tcm_mem_pmem.v:431:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+top_tcm_wrapper/tcm_mem_pmem.v:434:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+top_tcm_wrapper/dport_axi.v:148:assign mem_accept_o = req_accept_w & res_accept_w;
+top_tcm_wrapper/dport_axi.v:195:else if (axi_awvalid_o && axi_awready_i && axi_wvalid_o && !axi_wready_i)
+top_tcm_wrapper/dport_axi.v:197:else if (axi_wvalid_o && axi_wready_i)
+top_tcm_wrapper/dport_axi.v:203:else if (axi_wvalid_o && axi_wready_i && axi_awvalid_o && !axi_awready_i)
+top_tcm_wrapper/dport_axi.v:205:else if (axi_awvalid_o && axi_awready_i)
+top_tcm_wrapper/dport_axi.v:236:assign read_complete_w = axi_arvalid_o && axi_arready_i;
+top_tcm_wrapper/dport_axi.v:306:    if (push_i & accept_o)
+top_tcm_wrapper/dport_axi.v:313:    if (pop_i & valid_o)
+top_tcm_wrapper/dport_axi.v:317:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+top_tcm_wrapper/dport_axi.v:320:    else if (~(push_i & accept_o) & (pop_i & valid_o))
