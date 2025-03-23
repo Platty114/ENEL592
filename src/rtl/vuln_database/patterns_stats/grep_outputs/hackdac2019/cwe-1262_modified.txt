@@ -1,0 +1,94 @@
+fpga/src/axi2apb/src/axi2apb_wrap.sv:103:        end else if (AXI_DATA_WIDTH == 64 && APB_DATA_WIDTH == 32) begin
+fpga/src/bootrom/src/sd.c:75:    return r1 == 0x1 && (r4 & 0xf) == 0x1 && r5 == 0xaa;
+src/frontend/frontend.sv:272:    assign bht_update.valid = resolved_branch_i.valid & (resolved_branch_i.cf_type == BHT);
+src/frontend/frontend.sv:277:    assign btb_update.valid = resolved_branch_i.valid & (resolved_branch_i.cf_type == BTB);
+src/issue_read_operands.sv:227:        if (issue_instr_i.use_imm && (issue_instr_i.fu != STORE) && (issue_instr_i.fu != CTRL_FLOW) && !is_rs2_fpr(issue_instr_i.op)) begin
+src/issue_read_operands.sv:304:                    if (is_rd_fpr(issue_instr_i.op) ? (we_fpr_i[i] && waddr_i[i] == issue_instr_i.rd)
+src/issue_read_operands.sv:305:                                                    : (we_gpr_i[i] && waddr_i[i] == issue_instr_i.rd)) begin
+src/issue_read_operands.sv:324:        if (mult_valid_q && issue_instr_i.fu != MULT) begin
+src/mmu.sv:191:        iaccess_err   = icache_areq_i.fetch_req && (((priv_lvl_i == riscv::PRIV_LVL_U) && ~itlb_content.u)
+src/axi_adapter.sv:287:                        if (state_q == WAIT_R_VALID_MULTIPLE && cnt_q == BURST_SIZE) begin
+src/csr_regfile.sv:618:            if (ex_i.valid && ex_i.cause == riscv::BREAKPOINT) begin
+src/csr_regfile.sv:675:        if (debug_mode_q && ex_i.valid && ex_i.cause == riscv::BREAKPOINT) begin
+src/csr_regfile.sv:684:        if (mprv && satp_q.mode == MODE_SV39 && (mstatus_q.mpp != riscv::PRIV_LVL_M))
+src/csr_regfile.sv:830:                                & ((mstatus_q.mie & (priv_lvl_o == riscv::PRIV_LVL_M))
+src/csr_regfile.sv:840:                if ((mstatus_q.sie && priv_lvl_o == riscv::PRIV_LVL_S) || priv_lvl_o == riscv::PRIV_LVL_U)
+src/csr_regfile.sv:854:            if ((riscv::priv_lvl_t'(priv_lvl_o & csr_addr.csr_decode.priv_lvl) != csr_addr.csr_decode.priv_lvl) && !(csr_addr.address==riscv::CSR_MEPC)) begin   
+src/csr_regfile.sv:881:        end else if (!debug_mode_q && csr_op_i == WFI && !ex_i.valid) begin
+src/csr_regfile.sv:948:    assign en_translation_o = (satp_q.mode == 4'h8 && priv_lvl_o != riscv::PRIV_LVL_M)
+src/decoder.sv:250:                        if (FP_PRESENT && XFVEC && fs_i != riscv::Off) begin
+src/decoder.sv:637:                    if (FP_PRESENT && fs_i != riscv::Off) begin // only generate decoder if FP extensions are enabled (static)
+src/decoder.sv:660:                    if (FP_PRESENT && fs_i != riscv::Off) begin // only generate decoder if FP extensions are enabled (static)
+src/decoder.sv:689:                    if (FP_PRESENT && fs_i != riscv::Off) begin // only generate decoder if FP extensions are enabled (static)
+src/decoder.sv:742:                    if (FP_PRESENT && fs_i != riscv::Off) begin // only generate decoder if FP extensions are enabled (static)
+src/decoder.sv:831:                                if (instr.rftype.rm == 3'b000 || (XF16ALT && instr.rftype.rm == 3'b100)) // FP16ALT has separate encoding
+src/decoder.sv:833:                                else if (instr.rftype.rm == 3'b001 || (XF16ALT && instr.rftype.rm == 3'b101)) // FP16ALT has separate encoding
+src/decoder.sv:843:                                if (!(instr.rftype.rm == 3'b000 || (XF16ALT && instr.rftype.rm == 3'b100)))
+src/decoder.sv:899:                    if (RVA && instr.stype.funct3 == 3'h2) begin
+src/decoder.sv:918:                    end else if (RVA && instr.stype.funct3 == 3'h3) begin
+src/axi_node/src/axi_BW_allocator.sv:207:        if((error_req_i == 1'b1) && (outstanding_trans_o == 1'b0))
+src/common_cells/src/cdc_fifo_gray.sv:75:      else if (fifo_write && fifo_widx == i)
+src/common_cells/src/fifo_v3.sv:100:        if (FALL_THROUGH && (status_cnt_q == 0) && push_i && pop_i) begin
+src/common_cells/src/cdc_fifo_2phase.sv:71:      else if (fifo_write && fifo_widx == i)
+src/common_cells/src/deprecated/generic_fifo_adv.sv:152:                      if((Pop_Pointer_CS == Push_Pointer_CS -1 ) || ((Pop_Pointer_CS == DATA_DEPTH-1) && (Push_Pointer_CS == 0) ))
+src/common_cells/src/deprecated/generic_fifo_adv.sv:190:                      if(( Push_Pointer_CS == Pop_Pointer_CS - 1) || ( (Push_Pointer_CS == DATA_DEPTH-1) && (Pop_Pointer_CS == 0) ))
+src/common_cells/src/deprecated/generic_fifo_adv.sv:257:             if((grant_o == 1'b1) && (valid_i == 1'b1))
+src/common_cells/src/serial_deglitch.sv:33:                if (d_i == 1'b1 && count_q != SIZE[SIZE-1:0]) begin
+src/common_cells/src/serial_deglitch.sv:35:                end else if (d_i == 1'b0 && count_q != SIZE[SIZE-1:0]) begin
+src/common_cells/src/ready_valid_delay.sv:66:                        if (FixedDelay == 1 || (StallRandom && counter_load == 1)) begin
+src/common_cells/src/ready_valid_delay.sv:70:                        if (StallRandom && counter_load == 0) begin
+src/fpu_wrap.sv:194:                   if (!fpu_vec_op_d && fpu_rm_i==3'b101)
+src/commit_stage.sv:185:                if (commit_instr_i[0].op == FENCE_I || (flush_dcache_i && commit_instr_i[0].fu != STORE)) begin
+src/commit_stage.sv:287:            if (csr_exception_i.valid && csr_exception_i.cause[63] && commit_instr_i[0].fu != CSR) begin
+src/ariane_regfile.sv:77:                if (we_i[i] && (waddr_i[i] == j))
+src/debug/dmi_jtag.sv:107:                if (dmi_access && update_dr && (error_q == DMINoError)) begin
+src/debug/dmi_jtag.sv:111:                    if ((dm::dtm_op_t'(dmi.op) == dm::DTM_READ) && (pass_chk == 1'b1)) begin
+src/debug/dmi_jtag.sv:169:        if (update_dr && state_q != Idle) begin
+src/debug/dm_sba.sv:116:        if (sbaccess_i > 3 && state_q != Idle) begin
+src/debug/dm_csrs.sv:224:        if (dmi_req_ready_o && dmi_req_valid_i && dtm_op == dm::DTM_READ) begin
+src/debug/dm_csrs.sv:297:        if (dmi_req_ready_o && dmi_req_valid_i && dtm_op == dm::DTM_WRITE) begin
+src/debug/dm_csrs.sv:562:        @(posedge clk_i) disable iff (~rst_ni) (dmi_req_ready_o && dmi_req_valid_i && dtm_op == dm::DTM_READ) |->
+src/store_unit.sv:164:        if (ex_i.valid && (state_q != IDLE)) begin
+src/store_unit.sv:207:    assign store_buffer_valid = st_valid & (amo_op_q == AMO_NONE);
+src/store_unit.sv:208:    assign amo_buffer_valid = st_valid & (amo_op_q != AMO_NONE);
+src/scoreboard.sv:312:                @(posedge clk_i) wb_valid_i[i] && wb_valid_i[j] && (i != j) |-> (trans_id_i[i] != trans_id_i[j]))
+src/store_buffer.sv:264:        @(posedge clk_i) rst_ni && (speculative_status_cnt_q == DEPTH_SPEC) |-> !valid_i)
+src/store_buffer.sv:268:        @(posedge clk_i) rst_ni && (speculative_status_cnt_q == 0) |-> !commit_i)
+src/store_buffer.sv:272:        @(posedge clk_i) rst_ni && (commit_status_cnt_q == DEPTH_COMMIT) |-> !commit_i)
+src/fpga-support/synth/BramDwc/deps/BramDwc.sv:85:    assert ((ADDR_BITW == FromMaster_PS.ADDR_BITW) && (ADDR_BITW == ToSlave_PM.ADDR_BITW))
+src/fpga-support/rtl/BramDwc.sv:85:    assert ((ADDR_BITW == FromMaster_PS.ADDR_BITW) && (ADDR_BITW == ToSlave_PM.ADDR_BITW))
+src/fpga-support/rtl/BramLogger.sv:197:        if (Clear_SI && WrCntA_SP != 0) begin
+src/cache_subsystem/serpent_icache.sv:178:        if (mem_rtrn_vld_i && mem_rtrn_i.rtype == ICACHE_INV_REQ) begin
+src/cache_subsystem/serpent_icache.sv:311:                if (mem_rtrn_vld_i && mem_rtrn_i.rtype == ICACHE_IFILL_ACK) begin
+src/cache_subsystem/serpent_icache.sv:339:                if (mem_rtrn_vld_i && mem_rtrn_i.rtype == ICACHE_IFILL_ACK) begin
+src/cache_subsystem/serpent_cache_subsystem.sv:197:assign axi_rd_req = l15_req.l15_val && (l15_req.l15_rqtype==serpent_cache_pkg::L15_LOAD_RQ | ifill) && !rd_pending_q;
+src/cache_subsystem/serpent_cache_subsystem.sv:198:assign axi_wr_req = l15_req.l15_val && (l15_req.l15_rqtype==serpent_cache_pkg::L15_STORE_RQ);
+src/cache_subsystem/std_icache.sv:303:                if (areq_i.fetch_valid && (state_q == WAIT_ADDRESS_TRANSLATION)) begin
+src/cache_subsystem/miss_handler.sv:420:                   ((reservation_q.valid && reservation_q.address != amo_req_i.operand_a[63:3]) || !reservation_q.valid))) begin
+src/branch_unit.sv:83:                    if (branch_predict_i.predict_taken && target_address != branch_predict_i.predict_address) begin
+src/branch_unit.sv:115:        if (branch_valid_i && target_address[0] != 1'b0)
+src/util/instruction_tracer.svh:142:            if (tracer_if.pck.exception.valid && !(tracer_if.pck.debug_mode && tracer_if.pck.exception.cause == riscv::BREAKPOINT)) begin
+src/util/instruction_tracer.svh:151:                if (tracer_if.pck.we_gpr[i] && tracer_if.pck.waddr[i] != 5'b0) begin
+src/util/instruction_trace_item.svh:526:            if (rd != 0 && rs1 != 0) begin
+src/util/instruction_trace_item.svh:535:            if (rd != 0 && rs1 != 0) begin
+src/axi/src/axi_arbiter.sv:116:      assign in_ack_o[iA] = inner_ack[i] && (sel == 0);
+src/axi/src/axi_arbiter.sv:117:      assign in_ack_o[iB] = inner_ack[i] && (sel == 1);
+src/axi/src/axi_lite_xbar.sv:190:    assign master[i].ar_ready      = master_arready && (i == master_sel_rd);
+src/axi/src/axi_lite_xbar.sv:193:    assign master[i].r_valid       = master_rvalid && (i == master_sel_rd);
+src/axi/src/axi_lite_xbar.sv:197:    assign master[i].aw_ready      = master_awready && (i == master_sel_wr);
+src/axi/src/axi_lite_xbar.sv:201:    assign master[i].w_ready       = master_wready && (i == master_sel_wr);
+src/axi/src/axi_lite_xbar.sv:204:    assign master[i].b_valid       = master_bvalid && (i == master_sel_wr);
+src/axi/src/axi_lite_xbar.sv:251:    assign slave[i].ar_valid     = slave_arvalid && (i == slave_sel_rd);
+src/axi/src/axi_lite_xbar.sv:256:    assign slave[i].r_ready      = slave_rready && (i == slave_sel_rd);
+src/axi/src/axi_lite_xbar.sv:259:    assign slave[i].aw_valid     = slave_awvalid && (i == slave_sel_wr);
+src/axi/src/axi_lite_xbar.sv:263:    assign slave[i].w_valid      = slave_wvalid && (i == slave_sel_wr);
+src/axi/src/axi_lite_xbar.sv:267:    assign slave[i].b_ready      = slave_bready && (i == slave_sel_wr);
+src/tlb.sv:70:            if (tags_q[i].valid && lu_asid_i == tags_q[i].asid && vpn2 == tags_q[i].vpn2) begin
+src/load_unit.sv:239:        if (req_port_i.data_rvalid && state_q != WAIT_FLUSH) begin
+tb/tb_serdiv/hdl/tb.sv:235:          if((op_b_tmp == 0) && (opcode_i[0] == 0)) begin
+tb/tb_serdiv/hdl/tb.sv:237:          end else if ((op_b_tmp == 0) && (opcode_i[0] == 1'b1)) begin
+tb/tb_serdiv/hdl/tb.sv:239:          end else if ((op_a_tmp == MIN_NUM)  && (op_b_tmp == -1) && (opcode_i[0] == 1'b1)) begin
+tb/tb_serpent_dcache/hdl/tb_readport.sv:333:      for (int k=0;k<seq_num_resp_i && seq_type_i != IDLE_SEQ;k++) begin
+tb/tb_serpent_dcache/hdl/tb_readport.sv:345:        ok=(dut_req_port_i.data_rdata ==? exp_rdata) && (exp_paddr_i == act_paddr_i);
+tb/tb_serpent_icache/hdl/tb.sv:391:        ok=(dreq_o.data == exp_data[FETCH_WIDTH-1:0]) && (dreq_o.vaddr == exp_vaddr);
+tb/ariane_tb.cpp:191:          while (*plusarg && (legal_verilog_plusarg == 0)){

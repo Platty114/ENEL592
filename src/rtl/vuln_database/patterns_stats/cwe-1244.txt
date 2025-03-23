@@ -50,8 +50,8 @@ Hack@DAC 2019 SoC: 500 and 26 occurances
 Hack@DAC 2021 SoC: 3001 and 109 occurances
 PicoRV32:          91 and 0 occurances
 Hummingbirdv2:     591 and 16 occurances
-UltraembeddedOld:  215 occurances
-UltraembeddedNew:  0 occurances
+UltraembeddedOld:  215 and 0 occurances
+UltraembeddedNew:  182 and 0 occurances
 
 ----------------------------------- insertion information ------------------------------------
 
@@ -77,4 +77,4 @@ ultraembedded(old)
 1. Type 2, riscv_mmu.v, 205, ultraemebedded(old)
 
 ultraembedded(new)
-1. Type 4, 
+1. Type 4, birisc_csr.v, 220, ultraembedded(new)

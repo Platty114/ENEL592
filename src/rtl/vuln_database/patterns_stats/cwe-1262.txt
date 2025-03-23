@@ -15,8 +15,10 @@ paired with another check. This can be found using the following regex
 modified
 [~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
 
+(&&|&) *!*~*[(]*[~a-zA-Z0-9_\-\.\[\]]+ *(!=|==) *[~a-zA-Z0-9_\-\.\[\]:]+[)]*
+
 standard
-[(]*[~a-zA-Z0-9_\-\.\[\]]+ *(&|&&) *[~a-zA-Z0-9_\-\.\[\]].* *(==|!=) *[~a-zA-Z0-9_\-\.\[\]]+[)]* *(&&|&) *!*[(]*[~a-zA-Z0-9_\-\.\[\]]+ *(!=|==) *[~a-zA-Z0-9_\-\.\[\]]+[)]*
+[(]*[~a-zA-Z0-9_\-\.\[\]]+ *(&|&&) *[~a-zA-Z0-9_\-\.\[\]].* *(==|!=) *[~a-zA-Z0-9_\-\.\[\]]+[)]* *(&&|&) *!*[(]*[~a-za-z0-9_\-\.\[\]]+ *(!=|==) *[~a-za-z0-9_\-\.\[\]]+[)]*
 
 ----------------------------------- occurance stats -----------------------------------------
 
@@ -28,3 +30,36 @@ PicoRV32:          0 occurances
 Hummingbirdv2:     3 occurances
 UltraembeddedOld:  0 occurances
 UltraembeddedNew:  0 occurances
+
+Modified
+Hack@DAC 2018 SoC: 324 occurances
+Hack@DAC 2019 SoC: 94 occurances
+Hack@DAC 2021 SoC: 15 occurances
+PicoRV32:          0 occurances
+Hummingbirdv2:     3 occurances
+UltraembeddedOld:  0 occurances
+UltraembeddedNew:  0 occurances
+
+----------------------------------- insertion information ------------------------------------
+
+number, type, filename, line num, soc name
+hackdac21
+1. Type 2, csr_regfile.sv, 248, hackatdac21
+
+hackdac19
+1. Type 3, csr_regfile.sv, 865m hackatdac19
+
+hackdac18
+1. Type 4, 
+
+picorv32
+1. Type 2, 
+
+hummingbird
+1. Type 3,    
+
+ultraembedded(old)
+1. Type 4, 
+
+ultraembedded(new)
+1. Type 2,

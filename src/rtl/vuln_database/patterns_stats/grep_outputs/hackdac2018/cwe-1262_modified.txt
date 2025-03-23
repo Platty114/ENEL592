@@ -1,0 +1,324 @@
+install/tb_fs_handler.sv:68:   assign req_stdout = ( (CSN == 1'b0) && (WEN == 1'b0) && ({ADDR[31:12],12'h00} == `ADDR_STDOUT_PRINT) );
+install/tb_fs_handler.sv:69:   assign req_fopen  = ( (CSN == 1'b0) && (WEN == 1'b0) && (ADDR == `ADDR_STDOUT_FS) );
+install/tb_fs_handler.sv:186:               if((ADDR == `ADDR_FOPEN ) && ( CSN == 1'b0 ) && (WEN == 1'b0) && (WDATA == `CMD_FOPEN) )
+install/tb_fs_handler.sv:189:               if((ADDR == `ADDR_FOPEN ) && ( CSN == 1'b0 ) && (WEN == 1'b0) && (WDATA == `CMD_FCLOSE) )
+install/tb_fs_handler.sv:193:               if((ADDR == `ADDR_RW ) && ( CSN == 1'b0 ) && (WEN == 1'b1))
+install/tb_fs_handler.sv:196:               if((ADDR == `ADDR_RW ) && ( CSN == 1'b0 ) && (WEN == 1'b0))
+install/tb_fs_handler.sv:279:               if( (req_i == 1'b1) && (CLUSTER_ID == add_i[ADDR_WIDTH-1:4]))
+ips/pulp_soc/rtl/pulp_soc/soc_event_queue.sv:29:    assign err_o   = event_i & (r_event_count == 2'b11);
+ips/pulp_soc/rtl/pulp_soc/soc_event_queue.sv:38:            if (!event_i && (r_event_count != 0))
+ips/pulp_soc/rtl/pulp_soc/soc_clk_rst_gen.sv:230:            @(posedge clk) (soc_fll_slave_req_i == 1'b0 && per_fll_slave_req_i == 1'b0)  ) else $display("There should be no FLL request (%t)", $time);
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:638:    assign s_lastbitofword = s_cnt_byte_evnt & (r_byte_in_word == 2'b11);
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:130:        if(cmd_start_i && data_en_i && (data_block_num_i == 0))
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:267:    			if(s_tx_lo_done && (r_tx_counter_hi==0))
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:570:	    		    	if(s_rx_lo_done && (r_rx_counter_hi==0))
+ips/udma/udma_core/rtl/common/udma_apb_if.sv:75:            if(s_periph_valid && (s_periph_sel == i))
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:180:            event_o[i] = event_valid_i & (event_data_i == r_cmp_evt[i]);
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:147:              if ((r_ptn_buffer_w == cfg_len0_i) && (r_ptn_buffer_l == cfg_len1_i)) 
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:177:              if ((r_ptn_buffer_w == cfg_len0_i) && (r_ptn_buffer_l == cfg_len1_i)) 
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:180:            if ((r_ptn_buffer_w == cfg_len0_i) && (r_ptn_buffer_l == cfg_len1_i)) 
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:215:            if ((r_ptn_buffer_w == cfg_len0_i) && (r_ptn_buffer_l == cfg_len1_i)) 
+ips/udma/udma_uart/rtl/udma_uart_rx.sv:222:				if(!start_bit && (baud_cnt == cfg_div_i))
+ips/common_cells/generic_fifo_adv.sv:152:                      if((Pop_Pointer_CS == Push_Pointer_CS -1 ) || ((Pop_Pointer_CS == DATA_DEPTH-1) && (Push_Pointer_CS == 0) ))
+ips/common_cells/generic_fifo_adv.sv:190:                      if(( Push_Pointer_CS == Pop_Pointer_CS - 1) || ( (Push_Pointer_CS == DATA_DEPTH-1) && (Pop_Pointer_CS == 0) ))
+ips/common_cells/generic_fifo_adv.sv:257:             if((grant_o == 1'b1) && (valid_i == 1'b1))
+ips/common_cells/generic_fifo.sv:142:                      if((Pop_Pointer_CS == Push_Pointer_CS -1 ) || ((Pop_Pointer_CS == DATA_DEPTH-1) && (Push_Pointer_CS == 0) ))
+ips/common_cells/generic_fifo.sv:180:                      if(( Push_Pointer_CS == Pop_Pointer_CS - 1) || ( (Push_Pointer_CS == DATA_DEPTH-1) && (Pop_Pointer_CS == 0) ))
+ips/common_cells/generic_fifo.sv:247:             if((grant_o == 1'b1) && (valid_i == 1'b1))
+ips/hwpe-stream/tb/tb_hwpe_stream_reservoir.sv:89:            if (($urandom_range(0, 1000) < PROB_STALL*1000) && (force_valid_i!=1'b1)) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_reservoir.sv:121:            if (($urandom_range(0, 1000) < PROB_STALL*1000) && (force_valid_i!=1'b1)) begin
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall.sv:100:            if((pop_pointer_cs == push_pointer_cs -1 ) || ((pop_pointer_cs == FIFO_DEPTH-1) && (push_pointer_cs == 0) ))
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall.sv:127:            if(( push_pointer_cs == pop_pointer_cs - 1) || ( (push_pointer_cs == FIFO_DEPTH-1) && (pop_pointer_cs == 0) ))
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:93:            if((pop_pointer_cs == push_pointer_cs -1 ) || ((pop_pointer_cs == FIFO_DEPTH-1) && (push_pointer_cs == 0) ))
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:121:            if(( push_pointer_cs == pop_pointer_cs - 1) || ( (push_pointer_cs == FIFO_DEPTH-1) && (pop_pointer_cs == 0) ))
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:179:          if((push_i.ready == 1'b1) && (push_i.valid == 1'b1))
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:82:      assign last_packet = (misalignment==1'b1 && overall_counter == trans_size_m2) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:98:      flags.realign_flags.last_packet <= (misalignment==1'b1 && overall_counter == trans_size_m2) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:199:        else if((ctrl_i.loop_outer == 1'b1) && ((feat_counter == feat_roll_m1) || (ctrl_i.feat_roll == '0))) begin
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:253:          else if ((overall_counter == trans_size_m2) && (enable_int == 1'b0))
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:271:          else if ((overall_counter == trans_size_m2) && (enable_int == 1'b0))
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:97:            if((pop_pointer_cs == push_pointer_cs -1 ) || ((pop_pointer_cs == FIFO_DEPTH-1) && (push_pointer_cs == 0) ))
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:125:            if(( push_pointer_cs == pop_pointer_cs - 1) || ( (push_pointer_cs == FIFO_DEPTH-1) && (pop_pointer_cs == 0) ))
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:183:          if((push_i.ready == 1'b1) && (push_i.valid == 1'b1))
+ips/hwpe-stream/rtl/hwpe_stream_demux_static.sv:43:      assign out[i].valid = in.valid & (sel_i == i);
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall_sidech.sv:115:            if((pop_pointer_cs == push_pointer_cs -1 ) || ((pop_pointer_cs == FIFO_DEPTH-1) && (push_pointer_cs == 0) ))
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall_sidech.sv:142:            if(( push_pointer_cs == pop_pointer_cs - 1) || ( (push_pointer_cs == FIFO_DEPTH-1) && (pop_pointer_cs == 0) ))
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:93:  assign s_event_fifo_ready = (core_irq_ack_i & (core_irq_id_i == 5'd26)) | (s_is_int_clr & (apb_slave.pwdata[26] == 1'b1)) | (s_is_int & (apb_slave.pwdata[26] == 1'b0));
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:155:      if (core_irq_ack_i && (core_irq_id_i == i))
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:175:      if (core_irq_ack_i && (core_irq_id_i == i))
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/MUX2_REQ_L2.sv:67:      else if((data_req_o == 1'b1) && (data_gnt_i == 1'b1))
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/MUX2_REQ_BRIDGE.sv:67:    else if((data_req_o == 1'b1) && (data_gnt_i == 1'b1) )
+ips/L2_tcdm_hybrid_interco/TB/generic_fifo.sv:140:                  if((Pop_Pointer_CS == Push_Pointer_CS -1 ) || ((Pop_Pointer_CS == DATA_DEPTH-1) && (Push_Pointer_CS == 0) ))
+ips/L2_tcdm_hybrid_interco/TB/generic_fifo.sv:178:                  if(( Push_Pointer_CS == Pop_Pointer_CS - 1) || ( (Push_Pointer_CS == DATA_DEPTH-1) && (Pop_Pointer_CS == 0) ))
+ips/L2_tcdm_hybrid_interco/TB/generic_fifo.sv:245:         if((grant_o == 1'b1) && (valid_i == 1'b1))
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:167:        if( (AWVALID == 1'b1) && (AWREADY == 1'b1) )
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:176:        if( (BVALID == 1'b1) && (BREADY == 1'b1) )
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:181:          if(    (B_temp_slot.id == BID) && (B_temp_slot.user == BUSER) )
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:207:        if( (ARVALID == 1'b1) && (ARREADY == 1'b1) )
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:216:        if( (RVALID == 1'b1) && (RREADY == 1'b1) ) // There is a valid response
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:230:          if(    (R_temp_slot.id == RID) && (R_temp_slot.user == RUSER) && (RRESP == 2'b00) )
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:299:      if((AWVALID == 1'b1) && (AWREADY == 1'b1))
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:308:      if((ARVALID == 1'b1) && (ARREADY == 1'b1))
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:317:      if((WVALID == 1'b1) && (WREADY == 1'b1))
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:325:      if((BVALID == 1'b1) && (BREADY == 1'b1))
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:333:      if((RVALID == 1'b1) && (RREADY == 1'b1))
+ips/L2_tcdm_hybrid_interco/TB/AXI64_TGEN/TGEN.sv:343://       if((BVALID == 1'b1) && (BREADY == 1'b1))
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:131:          if ((regfile_flags.is_trigger == 1) && (regfile_flags.true_done == 0))
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:133:          else if ((regfile_flags.is_trigger == 0) && (regfile_flags.true_done == 1))
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:155:    regfile_flags.is_read       = (cfg.req == 1'b1 && cfg.wen == 1'b1);
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:156:    regfile_flags.is_testset    = (cfg.req == 1'b1 && cfg.wen == 1'b1 && cfg.add[LOG_REGS+2-1:2] == 1)                      ? 1 : 0;  // Operation is a test&set to register context_ts
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:157:    regfile_flags.is_trigger    = (cfg.req == 1'b1 && cfg.wen == 1'b0 && cfg.add[LOG_REGS+2-1:2] == 0)                      ? 1 : 0;  // Operation is a trigger
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:219:      assign start_context = (running_context==pointer_context && regfile_flags.full_context==0) ? 1 : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:221:      assign start_context = (regfile_flags.is_trigger==1 && flags_o.is_working==0) ? 1 : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:241:          if (running_context == pointer_context && regfile_flags.full_context == 0) begin
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:293:          if (regfile_flags.is_testset == 1 && regfile_flags.full_context==0) begin
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:337:      if((s_clear == '0) && ((cfg.req == 1'b1) && (cfg.wen == 1'b0) && (cfg.add[LOG_REGS+2-1:2]) == 5))
+ips/hwpe-ctrl/rtl/hwpe_ctrl_regfile_latch.sv:104:                  if ( (clear == 1'b1) | ((WriteEnable == 1'b1 ) && (WriteBE[j] == 1'b1) &&  (WriteAddr == i)) )
+ips/hwpe-ctrl/rtl/hwpe_ctrl_regfile.sv:329:            else if (flags_i.true_done==1 && flags_i.running_context==flags_i.pointer_context) begin
+ips/riscv/tb/serDiv/tb.sv:267:          if((OpB_tmp == 0) && (OpCode_SI[0] == 0))
+ips/riscv/tb/serDiv/tb.sv:271:          else if ((OpB_tmp == 0) && (OpCode_SI[0] == 1'b1))
+ips/riscv/tb/serDiv/tb.sv:275:          else if ((OpA_tmp == -(2**(C_WIDTH-1)))  && (OpB_tmp == -1) && (OpCode_SI[0] == 1'b1))
+ips/riscv/riscv_load_store_unit.sv:445:    if((data_req_ex_i == 1'b1) && (data_misaligned_ex_i == 1'b0))
+ips/riscv/riscv_load_store_unit.sv:475:      @(posedge clk) ((CS == WAIT_RVALID) && (data_gnt_i == 1'b1)) |-> (data_rvalid_i == 1'b1) ) else $display("It should not be possible to get a grand without an rvalid for the last request %t", $time);
+ips/riscv/riscv_apu_disp.sv:203:  assign stall_type      = enable_i  & active & ((apu_lat_i==2'h1) | ((apu_lat_i==2'h2) & (apu_lat==2'h3)) | (apu_lat_i==2'h3));
+ips/riscv/riscv_alu.sv:474:     assign fclass_normal      = fclass_exponent != 0 && fclass_exponent != 255;
+ips/riscv/riscv_alu.sv:475:     assign fclass_subnormal   = fclass_exponent == 0 && fclass_mantiassa != 0;
+ips/riscv/riscv_cs_registers.sv:619:  assign m_irq_enable_o  = mstatus_q.mie & priv_lvl_q == PRIV_LVL_M;
+ips/riscv/riscv_cs_registers.sv:620:  assign u_irq_enable_o  = mstatus_q.uie & priv_lvl_q == PRIV_LVL_U;
+ips/riscv/riscv_cs_registers.sv:777:    if ((PCCR_inc_q[0] == 1'b1) && ((PCCR_q[0] != 32'hFFFFFFFF) || (PCMR_q[1] == 1'b0)))
+ips/riscv/riscv_cs_registers.sv:798:      if ((PCCR_inc_q[i] == 1'b1) && ((PCCR_q[i] != 32'hFFFFFFFF) || (PCMR_q[1] == 1'b0)))
+ips/riscv/riscv_cs_registers.sv:801:      if (is_pccr == 1'b1 && (pccr_all_sel == 1'b1 || pccr_index == i)) begin
+ips/riscv/riscv_id_stage.sv:499:  assign reg_d_ex_is_reg_a_id  = (regfile_waddr_ex_o     == regfile_addr_ra_id) && (rega_used_dec == 1'b1) && (regfile_addr_ra_id != '0);
+ips/riscv/riscv_id_stage.sv:500:  assign reg_d_ex_is_reg_b_id  = (regfile_waddr_ex_o     == regfile_addr_rb_id) && (regb_used_dec == 1'b1) && (regfile_addr_rb_id != '0);
+ips/riscv/riscv_id_stage.sv:501:  assign reg_d_ex_is_reg_c_id  = (regfile_waddr_ex_o     == regfile_addr_rc_id) && (regc_used_dec == 1'b1) && (regfile_addr_rc_id != '0);
+ips/riscv/riscv_id_stage.sv:502:  assign reg_d_wb_is_reg_a_id  = (regfile_waddr_wb_i     == regfile_addr_ra_id) && (rega_used_dec == 1'b1) && (regfile_addr_ra_id != '0);
+ips/riscv/riscv_id_stage.sv:503:  assign reg_d_wb_is_reg_b_id  = (regfile_waddr_wb_i     == regfile_addr_rb_id) && (regb_used_dec == 1'b1) && (regfile_addr_rb_id != '0);
+ips/riscv/riscv_id_stage.sv:504:  assign reg_d_wb_is_reg_c_id  = (regfile_waddr_wb_i     == regfile_addr_rc_id) && (regc_used_dec == 1'b1) && (regfile_addr_rc_id != '0);
+ips/riscv/riscv_id_stage.sv:505:  assign reg_d_alu_is_reg_a_id = (regfile_alu_waddr_fw_i == regfile_addr_ra_id) && (rega_used_dec == 1'b1) && (regfile_addr_ra_id != '0);
+ips/riscv/riscv_id_stage.sv:506:  assign reg_d_alu_is_reg_b_id = (regfile_alu_waddr_fw_i == regfile_addr_rb_id) && (regb_used_dec == 1'b1) && (regfile_addr_rb_id != '0);
+ips/riscv/riscv_id_stage.sv:507:  assign reg_d_alu_is_reg_c_id = (regfile_alu_waddr_fw_i == regfile_addr_rc_id) && (regc_used_dec == 1'b1) && (regfile_addr_rc_id != '0);
+ips/riscv/riscv_id_stage.sv:914:  assign csr_apu_stall       = (csr_access & (apu_en_ex_o & (apu_lat_ex_o[1] == 1'b1) | apu_busy_i));
+ips/riscv/riscv_mult.sv:325:    @(posedge clk) ((mulh_CS == FINISH) && (operator_i == MUL_H) && (short_signed_i == 2'b11))
+ips/riscv/riscv_mult.sv:331:    @(posedge clk) ((mulh_CS == FINISH) && (operator_i == MUL_H) && (short_signed_i == 2'b01))
+ips/riscv/riscv_mult.sv:337:    @(posedge clk) ((mulh_CS == FINISH) && (operator_i == MUL_H) && (short_signed_i == 2'b00))
+ips/riscv/riscv_int_controller.sv:63:  assign irq_enable_ext =  ((u_IE_i | irq_sec_i) & current_priv_lvl_i == PRIV_LVL_U) | (m_IE_i & current_priv_lvl_i == PRIV_LVL_M);
+ips/riscv/riscv_int_controller.sv:122:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/riscv/riscv_core.sv:343:  assign is_interrupt = (pc_mux_id == PC_EXCEPTION) && (exc_pc_mux_id == EXC_PC_IRQ);
+ips/riscv/riscv_prefetch_buffer.sv:184:        if (instr_rvalid_i & (CS != WAIT_ABORTED)) begin
+ips/riscv/riscv_L0_buffer.sv:278:  assign busy_o = (CS != EMPTY) && (CS != VALID_L0) || instr_req_o;
+ips/riscv/riscv_controller.sv:241:    irq_enable_int         =  ((u_IE_i | irq_sec_ctrl_i) & current_priv_lvl_i == PRIV_LVL_U) | (m_IE_i & current_priv_lvl_i == PRIV_LVL_M);
+ips/riscv/riscv_controller.sv:318:        if ((id_ready_i == 1'b1) && (dbg_stall_i == 1'b0))
+ips/riscv/riscv_controller.sv:730:          ( (data_req_ex_i == 1'b1) && (regfile_we_ex_i == 1'b1) ||
+ips/riscv/riscv_controller.sv:731:           (wb_ready_i == 1'b0) && (regfile_we_wb_i == 1'b1)
+ips/riscv/riscv_controller.sv:745:        (((regfile_we_wb_i == 1'b1) && (reg_d_wb_is_reg_a_i == 1'b1)) ||
+ips/riscv/riscv_controller.sv:746:         ((regfile_we_ex_i == 1'b1) && (reg_d_ex_is_reg_a_i == 1'b1)) ||
+ips/riscv/riscv_controller.sv:747:         ((regfile_alu_we_fw_i == 1'b1) && (reg_d_alu_is_reg_a_i == 1'b1))) )
+ips/riscv/riscv_hwloop_regs.sv:116:        if ((hwlp_we_i[2] == 1'b1) && (i == hwlp_regid_i)) begin
+ips/riscv/riscv_register_file_latch.sv:161:             if ( (we_a_i == 1'b1 ) && (waddr_a == i) )
+ips/riscv/riscv_register_file_latch.sv:172:             if ( (we_b_i == 1'b1 ) && (waddr_b == j) )
+ips/hwpe-mac-engine/rtl/mac_engine.sv:199:      if ((ctrl_i.start == 1'b1) || ((r_cnt > 0) && (r_cnt < ctrl_i.len) && (r_mult_valid & r_mult_ready == 1'b1))) begin
+ips/hwpe-mac-engine/rtl/f_permutation.v:34:    assign accept = in_ready & (~ calc); // in_ready & (i == 0)
+ips/zero-riscy/zeroriscy_cs_registers.sv:384:    if ((PCCR_inc_q[0] == 1'b1) && ((PCCR_q[0] != 32'hFFFFFFFF) || (PCMR_q[1] == 1'b0)))
+ips/zero-riscy/zeroriscy_cs_registers.sv:405:      if ((PCCR_inc_q[i] == 1'b1) && ((PCCR_q[i] != 32'hFFFFFFFF) || (PCMR_q[1] == 1'b0)))
+ips/zero-riscy/zeroriscy_cs_registers.sv:408:      if (is_pccr == 1'b1 && (pccr_all_sel == 1'b1 || pccr_index == i)) begin
+ips/zero-riscy/zeroriscy_int_controller.sv:102:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:297:  assign ready_o       = (curr_state_q == MD_FINISH) | (curr_state_q == MD_LAST & (operator_i == MD_OP_MULL | operator_i == MD_OP_MULH));
+ips/zero-riscy/zeroriscy_register_file.sv:122:      if ( (we_a_i == 1'b1 ) && (waddr_a_int == i) )
+ips/zero-riscy/zeroriscy_controller.sv:265:        if ((id_ready_i == 1'b1) && (dbg_stall_i == 1'b0))
+ips/zero-riscy/zeroriscy_alu.sv:203:  // (a[31] == 1 && b[31] == 1) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:204:  // (a[31] == 0 && b[31] == 0) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:205:  // (a[31] == 1 && b[31] == 0) => 1
+ips/zero-riscy/zeroriscy_alu.sv:206:  // (a[31] == 0 && b[31] == 1) => 0
+ips/zero-riscy/zeroriscy_alu.sv:209:  // (a[31] == 1 && b[31] == 1) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:210:  // (a[31] == 0 && b[31] == 0) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:211:  // (a[31] == 1 && b[31] == 0) => 0
+ips/zero-riscy/zeroriscy_alu.sv:212:  // (a[31] == 0 && b[31] == 1) => 1
+ips/zero-riscy/zeroriscy_load_store_unit.sv:457:    if((data_req_ex_i == 1'b1) && (data_misaligned_q == 1'b0))
+ips/zero-riscy/zeroriscy_load_store_unit.sv:487:    @(posedge clk) ((CS == WAIT_RVALID) && (data_gnt_i == 1'b1)) |-> (data_rvalid_i == 1'b1) );
+ips/axi/axi_node/axi_BW_allocator.sv:212:        if((error_req_i == 1'b1) && (outstanding_trans_o == 1'b0))
+ips/scm/latch_scm/register_file_1r_1w_be.sv:94:                if ( (WriteEnable == 1'b1 ) && (WriteBE[j] == 1'b1) &&  (WriteAddr == i) )
+ips/scm/latch_scm/register_file_1w_64b_multi_port_read_32b.sv:101:            if ( (WriteEnable == 1'b1 ) && (WriteAddr == i) )
+ips/scm/latch_scm/register_file_3r_2w_be.sv:151:                if ( (WriteEnable_A == 1'b1 ) && (WriteBE_A[j] == 1'b1) &&  (WriteAddr_A == i) )
+ips/scm/latch_scm/register_file_3r_2w_be.sv:156:                if ( (WriteEnable_B == 1'b1 ) && (WriteBE_B[j] == 1'b1) &&  (WriteAddr_B == i) )
+ips/scm/latch_scm/register_file_1w_64b_multi_port_read_128b.sv:101:         if ( (WriteEnable == 1'b1 ) && (WriteAddr == i) )
+ips/scm/latch_scm/register_file_1w_multi_port_read_be.sv:105:                if ( (WriteEnable == 1'b1 ) && (WriteBE[j] == 1'b1) &&  (WriteAddr == i) )
+ips/scm/latch_scm/register_file_3r_2w.sv:148:            if ( (we_a_i == 1'b1 ) && (waddr_a_i == i) )
+ips/scm/latch_scm/register_file_3r_2w.sv:159:            if ( (we_b_i == 1'b1 ) && (waddr_b_i == j) )
+ips/scm/latch_scm/register_file_1w_multi_port_read.sv:105:            if ( (WriteEnable == 1'b1 ) && (WriteAddr == i) )
+ips/scm/latch_scm/register_file_1r_1w_all.sv:97:                  if ( (WriteEnable == 1'b1 ) && (WriteBE[j] == 1'b1) &&  (WriteAddr == i) )
+ips/scm/latch_scm/register_file_multi_way_1w_multi_port_read.sv:104:            if ( (WriteEnable == 1'b1 ) && (WriteAddr == i) )
+ips/scm/latch_scm/register_file_2r_1w_asymm.sv:161:                if ( (WriteEnable == 1'b1 ) && (WriteBE[j] == 1'b1) &&  (WriteAddr == i) )
+ips/scm/latch_scm/register_file_1r_1w.sv:116:            if ( (WriteEnable == 1'b1 ) && (WriteAddr == i) )
+ips/scm/latch_scm/register_file_2r_2w.sv:139:            if ( (we_a_i == 1'b1 ) && (waddr_a_i == i) )
+ips/scm/latch_scm/register_file_2r_2w.sv:150:            if ( (we_b_i == 1'b1 ) && (waddr_b_i == j) )
+ips/scm/latch_scm/register_file_1w_128b_multi_port_read_32b.sv:100:            if ( (WriteEnable == 1'b1 ) && (WriteAddr == i) )
+ips/scm/latch_scm/register_file_multi_way_1w_64b_multi_port_read_32b.sv:108:            if ( (WriteEnable == 1'b1 ) && (WriteAddr == i) )
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:92:   assign Zero_a_S = (Exp_a_DI == C_EXP_ZERO) & (Mant_a_DI == C_MANT_ZERO);
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:93:   assign Zero_b_S = (Exp_b_DI == C_EXP_ZERO) & (Mant_b_DI == C_MANT_ZERO);
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:105:   assign OF_SO   = (Op_SI == C_FPU_F2I_CMD) ? OF_SI : (Exp_OF_SI & ~Mant_zero_S) | (~IV_SO & (Inf_a_S ^ Inf_b_S) & (Op_SI != C_FPU_I2F_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:141:   assign EnableAdd_S = Enable_SP & ((OP_SP == C_FPU_ADD_CMD)|(OP_SP == C_FPU_SUB_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:165:   assign EnableMult_S =  Enable_SP & (OP_SP == C_FPU_MUL_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:190:   assign EnableITOF_S = Enable_SP & (OP_SP == C_FPU_I2F_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:213:   assign EnableFTOI_S = Enable_SP & (OP_SP == C_FPU_F2I_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:62:   assign divsqrt_enable = fpu_en_i & ((fpu_op_i==C_FPU_DIV_CMD) | (fpu_op_i==C_FPU_SQRT_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:63:   assign fpu_enable     = fpu_en_i & ((fpu_op_i==C_FPU_ADD_CMD) | (fpu_op_i==C_FPU_SUB_CMD) | (fpu_op_i==C_FPU_MUL_CMD) | (fpu_op_i==C_FPU_I2F_CMD) | (fpu_op_i==C_FPU_F2I_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:64:   assign fma_enable     = fpu_en_i & ((fpu_op_i==C_FPU_FMADD_CMD) | (fpu_op_i==C_FPU_FMSUB_CMD) | (fpu_op_i==C_FPU_FNMADD_CMD)| (fpu_op_i==C_FPU_FNMSUB_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:120:   assign sqrt_start = divsqrt_enable & (fpu_op_i == C_FPU_SQRT_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:121:   assign div_start  = divsqrt_enable & (fpu_op_i == C_FPU_DIV_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_norm.sv:90:   assign Denormals_shift_add_D = ~Mant_zero_S & (Exp_in_DI == C_EXP_ZERO) & ((OP_SI != C_FPU_MUL_CMD) | (~Mant_in_DI[C_MANT_PRENORM-1] & ~Mant_in_DI[C_MANT_PRENORM-2]));
+ips/fpu/hdl/fpu_v0.1/fpu_norm.sv:91:   assign Denormals_exp_add_D   =  Mant_in_DI[C_MANT_PRENORM-2] & (Exp_in_DI == C_EXP_ZERO) & ((OP_SI == C_FPU_ADD_CMD) | (OP_SI == C_FPU_SUB_CMD ));
+ips/apb/apb_adv_timer/comparator.sv:53:	assign s_match = timer_valid_i & (r_comp == timer_count_i);
+ips/apb/apb_adv_timer/up_down_counter.sv:59:	assign s_is_update = r_sawtooth ? (r_counter == r_end) : (r_direction && (r_counter == r_start-1));
+ips/apb/apb_adv_timer/up_down_counter.sv:116:			if (!r_direction && (r_counter == r_end))
+ips/apb/apb_adv_timer/up_down_counter.sv:129:			else if (r_direction && (r_counter == r_start))
+rtl/tb/tb_fs_handler.sv:68:   assign req_stdout = ( (CSN == 1'b0) && (WEN == 1'b0) && ({ADDR[31:12],12'h00} == `ADDR_STDOUT_PRINT) );
+rtl/tb/tb_fs_handler.sv:69:   assign req_fopen  = ( (CSN == 1'b0) && (WEN == 1'b0) && (ADDR == `ADDR_STDOUT_FS) );
+rtl/tb/tb_fs_handler.sv:186:               if((ADDR == `ADDR_FOPEN ) && ( CSN == 1'b0 ) && (WEN == 1'b0) && (WDATA == `CMD_FOPEN) )
+rtl/tb/tb_fs_handler.sv:189:               if((ADDR == `ADDR_FOPEN ) && ( CSN == 1'b0 ) && (WEN == 1'b0) && (WDATA == `CMD_FCLOSE) )
+rtl/tb/tb_fs_handler.sv:193:               if((ADDR == `ADDR_RW ) && ( CSN == 1'b0 ) && (WEN == 1'b1))
+rtl/tb/tb_fs_handler.sv:196:               if((ADDR == `ADDR_RW ) && ( CSN == 1'b0 ) && (WEN == 1'b0))
+rtl/tb/tb_fs_handler.sv:279:               if( (req_i == 1'b1) && (CLUSTER_ID == add_i[ADDR_WIDTH-1:4]))
+rtl/pulpissimo/rtc_clock.sv:79:	assign s_alarm_match = (r_seconds == s_alarm_seconds) & (r_minutes == s_alarm_minutes) & (r_hours == s_alarm_hours);//alarm condition(high for 1 sec)
+rtl/pulpissimo/rtc_clock.sv:86:	assign s_update_minutes = s_update_seconds & (r_seconds == 8'h59);
+rtl/pulpissimo/rtc_clock.sv:87:	assign s_update_hours   = s_update_minutes & (r_minutes == 8'h59);
+rtl/pulpissimo/rtc_clock.sv:90:	assign update_day_o   = s_update_hours & (r_hours == 6'h23);
+rtl/pulpissimo/rtc_date.sv:42:	assign s_end_of_year = s_end_of_month & (r_month == 5'h12);
+rtl/pulpissimo/rtc_date.sv:48:		5'h02: s_end_of_month = (r_day == 6'h29) || ((~s_year_leap)&&(r_day == 6'h28));
+rtl/pulpissimo/rtc_date.sv:63:	assign s_year_div_4   = ((~r_year[0])&&(r_year[4]==r_year[1]));
+rtl/pulpissimo/rtc_date.sv:65:	assign s_year_400     = ((~r_year[8])&&((r_year[12]==r_year[9])));
+rtl/vip/i2s/i2c_if.v:276:      if (START_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:277:         if (!WriteActive & (ShiftRegister[07:04] == 4'b1010) & (ShiftRegister[02:01] == ChipAddress[01:00]) & (A2 == 1'b1)) begin
+rtl/vip/i2s/i2c_if.v:299:      if (CTRL_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:315:      if (ADHI_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:335:      if (ADLO_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:352:            if (WrCycle | (START_Rcvd & (ShiftRegister[07:04] == 4'b1010) & (ShiftRegister[02:01] == ChipAddress[01:00]) & (A2 == 1'b1))) begin
+rtl/vip/i2s/i2c_if.v:373:      if (RdCycle & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:374:         if ((SDA == 0) & (SDA_OE == 0)) MACK_Rcvd <= 1;
+rtl/vip/i2s/i2c_if.v:385:      if (WrCycle & (WP == 0) & (WrCounter > 0)) begin
+rtl/vip/i2s/i2c_if.v:639:   wire TimingCheckEnable = (RESET == 0) & (SDA_OE == 0);
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:993:        while ((i >= 0) && (found != 1'b1))//search for first non null character
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:996:            while ((j >= 0) && (found != 1'b1))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1570:                    if ((CLK_PER < 20000 && Latency_code == 0) || // <= 50MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1571:                        (CLK_PER < 14920 && Latency_code == 1) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1572:                        (CLK_PER < 12500 && Latency_code == 2) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1573:                        (CLK_PER < 10870 && Latency_code == 3) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1574:                        (CLK_PER <  9600 && Latency_code == 4) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1575:                        (CLK_PER <  8620 && Latency_code == 5) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1576:                        (CLK_PER <  7750 && Latency_code == 6) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1587:                    if ((CLK_PER < 12500 && Latency_code == 0) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1588:                        (CLK_PER < 10870 && Latency_code == 1) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1589:                        (CLK_PER <  9600 && Latency_code == 2) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1590:                        (CLK_PER <  8620 && Latency_code == 3) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1591:                        (CLK_PER <  7750 && Latency_code == 4) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1602:                    if ((CLK_PER < 23225 && Latency_code == 0) || // <= 43MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1603:                        (CLK_PER < 18181 && Latency_code == 1) || // <= 55MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1604:                        (CLK_PER < 14920 && Latency_code == 2) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1605:                        (CLK_PER < 12500 && Latency_code == 3) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1606:                        (CLK_PER < 10870 && Latency_code == 4) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1607:                        (CLK_PER <  9600 && Latency_code == 5) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1608:                        (CLK_PER <  8620 && Latency_code == 6) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1609:                        (CLK_PER <  7750 && Latency_code == 7) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1620:                    if ((CLK_PER < 55555 && Latency_code == 0) || // <= 18MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1621:                        (CLK_PER < 33333 && Latency_code == 1) || // <= 30MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1622:                        (CLK_PER < 23225 && Latency_code == 2) || // <= 43MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1623:                        (CLK_PER < 18181 && Latency_code == 3) || // <= 55MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1624:                        (CLK_PER < 14920 && Latency_code == 4) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1625:                        (CLK_PER < 12500 && Latency_code == 5) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1626:                        (CLK_PER < 10870 && Latency_code == 6) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1627:                        (CLK_PER <  9600 && Latency_code == 7) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1628:                        (CLK_PER <  8620 && Latency_code == 8) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1629:                        (CLK_PER <  7750 && Latency_code == 9) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1641:                        (CLK_PER < 23225 && Latency_code == 2) || // <= 43MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1642:                        (CLK_PER < 18181 && Latency_code == 3) || // <= 55MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1643:                        (CLK_PER < 14920 && Latency_code == 4) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1692:                        if ((QUAD_ALL && (opcode_cnt == BYTE/4)) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:2570:                        else if (QUAD && ((Instruct==DDRQIOR4) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:2797:                        else if (QUAD && ((Instruct==DDRQIOR4) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3467:                        if (Instruct == WRR && WEL == 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3472:                            if (((TBPROT_O == 1 && CR1_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3473:                                 (TBPARM_O == 1 && CR1_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3475:                                 (BPNV_O   == 1 && CR1_in[3] == 1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3485:                                (CR1_in[4] == 1'b1 && SECURE_OPN == 1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3486:                                (CR1_in[2] == 1'b1 && CR3_NV[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3497:                        else if (Instruct == WRAR && WEL == 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3532:                                ((TBPROT_O == 1 && WRAR_reg_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3533:                                 (TBPARM_O == 1 && WRAR_reg_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3535:                                (BPNV_O   == 1 && WRAR_reg_in[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3547:                                   (WRAR_reg_in[4]==1'b1 && SECURE_OPN==1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3549:                                   (WRAR_reg_in[2]==1'b1 && CR3_NV[3]==1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3587:                        else if ((Instruct==PP || Instruct==PP4) && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3591:                            if (Sec_Prot[sect]== 0 && PPB_bits[sect]== 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3599:                        else if (Instruct == OTPP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3628:                        else if ((Instruct==SE || Instruct==SE4) && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3693:                                  PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3704:                        else if (Instruct == BE && WEL == 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3705:                                (SR1_V[4]==0 && SR1_V[3]==0 && SR1_V[2]==0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3718:                        else if (Instruct == PPBE && WEL && (SECURE_OPN == 1))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3723:                        else if (Instruct == ASPP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3728:                                if (ASP_reg_in[2]==1'b0 && ASP_reg_in[1]==1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3736:                        else if (Instruct == PLBWR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3745:                        else if (Instruct == PNVDLR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3752:                        else if (Instruct == PASSP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3759:                        else if (Instruct == PASSU && WEL == 1 && ~WIP)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3782:                    if (PRGSUSP_out_event && PRGSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3805:                    if (ERSSUSP_out_event && ERSSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3830:									PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3837:									PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3858:                    else if (PRGSUSP_out_event && PRGSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4061:            if (~DYBLBB && (SECURE_OPN == 1))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4114:                    else if (Instruct == WRR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4118:                            if (((TBPROT_O ==1 && CR1_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4119:                                 (TBPARM_O == 1 && CR1_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4121:                                 (BPNV_O   ==1 && CR1_in[3] == 1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4128:                                (CR1_in[4] == 1'b1 && SECURE_OPN == 1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4129:                                (CR1_in[2] == 1'b1 && CR3_NV[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4148:                    else if (Instruct == WRAR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4175:                                ((TBPROT_O == 1 && WRAR_reg_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4176:                                 (TBPARM_O == 1 && WRAR_reg_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4178:                                (BPNV_O   == 1 && WRAR_reg_in[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4187:                                   (WRAR_reg_in[4]==1'b1 && SECURE_OPN==1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4189:                                   (WRAR_reg_in[2]==1'b1 && CR3_NV[3]==1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4259:                    else if ((Instruct == PP || Instruct == PP4) && WEL ==1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4265:                            PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4292:                    else if (Instruct == OTPP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4349:                    else if ((Instruct==SE || Instruct==SE4) && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4423:                    else if ((Instruct == P4E || Instruct == P4E4) && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4435:                                PPB_bits[SectorErased]== 1 && DYB_bits[SectorErased]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4463:                    else if (Instruct == BE && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4465:                        if (SR1_V[4]==0 && SR1_V[3]==0 && SR1_V[2]==0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4521:                    else if (Instruct == ASPP  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4525:                            if (ASP_reg_in[2]==1'b0 && ASP_reg_in[1]==1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4547:                    else if (Instruct == PLBWR  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4569:                    else if (Instruct == PNVDLR  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4583:                    else if (Instruct == WVDLR  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4588:                    else if (Instruct == PASSP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4888:                                if (VDLR_reg != 8'b00000000 && dlp_act == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5165:                        if (~(PWDMLB == 0 && PSTMLB == 1))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5287:                    if ((~LOCK_O && SECURE_OPN == 1) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5316:                            if (TBPROT_O == 1'b0 && INITIAL_CONFIG == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5327:                            if (TBPARM_O == 1'b0 && INITIAL_CONFIG == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5354:                    if (SECURE_OPN == 1'b1 && LOCK_O == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5494:                        if ((~LOCK_O && (SECURE_OPN == 1)) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5520:                        if ((~LOCK_O && (SECURE_OPN == 1)) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5530:                                if (TBPROT_O == 1'b0 && INITIAL_CONFIG == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5541:                                if (TBPARM_O==1'b0 && INITIAL_CONFIG==1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5560:                        if (SECURE_OPN == 1'b1 && LOCK_O == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5574:                        if (CR2_NV[6] == 1'b0 && WRAR_reg_in[6] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5710:                            if (DYBLBB == 1'b0 && WRAR_reg_in[4] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5715:                            if (PPBOTP == 1'b0 && WRAR_reg_in[3] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5720:                            if (PERMLB == 1'b0 && WRAR_reg_in[0] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5739:                        if ((~LOCK_O && (SECURE_OPN == 1)) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5909:                if(current_state_event && current_state == PAGE_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6256:                                    if (VDLR_reg!=8'b00000000 && dlp_act==1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6463:                if(current_state_event && current_state == OTP_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6607:                if(current_state_event && current_state == SECTOR_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6765:                if(current_state_event && current_state == BULK_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6772:                            if (PPB_bits[sect] == 1 && DYB_bits[sect] == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6787:                        if (PPB_bits[sect] == 1 && DYB_bits[sect] == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7081:                                    if (VDLR_reg!=8'b00000000 && dlp_act==1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7274:                            if (Sec_Prot[sect]== 0 && PPB_bits[sect]== 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7436:                if(current_state_event && current_state == ERS_SUSP_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7796:                                    if (VDLR_reg!=8'b00000000 && dlp_act==1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:8443:                        if (DYBLBB == 1'b0 && ASP_reg_in[4] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:8448:                        if (PPBOTP == 1'b0 && ASP_reg_in[3] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:8453:                        if (PERMLB == 1'b0 && ASP_reg_in[0] == 1'b1)

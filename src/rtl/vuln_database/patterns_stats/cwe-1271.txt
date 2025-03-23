@@ -26,7 +26,7 @@ an enable signal, and then remove the number that don't feature an associated re
 This can be found using the following two regexs.
 
 Simple
-if *[(]+[~a-zA-Z0-9_\-\.\[\]]+[)]+ *[~a-zA-Z0-9_\-\.\[\]]+ * <= *[~a-zA-Z0-9_\-\.\[\]]+
+if *[(]+.*[)]+ *[~a-zA-Z0-9_\-\.\[\]]+ *<= *[~a-zA-Z0-9_\-\.\[\]]+
 
 Constrained
 if *[(]+((?!(reset|re|res))[~a-zA-Z0-9_\-\.\[\]])+[)]+ *[~a-zA-Z0-9_\-\.\[\]]+ * <= *[~a-zA-Z0-9_\-\.\[\]]+
