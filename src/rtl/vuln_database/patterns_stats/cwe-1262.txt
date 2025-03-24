@@ -47,10 +47,10 @@ hackdac21
 1. Type 2, csr_regfile.sv, 248, hackatdac21
 
 hackdac19
-1. Type 3, csr_regfile.sv, 865m hackatdac19
+1. Type 3, csr_regfile.sv, 865, hackatdac19
 
 hackdac18
-1. Type 4, 
+1. Type 4, riscv_cs_registers.sv, 377, hackdac18
 
 picorv32
 1. Type 2, 
