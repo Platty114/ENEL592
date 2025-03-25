@@ -1,4 +1,18 @@
 CWE-1231
+    CONSTRAINED: 64 detections
+	detected:
+	    1. Type 3, tap_top.sv, 173, hackdac18
+	    2. Type 2, tap_top.sv, 196, hackdac18
+	undetected:
+	    3. Type 4, hwpe_stream_fifo_earlystall_sidech.sv, 62, hackdac18
+
+    SIMPLE: 300 detections
+	detected:
+	  detected:
+	    1. Type 3, tap_top.sv, 173, hackdac18
+	    2. Type 2, tap_top.sv, 196, hackdac18
+	undetected:
+	    3. Type 4, hwpe_stream_fifo_earlystall_sidech.sv, 62, hackdac18
 
 CWE-1232
 
