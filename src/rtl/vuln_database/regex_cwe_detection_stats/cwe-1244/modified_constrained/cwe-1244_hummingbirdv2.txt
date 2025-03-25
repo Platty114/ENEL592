@@ -1,0 +1,16 @@
+rtl/e203/perips/sirv_plic_man.v:316:         assign irq_prio_lvl_9_lt[i] = (irq_prio_lvl_10[2*i] < irq_prio_lvl_10[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:323:         assign irq_prio_lvl_8_lt[i] = (irq_prio_lvl_9[2*i] < irq_prio_lvl_9[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:330:         assign irq_prio_lvl_7_lt[i] = (irq_prio_lvl_8[2*i] < irq_prio_lvl_8[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:337:         assign irq_prio_lvl_6_lt[i] = (irq_prio_lvl_7[2*i] < irq_prio_lvl_7[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:344:         assign irq_prio_lvl_5_lt[i] = (irq_prio_lvl_6[2*i] < irq_prio_lvl_6[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:351:         assign irq_prio_lvl_4_lt[i] = (irq_prio_lvl_5[2*i] < irq_prio_lvl_5[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:358:         assign irq_prio_lvl_3_lt[i] = (irq_prio_lvl_4[2*i] < irq_prio_lvl_4[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:365:         assign irq_prio_lvl_2_lt[i] = (irq_prio_lvl_3[2*i] < irq_prio_lvl_3[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:372:         assign irq_prio_lvl_1_lt[i] = (irq_prio_lvl_2[2*i] < irq_prio_lvl_2[(2*i)+1]); 
+rtl/e203/perips/sirv_plic_man.v:378:     assign irq_prio_top_lt = (irq_prio_lvl_1[0] < irq_prio_lvl_1[1]); 
+rtl/e203/perips/sirv_plic_man.v:405:     assign icb_cmd_sel_prio[i] = (icb_cmd_addr == ($unsigned(i) * 4)); 
+rtl/e203/core/e203_ifu_litebpu.v:85:  assign prdt_taken   = (dec_jal | dec_jalr | (dec_bxx & dec_bjp_imm[`E203_XLEN-1]));  
+rtl/e203/core/e203_ifu_litebpu.v:110:  assign prdt_pc_add_op1 = (dec_bxx | dec_jal) ? pc[`E203_PC_SIZE-1:0]
+rtl/e203/core/e203_exu_disp.v:128:  wire disp_alu_longp_prdt = (disp_i_info_grp == `E203_DECINFO_GRP_AGU)  
+rtl/e203/general/sirv_gnrl_icbs.v:273:        assign o_icb_rsp_valid_pre = (~rspid_fifo_empty) & o_icb_rsp_valid;
+rtl/e203/general/sirv_gnrl_icbs.v:863:        assign i_icb_rsp_ready_pre = (~rspid_fifo_empty) & i_icb_rsp_ready;

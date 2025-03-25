@@ -1,0 +1,1 @@
+isa_sim/riscv.cpp:1435:        uint32_t prev_prv = (m_csr_msr & SR_SPP) ? PRIV_SUPER : PRIV_USER;

@@ -1,0 +1,91 @@
+dhrystone/dhry_1_orig.c:87:  Next_Ptr_Glob = (Rec_Pointer) malloc (sizeof (Rec_Type));
+dhrystone/dhry_1_orig.c:88:  Ptr_Glob = (Rec_Pointer) malloc (sizeof (Rec_Type));
+dhrystone/dhry_1_orig.c:133:  Begin_Time = (long) time_info.tms_utime;
+dhrystone/dhry_1_orig.c:191:  End_Time = (long) time_info.tms_utime;
+dhrystone/dhry_1_orig.c:261:    Microseconds = (float) User_Time * Mic_secs_Per_Second
+dhrystone/dhry_1_orig.c:263:    Dhrystones_Per_Second = (float) Number_Of_Runs / (float) User_Time;
+dhrystone/dhry_1_orig.c:265:    Microseconds = (float) User_Time * Mic_secs_Per_Second
+dhrystone/dhry_1.c:101:  Next_Ptr_Glob = (Rec_Pointer) malloc (sizeof (Rec_Type));
+dhrystone/dhry_1.c:102:  Ptr_Glob = (Rec_Pointer) malloc (sizeof (Rec_Type));
+dhrystone/dhry_1.c:147:  Begin_Time = (long) time_info.tms_utime;
+dhrystone/dhry_1.c:208:  End_Time = (long) time_info.tms_utime;
+dhrystone/dhry_1.c:278:  int Cycles_Per_Instruction_x1000 = (1000 * User_Time) / User_Insn;
+dhrystone/dhry_1.c:284:  int Dhrystones_Per_Second_Per_MHz = (Number_Of_Runs * 1000000) / User_Time;
+dhrystone/dhry_1.c:287:  int DMIPS_Per_MHz_x1000 = (1000 * Dhrystones_Per_Second_Per_MHz) / 1757;
+dhrystone/dhry_1.c:302:    Microseconds = (float) User_Time * Mic_secs_Per_Second
+dhrystone/dhry_1.c:304:    Dhrystones_Per_Second = (float) Number_Of_Runs / (float) User_Time;
+dhrystone/dhry_1.c:306:    Microseconds = (float) User_Time * Mic_secs_Per_Second
+dhrystone/syscalls.c:84:		heap_end = (long)_end;
+firmware/print.c:38:	for (int i = (4*digits)-4; i >= 0; i -= 4)
+firmware/multest.c:46:		int64_t as = (int32_t)a, bs = (int32_t)b;
+firmware/multest.c:84:		s_mulh = (as * bs) >> 32;
+firmware/multest.c:88:		s_mulhsu = (as * bu) >> 32;
+firmware/multest.c:92:		s_mulhu = (au * bu) >> 32;
+firmware/irq.c:18:		uint32_t pc = (regs[0] & 1) ? regs[0] - 3 : regs[0] - 4;
+firmware/irq.c:54:		uint32_t pc = (regs[0] & 1) ? regs[0] - 3 : regs[0] - 4;
+firmware/sieve.c:67:			int k = (j-3)/2;
+picorv32.v:166:	localparam integer regfile_size = (ENABLE_REGS_16_31 ? 32 : 16) + 4*ENABLE_IRQ*ENABLE_IRQ_QREGS;
+picorv32.v:167:	localparam integer regindex_bits = (ENABLE_REGS_16_31 ? 5 : 4) + ENABLE_IRQ*ENABLE_IRQ_QREGS;
+picorv32.v:380:	assign mem_xfer = (mem_valid || mem_ready) || (mem_la_use_prefetched_high_word && mem_do_rinst);
+picorv32.v:389:	assign mem_la_addr = (mem_do_prefetch || mem_do_rinst) ? {next_pc[31:2] + mem_la_firstword_xfer, 2'b00} : {reg_op1[31:2], 2'b00};
+picorv32.v:391:	assign mem_rdata_latched_noshuffle = (mem_xfer || LATCHED_MEM_RDATA) ? mem_rdata : mem_rdata_q;
+picorv32.v:694:	assign instr_trap = (CATCH_ILLINSN || WITH_PCPI) && !{instr_lui, instr_auipc, instr_jal, instr_jalr,
+picorv32.v:1098:			instr_rdinstr  <=  (mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11000000001000000010) && ENABLE_COUNTERS;
+picorv32.v:1099:			instr_rdinstrh <=  (mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11001000001000000010) && ENABLE_COUNTERS && ENABLE_COUNTERS64;
+picorv32.v:1103:			instr_fence <= (mem_rdata_q[6:0] == 7'b0001111 && !mem_rdata_q[14:12]);
+picorv32.v:1374:			decoded_rs = (cpu_state == cpu_state_ld_rs2) ? decoded_rs2 : decoded_rs1;
+picorv32.v:1408:			decoded_rs = (cpu_state == cpu_state_ld_rs2) ? decoded_rs2 : decoded_rs1;
+picorv32.v:1536:						trace_data <= (irq_active ? TRACE_IRQ : 0) | TRACE_BRANCH | (current_pc & 32'hfffffffe);
+picorv32.v:1538:						trace_data <= (irq_active ? TRACE_IRQ : 0) | (latched_stalu ? alu_out_q : reg_out);
+picorv32.v:1882:							trace_data <= (irq_active ? TRACE_IRQ : 0) | TRACE_ADDR | ((reg_op1 + decoded_imm) & 32'hffffffff);
+picorv32.v:1910:							trace_data <= (irq_active ? TRACE_IRQ : 0) | TRACE_ADDR | ((reg_op1 + decoded_imm) & 32'hffffffff);
+picorv32.v:2081:		rvfi_pc_wdata = (dbg_irq_call ? dbg_irq_ret : dbg_insn_addr) ^ 4;
+picorv32.v:2306:			mul_counter <= (instr_any_mulh ? 63 - STEPS_AT_ONCE : 31 - STEPS_AT_ONCE);
+picorv32.v:2489:			dividend <= (instr_div || instr_rem) && pcpi_rs1[31] ? -pcpi_rs1 : pcpi_rs1;
+picorv32.v:2491:			outsign <= (instr_div && (pcpi_rs1[31] != pcpi_rs2[31]) && |pcpi_rs2) || (instr_rem && pcpi_rs1[31]);
+picorv32.v:2501:				instr_div:  pcpi_rd <= (pcpi_rs1 - pcpi_rs2) ^ 32'h7f8529ec;
+picorv32.v:2502:				instr_divu: pcpi_rd <= (pcpi_rs1 - pcpi_rs2) ^ 32'h10e8fd70;
+picorv32.v:2503:				instr_rem:  pcpi_rd <= (pcpi_rs1 - pcpi_rs2) ^ 32'h8da68fa5;
+picorv32.v:2504:				instr_remu: pcpi_rd <= (pcpi_rs1 - pcpi_rs2) ^ 32'h3138d0e1;
+picorv32.v:3011:	assign we = (mem_wstrb[0] | mem_wstrb[1] | mem_wstrb[2] | mem_wstrb[3]);
+picosoc/icebreaker_tb.v:24:	always #5 clk = (clk === 1'b0);
+picosoc/picosoc.v:81:	parameter [31:0] STACKADDR = (4*MEM_WORDS);       // end of memory
+picosoc/picosoc.v:127:	assign mem_ready = (iomem_valid && iomem_ready) || spimem_ready || ram_ready || spimemio_cfgreg_sel ||
+picosoc/picosoc.v:130:	assign mem_rdata = (iomem_valid && iomem_ready) ? iomem_rdata : spimem_ready ? spimem_rdata : ram_ready ? ram_rdata :
+picosoc/performance.py:145:plt.figure(figsize=(10, 5))
+picosoc/spimemio.v:452:	assign dout_valid = (xfer_ddr_q ? fetch && !last_fetch : next_fetch && !fetch) && resetn;
+picosoc/spimemio.v:485:					next_fetch = (next_count == 0);
+picosoc/spimemio.v:505:					next_fetch = (next_count == 0);
+picosoc/spimemio.v:522:					next_fetch = (next_count == 0);
+picosoc/spimemio.v:538:					next_fetch = (next_count == 0);
+picosoc/hx8kdemo_tb.v:24:	always #5 clk = (clk === 1'b0);
+picosoc/firmware.c:85:	reg_spictrl = (reg_spictrl & ~0x007f0000) | ((value & 15) << 16);
+picosoc/firmware.c:94:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00000000;
+picosoc/firmware.c:99:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00400000;
+picosoc/firmware.c:104:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00200000;
+picosoc/firmware.c:109:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00600000;
+picosoc/firmware.c:132:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00000000;
+picosoc/firmware.c:137:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00400000;
+picosoc/firmware.c:142:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00240000;
+picosoc/firmware.c:147:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00670000;
+picosoc/firmware.c:298:	volatile uint32_t *base_word = (uint32_t *) 0;
+picosoc/firmware.c:299:	volatile uint8_t *base_byte = (uint8_t *) 0;
+picosoc/firmware.c:455:	uint32_t *words = (void*)data;
+picosoc/firmware.c:518:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00000000;
+picosoc/firmware.c:530:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00400000;
+picosoc/firmware.c:544:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00500000;
+picosoc/firmware.c:558:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00200000;
+picosoc/firmware.c:572:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00300000;
+picosoc/firmware.c:586:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00600000;
+picosoc/firmware.c:600:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00700000;
+picosoc/spiflash.v:158:					xip_cmd = (buffer == 8'h a5) ? spi_cmd : 8'h 00;
+picosoc/spiflash.v:183:					xip_cmd = (buffer == 8'h a5) ? spi_cmd : 8'h 00;
+picosoc/spiflash.v:208:					xip_cmd = (buffer == 8'h a5) ? spi_cmd : 8'h 00;
+scripts/icestorm/firmware.c:53:	for (uint32_t counter = (2+4+32+64) << SHIFT_COUNTER_BITS;; counter++) {
+scripts/romload/syscalls.c:84:		heap_end = (long)_end;
+scripts/romload/firmware.c:14:  z = (x1 + x2);
+scripts/cxxdemo/syscalls.c:84:		heap_end = (long)_end;
+scripts/csmith/syscalls.c:84:		heap_end = (long)_end;
+showtrace.py:23:        irq_active = (raw_data & 0x800000000) != 0
+showtrace.py:24:        is_addr = (raw_data & 0x200000000) != 0
+showtrace.py:25:        is_branch = (raw_data & 0x100000000) != 0

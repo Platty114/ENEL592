@@ -1,0 +1,1120 @@
+install/tb_pulp.sv:82:   /* simulation variables & flags */
+install/tb_pulp.sv:646:            r_stdout_pready <= (i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.psel & i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.penable);
+install/modelsim.ini:1672:; Mode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+install/modelsim.ini:1673:; Mode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+install/modelsim.ini:1674:; Mode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+ips/generic_FLL/fe/rtl/FLL_zerodelta.vhd:104:  RetDelay_S  <= RetDelayNeg_SP & RetDelayPos_SP;
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:645:  IntRegIn_D  <= CFGD when ((CFGAD = "11") and (CFGWEB = '0')) else std_logic_vector(to_unsigned(0, 16-DCO_WORDWIDTH)) & IntIn_D & std_logic_vector(to_unsigned(0, 16-(IntIn_D'length-DCO_WORDWIDTH)));
+ips/pulp_soc/rtl/fc/fc_demux.sv:99:                    if(req_slave & gnt_slave) begin
+ips/pulp_soc/rtl/fc/fc_demux.sv:115:                        if(req_slave & gnt_slave) begin
+ips/pulp_soc/rtl/fc/fc_demux.sv:142:        req_port0 = req_slave  & ~port_sel_i;
+ips/pulp_soc/rtl/fc/fc_demux.sv:150:        req_port1   = req_slave  & port_sel_i;
+ips/pulp_soc/rtl/fc/fc_subsystem.sv:94:    assign fetch_en_int      = fetch_en_eu & fetch_en_i;
+ips/pulp_soc/rtl/pulp_soc/soc_event_queue.sv:29:    assign err_o   = event_i & (r_event_count == 2'b11);
+ips/pulp_soc/rtl/pulp_soc/soc_event_queue.sv:38:            if (!event_i && (r_event_count != 0))
+ips/pulp_soc/rtl/pulp_soc/soc_clk_rst_gen.sv:230:            @(posedge clk) (soc_fll_slave_req_i == 1'b0 && per_fll_slave_req_i == 1'b0)  ) else $display("There should be no FLL request (%t)", $time);
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:120:    assign s_valid_fc = |(s_grant & ~s_fc_mask);
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:121:    assign s_valid_cl = |(s_grant & ~s_cl_mask);
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:122:    assign s_valid_pr = |(s_grant & ~s_pr_mask);
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:128:    assign s_event_ready = s_ready_fc & s_ready_cl & s_ready_pr;
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:190:            if (PSEL && PENABLE && PWRITE) begin
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:221:            else if (PSEL && PENABLE && ~PWRITE) begin
+ips/pulp_soc/rtl/pulp_soc/soc_event_arbiter.sv:79:    assign gnt = req_i & g[S];
+ips/pulp_soc/rtl/pulp_soc/soc_event_arbiter.sv:101:            if (anyGnt && grant_ack_i) begin
+ips/pulp_soc/rtl/pulp_soc/l2_ram_multi_bank.sv:47:            assign wea[i][j] = ~mem_slave[i].csn & ~mem_slave[i].wen & mem_slave[i].be[j];
+ips/pulp_soc/rtl/pulp_soc/pulp_soc.sv:371:    assign cluster_rstn_o = s_cluster_rstn && s_cluster_rstn_soc_ctrl;
+ips/pulp_soc/rtl/pulp_soc/pulp_soc.sv:372:    assign s_rstn_cluster_sync_soc = s_cluster_rstn && s_cluster_rstn_soc_ctrl;
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:132:  assign stdout_master_aw_ready = stdout_slave_aw_ready & ~stdout_wait_r;
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:133:  assign stdout_master_ar_ready = stdout_slave_ar_ready & ~stdout_wait_r;
+ips/pulp_soc/rtl/pulpemu/pulpemu_apb_demux.sv:68:  assign zynq2pulp_spi_slave_psel = zynq2pulp_apb_psel & (zynq2pulp_apb_paddr[15:14] == 2'b00); // 0x51010000 - 0x51013ffc
+ips/pulp_soc/rtl/pulpemu/pulpemu_apb_demux.sv:69:  assign zynq2pulp_uart_psel      = zynq2pulp_apb_psel & (zynq2pulp_apb_paddr[15:14] == 2'b01); // 0x51014000 - 0x51017ffc
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:107:    assign apb_ready   = (apb_penable & apb_psel) & ((apb_paddr[4:0] == `APB_ADDR_POPFIFO) ? 1'b1 : 1'b0);
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:116:        else if ((apb_psel & apb_pwrite) && (apb_paddr[4:0] == `APB_ADDR_CONFIG)) begin
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:121:        else if ((apb_psel & apb_pwrite) && (apb_paddr[4:0] == `APB_ADDR_ERRCLR)) begin
+ips/pulp_soc/rtl/components/glitch_free_clk_mux.sv:32:    assign s_en0 = ~select_i & ~r_sync1[2];
+ips/pulp_soc/rtl/components/glitch_free_clk_mux.sv:33:    assign s_en1 =  select_i & ~r_sync0[2];
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:107:        if (PSEL && PENABLE && PWRITE)
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:201:   assign PREADY  = PSEL & PENABLE;
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:207:        if (PSEL && PENABLE && !PWRITE)
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:317:	     if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b0 ) // prescaler disabled, ref clock disabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:322:	       if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler disabled, ref clock enabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:327:		 if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b1 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler enabled, ref clock enabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:342:	     if ( s_cfg_hi_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_hi_reg[`REF_CLK_EN_BIT] == 1'b0 ) // prescaler disabled, ref clock disabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:347:	       if ( s_cfg_hi_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_hi_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler disabled, ref clock enabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:352:		 if ( s_cfg_hi_reg[`PRESCALER_EN_BIT] == 1'b1 && s_cfg_hi_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler enabled, ref clock enabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:373:	       if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler disabled, ref clock enabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:378:		 if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b1 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler enabled, ref clock enabled
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:400:	     irq_lo_o = s_target_reached_lo & s_cfg_lo_reg[`IRQ_BIT];
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:401:	     irq_hi_o = s_target_reached_hi & s_cfg_hi_reg[`IRQ_BIT];
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:405:	     irq_lo_o = s_target_reached_lo & s_target_reached_hi & s_cfg_lo_reg[`IRQ_BIT];
+ips/pulp_soc/rtl/components/pulp_interfaces.sv:1334:// - [2014-12-05] added rounding modes & flags
+ips/pulp_soc/rtl/components/apb_clkdiv.sv:62:         if (PSEL && PENABLE && PWRITE)
+ips/pulp_soc/rtl/components/apb_soc_ctrl.sv:139:   assign s_apb_write = PSEL && PENABLE && PWRITE;
+ips/pulp_soc/rtl/components/apb_soc_ctrl.sv:184:        if (PSEL && PENABLE && PWRITE)
+ips/pulp_soc/rtl/components/axi_slice_dc_master_wrap.sv:45:   assign s_aw_ready = ~clock_down_i & axi_master.aw_ready;
+ips/pulp_soc/rtl/components/axi_slice_dc_master_wrap.sv:46:   assign s_ar_ready = ~clock_down_i & axi_master.ar_ready;
+ips/pulp_soc/rtl/components/axi_slice_dc_master_wrap.sv:47:   assign axi_master.aw_valid = ~isolate_i & ~clock_down_i & s_aw_valid;
+ips/pulp_soc/rtl/components/axi_slice_dc_master_wrap.sv:48:   assign axi_master.w_valid  = ~isolate_i & ~clock_down_i & s_w_valid;
+ips/pulp_soc/rtl/components/axi_slice_dc_master_wrap.sv:49:   assign axi_master.ar_valid = ~isolate_i & ~clock_down_i & s_ar_valid;
+ips/pulp_soc/rtl/components/scm_512x32.sv:26:    assign read_en  = ~CEN &  WEN;
+ips/pulp_soc/rtl/components/scm_512x32.sv:27:    assign write_en = ~CEN & ~WEN;
+ips/pulp_soc/rtl/udma_subsystem/udma_subsystem.sv:605:        // inputs & outputs
+ips/pulp_soc/rtl/udma_subsystem/udma_subsystem.sv:667:        // inputs & outputs
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:134:    assign s_crc_block_en[1] = data_quad_i & s_crc_en;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:135:    assign s_crc_block_en[2] = data_quad_i & s_crc_en;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:136:    assign s_crc_block_en[3] = data_quad_i & s_crc_en;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:139:    assign s_crc_block_clr[1] = data_quad_i & s_crc_clr;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:140:    assign s_crc_block_clr[2] = data_quad_i & s_crc_clr;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:141:    assign s_crc_block_clr[3] = data_quad_i & s_crc_clr;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:144:    assign s_crc_block_shift[1] = data_quad_i & s_crc_shift;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:145:    assign s_crc_block_shift[2] = data_quad_i & s_crc_shift;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:146:    assign s_crc_block_shift[3] = data_quad_i & s_crc_shift;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:155:    assign data_last_o = s_busy & s_cnt_block_done;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:638:    assign s_lastbitofword = s_cnt_byte_evnt & (r_byte_in_word == 2'b11);
+ips/udma/udma_sdio/rtl/udma_sdio_top.sv:27:	// inputs & outputs
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:109:  assign s_data_start = data_en_i & ((data_rwn_i & s_start_read) | (~data_rwn_i & s_start_write));
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:118:  assign s_eot = r_cmd_eot & r_data_eot;
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:130:        if(cmd_start_i && data_en_i && (data_block_num_i == 0))
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:136:        else if(cmd_start_i && data_en_i)
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:126:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:127:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:200:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_qspi/rtl/udma_spim_clkgen.sv:57:    assign s_clock_enable_gate =  s_clock_enable & clock_enable_i;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:143:    assign s_spi_sdo1 =  (s_tx_driving & tx_qpi_i) ? (r_customsize ? r_tx_shift_reg[29] : r_tx_shift_reg[5]) : 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:144:    assign s_spi_sdo2 =  (s_tx_driving & tx_qpi_i) ? (r_customsize ? r_tx_shift_reg[30] : r_tx_shift_reg[6]) : 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:145:    assign s_spi_sdo3 =  (s_tx_driving & tx_qpi_i) ? (r_customsize ? r_tx_shift_reg[31] : r_tx_shift_reg[7]) : 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:156:    assign s_is_ful = (tx_start_i & rx_start_i) | r_is_ful;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:170:    assign s_spi_clk_cpha0 = clk_i & clk_en_cpha0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:191:    assign s_spi_clk_cpha1 = s_clk_inv & clk_en_cpha1;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:267:    			if(s_tx_lo_done && (r_tx_counter_hi==0))
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:454:                if (!s_is_ful || (s_is_ful && s_tx_clken))
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:570:	    		    	if(s_rx_lo_done && (r_rx_counter_hi==0))
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:664:            if (tx_start_i && rx_start_i)
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:666:            else if (s_tx_idle && s_rx_idle)
+ips/udma/udma_qspi/rtl/udma_spim_reg_if.sv:92:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_qspi/rtl/udma_spim_reg_if.sv:93:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_qspi/rtl/udma_spim_reg_if.sv:133:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:128:    assign s_cic_data_valid_neg = cfg_pdm_en_i & cfg_pdm_ddr_i;
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:145:                if (!s_fifo_data_filter_valid && (s_cic_result_valid_neg || s_cic_result_valid_pos))
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:201:            if (s_ws_edge & cfg_pdm_ddr_i)
+ips/udma/udma_i2s/rtl/i2s_rx.sv:113:    assign s_cfg0_enable = | (cfg_enable_i & ~cfg_select_i);
+ips/udma/udma_i2s/rtl/i2s_rx.sv:114:    assign s_cfg1_enable = | (cfg_enable_i &  cfg_select_i);
+ips/udma/udma_i2s/rtl/i2s_rx.sv:231:                s_shift[i] = s_shift1 & cfg_enable_i[i];
+ips/udma/udma_i2s/rtl/i2s_rx.sv:237:                s_shift[i] = s_shift0 & cfg_enable_i[i]; 
+ips/udma/udma_i2s/rtl/i2s_rx.sv:246:        if (cfg0_pdm_en_i && cfg0_pdm_ddr_i)
+ips/udma/udma_i2s/rtl/i2s_rx.sv:250:        if (cfg1_pdm_en_i && cfg1_pdm_ddr_i)
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:137:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:138:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:220:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_core/rtl/common/udma_apb_if.sv:54:    assign s_periph_valid = PSEL & PENABLE;
+ips/udma/udma_core/rtl/common/udma_apb_if.sv:75:            if(s_periph_valid && (s_periph_sel == i))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:96:    assign s_mark_sof_evt = (r_mark_sof_cnt == 1) & (valid_i & ready_o);
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:98:    assign s_mark_eof_evt = (r_mark_eof_cnt == 1) & (valid_i & ready_o);
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:100:    assign req_o = ready_o & ~s_stop_req;
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:114:                if ((req_o && gnt_i) && (~valid_i || ~ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:119:            else if (s_mark_sof_dec && (valid_i && ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:126:                if ((req_o && gnt_i) && (~valid_i || ~ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:131:            else if (s_mark_eof_dec && (valid_i && ready_o))
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:136:            if(req_o && gnt_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo_mark.sv:141:            else if (valid_i && ready_o)
+ips/udma/udma_core/rtl/common/udma_clkgen.sv:55:    assign s_clock_enable_gate =  s_clock_enable & clock_enable_i;
+ips/udma/udma_core/rtl/common/io_tx_fifo.sv:74:    assign req_o = ready_o & ~s_stop_req;
+ips/udma/udma_core/rtl/common/io_tx_fifo.sv:82:            if(req_o && gnt_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo.sv:87:            else if (valid_i && ready_o)
+ips/udma/udma_core/rtl/common/io_generic_fifo.sv:73:                if (ready_i && valid_o && (!valid_i || full))
+ips/udma/udma_core/rtl/common/io_generic_fifo.sv:131:                    if (ready_i && valid_o)
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:140:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:141:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:180:            event_o[i] = event_valid_i & (event_data_i == r_cmp_evt[i]);
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:222:            if (cfg_valid_i && !cfg_rwn_i && (s_wr_addr == `REG_FILT_CMD) && cfg_data_i[0])
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:227:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_core/rtl/common/io_event_counter.sv:78:    assign counter_trig_o = ~trigger_old & trigger;
+ips/udma/udma_core/rtl/common/io_tx_fifo_dc.sv:82:    assign src_req_o = src_ready_o & ~s_stop_req;
+ips/udma/udma_core/rtl/common/io_tx_fifo_dc.sv:90:            if(src_req_o && src_gnt_i)
+ips/udma/udma_core/rtl/common/io_tx_fifo_dc.sv:95:            else if (src_valid_i && src_ready_o)
+ips/udma/udma_core/rtl/core/udma_rx_channels.sv:143:    assign s_req[N_CHANNELS-1:0] = ch_valid_i & s_ch_en;
+ips/udma/udma_core/rtl/core/udma_rx_channels.sv:154:    assign s_sample_indata = s_sample_indata_filter & s_sample_indata_l2;
+ips/udma/udma_core/rtl/core/udma_rx_channels.sv:156:    assign s_push_filter = r_anygrant &  s_is_filter;
+ips/udma/udma_core/rtl/core/udma_filter.sv:171:   assign s_start_out = cfg_filter_start_i & s_sel_out_valid;
+ips/udma/udma_core/rtl/core/udma_filter.sv:172:   assign s_start_cha = cfg_filter_start_i & s_sel_opa_valid;
+ips/udma/udma_core/rtl/core/udma_filter.sv:173:   assign s_start_chb = cfg_filter_start_i & s_sel_opb_valid;
+ips/udma/udma_core/rtl/core/udma_filter.sv:174:   assign s_start_bcu = cfg_filter_start_i & s_sel_bincu_valid;
+ips/udma/udma_core/rtl/core/udma_filter.sv:177:   assign s_udma_out_valid = s_sel_out_valid & (s_sel_out ? s_au_out_valid : s_bincu_out_valid);
+ips/udma/udma_core/rtl/core/udma_filter.sv:180:   assign s_bincu_in_valid = s_sel_bincu_valid & (s_sel_bincu ? s_au_out_valid : filter_valid_i);
+ips/udma/udma_core/rtl/core/udma_filter.sv:187:   assign s_operanda_valid = s_sel_opa_valid & (s_sel_opa ? s_porta_valid : filter_valid_i);
+ips/udma/udma_core/rtl/core/udma_filter.sv:193:   assign s_au_out_ready   = (s_sel_out_valid   & s_sel_out   & s_udma_out_ready) | 
+ips/udma/udma_core/rtl/core/udma_filter.sv:194:                             (s_sel_bincu_valid & s_sel_bincu & s_bincu_in_ready);
+ips/udma/udma_core/rtl/core/udma_filter.sv:196:   assign s_porta_ready = (s_sel_opa_valid & s_sel_opa & s_operanda_ready);
+ips/udma/udma_core/rtl/core/udma_filter.sv:199:   assign s_filter_ready = (s_sel_opa_valid   & !s_sel_opa   & s_operanda_ready) |
+ips/udma/udma_core/rtl/core/udma_filter.sv:200:                           (s_sel_bincu_valid & !s_sel_bincu & s_bincu_in_ready);
+ips/udma/udma_core/rtl/core/udma_filter.sv:202:   assign s_bincu_out_ready = (s_sel_out_valid & !s_sel_out & s_udma_out_ready);
+ips/udma/udma_core/rtl/core/udma_filter.sv:208:  assign s_event  = s_done & ~r_done; //when all of them are done then rise the int
+ips/udma/udma_core/rtl/core/udma_filter.sv:211:  assign s_bincu_outenable = s_sel_out_valid & ~s_sel_out;
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:126:            if (s_data_rx_valid && s_data_rx_ready)
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:144:            if (s_data_rx_valid && s_data_rx_ready)
+ips/udma/udma_core/rtl/core/udma_filter_rx_dataout.sv:174:            if (s_data_rx_valid && s_data_rx_ready)
+ips/udma/udma_core/rtl/core/udma_filter_au.sv:134:    assign s_sample_opa = output_ready_i & (operanda_valid_i & (cfg_bypass_i | !s_en_opb | (s_en_opb & operandb_valid_i)));
+ips/udma/udma_core/rtl/core/udma_filter_au.sv:135:    assign s_sample_opb = output_ready_i & (operanda_valid_i &                             (s_en_opb & operandb_valid_i));
+ips/udma/udma_core/rtl/core/udma_filter_au.sv:292:          r_sof         <= operanda_sof_i & s_sample_opa;
+ips/udma/udma_core/rtl/core/udma_filter_au.sv:293:          r_eof         <= operanda_eof_i & s_sample_opa;
+ips/udma/udma_core/rtl/core/udma_tx_channels.sv:134:    assign s_req[N_CHANNELS-1:0] = ch_req_i & s_ch_en;
+ips/udma/udma_core/rtl/core/udma_tx_channels.sv:141:    assign l2_req_o = s_l2_req_o & ~s_stall;
+ips/udma/udma_core/rtl/core/udma_tx_channels.sv:266:    assign s_stall = |(~s_ch_ready & r_resp) & r_valid;    
+ips/udma/udma_core/rtl/core/udma_tx_channels.sv:287:          if (l2_req_o && l2_gnt_i)
+ips/udma/udma_core/rtl/core/udma_filter_bincu.sv:64:  	assign act_event_o   = s_counter_of & ~r_count_of;
+ips/udma/udma_core/rtl/core/udma_filter_bincu.sv:95:				if(~cfg_out_enable_i && s_th_event && input_valid_i)
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:103:      if(cfg_en_i && (r_ch_en || r_en) && (!s_compare || (s_compare && (!int_not_stall_i || ~int_ch_grant_i) )) )
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:105:      else if (r_en && int_ch_grant_i && int_not_stall_i && (r_counters <= s_datasize_toadd))
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:141:        if (int_not_stall_i && r_en && int_ch_grant_i) //if granted and channel enabled then
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:204:            (cfg_en_i && s_compare && int_not_stall_i)   )
+ips/udma/udma_core/rtl/core/udma_ch_addrgen.sv:214:          if (int_not_stall_i && r_en && int_ch_grant_i) //if granted and channel enabled then
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:100:    assign tx_ch_req_o      = s_data_tx_req & s_running;
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:155:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:176:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:211:          if (s_data_tx_req && s_data_tx_gnt)
+ips/udma/udma_core/rtl/core/udma_filter_tx_datafetch.sv:301:        else if(r_issof & (s_data_tx_req && s_data_tx_gnt))
+ips/udma/udma_core/rtl/core/udma_arbiter.sv:95:  assign gnt  = req_i & g[S];  
+ips/udma/udma_core/rtl/core/udma_arbiter.sv:116:        if (anyGnt && grant_ack_i) begin  
+ips/udma/udma_uart/rtl/udma_uart_rx.sv:222:				if(!start_bit && (baud_cnt == cfg_div_i))
+ips/udma/udma_uart/rtl/udma_uart_rx.sv:227:				else if(start_bit && (baud_cnt == {1'b0,cfg_div_i[15:1]}))
+ips/udma/udma_uart/rtl/udma_uart_reg_if.sv:101:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_uart/rtl/udma_uart_reg_if.sv:102:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_uart/rtl/udma_uart_reg_if.sv:152:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_i2c/rtl/udma_i2c_top.sv:35:	// inputs & outputs
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:32:	// inputs & outputs
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:143:	assign s_busy_rise = ~r_busy & s_busy;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:144:	assign s_al_rise   = ~r_al   & s_al;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:285:				if (s_cmd_done && (r_bits == 'h0))
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:297:				if (s_event && (r_bits == 'h0))
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:306:				if (s_cmd_done && (r_bits == 'h1))
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:322:				else if(s_cmd_done && (r_bits == 'h0))
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:413:				if (s_cmd_done && (r_bits == 'h1))
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:429:				else if(s_cmd_done && (r_bits == 'h0) && !(r_rpt_num == 'h0))
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:436:				else if (s_cmd_done && (r_bits == 'h0) && (r_rpt_num == 'h0))
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:120:          slave_wait <= (scl_oen & ~dscl_oen & ~sSCL) | (slave_wait & ~sSCL);
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:124:    assign scl_sync   = dSCL & ~sSCL & scl_oen;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:257:          r_start <= ~sSDA &  dSDA & sSCL; //falling edge on SDA while SCL high
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:258:          r_stop  <=  sSDA & ~dSDA & sSCL; //rising edge on SDA while SCL high
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:297:          al_o <= (sda_chk & ~sSDA & sda_oen) | ((CS != S_IDLE) & r_stop & ~r_cmd_stop);
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:310:        if (sSCL & ~dSCL)
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:100:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:101:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:143:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:173:            if(cfg_valid_i && cfg_rwn_i && (s_rd_addr == `REG_STATUS))
+ips/udma/udma_camera/rtl/camera_reg_if.sv:89:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_camera/rtl/camera_reg_if.sv:90:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_camera/rtl/camera_reg_if.sv:130:            if (cfg_valid_i & ~cfg_rwn_i)
+ips/udma/udma_camera/rtl/camera_if.sv:176:    assign s_sof = ~r_vsync & cam_vsync_i;
+ips/udma/udma_camera/rtl/camera_if.sv:180:    assign s_tx_valid = cam_hsync_i & s_pixel_valid & ~r_sample_msb;
+ips/udma/udma_camera/rtl/camera_if.sv:354:        if(s_framevalid && r_enable)
+ips/udma/udma_camera/rtl/camera_if.sv:397:        else if(cam_hsync_i & r_enable) begin
+ips/udma/udma_camera/rtl/camera_if.sv:414:            else if(cam_hsync_i & r_enable)
+ips/udma/udma_camera/rtl/camera_if.sv:418:                if (!r_sample_msb  && s_cfg_frameslice_en)
+ips/udma/udma_camera/rtl/camera_if.sv:436:            if(s_sof && r_enable)
+ips/common_cells/edge_propagator.sv:29:   assign s_input_reg_next = edge_i | (r_input_reg & ~sync_a[0]);
+ips/common_cells/onehot_to_bin.sv:32:	   assign bin[j] = |(tmp_mask & onehot);
+ips/common_cells/clock_divider_counter.sv:191:            else if (en2 && is_odd && !bypass)
+ips/common_cells/edge_propagator_tx.sv:27:   assign s_input_reg_next = valid_i | (r_input_reg & ~sync_a[0]);
+ips/common_cells/clock_divider.sv:73:    assign s_clock_enable_gate =  s_clock_enable & reg_ext_gate_sync;
+ips/hwpe-stream/tb/tb_hwpe_stream_reservoir.sv:100:            data_o.valid <= #TA (data_o.valid & ~force_invalid_i) | force_valid_i;
+ips/hwpe-stream/tb/tb_hwpe_stream_reservoir.sv:132:            data_o.valid <= #TA (data_o.valid & ~force_invalid_i) | force_valid_i;
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:108:    .enable_i        ( enable & (enable_reservoir | ctrl.realign) & ~real_last ),
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:204:        if(out.valid & out.ready)
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:210:        if(out.valid & out.ready)
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:218:        if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:232:  assign real_last = ctrl.last; // & out.valid & out.ready;
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:248:    else if(in.valid & in.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:258:    if(ctrl.first & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:263:    else if(ctrl.last & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:280:    else if(in.valid & in.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:313:    else if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:321:    if(gold_valid_out & gold_valid_in) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:335:  assert property (@(posedge clk_i) (gold_valid_in & gold_valid_out) |-> (gold_vector_in == gold_vector_out))
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:106:    .enable_i        ( enable & (enable_reservoir | ctrl.realign) & ~real_last ),
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:203:        if(out.valid & out.ready)
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:210:        if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:216:        if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:231:  assign real_last = ctrl.last & out.valid & out.ready;
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:244:    if(ctrl.first & ctrl.realign) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:261:    else if(out.valid & out.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:294:    else if(in.valid & in.ready) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:302:    if(gold_valid_out & gold_valid_in) begin
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:319:  assert property (@(posedge clk_i) (gold_valid_in & gold_valid_out) |-> (gold_vector_in == gold_vector_out))
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:200:        .WriteEnable (push_i.ready & push_i.valid ),
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:82:      assign last_packet = (misalignment==1'b1 && overall_counter == trans_size_m2) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:98:      flags.realign_flags.last_packet <= (misalignment==1'b1 && overall_counter == trans_size_m2) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:317:    // auxiliary variable used to avoid conflicts between always_ff & assign
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_fifo_load.sv:82:      if(tcdm_master_r_valid_w & stream_incoming_push.ready)
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_fifo_load.sv:86:      else if(tcdm_master_r_valid_r & stream_incoming_push.ready)
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_fifo_load.sv:120:  assign tcdm_master.req = stream_outgoing_pop.valid & incoming_fifo_not_full;
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:62:    else if(ctrl_i.first & ~stream_i.ready)
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:67:  assign first_sticky = ~ctrl_i.last_packet & ctrl_i.first | first_state;
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:71:                          (~ctrl_i.last & ctrl_i.last_packet) ? 1'b0 :
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:74:                                              int_ready & ~ctrl_i.last;
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:140:    else if (stream_i.valid & stream_i.ready) begin
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:204:        .WriteEnable ( push_i.ready & push_i.valid ),
+ips/hwpe-stream/rtl/hwpe_stream_demux_static.sv:43:      assign out[i].valid = in.valid & (sel_i == i);
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:181:          address_gen_en = stream.valid & stream.ready;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:189:        if(stream.valid & stream.ready) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:193:        else if(flags_o.addressgen_flags.realign_flags.enable & flags_o.addressgen_flags.realign_flags.last) begin
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:197:        else if(~flags_o.addressgen_flags.in_progress & tcdm_inflight_any) begin // if transactions in flight, let them end
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:76:    else if (~ctrl_i.last_packet & ctrl_i.first) begin
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:91:    else if (~ctrl_i.last_packet & stream_i.valid & stream_i.ready)
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:104:                                                 stream_i.valid & ~ctrl_i.first & (ctrl_i.last | (|strb_i));
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:106:                          (ctrl_i.last_packet) ? stream_o.valid & stream_o.ready :
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:134:          if(stream_valid_w & split_streams[ii].ready)
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:138:          else if(stream_valid_r & split_streams[ii].ready)
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:219:          if(flags_o.addressgen_flags.in_progress | (~tcdm_int_gnt & tcdm_int_req)) begin
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall_sidech.sv:49:  assign 	rst_fifo = ~(push_i && pop_o);
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall_sidech.sv:59:    // reset clause (rst_ni && rst_fifo)
+ips/jtag_pulp/src/tap_top.v:157:assign tms_reset = tms_q1 & tms_q2 & tms_q3 & tms_q4 & tms_i;    // 5 consecutive TMS=1 causes reset
+ips/jtag_pulp/src/tap_top.v:174:  if(~rst_ni && ~tms_reset)
+ips/jtag_pulp/src/tap_top.v:186:      if(tms_i & (~lock_in | test_logic_reset | sel_ir_scan))
+ips/jtag_pulp/src/tap_top.v:203:  if(~(rst_ni && ~tms_i && ~tms_reset))
+ips/jtag_pulp/src/tap_top.v:208:  if(~tms_i & (test_logic_reset | run_test_idle | update_dr | update_ir))
+ips/jtag_pulp/src/tap_top.v:222:  if(tms_i & (run_test_idle | update_dr | update_ir))
+ips/jtag_pulp/src/tap_top.v:236:  if(~tms_i & sel_dr_scan)
+ips/jtag_pulp/src/tap_top.v:250:  if(~tms_i & (capture_dr | shift_dr | exit2_dr))
+ips/jtag_pulp/src/tap_top.v:264:  if(tms_i & (capture_dr | shift_dr))
+ips/jtag_pulp/src/tap_top.v:278:  if(~tms_i & (exit1_dr | pause_dr))
+ips/jtag_pulp/src/tap_top.v:292:  if(tms_i & pause_dr)
+ips/jtag_pulp/src/tap_top.v:306:  if(tms_i & (exit1_dr | exit2_dr))
+ips/jtag_pulp/src/tap_top.v:320:  if(tms_i & sel_dr_scan)
+ips/jtag_pulp/src/tap_top.v:334:  if(~tms_i & sel_ir_scan)
+ips/jtag_pulp/src/tap_top.v:348:  if(~tms_i & (capture_ir | shift_ir | exit2_ir))
+ips/jtag_pulp/src/tap_top.v:362:  if(tms_i & (capture_ir | shift_ir))
+ips/jtag_pulp/src/tap_top.v:376:  if(~tms_i & (exit1_ir | pause_ir))
+ips/jtag_pulp/src/tap_top.v:390:  if(tms_i & pause_ir)
+ips/jtag_pulp/src/tap_top.v:404:  if(tms_i & (exit1_ir | exit2_ir))
+ips/jtag_pulp/src/tap_top.v:456:  if(idcode_sel & shift_dr)
+ips/jtag_pulp/src/jtag_enable.sv:31:   assign axireg_capture_syn_o     = axireg_sel_syn_i & capture_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:32:   assign axireg_shift_syn_o       = axireg_sel_syn_i & shift_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:33:   assign axireg_update_syn_o      = axireg_sel_syn_i & update_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:35:   assign bbmuxreg_capture_syn_o   = bbmuxreg_sel_syn_i & capture_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:36:   assign bbmuxreg_shift_syn_o     = bbmuxreg_sel_syn_i & shift_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:37:   assign bbmuxreg_update_syn_o    = bbmuxreg_sel_syn_i & update_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:39:   assign clkgatereg_capture_syn_o = clkgatereg_sel_syn_i & capture_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:40:   assign clkgatereg_shift_syn_o   = clkgatereg_sel_syn_i & shift_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:41:   assign clkgatereg_update_syn_o  = clkgatereg_sel_syn_i & update_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:43:   assign confreg_capture_syn_o    = confreg_sel_syn_i & capture_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:44:   assign confreg_shift_syn_o      = confreg_sel_syn_i & shift_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:45:   assign confreg_update_syn_o     = confreg_sel_syn_i & update_syn_i;
+ips/jtag_pulp/src/jtag_enable.sv:47:   assign update_enable_o          = enable_i & update_syn_i;
+ips/jtag_pulp/src/jtag_axi_wrap.sv:123:	   if (jtag_master.r_valid & jtag_master.r_last) begin
+ips/jtag_pulp/src/jtagreg.sv:20:    input logic                    capture_dr_i,// capture&sel
+ips/jtag_pulp/src/jtagreg.sv:21:    input logic                    shift_dr_i, // shift&sel
+ips/jtag_pulp/src/jtagreg.sv:22:    input logic                    update_dr_i, // update&sel
+ips/jtag_pulp/src/jtag_rst_synch.sv:40:   assign rst_sync = (test_mode_i) ? rst_ni : trst5 & trst_ni;
+ips/jtag_pulp/src/jtag_enable_synch.sv:37:   assign enable = ~tck3 & tck2;
+ips/jtag_pulp/src/bscell.sv:41:	     if (update_dr_i & enable_i)
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:90:  assign s_is_apb_write = apb_slave.psel & apb_slave.penable & apb_slave.pwrite;
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:91:  assign s_is_apb_read  = apb_slave.psel & apb_slave.penable & ~apb_slave.pwrite;
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:93:  assign s_event_fifo_ready = (core_irq_ack_i & (core_irq_id_i == 5'd26)) | (s_is_int_clr & (apb_slave.pwdata[26] == 1'b1)) | (s_is_int & (apb_slave.pwdata[26] == 1'b0));
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:108:  assign core_irq_req_o = |(r_int & r_mask);
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:138:        s_mask_next = r_mask & ~apb_slave.pwdata; 
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:155:      if (core_irq_ack_i && (core_irq_id_i == i))
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:175:      if (core_irq_ack_i && (core_irq_id_i == i))
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:205:      if (s_event_fifo_valid && s_event_fifo_ready)
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/MUX2_REQ_L2.sv:58:   assign SEL                =   ~data_req_CH0_i | ( RR_FLAG & data_req_CH1_i);      // SEL FOR ROUND ROBIN MUX
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/MUX2_REQ_L2.sv:59:   assign data_gnt_CH0_o     =    (( data_req_CH0_i & ~data_req_CH1_i) | ( data_req_CH0_i & ~RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/MUX2_REQ_L2.sv:60:   assign data_gnt_CH1_o     =    ((~data_req_CH0_i &  data_req_CH1_i) | ( data_req_CH1_i &  RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/RequestBlock_L2_2CH.sv:108:                logic [2**$clog2(N_CH0)-N_CH0 -1 :0][ADDR_WIDTH-1:0]                data_add_CH0_dummy; // Memory address + T&S bit
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/RequestBlock_L2_2CH.sv:155:              logic [2**$clog2(N_CH1)-N_CH1 -1 :0][ADDR_WIDTH-1:0]                data_add_CH1_dummy; // Memory address + T&S bit
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/RR_Flag_Req_L2.sv:30:            if( data_req_i  & data_gnt_i )
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/FanInPrimitive_Req_L2.sv:49:   assign SEL              =    ~data_req0_i | ( RR_FLAG & data_req1_i);   // SEL FOR ROUND ROBIN MUX
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/FanInPrimitive_Req_L2.sv:52:   assign data_gnt0_o      =    (( data_req0_i & ~data_req1_i) | ( data_req0_i & ~RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/FanInPrimitive_Req_L2.sv:53:   assign data_gnt1_o      =    ((~data_req0_i &  data_req1_i) | ( data_req1_i &  RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_L2/FanInPrimitive_Resp_L2.sv:33:   // FIXME: (req0 & req1) must be always 0
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/RequestBlock2CH_BRIDGE.sv:128:                logic [2**$clog2(N_CH0)-N_CH0 -1 :0][ADDR_WIDTH-1:0]                data_add_CH0_dummy; // Memory address + T&S bit
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/RequestBlock2CH_BRIDGE.sv:179:              logic [2**$clog2(N_CH1)-N_CH1 -1 :0][ADDR_WIDTH-1:0]                data_add_CH1_dummy; // Memory address + T&S bit
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/MUX2_REQ_BRIDGE.sv:59:    assign SEL               =   ~data_req_CH0_i | ( RR_FLAG & data_req_CH1_i);      // SEL FOR ROUND ROBIN MUX
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/MUX2_REQ_BRIDGE.sv:60:    assign data_gnt_CH0_o    =    (( data_req_CH0_i & ~data_req_CH1_i) | ( data_req_CH0_i & ~RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/MUX2_REQ_BRIDGE.sv:61:    assign data_gnt_CH1_o    =    ((~data_req_CH0_i &  data_req_CH1_i) | ( data_req_CH1_i &  RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/RR_Flag_Req_BRIDGE.sv:30:          if( data_req_i  & data_gnt_i )
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/FanInPrimitive_Resp_BRIDGE.sv:40:    // FIXME: (req0 & req1) must be always 0
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/FanInPrimitive_Req_BRIDGE.sv:56:      assign SEL           =    ~data_req0_i | ( RR_FLAG & data_req1_i);      // SEL FOR ROUND ROBIN MUX
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/FanInPrimitive_Req_BRIDGE.sv:59:      assign data_gnt0_o   =    (( data_req0_i & ~data_req1_i) | ( data_req0_i & ~RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/FanInPrimitive_Req_BRIDGE.sv:60:      assign data_gnt1_o   =    ((~data_req0_i &  data_req1_i) | ( data_req1_i &  RR_FLAG)) & data_gnt_i;
+ips/L2_tcdm_hybrid_interco/RTL/XBAR_BRIDGE/AddressDecoder_Req_BRIDGE.sv:36:      data_gnt_o = |(data_gnt_i & destination_i) & data_req_i;
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:178:                        if(WVALID_i & grant_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:214:                MEM_CEN_o = ~(WVALID_i & grant_i);
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:220:                if(grant_i & WVALID_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:263:                                if(WVALID_i & grant_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:310:                   MEM_CEN_o  = ~(WVALID_i & grant_i);
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/axi_write_ctrl.sv:317:                    if(WVALID_i & grant_i)
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/lint64_to_32.sv:73:         if(data_req_i & data_gnt_o)
+ips/L2_tcdm_hybrid_interco/TB/L2_SP_RAM_STALL.sv:86:               if(~CEN & gnt_o & r_gnt_int)
+ips/L2_tcdm_hybrid_interco/TB/TGEN_32.sv:52:         if(data_req_o & data_gnt_i)
+ips/L2_tcdm_hybrid_interco/TB/cluster_clock_gating.sv:27:   assign clk_o = clk_i & clk_en;
+ips/hwpe-ctrl/tb/tb_hwpe_ctrl_seq_mult.sv:78:  assert property (@(posedge clk_i) (valid & ~start & rst_ni) |-> (prod == a*b))
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:155:    regfile_flags.is_read       = (cfg.req == 1'b1 && cfg.wen == 1'b1);
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:156:    regfile_flags.is_testset    = (cfg.req == 1'b1 && cfg.wen == 1'b1 && cfg.add[LOG_REGS+2-1:2] == 1)                      ? 1 : 0;  // Operation is a test&set to register context_ts
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:157:    regfile_flags.is_trigger    = (cfg.req == 1'b1 && cfg.wen == 1'b0 && cfg.add[LOG_REGS+2-1:2] == 0)                      ? 1 : 0;  // Operation is a trigger
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:158:    regfile_flags.true_done     = ctrl_i.done & flags_o.is_working;                                                             // This is necessary because sometimes done is asserted as soon as rst_ni becomes 1
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:189:    regfile_in.rden  = (regfile_flags.is_mandatory==0) ? cfg.req &  cfg.wen : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:190:    regfile_in.wren  = (regfile_flags.is_mandatory==0) ? cfg.req & ~cfg.wen : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:219:      assign start_context = (running_context==pointer_context && regfile_flags.full_context==0) ? 1 : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:221:      assign start_context = (regfile_flags.is_trigger==1 && flags_o.is_working==0) ? 1 : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:241:          if (running_context == pointer_context && regfile_flags.full_context == 0) begin
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:293:          if (regfile_flags.is_testset == 1 && regfile_flags.full_context==0) begin
+ips/hwpe-ctrl/rtl/hwpe_ctrl_regfile_latch.sv:145:             else if(WriteEnable & WriteBE[m])
+ips/hwpe-ctrl/rtl/hwpe_ctrl_regfile.sv:329:            else if (flags_i.true_done==1 && flags_i.running_context==flags_i.pointer_context) begin
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:38:  // ctrl & flags
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:75:      flags_o.valid <= busy_sticky & ~busy_int;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:114:        if(accum_int & flags_o.valid)
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:164:      str = " ITERATE CURRENT LOOP & GOTO LOOP 0       ";
+ips/riscv/verilator-model/testbench.cpp:76:void debugAccess(uint32_t addr, uint32_t& val, bool write_enable)
+ips/riscv/verilator-model/cluster_clock_gating.sv:31:  assign clk_o = clk_i & clk_en;
+ips/riscv/tb/serDiv/tb_div.sv:24:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_div.sv:51:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_div.sv:78:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_div.sv:105:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_div.sv:132:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_div.sv:164:  OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_rem.sv:24:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_rem.sv:50:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_rem.sv:76:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_rem.sv:102:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_rem.sv:128:OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/tb/serDiv/tb_rem.sv:159:  OpBSign_SI  = (OpB_T & (1<<(C_WIDTH-1))) > 0;
+ips/riscv/riscv_if_stage.sv:263:          if (req_i && if_valid) begin
+ips/riscv/riscv_if_stage.sv:390:  assign is_hwlp_id_o = is_hwlp_id_q & instr_valid_id_o;
+ips/riscv/riscv_if_stage.sv:392:  assign if_ready = valid & id_ready_i;
+ips/riscv/riscv_alu_basic.sv:286:      ALU_AND:  result_o = operand_a_i & operand_b_i;
+ips/riscv/riscv_load_store_unit.sv:306:      if (data_rvalid_i && (~data_we_q))
+ips/riscv/riscv_load_store_unit.sv:332:  assign load_err_o    = data_gnt_i && data_err_i && ~data_we_o;
+ips/riscv/riscv_load_store_unit.sv:333:  assign store_err_o   = data_gnt_i && data_err_i && data_we_o;
+ips/riscv/riscv_apu_disp.sv:92:  assign req_accepted = valid_req & apu_master_gnt_i;
+ips/riscv/riscv_apu_disp.sv:98:  assign returned_req      = valid_req      &  apu_master_valid_i  & !valid_inflight & !valid_waiting;
+ips/riscv/riscv_apu_disp.sv:99:  assign returned_inflight = valid_inflight & (apu_master_valid_i) & !valid_waiting;
+ips/riscv/riscv_apu_disp.sv:100:  assign returned_waiting  = valid_waiting  & (apu_master_valid_i);
+ips/riscv/riscv_apu_disp.sv:185:  assign read_dep_req       = |read_deps_req       & valid_req      & !returned_req;
+ips/riscv/riscv_apu_disp.sv:186:  assign read_dep_inflight  = |read_deps_inflight  & valid_inflight & !returned_inflight;
+ips/riscv/riscv_apu_disp.sv:187:  assign read_dep_waiting   = |read_deps_waiting   & valid_waiting  & !returned_waiting;
+ips/riscv/riscv_apu_disp.sv:188:  assign write_dep_req      = |write_deps_req      & valid_req      & !returned_req;
+ips/riscv/riscv_apu_disp.sv:189:  assign write_dep_inflight = |write_deps_inflight & valid_inflight & !returned_inflight;
+ips/riscv/riscv_apu_disp.sv:190:  assign write_dep_waiting  = |write_deps_waiting  & valid_waiting  & !returned_waiting;
+ips/riscv/riscv_apu_disp.sv:199:  assign stall_full      = valid_inflight & valid_waiting;
+ips/riscv/riscv_apu_disp.sv:202:  // so we stall if: (apu_lat_i = 1 & apu_lat = 2/3) | (apu_lat_i = 2 & apu_lat = 3) | (apu_lat_i = 3 (multicycle))
+ips/riscv/riscv_apu_disp.sv:203:  assign stall_type      = enable_i  & active & ((apu_lat_i==2'h1) | ((apu_lat_i==2'h2) & (apu_lat==2'h3)) | (apu_lat_i==2'h3));
+ips/riscv/riscv_alu.sv:262:  assign shift_op_a_32 = (operator_i == ALU_ROR) ? {shift_op_a, shift_op_a} : $signed({ {32{shift_arithmetic & shift_op_a[31]}}, shift_op_a});
+ips/riscv/riscv_alu.sv:269:          shift_right_result[31:16] = $signed( {shift_arithmetic & shift_op_a[31], shift_op_a[31:16] }) >>> shift_amt_int[19:16];
+ips/riscv/riscv_alu.sv:270:          shift_right_result[15: 0] = $signed( {shift_arithmetic & shift_op_a[15], shift_op_a[15: 0] }) >>> shift_amt_int[ 3: 0];
+ips/riscv/riscv_alu.sv:275:          shift_right_result[31:24] = $signed( {shift_arithmetic & shift_op_a[31], shift_op_a[31:24] }) >>> shift_amt_int[26:24];
+ips/riscv/riscv_alu.sv:276:          shift_right_result[23:16] = $signed( {shift_arithmetic & shift_op_a[23], shift_op_a[23:16] }) >>> shift_amt_int[18:16];
+ips/riscv/riscv_alu.sv:277:          shift_right_result[15: 8] = $signed( {shift_arithmetic & shift_op_a[15], shift_op_a[15: 8] }) >>> shift_amt_int[10: 8];
+ips/riscv/riscv_alu.sv:278:          shift_right_result[ 7: 0] = $signed( {shift_arithmetic & shift_op_a[ 7], shift_op_a[ 7: 0] }) >>> shift_amt_int[ 2: 0];
+ips/riscv/riscv_alu.sv:416:      ALU_FEQ:           cmp_result = is_equal & ~f_is_nan;
+ips/riscv/riscv_alu.sv:417:      ALU_FLE:           cmp_result = ~f_is_greater & ~f_is_nan;
+ips/riscv/riscv_alu.sv:474:     assign fclass_normal      = fclass_exponent != 0 && fclass_exponent != 255;
+ips/riscv/riscv_alu.sv:475:     assign fclass_subnormal   = fclass_exponent == 0 && fclass_mantiassa != 0;
+ips/riscv/riscv_alu.sv:491:                                   (fclass_subnormal && fclass_is_negative),
+ips/riscv/riscv_alu.sv:492:                                   (fclass_normal    && fclass_is_negative),
+ips/riscv/riscv_alu.sv:888:  assign extract_sign = extract_is_signed & shift_result[bmask_a_i];
+ips/riscv/riscv_alu.sv:890:  assign bextins_result = (bmask & shift_result) | (bextins_and & bmask_inv);
+ips/riscv/riscv_alu.sv:892:  assign bclr_result = operand_a_i & bmask_inv;
+ips/riscv/riscv_alu.sv:971:      ALU_AND:  result_o = operand_a_i & operand_b_i;
+ips/riscv/riscv_cs_registers.sv:625:  assign m_irq_enable_o  = mstatus_q.mie & priv_lvl_q == PRIV_LVL_M;
+ips/riscv/riscv_cs_registers.sv:626:  assign u_irq_enable_o  = mstatus_q.uie & priv_lvl_q == PRIV_LVL_U;
+ips/riscv/riscv_cs_registers.sv:720:  assign PCCR_in[1]  = id_valid_i & is_decoding_i;    // instruction counter
+ips/riscv/riscv_cs_registers.sv:721:  assign PCCR_in[2]  = ld_stall_i & id_valid_q;       // nr of load use hazards
+ips/riscv/riscv_cs_registers.sv:722:  assign PCCR_in[3]  = jr_stall_i & id_valid_q;       // nr of jump register hazards
+ips/riscv/riscv_cs_registers.sv:723:  assign PCCR_in[4]  = imiss_i & (~pc_set_i);         // cycles waiting for instruction fetches, excluding jumps and branches
+ips/riscv/riscv_cs_registers.sv:726:  assign PCCR_in[7]  = jump_i                     & id_valid_q; // nr of jumps (unconditional)
+ips/riscv/riscv_cs_registers.sv:727:  assign PCCR_in[8]  = branch_i                   & id_valid_q; // nr of branches (conditional)
+ips/riscv/riscv_cs_registers.sv:728:  assign PCCR_in[9]  = branch_i & branch_taken_i  & id_valid_q; // nr of taken branches (conditional)
+ips/riscv/riscv_cs_registers.sv:729:  assign PCCR_in[10] = id_valid_i & is_decoding_i & is_compressed_i;  // compressed instruction counter
+ips/riscv/riscv_cs_registers.sv:732:     assign PCCR_in[PERF_APU_ID  ] = apu_typeconflict_i & ~apu_dep_i;
+ips/riscv/riscv_cs_registers.sv:734:     assign PCCR_in[PERF_APU_ID+2] = apu_dep_i & ~apu_contention_i;
+ips/riscv/riscv_cs_registers.sv:793:  assign PCCR_inc[0] = (|(PCCR_in & PCER_q)) & PCMR_q[0];
+ips/riscv/riscv_cs_registers.sv:807:        CSR_OP_CLEAR:  PCCR_n[0] = csr_wdata_i & ~(PCCR_q[0]);
+ips/riscv/riscv_cs_registers.sv:823:      if (is_pccr == 1'b1 && (pccr_all_sel == 1'b1 || pccr_index == i)) begin
+ips/riscv/riscv_cs_registers.sv:828:          CSR_OP_CLEAR:  PCCR_n[i] = csr_wdata_i & ~(PCCR_q[i]);
+ips/riscv/riscv_id_stage.sv:515:  assign branch_taken_ex     = branch_in_ex_o & branch_decision_i;
+ips/riscv/riscv_id_stage.sv:652:      IMMB_PCINCR: imm_b = (is_compressed_i && (~data_misaligned_i)) ? 32'h2 : 32'h4;
+ips/riscv/riscv_id_stage.sv:914:  assign csr_apu_stall       = (csr_access & (apu_en_ex_o & (apu_lat_ex_o[1] == 1'b1) | apu_busy_i));
+ips/riscv/riscv_id_stage.sv:1301:  assign hwloop_valid = instr_valid_i & clear_instr_valid_o & is_hwlp_i;
+ips/riscv/riscv_id_stage.sv:1527:      @(posedge clk) (instr_valid_i & (~illegal_c_insn_i)) |-> (!$isunknown(instr_rdata_i)) ) else $display("Instruction is valid, but has at least one X");
+ips/riscv/riscv_mult.sv:117:  assign short_result     = $signed({short_shift_arith & short_mac_msb1, short_shift_arith & short_mac_msb0, short_mac[31:0]}) >>> short_imm;
+ips/riscv/riscv_mult.sv:212:        mulh_carry_q <= ~mulh_clearcarry & short_mac[32];
+ips/riscv/riscv_int_controller.sv:63:  assign irq_enable_ext =  ((u_IE_i | irq_sec_i) & current_priv_lvl_i == PRIV_LVL_U) | (m_IE_i & current_priv_lvl_i == PRIV_LVL_M);
+ips/riscv/riscv_int_controller.sv:85:          if(irq_enable_ext & irq_i) begin
+ips/riscv/riscv_int_controller.sv:122:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/riscv/riscv_core.sv:416:  assign core_busy_int = (PULP_CLUSTER & data_load_event_ex & data_req_o) ? (if_busy | apu_busy) : (if_busy | ctrl_busy | lsu_busy | apu_busy);
+ips/riscv/riscv_core.sv:916:  assign wb_valid = lsu_ready_wb & apu_ready_wb;
+ips/riscv/riscv_core.sv:1005:    .mem_load_i              ( data_req_o & data_gnt_i & (~data_we_o) ),
+ips/riscv/riscv_core.sv:1006:    .mem_store_i             ( data_req_o & data_gnt_i & data_we_o    ),
+ips/riscv/riscv_register_file.sv:100:     assign rdata_a_o = (fregfile_ena & raddr_a_i[5]) ? mem_fp[raddr_a_i[4:0]] : mem[raddr_a_i[4:0]];
+ips/riscv/riscv_register_file.sv:101:     assign rdata_b_o = (fregfile_ena & raddr_b_i[5]) ? mem_fp[raddr_b_i[4:0]] : mem[raddr_b_i[4:0]];
+ips/riscv/riscv_register_file.sv:102:     assign rdata_c_o = (fregfile_ena & raddr_c_i[5]) ? mem_fp[raddr_c_i[4:0]] : mem[raddr_c_i[4:0]];
+ips/riscv/riscv_register_file.sv:114:  assign waddr_a = {(fregfile_ena & waddr_a_i[5]), waddr_a_i[4:0]};
+ips/riscv/riscv_register_file.sv:115:  assign waddr_b = {(fregfile_ena & waddr_b_i[5]), waddr_b_i[4:0]};
+ips/riscv/riscv_debug_unit.sv:69:  // Signals for PPC & NPC register
+ips/riscv/riscv_ex_stage.sv:147:  output logic [31:0] regfile_alu_wdata_fw_o,    // forward to RF and ID/EX pipe, ALU & MUL
+ips/riscv/riscv_ex_stage.sv:197:    if (apu_valid & (apu_singlecycle | apu_multicycle)) begin
+ips/riscv/riscv_ex_stage.sv:202:      if(regfile_alu_we_i & ~apu_en_i) begin
+ips/riscv/riscv_ex_stage.sv:206:      regfile_alu_we_fw_o      = regfile_alu_we_i & ~apu_en_i; // private fpu incomplete?
+ips/riscv/riscv_ex_stage.sv:480:  assign ex_ready_o = (~apu_stall & alu_ready & mult_ready & lsu_ready_ex_i
+ips/riscv/riscv_ex_stage.sv:481:                       & wb_ready_i & ~wb_contention) | (branch_in_ex_i);
+ips/riscv/riscv_ex_stage.sv:483:                       & (alu_ready & mult_ready & lsu_ready_ex_i & wb_ready_i);
+ips/riscv/riscv_prefetch_buffer.sv:132:          if(valid_o & unaligned_is_compressed & instr_addr_q[1]) begin
+ips/riscv/riscv_prefetch_buffer.sv:184:        if (instr_rvalid_i & (CS != WAIT_ABORTED)) begin
+ips/riscv/riscv_prefetch_buffer.sv:185:          if (valid_o & is_hwlp_o)
+ips/riscv/riscv_prefetch_buffer.sv:198:        if (valid_o & is_hwlp_o)
+ips/riscv/riscv_prefetch_buffer.sv:238:        else if(hwlp_masked & valid_stored)
+ips/riscv/riscv_prefetch_buffer.sv:241:        if (req_i & (fifo_ready | branch_i | hwlp_branch | (hwlp_masked & valid_stored))) begin
+ips/riscv/riscv_prefetch_buffer.sv:245:          if (hwlp_masked & valid_stored) begin
+ips/riscv/riscv_prefetch_buffer.sv:266:        end else if (hwlp_masked & valid_stored) begin
+ips/riscv/riscv_prefetch_buffer.sv:287:        if (req_i & (fifo_ready | branch_i | hwlp_branch |hwlp_masked)) begin
+ips/riscv/riscv_prefetch_buffer.sv:310:            end else if (hwlp_masked & valid_o) begin
+ips/riscv/riscv_prefetch_buffer.sv:375:        instr_addr_q    <= (hwloop_speculative & ~branch_i) ? hwloop_target_i : instr_addr_o;
+ips/riscv/riscv_L0_buffer.sv:276:  assign valid_o = valid & (~branch_i);
+ips/riscv/riscv_tracer.sv:695:        if (ex_data_req && ex_data_gnt) begin
+ips/riscv/riscv_controller.sv:185:    if (is_decoding_o && illegal_insn_i) begin
+ips/riscv/riscv_controller.sv:241:    irq_enable_int         =  ((u_IE_i | irq_sec_ctrl_i) & current_priv_lvl_i == PRIV_LVL_U) | (m_IE_i & current_priv_lvl_i == PRIV_LVL_M);
+ips/riscv/riscv_controller.sv:324:        if (irq_req_ctrl_i & irq_enable_int) begin
+ips/riscv/riscv_controller.sv:366:              irq_req_ctrl_i & irq_enable_int:
+ips/riscv/riscv_controller.sv:541:        if(irq_req_ctrl_i & irq_enable_int) begin
+ips/riscv/riscv_controller.sv:759:  assign apu_stall_o = apu_read_dep_i | (apu_write_dep_i & ~apu_en_i);
+ips/riscv/riscv_controller.sv:813:      boot_done_q    <= boot_done | (~boot_done & boot_done_q);
+ips/riscv/riscv_controller.sv:815:      jump_done_q    <= jump_done & (~id_ready_i);
+ips/riscv/riscv_controller.sv:834:    @(posedge clk) (~(dbg_req_i & irq_req_ctrl_i)) ) else $warning("Both dbg_req_i and irq_req_ctrl_i are active");
+ips/riscv/riscv_register_file_latch.sv:110:      assign rdata_a_o = (fregfile_ena & raddr_a_i[5]) ? mem_fp[raddr_a_i[4:0]] : mem[raddr_a_i[4:0]];
+ips/riscv/riscv_register_file_latch.sv:111:      assign rdata_b_o = (fregfile_ena & raddr_b_i[5]) ? mem_fp[raddr_b_i[4:0]] : mem[raddr_b_i[4:0]];
+ips/riscv/riscv_register_file_latch.sv:112:      assign rdata_c_o = (fregfile_ena & raddr_c_i[5]) ? mem_fp[raddr_c_i[4:0]] : mem[raddr_c_i[4:0]];
+ips/riscv/riscv_register_file_latch.sv:154:   assign waddr_a = {(fregfile_ena & waddr_a_i[5]), waddr_a_i[4:0]};
+ips/riscv/riscv_register_file_latch.sv:155:   assign waddr_b = {(fregfile_ena & waddr_b_i[5]), waddr_b_i[4:0]};
+ips/riscv/riscv_prefetch_L0_buffer.sv:230:        if (fetch_valid && (~is_crossword))
+ips/riscv/riscv_prefetch_L0_buffer.sv:555:  assign valid_o = valid & (~branch_i);
+ips/riscv/riscv_prefetch_L0_buffer.sv:559:  assign is_hwlp_o = is_hwlp_q & (~branch_i);
+ips/riscv/riscv_alu_div.sv:81:  assign PmSel_S     = LoadEn_S & ~(OpCode_SI[0] & (OpA_DI[$high(OpA_DI)] ^ OpBSign_SI));
+ips/riscv/riscv_fetch_fifo.sv:192:    if (out_ready_i && out_valid_o) begin
+ips/hwpe-mac-engine/ucode/ucode_common.py:58:            print "@%d %s ITERATE CURRENT LOOP & GOTO LOOP 0" % (curr_addr, str(curr_state[3][::-1]))
+ips/hwpe-mac-engine/rtl/mac_engine.sv:103:      if (a_i.valid & b_i.valid & a_i.ready & b_i.ready) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:120:      if ((a_i.valid & b_i.valid) | (r_mult_valid & r_mult_ready)) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:121:        r_mult_valid <= a_i.valid & b_i.valid;
+ips/hwpe-mac-engine/rtl/mac_engine.sv:136:      if (c_i.valid & c_i.ready) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:140:      else if (r_mult_valid & r_mult_ready) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:156:      if((r_cnt == ctrl_i.len) | (r_acc_valid & r_acc_ready)) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:177:    d_o.valid = ctrl_i.enable & d_nonshifted_valid;
+ips/hwpe-mac-engine/rtl/mac_engine.sv:199:      if ((ctrl_i.start == 1'b1) || ((r_cnt > 0) && (r_cnt < ctrl_i.len) && (r_mult_valid & r_mult_ready == 1'b1))) begin
+ips/hwpe-mac-engine/rtl/mac_engine.sv:214:  // R_valid & R_ready denominate the handshake at the *output* (Q port) of pipe register R
+ips/hwpe-mac-engine/rtl/mac_engine.sv:224:  assign a_i.ready = (a_i.valid & b_i.valid) | (~a_i.valid & ~b_i.valid);
+ips/hwpe-mac-engine/rtl/mac_engine.sv:225:  assign b_i.ready = (a_i.valid & b_i.valid) | (~a_i.valid & ~b_i.valid);
+ips/hwpe-mac-engine/rtl/mac_engine.sv:226:  //assign a_i.ready = (r_mult_ready & a_i.valid & b_i.valid) | (~a_i.valid & ~b_i.valid);
+ips/hwpe-mac-engine/rtl/mac_engine.sv:227:  //assign b_i.ready = (r_mult_ready & a_i.valid & b_i.valid) | (~a_i.valid & ~b_i.valid);
+ips/hwpe-mac-engine/rtl/mac_engine.sv:231:  // The following assertions help in getting the rules on ready & valid right.
+ips/hwpe-mac-engine/rtl/keccak.v:54:        i <= {i[9:0], state & f_ack};
+ips/hwpe-mac-engine/rtl/mac_fsm.sv:25:  // ctrl & flags
+ips/hwpe-mac-engine/rtl/KeyExpansion.v:84:	if (NK > 6 && (i%NK) == 4)  begin:NEXT
+ips/hwpe-mac-engine/rtl/KeyExpansion.v:105:	if (NK > 6 && (i%NK) == 4)  begin
+ips/hwpe-mac-engine/rtl/mux_func.sv:74:  //assign c = (a & ~b) | (~a & b);  
+ips/hwpe-mac-engine/rtl/mac_streamer.sv:29:  // local enable & clear
+ips/hwpe-mac-engine/rtl/MixColumns.v:12:      xtime = (a & 8'h80) ? ((a << 1) ^ 8'h1B) : (a << 1);
+ips/hwpe-mac-engine/rtl/f_permutation.v:34:    assign accept = in_ready & (~ calc); // in_ready & (i == 0)
+ips/hwpe-mac-engine/rtl/f_permutation.v:42:      else       calc <= (calc & (~ i[10])) | accept;
+ips/hwpe-mac-engine/rtl/mac_ctrl.sv:35:  // ctrl & flags
+ips/hwpe-mac-engine/rtl/mac_ctrl.sv:63:  /* Peripheral slave & register file */
+ips/hwpe-mac-engine/rtl/mac_ctrl.sv:101:    // loops & bytecode
+ips/hwpe-mac-engine/rtl/md5.v:190:      0: fr_var=((br&cr)|(~br&dr));
+ips/hwpe-mac-engine/rtl/md5.v:191:      1: fr_var=((br&dr)|(cr& (~dr)));
+ips/hwpe-mac-engine/rtl/padder.v:42:    assign accept = (~ state) & in_ready & (~ buffer_full); // if state == 1, do not eat input
+ips/hwpe-mac-engine/rtl/padder.v:43:    assign update = (accept | (state & (~ buffer_full))) & (~ done); // don't fill buffer if done
+ips/hwpe-mac-engine/rtl/padder.v:68:      else if (state & out_ready)
+ips/zero-riscy/zeroriscy_cs_registers.sv:315:  assign PCCR_in[4]  = imiss_i & (~pc_set_i);         // cycles waiting for instruction fetches, excluding jumps and branches
+ips/zero-riscy/zeroriscy_cs_registers.sv:321:  assign PCCR_in[10] = id_valid_i & is_decoding_i & is_compressed_i; // compressed instruction counter
+ips/zero-riscy/zeroriscy_cs_registers.sv:378:  assign PCCR_inc[0] = (|(PCCR_in & PCER_q)) & PCMR_q[0];
+ips/zero-riscy/zeroriscy_cs_registers.sv:392:        CSR_OP_CLEAR:  PCCR_n[0] = csr_wdata_i & ~(PCCR_q[0]);
+ips/zero-riscy/zeroriscy_cs_registers.sv:408:      if (is_pccr == 1'b1 && (pccr_all_sel == 1'b1 || pccr_index == i)) begin
+ips/zero-riscy/zeroriscy_cs_registers.sv:413:          CSR_OP_CLEAR:  PCCR_n[i] = csr_wdata_i & ~(PCCR_q[i]);
+ips/zero-riscy/zeroriscy_int_controller.sv:68:          if(irq_enable_ext & irq_i) begin
+ips/zero-riscy/zeroriscy_int_controller.sv:102:  //  if (rst_n && exc_ctrl_cs == IRQ_DONE)
+ips/zero-riscy/zeroriscy_core.sv:605:    .mem_load_i              ( data_req_o & data_gnt_i & (~data_we_o) ),
+ips/zero-riscy/zeroriscy_core.sv:606:    .mem_store_i             ( data_req_o & data_gnt_i & data_we_o    ),
+ips/zero-riscy/zeroriscy_if_stage.sv:185:                if (req_i && if_valid_o) begin
+ips/zero-riscy/zeroriscy_if_stage.sv:264:        assign if_ready = valid & id_ready_i;
+ips/zero-riscy/zeroriscy_prefetch_buffer.sv:130:        if (req_i & (fifo_ready | branch_i )) begin
+ips/zero-riscy/zeroriscy_prefetch_buffer.sv:168:        if (req_i & (fifo_ready | branch_i)) begin
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:297:  assign ready_o       = (curr_state_q == MD_FINISH) | (curr_state_q == MD_LAST & (operator_i == MD_OP_MULL | operator_i == MD_OP_MULH));
+ips/zero-riscy/zeroriscy_id_stage.sv:296: assign branch_taken_ex = branch_in_id & branch_decision_i;
+ips/zero-riscy/zeroriscy_id_stage.sv:354:        IMMB_PCINCR: imm_b = (is_compressed_i && (~data_misaligned_i)) ? 32'h2 : 32'h4;
+ips/zero-riscy/zeroriscy_id_stage.sv:781:    @(posedge clk) (instr_valid_i & (~illegal_c_insn_i)) |-> (!$isunknown(instr_rdata_i)) ) else $display("Instruction is valid, but has at least one X");
+ips/zero-riscy/zeroriscy_id_stage.sv:785:    @(posedge clk) ~(data_req_ex_o & multdiv_int_en )) else $display("Multicycles enable signals are not unique");
+ips/zero-riscy/zeroriscy_fetch_fifo.sv:169:    if (out_ready_i && out_valid_o) begin
+ips/zero-riscy/zeroriscy_controller.sv:136:    if (is_decoding_o && illegal_insn_i) begin
+ips/zero-riscy/zeroriscy_controller.sv:270:        if (irq_req_ctrl_i & irq_enable_int) begin
+ips/zero-riscy/zeroriscy_controller.sv:290:              if (branch_set_i & ~jump_set_i & ~(mret_insn_i | ecall_insn_i | pipe_flush_i | ebrk_insn_i | illegal_insn_i | csr_status_i))
+ips/zero-riscy/zeroriscy_controller.sv:299:              else if (~branch_set_i & jump_set_i & ~(mret_insn_i | ecall_insn_i | pipe_flush_i | ebrk_insn_i | illegal_insn_i | csr_status_i))
+ips/zero-riscy/zeroriscy_controller.sv:306:              else if (~branch_set_i & ~jump_set_i & (mret_insn_i | ecall_insn_i | pipe_flush_i | ebrk_insn_i | illegal_insn_i | csr_status_i))
+ips/zero-riscy/zeroriscy_controller.sv:316:                if ((irq_req_ctrl_i & irq_enable_int & ~instr_multicyle_i & ~branch_in_id_i) & ~(dbg_req_i & ~branch_taken_ex_i))
+ips/zero-riscy/zeroriscy_controller.sv:322:                else if (~(irq_req_ctrl_i & irq_enable_int & ~instr_multicyle_i & ~branch_in_id_i) & (dbg_req_i & ~branch_taken_ex_i))
+ips/zero-riscy/zeroriscy_controller.sv:330:                    exc_kill_o    = irq_req_ctrl_i & ~instr_multicyle_i & ~branch_in_id_i ? 1'b1 : 1'b0;
+ips/zero-riscy/zeroriscy_controller.sv:335:              if (irq_req_ctrl_i & irq_enable_int) begin
+ips/zero-riscy/zeroriscy_controller.sv:506:      //jump_done_q <= jump_done & (~id_ready_i);
+ips/zero-riscy/zeroriscy_controller.sv:516:    @(posedge clk) (~(dbg_req_i & irq_req_ctrl_i)) ) else $warning("Both dbg_req_i and irq_req_ctrl_i are active");
+ips/zero-riscy/zeroriscy_alu.sv:142:  assign shift_op_a_32 = { shift_arithmetic & shift_op_a[31], shift_op_a};
+ips/zero-riscy/zeroriscy_alu.sv:203:  // (a[31] == 1 && b[31] == 1) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:204:  // (a[31] == 0 && b[31] == 0) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:205:  // (a[31] == 1 && b[31] == 0) => 1
+ips/zero-riscy/zeroriscy_alu.sv:206:  // (a[31] == 0 && b[31] == 1) => 0
+ips/zero-riscy/zeroriscy_alu.sv:209:  // (a[31] == 1 && b[31] == 1) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:210:  // (a[31] == 0 && b[31] == 0) => adder_result[31] == 0
+ips/zero-riscy/zeroriscy_alu.sv:211:  // (a[31] == 1 && b[31] == 0) => 0
+ips/zero-riscy/zeroriscy_alu.sv:212:  // (a[31] == 0 && b[31] == 1) => 1
+ips/zero-riscy/zeroriscy_alu.sv:226:      ALU_GTS, ALU_GTU:  cmp_result = is_greater_equal && (~is_equal);
+ips/zero-riscy/zeroriscy_alu.sv:257:      ALU_AND:  result_o = operand_a_i & operand_b_i;
+ips/zero-riscy/zeroriscy_load_store_unit.sv:315:      if (data_rvalid_i && (~data_we_q))
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:326:          accum[33:18]  = {18{signed_mult & mac_res_q[33]}};
+ips/zero-riscy/zeroriscy_debug_unit.sv:76:  // Signals for PPC & NPC register
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:333:    if(strobe_i && rdy_o) begin
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:346:    else if(strobe_i && rdy_o) str_sync <= ~str_sync;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:370:      if(strobe_i && rdy_o)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:533:        if (wr_reg && axi_master_aw_ready)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:535:        else if (!wr_reg && axi_master_ar_ready)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:550:        if (wr_reg && axi_master_b_valid)
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:556:        else if (!wr_reg && axi_master_r_valid)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:363:        else if(intreg_ld_en && (reg_select_data == `DBG_AXI_INTREG_ERROR))  // do load from data input register
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:467:   //assign biu_rst = trstn_i & ~biu_clr_err;  //TODO need to have a better way to clear BIU
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:584:           if(module_cmd && module_select_i && update_dr_i && burst_read) 
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:586:           else if(module_cmd && module_select_i && update_dr_i && burst_write) 
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:602:         if(module_select_i && capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:622:           else  if(bit_count_max && word_count_zero)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:641:          else if(module_select_i && capture_dr_i) 
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:651:           else   if (module_select_i && data_register_i[63])
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:737:         if(module_select_i & shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:739:         if(module_select_i & capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:744:         if(module_select_i & module_cmd & update_dr_i)
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:246:    if(strobe_i && rdy_o) begin
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:259:    else if(strobe_i && rdy_o) str_sync <= ~str_sync;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:283:      if(strobe_i && rdy_o)
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:446:           if(module_cmd && module_select_i && update_dr_i && burst_instruction && operation_in[2])
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:448:           else if(module_cmd && module_select_i && update_dr_i && burst_instruction)
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:461:           if(module_select_i && capture_dr_i) module_next_state <= STATE_Rstatus;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:473:           else if(bit_count_max && word_count_zero) module_next_state <= STATE_Rcrc;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:486:           else if(module_select_i && capture_dr_i) module_next_state <= STATE_Wwait;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:492:           else if(module_select_i && data_register_i[56]) module_next_state <= STATE_Wburst; // Got a start bit
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:568:           if(module_select_i & shift_dr_i) out_reg_shift_en <= 1'b1; // For module regs
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:569:           if(module_select_i & capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:574:           if(module_select_i & module_cmd & update_dr_i) begin
+ips/adv_dbg_if/rtl/adbg_top.sv:169:        else if(debug_select_i && select_cmd && update_dr_i && !select_inhibit)       // Chain select
+ips/adv_dbg_if/rtl/adbg_top.sv:191:  else if(debug_select_i && shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:251:				if(tms_pad_i && (passchk)) next_TAP_state = `STATE_select_dr_scan; 
+ips/adv_dbg_if/rtl/adbg_tap_top.v:443:  else if(idcode_select & capture_dr)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:445:  else if(idcode_select & shift_dr)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:473:  else if (bypass_select & capture_dr)
+ips/adv_dbg_if/rtl/adbg_tap_top.v:475:  else if(bypass_select & shift_dr)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:257:        else if(intreg_ld_en && (reg_select_data == `DBG_LINT_INTREG_ERROR))  // do load from data input register
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:358:   //assign biu_rst = trstn_i & ~biu_clr_err;  //TODO need to have a better way to clear BIU
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:438:           if(module_cmd && module_select_i && update_dr_i && burst_read)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:440:           else if(module_cmd && module_select_i && update_dr_i && burst_write)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:452:           if(module_select_i && capture_dr_i) module_next_state <= STATE_Rstatus;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:464:           else if(bit_count_max && word_count_zero) module_next_state <= STATE_Rcrc;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:477:           else if(module_select_i && capture_dr_i) module_next_state <= STATE_Wwait;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:483:           else if(module_select_i && data_register_i[63]) module_next_state <= STATE_Wburst; // Got a start bit
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:560:            if(module_select_i & shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:562:            if(module_select_i & capture_dr_i)
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:567:            if(module_select_i & module_cmd & update_dr_i)
+ips/adv_dbg_if/rtl/adbg_axionly_top.sv:160:        else if(debug_select_i && select_cmd && update_dr_i && !select_inhibit)       // Chain select
+ips/adv_dbg_if/rtl/adbg_axionly_top.sv:182:  else if(debug_select_i && shift_dr_i)
+ips/adv_dbg_if/rtl/bytefifo.v:119:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:129:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:139:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:149:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:159:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:169:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:179:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:189:	else if(EN & PUSH_POPn & push_ok)
+ips/adv_dbg_if/rtl/bytefifo.v:201:	else if(EN & PUSH_POPn & push_ok)  counter <= counter + 4'h1;
+ips/adv_dbg_if/rtl/bytefifo.v:202:	else if(EN & (~PUSH_POPn) & pop_ok)    counter <= counter - 4'h1;
+ips/adv_dbg_if/rtl/syncreg.v:95:   assign  A_enable = A_not_equal & ack_sff_out;
+ips/adv_dbg_if/rtl/adbg_lintonly_top.sv:85:        else if(debug_select_i && select_cmd && update_dr_i && !select_inhibit)       // Chain select
+ips/adv_dbg_if/rtl/adbg_lintonly_top.sv:107:  else if(debug_select_i && shift_dr_i)
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:134:      if(strobe_i && rdy_o) begin
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:147:        else if(strobe_i && rdy_o) 
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:167:            if(strobe_i && rdy_o) 
+ips/axi/axi_node/axi_address_decoder_BW.sv:82:      bready_o = |(bready_i & req_mask);
+ips/axi/axi_node/axi_BW_allocator.sv:128:assign decr_req = bvalid_o & bready_i;
+ips/axi/axi_node/axi_address_decoder_AR.sv:115:      assign match_region_masked[N_INIT_PORT-1:0] = match_region & connectivity_map_i;
+ips/axi/axi_node/axi_address_decoder_AR.sv:187:                incr_req_o = |(arvalid_o & arready_i);
+ips/axi/axi_node/axi_RR_Flag_Req.sv:66:          if( data_req_i  & data_gnt_i )
+ips/axi/axi_node/axi_address_decoder_AW.sv:103:  assign push_DEST_o = |(awvalid_i & awready_o) & ~error_detected;
+ips/axi/axi_node/axi_address_decoder_AW.sv:136:      assign match_region_masked[N_INIT_PORT-1:0] = match_region & connectivity_map_i;
+ips/axi/axi_node/axi_address_decoder_AW.sv:191:  assign local_increm =  |(awvalid_o & awready_i);
+ips/axi/axi_node/axi_regs_top.sv:188:  assign write_en = (wdata_done_rise & awaddr_done_reg) | (awaddr_done_rise & wdata_done_reg);
+ips/axi/axi_node/axi_regs_top.sv:189:  assign wdata_done_rise = wdata_done_reg & ~wdata_done_reg_dly;
+ips/axi/axi_node/axi_regs_top.sv:190:  assign awaddr_done_rise = awaddr_done_reg & ~awaddr_done_reg_dly;
+ips/axi/axi_node/axi_regs_top.sv:217:      if (awready && s_axi_awvalid)
+ips/axi/axi_node/axi_regs_top.sv:223:      else if (awaddr_done_reg && wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:243:      if (wready && s_axi_wvalid)
+ips/axi/axi_node/axi_regs_top.sv:250:      else if (wdata_done_reg && wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:269:      if (awaddr_done_reg && wdata_done_reg && !wresp_done_reg)
+ips/axi/axi_node/axi_regs_top.sv:303:      if (arready && s_axi_arvalid)
+ips/axi/axi_node/axi_regs_top.sv:309:      else if (araddr_done_reg && rresp_done_reg)
+ips/axi/axi_node/apb_regs_top.sv:123:            if (PSEL_i && PENABLE_i && PWRITE_i)
+ips/axi/axi_node/apb_regs_top.sv:152:            if (PSEL_i && PENABLE_i && ~PWRITE_i)
+ips/axi/axi_node/axi_FanInPrimitive_Req.sv:86:            data_gnt0_o =    (( data_req0_i & ~data_req1_i) | ( data_req0_i & ~RR_FLAG)) & data_gnt_i;
+ips/axi/axi_node/axi_FanInPrimitive_Req.sv:87:            data_gnt1_o =    ((~data_req0_i &  data_req1_i) | ( data_req1_i &  RR_FLAG)) & data_gnt_i;
+ips/axi/axi_node/axi_FanInPrimitive_Req.sv:88:            SEL         =    ~data_req0_i | ( RR_FLAG & data_req1_i);
+ips/axi/axi_node/axi_BR_allocator.sv:135:assign decr_req = rvalid_ARB_TREE & rready_ARB_TREE & rlast_ARB_TREE;
+ips/axi/axi_node/axi_address_decoder_DW.sv:97:  assign pop_from_DEST_FIFO = wlast_i & wvalid_i & wready_o;
+ips/axi/axi_node/axi_address_decoder_DW.sv:107:          wdata_error_completed_o = wlast_i & wvalid_i;
+ips/axi/axi_node/axi_address_decoder_DW.sv:111:          wready_o = |(wready_i & DEST_int);
+ips/axi/axi_node/axi_address_decoder_DW.sv:114:          if(wvalid_i & valid_DEST)
+ips/axi/axi_node/axi_AW_allocator.sv:116:assign        awvalid_o = awvalid_int & grant_FIFO_ID_i;
+ips/axi/axi_node/axi_AW_allocator.sv:118:assign        push_ID_o = awvalid_o & awready_i & grant_FIFO_ID_i;
+ips/axi/axi_node/axi_address_decoder_BR.sv:79:      rready_o = |(rready_i & req_mask);
+ips/axi/axi_slice_dc/dc_full_detector.v:55:    assign full = latched_full_s & full_up;
+ips/axi/axi_slice_dc/axi_slice_dc_master_wrap.sv:64:   assign s_aw_ready = ~clock_down_i & axi_master.aw_ready;
+ips/axi/axi_slice_dc/axi_slice_dc_master_wrap.sv:65:   assign s_ar_ready = ~clock_down_i & axi_master.ar_ready;
+ips/axi/axi_slice_dc/axi_slice_dc_master_wrap.sv:66:   assign axi_master.aw_valid = ~isolate_i & ~clock_down_i & s_aw_valid;
+ips/axi/axi_slice_dc/axi_slice_dc_master_wrap.sv:67:   assign axi_master.w_valid  = ~isolate_i & ~clock_down_i & s_w_valid;
+ips/axi/axi_slice_dc/axi_slice_dc_master_wrap.sv:68:   assign axi_master.ar_valid = ~isolate_i & ~clock_down_i & s_ar_valid;
+ips/axi/axi_slice_dc/dc_token_ring_fifo_dout.v:40:    assign read_enable = (valid & ~stall);
+ips/axi/axi_slice/axi_buffer.sv:54:             if (ready_i && valid_o && (!valid_i || full))
+ips/axi/axi_slice/axi_buffer.sv:104:             if (ready_i && valid_o)
+ips/tech_cells_generic/pulp_clock_and2.sv:18:   assign clk_o = clk0_i & clk1_i;
+ips/tech_cells_generic/pulp_clock_gating.sv:27:    assign clk_o = clk_i & clk_en;
+ips/tech_cells_generic/cluster_clock_and2.sv:18:   assign clk_o = clk0_i & clk1_i;
+ips/tech_cells_generic/cluster_clock_gating.sv:27:   assign clk_o = clk_i & clk_en;
+ips/timer_unit/timer_unit.sv:180:        if (req_i && ~wen_i)
+ips/timer_unit/timer_unit.sv:278:        if (s_req && s_wen)
+ips/timer_unit/timer_unit.sv:388:	     if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b0 ) // prescaler disabled, ref clock disabled
+ips/timer_unit/timer_unit.sv:393:	       if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler disabled, ref clock enabled
+ips/timer_unit/timer_unit.sv:398:		 if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b1 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler enabled, ref clock enabled
+ips/timer_unit/timer_unit.sv:413:	     if ( s_cfg_hi_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_hi_reg[`REF_CLK_EN_BIT] == 1'b0 ) // prescaler disabled, ref clock disabled
+ips/timer_unit/timer_unit.sv:418:	       if ( s_cfg_hi_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_hi_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler disabled, ref clock enabled
+ips/timer_unit/timer_unit.sv:423:		 if ( s_cfg_hi_reg[`PRESCALER_EN_BIT] == 1'b1 && s_cfg_hi_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler enabled, ref clock enabled
+ips/timer_unit/timer_unit.sv:444:	       if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b0 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler disabled, ref clock enabled
+ips/timer_unit/timer_unit.sv:449:		 if ( s_cfg_lo_reg[`PRESCALER_EN_BIT] == 1'b1 && s_cfg_lo_reg[`REF_CLK_EN_BIT] == 1'b1 ) // prescaler enabled, ref clock enabled
+ips/timer_unit/timer_unit.sv:471:	     irq_lo_o = s_target_reached_lo & s_cfg_lo_reg[`IRQ_BIT];
+ips/timer_unit/timer_unit.sv:472:	     irq_hi_o = s_target_reached_hi & s_cfg_hi_reg[`IRQ_BIT];
+ips/timer_unit/timer_unit.sv:476:	     irq_lo_o = s_target_reached_lo & s_target_reached_hi & s_cfg_lo_reg[`IRQ_BIT];
+ips/scm/latch_scm/register_file_1r_1w_be.sv:133:            if(WriteEnable & WriteBE[m])
+ips/scm/latch_scm/register_file_3r_2w_be.sv:86:        if(WriteEnable_A && WriteEnable_B)
+ips/scm/latch_scm/register_file_3r_2w_be.sv:198:            if(WriteEnable_A & WriteBE_A[m])
+ips/scm/latch_scm/register_file_3r_2w_be.sv:200:            if(WriteEnable_B & WriteBE_B[m])
+ips/scm/latch_scm/register_file_1w_multi_port_read_be.sv:144:            if(WriteEnable & WriteBE[m])
+ips/scm/latch_scm/register_file_1r_1w_all.sv:136:             if(WriteEnable & WriteBE[m])
+ips/scm/latch_scm/register_file_2r_1w_asymm.sv:195:            if(WriteEnable & WriteBE[m])
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:119:   assign Zero_a_SN = Start_S?(Exp_a_prenorm_zero_S&&Mant_a_prenorm_zero_S):Zero_a_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:120:   assign Zero_b_SN = Start_S?(Exp_b_prenorm_zero_S&&Mant_b_prenorm_zero_S):Zero_b_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:121:   assign Inf_a_SN = Start_S?(Exp_a_prenorm_Inf_NaN_S&&Mant_a_prenorm_zero_S):Inf_a_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:122:   assign Inf_b_SN = Start_S?(Exp_b_prenorm_Inf_NaN_S&&Mant_b_prenorm_zero_S):Inf_b_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:123:   assign NaN_a_SN = Start_S?(Exp_a_prenorm_Inf_NaN_S&&(~Mant_a_prenorm_zero_S)):NaN_a_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:124:   assign NaN_b_SN = Start_S?(Exp_b_prenorm_Inf_NaN_S&&(~Mant_b_prenorm_zero_S)):NaN_b_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/iteration_div_sqrt.sv:55:   assign Sqrt_cin_D=Sqrt_enable_SI&&D_carry_D;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:121:          if(Div_enable_SI&&Inf_b_SI)                     //Inf/Inf
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:145:      else if(Div_enable_SI&&Inf_b_SI)
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:159:         if(Div_enable_SI&&Zero_b_SI)
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:183:     else  if(Div_enable_SI&&(Zero_b_SI))  //div Zero
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:195:      else if(Sign_in_DI&&Sqrt_enable_SI)   //sqrt(-a)
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:367:            Mant_roundUp_S = Mant_rounded_S & ~Sign_in_DI;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:369:            Mant_roundUp_S = Mant_rounded_S & Sign_in_DI;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/iteration_div_sqrt_first.sv:56:   assign Sqrt_cin_D=Sqrt_enable_SI&&D_carry_D;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:576:  assign Extra_Near_Final_State_S = (Crtl_cnt_S==3'b101)&&Sqrt_enable_SO&&Accuracy_ctl_Enable_S;
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:105:   assign OF_SO   = (Op_SI == C_FPU_F2I_CMD) ? OF_SI : (Exp_OF_SI & ~Mant_zero_S) | (~IV_SO & (Inf_a_S ^ Inf_b_S) & (Op_SI != C_FPU_I2F_CMD));
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:106:   assign UF_SO   = (Op_SI == C_FPU_F2I_CMD) ? UF_SI : Exp_UF_SI & Mant_rounded_SI;
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:107:   assign Zero_SO = (Op_SI == C_FPU_F2I_CMD) ? Zero_SI : (Mant_zero_S & ~IV_SO);
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:116:               if (((Inf_a_S & Inf_b_S) & (Sign_a_DI ^ Sign_b_DI)) | NaN_a_S | NaN_b_S)
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:121:            if (((Inf_a_S & Zero_b_S) | (Inf_b_S & Zero_a_S)) | NaN_a_S | NaN_b_S)
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:135:            if ((Inf_a_S ^ Inf_b_S) | ((Inf_a_S & Inf_b_S) & ~(Sign_a_DI ^ Sign_b_DI)))
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:138:            if ((Inf_a_S & ~Zero_b_S) | (Inf_b_S & ~Zero_a_S))
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:143:   assign Inf_SO = (Op_SI == C_FPU_F2I_CMD) ? Inf_SI : Inf_temp_S | (Exp_OF_SI & ~Mant_zero_S);
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:148:   assign Exp_toZero_SO =(Op_SI == C_FPU_I2F_CMD) ? (Zero_a_S & ~Sign_a_DI) : Exp_UF_SI | (Mant_zero_S & ~Exp_toInf_SO);
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:141:   assign EnableAdd_S = Enable_SP & ((OP_SP == C_FPU_ADD_CMD)|(OP_SP == C_FPU_SUB_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:165:   assign EnableMult_S =  Enable_SP & (OP_SP == C_FPU_MUL_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:190:   assign EnableITOF_S = Enable_SP & (OP_SP == C_FPU_I2F_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:213:   assign EnableFTOI_S = Enable_SP & (OP_SP == C_FPU_F2I_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_ftoi.sv:94:   assign Zero_SO = Result_zero_S & ~OF_SO;
+ips/fpu/hdl/fpu_v0.1/riscv_fpu.sv:99:        if (enable_i && ~stall_i)
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:62:   assign divsqrt_enable = fpu_en_i & ((fpu_op_i==C_FPU_DIV_CMD) | (fpu_op_i==C_FPU_SQRT_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:63:   assign fpu_enable     = fpu_en_i & ((fpu_op_i==C_FPU_ADD_CMD) | (fpu_op_i==C_FPU_SUB_CMD) | (fpu_op_i==C_FPU_MUL_CMD) | (fpu_op_i==C_FPU_I2F_CMD) | (fpu_op_i==C_FPU_F2I_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:64:   assign fma_enable     = fpu_en_i & ((fpu_op_i==C_FPU_FMADD_CMD) | (fpu_op_i==C_FPU_FMSUB_CMD) | (fpu_op_i==C_FPU_FNMADD_CMD)| (fpu_op_i==C_FPU_FNMSUB_CMD));
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:120:   assign sqrt_start = divsqrt_enable & (fpu_op_i == C_FPU_SQRT_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:121:   assign div_start  = divsqrt_enable & (fpu_op_i == C_FPU_DIV_CMD);
+ips/fpu/hdl/fpu_v0.1/fpu_norm.sv:90:   assign Denormals_shift_add_D = ~Mant_zero_S & (Exp_in_DI == C_EXP_ZERO) & ((OP_SI != C_FPU_MUL_CMD) | (~Mant_in_DI[C_MANT_PRENORM-1] & ~Mant_in_DI[C_MANT_PRENORM-2]));
+ips/fpu/hdl/fpu_v0.1/fpu_norm.sv:165:            Mant_roundUp_S = Mant_rounded_S & ~Sign_in_DI;
+ips/fpu/hdl/fpu_v0.1/fpu_norm.sv:167:            Mant_roundUp_S = Mant_rounded_S & Sign_in_DI;
+ips/fpu/hdl/fpu_v0.1/fpu_norm.sv:180:   assign Mant_res_DO = Mant_upperRounded_D >> (Mant_renorm_S & ~Denormal_S);
+ips/fpu/hdl/fpu_fmac/booth_selector.sv:44:assign      Booth_pp_DO  =~((~((Sel_1x_SI&&Booth_a_DI[1]) | (Sel_2x_SI&&Booth_a_DI[0])))^(Sel_sign_SI));
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:111:  assign Flag_Invalid_SO = NaN_a_SI | NaN_b_SI | NaN_c_SI | (Zero_b_SI&&Inf_c_SI) | (Zero_c_SI&&Inf_b_SI) | (Sub_SI && Inf_a_SI &&( Inf_b_SI | Inf_c_SI ));
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:323:            Mant_roundUp_S = Mant_rounded_S & ~Sign_in_DI;
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:325:            Mant_roundUp_S = Mant_rounded_S & Sign_in_DI;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:110:   assign Zero_a_SO = Exp_a_zero_S&&Mant_a_zero_S;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:111:   assign Zero_b_SO = Exp_b_zero_S&&Mant_b_zero_S;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:112:   assign Zero_c_SO = Exp_c_zero_S&&Mant_c_zero_S;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:113:   assign Inf_a_SO = Exp_a_Inf_NaN_S&&Mant_a_zero_S;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:114:   assign Inf_b_SO = Exp_b_Inf_NaN_S&&Mant_b_zero_S;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:115:   assign Inf_c_SO = Exp_c_Inf_NaN_S&&Mant_c_zero_S;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:116:   assign NaN_a_SO = Exp_a_Inf_NaN_S&&(~Mant_a_zero_S);
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:117:   assign NaN_b_SO = Exp_b_Inf_NaN_S&&(~Mant_b_zero_S);
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:118:   assign NaN_c_SO = Exp_c_Inf_NaN_S&&(~Mant_c_zero_S);
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:119:   assign DeN_a_SO = Exp_a_zero_S&&(~Mant_a_zero_S);
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:120:   assign DeN_b_S  = Exp_b_zero_S&&(~Mant_b_zero_S);
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:121:   assign DeN_c_S  = Exp_c_zero_S&&(~Mant_c_zero_S);
+ips/apb/apb_gpio/apb_gpio.sv:94:    assign s_gpio_rise =  r_gpio_sync1 & ~r_gpio_in; //foreach input check if rising edge
+ips/apb/apb_gpio/apb_gpio.sv:95:    assign s_gpio_fall = ~r_gpio_sync1 &  r_gpio_in; //foreach input check if falling edge
+ips/apb/apb_gpio/apb_gpio.sv:97:    assign s_is_int_fall =  ~s_gpio_inttype1 & ~s_gpio_inttype0 & s_gpio_fall;                 // inttype 00 fall
+ips/apb/apb_gpio/apb_gpio.sv:98:    assign s_is_int_rise =  ~s_gpio_inttype1 &  s_gpio_inttype0 & s_gpio_rise;                 // inttype 01 rise
+ips/apb/apb_gpio/apb_gpio.sv:99:    assign s_is_int_rifa =   s_gpio_inttype1 & ~s_gpio_inttype0 & (s_gpio_rise | s_gpio_fall); // inttype 10 rise
+ips/apb/apb_gpio/apb_gpio.sv:102:    assign s_is_int_all  = r_gpio_inten & r_gpio_en & (s_is_int_rise | s_is_int_fall | s_is_int_rifa);
+ips/apb/apb_gpio/apb_gpio.sv:131:            else if (PSEL && PENABLE && !PWRITE && (s_apb_addr == `REG_INTSTATUS)) //clears int if status is read
+ips/apb/apb_gpio/apb_gpio.sv:313:            if (PSEL && PENABLE && PWRITE)
+ips/apb/apb_gpio/apb_gpio.sv:330:                    r_gpio_out      <= r_gpio_out & ~PWDATA;
+ips/apb/apb_adv_timer/out_filter.sv:34:	assign s_rise = ~r_oldval &  signal_i;
+ips/apb/apb_adv_timer/out_filter.sv:35:	assign s_fall =  r_oldval & ~signal_i;
+ips/apb/apb_adv_timer/input_stage.sv:50:    assign s_rise = ~r_oldval &  s_int_sig;
+ips/apb/apb_adv_timer/input_stage.sv:51:    assign s_fall =  r_oldval & ~s_int_sig;
+ips/apb/apb_adv_timer/input_stage.sv:77:            event_o = s_int_evnt & s_rise_ls_clk;
+ips/apb/apb_adv_timer/input_stage.sv:145:                if (!cfg_sel_clk_i || (cfg_sel_clk_i && s_rise_ls_clk))
+ips/apb/apb_adv_timer/lut_4x4.sv:46:			else if (!cfg_en_i && r_active)
+ips/apb/apb_adv_timer/comparator.sv:53:	assign s_match = timer_valid_i & (r_comp == timer_count_i);
+ips/apb/apb_adv_timer/comparator.sv:82:			else if (timer_valid_i && ctrl_active_i)
+ips/apb/apb_adv_timer/comparator.sv:103:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/comparator.sv:126:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/comparator.sv:153:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/comparator.sv:176:							else if(s_match && r_is_2nd_event)
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:638:            if (PSEL && PENABLE && PWRITE)
+ips/apb/apb_adv_timer/up_down_counter.sv:56:	assign counter_evt_o = ctrl_active_i & r_event;
+ips/apb/apb_adv_timer/up_down_counter.sv:57:	assign counter_end_o = ctrl_active_i & r_event & s_is_update;
+ips/apb/apb_adv_timer/up_down_counter.sv:59:	assign s_is_update = r_sawtooth ? (r_counter == r_end) : (r_direction && (r_counter == r_start-1));
+ips/apb/apb_adv_timer/up_down_counter.sv:114:		else if(counter_event_i && ctrl_active_i)
+ips/apb/apb_adv_timer/up_down_counter.sv:116:			if (!r_direction && (r_counter == r_end))
+ips/apb/apb_adv_timer/up_down_counter.sv:129:			else if (r_direction && (r_counter == r_start))
+ips/apb/apb_adv_timer/up_down_counter.sv:154:			if (s_do_update || (counter_event_i && ctrl_active_i))
+ips/apb/apb_fll_if/apb_fll_if.sv:237:      if (PSEL && PENABLE && PWRITE) begin
+ips/apb/apb_fll_if/apb_fll_if.sv:284:      if (PSEL && PENABLE && (~PWRITE)) begin
+Makefile:26:INSTALL_FILES += $(shell cd sim && find boot -type f)
+Makefile:27:INSTALL_FILES += $(shell cd sim && find tcl_files -type f)
+Makefile:28:INSTALL_FILES += $(shell cd sim && find waves -type f)
+Makefile:40:	cd sim && make clean
+Makefile:43:	cd sim && make lib build opt
+Makefile:49:	export VOPT_FLOW=1 && cd $(VSIM_PATH) && vsim -64 -c -do "source tcl_files/config/vsim.tcl; quit"
+Makefile:57:	source setup/sdk.sh && cd pulp-sdk && source init.sh && \
+Makefile:62:	source setup/sdk.sh && cd pulp-sdk && source init.sh && \
+README.md:7:University of Bologna (https://github.com/pulp-platform/pulpissimo). A collobaration of researchers at Texas A&M University, 
+README.md:54:## Support & Questions
+rtl/tb/tb_pulp.sv:82:   /* simulation variables & flags */
+rtl/tb/tb_pulp.sv:677:            r_stdout_pready <= (i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.psel & i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.penable);
+rtl/pulpissimo/safe_domain_reg_if.sv:160:   assign s_rtc_date_update  = s_rtc_date_select & (s_rise & ~reg_if_wrn_i);
+rtl/pulpissimo/safe_domain_reg_if.sv:161:   assign s_rtc_alarm_update = s_rtc_alarm_select & (s_rise & ~reg_if_wrn_i);
+rtl/pulpissimo/safe_domain_reg_if.sv:162:   assign s_rtc_clock_update = s_rtc_clock_select & (s_rise & ~reg_if_wrn_i);
+rtl/pulpissimo/safe_domain_reg_if.sv:163:   assign s_rtc_timer_update = s_rtc_timer_select & (s_rise & ~reg_if_wrn_i);
+rtl/pulpissimo/safe_domain_reg_if.sv:216:	else if (s_rise & ~reg_if_wrn_i)
+rtl/pulpissimo/safe_domain_reg_if.sv:273:	  else if (s_rise & reg_if_wrn_i)
+rtl/pulpissimo/rtc_clock.sv:80:	assign s_alarm_event = r_alarm_enable & s_alarm_match & ~r_alarm_match; //edge detect on alarm event
+rtl/pulpissimo/rtc_clock.sv:83:	assign s_timer_event = r_timer_en & s_timer_match;
+rtl/pulpissimo/rtc_clock.sv:86:	assign s_update_minutes = s_update_seconds & (r_seconds == 8'h59);
+rtl/pulpissimo/rtc_clock.sv:87:	assign s_update_hours   = s_update_minutes & (r_minutes == 8'h59);
+rtl/pulpissimo/rtc_clock.sv:90:	assign update_day_o   = s_update_hours & (r_hours == 6'h23);
+rtl/pulpissimo/rtc_date.sv:42:	assign s_end_of_year = s_end_of_month & (r_month == 5'h12);
+rtl/vip/camera/img/pnmparse_checksum.tcl:28:						set pixel_val [expr $pixel_val + ($ele & 0xF8)]
+rtl/vip/camera/img/pnmparse_checksum.tcl:38:							set pixel_val [expr $pixel_val + ($ele & 0xFC)]						
+rtl/vip/camera/img/pnmparse_checksum.tcl:40:							set pixel_val [expr $pixel_val + ($ele & 0xF8)]						
+rtl/vip/i2s/i2c_if.v:276:      if (START_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:277:         if (!WriteActive & (ShiftRegister[07:04] == 4'b1010) & (ShiftRegister[02:01] == ChipAddress[01:00]) & (A2 == 1'b1)) begin
+rtl/vip/i2s/i2c_if.v:299:      if (CTRL_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:315:      if (ADHI_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:335:      if (ADLO_Rcvd & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:352:            if (WrCycle | (START_Rcvd & (ShiftRegister[07:04] == 4'b1010) & (ShiftRegister[02:01] == ChipAddress[01:00]) & (A2 == 1'b1))) begin
+rtl/vip/i2s/i2c_if.v:373:      if (RdCycle & (BitCounter == 8)) begin
+rtl/vip/i2s/i2c_if.v:385:      if (WrCycle & (WP == 0) & (WrCounter > 0)) begin
+rtl/vip/i2s/i2c_if.v:417:         if (WrCycle & ADLO_Rcvd) begin
+rtl/vip/i2s/i2c_if.v:455:   assign SDA_DriveEnable = !SDA_DO & SDA_OE;
+rtl/vip/i2s/i2s_vip_channel.sv:413:        sck_int = (rst) ? 1'b0 : ~sck_int & ~mode_i & enable_i;
+rtl/vip/i2s/i2s_vip_channel.sv:422:        if(i2s_snap_enable_i & ~pdm_en_i & ~mode_i)
+rtl/vip/i2s/i2s_vip_channel.sv:673:        if(do_load & ~sck)
+rtl/vip/i2s/i2s_vip_channel.sv:810:            if(enable_i & ~mode_i & ~pdm_en_i & i2s_snap_enable_i)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:969:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:983:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1000:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1018:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1036:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1053:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1070:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1087:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1105:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1122:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1139:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1157:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1174:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1191:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1205:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1219:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1233:            HeaderMsg       => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1249:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1262:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1275:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1287:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1299:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1311:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1321:            HeaderMsg         => InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1334:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1346:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1358:            HeaderMsg       =>  InstancePath & PartID,
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:1390:                REPORT InstancePath & partID & ": simulation may be" &
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:2505:                            	quad_nybble := RESETNegIn & WPNegIn & SOIn & SIIn;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.vhd:2994:            REPORT InstancePath & partID &
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:62:    (COND  rd_slow && ~glitch          (IOPATH SCK SO (5.4:6.7:8) (5.4:6.7:8) (1) (5.4:6.7:8) (1) (5.4:6.7:8)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:65:    (COND  dual && ~glitch (IOPATH SCK SI (1.5:4:6.5) (1.5:4:6.5) (1) (1.5:4:6.5) (1) (1.5:4:6.5)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:67:    (COND  QUAD && ~CSNeg && ~glitch (IOPATH SCK RESETNeg (1.5:4:6.5) (1.5:4:6.5) (1) (1.5:4:6.5) (1) (1.5:4:6.5)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:68:    (COND  QUAD && ~glitch           (IOPATH SCK WPNeg    (1.5:4:6.5) (1.5:4:6.5) (1) (1.5:4:6.5) (1) (1.5:4:6.5)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:70:    (COND CSNeg && ~rst_quad (IOPATH CSNeg SO   () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:71:    (COND CSNeg &&  rst_quad (IOPATH CSNeg SO   () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:73:    (COND CSNeg && dual && ~rst_quad (IOPATH CSNeg SI   () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:74:    (COND CSNeg && dual &&  rst_quad (IOPATH CSNeg SI   () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:76:    (COND CSNeg && ~rst_quad (IOPATH CSNeg RESETNeg  () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:77:    (COND CSNeg &&  rst_quad (IOPATH CSNeg RESETNeg  () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:79:    (COND CSNeg && ~rst_quad (IOPATH CSNeg WPNeg  () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:80:    (COND CSNeg &&  rst_quad (IOPATH CSNeg WPNeg  () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:193:    (COND  rd_slow && ~glitch          (IOPATH SCK SO (4:5:6) (4:5:6) (1) (4:5:6) (1) (4:5:6)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:196:    (COND  dual && ~glitch (IOPATH SCK SI (1.5:4:6.5) (1.5:4:6.5) (1) (1.5:4:6.5) (1) (1.5:4:6.5)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:198:    (COND  QUAD && ~CSNeg && ~glitch (IOPATH SCK RESETNeg (1.5:4:6.5) (1.5:4:6.5) (1) (1.5:4:6.5) (1) (1.5:4:6.5)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:199:    (COND  QUAD && ~glitch           (IOPATH SCK WPNeg    (1.5:4:6.5) (1.5:4:6.5) (1) (1.5:4:6.5) (1) (1.5:4:6.5)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:201:    (COND CSNeg && ~rst_quad (IOPATH CSNeg SO   () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:202:    (COND CSNeg &&  rst_quad (IOPATH CSNeg SO   () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:204:    (COND CSNeg && dual && ~rst_quad (IOPATH CSNeg SI   () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:205:    (COND CSNeg && dual &&  rst_quad (IOPATH CSNeg SI   () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:207:    (COND CSNeg && ~rst_quad (IOPATH CSNeg RESETNeg  () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:208:    (COND CSNeg &&  rst_quad (IOPATH CSNeg RESETNeg  () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:210:    (COND CSNeg && ~rst_quad (IOPATH CSNeg WPNeg  () () (5.4:6.7:8) () (5.4:6.7:8) ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s_ver.ftm:211:    (COND CSNeg &&  rst_quad (IOPATH CSNeg WPNeg  () () (12:16:20)  () (12:16:20)  ()))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:528:    assign sdro = PoweredUp && ~DOUBLE;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:530:    assign sdro_quad_io0 = PoweredUp && ~DOUBLE && ~dual && ~rd_fast && QUAD;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:532:    assign sdro_io1 = PoweredUp && ~DOUBLE && ~dual;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:534:    assign sdro_quad_io2 = PoweredUp && ~DOUBLE && ~dual && QUAD;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:536:    assign sdro_quad_io3 = PoweredUp && ~DOUBLE && ~dual && QUAD && ~CSNeg;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:540:    assign ddro = PoweredUp && ddr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:543:    assign ddro_quad_io0 = PoweredUp && DOUBLE && ~dual && ~rd_fast && QUAD;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:545:    assign ddro_io1 = PoweredUp && DOUBLE && ~dual;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:547:    assign ddro_quad_io2 = PoweredUp && DOUBLE && ~dual && QUAD;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:549:    assign ddro_quad_io3 = PoweredUp && DOUBLE && ~dual && QUAD && ~CSNeg;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:559:    assign wr_prot = SRWD && ~QUAD;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:562:    assign reset_act = CR2_V[5] && (~QUAD || (QUAD && CSNeg_ipd));
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:571:    assign RD_EQU_1 = any_read && ~rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:574:    assign QRD_EQU_1 = any_read && rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:684:   if (rd_slow && ~glitch)           (SCK => SO) = tpd_SCK_SO_sdr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:687:   if (dual && ~glitch) (SCK => SI) = tpd_SCK_SO_ddr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:689:   if (QUAD && ~CSNeg && ~glitch) (SCK => RESETNeg) = tpd_SCK_SO_ddr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:690:   if (QUAD && ~glitch)           (SCK => WPNeg)    = tpd_SCK_SO_ddr;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:692:   if (CSNeg && ~rst_quad)    (CSNeg => SO)     = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:693:   if (CSNeg &&  rst_quad)    (CSNeg => SO)     = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:695:   if (CSNeg && dual && ~rst_quad) (CSNeg => SI) = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:696:   if (CSNeg && dual &&  rst_quad) (CSNeg => SI) = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:698:   if (CSNeg && ~rst_quad) (CSNeg => RESETNeg) = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:699:   if (CSNeg &&  rst_quad) (CSNeg => RESETNeg) = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:701:   if (CSNeg && ~rst_quad) (CSNeg => WPNeg)    = tpd_CSNeg_SO_rd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:702:   if (CSNeg &&  rst_quad) (CSNeg => WPNeg)    = tpd_CSNeg_SO_rst_quad;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1404:            if ((~reset_act || (RESETNeg_in && reset_act)) && RST_out &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1410:            else if (((~RESETNeg_in && reset_act) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1411:                     (rising_edge_RESETNeg && reset_act)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1425:        if ((Instruct == RESET && CR3_V[0]) || (Instruct == RSTCMD && RESET_EN))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1570:                    if ((CLK_PER < 20000 && Latency_code == 0) || // <= 50MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1571:                        (CLK_PER < 14920 && Latency_code == 1) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1572:                        (CLK_PER < 12500 && Latency_code == 2) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1573:                        (CLK_PER < 10870 && Latency_code == 3) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1574:                        (CLK_PER <  9600 && Latency_code == 4) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1575:                        (CLK_PER <  8620 && Latency_code == 5) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1576:                        (CLK_PER <  7750 && Latency_code == 6) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1577:                        (CLK_PER <  7520 && Latency_code >= 7))   // <=133MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1587:                    if ((CLK_PER < 12500 && Latency_code == 0) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1588:                        (CLK_PER < 10870 && Latency_code == 1) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1589:                        (CLK_PER <  9600 && Latency_code == 2) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1590:                        (CLK_PER <  8620 && Latency_code == 3) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1591:                        (CLK_PER <  7750 && Latency_code == 4) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1592:                        (CLK_PER <  7520 && Latency_code >= 5))   // <=133MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1602:                    if ((CLK_PER < 23225 && Latency_code == 0) || // <= 43MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1603:                        (CLK_PER < 18181 && Latency_code == 1) || // <= 55MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1604:                        (CLK_PER < 14920 && Latency_code == 2) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1605:                        (CLK_PER < 12500 && Latency_code == 3) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1606:                        (CLK_PER < 10870 && Latency_code == 4) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1607:                        (CLK_PER <  9600 && Latency_code == 5) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1608:                        (CLK_PER <  8620 && Latency_code == 6) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1609:                        (CLK_PER <  7750 && Latency_code == 7) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1610:                        (CLK_PER <  7520 && Latency_code >= 8))  // <=133MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1620:                    if ((CLK_PER < 55555 && Latency_code == 0) || // <= 18MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1621:                        (CLK_PER < 33333 && Latency_code == 1) || // <= 30MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1622:                        (CLK_PER < 23225 && Latency_code == 2) || // <= 43MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1623:                        (CLK_PER < 18181 && Latency_code == 3) || // <= 55MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1624:                        (CLK_PER < 14920 && Latency_code == 4) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1625:                        (CLK_PER < 12500 && Latency_code == 5) || // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1626:                        (CLK_PER < 10870 && Latency_code == 6) || // <= 92MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1627:                        (CLK_PER <  9600 && Latency_code == 7) || // <=104MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1628:                        (CLK_PER <  8620 && Latency_code == 8) || // <=116MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1629:                        (CLK_PER <  7750 && Latency_code == 9) || // <=129MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1630:                        (CLK_PER <  7520 && Latency_code >= 10))  // <=133MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1640:                    if ((CLK_PER < 33333 && Latency_code <= 1) || // <= 30MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1641:                        (CLK_PER < 23225 && Latency_code == 2) || // <= 43MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1642:                        (CLK_PER < 18181 && Latency_code == 3) || // <= 55MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1643:                        (CLK_PER < 14920 && Latency_code == 4) || // <= 67MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1644:                        (CLK_PER < 12500 && Latency_code >= 5))   // <= 80MHz
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:1692:                        if ((QUAD_ALL && (opcode_cnt == BYTE/4)) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:2570:                        else if (QUAD && ((Instruct==DDRQIOR4) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:2797:                        else if (QUAD && ((Instruct==DDRQIOR4) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3224:            if (rising_edge_PSTART && PDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3237:        if (PGSUSP && (~PDONE))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3276:            if (rising_edge_WSTART && WDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3299:            if (CSSTART && CSDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3327:            if (rising_edge_EESSTART && EESDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3386:        if (ESUSP && (~EDONE))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3400:        if  (ERES && (~EDONE))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3467:                        if (Instruct == WRR && WEL == 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3468:                           ~(SRWD && ~WPNeg_in && ~QUAD))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3472:                            if (((TBPROT_O == 1 && CR1_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3473:                                 (TBPARM_O == 1 && CR1_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3475:                                 (BPNV_O   == 1 && CR1_in[3] == 1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3483:                            else if (~(PWDMLB && PSTMLB) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3485:                                (CR1_in[4] == 1'b1 && SECURE_OPN == 1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3486:                                (CR1_in[2] == 1'b1 && CR3_NV[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3497:                        else if (Instruct == WRAR && WEL == 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3498:                               ~(SRWD && ~WPNeg_in && ~QUAD &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3532:                                ((TBPROT_O == 1 && WRAR_reg_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3533:                                 (TBPARM_O == 1 && WRAR_reg_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3535:                                (BPNV_O   == 1 && WRAR_reg_in[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3542:                            else if (~(PWDMLB && PSTMLB))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3547:                                   (WRAR_reg_in[4]==1'b1 && SECURE_OPN==1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3549:                                   (WRAR_reg_in[2]==1'b1 && CR3_NV[3]==1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3591:                            if (Sec_Prot[sect]== 0 && PPB_bits[sect]== 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3599:                        else if (Instruct == OTPP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3603:                                if (((((Address>=16'h0010 && Address<=16'h00FF))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3605:                                    ((Address>=16'h0100 && Address<=16'h01FF)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3607:                                    ((Address>=16'h0200 && Address<=16'h02FF)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3609:                                    ((Address>=16'h0300 && Address<=16'h03FF)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3647:                            	if ((UniformSec && sect_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3648:                                 (BottomBoot && (sect >= 8) &&  sect_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3649:                                 (BottomBoot && (sect < 8) &&  sect8_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3650:								 (TopBoot && (sect <= 511) && sect_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3651:								 (TopBoot && (sect > 511) && sect511_no_prot))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3663:								if ((UniformSec && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3664:                                 (BottomBoot && (block_e >= 8) && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3665:                                 (BottomBoot && (block_e < 8) && block8_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3666:								 (TopBoot && (block_e <= 127) && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3667:								 (TopBoot && (block_e > 127) && block127_no_prot))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3682:                            if (UniformSec || (TopBoot && sect < 512) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3683:                               (BottomBoot && sect > 7))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3693:                                  PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3704:                        else if (Instruct == BE && WEL == 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3705:                                (SR1_V[4]==0 && SR1_V[3]==0 && SR1_V[2]==0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3718:                        else if (Instruct == PPBE && WEL && (SECURE_OPN == 1))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3719:                            if (PPBOTP && PPB_LOCK && PERMLB)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3723:                        else if (Instruct == ASPP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3726:                            if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3728:                                if (ASP_reg_in[2]==1'b0 && ASP_reg_in[1]==1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3736:                        else if (Instruct == PLBWR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3745:                        else if (Instruct == PNVDLR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3747:                            if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3752:                        else if (Instruct == PASSP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3754:                            if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3759:                        else if (Instruct == PASSU && WEL == 1 && ~WIP)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3782:                    if (PRGSUSP_out_event && PRGSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3805:                    if (ERSSUSP_out_event && ERSSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3821:                        if ((Instruct==PP || Instruct==PP4) && WEL && ~P_ERR)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3830:									PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3837:									PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3849:                        else if (Instruct == EPR && ~P_ERR)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3858:                    else if (PRGSUSP_out_event && PRGSUSP_out == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:3934:                        if (Instruct == WRDI && ~P_ERR && ~E_ERR)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4061:            if (~DYBLBB && (SECURE_OPN == 1))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4114:                    else if (Instruct == WRR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4116:                        if (~(SRWD && ~WPNeg_in && ~QUAD))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4118:                            if (((TBPROT_O ==1 && CR1_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4119:                                 (TBPARM_O == 1 && CR1_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4121:                                 (BPNV_O   ==1 && CR1_in[3] == 1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4126:                            else if (~(PWDMLB && PSTMLB) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4128:                                (CR1_in[4] == 1'b1 && SECURE_OPN == 1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4129:                                (CR1_in[2] == 1'b1 && CR3_NV[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4148:                    else if (Instruct == WRAR && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4150:                        if (~(SRWD && ~WPNeg_in && ~QUAD &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4175:                                ((TBPROT_O == 1 && WRAR_reg_in[5] == 1'b0) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4176:                                 (TBPARM_O == 1 && WRAR_reg_in[2] == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4178:                                (BPNV_O   == 1 && WRAR_reg_in[3] == 1'b0)))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4182:                            else if (~(PWDMLB && PSTMLB))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4187:                                   (WRAR_reg_in[4]==1'b1 && SECURE_OPN==1'b1) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4189:                                   (WRAR_reg_in[2]==1'b1 && CR3_NV[3]==1'b0)) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4265:                            PPB_bits[sect]== 1 && DYB_bits[sect]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4292:                    else if (Instruct == OTPP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4296:                            if (((((Address>=16'h0010 && Address<=16'h00FF))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4298:                                ((Address>=16'h0100 && Address<=16'h01FF)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4300:                                ((Address>=16'h0200 && Address<=16'h02FF)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4302:                                ((Address>=16'h0300 && Address<=16'h03FF)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4370:                            if ((UniformSec && sect_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4371:                            (BottomBoot && (sect >= 8) &&  sect_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4372:                            (BottomBoot && (sect < 8) &&  sect8_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4373:						    (TopBoot && (sect > 511) && sect511_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4374:							(TopBoot && (sect <= 511) && sect_no_prot))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4398:							if ((UniformSec && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4399:                            (BottomBoot && (block_e >= 8) && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4400:                            (BottomBoot && (block_e < 8) && block8_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4401:							(TopBoot && (block_e <= 127) && block_no_prot) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4402:							(TopBoot && (block_e > 127) && block127_no_prot))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4427:                        if (UniformSec || (TopBoot && SectorErased <= 511) ||
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4428:                           (BottomBoot && SectorErased >= 8))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4435:                                PPB_bits[SectorErased]== 1 && DYB_bits[SectorErased]== 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4463:                    else if (Instruct == BE && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4465:                        if (SR1_V[4]==0 && SR1_V[3]==0 && SR1_V[2]==0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4503:                    else if (Instruct == PPBE && WEL)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4507:                            if (PPBOTP && PPB_LOCK && PERMLB)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4521:                    else if (Instruct == ASPP  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4523:                        if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4525:                            if (ASP_reg_in[2]==1'b0 && ASP_reg_in[1]==1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4547:                    else if (Instruct == PLBWR  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4569:                    else if (Instruct == PNVDLR  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4571:                        if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4583:                    else if (Instruct == WVDLR  && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4588:                    else if (Instruct == PASSP && WEL == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4590:                        if (PWDMLB && PSTMLB)// Protection Mode not selected
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4604:                    else if (Instruct == PASSU  && WEL)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4888:                                if (VDLR_reg != 8'b00000000 && dlp_act == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:4934:                        if(read_addr>=OTPLoAddr && read_addr<=OTPHiAddr)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5165:                        if (~(PWDMLB == 0 && PSTMLB == 1))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5287:                    if ((~LOCK_O && SECURE_OPN == 1) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5316:                            if (TBPROT_O == 1'b0 && INITIAL_CONFIG == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5327:                            if (TBPARM_O == 1'b0 && INITIAL_CONFIG == 1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5354:                    if (SECURE_OPN == 1'b1 && LOCK_O == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5483:                if (WDONE && CSDONE)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5494:                        if ((~LOCK_O && (SECURE_OPN == 1)) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5520:                        if ((~LOCK_O && (SECURE_OPN == 1)) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5530:                                if (TBPROT_O == 1'b0 && INITIAL_CONFIG == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5541:                                if (TBPARM_O==1'b0 && INITIAL_CONFIG==1'b0 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5560:                        if (SECURE_OPN == 1'b1 && LOCK_O == 1'b0)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5574:                        if (CR2_NV[6] == 1'b0 && WRAR_reg_in[6] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5710:                            if (DYBLBB == 1'b0 && WRAR_reg_in[4] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5715:                            if (PPBOTP == 1'b0 && WRAR_reg_in[3] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5720:                            if (PERMLB == 1'b0 && WRAR_reg_in[0] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5739:                        if ((~LOCK_O && (SECURE_OPN == 1)) || (SECURE_OPN == 0))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5909:                if(current_state_event && current_state == PAGE_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:5969:                    if (Instruct == EPS && ~PRGSUSP_in)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6003:                if (PRGSUSP_out && PRGSUSP_in)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6256:                                    if (VDLR_reg!=8'b00000000 && dlp_act==1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6463:                if(current_state_event && current_state == OTP_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6607:                if(current_state_event && current_state == SECTOR_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6653:                    if (Instruct == EPS && ~ERSSUSP_in)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6765:                if(current_state_event && current_state == BULK_ERS)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6772:                            if (PPB_bits[sect] == 1 && DYB_bits[sect] == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6787:                        if (PPB_bits[sect] == 1 && DYB_bits[sect] == 1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6895:							(block_e != BlockErased && CR3_V[1]))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6934:							(block_e != BlockErased && CR3_V[1]))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:6995:							(block_e != BlockErased && CR3_V[1]))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7071:							(block_e != BlockErased && CR3_V[1]))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7081:                                    if (VDLR_reg!=8'b00000000 && dlp_act==1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7266:                    else if ((Instruct==PP || Instruct==PP4) && WEL && ~P_ERR)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7274:                            if (Sec_Prot[sect]== 0 && PPB_bits[sect]== 1 &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7436:                if(current_state_event && current_state == ERS_SUSP_PG)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7494:                    if (Instruct == EPS && ~PRGSUSP_in)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7528:                if (PRGSUSP_out && PRGSUSP_in)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7611:							(block_e != BlockErased && CR3_V[1])) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7646:							(block_e != BlockErased && CR3_V[1])) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7708:							(block_e != BlockErased && CR3_V[1])) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7785:							(block_e != BlockErased && CR3_V[1])) &&
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:7796:                                    if (VDLR_reg!=8'b00000000 && dlp_act==1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:8443:                        if (DYBLBB == 1'b0 && ASP_reg_in[4] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:8448:                        if (PPBOTP == 1'b0 && ASP_reg_in[3] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:8453:                        if (PERMLB == 1'b0 && ASP_reg_in[0] == 1'b1)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:8660:                    if (Instruct == WRDI && ~P_ERR && ~E_ERR)
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:9210:    // functions & tasks
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:9218:        if (Latency_code >= 4 && dummy_cnt >= (2*Latency_code-8))
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:9315:                    if (Addr/(SecSize4+1) < 8 && Instruct_P4E)  //4KB Sectors
+rtl/vip/spi_flash/S25fs256s/utilities/conversions.vhd:382:                  return r & fill(' ',int_rtn_len - r'length);
+sim/modelsim.ini:1672:; Mode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+sim/modelsim.ini:1673:; Mode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+sim/modelsim.ini:1674:; Mode 3: 0L->1H & 1H->0L & all 'Z' transitions.

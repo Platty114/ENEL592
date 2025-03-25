@@ -1,0 +1,409 @@
+src/tcm/dport_mux.v:94:wire tcm_access_w = (mem_addr_i >= TCM_MEM_BASE && mem_addr_i < (TCM_MEM_BASE + 32'd65536));
+src/tcm/dport_mux.v:102:assign mem_tcm_rd_o         = (tcm_access_w & ~hold_w) ? mem_rd_i : 1'b0;
+src/tcm/dport_mux.v:103:assign mem_tcm_wr_o         = (tcm_access_w & ~hold_w) ? mem_wr_i : 4'b0;
+src/tcm/dport_mux.v:106:assign mem_tcm_invalidate_o = (tcm_access_w & ~hold_w) ? mem_invalidate_i : 1'b0;
+src/tcm/dport_mux.v:107:assign mem_tcm_writeback_o  = (tcm_access_w & ~hold_w) ? mem_writeback_i : 1'b0;
+src/tcm/dport_mux.v:108:assign mem_tcm_flush_o      = (tcm_access_w & ~hold_w) ? mem_flush_i : 1'b0;
+src/tcm/dport_mux.v:112:assign mem_ext_rd_o         = (~tcm_access_w & ~hold_w) ? mem_rd_i : 1'b0;
+src/tcm/dport_mux.v:113:assign mem_ext_wr_o         = (~tcm_access_w & ~hold_w) ? mem_wr_i : 4'b0;
+src/tcm/dport_mux.v:116:assign mem_ext_invalidate_o = (~tcm_access_w & ~hold_w) ? mem_invalidate_i : 1'b0;
+src/tcm/dport_mux.v:117:assign mem_ext_writeback_o  = (~tcm_access_w & ~hold_w) ? mem_writeback_i : 1'b0;
+src/tcm/dport_mux.v:118:assign mem_ext_flush_o      = (~tcm_access_w & ~hold_w) ? mem_flush_i : 1'b0;
+src/tcm/dport_mux.v:133:    if ((request_w && mem_accept_o) && !mem_ack_o)
+src/tcm/dport_mux.v:135:    else if (!(request_w && mem_accept_o) && mem_ack_o)
+src/tcm/dport_mux.v:148:else if (request_w && mem_accept_o)
+src/tcm/tcm_mem_pmem.v:104:        calculate_addr_next = (addr & ~mask) | ((addr + 4) & mask);
+src/tcm/tcm_mem_pmem.v:162:    if (axi_awvalid_i && axi_awready_o)
+src/tcm/tcm_mem_pmem.v:165:        if (axi_wvalid_i && axi_wready_o)
+src/tcm/tcm_mem_pmem.v:187:    else if (axi_arvalid_i && axi_arready_o)
+src/tcm/tcm_mem_pmem.v:234:    if (axi_arvalid_i && axi_arready_o)
+src/tcm/tcm_mem_pmem.v:237:    else if (axi_awvalid_i && axi_awready_o)
+src/tcm/tcm_mem_pmem.v:298:wire write_active_w  = (axi_awvalid_i || req_wr_q) && !req_rd_q && req_fifo_accept_w && (write_prio_w || req_wr_q || !axi_arvalid_i);
+src/tcm/tcm_mem_pmem.v:299:wire read_active_w   = (axi_arvalid_i || req_rd_q) && !req_wr_q && req_fifo_accept_w && (read_prio_w || req_rd_q || !axi_awvalid_i);
+src/tcm/tcm_mem_pmem.v:301:assign axi_awready_o = write_active_w && !req_wr_q && ram_accept_i && req_fifo_accept_w;
+src/tcm/tcm_mem_pmem.v:302:assign axi_wready_o  = write_active_w &&              ram_accept_i && req_fifo_accept_w;
+src/tcm/tcm_mem_pmem.v:303:assign axi_arready_o = read_active_w  && !req_rd_q && ram_accept_i && req_fifo_accept_w;
+src/tcm/tcm_mem_pmem.v:308:wire wr_w    = write_active_w && axi_wvalid_i;
+src/tcm/tcm_mem_pmem.v:321:assign axi_bvalid_o  = resp_valid_w & resp_is_write_w & resp_is_last_w;
+src/tcm/tcm_mem_pmem.v:325:assign axi_rvalid_o  = resp_valid_w & resp_is_read_w;
+src/tcm/tcm_mem_pmem.v:330:assign resp_accept_w    = (axi_rvalid_o & axi_rready_i) | 
+src/tcm/tcm_mem_pmem.v:331:                          (axi_bvalid_o & axi_bready_i) |
+src/tcm/tcm_mem_pmem.v:332:                          (resp_valid_w & resp_is_write_w & !resp_is_last_w); // Ignore write resps mid burst
+src/tcm/tcm_mem_pmem.v:392:    if (push_i & accept_o)
+src/tcm/tcm_mem_pmem.v:399:    if (pop_i & valid_o)
+src/tcm/tcm_mem_pmem.v:403:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+src/tcm/tcm_mem_pmem.v:406:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+src/tcm/dport_axi.v:119:assign mem_accept_o = req_accept_w & res_accept_w;
+src/tcm/dport_axi.v:166:else if (axi_awvalid_o && axi_awready_i && axi_wvalid_o && !axi_wready_i)
+src/tcm/dport_axi.v:168:else if (axi_wvalid_o && axi_wready_i)
+src/tcm/dport_axi.v:174:else if (axi_wvalid_o && axi_wready_i && axi_awvalid_o && !axi_awready_i)
+src/tcm/dport_axi.v:176:else if (axi_awvalid_o && axi_awready_i)
+src/tcm/dport_axi.v:200:assign read_complete_w = axi_arvalid_o && axi_arready_i;
+src/tcm/dport_axi.v:270:    if (push_i & accept_o)
+src/tcm/dport_axi.v:277:    if (pop_i & valid_o)
+src/tcm/dport_axi.v:281:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+src/tcm/dport_axi.v:284:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+src/core/biriscv_xilinx_2r1w.v:88:assign write_banka_w  = (write_enable_w & (~rd0_i[4]));
+src/core/biriscv_xilinx_2r1w.v:89:assign write_bankb_w  = (write_enable_w & rd0_i[4]);
+src/core/biriscv_mmu.v:130:    wire        resp_valid_w = resp_mmu_w & lsu_out_ack_i;
+src/core/biriscv_mmu.v:131:    wire        resp_error_w = resp_mmu_w & lsu_out_error_i;
+src/core/biriscv_mmu.v:186:    wire        vm_d_enable_w = (vm_enable_w & dfetch_vm_w);
+src/core/biriscv_mmu.v:189:    wire        itlb_miss_w = fetch_in_rd_i & vm_i_enable_w & ~itlb_hit_w;
+src/core/biriscv_mmu.v:190:    wire        dtlb_miss_w = (load_w || (|store_w)) & vm_d_enable_w & ~dtlb_hit_w;
+src/core/biriscv_mmu.v:216:        if (state_q == STATE_IDLE && (itlb_miss_w || dtlb_miss_w))
+src/core/biriscv_mmu.v:225:        else if (state_q == STATE_LEVEL_FIRST && resp_valid_w)
+src/core/biriscv_mmu.v:247:        else if (state_q == STATE_LEVEL_SECOND && resp_valid_w)
+src/core/biriscv_mmu.v:298:    assign itlb_hit_w   = fetch_in_rd_i & itlb_valid_q & (itlb_va_addr_q == fetch_in_pc_i[31:12]);
+src/core/biriscv_mmu.v:305:        if (vm_i_enable_w && itlb_hit_w)
+src/core/biriscv_mmu.v:331:    assign fetch_out_rd_o         = (~vm_i_enable_w & fetch_in_rd_i) || (itlb_hit_w & ~pc_fault_r);
+src/core/biriscv_mmu.v:336:    assign fetch_in_accept_o      = (~vm_i_enable_w & fetch_out_accept_i) | (vm_i_enable_w & itlb_hit_w & fetch_out_accept_i) | pc_fault_r;
+src/core/biriscv_mmu.v:338:    assign fetch_in_error_o       = fetch_out_valid_i & fetch_out_error_i;
+src/core/biriscv_mmu.v:354:    else if (state_q == STATE_UPDATE && dtlb_req_q)
+src/core/biriscv_mmu.v:363:    else if (state_q == STATE_UPDATE && dtlb_req_q)
+src/core/biriscv_mmu.v:370:    assign dtlb_hit_w   = dtlb_valid_q & (dtlb_va_addr_q == lsu_addr_w[31:12]);
+src/core/biriscv_mmu.v:377:        if (vm_d_enable_w && load_w && dtlb_hit_w)
+src/core/biriscv_mmu.v:387:                    load_fault_r = ~(dtlb_entry_q[`PAGE_READ] | (mxr_i & dtlb_entry_q[`PAGE_EXEC]));
+src/core/biriscv_mmu.v:433:    wire        lsu_out_rd_w         = vm_d_enable_w ? (load_w  & dtlb_hit_w & ~load_fault_r)       : lsu_in_rd_i;
+src/core/biriscv_mmu.v:434:    wire [3:0]  lsu_out_wr_w         = vm_d_enable_w ? (store_w & {4{dtlb_hit_w & ~store_fault_r}}) : lsu_in_wr_i;
+src/core/biriscv_mmu.v:449:            lsu_out_cacheable_r = (lsu_out_addr_w >= MEM_CACHE_ADDR_MIN && lsu_out_addr_w <= MEM_CACHE_ADDR_MAX);
+src/core/biriscv_mmu.v:457:    assign lsu_in_ack_o         = (lsu_out_ack_i & ~resp_mmu_w) | store_fault_q | load_fault_q;
+src/core/biriscv_mmu.v:459:    assign lsu_in_error_o       = (lsu_out_error_i & ~resp_mmu_w) | store_fault_q | load_fault_q;
+src/core/biriscv_mmu.v:464:    assign lsu_in_accept_o      = (~vm_d_enable_w & cpu_accept_w) | (vm_d_enable_w & dtlb_hit_w & cpu_accept_w) | store_fault_r | load_fault_r;
+src/core/biriscv_mmu.v:475:    else if (state_q == STATE_IDLE && (itlb_miss_w || dtlb_miss_w))
+src/core/biriscv_mmu.v:477:    else if (state_q == STATE_LEVEL_FIRST && resp_valid_w && !resp_error_w && resp_data_w[`PAGE_PRESENT] && (!(resp_data_w[`PAGE_READ] || resp_data_w[`PAGE_WRITE] || resp_data_w[`PAGE_EXEC])))
+src/core/biriscv_mmu.v:503:    assign mmu_accept_w         = src_mmu_w  & lsu_out_accept_i;
+src/core/biriscv_mmu.v:504:    assign cpu_accept_w         = ~src_mmu_w & lsu_out_accept_i;
+src/core/biriscv_pipe_ctrl.v:122:wire branch_misaligned_w = (issue_branch_taken_i && issue_branch_target_i[1:0] != 2'b0);
+src/core/biriscv_pipe_ctrl.v:165:else if ((issue_valid_i && issue_accept_i) && ~(squash_e1_e2_o || squash_e1_e2_i))
+src/core/biriscv_pipe_ctrl.v:169:    ctrl_e1_q[`PCINFO_LOAD]     <= issue_lsu_i &  issue_rd_valid_i & ~take_interrupt_i; // TODO: Check
+src/core/biriscv_pipe_ctrl.v:170:    ctrl_e1_q[`PCINFO_STORE]    <= issue_lsu_i & ~issue_rd_valid_i & ~take_interrupt_i;
+src/core/biriscv_pipe_ctrl.v:171:    ctrl_e1_q[`PCINFO_CSR]      <= issue_csr_i & ~take_interrupt_i;
+src/core/biriscv_pipe_ctrl.v:172:    ctrl_e1_q[`PCINFO_DIV]      <= issue_div_i & ~take_interrupt_i;
+src/core/biriscv_pipe_ctrl.v:173:    ctrl_e1_q[`PCINFO_MUL]      <= issue_mul_i & ~take_interrupt_i;
+src/core/biriscv_pipe_ctrl.v:174:    ctrl_e1_q[`PCINFO_BRANCH]   <= issue_branch_i & ~take_interrupt_i;
+src/core/biriscv_pipe_ctrl.v:175:    ctrl_e1_q[`PCINFO_RD_VALID] <= issue_rd_valid_i & ~take_interrupt_i;
+src/core/biriscv_pipe_ctrl.v:296:wire valid_e2_w      = valid_e2_q & ~issue_stall_i;
+src/core/biriscv_pipe_ctrl.v:303:    if (SUPPORT_LOAD_BYPASS && valid_e2_w && (ctrl_e2_q[`PCINFO_LOAD] || ctrl_e2_q[`PCINFO_STORE]))
+src/core/biriscv_pipe_ctrl.v:305:    else if (SUPPORT_MUL_BYPASS && valid_e2_w && ctrl_e2_q[`PCINFO_MUL])
+src/core/biriscv_pipe_ctrl.v:312:assign rd_e2_o         = {5{(valid_e2_w && ctrl_e2_q[`PCINFO_RD_VALID] && ~stall_o)}} & opcode_e2_q[`RD_IDX_R];
+src/core/biriscv_pipe_ctrl.v:321:    if (valid_e2_q && (ctrl_e2_q[`PCINFO_LOAD] || ctrl_e2_q[`PCINFO_STORE]) && mem_complete_i)
+src/core/biriscv_pipe_ctrl.v:406:        ctrl_wb_q       <= ctrl_e2_q & ~(1 << `PCINFO_RD_VALID);
+src/core/biriscv_pipe_ctrl.v:417:    if (valid_e2_w && (ctrl_e2_q[`PCINFO_LOAD] || ctrl_e2_q[`PCINFO_STORE]))
+src/core/biriscv_pipe_ctrl.v:419:    else if (valid_e2_w && ctrl_e2_q[`PCINFO_MUL])
+src/core/biriscv_pipe_ctrl.v:428:assign valid_wb_o      = valid_wb_q & ~issue_stall_i;
+src/core/biriscv_pipe_ctrl.v:430:assign rd_wb_o         = {5{(valid_wb_o && ctrl_wb_q[`PCINFO_RD_VALID] && ~stall_o)}} & opcode_wb_q[`RD_IDX_R];
+src/core/biriscv_multiplier.v:110:else if (opcode_valid_i && mult_inst_w)
+src/core/biriscv_csr_regfile.v:120:        irq_pending_r   = (csr_mip_q & csr_mie_q);
+src/core/biriscv_csr_regfile.v:121:        m_enabled_r     = (csr_mpriv_q < `PRIV_MACHINE) || (csr_mpriv_q == `PRIV_MACHINE && csr_sr_q[`SR_MIE_R]);
+src/core/biriscv_csr_regfile.v:122:        s_enabled_r     = (csr_mpriv_q < `PRIV_SUPER)   || (csr_mpriv_q == `PRIV_SUPER   && csr_sr_q[`SR_SIE_R]);
+src/core/biriscv_csr_regfile.v:123:        m_interrupts_r  = m_enabled_r    ? (irq_pending_r & ~csr_mideleg_q) : 32'b0;
+src/core/biriscv_csr_regfile.v:124:        s_interrupts_r  = s_enabled_r    ? (irq_pending_r &  csr_mideleg_q) : 32'b0;
+src/core/biriscv_csr_regfile.v:130:        irq_pending_r   = (csr_mip_q & csr_mie_q);
+src/core/biriscv_csr_regfile.v:151:else if ((csr_ren_i && csr_raddr_i == `CSR_MIP) || (csr_ren_i && csr_raddr_i == `CSR_SIP))
+src/core/biriscv_csr_regfile.v:156:wire buffer_mip_w = (csr_ren_i && csr_raddr_i == `CSR_MIP) | (csr_ren_i && csr_raddr_i == `CSR_SIP) | csr_mip_upd_q;
+src/core/biriscv_csr_regfile.v:235:wire exception_s_w  = SUPPORT_SUPER ? ((csr_mpriv_q <= `PRIV_SUPER) & is_exception_w & csr_medeleg_q[{1'b0, exception_i[`EXCEPTION_SUBTYPE_R]}]) : 1'b0;
+src/core/biriscv_csr_regfile.v:319:    else if (exception_i >= `EXCEPTION_ERET_U && exception_i <= `EXCEPTION_ERET_M)
+src/core/biriscv_csr_regfile.v:349:    else if (is_exception_w && exception_s_w)
+src/core/biriscv_csr_regfile.v:443:        `CSR_SSTATUS:  csr_sr_r       = (csr_sr_r & ~`CSR_SSTATUS_MASK) | (csr_wdata_i & `CSR_SSTATUS_MASK);
+src/core/biriscv_csr_regfile.v:444:        `CSR_SIP:      csr_mip_r      = (csr_mip_r & ~`CSR_SIP_MASK) | (csr_wdata_i & `CSR_SIP_MASK);
+src/core/biriscv_csr_regfile.v:445:        `CSR_SIE:      csr_mie_r      = (csr_mie_r & ~`CSR_SIE_MASK) | (csr_wdata_i & `CSR_SIE_MASK);
+src/core/biriscv_csr_regfile.v:453:    if (ext_intr_i   &&  csr_mideleg_q[`SR_IP_MEIP_R]) csr_mip_next_r[`SR_IP_SEIP_R] = 1'b1;
+src/core/biriscv_csr_regfile.v:454:    if (ext_intr_i   && ~csr_mideleg_q[`SR_IP_MEIP_R]) csr_mip_next_r[`SR_IP_MEIP_R] = 1'b1;
+src/core/biriscv_csr_regfile.v:455:    if (timer_intr_i &&  csr_mideleg_q[`SR_IP_MTIP_R]) csr_mip_next_r[`SR_IP_STIP_R] = 1'b1;
+src/core/biriscv_csr_regfile.v:456:    if (timer_intr_i && ~csr_mideleg_q[`SR_IP_MTIP_R]) csr_mip_next_r[`SR_IP_MTIP_R] = 1'b1;
+src/core/biriscv_csr_regfile.v:459:    if (SUPPORT_MTIMECMP && csr_mcycle_q == csr_mtimecmp_q)
+src/core/biriscv_csr_regfile.v:547:        case (csr_wdata_i & 32'hFF000000)
+src/core/biriscv_csr_regfile.v:581:    else if (exception_i >= `EXCEPTION_ERET_U && exception_i <= `EXCEPTION_ERET_M)
+src/core/biriscv_csr_regfile.v:597:    else if (is_exception_w && exception_s_w)
+src/core/biriscv_issue.v:589:assign branch_info_is_taken_o     = (pipe1_branch_e1_w & branch_exec1_is_taken_i)     | (pipe0_branch_e1_w & branch_exec0_is_taken_i);
+src/core/biriscv_issue.v:590:assign branch_info_is_not_taken_o = (pipe1_branch_e1_w & branch_exec1_is_not_taken_i) | (pipe0_branch_e1_w & branch_exec0_is_not_taken_i);
+src/core/biriscv_issue.v:591:assign branch_info_is_call_o      = (pipe1_branch_e1_w & branch_exec1_is_call_i)      | (pipe0_branch_e1_w & branch_exec0_is_call_i);
+src/core/biriscv_issue.v:592:assign branch_info_is_ret_o       = (pipe1_branch_e1_w & branch_exec1_is_ret_i)       | (pipe0_branch_e1_w & branch_exec0_is_ret_i);
+src/core/biriscv_issue.v:593:assign branch_info_is_jmp_o       = (pipe1_branch_e1_w & branch_exec1_is_jmp_i)       | (pipe0_branch_e1_w & branch_exec0_is_jmp_i);
+src/core/biriscv_issue.v:594:assign branch_info_source_o       = (pipe1_branch_e1_w & branch_exec1_request_i)      ? branch_exec1_source_i : branch_exec0_source_i;
+src/core/biriscv_issue.v:595:assign branch_info_pc_o           = (pipe1_branch_e1_w & branch_exec1_request_i)      ? branch_exec1_pc_i     : branch_exec0_pc_i;
+src/core/biriscv_issue.v:610:else if (div_opcode_valid_o && issue_a_div_w)
+src/core/biriscv_issue.v:622:else if (csr_opcode_valid_o && issue_a_csr_w)
+src/core/biriscv_issue.v:697:        if (opcode_a_accept_r && issue_a_sb_alloc_w && (|issue_a_rd_idx_w))
+src/core/biriscv_issue.v:705:    else if (dual_issue_ok_w && opcode_b_valid_r && opcode_a_accept_r &&
+src/core/biriscv_issue.v:715:        if (opcode_b_accept_r && issue_b_sb_alloc_w && (|issue_b_rd_idx_w))
+src/core/biriscv_issue.v:722:assign mul_opcode_valid_o   = enable_muldiv_w & (pipe1_mux_mul_r ? opcode_b_issue_r : opcode_a_issue_r);
+src/core/biriscv_issue.v:723:assign div_opcode_valid_o   = enable_muldiv_w & (opcode_a_issue_r);
+src/core/biriscv_issue.v:728:assign dual_issue_w         = opcode_b_issue_r & opcode_b_accept_r & ~take_interrupt_i;
+src/core/biriscv_issue.v:729:assign single_issue_w       = (opcode_a_issue_r & opcode_a_accept_r) & ~dual_issue_w & ~take_interrupt_i;
+src/core/biriscv_issue.v:731:assign fetch0_accept_o      = ((slot0_valid_r & opcode_a_accept_r) | slot1_valid_r) & ~take_interrupt_i;
+src/core/biriscv_issue.v:732:assign fetch1_accept_o      = ((slot1_valid_r & opcode_a_accept_r) | (opcode_b_accept_r)) & ~take_interrupt_i;
+src/core/biriscv_issue.v:924:assign csr_opcode_valid_o       = opcode_a_issue_r & ~take_interrupt_i;
+src/core/biriscv_issue.v:932:assign csr_opcode_invalid_o     = opcode_a_issue_r && issue_a_invalid_w;
+src/core/biriscv_fetch.v:110:    else if (icache_rd_o && icache_accept_i)
+src/core/biriscv_fetch.v:128:    else if (branch_request_i && (icache_busy_w || !active_q))
+src/core/biriscv_fetch.v:148:else if (SUPPORT_MMU && branch_w && ~stall_w)
+src/core/biriscv_fetch.v:150:else if (!SUPPORT_MMU && branch_w)
+src/core/biriscv_fetch.v:174:else if (icache_rd_o && icache_accept_i)
+src/core/biriscv_fetch.v:198:else if (SUPPORT_MMU && branch_w && ~stall_w)
+src/core/biriscv_fetch.v:200:else if (!SUPPORT_MMU && (stall_w || !active_q || stall_q) && branch_w)
+src/core/biriscv_fetch.v:220:    else if (branch_w && ~stall_w)
+src/core/biriscv_fetch.v:227:    else if (branch_w && ~stall_w)
+src/core/biriscv_fetch.v:239:    assign icache_pc_w       = (branch_w & ~stall_q) ? branch_pc_w : pc_f_q;
+src/core/biriscv_fetch.v:249:else if (icache_rd_o && icache_accept_i)
+src/core/biriscv_fetch.v:255:else if (icache_rd_o && icache_accept_i)
+src/core/biriscv_fetch.v:263:assign icache_rd_o         = active_q & fetch_accept_i & !icache_busy_w;
+src/core/biriscv_alu.v:112:            if (alu_a_i[31] == 1'b1 && alu_op_i == `ALU_SHIFTR_ARITH)
+src/core/biriscv_alu.v:158:            result_r      = (alu_a_i & alu_b_i);
+src/core/biriscv_npc.v:97:    if (branch_request_i & branch_is_call_i)
+src/core/biriscv_npc.v:99:    else if (branch_request_i & branch_is_ret_i)
+src/core/biriscv_npc.v:118:wire        ras_call_pred_w = RAS_ENABLE & (btb_valid_w & btb_is_call_w) & ~ras_pc_pred_w[0];
+src/core/biriscv_npc.v:119:wire        ras_ret_pred_w  = RAS_ENABLE & (btb_valid_w & btb_is_ret_w) & ~ras_pc_pred_w[0];
+src/core/biriscv_npc.v:126:    if (branch_request_i & branch_is_call_i)
+src/core/biriscv_npc.v:128:    else if (branch_request_i & branch_is_ret_i)
+src/core/biriscv_npc.v:131:    else if (ras_call_pred_w & pc_accept_i)
+src/core/biriscv_npc.v:133:    else if (ras_ret_pred_w & pc_accept_i)
+src/core/biriscv_npc.v:149:else if (branch_request_i & branch_is_call_i)
+src/core/biriscv_npc.v:155:else if (ras_call_pred_w & pc_accept_i)
+src/core/biriscv_npc.v:161:else if ((ras_ret_pred_w & pc_accept_i) || (branch_request_i & branch_is_ret_i))
+src/core/biriscv_npc.v:212:else if (branch_is_taken_i && bht_sat_q[bht_wr_entry_w] < 2'd3)
+src/core/biriscv_npc.v:214:else if (branch_is_not_taken_i && bht_sat_q[bht_wr_entry_w] > 2'd0)
+src/core/biriscv_npc.v:217:wire bht_predict_taken_w = BHT_ENABLE && (bht_sat_q[bht_rd_entry_w] >= 2'd2);
+src/core/biriscv_npc.v:264:    if (~btb_valid_r && ~pc_f_i[2])
+src/core/biriscv_npc.v:375:assign next_taken_f_o = (btb_valid_w & (ras_ret_pred_w | bht_predict_taken_w | btb_is_jmp_r)) ? 
+src/core/biriscv_npc.v:379:assign pred_taken_w   = btb_valid_w & (ras_ret_pred_w | bht_predict_taken_w | btb_is_jmp_r) & pc_accept_i;
+src/core/biriscv_npc.v:380:assign pred_ntaken_w  = btb_valid_w & ~pred_taken_w & pc_accept_i;
+src/core/biriscv_lsu.v:106:wire complete_ok_e2_w  = mem_ack_i & ~mem_error_i;
+src/core/biriscv_lsu.v:107:wire complete_err_e2_w = mem_ack_i & mem_error_i;
+src/core/biriscv_lsu.v:127:    mem_unaligned_e2_q <= mem_unaligned_e1_q & ~delay_lsu_e2_w;
+src/core/biriscv_lsu.v:172:    if (opcode_valid_i && ((opcode_opcode_i & `INST_CSRRW_MASK) == `INST_CSRRW))
+src/core/biriscv_lsu.v:174:    else if (opcode_valid_i && load_inst_w)
+src/core/biriscv_lsu.v:179:    if (opcode_valid_i && req_sw_lw_w)
+src/core/biriscv_lsu.v:181:    else if (opcode_valid_i && req_sh_lh_w)
+src/core/biriscv_lsu.v:184:    mem_rd_r = (opcode_valid_i && load_inst_w && !mem_unaligned_r);
+src/core/biriscv_lsu.v:186:    if (opcode_valid_i && ((opcode_opcode_i & `INST_SW_MASK) == `INST_SW) && !mem_unaligned_r)
+src/core/biriscv_lsu.v:191:    else if (opcode_valid_i && ((opcode_opcode_i & `INST_SH_MASK) == `INST_SH) && !mem_unaligned_r)
+src/core/biriscv_lsu.v:206:    else if (opcode_valid_i && ((opcode_opcode_i & `INST_SB_MASK) == `INST_SB))
+src/core/biriscv_lsu.v:292:    mem_load_q         <= opcode_valid_i && load_inst_w;
+src/core/biriscv_lsu.v:299:    mem_cacheable_q  <= (mem_addr_r >= MEM_CACHE_ADDR_MIN && mem_addr_r <= MEM_CACHE_ADDR_MAX) ||
+src/core/biriscv_lsu.v:300:                        (opcode_valid_i && (dcache_invalidate_w || dcache_writeback_w || dcache_flush_w));
+src/core/biriscv_lsu.v:304:    mem_invalidate_q <= opcode_valid_i & dcache_invalidate_w;
+src/core/biriscv_lsu.v:312:    mem_flush_q      <= opcode_valid_i & dcache_flush_w;
+src/core/biriscv_lsu.v:318:assign mem_rd_o         = mem_rd_q & ~delay_lsu_e2_w;
+src/core/biriscv_lsu.v:319:assign mem_wr_o         = mem_wr_q & ~{4{delay_lsu_e2_w}};
+src/core/biriscv_lsu.v:346:    ,.push_i(((mem_rd_o || (|mem_wr_o) || mem_writeback_o || mem_invalidate_o || mem_flush_o) && mem_accept_i) || (mem_unaligned_e1_q && ~delay_lsu_e2_w))
+src/core/biriscv_lsu.v:375:    if ((mem_ack_i && mem_error_i) || mem_unaligned_e2_q)
+src/core/biriscv_lsu.v:378:    else if (mem_ack_i && resp_load_w)
+src/core/biriscv_lsu.v:389:            if (load_signed_r && wb_result_r[7])
+src/core/biriscv_lsu.v:399:            if (load_signed_r && wb_result_r[15])
+src/core/biriscv_lsu.v:410:wire fault_load_align_w     = mem_unaligned_e2_q & resp_load_w;
+src/core/biriscv_lsu.v:411:wire fault_store_align_w    = mem_unaligned_e2_q & ~resp_load_w;
+src/core/biriscv_lsu.v:412:wire fault_load_bus_w       = mem_error_i &&  resp_load_w;
+src/core/biriscv_lsu.v:413:wire fault_store_bus_w      = mem_error_i && ~resp_load_w;
+src/core/biriscv_lsu.v:414:wire fault_load_page_w      = mem_error_i && mem_load_fault_i;
+src/core/biriscv_lsu.v:415:wire fault_store_page_w     = mem_error_i && mem_store_fault_i;
+src/core/biriscv_lsu.v:487:    if (push_i & accept_o)
+src/core/biriscv_lsu.v:494:    if (pop_i & valid_o)
+src/core/biriscv_lsu.v:498:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+src/core/biriscv_lsu.v:501:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+src/core/biriscv_regfile.v:60:if (SUPPORT_REGFILE_XILINX && SUPPORT_DUAL_ISSUE)
+src/core/biriscv_decode.v:342:wire push_w         = (push_i & accept_o);
+src/core/biriscv_decode.v:343:wire pop1_w         = (pop0_i & valid0_o);
+src/core/biriscv_decode.v:344:wire pop2_w         = (pop1_i & valid1_o);
+src/core/biriscv_decode.v:345:wire pop_complete_w = ((pop1_w && ~valid1_o) || (pop2_w && ~valid0_o) || (pop1_w && pop2_w));
+src/core/biriscv_decode.v:403:    if (push_w & ~pop_complete_w)
+src/core/biriscv_decode.v:405:    else if (~push_w & pop_complete_w)
+src/core/biriscv_exec.v:324:        branch_ret_r        = (opcode_ra_idx_i == 5'd1 && imm12_r[11:0] == 12'b0); // RA
+src/core/biriscv_exec.v:325:        branch_call_r       = ~branch_ret_r && (opcode_rd_idx_i == 5'd1); // RA
+src/core/biriscv_exec.v:381:    branch_taken_q   <= branch_r && opcode_valid_i & branch_taken_r;
+src/core/biriscv_exec.v:382:    branch_ntaken_q  <= branch_r && opcode_valid_i & ~branch_taken_r;
+src/core/biriscv_exec.v:384:    branch_call_q    <= branch_r && opcode_valid_i && branch_call_r;
+src/core/biriscv_exec.v:385:    branch_ret_q     <= branch_r && opcode_valid_i && branch_ret_r;
+src/core/biriscv_exec.v:386:    branch_jmp_q     <= branch_r && opcode_valid_i && branch_jmp_r;
+src/core/biriscv_exec.v:399:assign branch_d_request_o = (branch_r && opcode_valid_i && branch_taken_r);
+src/core/biriscv_csr.v:88:wire ecall_w             = opcode_valid_i && ((opcode_opcode_i & `INST_ECALL_MASK)      == `INST_ECALL);
+src/core/biriscv_csr.v:89:wire ebreak_w            = opcode_valid_i && ((opcode_opcode_i & `INST_EBREAK_MASK)     == `INST_EBREAK);
+src/core/biriscv_csr.v:90:wire eret_w              = opcode_valid_i && ((opcode_opcode_i & `INST_ERET_MASK)       == `INST_ERET);
+src/core/biriscv_csr.v:92:wire csrrw_w             = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRW_MASK)      == `INST_CSRRW);
+src/core/biriscv_csr.v:93:wire csrrs_w             = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRS_MASK)      == `INST_CSRRS);
+src/core/biriscv_csr.v:94:wire csrrc_w             = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRC_MASK)      == `INST_CSRRC);
+src/core/biriscv_csr.v:95:wire csrrwi_w            = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRWI_MASK)     == `INST_CSRRWI);
+src/core/biriscv_csr.v:96:wire csrrsi_w            = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRSI_MASK)     == `INST_CSRRSI);
+src/core/biriscv_csr.v:97:wire csrrci_w            = opcode_valid_i && ((opcode_opcode_i & `INST_CSRRCI_MASK)     == `INST_CSRRCI);
+src/core/biriscv_csr.v:98:wire wfi_w               = opcode_valid_i && ((opcode_opcode_i & `INST_WFI_MASK)        == `INST_WFI);
+src/core/biriscv_csr.v:99:wire fence_w             = opcode_valid_i && ((opcode_opcode_i & `INST_FENCE_MASK)      == `INST_FENCE);
+src/core/biriscv_csr.v:100:wire sfence_w            = opcode_valid_i && ((opcode_opcode_i & `INST_SFENCE_MASK)     == `INST_SFENCE);
+src/core/biriscv_csr.v:101:wire ifence_w            = opcode_valid_i && ((opcode_opcode_i & `INST_IFENCE_MASK)     == `INST_IFENCE);
+src/core/biriscv_csr.v:131:    csr_fault_r     = SUPPORT_SUPER ? (opcode_valid_i && (set_r | clr_r) && ((csr_write_r && csr_readonly_r) || (current_priv_w < csr_priv_r))) : 1'b0;
+src/core/biriscv_csr.v:134:wire satp_update_w = (opcode_valid_i && (set_r || clr_r) && csr_write_r && (opcode_opcode_i[31:20] == `CSR_SATP));
+src/core/biriscv_csr.v:201:wire                    eret_fault_w = eret_w && (current_priv_w < eret_priv_w);
+src/core/biriscv_csr.v:248:    if (set_r && clr_r)
+src/core/biriscv_csr.v:253:        csr_wdata_e1_q <= csr_rdata_w & ~data_r;
+src/core/biriscv_decoder.v:97:                    (enable_muldiv_i && (opcode_i & `INST_MUL_MASK) == `INST_MUL)       ||
+src/core/biriscv_decoder.v:98:                    (enable_muldiv_i && (opcode_i & `INST_MULH_MASK) == `INST_MULH)     ||
+src/core/biriscv_decoder.v:99:                    (enable_muldiv_i && (opcode_i & `INST_MULHSU_MASK) == `INST_MULHSU) ||
+src/core/biriscv_decoder.v:100:                    (enable_muldiv_i && (opcode_i & `INST_MULHU_MASK) == `INST_MULHU)   ||
+src/core/biriscv_decoder.v:101:                    (enable_muldiv_i && (opcode_i & `INST_DIV_MASK) == `INST_DIV)       ||
+src/core/biriscv_decoder.v:102:                    (enable_muldiv_i && (opcode_i & `INST_DIVU_MASK) == `INST_DIVU)     ||
+src/core/biriscv_decoder.v:103:                    (enable_muldiv_i && (opcode_i & `INST_REM_MASK) == `INST_REM)       ||
+src/core/biriscv_decoder.v:104:                    (enable_muldiv_i && (opcode_i & `INST_REMU_MASK) == `INST_REMU));
+src/core/biriscv_divider.v:90:wire div_start_w    = opcode_valid_i & div_rem_inst_w;
+src/core/biriscv_divider.v:134:        if (signed_operation_w && opcode_ra_operand_i[31])
+src/core/biriscv_divider.v:139:        if (signed_operation_w && opcode_rb_operand_i[31])
+src/dcache/dcache_mux.v:85:assign mem_cached_rd_o           = (mem_cacheable_i & ~hold_w) ? mem_rd_i : 1'b0;
+src/dcache/dcache_mux.v:86:assign mem_cached_wr_o           = (mem_cacheable_i & ~hold_w) ? mem_wr_i : 4'b0;
+src/dcache/dcache_mux.v:89:assign mem_cached_invalidate_o   = (mem_cacheable_i & ~hold_w) ? mem_invalidate_i : 1'b0;
+src/dcache/dcache_mux.v:90:assign mem_cached_writeback_o    = (mem_cacheable_i & ~hold_w) ? mem_writeback_i : 1'b0;
+src/dcache/dcache_mux.v:91:assign mem_cached_flush_o        = (mem_cacheable_i & ~hold_w) ? mem_flush_i : 1'b0;
+src/dcache/dcache_mux.v:95:assign mem_uncached_rd_o         = (~mem_cacheable_i & ~hold_w) ? mem_rd_i : 1'b0;
+src/dcache/dcache_mux.v:96:assign mem_uncached_wr_o         = (~mem_cacheable_i & ~hold_w) ? mem_wr_i : 4'b0;
+src/dcache/dcache_mux.v:99:assign mem_uncached_invalidate_o = (~mem_cacheable_i & ~hold_w) ? mem_invalidate_i : 1'b0;
+src/dcache/dcache_mux.v:100:assign mem_uncached_writeback_o  = (~mem_cacheable_i & ~hold_w) ? mem_writeback_i : 1'b0;
+src/dcache/dcache_mux.v:101:assign mem_uncached_flush_o      = (~mem_cacheable_i & ~hold_w) ? mem_flush_i : 1'b0;
+src/dcache/dcache_mux.v:117:    if ((request_w && mem_accept_o) && !mem_ack_o)
+src/dcache/dcache_mux.v:119:    else if (!(request_w && mem_accept_o) && mem_ack_o)
+src/dcache/dcache_mux.v:132:else if (request_w && mem_accept_o)
+src/dcache/dcache_if_pmem.v:89:wire          req_push_w   = request_w && res_accept_w;
+src/dcache/dcache_if_pmem.v:113:assign mem_accept_o = req_accept_w & res_accept_w;
+src/dcache/dcache_if_pmem.v:119:wire res_push_w = request_w && req_accept_w;
+src/dcache/dcache_if_pmem.v:242:    if (push_i & accept_o)
+src/dcache/dcache_if_pmem.v:249:    if (pop_i & valid_o)
+src/dcache/dcache_if_pmem.v:253:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+src/dcache/dcache_if_pmem.v:256:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+src/dcache/dcache_axi.v:126:wire       req_can_issue_w = req_valid_w & res_accept_w;
+src/dcache/dcache_axi.v:144:else if (req_is_write_w && req_cnt_q == 8'd0 && req_len_w != 8'd0 && accept_w)
+src/dcache/dcache_axi.v:146:else if (req_cnt_q != 8'd0 && req_is_write_w && accept_w)
+src/dcache/dcache_axi.v:149:wire req_last_w = (req_is_write_w && req_len_w == 8'd0 && req_cnt_q == 8'd0);
+src/dcache/dcache_axi.v:155:wire res_push_w = (req_is_write_w && req_last_w && accept_w) || (req_is_read_w && accept_w);
+src/dcache/dcache_axi.v:166:else if ((res_push_w & res_accept_w) & ~(resp_pop_w & res_valid_w))
+src/dcache/dcache_axi.v:169:else if (~(res_push_w & res_accept_w) & (resp_pop_w & res_valid_w))
+src/dcache/dcache_axi.v:289:    if (push_i & accept_o)
+src/dcache/dcache_axi.v:296:    if (pop_i & valid_o)
+src/dcache/dcache_axi.v:300:    if ((push_i & accept_o) & ~(pop_i & valid_o))
+src/dcache/dcache_axi.v:303:    else if (~(push_i & accept_o) & (pop_i & valid_o))
+src/dcache/dcache_axi_axi.v:92:else if (outport_awvalid_o && outport_awready_i && outport_wvalid_o && !outport_wready_i)
+src/dcache/dcache_axi_axi.v:94:else if (outport_awvalid_o && outport_awready_i && outport_awlen_o != 8'b0)
+src/dcache/dcache_axi_axi.v:96:else if (outport_wvalid_o && outport_wready_i && outport_wlast_o)
+src/dcache/dcache_axi_axi.v:102:else if (outport_wvalid_o && outport_wready_i && outport_awvalid_o && !outport_awready_i)
+src/dcache/dcache_axi_axi.v:104:else if (outport_awvalid_o && outport_awready_i)
+src/dcache/dcache_axi_axi.v:107:assign outport_awvalid_o = (inport_valid_i & inport_write_i & ~awvalid_inhibit_q);
+src/dcache/dcache_axi_axi.v:121:else if (outport_awvalid_o && outport_awready_i)
+src/dcache/dcache_axi_axi.v:130:else if (req_cnt_q != 8'd0 && outport_wvalid_o && outport_wready_i)
+src/dcache/dcache_axi_axi.v:133:wire wlast_w = (outport_awvalid_o && outport_awlen_o == 8'b0) || (req_cnt_q == 8'd1);
+src/dcache/dcache_axi_axi.v:142:else if (outport_wvalid_o && !outport_wready_i && outport_awvalid_o && outport_awready_i)
+src/dcache/dcache_axi_axi.v:154:assign outport_wvalid_o  = buf_valid_q ? 1'b1 : (inport_valid_i & inport_write_i & ~wvalid_inhibit_q);
+src/dcache/dcache_axi_axi.v:167:assign outport_arvalid_o = inport_valid_i & ~inport_write_i;
+src/dcache/dcache_axi_axi.v:183:assign inport_accept_o   = (outport_awvalid_o && outport_awready_i) || 
+src/dcache/dcache_axi_axi.v:184:                           (outport_wvalid_o  && outport_wready_i && !buf_valid_q)  ||
+src/dcache/dcache_axi_axi.v:185:                           (outport_arvalid_o && outport_arready_i);
+src/dcache/dcache_core.v:189:        else if ((|mem_wr_m_q) && mem_rd_i && mem_addr_i[31:2] == mem_addr_m_q[31:2])
+src/dcache/dcache_core.v:238:    if (state_q == STATE_LOOKUP && (next_state_r == STATE_LOOKUP || next_state_r == STATE_WRITEBACK))
+src/dcache/dcache_core.v:315:    else if (state_q == STATE_EVICT_WAIT && pmem_ack_w)
+src/dcache/dcache_core.v:319:        tag0_write_m_r = pmem_ack_w && pmem_last_w && (replace_way_q == 0);
+src/dcache/dcache_core.v:371:    else if (state_q == STATE_EVICT_WAIT && pmem_ack_w)
+src/dcache/dcache_core.v:375:        tag1_write_m_r = pmem_ack_w && pmem_last_w && (replace_way_q == 1);
+src/dcache/dcache_core.v:415:                   | (tag0_hit_m_w & tag0_dirty_m_w)
+src/dcache/dcache_core.v:416:                   | (tag1_hit_m_w & tag1_dirty_m_w)
+src/dcache/dcache_core.v:420:                   | (tag0_valid_m_w & tag0_dirty_m_w)
+src/dcache/dcache_core.v:421:                   | (tag1_valid_m_w & tag1_dirty_m_w)
+src/dcache/dcache_core.v:438:            evict_way_r  = tag0_valid_m_w && tag0_dirty_m_w;
+src/dcache/dcache_core.v:445:            evict_way_r  = tag1_valid_m_w && tag1_dirty_m_w;
+src/dcache/dcache_core.v:471:else if (state_q != STATE_REFILL && next_state_r == STATE_REFILL)
+src/dcache/dcache_core.v:473:else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+src/dcache/dcache_core.v:475:else if (state_q == STATE_REFILL && pmem_ack_w)
+src/dcache/dcache_core.v:477:else if (state_q == STATE_EVICT && pmem_accept_w)
+src/dcache/dcache_core.v:497:    else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+src/dcache/dcache_core.v:520:        data0_write_m_r = (pmem_ack_w && replace_way_q == 0) ? 4'b1111 : 4'b0000;
+src/dcache/dcache_core.v:557:        data1_write_m_r = (pmem_ack_w && replace_way_q == 1) ? 4'b1111 : 4'b0000;
+src/dcache/dcache_core.v:595:else if ((state_q == STATE_RESET) || (state_q == STATE_FLUSH && next_state_r == STATE_FLUSH_ADDR))
+src/dcache/dcache_core.v:603:else if (state_q == STATE_LOOKUP && next_state_r == STATE_FLUSH_ADDR)
+src/dcache/dcache_core.v:605:else if (state_q == STATE_FLUSH && next_state_r == STATE_LOOKUP)
+src/dcache/dcache_core.v:627:else if (flushing_q && tag_dirty_any_m_w && !evict_way_w && state_q != STATE_FLUSH_ADDR)
+src/dcache/dcache_core.v:629:else if (state_q == STATE_EVICT_WAIT && next_state_r == STATE_FLUSH_ADDR)
+src/dcache/dcache_core.v:631:else if (state_q == STATE_FLUSH && next_state_r == STATE_LOOKUP)
+src/dcache/dcache_core.v:633:else if (state_q == STATE_LOOKUP && next_state_r == STATE_FLUSH_ADDR)
+src/dcache/dcache_core.v:715:        else if (mem_writeback_i && mem_accept_o)
+src/dcache/dcache_core.v:718:        else if (mem_flush_i && mem_accept_o)
+src/dcache/dcache_core.v:721:        else if (mem_invalidate_i && mem_accept_o)
+src/dcache/dcache_core.v:730:        if (pmem_ack_w && pmem_last_w)
+src/dcache/dcache_core.v:753:        if (pmem_accept_w && pmem_last_w)
+src/dcache/dcache_core.v:762:        if (pmem_ack_w && mem_writeback_m_q)
+src/dcache/dcache_core.v:765:        else if (pmem_ack_w && flushing_q)
+src/dcache/dcache_core.v:836:else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+src/dcache/dcache_core.v:845:else if (state_q != STATE_EVICT && next_state_r == STATE_EVICT)
+src/dcache/dcache_core.v:847:else if (pmem_rd_w && pmem_accept_w)
+src/dcache/dcache_core.v:849:else if (state_q == STATE_REFILL && pmem_ack_w)
+src/dcache/dcache_core.v:851:else if (state_q == STATE_EVICT && pmem_accept_w)
+src/dcache/dcache_core.v:861:else if (|pmem_len_w && pmem_accept_w)
+src/dcache/dcache_core.v:893:else if (pmem_ack_w && pmem_error_w)
+src/dcache/dcache_core.v:903:wire refill_request_w   = (state_q != STATE_REFILL && next_state_r == STATE_REFILL);
+src/dcache/dcache_core.v:914:assign pmem_len_w        = (refill_request_w || pmem_rd_q || (state_q == STATE_EVICT && pmem_wr0_q)) ? 8'd7 : 8'd0;
+src/icache/icache.v:172:if (~(rst_i && ~invalidate_q &&~req_flush_i))
+src/icache/icache.v:174:else if (req_rd_i && req_accept_o)
+src/icache/icache.v:187:else if (req_rd_i && req_accept_o)
+src/icache/icache.v:241:        tag0_write_r = axi_rvalid_i && axi_rlast_i && (replace_way_q == 0);
+src/icache/icache.v:274:        tag1_write_r = axi_rvalid_i && axi_rlast_i && (replace_way_q == 1);
+src/icache/icache.v:313:else if (axi_rvalid_i && axi_rlast_i)
+src/icache/icache.v:328:else if (state_q == STATE_LOOKUP && next_state_r == STATE_REFILL)
+src/icache/icache.v:330:else if (state_q == STATE_REFILL && axi_rvalid_i && refill_word_idx_q[0])
+src/icache/icache.v:354:    data0_write_r = axi_rvalid_i && replace_way_q == 0;
+src/icache/icache.v:374:    data1_write_r = axi_rvalid_i && replace_way_q == 1;
+src/icache/icache.v:401:else if (req_invalidate_i && req_accept_o)
+src/icache/icache.v:414:else if (axi_rvalid_i && axi_rlast_i)
+src/icache/icache.v:420:assign req_valid_o = lookup_valid_q && ((state_q == STATE_LOOKUP) ? tag_hit_any_w : 1'b0);
+src/icache/icache.v:472:        if (axi_rvalid_i && axi_rlast_i)
+src/icache/icache.v:494:assign req_accept_o = (state_q == STATE_LOOKUP && next_state_r != STATE_REFILL);
+src/icache/icache.v:502:else if (req_invalidate_i && req_accept_o)
+src/icache/icache.v:526:else if (axi_rvalid_i && axi_rready_o && axi_rresp_i != 2'b0)
+src/icache/icache.v:549:assign axi_arvalid_o = (state_q == STATE_LOOKUP && next_state_r == STATE_REFILL) || axi_arvalid_q;
+tb/tb_top/elf_load.h:17:    bool     get_symbol(const char *symname, uint32_t &value);
+tb/tb_top/tb_axi4_mem.cpp:20:        if (axi_i.ARVALID && axi_o.ARREADY)
+tb/tb_top/tb_axi4_mem.cpp:22:            sc_uint <AXI4_ADDR_W> next_addr = axi_i.ARADDR & ~calc_wrap_mask(0);
+tb/tb_top/tb_axi4_mem.cpp:42:        if (axi_i.AWVALID && axi_o.AWREADY)
+tb/tb_top/tb_axi4_mem.cpp:49:        if (axi_i.WVALID && axi_o.WREADY)
+tb/tb_top/tb_axi4_mem.cpp:73:        if (axi_o.RVALID && axi_i.RREADY)
+tb/tb_top/tb_axi4_mem.cpp:82:        if (!axi_o.RVALID && axi_rd_q.size() > 0 && !delay_cycle())
+tb/tb_top/tb_axi4_mem.cpp:94:        if (axi_o.BVALID && axi_i.BREADY)
+tb/tb_top/tb_axi4_mem.cpp:101:        if (!axi_o.BVALID && axi_wr_q.size() > 0 && !delay_cycle())
+tb/tb_top/tb_axi4_mem.cpp:134:          return (addr & ~mask) | ((addr + (AXI4_DATA_W/8)) & mask);
+tb/tb_top/tb_axi4_mem.cpp:172:        if (strb & (1 << i))
+tb/tb_top/testbench.h:112:            if (cycles >= max_cycles && max_cycles != -1)
+tb/tb_top/testbench.h:176:        base = base & ~(32-1);
+tb/tb_top/axi4.h:53:    bool operator == (const axi4_master & v) const
+tb/tb_top/axi4.h:75:    friend void sc_trace(sc_trace_file *tf, const axi4_master & v, const std::string & path)
+tb/tb_top/axi4.h:95:    friend ostream& operator << (ostream& os, axi4_master const & v)
+tb/tb_top/axi4.h:116:    friend istream& operator >> ( istream& is, axi4_master & val)
+tb/tb_top/axi4.h:179:    bool operator == (const axi4_slave & v) const
+tb/tb_top/axi4.h:196:    friend void sc_trace(sc_trace_file *tf, const axi4_slave & v, const std::string & path)
+tb/tb_top/axi4.h:211:    friend ostream& operator << (ostream& os, axi4_slave const & v)
+tb/tb_top/axi4.h:227:    friend istream& operator >> ( istream& is, axi4_slave & val)
+tb/tb_top/main.cpp:40:static void assert_handler(const sc_report& rep, const sc_actions& actions)
+tb/tb_top/main.cpp:42:    sc_report_handler::default_handler(rep, actions & ~SC_ABORT);
+tb/tb_top/main.cpp:44:    if ( actions & SC_ABORT )
+tb/tb_top/main.cpp:90:    if (s && strcmp(s, ""))
+tb/tb_top/testbench_vbase.h:68:    bool waves_delayed(sc_core::sc_time &delay)
+tb/tb_top/elf_load.cpp:68:            if ((shdr64->sh_flags & SHF_ALLOC) && (shdr64->sh_size > 0))
+tb/tb_top/elf_load.cpp:100:        else if ((shdr->sh_flags & SHF_ALLOC) && (shdr->sh_size > 0))
+tb/tb_top/elf_load.cpp:142:bool elf_load::get_symbol(const char *symname, uint32_t &value)
+tb/tb_tcm/elf_load.h:17:    bool     get_symbol(const char *symname, uint32_t &value);
+tb/tb_tcm/testbench.h:119:            if (cycles >= max_cycles && max_cycles != -1)
+tb/tb_tcm/testbench.h:169:        sc_assert(base >= MEM_BASE && ((base + size) < (MEM_BASE + MEM_SIZE)));
+tb/tb_tcm/axi4_lite.h:39:    bool operator == (const axi4_lite_master & v) const
+tb/tb_tcm/axi4_lite.h:54:    friend void sc_trace(sc_trace_file *tf, const axi4_lite_master & v, const std::string & path)
+tb/tb_tcm/axi4_lite.h:67:    friend ostream& operator << (ostream& os, axi4_lite_master const & v)
+tb/tb_tcm/axi4_lite.h:81:    friend istream& operator >> ( istream& is, axi4_lite_master & val)
+tb/tb_tcm/axi4_lite.h:131:    bool operator == (const axi4_lite_slave & v) const
+tb/tb_tcm/axi4_lite.h:145:    friend void sc_trace(sc_trace_file *tf, const axi4_lite_slave & v, const std::string & path)
+tb/tb_tcm/axi4_lite.h:157:    friend ostream& operator << (ostream& os, axi4_lite_slave const & v)
+tb/tb_tcm/axi4_lite.h:170:    friend istream& operator >> ( istream& is, axi4_lite_slave & val)
+tb/tb_tcm/axi4.h:53:    bool operator == (const axi4_master & v) const
+tb/tb_tcm/axi4.h:75:    friend void sc_trace(sc_trace_file *tf, const axi4_master & v, const std::string & path)
+tb/tb_tcm/axi4.h:95:    friend ostream& operator << (ostream& os, axi4_master const & v)
+tb/tb_tcm/axi4.h:116:    friend istream& operator >> ( istream& is, axi4_master & val)
+tb/tb_tcm/axi4.h:179:    bool operator == (const axi4_slave & v) const
+tb/tb_tcm/axi4.h:196:    friend void sc_trace(sc_trace_file *tf, const axi4_slave & v, const std::string & path)
+tb/tb_tcm/axi4.h:211:    friend ostream& operator << (ostream& os, axi4_slave const & v)
+tb/tb_tcm/axi4.h:227:    friend istream& operator >> ( istream& is, axi4_slave & val)
+tb/tb_tcm/main.cpp:40:static void assert_handler(const sc_report& rep, const sc_actions& actions)
+tb/tb_tcm/main.cpp:42:    sc_report_handler::default_handler(rep, actions & ~SC_ABORT);
+tb/tb_tcm/main.cpp:44:    if ( actions & SC_ABORT )
+tb/tb_tcm/main.cpp:90:    if (s && strcmp(s, ""))
+tb/tb_tcm/testbench_vbase.h:68:    bool waves_delayed(sc_core::sc_time &delay)
+tb/tb_tcm/elf_load.cpp:68:            if ((shdr64->sh_flags & SHF_ALLOC) && (shdr64->sh_size > 0))
+tb/tb_tcm/elf_load.cpp:100:        else if ((shdr->sh_flags & SHF_ALLOC) && (shdr->sh_size > 0))
+tb/tb_tcm/elf_load.cpp:142:bool elf_load::get_symbol(const char *symname, uint32_t &value)

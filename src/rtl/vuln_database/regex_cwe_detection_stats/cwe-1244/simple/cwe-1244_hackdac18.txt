@@ -1,0 +1,1187 @@
+install/tb_pulp.sv:212:   assign w_trstn      = (jtag_mux == JTAG_DPI) ? s_vpi_trstn : (jtag_mux == JTAG_BRIDGE) ? w_bridge_trstn : s_trstn;
+install/tb_pulp.sv:213:   assign w_tck        = (jtag_mux == JTAG_DPI) ? s_vpi_tck   : (jtag_mux == JTAG_BRIDGE) ? w_bridge_tck   : s_tck;
+install/tb_pulp.sv:214:   assign w_tdi        = (jtag_mux == JTAG_DPI) ? s_vpi_tdi   : (jtag_mux == JTAG_BRIDGE) ? w_bridge_tdi   : s_tdi;
+install/tb_pulp.sv:215:   assign w_tms        = (jtag_mux == JTAG_DPI) ? s_vpi_tms   : (jtag_mux == JTAG_BRIDGE) ? w_bridge_tms   : s_tms;
+install/modelsim_libs/fpu_lib/_info:14:DXx4 work 14 adders_sv_unit 0 22 39OcX=N?lKeId6D?R`@PD1
+install/modelsim_libs/fpu_lib/_info:40:V39OcX=N?lKeId6D?R`@PD1
+install/modelsim_libs/fpu_lib/_info:46:I39OcX=N?lKeId6D?R`@PD1
+install/modelsim_libs/fpu_lib/_info:380:I8=V90ggzEn>OT?j8EPCMQ0
+install/modelsim_libs/fpu_lib/_info:455:!s100 H:?ImXbz5f=2`5:0fG?f:2
+install/modelsim_libs/fpu_lib/_info:832:!s100 @[GNDR=DB>??AKMBSmP4:3
+install/modelsim_libs/fpu_lib/_info:1445:!s100 V;V^bm=JOKY?;9gg9VN=:1
+install/modelsim_libs/pulp_soc_lib/_info:41:!s100 X6m[VJ=:1[mmk?8LnkZ5o1
+install/modelsim_libs/pulp_soc_lib/_info:374:I^5;f`6g=>E2NonS9Y0S?S1
+install/modelsim_libs/pulp_soc_lib/_info:626:!s100 fLbSU=n:X5Lm7Xz9e1?Q<0
+install/modelsim_libs/udma_qspi_lib/_info:39:!s100 Vd=O`W]a]P=S?Zl@bST5E1
+install/modelsim_libs/generic_FLL_lib/_info:122:V`WLn]gJjF9kSLI=XE7A?;1
+install/modelsim_libs/generic_FLL_lib/_info:145:V[CC=kY2a]Na:?2UBk6_XU0
+install/modelsim_libs/generic_FLL_lib/_info:162:DEx4 work 11 fll_digital 0 22 [CC=kY2a]Na:?2UBk6_XU0
+install/modelsim_libs/generic_FLL_lib/_info:516:!s100 eYa8U27J=<5>c3ZCon?Va3
+install/modelsim_libs/axi_slice_lib/_info:63:!s100 =;OAjA`1@dFn79[XA?PgC0
+install/modelsim_libs/hwpe_stream_lib/_info:147:!s100 fCTUU?i]Q=`[N?RlzX>j@3
+install/modelsim_libs/hwpe_stream_lib/_info:173:!s100 ^3zi=IJm?[j<^_EXLJXJi0
+install/modelsim_libs/hwpe_stream_lib/_info:523:DXx4 work 30 hwpe_stream_mux_static_sv_unit 0 22 @Be9jDT=zV64C^Ez?:]Zh3
+install/modelsim_libs/hwpe_stream_lib/_info:549:V@Be9jDT=zV64C^Ez?:]Zh3
+install/modelsim_libs/hwpe_stream_lib/_info:555:I@Be9jDT=zV64C^Ez?:]Zh3
+install/modelsim_libs/udma_core_lib/_info:183:!s100 MWB6a@YnP9iW=LH=4?@c93
+install/modelsim_libs/udma_core_lib/_info:375:!s100 kYo=1JXIbYz6jao7?M0Jl2
+install/modelsim_libs/udma_core_lib/_info:447:!s100 f=QWiG?2W^OOmI7kYM[Yo1
+install/modelsim_libs/udma_core_lib/_info:472:I]Pnj=Wdnnl]7EJ0fo1X?j0
+install/modelsim_libs/udma_i2s_lib/_info:136:I5NFWXG2==F:C;C=]P?Tb91
+install/modelsim_libs/zero_riscy_lib/_info:536:!s100 ZKilA;NKSOG==AhjekX[?3
+install/modelsim_libs/zero_riscy_lib/_info:634:!s100 Y86`?WcV=mnb2eC?MK0d[1
+install/modelsim_libs/zero_riscy_lib/_info:665:I=0R[9Kb=RkK_?NJbNJOgS3
+install/modelsim_libs/tb_lib/_info:15:!s100 cii`=3J=jTNbkcCH?<13g0
+install/modelsim_libs/tb_lib/_info:139:Ik;H8=zM1k5HQNg04;?0QD1
+install/modelsim_libs/tb_lib/_info:260:!s100 ?P@@4oXL:eV^@?dJ=7ib?2
+install/modelsim_libs/scm_lib/_info:111:!s100 Cg`Y=0C@W5lA<15o]mQ?M1
+install/modelsim_libs/hwpe_ctrl_lib/_info:15:!s100 MC=XI_aJchLz6TznI?JJG2
+install/modelsim_libs/apb_interrupt_cntrl_lib/_info:15:!s100 a7hd_@[1=gN34:z1?][K70
+install/modelsim_libs/hwpe_mac_engine_lib/_info:77:IzF[Z8zZ=8T6XXg3b?zWP]3
+install/modelsim_libs/axi_node_lib/_info:300:!s100 AeKdB^a=oDMg1?6bJ:G4`1
+install/modelsim_libs/adv_dbg_if_lib/_info:66:IAa7J]=^gCfKYm:?V<G25Q0
+install/modelsim_libs/adv_dbg_if_lib/_info:191:IAlS]@ii1=;>P?dDLc0?PX1
+install/dev_dpi/dev_dpi.sv:291:            assign i2s[i].ports[j] = (i2s_isout[i][j] == 1) ? i2s_outputValues[i][j] : 'bz;
+install/dev_dpi/dev_dpi.sv:305:         assign gpio[i].port = (gpio_isout[i] == 1) ? gpio_outputValues[i] : 'bz;
+install/dev_dpi/dev_dpi.sv:312:            assign cpi[i].ports[j] = (cpi_isout[i][j] == 1) ? cpi_outputValues[i][j] : 'bz;
+ips/pulp_soc/rtl/fc/fc_demux.sv:168:            gnt_slave = port_sel_i ? gnt_port1 : gnt_port0;
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:124:    assign s_ready_fc = s_valid_fc ? fc_event_ready_i : 1'b1;
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:125:    assign s_ready_cl = s_valid_cl ? cl_event_ready_i : 1'b1;
+ips/pulp_soc/rtl/pulp_soc/soc_event_generator.sv:126:    assign s_ready_pr = s_valid_pr ? pr_event_ready_i : 1'b1;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:226:    assign zynq_axi_aw_valid_o  = (mode_fmc_zynqn_i==1'b0) ? zynq_axi_aw_valid_s : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:227:    assign zynq_axi_ar_valid_o  = (mode_fmc_zynqn_i==1'b0) ? zynq_axi_ar_valid_s : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:228:    assign zynq_axi_w_valid_o   = (mode_fmc_zynqn_i==1'b0) ? zynq_axi_w_valid_s  : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:229:    assign zynq_axi_b_ready_o   = (mode_fmc_zynqn_i==1'b0) ? zynq_axi_b_ready_s  : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:230:    assign zynq_axi_r_ready_o   = (mode_fmc_zynqn_i==1'b0) ? zynq_axi_r_ready_s  : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:231:    assign pulp_spi_sdi0_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo0  : pads2pulp_spi_sdi0_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:232:    assign pulp_spi_sdi1_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo1  : pads2pulp_spi_sdi1_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:233:    assign pulp_spi_sdi2_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo2  : pads2pulp_spi_sdi2_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:234:    assign pulp_spi_sdi3_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo3  : pads2pulp_spi_sdi3_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:236:    assign zynq_pulp_spi_clk    = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_clk_i      : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:237:    assign zynq_pulp_spi_csn    = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_csn_i      : 1'b1; //leave cs high for off
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:238:    assign zynq_pulp_spi_sdi0   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo0_i     : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:239:    assign zynq_pulp_spi_sdi1   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo1_i     : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:240:    assign zynq_pulp_spi_sdi2   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo2_i     : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:241:    assign zynq_pulp_spi_sdi3   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo3_i     : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:242:    assign pads2pulp_spi_clk_o  = (mode_fmc_zynqn_i==1'b0) ? 1'b0                : pulp_spi_clk_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:243:    assign pads2pulp_spi_csn_o  = (mode_fmc_zynqn_i==1'b0) ? 1'b1                : pulp_spi_csn_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:244:    assign pads2pulp_spi_mode_o = (mode_fmc_zynqn_i==1'b0) ? 'h0                 : pulp_spi_mode_i;    // assign the padframe the mode from PULP
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:245:    assign pads2pulp_spi_sdo0_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0                : pulp_spi_sdo0_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:246:    assign pads2pulp_spi_sdo1_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0                : pulp_spi_sdo1_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:247:    assign pads2pulp_spi_sdo2_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0                : pulp_spi_sdo2_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_master.sv:248:    assign pads2pulp_spi_sdo3_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0                : pulp_spi_sdo3_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:160:  assign trace_master_dout = (trace_master_addr[5:2] == 4'h0) ? trace_master_int_dout[ 1*32-1: 0*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:161:                             (trace_master_addr[5:2] == 4'h1) ? trace_master_int_dout[ 2*32-1: 1*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:162:                             (trace_master_addr[5:2] == 4'h2) ? trace_master_int_dout[ 3*32-1: 2*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:163:                             (trace_master_addr[5:2] == 4'h3) ? trace_master_int_dout[ 4*32-1: 3*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:164:                             (trace_master_addr[5:2] == 4'h4) ? trace_master_int_dout[ 5*32-1: 4*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:165:                             (trace_master_addr[5:2] == 4'h5) ? trace_master_int_dout[ 6*32-1: 5*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:166:                             (trace_master_addr[5:2] == 4'h6) ? trace_master_int_dout[ 7*32-1: 6*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:167:                             (trace_master_addr[5:2] == 4'h7) ? trace_master_int_dout[ 8*32-1: 7*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:168:                             (trace_master_addr[5:2] == 4'h8) ? trace_master_int_dout[ 9*32-1: 8*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:169:                             (trace_master_addr[5:2] == 4'h9) ? trace_master_int_dout[10*32-1: 9*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:170:                             (trace_master_addr[5:2] == 4'ha) ? trace_master_int_dout[11*32-1:10*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:171:                             (trace_master_addr[5:2] == 4'hb) ? trace_master_int_dout[12*32-1:11*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:172:                             (trace_master_addr[5:2] == 4'hc) ? trace_master_int_dout[13*32-1:12*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:173:                             (trace_master_addr[5:2] == 4'hd) ? trace_master_int_dout[14*32-1:13*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:174:                             (trace_master_addr[5:2] == 4'he) ? trace_master_int_dout[15*32-1:14*32] :
+ips/pulp_soc/rtl/pulpemu/pulpemu_trace.sv:180:      assign trace_master_int_din[(i+1)*32-1:i*32] = (trace_master_addr[5:2] == i) ? trace_master_din :
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:186:  assign stdout_slave_r_id = (stdout_slave_r_valid == 1'b1) ? stdout_slave_r_id_r : 10'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:187:  assign stdout_slave_b_id = (stdout_slave_b_valid == 1'b1) ? stdout_slave_r_id_r : 10'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:241:      which_core = (stdout_master_aw_addr[7:0] == 8'h00) ? 2'h0 :
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:242:                   (stdout_master_aw_addr[7:0] == 8'h20) ? 2'h1 :
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:243:                   (stdout_master_aw_addr[7:0] == 8'h40) ? 2'h2 :
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:244:                   (stdout_master_aw_addr[7:0] == 8'h60) ? 2'h3 : 2'h0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:252:    gen_strb <= (counter[which_core][1:0] == 2'h0) ? 4'h1 :
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:253:                (counter[which_core][1:0] == 2'h1) ? 4'h2 :
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:254:                (counter[which_core][1:0] == 2'h2) ? 4'h4 :
+ips/pulp_soc/rtl/pulpemu/pulpemu_stdout.sv:255:                (counter[which_core][1:0] == 2'h3) ? 4'h8 : 4'h0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:118:    assign pulp_spi_clk_o       = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_clk  : pads2pulp_spi_clk_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:119:    assign pulp_spi_csn0_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_csn0 : pads2pulp_spi_csn_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:120:    assign pulp_spi_csn1_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_csn1 : 1'b1;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:121:    assign pulp_spi_csn2_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_csn2 : 1'b1;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:122:    assign pulp_spi_csn3_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_csn3 : 1'b1;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:123:    assign pulp_spi_sdi0_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo0 : pads2pulp_spi_sdi0_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:124:    assign pulp_spi_sdi1_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo1 : pads2pulp_spi_sdi1_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:125:    assign pulp_spi_sdi2_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo2 : pads2pulp_spi_sdi2_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:126:    assign pulp_spi_sdi3_o      = (mode_fmc_zynqn_i==1'b0) ? zynq_pulp_spi_sdo3 : pads2pulp_spi_sdi3_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:128:    assign zynq_pulp_spi_sdi0   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo0_i    : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:129:    assign zynq_pulp_spi_sdi1   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo1_i    : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:130:    assign zynq_pulp_spi_sdi2   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo2_i    : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:131:    assign zynq_pulp_spi_sdi3   = (mode_fmc_zynqn_i==1'b0) ? pulp_spi_sdo3_i    : 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:132:    assign pads2pulp_spi_mode_o = (mode_fmc_zynqn_i==1'b0) ? 'h0                : pulp_spi_mode_i;    // assign the padframe the mode from PULP
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:133:    assign pads2pulp_spi_sdo0_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0               : pulp_spi_sdo0_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:134:    assign pads2pulp_spi_sdo1_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0               : pulp_spi_sdo1_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:135:    assign pads2pulp_spi_sdo2_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0               : pulp_spi_sdo2_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_spi_slave.sv:136:    assign pads2pulp_spi_sdo3_o = (mode_fmc_zynqn_i==1'b0) ? 1'b0               : pulp_spi_sdo3_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_apb_demux.sv:72:  assign zynq2pulp_apb_prdata = (last_sel == `Z2P_SPI_SLAVE) ? zynq2pulp_spi_slave_prdata :
+ips/pulp_soc/rtl/pulpemu/pulpemu_apb_demux.sv:73:                                (last_sel == `Z2P_UART)      ? zynq2pulp_uart_prdata      :
+ips/pulp_soc/rtl/pulpemu/pulpemu_apb_demux.sv:77:  assign zynq2pulp_apb_pslverr = (last_sel == `Z2P_SPI_SLAVE) ? zynq2pulp_spi_slave_pslverr :
+ips/pulp_soc/rtl/pulpemu/pulpemu_apb_demux.sv:78:                                 (last_sel == `Z2P_UART)      ? zynq2pulp_uart_pslverr      :
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:107:    assign apb_ready   = (apb_penable & apb_psel) & ((apb_paddr[4:0] == `APB_ADDR_POPFIFO) ? 1'b1 : 1'b0);
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:125:            apb_prdata <= apb_valid ? {24'h0, apb_data} : '0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:158:    assign pads2pulp_uart_tx_o = mode_fmc_zynqn_i ? uart_tx_i: 1'b0;
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:159:    assign zynq_pulp_uart_rx   = mode_fmc_zynqn_i ? 1'b0: pads2pulp_uart_rx_i;
+ips/pulp_soc/rtl/pulpemu/pulpemu_uart.sv:160:    assign uart_rx_o = mode_fmc_zynqn_i ? pads2pulp_uart_rx_i: 1'b0;
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:429:   assign s_ref_clk_edge = ( ( s_ref_clk1 == 1'b1 ) & ( s_ref_clk2 == 1'b0 ) ) ? 1'b1  : 1'b0;
+ips/pulp_soc/rtl/components/axi_slice_dc_slave_wrap.sv:39:   assign axi_slave.b_valid = isolate_i ? 1'b0 : s_b_valid;
+ips/pulp_soc/rtl/components/axi_slice_dc_slave_wrap.sv:40:   assign s_b_ready = isolate_i ? 1'b1 : axi_slave.b_ready;
+ips/pulp_soc/rtl/components/axi_slice_dc_slave_wrap.sv:42:   assign axi_slave.r_valid = isolate_i ? 1'b0 : s_r_valid;
+ips/pulp_soc/rtl/components/axi_slice_dc_slave_wrap.sv:43:   assign s_r_ready = isolate_i ? 1'b1 : axi_slave.r_ready;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:131:    assign s_crc_in = s_crc_intx ? sddata_i : s_sddata;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:151:    assign sddata_oen_o[1] = data_quad_i ? s_sddata_oen : 1'b1;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:152:    assign sddata_oen_o[2] = data_quad_i ? s_sddata_oen : 1'b1;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:153:    assign sddata_oen_o[3] = data_quad_i ? s_sddata_oen : 1'b1;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:317:            s_dataout = (r_bit_cnt == 0) ?   r_data[7:4] :   r_data[3:0];
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:319:            s_dataout = (r_bit_cnt == 0) ? r_data[15:12] :  r_data[11:8];
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:321:            s_dataout = (r_bit_cnt == 0) ? r_data[23:20] : r_data[19:16];
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:323:            s_dataout = (r_bit_cnt == 0) ? r_data[31:28] : r_data[27:24];
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:600:    assign s_cnt_done = r_cnt_byte ? ((r_cnt == 0) && s_cnt_byte_evnt) : (r_cnt == 0);
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:644:    assign s_bit_cnt_target = data_quad_i ? 3'h1 : 3'h7;
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:111:  assign s_cmd_start    = s_cmd_mux ? s_stopcmd_start    : cmd_start_i   ; 
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:112:  assign s_cmd_op       = s_cmd_mux ? s_stopcmd_op       : cmd_op_i      ; 
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:113:  assign s_cmd_arg      = s_cmd_mux ? s_stopcmd_arg      : cmd_arg_i     ; 
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:114:  assign s_cmd_rsp_type = s_cmd_mux ? s_stopcmd_rsp_type : cmd_rsp_type_i; 
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:116:  assign eot_o          = s_cmd_mux ? s_eot : s_cmd_eot;
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:126:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:127:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_sdio/rtl/sdio_txrx_cmd.sv:114:    assign s_crc_in    = s_crc_intx ? sdcmd_i : s_sdcmd;
+ips/udma/udma_qspi/rtl/udma_spim_ctrl.sv:237:    assign s_done = r_is_ful ? ((tx_done_i | r_tx_done) & (rx_done_i | r_rx_done)) : (tx_done_i | rx_done_i);
+ips/udma/udma_qspi/rtl/udma_spim_ctrl.sv:709:                            s_rptstate_next = r_rpt_do_rx_chk ? RPT_RX_CHK : RPT_RX;
+ips/udma/udma_qspi/rtl/udma_spim_ctrl.sv:771:                udma_rx_data_valid_o = r_is_dummy ? 1'b0 : rx_data_valid_i;
+ips/udma/udma_qspi/rtl/udma_spim_ctrl.sv:985:    assign s_cs = (s_is_repeating | r_is_repeating) ? r_rpt_cs : s_cfg_cs;
+ips/udma/udma_qspi/rtl/udma_spim_clkgen.sv:91:    assign s_clk_out = ~r_clockout_mux ? s_clk_out_div : clk_i;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:142:    assign s_spi_sdo0 = s_tx_driving ? ((tx_qpi_i) ? (r_customsize ? r_tx_shift_reg[28] : r_tx_shift_reg[4]) : (r_customsize ? r_tx_shift_reg[31] : r_tx_shift_reg[7])) : 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:143:    assign s_spi_sdo1 =  (s_tx_driving & tx_qpi_i) ? (r_customsize ? r_tx_shift_reg[29] : r_tx_shift_reg[5]) : 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:144:    assign s_spi_sdo2 =  (s_tx_driving & tx_qpi_i) ? (r_customsize ? r_tx_shift_reg[30] : r_tx_shift_reg[6]) : 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:145:    assign s_spi_sdo3 =  (s_tx_driving & tx_qpi_i) ? (r_customsize ? r_tx_shift_reg[31] : r_tx_shift_reg[7]) : 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:147:    assign s_clken = s_is_ful ? s_tx_clken : (s_tx_clken | s_rx_clken);
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:151:    assign s_spi_mode = s_tx_driving ? s_tx_mode : s_rx_mode;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:153:    assign s_tx_lo_done = tx_qpi_i ? (r_tx_counter_lo==3) : (r_tx_counter_lo==0);
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:154:    assign s_rx_lo_done = rx_qpi_i ? (r_rx_counter_lo==3) : (r_rx_counter_lo==0);
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:203:    assign s_spi_clk = ~cfg_cpha_i ? s_spi_clk_cpha0 : s_spi_clk_cpha1;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:221:    assign spi_clk_o = ~cfg_cpol_i ? s_spi_clk : s_spi_clk_inv;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:266:    			s_tx_mode = tx_qpi_i ? `SPI_QUAD_TX : `SPI_STD_TX;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:367:    				s_tx_counter_lo = tx_qpi_i ? (r_tx_counter_lo - 5'd4)      : (r_tx_counter_lo - 5'd1);
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:370:                        s_tx_shift_reg  = tx_qpi_i ? {r_tx_shift_reg[27:0],4'b000} : {r_tx_shift_reg[30:0],1'b0};
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:406:    			s_tx_mode    = tx_qpi_i ? `SPI_QUAD_TX : `SPI_STD_TX;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:437:                    s_rx_mode      = rx_qpi_i ? `SPI_QUAD_RX : `SPI_STD_RX;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:452:                s_rx_mode      = rx_qpi_i ? `SPI_QUAD_RX : `SPI_STD_RX;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:458:                        s_rx_shift_reg  = rx_qpi_i ? {r_rx_shift_reg[27:0],spi_sdi3_i,spi_sdi2_i,spi_sdi1_i,spi_sdi0_i} : {r_rx_shift_reg[30:0],spi_sdi0_i};
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:561:                    s_rx_counter_lo = rx_qpi_i ? (r_rx_counter_lo - 5'd4) : (r_rx_counter_lo - 5'd1);
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:597:    			    		s_rx_counter_lo = rx_qpi_i ? (r_rx_counter_lo - 5'd4) : (r_rx_counter_lo - 5'd1);
+ips/udma/udma_qspi/rtl/udma_spim_reg_if.sv:92:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_qspi/rtl/udma_spim_reg_if.sv:93:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:131:    assign s_fifo_data_filter       = r_sel_pos ? s_cic_result_pos : s_cic_result_neg;
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:300:    assign s_fifo_data_valid = cfg_snap_cam_i ? s_ws_redge : (s_ws_edge | r_send_neg);
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:302:    assign fifo_data_o       = cfg_pdm_usefilter_i ? s_fifo_data_filter       : s_fifo_data;
+ips/udma/udma_i2s/rtl/i2s_rx_channel.sv:303:    assign fifo_data_valid_o = cfg_pdm_usefilter_i ? s_fifo_data_filter_valid : s_fifo_data_valid;
+ips/udma/udma_i2s/rtl/cic_top.sv:91:assign integrator_data[0] = data_i ? 'h1 : {ACC_WIDTH{1'b1}};
+ips/udma/udma_i2s/rtl/i2s_rx.sv:105:    assign s_shift_fifow0 = (cfg0_pdm_en_i || !cfg0_sample_word_i) ? s_shift0 : 1'b0;
+ips/udma/udma_i2s/rtl/i2s_rx.sv:106:    assign s_dataready0   = (cfg0_pdm_en_i || !cfg0_sample_word_i) ? s_32bitsready0 : s_wordready0;
+ips/udma/udma_i2s/rtl/i2s_rx.sv:107:    assign s_bitcount0    = (cfg0_pdm_en_i || !cfg0_sample_word_i) ? s_bitcountword0 : s_bitcountreg0;
+ips/udma/udma_i2s/rtl/i2s_rx.sv:109:    assign s_shift_fifow1 = (cfg1_pdm_en_i || !cfg1_sample_word_i) ? s_shift1 : 1'b0;
+ips/udma/udma_i2s/rtl/i2s_rx.sv:110:    assign s_dataready1   = (cfg1_pdm_en_i || !cfg1_sample_word_i) ? s_32bitsready1 : s_wordready1;
+ips/udma/udma_i2s/rtl/i2s_rx.sv:111:    assign s_bitcount1    = (cfg1_pdm_en_i || !cfg1_sample_word_i) ? s_bitcountword1 : s_bitcountreg1;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:137:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:138:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_core/rtl/common/udma_clkgen.sv:100:    assign s_clk_out = ~r_clockout_mux ? s_clk_out_div : clk_i;
+ips/udma/udma_core/rtl/common/io_shiftreg.sv:67:    assign serial_o = lsbfirst_i ? shift_reg[0] : shift_reg[DATA_WIDTH-1];
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:140:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_core/rtl/common/udma_ctrl.sv:141:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_core/rtl/core/udma_filter.sv:176:   assign s_udma_out_data  =                    s_sel_out ? s_au_out_data  : s_bincu_out_data;
+ips/udma/udma_core/rtl/core/udma_filter.sv:177:   assign s_udma_out_valid = s_sel_out_valid & (s_sel_out ? s_au_out_valid : s_bincu_out_valid);
+ips/udma/udma_core/rtl/core/udma_filter.sv:179:   assign s_bincu_in_data  =                      s_sel_bincu ? s_au_out_data  : filter_data_i;
+ips/udma/udma_core/rtl/core/udma_filter.sv:180:   assign s_bincu_in_valid = s_sel_bincu_valid & (s_sel_bincu ? s_au_out_valid : filter_valid_i);
+ips/udma/udma_core/rtl/core/udma_filter.sv:181:   assign s_bincu_in_datasize =                   s_sel_bincu ? s_au_out_datasize : filter_datasize_i;
+ips/udma/udma_core/rtl/core/udma_filter.sv:183:   assign s_operanda_data  =                    s_sel_opa ? s_porta_data  : filter_data_i;
+ips/udma/udma_core/rtl/core/udma_filter.sv:184:   assign s_operanda_datasize  =                s_sel_opa ? s_porta_datasize  : filter_datasize_i;
+ips/udma/udma_core/rtl/core/udma_filter.sv:185:   assign s_operanda_sof  =                     s_sel_opa ? s_porta_sof   : filter_sof_i;
+ips/udma/udma_core/rtl/core/udma_filter.sv:186:   assign s_operanda_eof  =                     s_sel_opa ? s_porta_eof   : filter_eof_i;
+ips/udma/udma_core/rtl/core/udma_filter.sv:187:   assign s_operanda_valid = s_sel_opa_valid & (s_sel_opa ? s_porta_valid : filter_valid_i);
+ips/udma/udma_core/rtl/core/udma_filter_au.sv:129:    assign output_valid_o = s_sum_acc ? r_accoutvalid : r_sample_out;
+ips/udma/udma_core/rtl/core/udma_tx_channels.sv:137:    assign s_gnt = s_sample_indata ? s_grant : 'h0;
+ips/udma/udma_core/rtl/core/udma_filter_bincu.sv:66:  	assign output_data_o = s_th_event ? 32'h1 : 32'h0;
+ips/udma/udma_uart/rtl/udma_uart_reg_if.sv:101:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_uart/rtl/udma_uart_reg_if.sv:102:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:150:    assign s_cmd_start   = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_START)   : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:151:    assign s_cmd_stop    = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_STOP)    : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:152:    assign s_cmd_rd_ack  = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_RD_ACK)  : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:153:    assign s_cmd_rd_nack = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_RD_NACK) : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:154:    assign s_cmd_wr      = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_WR)      : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:155:    assign s_cmd_wait    = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_WAIT)    : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:156:    assign s_cmd_wait_ev = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_WAIT_EV) : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:157:    assign s_cmd_rpt     = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_RPT)     : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:158:    assign s_cmd_cfg     = s_en_decode ? (data_tx_i[7:4] == `I2C_CMD_CFG)     : 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:162:    assign s_core_txd = (CS == ST_READ) ? r_rd_ack : s_data[7];
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:166:    assign data_rx_valid_o = s_do_rst ? 1'b1 : s_data_rx_valid;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:167:    assign data_tx_ready_o = s_do_rst ? 1'b1 : s_data_tx_ready;
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:100:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_i2c/rtl/udma_i2c_reg_if.sv:101:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_camera/rtl/camera_reg_if.sv:89:    assign s_wr_addr = (cfg_valid_i & ~cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_camera/rtl/camera_reg_if.sv:90:    assign s_rd_addr = (cfg_valid_i &  cfg_rwn_i) ? cfg_addr_i : 5'h0;
+ips/udma/udma_camera/rtl/camera_if.sv:344:                udma_tx_data  <= r_data_filter_valid ? s_data_filter_shift: r_yuv_pix;
+ips/common_cells/clock_divider_counter.sv:85:    assign clk_cnt_even = (clk_div == 8'h2) ? 8'h0 : ({1'b0,clk_div[7:1]} - 8'h1);   //if even divider than clk_cnt = clk_div/2
+ips/hwpe-stream/tb/tb_hwpe_stream_reservoir.sv:96:              cnt = (cnt == RESERVOIR_SIZE-1) ? 0 : cnt+1;
+ips/hwpe-stream/tb/tb_hwpe_stream_reservoir.sv:128:              cnt = (cnt == RESERVOIR_SIZE-1) ? 0 : cnt+1;
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:239:      strb_popcount += (in.strb[i] == 1'b1) ? 1 : 0;
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:238:      strb_popcount += (strb[i] == 1'b1) ? 1 : 0;
+ips/hwpe-stream/tb/tb_dummy_memory.sv:66:      assign tcdm_gnt[i] = (probs[i] < PROB_STALL) ? 1'b0 : 1'b1;
+ips/hwpe-stream/rtl/hwpe_stream_mux_static.sv:36:  assign out.valid = (sel_i) ? in1.valid : in0.valid;
+ips/hwpe-stream/rtl/hwpe_stream_mux_static.sv:37:  assign out.data  = (sel_i) ? in1.data  : in0.data;
+ips/hwpe-stream/rtl/hwpe_stream_mux_static.sv:38:  assign out.strb  = (sel_i) ? in1.strb  : in0.strb;
+ips/hwpe-stream/rtl/hwpe_stream_mux_static.sv:39:  assign in0.ready = (sel_i) ? 1'b0      : out.ready;
+ips/hwpe-stream/rtl/hwpe_stream_mux_static.sv:40:  assign in1.ready = (sel_i) ? out.ready : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall.sv:215:  assign pop_o.data = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH+DATA_WIDTH/8-1:DATA_WIDTH/8] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall.sv:216:  assign pop_o.strb = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH/8-1:0] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:36:  localparam ADDR_DEPTH = (FIFO_DEPTH==1) ? 1 : $clog2(FIFO_DEPTH);
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:46:  assign flags_o.empty = (cs == EMPTY) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:208:  assign pop_o.data = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH+DATA_WIDTH/8-1:DATA_WIDTH/8] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo.sv:209:  assign pop_o.strb = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH/8-1:0] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:70:  assign trans_size_m2  = (misalignment == 1'b0) ? ctrl_i.trans_size - 2 :
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:73:  assign line_length_m1 = (misalignment == 1'b0) ? ctrl_i.line_length - 1 :
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:76:  assign feat_length_m1 = (misalignment == 1'b0) ? ctrl_i.feat_length - 1 :
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:82:      assign last_packet = (misalignment==1'b1 && overall_counter == trans_size_m2) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:98:      flags.realign_flags.last_packet <= (misalignment==1'b1 && overall_counter == trans_size_m2) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:268:            flags.in_progress <= ((overall_counter == '0) ? 1'b1 : 1'b0);
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:289:      misalignment <= (base_addr   [1:0] != '0) ? 1'b1 :
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_fifo_load.sv:61:  assign stream_incoming_push.data  = tcdm_master_r_valid_w ? tcdm_master_r_data_w : tcdm_master_r_data_r;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:41:      assign out[ii].req  = (sel_i) ? in1[ii].req  : in0[ii].req;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:42:      assign out[ii].add  = (sel_i) ? in1[ii].add  : in0[ii].add;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:43:      assign out[ii].wen  = (sel_i) ? in1[ii].wen  : in0[ii].wen;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:44:      assign out[ii].be   = (sel_i) ? in1[ii].be   : in0[ii].be;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:45:      assign out[ii].data = (sel_i) ? in1[ii].data : in0[ii].data;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:46:      assign in0[ii].gnt     = (~sel_i) ? out[ii].gnt     : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:47:      assign in0[ii].r_valid = (~sel_i) ? out[ii].r_valid : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:49:      assign in1[ii].gnt     = (sel_i)  ? out[ii].gnt     : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_tcdm_mux_static.sv:50:      assign in1[ii].r_valid = (sel_i)  ? out[ii].r_valid : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:70:  assign int_valid = (~ctrl_i.realign)                   ? stream_i.valid :
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:73:  assign stream_i.ready = (~ctrl_i.realign) ? int_ready :
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:188:  assign stream_o.data = int_valid ? int_data : int_data_q;
+ips/hwpe-stream/rtl/hwpe_stream_sink_realign.sv:189:  assign stream_o.strb = (int_valid | ctrl_i.last) ? int_strb : int_strb_q;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:40:  localparam ADDR_DEPTH = (FIFO_DEPTH==1) ? 1 : $clog2(FIFO_DEPTH);
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:50:  assign flags_o.empty = (cs == EMPTY) ? 1'b1 : 1'b0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:212:  assign sidech_o   = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH+DATA_WIDTH/8+SIDECH_WIDTH-1:DATA_WIDTH+DATA_WIDTH/8] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:213:  assign pop_o.data = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH+DATA_WIDTH/8-1:DATA_WIDTH/8] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_sidech.sv:214:  assign pop_o.strb = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH/8-1:0] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:118:      assign tcdm_prefifo[ii].req  = (cs == STREAM_WORKING) ? split_streams[ii].valid : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:119:      assign tcdm_prefifo[ii].add  = (cs == STREAM_WORKING) ? gen_addr + ii*4        : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:120:      assign tcdm_prefifo[ii].wen  = (cs == STREAM_WORKING) ? 1'b0                   : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:121:      assign tcdm_prefifo[ii].be   = (cs == STREAM_WORKING) ? split_streams[ii].strb  : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:122:      assign tcdm_prefifo[ii].data = (cs == STREAM_WORKING) ? split_streams[ii].data  : '0;
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:102:  assign stream_o.valid = (~ctrl_i.realign)    ? stream_i.valid :
+ips/hwpe-stream/rtl/hwpe_stream_source_realign.sv:105:  assign stream_i.ready = (~ctrl_i.realign)    ? stream_o.ready :
+ips/hwpe-stream/rtl/hwpe_stream_source.sv:121:      assign split_streams[ii].data  = (stream_valid_w) ? stream_data_w : stream_data_r;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall_sidech.sv:229:  assign sidech_o   = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH+DATA_WIDTH/8+SIDECH_WIDTH-1:DATA_WIDTH+DATA_WIDTH/8] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall_sidech.sv:230:  assign pop_o.data = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH+DATA_WIDTH/8-1:DATA_WIDTH/8] : '0;
+ips/hwpe-stream/rtl/hwpe_stream_fifo_earlystall_sidech.sv:231:  assign pop_o.strb = (pop_o.valid == 1'b1) ? data_out_int[DATA_WIDTH/8-1:0] : '0;
+ips/jtag_pulp/src/jtag_rst_synch.sv:40:   assign rst_sync = (test_mode_i) ? rst_ni : trst5 & trst_ni;
+ips/jtag_pulp/src/bscell.sv:46:   assign s_datasample_next = (shift_dr_i) ? scan_in_i : jtagreg_in_i;
+ips/jtag_pulp/src/bscell.sv:47:   assign jtagreg_out_o = (mode_i) ? r_dataout : jtagreg_in_i;
+ips/L2_tcdm_hybrid_interco/RTL/lint_2_axi.sv:268:            assign rdata = addr_q[0] ? r_data_i[63:32] : r_data_i[31:0];
+ips/L2_tcdm_hybrid_interco/RTL/lint_2_axi.sv:290:            assign w_strb_o = data_addr_i[2] ? {data_be_i, 4'b0000} : {4'b0000, data_be_i};
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/lint64_to_32.sv:95:      data_add_o     = (data_size_i) ? { {data_add_i[31:3],3'b000}+4,  {data_add_i[31:3],3'b000} }   :    { data_add_i,  data_add_i };;
+ips/L2_tcdm_hybrid_interco/RTL/axi_2_lint/lint64_to_32.sv:211:            data_r_rdata_o = (size_offset_info[0]) ? {data_r_rdata_i[1],32'h0000_0000} : {32'h0000_0000, data_r_rdata_i[0]};
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:138:      assign regfile_flags.full_context = (counter_pending == N_CONTEXT) ? 1 : 0;  // All contexts are busy
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:144:      assign counter_pending    = (flags_o.is_working==1'b1) ? 1 : 'b0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:153:    regfile_flags.is_mandatory  = (cfg.add[LOG_REGS+2-1:2] <= N_MANDATORY_REGS+N_RESERVED_REGS-1)                     ? 1 : 0;  // Accessed reg is mandatory (or reserved)
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:154:    regfile_flags.is_contexted  = (cfg.add[LOG_REGS+2-1:2] > N_MANDATORY_REGS+N_RESERVED_REGS+N_MAX_GENERIC_REGS-1)   ? 1 : 0;  // Accessed reg is contexted
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:156:    regfile_flags.is_testset    = (cfg.req == 1'b1 && cfg.wen == 1'b1 && cfg.add[LOG_REGS+2-1:2] == 1)                      ? 1 : 0;  // Operation is a test&set to register context_ts
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:157:    regfile_flags.is_trigger    = (cfg.req == 1'b1 && cfg.wen == 1'b0 && cfg.add[LOG_REGS+2-1:2] == 0)                      ? 1 : 0;  // Operation is a trigger
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:189:    regfile_in.rden  = (regfile_flags.is_mandatory==0) ? cfg.req &  cfg.wen : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:190:    regfile_in.wren  = (regfile_flags.is_mandatory==0) ? cfg.req & ~cfg.wen : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:219:      assign start_context = (running_context==pointer_context && regfile_flags.full_context==0) ? 1 : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:221:      assign start_context = (regfile_flags.is_trigger==1 && flags_o.is_working==0) ? 1 : 0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:324:        flags_o.evt[i][N_EVT-1:1] <= (offloading_core[running_context] == i) ? ctrl_i.evt              : '0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_slave.sv:326:        flags_o.evt[i][0] <= (offloading_core[running_context] == i)         ? regfile_flags.true_done : 1'b0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_regfile.sv:168:    assign regfile_mem_dout = (~r_was_mandatory) ? regfile_latch_rdata : regfile_mem_mandatory_dout;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_regfile.sv:266:  assign regfile_out_o.rdata = (r_was_testset) ? regfile_out_rdata_int : regfile_mem_dout;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:89:  assign accum_int = (curr_loop == ctrl_i.accum_loop) ? 1'b1 : 1'b0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:124:  assign flags_o.accum = (next_accum_state == ACCUM_IDLE)   ? 1'b0 : 1'b1;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:236:  assign ucode_execute = (ucode_i.code[curr_addr].op_sel) ? ucode_execute_add : registers_read[ucode_i.code[curr_addr].b];
+ips/hwpe-ctrl/rtl/hwpe_ctrl_seq_mult.sv:55:  assign valid_o = (cnt == 0) ? 1'b1 : 1'b0;
+ips/riscv/verilator-model/testbench.cpp:80:  cpu->debug_we_i    = write_enable ? 1 : 0;
+ips/riscv/riscv_alu_basic.sv:103:  assign adder_op_a = (operator_i == ALU_ABS) ? operand_a_neg : operand_a_i;
+ips/riscv/riscv_alu_basic.sv:106:  assign adder_op_b = adder_op_b_negate ? operand_b_neg : operand_b_i;
+ips/riscv/riscv_alu_basic.sv:142:  assign shift_op_a    = shift_left ? operand_a_rev : operand_a_i;
+ips/riscv/riscv_alu_basic.sv:143:  assign shift_amt_int = shift_left ? shift_amt_left : shift_amt;
+ips/riscv/riscv_alu_basic.sv:145:  assign shift_op_a_ext = shift_arithmetic ? {shift_op_a[31], shift_op_a} : {1'b0, shift_op_a};
+ips/riscv/riscv_alu_basic.sv:158:  assign shift_result = shift_left ? shift_left_result : shift_right_result;
+ips/riscv/riscv_load_store_unit.sv:322:  assign data_rdata_ex_o = (data_rvalid_i == 1'b1) ? data_rdata_ext : rdata_q;
+ips/riscv/riscv_load_store_unit.sv:463:  assign data_addr_int = (addr_useincr_ex_i) ? (operand_a_ex_i + operand_b_ex_i) : operand_a_ex_i;
+ips/riscv/riscv_alu.sv:109:  assign adder_op_a = (operator_i == ALU_ABS) ? operand_a_neg : operand_a_i;
+ips/riscv/riscv_alu.sv:112:  assign adder_op_b = adder_op_b_negate ? operand_b_neg : operand_b_i;
+ips/riscv/riscv_alu.sv:180:                               (operator_i == ALU_ADDUR) || (operator_i == ALU_SUBUR)) ?
+ips/riscv/riscv_alu.sv:208:  assign shift_amt = div_valid ? div_shift : operand_b_i;
+ips/riscv/riscv_alu.sv:251:  assign shift_op_a    = shift_left ? operand_a_rev :
+ips/riscv/riscv_alu.sv:253:  assign shift_amt_int = shift_use_round ? shift_amt_norm :
+ips/riscv/riscv_alu.sv:262:  assign shift_op_a_32 = (operator_i == ALU_ROR) ? {shift_op_a, shift_op_a} : $signed({ {32{shift_arithmetic & shift_op_a[31]}}, shift_op_a});
+ips/riscv/riscv_alu.sv:297:  assign shift_result = shift_left ? shift_left_result : shift_right_result;
+ips/riscv/riscv_alu.sv:435:  assign minmax_b = (operator_i == ALU_ABS) ? adder_result : operand_b_i;
+ips/riscv/riscv_alu.sv:441:  assign sel_minmax[3:0]      = ((operator_i == ALU_FMIN || operator_i == ALU_FMAX) ? f_is_greater : is_greater) ^ {4{do_min}};
+ips/riscv/riscv_alu.sv:443:  assign result_minmax[31:24] = (sel_minmax[3] == 1'b1) ? operand_a_i[31:24] : minmax_b[31:24];
+ips/riscv/riscv_alu.sv:444:  assign result_minmax[23:16] = (sel_minmax[2] == 1'b1) ? operand_a_i[23:16] : minmax_b[23:16];
+ips/riscv/riscv_alu.sv:445:  assign result_minmax[15: 8] = (sel_minmax[1] == 1'b1) ? operand_a_i[15: 8] : minmax_b[15: 8];
+ips/riscv/riscv_alu.sv:446:  assign result_minmax[ 7: 0] = (sel_minmax[0] == 1'b1) ? operand_a_i[ 7: 0] : minmax_b[ 7: 0];
+ips/riscv/riscv_alu.sv:545:  assign clip_result       = is_greater ? result_minmax: (clip_is_lower_u ? '0 : (clip_is_lower_neg ? operand_b_neg : result_minmax));
+ips/riscv/riscv_alu.sv:739:  assign shuffle_r0_in = shuffle_reg0_sel[1] ?
+ips/riscv/riscv_alu.sv:743:  assign shuffle_r1_in = shuffle_reg1_sel[1] ?
+ips/riscv/riscv_alu.sv:747:  assign shuffle_r0[31:24] = shuffle_byte_sel[3][1] ?
+ips/riscv/riscv_alu.sv:750:  assign shuffle_r0[23:16] = shuffle_byte_sel[2][1] ?
+ips/riscv/riscv_alu.sv:753:  assign shuffle_r0[15: 8] = shuffle_byte_sel[1][1] ?
+ips/riscv/riscv_alu.sv:756:  assign shuffle_r0[ 7: 0] = shuffle_byte_sel[0][1] ?
+ips/riscv/riscv_alu.sv:760:  assign shuffle_r1[31:24] = shuffle_byte_sel[3][1] ?
+ips/riscv/riscv_alu.sv:763:  assign shuffle_r1[23:16] = shuffle_byte_sel[2][1] ?
+ips/riscv/riscv_alu.sv:766:  assign shuffle_r1[15: 8] = shuffle_byte_sel[1][1] ?
+ips/riscv/riscv_alu.sv:769:  assign shuffle_r1[ 7: 0] = shuffle_byte_sel[0][1] ?
+ips/riscv/riscv_alu.sv:773:  assign shuffle_result[31:24] = shuffle_reg_sel[3] ? shuffle_r1[31:24] : shuffle_r0[31:24];
+ips/riscv/riscv_alu.sv:774:  assign shuffle_result[23:16] = shuffle_reg_sel[2] ? shuffle_r1[23:16] : shuffle_r0[23:16];
+ips/riscv/riscv_alu.sv:775:  assign shuffle_result[15: 8] = shuffle_reg_sel[1] ? shuffle_r1[15: 8] : shuffle_r0[15: 8];
+ips/riscv/riscv_alu.sv:776:  assign shuffle_result[ 7: 0] = shuffle_reg_sel[0] ? shuffle_r1[ 7: 0] : shuffle_r0[ 7: 0];
+ips/riscv/riscv_alu.sv:778:  assign pack_result[31:24] = shuffle_through[3] ? shuffle_result[31:24] : operand_c_i[31:24];
+ips/riscv/riscv_alu.sv:779:  assign pack_result[23:16] = shuffle_through[2] ? shuffle_result[23:16] : operand_c_i[23:16];
+ips/riscv/riscv_alu.sv:780:  assign pack_result[15: 8] = shuffle_through[1] ? shuffle_result[15: 8] : operand_c_i[15: 8];
+ips/riscv/riscv_alu.sv:781:  assign pack_result[ 7: 0] = shuffle_through[0] ? shuffle_result[ 7: 0] : operand_c_i[ 7: 0];
+ips/riscv/riscv_alu.sv:845:      ALU_FF1: bitop_result = ff_no_one ? 6'd32 : {1'b0, ff1_result};
+ips/riscv/riscv_alu.sv:846:      ALU_FL1: bitop_result = ff_no_one ? 6'd32 : {1'b0, fl1_result};
+ips/riscv/riscv_alu.sv:885:  assign bextins_and = (operator_i == ALU_BINS) ? operand_c_i : {32{extract_sign}};
+ips/riscv/riscv_alu.sv:925:      assign div_shift_int = ff_no_one ? 6'd31 : clb_result;
+ips/riscv/riscv_alu.sv:926:      assign div_shift = div_shift_int + (div_op_a_signed ? 6'd0 : 6'd1);
+ips/riscv/riscv_alu.sv:1000:      ALU_FMAX: result_o = minmax_is_fp_special ? fp_canonical_nan : result_minmax;
+ips/riscv/riscv_alu.sv:1080:        assign index_nodes[2**level-1+l] = (sel_nodes[2**(level+1)-1+l*2] == 1'b1) ?
+ips/riscv/riscv_alu.sv:1090:          assign index_nodes[2**level-1+k] = (in_i[k*2] == 1'b1) ? index_lut[k*2] : index_lut[k*2+1];
+ips/riscv/riscv_cs_registers.sv:125:  localparam N_APU_CNT       = (APU==1) ? 4 : 0;
+ips/riscv/riscv_cs_registers.sv:220:      12'h001: csr_rdata_int = (FPU == 1) ? {27'b0, fflags_q}        : '0;
+ips/riscv/riscv_cs_registers.sv:221:      12'h002: csr_rdata_int = (FPU == 1) ? {29'b0, frm_q}           : '0;
+ips/riscv/riscv_cs_registers.sv:222:      12'h003: csr_rdata_int = (FPU == 1) ? {24'b0, frm_q, fflags_q} : '0;
+ips/riscv/riscv_cs_registers.sv:223:      12'h006: csr_rdata_int = (FPU == 1) ? {27'b0, fprec_q}         : '0; // Optional precision control for FP DIV/SQRT Unit
+ips/riscv/riscv_cs_registers.sv:280:      12'h001: csr_rdata_int = (FPU == 1) ? {27'b0, fflags_q}        : '0;
+ips/riscv/riscv_cs_registers.sv:281:      12'h002: csr_rdata_int = (FPU == 1) ? {29'b0, frm_q}           : '0;
+ips/riscv/riscv_cs_registers.sv:282:      12'h003: csr_rdata_int = (FPU == 1) ? {24'b0, frm_q, fflags_q} : '0;
+ips/riscv/riscv_cs_registers.sv:283:      12'h006: csr_rdata_int = (FPU == 1) ? {27'b0, fprec_q}         : '0; // Optional precision control for FP DIV/SQRT Unit
+ips/riscv/riscv_cs_registers.sv:348:      12'h001: if (csr_we_int) fflags_n = (FPU == 1) ? csr_wdata_int[C_FFLAG-1:0] : '0;
+ips/riscv/riscv_cs_registers.sv:349:      12'h002: if (csr_we_int) frm_n    = (FPU == 1) ? csr_wdata_int[C_RM-1:0]    : '0;
+ips/riscv/riscv_cs_registers.sv:351:         fflags_n = (FPU == 1) ? csr_wdata_int[C_FFLAG-1:0]            : '0;
+ips/riscv/riscv_cs_registers.sv:352:         frm_n    = (FPU == 1) ? csr_wdata_int[C_RM+C_FFLAG-1:C_FFLAG] : '0;
+ips/riscv/riscv_cs_registers.sv:354:      12'h006: if (csr_we_int) fprec_n = (FPU == 1) ? csr_wdata_int[C_PC-1:0]    : '0;
+ips/riscv/riscv_cs_registers.sv:523:      12'h001: if (csr_we_int) fflags_n = (FPU == 1) ? csr_wdata_int[C_FFLAG-1:0] : '0;
+ips/riscv/riscv_cs_registers.sv:524:      12'h002: if (csr_we_int) frm_n    = (FPU == 1) ? csr_wdata_int[C_RM-1:0]    : '0;
+ips/riscv/riscv_cs_registers.sv:526:         fflags_n = (FPU == 1) ? csr_wdata_int[C_FFLAG-1:0]            : '0;
+ips/riscv/riscv_cs_registers.sv:527:         frm_n    = (FPU == 1) ? csr_wdata_int[C_RM+C_FFLAG-1:C_FFLAG] : '0;
+ips/riscv/riscv_cs_registers.sv:529:      12'h006: if (csr_we_int) fprec_n = (FPU == 1) ? csr_wdata_int[C_PC-1:0]    : '0;
+ips/riscv/riscv_cs_registers.sv:629:  assign frm_o           = (FPU == 1) ? frm_q : '0;
+ips/riscv/riscv_cs_registers.sv:630:  assign fprec_o         = (FPU == 1) ? fprec_q : '0;
+ips/riscv/riscv_cs_registers.sv:708:  assign mtvec_q = (PULP_SECURE) ? mtvec_reg_q : boot_addr_i;
+ips/riscv/riscv_cs_registers.sv:783:        perf_rdata = csr_addr_i[4:0] < N_PERF_COUNTERS ? PCCR_q[csr_addr_i[4:0]] : '0;
+ips/riscv/riscv_id_stage.sv:495:  assign regfile_alu_waddr_id = regfile_alu_waddr_mux_sel ?
+ips/riscv/riscv_id_stage.sv:561:  assign hwloop_start = hwloop_we_int[0] ? hwloop_start_int : csr_hwlp_data_i;
+ips/riscv/riscv_id_stage.sv:562:  assign hwloop_end   = hwloop_we_int[1] ? hwloop_target    : csr_hwlp_data_i;
+ips/riscv/riscv_id_stage.sv:563:  assign hwloop_cnt   = hwloop_we_int[2] ? hwloop_cnt_int   : csr_hwlp_data_i;
+ips/riscv/riscv_id_stage.sv:564:  assign hwloop_regid = (|hwloop_we_int) ? hwloop_regid_int : csr_hwlp_regid_i;
+ips/riscv/riscv_id_stage.sv:565:  assign hwloop_we    = (|hwloop_we_int) ? hwloop_we_int    : csr_hwlp_we_i;
+ips/riscv/riscv_id_stage.sv:652:      IMMB_PCINCR: imm_b = (is_compressed_i && (~data_misaligned_i)) ? 32'h2 : 32'h4;
+ips/riscv/riscv_id_stage.sv:691:  assign alu_operand_b = (scalar_replication == 1'b1) ? operand_b_vec : operand_b;
+ips/riscv/riscv_id_stage.sv:947:    .raddr_c_i          ( (dbg_reg_rreq_i == 1'b0) ? regfile_addr_rc_id : dbg_reg_raddr_i),
+ips/riscv/riscv_id_stage.sv:956:    .waddr_b_i          ( (dbg_reg_wreq_i == 1'b0) ? regfile_alu_waddr_fw_i : dbg_reg_waddr_i  ),
+ips/riscv/riscv_id_stage.sv:957:    .wdata_b_i          ( (dbg_reg_wreq_i == 1'b0) ? regfile_alu_wdata_fw_i : dbg_reg_wdata_i ),
+ips/riscv/riscv_id_stage.sv:958:    .we_b_i             ( (dbg_reg_wreq_i == 1'b0) ? regfile_alu_we_fw_i    : 1'b1            )
+ips/riscv/riscv_mult.sv:102:  assign short_round = (operator_i == MUL_IR) ? {1'b0, short_round_tmp[31:1]} : '0;
+ips/riscv/riscv_mult.sv:105:  assign short_op_a[15:0] = short_subword[0] ? op_a_i[31:16] : op_a_i[15:0];
+ips/riscv/riscv_mult.sv:106:  assign short_op_b[15:0] = short_subword[1] ? op_b_i[31:16] : op_b_i[15:0];
+ips/riscv/riscv_mult.sv:111:  assign short_op_c       = mulh_active ? $signed({mulh_carry_q, op_c_i}) : $signed(op_c_i);
+ips/riscv/riscv_mult.sv:120:  assign short_imm         = mulh_active ? mulh_imm         : imm_i;
+ips/riscv/riscv_mult.sv:121:  assign short_subword     = mulh_active ? mulh_subword     : {2{short_subword_i}};
+ips/riscv/riscv_mult.sv:122:  assign short_signed      = mulh_active ? mulh_signed      : short_signed_i;
+ips/riscv/riscv_mult.sv:123:  assign short_shift_arith = mulh_active ? mulh_shift_arith : short_signed_i[0];
+ips/riscv/riscv_mult.sv:125:  assign short_mac_msb1    = mulh_active ? short_mac[33] : short_mac[31];
+ips/riscv/riscv_mult.sv:126:  assign short_mac_msb0    = mulh_active ? short_mac[32] : short_mac[31];
+ips/riscv/riscv_core.sv:132:  localparam APU         = ((SHARED_DSP_MULT==1) | (SHARED_INT_DIV==1) | (FPU==1)) ? 1 : 0;
+ips/riscv/riscv_core.sv:412:  assign core_busy_o = core_ctrl_firstfetch ? 1'b1 : core_busy_q;
+ips/riscv/riscv_core.sv:416:  assign core_busy_int = (PULP_CLUSTER & data_load_event_ex & data_req_o) ? (if_busy | apu_busy) : (if_busy | ctrl_busy | lsu_busy | apu_busy);
+ips/riscv/riscv_core.sv:418:  assign clock_en      = PULP_CLUSTER ? clock_en_i | core_busy_o | dbg_busy : irq_i | core_busy_o | dbg_busy;
+ips/riscv/riscv_core.sv:1012:  assign csr_access   = (dbg_csr_req == 1'b0) ? csr_access_ex    : 1'b1;
+ips/riscv/riscv_core.sv:1013:  assign csr_addr     = (dbg_csr_req == 1'b0) ? csr_addr_int     : dbg_csr_addr;
+ips/riscv/riscv_core.sv:1014:  assign csr_wdata    = (dbg_csr_req == 1'b0) ? alu_operand_a_ex : dbg_csr_wdata;
+ips/riscv/riscv_core.sv:1015:  assign csr_op       = (dbg_csr_req == 1'b0) ? csr_op_ex
+ips/riscv/riscv_core.sv:1016:                                              : (dbg_csr_we == 1'b1 ? CSR_OP_WRITE
+ips/riscv/riscv_core.sv:1018:  assign csr_addr_int = csr_access_ex ? alu_operand_b_ex[11:0] : '0;
+ips/riscv/riscv_register_file.sv:69:  localparam    NUM_TOT_WORDS = FPU ? NUM_WORDS + NUM_FP_WORDS : NUM_WORDS;
+ips/riscv/riscv_register_file.sv:93:  assign fregfile_ena = FPU ? ~fregfile_disable_i : '1;
+ips/riscv/riscv_register_file.sv:100:     assign rdata_a_o = (fregfile_ena & raddr_a_i[5]) ? mem_fp[raddr_a_i[4:0]] : mem[raddr_a_i[4:0]];
+ips/riscv/riscv_register_file.sv:101:     assign rdata_b_o = (fregfile_ena & raddr_b_i[5]) ? mem_fp[raddr_b_i[4:0]] : mem[raddr_b_i[4:0]];
+ips/riscv/riscv_register_file.sv:102:     assign rdata_c_o = (fregfile_ena & raddr_c_i[5]) ? mem_fp[raddr_c_i[4:0]] : mem[raddr_c_i[4:0]];
+ips/riscv/riscv_ex_stage.sv:206:      regfile_alu_we_fw_o      = regfile_alu_we_i & ~apu_en_i; // private fpu incomplete?
+ips/riscv/riscv_prefetch_buffer.sv:237:          instr_addr_o = branch_i ? addr_i : instr_addr_q;
+ips/riscv/riscv_prefetch_buffer.sv:264:          instr_addr_o = branch_i ? addr_i : instr_addr_q;
+ips/riscv/riscv_prefetch_buffer.sv:283:          instr_addr_o = branch_i ? addr_i : instr_addr_q;
+ips/riscv/riscv_prefetch_buffer.sv:333:          instr_addr_o = branch_i ? addr_i : instr_addr_q;
+ips/riscv/riscv_prefetch_buffer.sv:375:        instr_addr_q    <= (hwloop_speculative & ~branch_i) ? hwloop_target_i : instr_addr_o;
+ips/riscv/riscv_decoder.sv:139:  localparam APUTYPE_FP         = (SHARED_FP)             ? SHARED_DSP_MULT + SHARED_INT_MULT + SHARED_INT_DIV : 0;
+ips/riscv/riscv_decoder.sv:140:  localparam APUTYPE_DSP_MULT   = (SHARED_DSP_MULT)       ? 0 : 0;
+ips/riscv/riscv_decoder.sv:141:  localparam APUTYPE_INT_MULT   = (SHARED_INT_MULT)       ? SHARED_DSP_MULT : 0;
+ips/riscv/riscv_decoder.sv:142:  localparam APUTYPE_INT_DIV    = (SHARED_INT_DIV)        ? SHARED_DSP_MULT + SHARED_INT_MULT : 0;
+ips/riscv/riscv_decoder.sv:143:  localparam APUTYPE_ADDSUB     = (SHARED_FP)             ? APUTYPE_FP      : 0;
+ips/riscv/riscv_decoder.sv:144:  localparam APUTYPE_MULT       = (SHARED_FP)             ? APUTYPE_FP+1    : 0;
+ips/riscv/riscv_decoder.sv:145:  localparam APUTYPE_CAST       = (SHARED_FP)             ? APUTYPE_FP+2    : 0;
+ips/riscv/riscv_decoder.sv:146:  localparam APUTYPE_MAC        = (SHARED_FP)             ? APUTYPE_FP+3    : 0;
+ips/riscv/riscv_decoder.sv:147:  localparam APUTYPE_DIV        = (SHARED_FP_DIVSQRT==1)  ? APUTYPE_FP+4    : 0;
+ips/riscv/riscv_decoder.sv:148:  localparam APUTYPE_SQRT       = (SHARED_FP_DIVSQRT==1)  ? APUTYPE_FP+5    : 0;
+ips/riscv/riscv_decoder.sv:149:  localparam APUTYPE_DIVSQRT    = (SHARED_FP_DIVSQRT==2)  ? APUTYPE_FP+4    : 0;
+ips/riscv/riscv_decoder.sv:744:                      apu_lat_o           = (PIPE_REG_ADDSUB==1) ? 2'h2 : 2'h1;
+ips/riscv/riscv_decoder.sv:752:                      apu_lat_o           = (PIPE_REG_ADDSUB==1) ? 2'h2 : 2'h1;
+ips/riscv/riscv_decoder.sv:759:                      apu_lat_o           = (PIPE_REG_MULT==1) ? 2'h2 : 2'h1;
+ips/riscv/riscv_decoder.sv:875:                      apu_lat_o           =  (PIPE_REG_CAST==1) ? 2'h2 : 2'h1;
+ips/riscv/riscv_decoder.sv:888:                      apu_lat_o           =  (PIPE_REG_CAST==1) ? 2'h2 : 2'h1;
+ips/riscv/riscv_decoder.sv:964:                 apu_lat_o           = (PIPE_REG_MAC>1) ? 2'h3 : 2'h2;
+ips/riscv/riscv_decoder.sv:982:                 apu_lat_o           = (PIPE_REG_MAC>1) ? 2'h3 : 2'h2;
+ips/riscv/riscv_decoder.sv:1000:                 apu_lat_o           = (PIPE_REG_MAC>1) ? 2'h3 : 2'h2;
+ips/riscv/riscv_decoder.sv:1018:                 apu_lat_o           = (PIPE_REG_MAC>1) ? 2'h3 : 2'h2;
+ips/riscv/riscv_decoder.sv:1362:              illegal_insn_o = (PULP_SECURE) ? current_priv_lvl_i != PRIV_LVL_M : 1'b0;
+ips/riscv/riscv_decoder.sv:1368:              uret_insn_o   = (PULP_SECURE) ? 1'b1 : 1'b0;
+ips/riscv/riscv_decoder.sv:1521:  assign apu_en_o          = (deassert_we_i) ? 1'b0          : apu_en;
+ips/riscv/riscv_decoder.sv:1522:  assign regfile_mem_we_o  = (deassert_we_i) ? 1'b0          : regfile_mem_we;
+ips/riscv/riscv_decoder.sv:1523:  assign regfile_alu_we_o  = (deassert_we_i) ? 1'b0          : regfile_alu_we;
+ips/riscv/riscv_decoder.sv:1524:  assign data_req_o        = (deassert_we_i) ? 1'b0          : data_req;
+ips/riscv/riscv_decoder.sv:1525:  assign hwloop_we_o       = (deassert_we_i) ? 3'b0          : hwloop_we;
+ips/riscv/riscv_decoder.sv:1526:  assign csr_op_o          = (deassert_we_i) ? CSR_OP_NONE   : csr_op;
+ips/riscv/riscv_decoder.sv:1527:  assign jump_in_id_o      = (deassert_we_i) ? BRANCH_NONE   : jump_in_id;
+ips/riscv/riscv_L0_buffer.sv:273:  assign rdata_o = (instr_rvalid_i) ? instr_rdata_i : L0_buffer;
+ips/riscv/riscv_controller.sv:378:                exc_kill_o    = irq_req_ctrl_i ? 1'b1 : 1'b0;
+ips/riscv/riscv_controller.sv:403:                    ctrl_fsm_ns   = id_ready_i ? FLUSH_EX : DECODE;
+ips/riscv/riscv_controller.sv:406:                    ctrl_fsm_ns   = id_ready_i ? ELW_EXE : DECODE;
+ips/riscv/riscv_controller.sv:518:          ctrl_fsm_ns = boot_done_q ? DECODE : RESET;
+ips/riscv/riscv_controller.sv:589:          trap_addr_mux_o  = current_priv_lvl_i == PRIV_LVL_U ? TRAP_USER : TRAP_MACHINE;
+ips/riscv/riscv_controller.sv:615:          trap_addr_mux_o  = current_priv_lvl_i == PRIV_LVL_U ? TRAP_USER : TRAP_MACHINE;
+ips/riscv/riscv_controller.sv:642:              csr_cause_o           = current_priv_lvl_i == PRIV_LVL_U ? EXC_CAUSE_ECALL_UMODE : EXC_CAUSE_ECALL_MMODE;
+ips/riscv/riscv_register_file_latch.sv:71:   localparam    NUM_TOT_WORDS = FPU ? NUM_WORDS + NUM_FP_WORDS : NUM_WORDS;
+ips/riscv/riscv_register_file_latch.sv:103:   assign fregfile_ena = FPU ? ~fregfile_disable_i : '1;
+ips/riscv/riscv_register_file_latch.sv:110:      assign rdata_a_o = (fregfile_ena & raddr_a_i[5]) ? mem_fp[raddr_a_i[4:0]] : mem[raddr_a_i[4:0]];
+ips/riscv/riscv_register_file_latch.sv:111:      assign rdata_b_o = (fregfile_ena & raddr_b_i[5]) ? mem_fp[raddr_b_i[4:0]] : mem[raddr_b_i[4:0]];
+ips/riscv/riscv_register_file_latch.sv:112:      assign rdata_c_o = (fregfile_ena & raddr_c_i[5]) ? mem_fp[raddr_c_i[4:0]] : mem[raddr_c_i[4:0]];
+ips/riscv/riscv_register_file_latch.sv:213:               mem[k] = waddr_onehot_b_q[k] ? wdata_b_q : wdata_a_q;
+ips/riscv/riscv_register_file_latch.sv:225:                  mem_fp[l] = waddr_onehot_b_q[l+NUM_WORDS] ? wdata_b_q : wdata_a_q;
+ips/riscv/include/riscv_tracer_defines.sv:16:// parameter INSTR_CUSTOM0   = { 25'b?, OPCODE_CUST0 };
+ips/riscv/include/riscv_tracer_defines.sv:17:// parameter INSTR_CUSTOM1   = { 25'b?, OPCODE_CUST1 };
+ips/riscv/include/riscv_tracer_defines.sv:18:parameter INSTR_LUI       = { 25'b?, OPCODE_LUI };
+ips/riscv/include/riscv_tracer_defines.sv:19:parameter INSTR_AUIPC     = { 25'b?, OPCODE_AUIPC };
+ips/riscv/include/riscv_tracer_defines.sv:20:parameter INSTR_JAL       = { 25'b?, OPCODE_JAL };
+ips/riscv/include/riscv_tracer_defines.sv:21:parameter INSTR_JALR      = { 17'b?, 3'b000, 5'b?, OPCODE_JALR };
+ips/riscv/include/riscv_tracer_defines.sv:23:parameter INSTR_BEQ      =  { 17'b?, 3'b000, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:24:parameter INSTR_BNE      =  { 17'b?, 3'b001, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:25:parameter INSTR_BLT      =  { 17'b?, 3'b100, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:26:parameter INSTR_BGE      =  { 17'b?, 3'b101, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:27:parameter INSTR_BLTU     =  { 17'b?, 3'b110, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:28:parameter INSTR_BGEU     =  { 17'b?, 3'b111, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:29:parameter INSTR_BEQIMM   =  { 17'b?, 3'b010, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:30:parameter INSTR_BNEIMM   =  { 17'b?, 3'b011, 5'b?, OPCODE_BRANCH };
+ips/riscv/include/riscv_tracer_defines.sv:32:parameter INSTR_ADDI     =  { 17'b?, 3'b000, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:33:parameter INSTR_SLTI     =  { 17'b?, 3'b010, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:34:parameter INSTR_SLTIU    =  { 17'b?, 3'b011, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:35:parameter INSTR_XORI     =  { 17'b?, 3'b100, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:36:parameter INSTR_ORI      =  { 17'b?, 3'b110, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:37:parameter INSTR_ANDI     =  { 17'b?, 3'b111, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:38:parameter INSTR_SLLI     =  { 7'b0000000, 10'b?, 3'b001, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:39:parameter INSTR_SRLI     =  { 7'b0000000, 10'b?, 3'b101, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:40:parameter INSTR_SRAI     =  { 7'b0100000, 10'b?, 3'b101, 5'b?, OPCODE_OPIMM };
+ips/riscv/include/riscv_tracer_defines.sv:42:parameter INSTR_ADD      =  { 7'b0000000, 10'b?, 3'b000, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:43:parameter INSTR_SUB      =  { 7'b0100000, 10'b?, 3'b000, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:44:parameter INSTR_SLL      =  { 7'b0000000, 10'b?, 3'b001, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:45:parameter INSTR_SLT      =  { 7'b0000000, 10'b?, 3'b010, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:46:parameter INSTR_SLTU     =  { 7'b0000000, 10'b?, 3'b011, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:47:parameter INSTR_XOR      =  { 7'b0000000, 10'b?, 3'b100, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:48:parameter INSTR_SRL      =  { 7'b0000000, 10'b?, 3'b101, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:49:parameter INSTR_SRA      =  { 7'b0100000, 10'b?, 3'b101, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:50:parameter INSTR_OR       =  { 7'b0000000, 10'b?, 3'b110, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:51:parameter INSTR_AND      =  { 7'b0000000, 10'b?, 3'b111, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:54:parameter INSTR_FF1      =  { 7'b0001000, 5'b0, 5'b?, 3'b000, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:55:parameter INSTR_FL1      =  { 7'b0001000, 5'b0, 5'b?, 3'b001, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:56:parameter INSTR_CLB      =  { 7'b0001000, 5'b0, 5'b?, 3'b010, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:57:parameter INSTR_CNT      =  { 7'b0001000, 5'b0, 5'b?, 3'b011, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:59:parameter INSTR_EXTHS    =  { 7'b0001000, 10'b?, 3'b100, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:60:parameter INSTR_EXTHZ    =  { 7'b0001000, 10'b?, 3'b101, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:61:parameter INSTR_EXTBS    =  { 7'b0001000, 10'b?, 3'b110, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:62:parameter INSTR_EXTBZ    =  { 7'b0001000, 10'b?, 3'b111, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:63:parameter INSTR_PAVG     =  { 7'b0000010, 10'b?, 3'b000, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:64:parameter INSTR_PAVGU    =  { 7'b0000010, 10'b?, 3'b001, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:65:parameter INSTR_PADDN    =  { 2'b00,      15'b?, 3'b010, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:66:parameter INSTR_PADDUN   =  { 2'b10,      15'b?, 3'b010, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:67:parameter INSTR_PADDRN   =  { 2'b00,      15'b?, 3'b110, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:68:parameter INSTR_PADDURN  =  { 2'b10,      15'b?, 3'b110, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:69:parameter INSTR_PSUBN    =  { 2'b00,      15'b?, 3'b011, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:70:parameter INSTR_PSUBUN   =  { 2'b10,      15'b?, 3'b011, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:71:parameter INSTR_PSUBRN   =  { 2'b00,      15'b?, 3'b111, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:72:parameter INSTR_PSUBURN  =  { 2'b10,      15'b?, 3'b111, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:73:parameter INSTR_PADDNR   =  { 2'b01,      15'b?, 3'b010, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:74:parameter INSTR_PADDUNR  =  { 2'b11,      15'b?, 3'b010, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:75:parameter INSTR_PADDRNR  =  { 2'b01,      15'b?, 3'b110, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:76:parameter INSTR_PADDURNR =  { 2'b11,      15'b?, 3'b110, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:77:parameter INSTR_PSUBNR   =  { 2'b01,      15'b?, 3'b011, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:78:parameter INSTR_PSUBUNR  =  { 2'b11,      15'b?, 3'b011, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:79:parameter INSTR_PSUBRNR  =  { 2'b01,      15'b?, 3'b111, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:80:parameter INSTR_PSUBURNR =  { 2'b11,      15'b?, 3'b111, 5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:82:parameter INSTR_PABS     =  { 7'b0001010, 10'b?, 3'b000, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:83:parameter INSTR_PCLIP    =  { 7'b0001010, 10'b?, 3'b001, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:84:parameter INSTR_PCLIPU   =  { 7'b0001010, 10'b?, 3'b010, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:85:parameter INSTR_PCLIPR   =  { 7'b0001010, 10'b?, 3'b101, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:86:parameter INSTR_PCLIPUR  =  { 7'b0001010, 10'b?, 3'b110, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:88:parameter INSTR_PSLET    =  { 7'b0000010, 10'b?, 3'b010, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:89:parameter INSTR_PSLETU   =  { 7'b0000010, 10'b?, 3'b011, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:90:parameter INSTR_PMIN     =  { 7'b0000010, 10'b?, 3'b100, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:91:parameter INSTR_PMINU    =  { 7'b0000010, 10'b?, 3'b101, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:92:parameter INSTR_PMAX     =  { 7'b0000010, 10'b?, 3'b110, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:93:parameter INSTR_PMAXU    =  { 7'b0000010, 10'b?, 3'b111, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:94:parameter INSTR_ROR      =  { 7'b0000100, 10'b?, 3'b101, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:96:parameter INSTR_PBEXT    =  { 2'b11, 5'b?, 5'b?, 5'b?, 3'b000, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:97:parameter INSTR_PBEXTU   =  { 2'b11, 5'b?, 5'b?, 5'b?, 3'b001, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:98:parameter INSTR_PBINS    =  { 2'b11, 5'b?, 5'b?, 5'b?, 3'b010, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:99:parameter INSTR_PBCLR    =  { 2'b11, 5'b?, 5'b?, 5'b?, 3'b011, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:100:parameter INSTR_PBSET    =  { 2'b11, 5'b?, 5'b?, 5'b?, 3'b100, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:103:parameter INSTR_PBEXTR   =  { 2'b10, 5'b?, 5'b?, 5'b?, 3'b000, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:104:parameter INSTR_PBEXTUR  =  { 2'b10, 5'b?, 5'b?, 5'b?, 3'b001, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:105:parameter INSTR_PBINSR   =  { 2'b10, 5'b?, 5'b?, 5'b?, 3'b010, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:106:parameter INSTR_PBCLRR   =  { 2'b10, 5'b?, 5'b?, 5'b?, 3'b011, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:107:parameter INSTR_PBSETR   =  { 2'b10, 5'b?, 5'b?, 5'b?, 3'b100, 5'b?, OPCODE_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:110:parameter INSTR_FENCE    =  { 4'b0, 8'b?, 13'b0, OPCODE_FENCE };
+ips/riscv/include/riscv_tracer_defines.sv:113:parameter INSTR_CSRRW    =  { 17'b?, 3'b001, 5'b?, OPCODE_SYSTEM };
+ips/riscv/include/riscv_tracer_defines.sv:114:parameter INSTR_CSRRS    =  { 17'b?, 3'b010, 5'b?, OPCODE_SYSTEM };
+ips/riscv/include/riscv_tracer_defines.sv:115:parameter INSTR_CSRRC    =  { 17'b?, 3'b011, 5'b?, OPCODE_SYSTEM };
+ips/riscv/include/riscv_tracer_defines.sv:116:parameter INSTR_CSRRWI   =  { 17'b?, 3'b101, 5'b?, OPCODE_SYSTEM };
+ips/riscv/include/riscv_tracer_defines.sv:117:parameter INSTR_CSRRSI   =  { 17'b?, 3'b110, 5'b?, OPCODE_SYSTEM };
+ips/riscv/include/riscv_tracer_defines.sv:118:parameter INSTR_CSRRCI   =  { 17'b?, 3'b111, 5'b?, OPCODE_SYSTEM };
+ips/riscv/include/riscv_tracer_defines.sv:127:parameter INSTR_DIV      =  { 7'b0000001, 10'b?, 3'b100, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:128:parameter INSTR_DIVU     =  { 7'b0000001, 10'b?, 3'b101, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:129:parameter INSTR_REM      =  { 7'b0000001, 10'b?, 3'b110, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:130:parameter INSTR_REMU     =  { 7'b0000001, 10'b?, 3'b111, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:131:parameter INSTR_PMUL     =  { 7'b0000001, 10'b?, 3'b000, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:132:parameter INSTR_PMUH     =  { 7'b0000001, 10'b?, 3'b001, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:133:parameter INSTR_PMULHSU  =  { 7'b0000001, 10'b?, 3'b010, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:134:parameter INSTR_PMULHU   =  { 7'b0000001, 10'b?, 3'b011, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:135:parameter INSTR_PMAC     =  { 7'b0100001, 10'b?, 3'b000, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:136:parameter INSTR_PMSU     =  { 7'b0100001, 10'b?, 3'b001, 5'b?, OPCODE_OP };
+ips/riscv/include/riscv_tracer_defines.sv:139:parameter INSTR_PMULS     =  { 2'b10, 5'b? ,10'b?, 3'b000,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:140:parameter INSTR_PMULHLSN  =  { 2'b11, 5'b?, 10'b?, 3'b000,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:141:parameter INSTR_PMULRS    =  { 2'b10, 5'b? ,10'b?, 3'b100,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:142:parameter INSTR_PMULRHLSN =  { 2'b11, 5'b?, 10'b?, 3'b100,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:143:parameter INSTR_PMULU     =  { 2'b00, 5'b? ,10'b?, 3'b000,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:144:parameter INSTR_PMULUHLU  =  { 2'b01, 5'b? ,10'b?, 3'b000,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:145:parameter INSTR_PMULRU    =  { 2'b00, 5'b? ,10'b?, 3'b100,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:146:parameter INSTR_PMULRUHLU =  { 2'b01, 5'b? ,10'b?, 3'b100,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:147:parameter INSTR_PMACS     =  { 2'b10, 5'b? ,10'b?, 3'b001,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:148:parameter INSTR_PMACHLSN  =  { 2'b11, 5'b?, 10'b?, 3'b001,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:149:parameter INSTR_PMACRS    =  { 2'b10, 5'b? ,10'b?, 3'b101,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:150:parameter INSTR_PMACRHLSN =  { 2'b11, 5'b?, 10'b?, 3'b101,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:151:parameter INSTR_PMACU     =  { 2'b00, 5'b? ,10'b?, 3'b001,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:152:parameter INSTR_PMACUHLU  =  { 2'b01, 5'b? ,10'b?, 3'b001,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:153:parameter INSTR_PMACRU    =  { 2'b00, 5'b? ,10'b?, 3'b101,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:154:parameter INSTR_PMACRUHLU =  { 2'b01, 5'b? ,10'b?, 3'b101,  5'b?, OPCODE_PULP_OP }; // pulp specific
+ips/riscv/include/riscv_tracer_defines.sv:157:parameter INSTR_FMADD    =  { 5'b?,     2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FMADD  };
+ips/riscv/include/riscv_tracer_defines.sv:158:parameter INSTR_FMSUB    =  { 5'b?,     2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FMSUB  };
+ips/riscv/include/riscv_tracer_defines.sv:159:parameter INSTR_FNMSUB   =  { 5'b?,     2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FNMSUB };
+ips/riscv/include/riscv_tracer_defines.sv:160:parameter INSTR_FNMADD   =  { 5'b?,     2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FNMADD };
+ips/riscv/include/riscv_tracer_defines.sv:162:parameter INSTR_FADD     =  { 5'b00000, 2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:163:parameter INSTR_FSUB     =  { 5'b00001, 2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:164:parameter INSTR_FMUL     =  { 5'b00010, 2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:165:parameter INSTR_FDIV     =  { 5'b00011, 2'b00, 10'b?,      3'b?,   5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:166:parameter INSTR_FSQRT    =  { 5'b01011, 2'b00, 5'b0, 5'b?, 3'b?,   5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:167:parameter INSTR_FSGNJS   =  { 5'b00100, 2'b00, 10'b?,      3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:168:parameter INSTR_FSGNJNS  =  { 5'b00100, 2'b00, 10'b?,      3'b001, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:169:parameter INSTR_FSGNJXS  =  { 5'b00100, 2'b00, 10'b?,      3'b010, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:170:parameter INSTR_FMIN     =  { 5'b00101, 2'b00, 10'b?,      3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:171:parameter INSTR_FMAX     =  { 5'b00101, 2'b00, 10'b?,      3'b001, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:172:parameter INSTR_FCVTWS   =  { 5'b11000, 2'b00, 5'b0, 5'b?, 3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:173:parameter INSTR_FCVTWUS  =  { 5'b11000, 2'b00, 5'b1, 5'b?, 3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:174:parameter INSTR_FMVXS    =  { 5'b11100, 2'b00, 5'b0, 5'b?, 3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:175:parameter INSTR_FEQS     =  { 5'b10100, 2'b00, 10'b?,      3'b010, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:176:parameter INSTR_FLTS     =  { 5'b10100, 2'b00, 10'b?,      3'b001, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:177:parameter INSTR_FLES     =  { 5'b10100, 2'b00, 10'b?,      3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:178:parameter INSTR_FCLASS   =  { 5'b11100, 2'b00, 5'b0, 5'b?, 3'b001, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:179:parameter INSTR_FCVTSW   =  { 5'b11010, 2'b00, 5'b0, 5'b?, 3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:180:parameter INSTR_FCVTSWU  =  { 5'b11010, 2'b00, 5'b1, 5'b?, 3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/riscv_tracer_defines.sv:181:parameter INSTR_FMVSX    =  { 5'b11110, 2'b00, 5'b0, 5'b?, 3'b000, 5'b?, OPCODE_OP_FP };
+ips/riscv/include/apu_macros.sv:32:                            apu_lat_o       = (PIPE_REG_DSP_MULT==1) ? 2'h2 : 2'h1;\
+ips/riscv/riscv_prefetch_L0_buffer.sv:136:  assign rdata = (use_last || use_hwlp) ? rdata_last_q : rdata_L0[addr_o[3:2]];
+ips/riscv/riscv_prefetch_L0_buffer.sv:166:  assign addr_real_next    = (next_is_crossword) ? { addr_o[31:4], 4'b0000 } + 32'h16 : { addr_o[31:2], 2'b00 } + 32'h4;
+ips/riscv/riscv_prefetch_L0_buffer.sv:554:  assign rdata_o = ((~addr_o[1]) || use_hwlp) ? rdata : rdata_unaligned;
+ips/riscv/riscv_alu_div.sv:84:  assign AddMux_D    = (LoadEn_S) ? OpA_DI  : BReg_DP;
+ips/riscv/riscv_alu_div.sv:87:  assign BMux_D      = (LoadEn_S) ? OpB_DI : {CompInv_SP, (BReg_DP[$high(BReg_DP):1])};
+ips/riscv/riscv_alu_div.sv:90:  assign OutMux_D    = (RemSel_SP) ? AReg_DP : ResReg_DP_rev;
+ips/riscv/riscv_alu_div.sv:93:  assign Res_DO      = (ResInv_SP) ? -$signed(OutMux_D) : OutMux_D;
+ips/riscv/riscv_alu_div.sv:99:  assign AddTmp_D    = (LoadEn_S) ? 0 : AReg_DP;
+ips/riscv/riscv_alu_div.sv:100:  assign AddOut_D    = (PmSel_S)  ? AddTmp_D + AddMux_D : AddTmp_D - $signed(AddMux_D);
+ips/riscv/riscv_alu_div.sv:106:  assign Cnt_DN      = (LoadEn_S)   ? OpBShift_DI :
+ips/riscv/riscv_alu_div.sv:174:  assign RemSel_SN  = (LoadEn_S) ? OpCode_SI[1] : RemSel_SP;
+ips/riscv/riscv_alu_div.sv:175:  assign CompInv_SN = (LoadEn_S) ? OpBSign_SI   : CompInv_SP;
+ips/riscv/riscv_alu_div.sv:176:  assign ResInv_SN  = (LoadEn_S) ? (~OpBIsZero_SI | OpCode_SI[1]) & OpCode_SI[0] & (OpA_DI[$high(OpA_DI)] ^ OpBSign_SI) : ResInv_SP;
+ips/riscv/riscv_alu_div.sv:178:  assign AReg_DN   = (ARegEn_S)   ? AddOut_D : AReg_DP;
+ips/riscv/riscv_alu_div.sv:179:  assign BReg_DN   = (BRegEn_S)   ? BMux_D   : BReg_DP;
+ips/riscv/riscv_alu_div.sv:180:  assign ResReg_DN = (LoadEn_S)   ? '0       :
+ips/riscv/riscv_fetch_fifo.sv:72:  assign rdata = (valid_Q[0]) ? rdata_Q[0] : in_rdata_i;
+ips/riscv/riscv_fetch_fifo.sv:75:  assign rdata_unaligned = (valid_Q[1]) ? {rdata_Q[1][15:0], rdata[31:16]} : {in_rdata_i[15:0], rdata[31:16]};
+ips/riscv/riscv_fetch_fifo.sv:110:  assign out_addr_o    = (valid_Q[0]) ? addr_Q[0] : in_addr_i;
+ips/riscv/riscv_fetch_fifo.sv:111:  assign out_is_hwlp_o = (valid_Q[0]) ? is_hwlp_Q[0] : in_is_hwlp_i;
+ips/hwpe-mac-engine/ucode/ucode_common.py:210:  # assign ucode_registers_read[26:18] = reg_file.hwpe_params[18:10]; // flexibility at a price? maybe 9 additional r/o regs are not necessary
+ips/hwpe-mac-engine/rtl/mac_engine.sv:221:  assign r_mult_ready = (ctrl_i.simple_mul) ? d_o.ready   | ~r_mult_valid
+ips/hwpe-mac-engine/rtl/tempsen.v:7:assign out = (in[127] == 1)? in : ~in;
+ips/hwpe-mac-engine/rtl/mac_fsm.sv:89:    ctrl_streamer_o.d_sink_ctrl.addressgen_ctrl.trans_size  = (ctrl_i.simple_mul) ? ctrl_i.len : 1;
+ips/hwpe-mac-engine/rtl/mac_fsm.sv:91:    ctrl_streamer_o.d_sink_ctrl.addressgen_ctrl.line_length = (ctrl_i.simple_mul) ? ctrl_i.len : 1;
+ips/hwpe-mac-engine/rtl/MixColumns.v:12:      xtime = (a & 8'h80) ? ((a << 1) ^ 8'h1B) : (a << 1);
+ips/hwpe-mac-engine/rtl/f_permutation.v:56:    assign round_in = accept ? {in ^ out[1599:1599-575], out[1599-576:0]} : out;
+ips/zero-riscy/zeroriscy_cs_registers.sv:368:        perf_rdata = csr_addr_i[4:0] < N_PERF_COUNTERS ? PCCR_q[csr_addr_i[4:0]] : '0;
+ips/zero-riscy/zeroriscy_core.sv:257:  assign core_busy   = core_ctrl_firstfetch ? 1'b1 : core_busy_q;
+ips/zero-riscy/zeroriscy_core.sv:612:  assign csr_access   = (dbg_csr_req == 1'b0) ? csr_access_ex : 1'b1;
+ips/zero-riscy/zeroriscy_core.sv:613:  assign csr_addr     = (dbg_csr_req == 1'b0) ? csr_addr_int     : dbg_csr_addr;
+ips/zero-riscy/zeroriscy_core.sv:614:  assign csr_wdata    = (dbg_csr_req == 1'b0) ? alu_operand_a_ex : dbg_csr_wdata;
+ips/zero-riscy/zeroriscy_core.sv:615:  assign csr_op       = (dbg_csr_req == 1'b0) ? csr_op_ex
+ips/zero-riscy/zeroriscy_core.sv:616:                                              : (dbg_csr_we == 1'b1 ? CSR_OP_WRITE
+ips/zero-riscy/zeroriscy_core.sv:618:  assign csr_addr_int = csr_access_ex ? alu_operand_b_ex[11:0] : '0;
+ips/zero-riscy/zeroriscy_ex_block.sv:86:  assign multdiv_en_sel     = MULT_TYPE == 0 ? mult_en_i | div_en_i : div_en_i;
+ips/zero-riscy/zeroriscy_ex_block.sv:94:  assign regfile_wdata_ex_o = multdiv_en ? multdiv_result : alu_result;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:78:    multdiv_result_o  = div_en_i ? accum_window_q[31:0] : res_adder_l;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:144:  assign next_reminder = is_greater_equal ? res_adder_h                   : op_remainder;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:145:  assign next_quotient = is_greater_equal ? op_a_shift_q | one_shift      : op_a_shift_q;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:197:                        curr_state_q   <= equal_to_zero ? MD_FINISH : MD_ABS_A;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:203:                        curr_state_q   <= equal_to_zero ? MD_FINISH : MD_ABS_A;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:213:                    op_numerator_q <= sign_a ? alu_adder_i : op_a_i;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:221:                    op_b_shift_q     <= sign_b ? alu_adder_i : op_b_i;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:280:                        accum_window_q <= (div_change_sign) ? alu_adder_i : accum_window_q;
+ips/zero-riscy/zeroriscy_multdiv_slow.sv:282:                        accum_window_q <= (rem_change_sign) ? alu_adder_i : accum_window_q;
+ips/zero-riscy/zeroriscy_id_stage.sv:354:        IMMB_PCINCR: imm_b = (is_compressed_i && (~data_misaligned_i)) ? 32'h2 : 32'h4;
+ips/zero-riscy/zeroriscy_id_stage.sv:427:    .raddr_b_i    ( (dbg_reg_rreq_i == 1'b0) ? regfile_addr_rb_id : dbg_reg_raddr_i ),
+ips/zero-riscy/zeroriscy_id_stage.sv:710:            id_wb_fsm_ns    = branch_decision_i ? WAIT_MULTICYCLE : IDLE;
+ips/zero-riscy/zeroriscy_id_stage.sv:742:          select_data_rf = data_req_id ? RF_LSU : RF_EX;
+ips/zero-riscy/zeroriscy_register_file.sv:59:  localparam    ADDR_WIDTH = RV32E ? 4 : 5;
+ips/zero-riscy/zeroriscy_fetch_fifo.sv:69:  assign rdata = (valid_Q[0]) ? rdata_Q[0] : in_rdata_i;
+ips/zero-riscy/zeroriscy_fetch_fifo.sv:72:  assign rdata_unaligned = (valid_Q[1]) ? {rdata_Q[1][15:0], rdata[31:16]} : {in_rdata_i[15:0], rdata[31:16]};
+ips/zero-riscy/zeroriscy_fetch_fifo.sv:105:  assign out_addr_o    = (valid_Q[0]) ? addr_Q[0] : in_addr_i;
+ips/zero-riscy/zeroriscy_controller.sv:330:                    exc_kill_o    = irq_req_ctrl_i & ~instr_multicyle_i & ~branch_in_id_i ? 1'b1 : 1'b0;
+ips/zero-riscy/zeroriscy_controller.sv:404:        ctrl_fsm_ns = dbg_req_i ? DBG_SIGNAL : DECODE;
+ips/zero-riscy/zeroriscy_controller.sv:492:  assign operand_a_fw_mux_sel_o = data_misaligned_i ? SEL_MISALIGNED : SEL_REGFILE;
+ips/zero-riscy/zeroriscy_alu.sv:97:  assign adder_in_a    = multdiv_en_i ? multdiv_operand_a_i : {operand_a_i,1'b1};
+ips/zero-riscy/zeroriscy_alu.sv:101:  assign adder_in_b    = multdiv_en_i ? multdiv_operand_b_i : operand_b_neg ;
+ips/zero-riscy/zeroriscy_alu.sv:137:  assign shift_op_a    = shift_left ? operand_a_rev : operand_a_i;
+ips/zero-riscy/zeroriscy_alu.sv:155:  assign shift_result = shift_left ? shift_left_result : shift_right_result;
+ips/zero-riscy/zeroriscy_load_store_unit.sv:332:  assign data_rdata_ex_o = (data_rvalid_i == 1'b1) ? data_rdata_ext : rdata_q;
+ips/zero-riscy/zeroriscy_load_store_unit.sv:367:              NS = data_misaligned ? WAIT_RVALID_MIS : WAIT_RVALID;
+ips/zero-riscy/zeroriscy_load_store_unit.sv:370:              NS = data_misaligned ? WAIT_GNT_MIS    : WAIT_GNT;
+ips/zero-riscy/zeroriscy_register_file_ff.sv:57:  localparam    ADDR_WIDTH = RV32E ? 4 : 5;
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:111:  assign multdiv_result_o = div_en_i ? mac_res_q[31:0] : mac_res_n[31:0];
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:118:  assign next_reminder = is_greater_equal ? res_adder_h                   : mac_res_q[32:0];
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:119:  assign next_quotient = is_greater_equal ? op_quotient_q | one_shift     : op_quotient_q;
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:161:                  divcurr_state_n  = equal_to_zero ? MD_FINISH : MD_ABS_A;
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:167:                  divcurr_state_n    = equal_to_zero ? MD_FINISH : MD_ABS_A;
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:180:              op_numerator_n = div_sign_a ? alu_adder_i : op_a_i;
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:192:              op_denominator_n  = div_sign_b ? alu_adder_i : op_b_i;
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:234:                  op_reminder_n = (div_change_sign) ? alu_adder_i : mac_res_q;
+ips/zero-riscy/zeroriscy_multdiv_fast.sv:236:                  op_reminder_n = (rem_change_sign) ? alu_adder_i : mac_res_q;
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:15:// parameter INSTR_CUSTOM0   = { 25'b?, OPCODE_CUST0 };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:16:// parameter INSTR_CUSTOM1   = { 25'b?, OPCODE_CUST1 };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:17:parameter INSTR_LUI       = { 25'b?, OPCODE_LUI };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:18:parameter INSTR_AUIPC     = { 25'b?, OPCODE_AUIPC };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:19:parameter INSTR_JAL       = { 25'b?, OPCODE_JAL };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:20:parameter INSTR_JALR      = { 17'b?, 3'b000, 5'b?, OPCODE_JALR };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:22:parameter INSTR_BEQ      =  { 17'b?, 3'b000, 5'b?, OPCODE_BRANCH };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:23:parameter INSTR_BNE      =  { 17'b?, 3'b001, 5'b?, OPCODE_BRANCH };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:24:parameter INSTR_BLT      =  { 17'b?, 3'b100, 5'b?, OPCODE_BRANCH };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:25:parameter INSTR_BGE      =  { 17'b?, 3'b101, 5'b?, OPCODE_BRANCH };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:26:parameter INSTR_BLTU     =  { 17'b?, 3'b110, 5'b?, OPCODE_BRANCH };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:27:parameter INSTR_BGEU     =  { 17'b?, 3'b111, 5'b?, OPCODE_BRANCH };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:28:parameter INSTR_BALL     =  { 17'b?, 3'b010, 5'b?, OPCODE_BRANCH };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:30:parameter INSTR_ADDI     =  { 17'b?, 3'b000, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:31:parameter INSTR_SLTI     =  { 17'b?, 3'b010, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:32:parameter INSTR_SLTIU    =  { 17'b?, 3'b011, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:33:parameter INSTR_XORI     =  { 17'b?, 3'b100, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:34:parameter INSTR_ORI      =  { 17'b?, 3'b110, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:35:parameter INSTR_ANDI     =  { 17'b?, 3'b111, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:36:parameter INSTR_SLLI     =  { 7'b0000000, 10'b?, 3'b001, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:37:parameter INSTR_SRLI     =  { 7'b0000000, 10'b?, 3'b101, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:38:parameter INSTR_SRAI     =  { 7'b0100000, 10'b?, 3'b101, 5'b?, OPCODE_OPIMM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:40:parameter INSTR_ADD      =  { 7'b0000000, 10'b?, 3'b000, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:41:parameter INSTR_SUB      =  { 7'b0100000, 10'b?, 3'b000, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:42:parameter INSTR_SLL      =  { 7'b0000000, 10'b?, 3'b001, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:43:parameter INSTR_SLT      =  { 7'b0000000, 10'b?, 3'b010, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:44:parameter INSTR_SLTU     =  { 7'b0000000, 10'b?, 3'b011, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:45:parameter INSTR_XOR      =  { 7'b0000000, 10'b?, 3'b100, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:46:parameter INSTR_SRL      =  { 7'b0000000, 10'b?, 3'b101, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:47:parameter INSTR_SRA      =  { 7'b0100000, 10'b?, 3'b101, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:48:parameter INSTR_OR       =  { 7'b0000000, 10'b?, 3'b110, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:49:parameter INSTR_AND      =  { 7'b0000000, 10'b?, 3'b111, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:52:parameter INSTR_CSRRW    =  { 17'b?, 3'b001, 5'b?, OPCODE_SYSTEM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:53:parameter INSTR_CSRRS    =  { 17'b?, 3'b010, 5'b?, OPCODE_SYSTEM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:54:parameter INSTR_CSRRC    =  { 17'b?, 3'b011, 5'b?, OPCODE_SYSTEM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:55:parameter INSTR_CSRRWI   =  { 17'b?, 3'b101, 5'b?, OPCODE_SYSTEM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:56:parameter INSTR_CSRRSI   =  { 17'b?, 3'b110, 5'b?, OPCODE_SYSTEM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:57:parameter INSTR_CSRRCI   =  { 17'b?, 3'b111, 5'b?, OPCODE_SYSTEM };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:64:parameter INSTR_DIV      =  { 7'b0000001, 10'b?, 3'b100, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:65:parameter INSTR_DIVU     =  { 7'b0000001, 10'b?, 3'b101, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:66:parameter INSTR_REM      =  { 7'b0000001, 10'b?, 3'b110, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:67:parameter INSTR_REMU     =  { 7'b0000001, 10'b?, 3'b111, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:68:parameter INSTR_PMUL     =  { 7'b0000001, 10'b?, 3'b000, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:69:parameter INSTR_PMUH     =  { 7'b0000001, 10'b?, 3'b001, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:70:parameter INSTR_PMULHSU  =  { 7'b0000001, 10'b?, 3'b010, 5'b?, OPCODE_OP };
+ips/zero-riscy/include/zeroriscy_tracer_defines.sv:71:parameter INSTR_PMULHU   =  { 7'b0000001, 10'b?, 3'b011, 5'b?, OPCODE_OP };
+ips/zero-riscy/zeroriscy_decoder.sv:404:                illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:411:                illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:418:                illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:425:                illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:432:              illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:439:              illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:446:              illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:453:              illegal_insn_o        = RV32M ? 1'b0 : 1'b1;
+ips/zero-riscy/zeroriscy_decoder.sv:575:  assign regfile_we_o      = (deassert_we_i) ? 1'b0          : regfile_we;
+ips/zero-riscy/zeroriscy_decoder.sv:576:  assign mult_int_en_o     = RV32M ? ((deassert_we_i) ? 1'b0 : mult_int_en) : 1'b0;
+ips/zero-riscy/zeroriscy_decoder.sv:577:  assign div_int_en_o      = RV32M ? ((deassert_we_i) ? 1'b0 : div_int_en ) : 1'b0;
+ips/zero-riscy/zeroriscy_decoder.sv:578:  assign data_req_o        = (deassert_we_i) ? 1'b0          : data_req;
+ips/zero-riscy/zeroriscy_decoder.sv:579:  assign csr_op_o          = (deassert_we_i) ? CSR_OP_NONE   : csr_op;
+ips/zero-riscy/zeroriscy_decoder.sv:580:  assign jump_in_id_o      = (deassert_we_i) ? 1'b0          : jump_in_id;
+ips/zero-riscy/zeroriscy_decoder.sv:581:  assign branch_in_id_o    = (deassert_we_i) ? 1'b0          : branch_in_id;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:476:      else if(err_en) err_reg <= wr_reg ? ((axi_master_b_resp == 2'b00) ? 1'b0 : 1'b1) : ((axi_master_r_resp == 2'b00) ? 1'b0 : 1'b1);
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:382:   assign data_to_addr_counter = (addr_sel) ? incremented_address[31:0] : address_data_in;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:416:   assign bit_count_max = (bit_count == word_size_bits) ? 1'b1 : 1'b0 ;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:417:   assign bit_count_32 = (bit_count == 6'h20) ? 1'b1 : 1'b0;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:422:   assign data_to_word_counter = (word_ct_sel) ?  decremented_word_count : count_data_in;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:440:  assign out_reg_data = (out_reg_data_sel) ? data_from_internal_reg : {1'b0,data_from_biu};
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:544:   assign crc_data_in = (crc_in_sel) ? tdi_i : data_out_shift_reg[0];  // MUX, write or read data
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:558:   assign     crc_match = (data_register_i[63:32] == crc_data_out) ? 1'b1 : 1'b0;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:279:    assign data_to_addr_counter = (addr_sel) ? incremented_address[31:0] : address_data_in;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:319:   assign bit_count_max = (bit_count == word_size_bits) ? 1'b1 : 1'b0 ;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:320:   assign bit_count_32  = (bit_count == 6'h20) ? 1'b1 : 1'b0;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:325:   assign data_to_word_counter = (word_ct_sel) ?  decremented_word_count : count_data_in;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:344:    assign out_reg_data = (out_reg_data_sel) ? data_from_internal_reg : data_from_biu;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:407:     assign crc_data_in = (crc_in_sel) ? tdi_i : data_out_shift_reg[0];  // MUX, write or read data
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:421:    assign crc_match = (data_register_i[56:25] == crc_data_out) ? 1'b1 : 1'b0;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:274:   assign data_to_addr_counter = (addr_sel) ? incremented_address[31:0] : address_data_in;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:310:   assign bit_count_max = (bit_count == word_size_bits) ? 1'b1 : 1'b0 ;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:311:   assign bit_count_32 = (bit_count == 6'h20) ? 1'b1 : 1'b0;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:316:   assign data_to_word_counter = (word_ct_sel) ?  decremented_word_count : count_data_in;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:334:  assign out_reg_data = (out_reg_data_sel) ? data_from_internal_reg : {1'b0,data_from_biu};
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:397:       assign crc_data_in = (crc_in_sel) ? tdi_i : data_out_shift_reg[0];  // MUX, write or read data
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:411:   assign     crc_match = (data_register_i[63:32] == crc_data_out) ? 1'b1 : 1'b0;
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:116:    assign valid_selection = (cpu_select_i < NB_CORES) ? 1'b1 : 1'b0;
+ips/axi/axi_node/axi_BW_allocator.sv:126:assign outstanding_trans_o = (outstanding_counter == '0) ? 1'b0 : 1'b1;
+ips/axi/axi_node/axi_BW_allocator.sv:130:assign full_counter_o = (outstanding_counter == '1) ? 1'b1 : 1'b0;
+ips/axi/axi_node/axi_address_decoder_AR.sv:95:              assign match_region_int[j][i]  =  (enable_region_i[j][i] == 1'b1 ) ? (araddr_i >= START_ADDR_i[j][i]) && (araddr_i <= END_ADDR_i[j][i]) : 1'b0;
+ips/axi/axi_node/axi_address_decoder_AW.sv:115:              assign match_region_int[j][i]  =  (enable_region_i[j][i] == 1'b1 ) ? (awaddr_i >= START_ADDR_i[j][i]) && (awaddr_i <= END_ADDR_i[j][i]) : 1'b0;
+ips/axi/axi_node/axi_FanInPrimitive_Req.sv:78:            data_req_o   = (SEL_EXCLUSIVE) ? data_req1_i : data_req0_i;
+ips/axi/axi_node/axi_FanInPrimitive_Req.sv:79:            data_gnt0_o  = (SEL_EXCLUSIVE) ? 1'b0        : data_gnt_i;
+ips/axi/axi_node/axi_FanInPrimitive_Req.sv:80:            data_gnt1_o  = (SEL_EXCLUSIVE) ? data_gnt_i  : 1'b0;
+ips/axi/axi_node/axi_BR_allocator.sv:133:assign outstanding_trans_o = (outstanding_counter == '0) ? 1'b0 : 1'b1;
+ips/axi/axi_node/axi_BR_allocator.sv:137:assign full_counter_o = (outstanding_counter == '1) ? 1'b1 : 1'b0;
+ips/axi/axi_slice_dc/axi_slice_dc_slave_wrap.sv:36:   assign axi_slave.b_valid = isolate_i ? 1'b0 : s_b_valid;
+ips/axi/axi_slice_dc/axi_slice_dc_slave_wrap.sv:37:   assign s_b_ready = isolate_i ? 1'b1 : axi_slave.b_ready;
+ips/axi/axi_slice_dc/axi_slice_dc_slave_wrap.sv:39:   assign axi_slave.r_valid = isolate_i ? 1'b0 : s_r_valid;
+ips/axi/axi_slice_dc/axi_slice_dc_slave_wrap.sv:40:   assign s_r_ready = isolate_i ? 1'b1 : axi_slave.r_ready;
+ips/tech_cells_generic/cluster_level_shifter_out_clamp.sv:18:    assign out_o = clamp_i ? 1'b0 : in_i;
+ips/tech_cells_generic/pulp_level_shifter_in_clamp.sv:18:assign out_o = clamp_i ? 1'b0 : in_i;
+ips/tech_cells_generic/cluster_level_shifter_in_clamp.sv:18:assign out_o = clamp_i ? 1'b0 : in_i;
+ips/tech_cells_generic/pulp_level_shifter_out_clamp.sv:19:    assign out_o = clamp_i ? 1'b0 : in_i;
+ips/timer_unit/timer_unit.sv:500:   assign s_ref_clk_edge = ( ( s_ref_clk1 == 1'b1 ) & ( s_ref_clk2 == 1'b0 ) ) ? 1'b1  : 1'b0;
+ips/scm/latch_scm/register_file_1w_64b_1r_32b.sv:65:    assign ReadData = (DEST == 1'b0) ?  ReadData_lo : ReadData_hi;
+ips/scm/latch_scm/register_file_3r_2w_be.sv:224:                  MemContentxDP[k][l] = WAddrOneHotxD_B_q[k][l] ? WDataIntxD_B[l] : WDataIntxD_A[l];
+ips/scm/latch_scm/register_file_3r_2w_be.sv:237:                      MemContentxDP[k][l] = WAddrOneHotxD_B_q[k][l] ? WDataIntxD_B[l] : WDataIntxD_A[l];
+ips/scm/latch_scm/register_file_3r_2w.sv:106:    assign s_raddr_c = (ADDR_WIDTH == ADDR_WIDTH_C) ? raddr_c_i : {{ADDR_DIFF{1'b1}},raddr_c_i};
+ips/scm/latch_scm/register_file_3r_2w.sv:214:                MemContentxDP[k] = WAddrOneHotxDb_reg[k] ? WDataIntxDb : WDataIntxDa;
+ips/scm/latch_scm/register_file_2r_2w.sv:205:                MemContentxDP[k] = WAddrOneHotxDb_reg[k] ? WDataIntxDb : WDataIntxDa;
+ips/scm/fpga_scm/register_file_1w_64b_1r_32b.sv:69:    assign ReadData = (DEST == 1'b0) ?  ReadData_lo : ReadData_hi;
+ips/scm/fpga_scm/register_file_1w_64b_multi_port_read_32b.sv:76:    assign ReadData[i] = (DEST[i] == 1'b0) ?  ReadData_lo[i] : ReadData_hi[i];
+ips/scm/fpga_scm/register_file_1r_1w_raw.sv:56:        WriteEnable_and_ReadWriteSameAddr_reg <= (ReadAddr == WriteAddr) ? WriteEnable : 1'b0;
+ips/scm/fpga_scm/register_file_1r_1w_raw.sv:61:      assign ReadData = (WriteEnable_and_ReadWriteSameAddr_reg == 1'b1) ? WriteData_reg :
+ips/scm/fpga_scm/register_file_1r_1w_raw.sv:62:                        (ReadEnable_reg  == 1'b1) ?                       ReadData_reg  : '0;
+ips/scm/fpga_scm/register_file_1r_1w_1row.sv:53:      assign ReadData = (ReadEnable_reg == 1'b1) ? ReadData_reg : '0;
+ips/scm/fpga_scm/register_file_1r_1w.sv:57:      assign ReadData = (ReadEnable_reg == 1'b1) ? ReadData_reg : '0;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:119:   assign Zero_a_SN = Start_S?(Exp_a_prenorm_zero_S&&Mant_a_prenorm_zero_S):Zero_a_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:120:   assign Zero_b_SN = Start_S?(Exp_b_prenorm_zero_S&&Mant_b_prenorm_zero_S):Zero_b_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:121:   assign Inf_a_SN = Start_S?(Exp_a_prenorm_Inf_NaN_S&&Mant_a_prenorm_zero_S):Inf_a_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:122:   assign Inf_b_SN = Start_S?(Exp_b_prenorm_Inf_NaN_S&&Mant_b_prenorm_zero_S):Inf_b_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:123:   assign NaN_a_SN = Start_S?(Exp_a_prenorm_Inf_NaN_S&&(~Mant_a_prenorm_zero_S)):NaN_a_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:124:   assign NaN_b_SN = Start_S?(Exp_b_prenorm_Inf_NaN_S&&(~Mant_b_prenorm_zero_S)):NaN_b_SP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:226:   assign  Mant_a_norm_DN = (Start_S)?(Mant_a_D<<(Mant_leadingOne_a)):Mant_a_norm_DP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:241:   assign  Exp_a_norm_DN = (Start_S)?(Exp_a_D-Mant_leadingOne_a+(|Mant_leadingOne_a)):Exp_a_norm_DP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:267:   assign  Mant_b_norm_DN = (Start_S)?(Mant_b_D<<(Mant_leadingOne_b)):Mant_b_norm_DP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:282:   assign  Exp_b_norm_DN = (Start_S)?(Exp_b_D-Mant_leadingOne_b+(|Mant_leadingOne_b)):Exp_b_norm_DP;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_ff.sv:72:        assign index_nodes[2**level-1+l] = (sel_nodes[2**(level+1)-1+l*2] == 1'b1) ?
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_ff.sv:82:          assign index_nodes[2**level-1+k] = (in_flipped[k*2] == 1'b1) ? index_lut[k*2] : index_lut[k*2+1];
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/iteration_div_sqrt.sv:56:   assign Cin_D=Div_enable_SI?0:Sqrt_cin_D;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:81:  assign Num_RS_D=~Exp_in_DI+1+1;            // How many right shifts(RS) are needed to generated a denormal number? >> is need only when Exp_in_DI is negative
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/fpu_norm_div_sqrt.sv:385:   assign Mant_res_DO = (Mant_renorm_S)?Mant_upperRounded_D[C_DIV_MANT:1]:Mant_upperRounded_D[C_DIV_MANT-1:0];
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/iteration_div_sqrt_first.sv:57:   assign Cin_D=Div_enable_SI?Div_start_dly_SI:Sqrt_cin_D;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:109:   assign Mant_D_sqrt_Norm=Exp_num_DI[0]?{1'b0,Numerator_DI}:{Numerator_DI,1'b0}; //for sqrt
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:400:       Sqrt_Q1=First_iteration_cell_sum_DI[24]?Q_sqrt1:Q_sqrt_com_1;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:401:       Sqrt_Q2=Sec_iteration_cell_sum_DI[24]?Q_sqrt2:Q_sqrt_com_2;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:402:       Sqrt_Q3=Thi_iteration_cell_sum_DI[24]?Q_sqrt3:Q_sqrt_com_3;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:423:       Sqrt_Q0=Quotient_DP[0]?Q_sqrt_com_0:Q_sqrt0;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:424:       Sqrt_Q1=First_iteration_cell_sum_DI[24]?Q_sqrt1:Q_sqrt_com_1;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:425:       Sqrt_Q2=Sec_iteration_cell_sum_DI[24]?Q_sqrt2:Q_sqrt_com_2;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:426:       Sqrt_Q3=Thi_iteration_cell_sum_DI[24]?Q_sqrt3:Q_sqrt_com_3;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:446:       Sqrt_Q0=Quotient_DP[0]?Q_sqrt_com_0:Q_sqrt0;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:447:       Sqrt_Q1=First_iteration_cell_sum_DI[24]?Q_sqrt1:Q_sqrt_com_1;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:448:       Sqrt_Q2=Sec_iteration_cell_sum_DI[24]?Q_sqrt2:Q_sqrt_com_2;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:449:       Sqrt_Q3=Thi_iteration_cell_sum_DI[24]?Q_sqrt3:Q_sqrt_com_3;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:469:       Sqrt_Q0=Quotient_DP[0]?Q_sqrt_com_0:Q_sqrt0;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:470:       Sqrt_Q1=First_iteration_cell_sum_DI[24]?Q_sqrt1:Q_sqrt_com_1;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:471:       Sqrt_Q2=Sec_iteration_cell_sum_DI[24]?Q_sqrt2:Q_sqrt_com_2;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:472:       Sqrt_Q3=Thi_iteration_cell_sum_DI[24]?Q_sqrt3:Q_sqrt_com_3;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:492:       Sqrt_Q0=Quotient_DP[0]?Q_sqrt_com_0:Q_sqrt0;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:493:       Sqrt_Q1=First_iteration_cell_sum_DI[24]?Q_sqrt1:Q_sqrt_com_1;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:494:       Sqrt_Q2=Sec_iteration_cell_sum_DI[24]?Q_sqrt2:Q_sqrt_com_2;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:495:       Sqrt_Q3=Thi_iteration_cell_sum_DI[24]?Q_sqrt3:Q_sqrt_com_3;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:515:       Sqrt_Q0=Quotient_DP[0]?Q_sqrt_com_0:Q_sqrt0;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:516:       Sqrt_Q1=First_iteration_cell_sum_DI[24]?Q_sqrt1:Q_sqrt_com_1;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:517:       Sqrt_Q2=Sec_iteration_cell_sum_DI[24]?Q_sqrt2:Q_sqrt_com_2;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:518:       Sqrt_Q3=Thi_iteration_cell_sum_DI[24]?Q_sqrt3:Q_sqrt_com_3;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:539:       Sqrt_Q0=Quotient_DP[0]?Q_sqrt_com_0:Q_sqrt0;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:540:       Sqrt_Q1=First_iteration_cell_sum_DI[25]?Q_sqrt1:Q_sqrt_com_1;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:541:       Sqrt_Q2=Sec_iteration_cell_sum_DI[26]?Q_sqrt2:Q_sqrt_com_2;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:542:       Sqrt_Q3=Thi_iteration_cell_sum_DI[27]?Q_sqrt3:Q_sqrt_com_3;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:578:  assign Sqrt_R0=Extra_Final_State_S ? {Partial_remainder_DP[C_DIV_MANT+1],Partial_remainder_DP[C_DIV_MANT+1:0]} : ((Sqrt_start_dly_S)?'0:{1'b0,Partial_remainder_DP[C_DIV_MANT+1:0]});
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:579:  assign Sqrt_R1=Extra_Final_State_S ? {First_iteration_cell_sum_DI[25],First_iteration_cell_sum_DI[23:0],Sqrt_Da0} : {2'b00,First_iteration_cell_sum_DI[24],First_iteration_cell_sum_DI[21:0],Sqrt_Da0} ;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:580:  assign Sqrt_R2=Extra_Final_State_S ? {Sec_iteration_cell_sum_DI[26],Sec_iteration_cell_sum_DI[24:0],Sqrt_Da1} : {3'b000,Sec_iteration_cell_sum_DI[24],Sec_iteration_cell_sum_DI[21:0],Sqrt_Da1};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:581:  assign Sqrt_R3=Extra_Final_State_S ? {Thi_iteration_cell_sum_DI[27],Thi_iteration_cell_sum_DI[25:0],Sqrt_Da2} : {4'b0000,Thi_iteration_cell_sum_DI[24],Thi_iteration_cell_sum_DI[21:0],Sqrt_Da2};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:582:  assign Sqrt_R4=Extra_Final_State_S ? {Fou_iteration_cell_sum_DI[28],Fou_iteration_cell_sum_DI[25:0],Sqrt_Da3} : { Extra_Near_Final_State_S ? {3'b000,Fou_iteration_cell_sum_DI[24],Fou_iteration_cell_sum_DI[22:0],Sqrt_Da3} : {4'b0000,Fou_iteration_cell_sum_DI[24],Fou_iteration_cell_sum_DI[21:0],Sqrt_Da3} };
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:589:  assign First_iteration_cell_div_a_D=(Div_start_dly_S)?{1'b0,Numerator_se_D}:{1'b0,Partial_remainder_DP[C_DIV_MANT:0],Quotient_DP[0]};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:590:  assign Sel_b_for_first_S=(Div_start_dly_S)?1:Quotient_DP[0];
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:591:  assign First_iteration_cell_div_b_D=Sel_b_for_first_S?{1'b0,Denominator_se_DB}:{1'b0,Denominator_se_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:592:  assign First_iteration_cell_a_DO=Sqrt_enable_SO?Sqrt_R0:{1'b0,First_iteration_cell_div_a_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:593:  assign First_iteration_cell_b_DO=Sqrt_enable_SO?Sqrt_Q0:{1'b0,First_iteration_cell_div_b_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:602:  assign Sec_iteration_cell_div_b_D=Sel_b_for_sec_S?{2'b00,Denominator_se_DB}:{2'b00,Denominator_se_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:604:  assign Sec_iteration_cell_a_DO=Sqrt_enable_SO?Sqrt_R1:{2'b00,Sec_iteration_cell_div_a_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:605:  assign Sec_iteration_cell_b_DO=Sqrt_enable_SO?Sqrt_Q1:{2'b00,Sec_iteration_cell_div_b_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:614:  assign Thi_iteration_cell_div_b_D=Sel_b_for_thi_S?{3'b000,Denominator_se_DB}:{3'b000,Denominator_se_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:615:  assign Thi_iteration_cell_a_DO=Sqrt_enable_SO?Sqrt_R2:{3'b000,Thi_iteration_cell_div_a_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:616:  assign Thi_iteration_cell_b_DO=Sqrt_enable_SO?Sqrt_Q2:{3'b000,Thi_iteration_cell_div_b_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:625:  assign Fou_iteration_cell_div_b_D=Sel_b_for_fou_S?{4'b0000,Denominator_se_DB}:{4'b0000,Denominator_se_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:626:  assign Fou_iteration_cell_a_DO=Sqrt_enable_SO?Sqrt_R3:{4'b0000,Fou_iteration_cell_div_a_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:627:  assign Fou_iteration_cell_b_DO=Sqrt_enable_SO?Sqrt_Q3:{4'b0000,Fou_iteration_cell_div_b_D};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:632:       Partial_remainder_DN = Sqrt_enable_SO?Sqrt_R4:Fou_iteration_cell_sum_DI;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:654:         Quotient_DN=Extra_Final_State_S ? {Quotient_DP[C_DIV_MANT:0],First_iteration_cell_carry_DI,Sec_iteration_cell_carry_DI,Thi_iteration_cell_carry_DI,Fou_iteration_cell_carry_DI} : {Quotient_DP[C_DIV_MANT:0],~First_iteration_cell_sum_DI[24],~Sec_iteration_cell_sum_DI[24],~Thi_iteration_cell_sum_DI[24],~Fou_iteration_cell_sum_DI[24]};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:786:   assign Mant_result_prenorm_correct_D= Mant_result_prenorm_noncorrect_D + {Div_enable_SO?Msc_forcorrect_D:24'b0};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:787:   assign Mant_result_prenorm_DO = Accuracy_ctl_Enable_S ? Quotient_DP[C_DIV_MANT+4:4] : {Mant_result_prenorm_correct_D[C_DIV_MANT+1]?Mant_result_prenorm_noncorrect_D:Mant_result_prenorm_correct_D[C_DIV_MANT:0]};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:790:   //assign Round_bit_DO = Accuracy_ctl_Enable_S ? {Div_enable_SO ? {Quotient_DP[3:1],1'b1} : Quotient_DP[3:0]}: 3'b000;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:791:   assign Round_bit_DO = Accuracy_ctl_Enable_S ? {Quotient_DP[3:1],1'b1}: 3'b000;
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:800:     assign Exp_add_a_D = {Sqrt_start_dly_S?{Exp_num_DI[C_DIV_EXP],Exp_num_DI[C_DIV_EXP],Exp_num_DI[C_DIV_EXP],Exp_num_DI[C_DIV_EXP:1]}:{Exp_num_DI[C_DIV_EXP],Exp_num_DI[C_DIV_EXP],Exp_num_DI}};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:801:     assign Exp_add_b_D = {Sqrt_start_dly_S?{1'b0,{C_DIV_EXP_ZERO},Exp_num_DI[0]}:{~Exp_den_DI[C_DIV_EXP],~Exp_den_DI[C_DIV_EXP],~Exp_den_DI}};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:802:     assign Exp_add_c_D = {Div_start_dly_S?{2'b00,{C_DIV_BIAS_AONE}}:{2'b00,{C_DIV_HALF_BIAS}}};
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:803:     assign Exp_result_prenorm_DN  = (Start_dly_S)?{Exp_add_a_D + Exp_add_b_D + Exp_add_c_D}:Exp_result_prenorm_DP;
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:105:   assign OF_SO   = (Op_SI == C_FPU_F2I_CMD) ? OF_SI : (Exp_OF_SI & ~Mant_zero_S) | (~IV_SO & (Inf_a_S ^ Inf_b_S) & (Op_SI != C_FPU_I2F_CMD));
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:106:   assign UF_SO   = (Op_SI == C_FPU_F2I_CMD) ? UF_SI : Exp_UF_SI & Mant_rounded_SI;
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:107:   assign Zero_SO = (Op_SI == C_FPU_F2I_CMD) ? Zero_SI : (Mant_zero_S & ~IV_SO);
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:108:   assign IX_SO   = (Op_SI == C_FPU_F2I_CMD) ? IX_SI : Mant_rounded_SI | OF_SO;
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:143:   assign Inf_SO = (Op_SI == C_FPU_F2I_CMD) ? Inf_SI : Inf_temp_S | (Exp_OF_SI & ~Mant_zero_S);
+ips/fpu/hdl/fpu_v0.1/fpexc.sv:148:   assign Exp_toZero_SO =(Op_SI == C_FPU_I2F_CMD) ? (Zero_a_S & ~Sign_a_DI) : Exp_UF_SI | (Mant_zero_S & ~Exp_toInf_SO);
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:124:   assign Sign_b_D = (OP_SP == C_FPU_SUB_CMD) ? ~Operand_b_DP[C_OP-1] : Operand_b_DP[C_OP-1];
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:341:   assign Sign_res_D = Zero_S ? 1'b0 : Sign_norm_D;
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:350:   assign Mant_res_D = Mant_toZero_S ? C_MANT_ZERO : Mant_norm_D;
+ips/fpu/hdl/fpu_v0.1/fpu_core.sv:352:   assign Result_D = IV_S ? F_QNAN : ((OP_SP == C_FPU_F2I_CMD) ? Result_ftoi_D : {Sign_res_D, Exp_res_D, Mant_res_D[C_MANT-1:0]});
+ips/fpu/hdl/fpu_v0.1/fpu_ftoi.sv:77:   assign Temp_shift_D = Shift_amount_neg_S ? '0 : (Mant_a_D << Shift_amount_D);
+ips/fpu/hdl/fpu_v0.1/fpu_ftoi.sv:85:   assign Result_D  = OF_SO ? (Sign_a_D ? C_MINF : C_INF) : (Sign_a_D ? Temp_twos_D : {Sign_a_D, Temp_shift_D[C_MANT+C_OP-2:C_MANT]});
+ips/fpu/hdl/fpu_v0.1/fpu_add.sv:122:   assign Mant_unshifted_D = {(Exp_agtb_S ? Mant_a_D : Mant_b_D), 3'b0};
+ips/fpu/hdl/fpu_v0.1/fpu_add.sv:123:   assign Mant_shiftIn_D   = {(Exp_agtb_S ? Mant_b_D : Mant_a_D), 2'b0};
+ips/fpu/hdl/fpu_v0.1/fpu_add.sv:157:   assign Mant_addInA_D     = (Mant_invA_S) ? ~Mant_shifted_D   : Mant_shifted_D;
+ips/fpu/hdl/fpu_v0.1/fpu_add.sv:158:   assign Mant_addInB_D     = (Mant_invB_S) ? ~Mant_unshifted_D : Mant_unshifted_D;
+ips/fpu/hdl/fpu_v0.1/fpu_itof.sv:78:   assign Mant_prenorm_D = Sign_int_D ? {Twos_to_unsigned_zero_D,Temp_twos_to_unsigned_D[C_MANT_INT-1:0], C_PADMANT} : {1'b0,Mant_int_D, C_PADMANT};
+ips/fpu/hdl/fpu_v0.1/riscv_fpu.sv:70:   assign result_valid_o = (valid_count_q == CYCLES - 1) ? 1'b1 : 1'b0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:77:   assign fpu_operand_a = (fpu_enable) ? operand_a_i : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:78:   assign fpu_operand_b = (fpu_enable) ? operand_b_i : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:123:   assign divsqrt_operand_a = (div_start | sqrt_start) ? operand_a_i : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:124:   assign divsqrt_operand_b = (div_start)              ? operand_b_i : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:208:   assign fma_operand_a = (fma_enable) ? operand_a_i                                      : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:209:   assign fma_operand_b = (fma_enable) ? {operand_b_i[31] ^ fma_op[1], operand_b_i[30:0]} : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:210:   assign fma_operand_c = (fma_enable) ? {operand_c_i[31] ^ fma_op[0], operand_c_i[30:0]} : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:236:   assign result_o = divsqrt_valid ? divsqrt_result : fpu_valid ? fpu_result : fma_valid ? fma_result : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_private.sv:237:   assign flags_o  = divsqrt_valid ? divsqrt_flags  : fpu_valid ? fpu_flags  : fma_valid ? fma_flags  : '0;
+ips/fpu/hdl/fpu_v0.1/fpu_norm.sv:94:   assign Mant_shAmt_D  = Denormal_S ? Exp_in_DI + Denormals_shift_add_D : Mant_leadingOne_D;
+ips/fpu/hdl/fpu_v0.1/fp_fma_wrapper.sv:78:   assign OpA_DP[0]    = En_i ? OpA_i :'0;
+ips/fpu/hdl/fpu_v0.1/fp_fma_wrapper.sv:79:   assign OpB_DP[0]    = En_i ? {OpB_i[31] ^ Op_i[1],OpB_i[30:0]} :'0;
+ips/fpu/hdl/fpu_v0.1/fp_fma_wrapper.sv:80:   assign OpC_DP[0]    = En_i ? {OpC_i[31] ^ Op_i[0],OpC_i[30:0]} :'0;
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:83:  assign Leading_one_D =  (Sign_amt_DI | Mant_in_DI[3*C_MANT+4]) ? 0 :  (Leading_one_DI);
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:85:  assign LSt_Mant_D = Exp_in_DI[C_EXP+1]?0:((Exp_lg_S)?(Leading_one_D):(Exp_in_DI[C_EXP:0]-1));
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:87:  assign Exp_postsft_D  = Exp_in_DI[C_EXP+1]?0:((Exp_lg_S)?(Exp_in_DI-Leading_one_D):(1)); //1 for denormal numbers
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:96:  assign Num_RS_D=~Exp_in_DI+1+1;            // How many right shifts(RS) are needed to generated a denormal number? >> is need only when Exp_in_DI is negative
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:105:  assign Mant_StickCh_D = Exp_postsft_D[C_EXP+1]?Mant_RS_D[2*C_MANT+3:2] :(Exp_postsft_D[C_EXP+1:0]=='0) ? Mant_postsft_D[2*C_MANT+2:1]:((Mant_postsft_D[3*C_MANT+4] | (Exp_postsft_D==0))?Mant_postsft_D[2*C_MANT+1:0]:{Mant_postsft_D[2*C_MANT:0],1'b0});
+ips/fpu/hdl/fpu_fmac/fpu_norm_fmac.sv:340:   assign Mant_res_DO = (Mant_renorm_S)?Mant_upperRounded_D[C_MANT:1]:Mant_upperRounded_D[C_MANT-1:0];
+ips/fpu/hdl/fpu_fmac/aligner.sv:67: assign Exp_postalig_DO = Sft_amt_D[C_EXP+1] ? Exp_a_DI : {Exp_b_DI + Exp_c_DI - C_BIAS + 27};
+ips/fpu/hdl/fpu_fmac/aligner.sv:73: assign   Mant_postalig_a_DO =Sft_amt_D[C_EXP+1] ? {1'b0, Mant_a_DI, 50'h0}: { Sft_stop_S? 75'h0 :{ Sub_SO ? {1'b1,~Mant_postalig_a_D}:{1'b0,Mant_postalig_a_D} } };
+ips/fpu/hdl/fpu_fmac/aligner.sv:75: assign Sign_postalig_DO = Sft_amt_D[C_EXP+1] ? Sign_a_DI: Sign_b_DI ^ Sign_c_DI;
+ips/fpu/hdl/fpu_fmac/aligner.sv:76: assign Pp_sum_postcal_DO = Sft_amt_D[C_EXP+1] ? '0 : Pp_sum_DI;
+ips/fpu/hdl/fpu_fmac/aligner.sv:77: assign Pp_carry_postcal_DO =  Sft_amt_D[C_EXP+1] ? '0 : Pp_carry_DI;
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:77:   assign Exp_a_DO  = DeN_a_SO?C_EXP_ONE:Operand_a_DI[C_OP-2:C_MANT];
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:78:   assign Exp_b_DO  = DeN_b_S ?C_EXP_ONE:Operand_b_DI[C_OP-2:C_MANT];
+ips/fpu/hdl/fpu_fmac/preprocess_fmac.sv:79:   assign Exp_c_DO  = DeN_c_S ?C_EXP_ONE:Operand_c_DI[C_OP-2:C_MANT];
+ips/fpu/hdl/fpu_fmac/adders.sv:56:   assign Carry_postcor_D = (Sign_amt_DI )? 1'b0 : {(~(| Sign_cor_SI) ^ BL_DI[2*C_MANT+1]) };
+ips/fpu/hdl/fpu_fmac/adders.sv:75:   assign Sum_pos_DO =Sft_stop_SI ? {{26'h0} , Sum_uninv_LD[2*C_MANT+1:0]} : {Sign_amt_DI?  {BH_DI[C_MANT+2:0], {48'b0}} : {Sum_uninv_HD[C_MANT+3] ?  {Sum_inv_HD[C_MANT+2:0] , Sum_inv_LD[2*C_MANT+2:1]} : {Sum_uninv_HD[C_MANT+2:0] , Sum_uninv_LD} } };
+ips/fpu/hdl/fpu_fmac/adders.sv:76:   assign Sign_out_DO = Sign_amt_DI? Sign_postalig_DI : (Sum_uninv_HD[C_MANT+3] ^ Sign_postalig_DI);
+ips/fpu/hdl/fpu_fmac/adders.sv:80:   assign A_LZA_DO = Sign_amt_DI? {BH_DI[C_MANT+2:0], {48'b0}} : {BH_DI[C_MANT+2:0] , {48'b0}};
+ips/fpu/hdl/fpu_fmac/adders.sv:81:   assign B_LZA_DO = Sign_amt_DI? {74'h0} : {{25'h0},Carry_uninv_LS, Sum_uninv_LD};
+ips/fpu/hdl/fpu_utils/fpu_ff.sv:72:        assign index_nodes[2**level-1+l] = (sel_nodes[2**(level+1)-1+l*2] == 1'b1) ?
+ips/fpu/hdl/fpu_utils/fpu_ff.sv:82:          assign index_nodes[2**level-1+k] = (in_flipped[k*2] == 1'b1) ? index_lut[k*2] : index_lut[k*2+1];
+ips/apb/apb_adv_timer/input_stage.sv:99:                    s_int_evnt = s_rise ? 1'b1 : r_event;
+ips/apb/apb_adv_timer/input_stage.sv:106:                    s_int_evnt = s_fall ? 1'b1 : r_event;
+ips/apb/apb_adv_timer/comparator.sv:55:	assign s_2nd_event = timer_sawtooth_i ? timer_end_i : s_match;
+ips/apb/apb_adv_timer/comparator.sv:86:						r_value <= s_match ? 1'b1 : r_value;
+ips/apb/apb_adv_timer/comparator.sv:134:						r_value <= s_match ? ~r_value : r_value;
+ips/apb/apb_adv_timer/comparator.sv:136:						r_value <= s_match ? 1'b0 : r_value;
+ips/apb/apb_adv_timer/up_down_counter.sv:59:	assign s_is_update = r_sawtooth ? (r_counter == r_end) : (r_direction && (r_counter == r_start-1));
+ips/apb/apb_fll_if/apb_fll_if.sv:330:    assign fll1_wrn   = fll1_valid ? ~PWRITE    : 1'b1;
+ips/apb/apb_fll_if/apb_fll_if.sv:331:    assign fll1_add   = fll1_valid ? PADDR[3:2] : '0;
+ips/apb/apb_fll_if/apb_fll_if.sv:332:    assign fll1_data  = fll1_valid ? PWDATA     : '0;
+ips/apb/apb_fll_if/apb_fll_if.sv:334:    assign fll2_wrn   = fll2_valid ? ~PWRITE    : 1'b1;
+ips/apb/apb_fll_if/apb_fll_if.sv:335:    assign fll2_add   = fll2_valid ? PADDR[3:2] : '0;
+ips/apb/apb_fll_if/apb_fll_if.sv:336:    assign fll2_data  = fll2_valid ? PWDATA     : '0;
+ips/apb/apb_fll_if/apb_fll_if.sv:338:    assign fll3_wrn   = fll3_valid ? ~PWRITE    : 1'b1;
+ips/apb/apb_fll_if/apb_fll_if.sv:339:    assign fll3_add   = fll3_valid ? PADDR[3:2] : '0;
+ips/apb/apb_fll_if/apb_fll_if.sv:340:    assign fll3_data  = fll3_valid ? PWDATA     : '0;
+ips/apb/apb_fll_if/apb_fll_if.sv:342:    assign PREADY     = PWRITE ? write_ready : read_ready;
+rtl/tb/tb_pulp.sv:212:   assign w_trstn      = (jtag_mux == JTAG_DPI) ? s_vpi_trstn : (jtag_mux == JTAG_BRIDGE) ? w_bridge_trstn : s_trstn;
+rtl/tb/tb_pulp.sv:213:   assign w_tck        = (jtag_mux == JTAG_DPI) ? s_vpi_tck   : (jtag_mux == JTAG_BRIDGE) ? w_bridge_tck   : s_tck;
+rtl/tb/tb_pulp.sv:214:   assign w_tdi        = (jtag_mux == JTAG_DPI) ? s_vpi_tdi   : (jtag_mux == JTAG_BRIDGE) ? w_bridge_tdi   : s_tdi;
+rtl/tb/tb_pulp.sv:215:   assign w_tms        = (jtag_mux == JTAG_DPI) ? s_vpi_tms   : (jtag_mux == JTAG_BRIDGE) ? w_bridge_tms   : s_tms;
+rtl/tb/dev_dpi/dev_dpi.sv:291:            assign i2s[i].ports[j] = (i2s_isout[i][j] == 1) ? i2s_outputValues[i][j] : 'bz;
+rtl/tb/dev_dpi/dev_dpi.sv:305:         assign gpio[i].port = (gpio_isout[i] == 1) ? gpio_outputValues[i] : 'bz;
+rtl/tb/dev_dpi/dev_dpi.sv:312:            assign cpi[i].ports[j] = (cpi_isout[i][j] == 1) ? cpi_outputValues[i][j] : 'bz;
+rtl/pulpissimo/pad_control.sv:233:   assign oe_spim_sdio0_o  = (pad_mux_i[0 ] == 2'b00) ? s_spi_master0_oe[0] : ((pad_mux_i[0 ] == 2'b01) ? gpio_dir_i[0 ] : ((pad_mux_i[0 ] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:234:   assign oe_spim_sdio1_o  = (pad_mux_i[1 ] == 2'b00) ? s_spi_master0_oe[1] : ((pad_mux_i[1 ] == 2'b01) ? gpio_dir_i[1 ] : ((pad_mux_i[1 ] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:235:   assign oe_spim_sdio2_o  = (pad_mux_i[2 ] == 2'b00) ? s_spi_master0_oe[2] : ((pad_mux_i[2 ] == 2'b01) ? gpio_dir_i[2 ] : ((pad_mux_i[2 ] == 2'b10) ? i2c1_sda_oe_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:236:   assign oe_spim_sdio3_o  = (pad_mux_i[3 ] == 2'b00) ? s_spi_master0_oe[3] : ((pad_mux_i[3 ] == 2'b01) ? gpio_dir_i[3 ] : ((pad_mux_i[3 ] == 2'b10) ? i2c1_scl_oe_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:237:   assign oe_spim_csn0_o   = (pad_mux_i[4 ] == 2'b00) ? 1'b1                : ((pad_mux_i[4 ] == 2'b01) ? gpio_dir_i[4 ] : ((pad_mux_i[4 ] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:238:   assign oe_spim_csn1_o   = (pad_mux_i[5 ] == 2'b00) ? 1'b1                : ((pad_mux_i[5 ] == 2'b01) ? gpio_dir_i[5 ] : ((pad_mux_i[5 ] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:239:   assign oe_spim_sck_o    = (pad_mux_i[6 ] == 2'b00) ? 1'b1                : ((pad_mux_i[6 ] == 2'b01) ? gpio_dir_i[6 ] : ((pad_mux_i[6 ] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:240:   assign oe_uart_rx_o     = (pad_mux_i[7 ] == 2'b00) ? 1'b0                : ((pad_mux_i[7 ] == 2'b01) ? gpio_dir_i[7 ] : ((pad_mux_i[7 ] == 2'b10) ? i2c1_sda_oe_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:241:   assign oe_uart_tx_o     = (pad_mux_i[8 ] == 2'b00) ? 1'b1                : ((pad_mux_i[8 ] == 2'b01) ? gpio_dir_i[8 ] : ((pad_mux_i[8 ] == 2'b10) ? i2c1_scl_oe_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:242:   assign oe_cam_pclk_o    = (pad_mux_i[9 ] == 2'b00) ? 1'b0                : ((pad_mux_i[9 ] == 2'b01) ? gpio_dir_i[9 ] : ((pad_mux_i[9 ] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:243:   assign oe_cam_hsync_o   = (pad_mux_i[10] == 2'b00) ? 1'b0                : ((pad_mux_i[10] == 2'b01) ? gpio_dir_i[10] : ((pad_mux_i[10] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:244:   assign oe_cam_data0_o   = (pad_mux_i[11] == 2'b00) ? 1'b0                : ((pad_mux_i[11] == 2'b01) ? gpio_dir_i[11] : ((pad_mux_i[11] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:245:   assign oe_cam_data1_o   = (pad_mux_i[12] == 2'b00) ? 1'b0                : ((pad_mux_i[12] == 2'b01) ? gpio_dir_i[12] : ((pad_mux_i[12] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:246:   assign oe_cam_data2_o   = (pad_mux_i[13] == 2'b00) ? 1'b0                : ((pad_mux_i[13] == 2'b01) ? gpio_dir_i[13] : ((pad_mux_i[13] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:247:   assign oe_cam_data3_o   = (pad_mux_i[14] == 2'b00) ? 1'b0                : ((pad_mux_i[14] == 2'b01) ? gpio_dir_i[14] : ((pad_mux_i[14] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:248:   assign oe_cam_data4_o   = (pad_mux_i[15] == 2'b00) ? 1'b0                : ((pad_mux_i[15] == 2'b01) ? gpio_dir_i[15] : ((pad_mux_i[15] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:249:   assign oe_cam_data5_o   = (pad_mux_i[16] == 2'b00) ? 1'b0                : ((pad_mux_i[16] == 2'b01) ? gpio_dir_i[16] : ((pad_mux_i[16] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:250:   assign oe_cam_data6_o   = (pad_mux_i[17] == 2'b00) ? 1'b0                : ((pad_mux_i[17] == 2'b01) ? gpio_dir_i[17] : ((pad_mux_i[17] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:251:   assign oe_cam_data7_o   = (pad_mux_i[18] == 2'b00) ? 1'b0                : ((pad_mux_i[18] == 2'b01) ? gpio_dir_i[18] : ((pad_mux_i[18] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:252:   assign oe_cam_vsync_o   = (pad_mux_i[19] == 2'b00) ? 1'b0                : ((pad_mux_i[19] == 2'b01) ? gpio_dir_i[19] : ((pad_mux_i[19] == 2'b10) ? 1'b1          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:253:   assign oe_sdio_clk_o    = (pad_mux_i[20] == 2'b00) ? 1'b1                : ((pad_mux_i[20] == 2'b01) ? gpio_dir_i[20] : ((pad_mux_i[20] == 2'b10) ? 1'b0          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:254:   assign oe_sdio_cmd_o    = (pad_mux_i[21] == 2'b00) ? ~sdio_cmd_oen_i     : ((pad_mux_i[21] == 2'b01) ? gpio_dir_i[21] : ((pad_mux_i[21] == 2'b10) ? 1'b0          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:255:   assign oe_sdio_data0_o  = (pad_mux_i[22] == 2'b00) ? ~sdio_data_oen_i[0] : ((pad_mux_i[22] == 2'b01) ? gpio_dir_i[22] : ((pad_mux_i[22] == 2'b10) ? 1'b0          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:256:   assign oe_sdio_data1_o  = (pad_mux_i[23] == 2'b00) ? ~sdio_data_oen_i[1] : ((pad_mux_i[23] == 2'b01) ? gpio_dir_i[23] : ((pad_mux_i[23] == 2'b10) ? 1'b0          : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:257:   assign oe_sdio_data2_o  = (pad_mux_i[24] == 2'b00) ? ~sdio_data_oen_i[2] : ((pad_mux_i[24] == 2'b01) ? gpio_dir_i[24] : ((pad_mux_i[24] == 2'b10) ? i2c1_sda_oe_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:258:   assign oe_sdio_data3_o  = (pad_mux_i[25] == 2'b00) ? ~sdio_data_oen_i[3] : ((pad_mux_i[25] == 2'b01) ? gpio_dir_i[25] : ((pad_mux_i[25] == 2'b10) ? i2c1_scl_oe_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:259:   assign oe_i2c0_sda_o    = (pad_mux_i[33] == 2'b00) ? i2c0_sda_oe_i       : ((pad_mux_i[33] == 2'b01) ? gpio_dir_i[26] : ((pad_mux_i[33] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:260:   assign oe_i2c0_scl_o    = (pad_mux_i[34] == 2'b00) ? i2c0_scl_oe_i       : ((pad_mux_i[34] == 2'b01) ? gpio_dir_i[27] : ((pad_mux_i[34] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:261:   assign oe_i2s0_sck_o    = (pad_mux_i[35] == 2'b00) ? s_i2s0_sck_oe       : ((pad_mux_i[35] == 2'b01) ? gpio_dir_i[28] : ((pad_mux_i[35] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:262:   assign oe_i2s0_ws_o     = (pad_mux_i[36] == 2'b00) ? s_i2s0_ws_oe        : ((pad_mux_i[36] == 2'b01) ? gpio_dir_i[29] : ((pad_mux_i[36] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:263:   assign oe_i2s0_sdi_o    = (pad_mux_i[37] == 2'b00) ? 1'b0                : ((pad_mux_i[37] == 2'b01) ? gpio_dir_i[30] : ((pad_mux_i[37] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:264:   assign oe_i2s1_sdi_o    = (pad_mux_i[38] == 2'b00) ? 1'b0                : ((pad_mux_i[38] == 2'b01) ? gpio_dir_i[31] : ((pad_mux_i[38] == 2'b10) ? s_alt2        : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:269:   assign out_spim_sdio0_o = (pad_mux_i[0 ] == 2'b00) ? spi_master0_sdo0_i : ((pad_mux_i[0 ] == 2'b01) ? gpio_out_i[0 ] : ((pad_mux_i[0 ] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:270:   assign out_spim_sdio1_o = (pad_mux_i[1 ] == 2'b00) ? spi_master0_sdo1_i : ((pad_mux_i[1 ] == 2'b01) ? gpio_out_i[1 ] : ((pad_mux_i[1 ] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:271:   assign out_spim_sdio2_o = (pad_mux_i[2 ] == 2'b00) ? spi_master0_sdo2_i : ((pad_mux_i[2 ] == 2'b01) ? gpio_out_i[2 ] : ((pad_mux_i[2 ] == 2'b10) ? i2c1_sda_out_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:272:   assign out_spim_sdio3_o = (pad_mux_i[3 ] == 2'b00) ? spi_master0_sdo3_i : ((pad_mux_i[3 ] == 2'b01) ? gpio_out_i[3 ] : ((pad_mux_i[3 ] == 2'b10) ? i2c1_scl_out_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:273:   assign out_spim_csn0_o  = (pad_mux_i[4 ] == 2'b00) ? spi_master0_csn0_i : ((pad_mux_i[4 ] == 2'b01) ? gpio_out_i[4 ] : ((pad_mux_i[4 ] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:274:   assign out_spim_csn1_o  = (pad_mux_i[5 ] == 2'b00) ? spi_master0_csn1_i : ((pad_mux_i[5 ] == 2'b01) ? gpio_out_i[5 ] : ((pad_mux_i[5 ] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:275:   assign out_spim_sck_o   = (pad_mux_i[6 ] == 2'b00) ? spi_master0_sck_i  : ((pad_mux_i[6 ] == 2'b01) ? gpio_out_i[6 ] : ((pad_mux_i[6 ] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:276:   assign out_uart_rx_o    = (pad_mux_i[7 ] == 2'b00) ? 1'b0               : ((pad_mux_i[7 ] == 2'b01) ? gpio_out_i[7 ] : ((pad_mux_i[7 ] == 2'b10) ? i2c1_sda_out_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:277:   assign out_uart_tx_o    = (pad_mux_i[8 ] == 2'b00) ? uart_tx_i          : ((pad_mux_i[8 ] == 2'b01) ? gpio_out_i[8 ] : ((pad_mux_i[8 ] == 2'b10) ? i2c1_scl_out_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:278:   assign out_cam_pclk_o   = (pad_mux_i[9 ] == 2'b00) ? 1'b0               : ((pad_mux_i[9 ] == 2'b01) ? gpio_out_i[9 ] : ((pad_mux_i[9 ] == 2'b10) ? timer1_i[0]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:279:   assign out_cam_hsync_o  = (pad_mux_i[10] == 2'b00) ? 1'b0               : ((pad_mux_i[10] == 2'b01) ? gpio_out_i[10] : ((pad_mux_i[10] == 2'b10) ? timer1_i[1]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:280:   assign out_cam_data0_o  = (pad_mux_i[11] == 2'b00) ? 1'b0               : ((pad_mux_i[11] == 2'b01) ? gpio_out_i[11] : ((pad_mux_i[11] == 2'b10) ? timer1_i[2]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:281:   assign out_cam_data1_o  = (pad_mux_i[12] == 2'b00) ? 1'b0               : ((pad_mux_i[12] == 2'b01) ? gpio_out_i[12] : ((pad_mux_i[12] == 2'b10) ? timer1_i[3]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:282:   assign out_cam_data2_o  = (pad_mux_i[13] == 2'b00) ? 1'b0               : ((pad_mux_i[13] == 2'b01) ? gpio_out_i[13] : ((pad_mux_i[13] == 2'b10) ? timer2_i[0]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:283:   assign out_cam_data3_o  = (pad_mux_i[14] == 2'b00) ? 1'b0               : ((pad_mux_i[14] == 2'b01) ? gpio_out_i[14] : ((pad_mux_i[14] == 2'b10) ? timer2_i[1]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:284:   assign out_cam_data4_o  = (pad_mux_i[15] == 2'b00) ? 1'b0               : ((pad_mux_i[15] == 2'b01) ? gpio_out_i[15] : ((pad_mux_i[15] == 2'b10) ? timer2_i[2]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:285:   assign out_cam_data5_o  = (pad_mux_i[16] == 2'b00) ? 1'b0               : ((pad_mux_i[16] == 2'b01) ? gpio_out_i[16] : ((pad_mux_i[16] == 2'b10) ? timer2_i[3]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:286:   assign out_cam_data6_o  = (pad_mux_i[17] == 2'b00) ? 1'b0               : ((pad_mux_i[17] == 2'b01) ? gpio_out_i[17] : ((pad_mux_i[17] == 2'b10) ? timer3_i[0]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:287:   assign out_cam_data7_o  = (pad_mux_i[18] == 2'b00) ? 1'b0               : ((pad_mux_i[18] == 2'b01) ? gpio_out_i[18] : ((pad_mux_i[18] == 2'b10) ? timer3_i[1]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:288:   assign out_cam_vsync_o  = (pad_mux_i[19] == 2'b00) ? 1'b0               : ((pad_mux_i[19] == 2'b01) ? gpio_out_i[19] : ((pad_mux_i[19] == 2'b10) ? timer3_i[2]    : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:289:   assign out_sdio_clk_o   = (pad_mux_i[20] == 2'b00) ? sdio_clk_i         : ((pad_mux_i[20] == 2'b01) ? gpio_out_i[20] : ((pad_mux_i[20] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:290:   assign out_sdio_cmd_o   = (pad_mux_i[21] == 2'b00) ? sdio_cmd_i         : ((pad_mux_i[21] == 2'b01) ? gpio_out_i[21] : ((pad_mux_i[21] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:291:   assign out_sdio_data0_o = (pad_mux_i[22] == 2'b00) ? sdio_data_i[0]     : ((pad_mux_i[22] == 2'b01) ? gpio_out_i[22] : ((pad_mux_i[22] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:292:   assign out_sdio_data1_o = (pad_mux_i[23] == 2'b00) ? sdio_data_i[1]     : ((pad_mux_i[23] == 2'b01) ? gpio_out_i[23] : ((pad_mux_i[23] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:293:   assign out_sdio_data2_o = (pad_mux_i[24] == 2'b00) ? sdio_data_i[2]     : ((pad_mux_i[24] == 2'b01) ? gpio_out_i[24] : ((pad_mux_i[24] == 2'b10) ? i2c1_sda_out_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:294:   assign out_sdio_data3_o = (pad_mux_i[25] == 2'b00) ? sdio_data_i[3]     : ((pad_mux_i[25] == 2'b01) ? gpio_out_i[25] : ((pad_mux_i[25] == 2'b10) ? i2c1_scl_out_i : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:295:   assign out_i2c0_sda_o   = (pad_mux_i[33] == 2'b00) ? i2c0_sda_out_i     : ((pad_mux_i[33] == 2'b01) ? gpio_out_i[26] : ((pad_mux_i[33] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:296:   assign out_i2c0_scl_o   = (pad_mux_i[34] == 2'b00) ? i2c0_scl_out_i     : ((pad_mux_i[34] == 2'b01) ? gpio_out_i[27] : ((pad_mux_i[34] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:297:   assign out_i2s0_sck_o   = (pad_mux_i[35] == 2'b00) ? i2s_sck0_out_i     : ((pad_mux_i[35] == 2'b01) ? gpio_out_i[28] : ((pad_mux_i[35] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:298:   assign out_i2s0_ws_o    = (pad_mux_i[36] == 2'b00) ? i2s_ws0_out_i      : ((pad_mux_i[36] == 2'b01) ? gpio_out_i[29] : ((pad_mux_i[36] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:299:   assign out_i2s0_sdi_o   = (pad_mux_i[37] == 2'b00) ? 1'b0               : ((pad_mux_i[37] == 2'b01) ? gpio_out_i[30] : ((pad_mux_i[37] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:300:   assign out_i2s1_sdi_o   = (pad_mux_i[38] == 2'b00) ? 1'b0               : ((pad_mux_i[38] == 2'b01) ? gpio_out_i[31] : ((pad_mux_i[38] == 2'b10) ? s_alt2         : s_alt3 ));
+rtl/pulpissimo/pad_control.sv:306:   // assign spi_master1_sdi_o = (pad_mux_i[0]  == 2'b00) ? in_rf_miso_i: (pad_mux_i[40] == 2'b00) ? in_spim1_miso_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:309:   assign sdio_cmd_o     = (pad_mux_i[21] == 2'b00) ? in_sdio_cmd_i   : 1'b0;
+rtl/pulpissimo/pad_control.sv:310:   assign sdio_data_o[0] = (pad_mux_i[22] == 2'b00) ? in_sdio_data0_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:311:   assign sdio_data_o[1] = (pad_mux_i[23] == 2'b00) ? in_sdio_data1_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:312:   assign sdio_data_o[2] = (pad_mux_i[24] == 2'b00) ? in_sdio_data2_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:313:   assign sdio_data_o[3] = (pad_mux_i[25] == 2'b00) ? in_sdio_data3_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:316:   assign cam_pclk_o    = (pad_mux_i[ 9] == 2'b00) ? in_cam_pclk_i  : 1'b0;
+rtl/pulpissimo/pad_control.sv:317:   assign cam_hsync_o   = (pad_mux_i[10] == 2'b00) ? in_cam_hsync_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:318:   assign cam_data_o[0] = (pad_mux_i[11] == 2'b00) ? in_cam_data0_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:319:   assign cam_data_o[1] = (pad_mux_i[12] == 2'b00) ? in_cam_data1_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:320:   assign cam_data_o[2] = (pad_mux_i[13] == 2'b00) ? in_cam_data2_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:321:   assign cam_data_o[3] = (pad_mux_i[14] == 2'b00) ? in_cam_data3_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:322:   assign cam_data_o[4] = (pad_mux_i[15] == 2'b00) ? in_cam_data4_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:323:   assign cam_data_o[5] = (pad_mux_i[16] == 2'b00) ? in_cam_data5_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:324:   assign cam_data_o[6] = (pad_mux_i[17] == 2'b00) ? in_cam_data6_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:325:   assign cam_data_o[7] = (pad_mux_i[18] == 2'b00) ? in_cam_data7_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:326:   assign cam_vsync_o   = (pad_mux_i[19] == 2'b00) ? in_cam_vsync_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:329:   assign i2c1_sda_in_o = (pad_mux_i[2] == 2'b10) ? in_spim_sdio2_i : (pad_mux_i[7] == 2'b10) ? in_uart_rx_i : (pad_mux_i[24] == 2'b10) ? in_sdio_data2_i: 1'b1 ;
+rtl/pulpissimo/pad_control.sv:330:   assign i2c1_scl_in_o = (pad_mux_i[3] == 2'b10) ? in_spim_sdio3_i : (pad_mux_i[8] == 2'b10) ? in_uart_tx_i : (pad_mux_i[25] == 2'b10) ? in_sdio_data3_i: 1'b1 ;
+rtl/pulpissimo/pad_control.sv:356:   assign i2s_sd1_in_o  = (pad_mux_i[29] == 2'b00) ? in_i2s1_sdi_i : (pad_mux_i[27] == 2'b11) ? in_i2s1_sdi_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:359:   assign uart_rx_o     = (pad_mux_i[38] == 2'b00) ? in_uart_rx_i : 1'b1;
+rtl/pulpissimo/pad_control.sv:387:   assign spi_master0_sdi0_o = (pad_mux_i[33] == 2'b00) ? ((spi_master0_mode_i == `SPI_QUAD_RX) ? in_spim_sdio0_i : in_spim_sdio1_i) : 1'b0; // miso in SSPI from pad_spim0_sdio1
+rtl/pulpissimo/pad_control.sv:388:   assign spi_master0_sdi1_o = (pad_mux_i[34] == 2'b00) ? in_spim_sdio1_i                                                            : 1'b0;
+rtl/pulpissimo/pad_control.sv:389:   assign spi_master0_sdi2_o = (pad_mux_i[35] == 2'b00) ? in_spim_sdio2_i                                                            : 1'b0;
+rtl/pulpissimo/pad_control.sv:390:   assign spi_master0_sdi3_o = (pad_mux_i[36] == 2'b00) ? in_spim_sdio3_i                                                            : 1'b0;
+rtl/pulpissimo/pad_control.sv:393:   assign i2c0_sda_in_o      = (pad_mux_i[43] == 2'b00) ? in_i2c0_sda_i : 1'b1;
+rtl/pulpissimo/pad_control.sv:394:   assign i2c0_scl_in_o      = (pad_mux_i[44] == 2'b00) ? in_i2c0_scl_i : 1'b1;
+rtl/pulpissimo/pad_control.sv:420:   assign i2s_sck_in_o       = (pad_mux_i[45] == 2'b00) ? in_i2s0_sck_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:421:   assign i2s_ws_in_o        = (pad_mux_i[46] == 2'b00) ? in_i2s0_ws_i  : 1'b0;
+rtl/pulpissimo/pad_control.sv:422:   assign i2s_sd0_in_o       = (pad_mux_i[47] == 2'b00) ? in_i2s0_sdi_i : 1'b0;
+rtl/pulpissimo/pad_control.sv:425:   assign gpio_in_o[0]  = (pad_mux_i[0]  == 2'b01) ? in_spim_sdio0_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:426:   assign gpio_in_o[1]  = (pad_mux_i[1]  == 2'b01) ? in_spim_sdio1_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:427:   assign gpio_in_o[2]  = (pad_mux_i[2]  == 2'b01) ? in_spim_sdio2_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:428:   assign gpio_in_o[3]  = (pad_mux_i[3]  == 2'b01) ? in_spim_sdio3_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:429:   assign gpio_in_o[4]  = (pad_mux_i[4]  == 2'b01) ? in_spim_csn0_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:430:   assign gpio_in_o[5]  = (pad_mux_i[5]  == 2'b01) ? in_spim_csn1_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:431:   assign gpio_in_o[6]  = (pad_mux_i[6]  == 2'b01) ? in_spim_sck_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:432:   assign gpio_in_o[7]  = (pad_mux_i[7]  == 2'b01) ? in_uart_rx_i    : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:433:   assign gpio_in_o[8]  = (pad_mux_i[8]  == 2'b01) ? in_uart_tx_i    : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:434:   assign gpio_in_o[9]  = (pad_mux_i[9]  == 2'b01) ? in_cam_pclk_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:435:   assign gpio_in_o[10] = (pad_mux_i[10] == 2'b01) ? in_cam_hsync_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:436:   assign gpio_in_o[11] = (pad_mux_i[11] == 2'b01) ? in_cam_data0_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:437:   assign gpio_in_o[12] = (pad_mux_i[12] == 2'b01) ? in_cam_data1_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:438:   assign gpio_in_o[13] = (pad_mux_i[13] == 2'b01) ? in_cam_data2_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:439:   assign gpio_in_o[14] = (pad_mux_i[14] == 2'b01) ? in_cam_data3_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:440:   assign gpio_in_o[15] = (pad_mux_i[15] == 2'b01) ? in_cam_data4_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:441:   assign gpio_in_o[16] = (pad_mux_i[16] == 2'b01) ? in_cam_data5_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:442:   assign gpio_in_o[17] = (pad_mux_i[17] == 2'b01) ? in_cam_data6_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:443:   assign gpio_in_o[18] = (pad_mux_i[18] == 2'b01) ? in_cam_data7_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:444:   assign gpio_in_o[19] = (pad_mux_i[19] == 2'b01) ? in_cam_vsync_i  : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:445:   assign gpio_in_o[20] = (pad_mux_i[20] == 2'b01) ? in_sdio_clk_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:446:   assign gpio_in_o[21] = (pad_mux_i[21] == 2'b01) ? in_sdio_cmd_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:447:   assign gpio_in_o[22] = (pad_mux_i[22] == 2'b01) ? in_sdio_data0_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:448:   assign gpio_in_o[23] = (pad_mux_i[23] == 2'b01) ? in_sdio_data1_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:449:   assign gpio_in_o[24] = (pad_mux_i[24] == 2'b01) ? in_sdio_data2_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:450:   assign gpio_in_o[25] = (pad_mux_i[25] == 2'b01) ? in_sdio_data3_i : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:451:   assign gpio_in_o[26] = (pad_mux_i[33] == 2'b01) ? in_i2c0_sda_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:452:   assign gpio_in_o[27] = (pad_mux_i[34] == 2'b01) ? in_i2c0_scl_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:453:   assign gpio_in_o[28] = (pad_mux_i[35] == 2'b01) ? in_i2s0_sck_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:454:   assign gpio_in_o[29] = (pad_mux_i[36] == 2'b01) ? in_i2s0_ws_i    : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:455:   assign gpio_in_o[30] = (pad_mux_i[37] == 2'b01) ? in_i2s0_sdi_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:456:   assign gpio_in_o[31] = (pad_mux_i[38] == 2'b01) ? in_i2s1_sdi_i   : 1'b0 ;
+rtl/pulpissimo/pad_control.sv:459:   assign pad_cfg_o[0]  = (pad_mux_i[0]  == 2'b01) ? gpio_cfg_i[0]  : pad_cfg_i[0];
+rtl/pulpissimo/pad_control.sv:460:   assign pad_cfg_o[1]  = (pad_mux_i[1]  == 2'b01) ? gpio_cfg_i[1]  : pad_cfg_i[1];
+rtl/pulpissimo/pad_control.sv:461:   assign pad_cfg_o[2]  = (pad_mux_i[2]  == 2'b01) ? gpio_cfg_i[2]  : pad_cfg_i[2];
+rtl/pulpissimo/pad_control.sv:462:   assign pad_cfg_o[3]  = (pad_mux_i[3]  == 2'b01) ? gpio_cfg_i[3]  : pad_cfg_i[3];
+rtl/pulpissimo/pad_control.sv:463:   assign pad_cfg_o[4]  = (pad_mux_i[4]  == 2'b01) ? gpio_cfg_i[4]  : pad_cfg_i[4];
+rtl/pulpissimo/pad_control.sv:464:   assign pad_cfg_o[5]  = (pad_mux_i[5]  == 2'b01) ? gpio_cfg_i[5]  : pad_cfg_i[5];
+rtl/pulpissimo/pad_control.sv:465:   assign pad_cfg_o[6]  = (pad_mux_i[6]  == 2'b01) ? gpio_cfg_i[6]  : pad_cfg_i[6];
+rtl/pulpissimo/pad_control.sv:466:   assign pad_cfg_o[7]  = (pad_mux_i[7]  == 2'b01) ? gpio_cfg_i[7]  : pad_cfg_i[7];
+rtl/pulpissimo/pad_control.sv:467:   assign pad_cfg_o[8]  = (pad_mux_i[8]  == 2'b01) ? gpio_cfg_i[8]  : pad_cfg_i[8];
+rtl/pulpissimo/pad_control.sv:468:   assign pad_cfg_o[9]  = (pad_mux_i[9]  == 2'b01) ? gpio_cfg_i[9]  : pad_cfg_i[9];
+rtl/pulpissimo/pad_control.sv:469:   assign pad_cfg_o[10] = (pad_mux_i[10] == 2'b01) ? gpio_cfg_i[10] : pad_cfg_i[10];
+rtl/pulpissimo/pad_control.sv:470:   assign pad_cfg_o[11] = (pad_mux_i[11] == 2'b01) ? gpio_cfg_i[11] : pad_cfg_i[11];
+rtl/pulpissimo/pad_control.sv:471:   assign pad_cfg_o[12] = (pad_mux_i[12] == 2'b01) ? gpio_cfg_i[12] : pad_cfg_i[12];
+rtl/pulpissimo/pad_control.sv:472:   assign pad_cfg_o[13] = (pad_mux_i[13] == 2'b01) ? gpio_cfg_i[13] : pad_cfg_i[13];
+rtl/pulpissimo/pad_control.sv:473:   assign pad_cfg_o[14] = (pad_mux_i[14] == 2'b01) ? gpio_cfg_i[14] : pad_cfg_i[14];
+rtl/pulpissimo/pad_control.sv:474:   assign pad_cfg_o[15] = (pad_mux_i[15] == 2'b01) ? gpio_cfg_i[15] : pad_cfg_i[15];
+rtl/pulpissimo/pad_control.sv:475:   assign pad_cfg_o[16] = (pad_mux_i[16] == 2'b01) ? gpio_cfg_i[16] : pad_cfg_i[16];
+rtl/pulpissimo/pad_control.sv:476:   assign pad_cfg_o[17] = (pad_mux_i[17] == 2'b01) ? gpio_cfg_i[17] : pad_cfg_i[17];
+rtl/pulpissimo/pad_control.sv:477:   assign pad_cfg_o[18] = (pad_mux_i[18] == 2'b01) ? gpio_cfg_i[18] : pad_cfg_i[18];
+rtl/pulpissimo/pad_control.sv:478:   assign pad_cfg_o[19] = (pad_mux_i[19] == 2'b01) ? gpio_cfg_i[19] : pad_cfg_i[19];
+rtl/pulpissimo/pad_control.sv:479:   assign pad_cfg_o[20] = (pad_mux_i[20] == 2'b01) ? gpio_cfg_i[20] : pad_cfg_i[20];
+rtl/pulpissimo/pad_control.sv:480:   assign pad_cfg_o[21] = (pad_mux_i[21] == 2'b01) ? gpio_cfg_i[21] : pad_cfg_i[21];
+rtl/pulpissimo/pad_control.sv:481:   assign pad_cfg_o[22] = (pad_mux_i[22] == 2'b01) ? gpio_cfg_i[22] : pad_cfg_i[22];
+rtl/pulpissimo/pad_control.sv:482:   assign pad_cfg_o[23] = (pad_mux_i[23] == 2'b01) ? gpio_cfg_i[23] : pad_cfg_i[23];
+rtl/pulpissimo/pad_control.sv:483:   assign pad_cfg_o[24] = (pad_mux_i[24] == 2'b01) ? gpio_cfg_i[24] : pad_cfg_i[24];
+rtl/pulpissimo/pad_control.sv:484:   assign pad_cfg_o[25] = (pad_mux_i[25] == 2'b01) ? gpio_cfg_i[25] : pad_cfg_i[25];
+rtl/pulpissimo/pad_control.sv:492:   assign pad_cfg_o[33] = (pad_mux_i[33] == 2'b01) ? gpio_cfg_i[26] : pad_cfg_i[33];
+rtl/pulpissimo/pad_control.sv:493:   assign pad_cfg_o[34] = (pad_mux_i[34] == 2'b01) ? gpio_cfg_i[27] : pad_cfg_i[34];
+rtl/pulpissimo/pad_control.sv:494:   assign pad_cfg_o[35] = (pad_mux_i[35] == 2'b01) ? gpio_cfg_i[28] : pad_cfg_i[35];
+rtl/pulpissimo/pad_control.sv:495:   assign pad_cfg_o[36] = (pad_mux_i[36] == 2'b01) ? gpio_cfg_i[29] : pad_cfg_i[36];
+rtl/pulpissimo/pad_control.sv:496:   assign pad_cfg_o[37] = (pad_mux_i[37] == 2'b01) ? gpio_cfg_i[30] : pad_cfg_i[37];
+rtl/pulpissimo/pad_control.sv:497:   assign pad_cfg_o[38] = (pad_mux_i[38] == 2'b01) ? gpio_cfg_i[31] : pad_cfg_i[38];
+rtl/pulpissimo/pulpissimo.sv:1048:  //+ assign s_safe2soc_uart_tx = (zynq_safen_uart_i == 1'b1) ? zynq2soc_uart_tx_i : s_uart_tx; // safe -> soc
+rtl/pulpissimo/pulpissimo.sv:1049:  //+ assign zynq2soc_uart_rx_o = (zynq_safen_uart_i == 1'b1) ? s_uart_rx : 1'b0; // soc -> safe
+rtl/pulpissimo/pulpissimo.sv:1050:  //+ assign s_uart_rx          = (zynq_safen_uart_i == 1'b0) ? s_safe2soc_uart_rx : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1055:  assign s_safe2soc_uart_tx          = ~zynq_safen_uart_i ? s_uart_tx : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1056:  assign s_uart_rx                   = ~zynq_safen_uart_i ? s_safe2soc_uart_rx : zynq2soc_uart_rx_i;
+rtl/pulpissimo/pulpissimo.sv:1058:  assign zynq2soc_uart_tx_o          = zynq_safen_uart_i ? s_uart_tx : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1061:  assign zynq2soc_spim_sck_o         = (zynq_safen_spim_i == 1'b1) ? s_spi_master0_sck  : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1062:  assign zynq2soc_spim_csn_o         = (zynq_safen_spim_i == 1'b1) ? s_spi_master0_csn0 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1063:  assign zynq2soc_spim_sdo0_o        = (zynq_safen_spim_i == 1'b1) ? s_spi_master0_sdo0 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1064:  assign zynq2soc_spim_sdo1_o        = (zynq_safen_spim_i == 1'b1) ? s_spi_master0_sdo1 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1065:  assign zynq2soc_spim_sdo2_o        = (zynq_safen_spim_i == 1'b1) ? s_spi_master0_sdo2 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1066:  assign zynq2soc_spim_sdo3_o        = (zynq_safen_spim_i == 1'b1) ? s_spi_master0_sdo3 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1068:  assign s_safe2soc_spi_master0_sck  = (zynq_safen_spim_i == 1'b0) ? s_spi_master0_sck  : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1069:  assign s_safe2soc_spi_master0_csn0 = (zynq_safen_spim_i == 1'b0) ? s_spi_master0_csn0 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1070:  assign s_safe2soc_spi_master0_sdo0 = (zynq_safen_spim_i == 1'b0) ? s_spi_master0_sdo0 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1071:  assign s_safe2soc_spi_master0_sdo1 = (zynq_safen_spim_i == 1'b0) ? s_spi_master0_sdo1 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1072:  assign s_safe2soc_spi_master0_sdo2 = (zynq_safen_spim_i == 1'b0) ? s_spi_master0_sdo2 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1073:  assign s_safe2soc_spi_master0_sdo3 = (zynq_safen_spim_i == 1'b0) ? s_spi_master0_sdo3 : 1'b0;
+rtl/pulpissimo/pulpissimo.sv:1074:  assign s_spi_master0_sdi0          = (zynq_safen_spim_i == 1'b1) ? zynq2soc_spim_sdi0_i : s_safe2soc_spi_master0_sdi0;
+rtl/pulpissimo/pulpissimo.sv:1075:  assign s_spi_master0_sdi1          = (zynq_safen_spim_i == 1'b1) ? zynq2soc_spim_sdi1_i : s_safe2soc_spi_master0_sdi1;
+rtl/pulpissimo/pulpissimo.sv:1076:  assign s_spi_master0_sdi2          = (zynq_safen_spim_i == 1'b1) ? zynq2soc_spim_sdi2_i : s_safe2soc_spi_master0_sdi2;
+rtl/pulpissimo/pulpissimo.sv:1077:  assign s_spi_master0_sdi3          = (zynq_safen_spim_i == 1'b1) ? zynq2soc_spim_sdi3_i : s_safe2soc_spi_master0_sdi3;
+rtl/vip/camera/cam_vip.sv:65:    assign s_currentpixel = r_framesel ? pixel_array1[(r_lineptr*HRES)+r_colptr] : pixel_array0[(r_lineptr*HRES)+r_colptr];
+rtl/vip/camera/cam_vip.sv:66:    assign cam_data_o     = r_bytesel ? {s_currentpixel[12:10],s_currentpixel[7:3]} : {s_currentpixel[23:19],s_currentpixel[15:13]}; //coded with RGB565
+rtl/vip/spi_master_padframe.sv:32:  assign pad = en_i ? in_i : 1'bZ;
+rtl/vip/i2s/i2s_vip_channel.sv:398: assign sck = mode_i ? sck_i : sck_int;
+rtl/vip/i2s/i2s_vip_channel.sv:399: assign ws  = mode_i ? ws_i  : ws_int;
+rtl/vip/i2s/i2s_vip_channel.sv:413:        sck_int = (rst) ? 1'b0 : ~sck_int & ~mode_i & enable_i;
+rtl/vip/i2s/i2s_vip_channel.sv:454:assign DATA_STD   = (WSP) ?  my_memory[COUNTER_ROW_STD+1] : my_memory[COUNTER_ROW_STD];
+rtl/vip/i2s/i2s_vip_channel.sv:721:                `ifdef USE_DELAY #(DELAY_INT_SLAVE/4.0) `endif data_o = (lsb_first_i) ? SHIFT_REG_PDM[0] : SHIFT_REG_PDM[PACKET_SIZE-1];
+rtl/vip/i2s/i2s_vip_channel.sv:723:                `ifdef USE_DELAY #(DELAY_INT_MASTER/4.0) `endif data_o = (lsb_first_i) ? SHIFT_REG_PDM[0] : SHIFT_REG_PDM[PACKET_SIZE-1];
+rtl/vip/i2s/i2s_vip_channel.sv:726:            data_o = (lsb_first_i) ? SHIFT_REG_PDM[0] : SHIFT_REG_PDM[PACKET_SIZE-1];
+rtl/vip/i2s/i2s_vip_channel.sv:728:            data_o = (lsb_first_i) ? SHIFT_REG_PDM[0] : SHIFT_REG_PDM[PACKET_SIZE-1];
+rtl/vip/i2s/i2s_vip_channel.sv:734:                data_o = (lsb_first_i) ? SHIFT_REG_STD[0] : SHIFT_REG_STD[PACKET_SIZE-1];
+rtl/vip/i2s/i2s_vip_channel.sv:741:                data_o = (lsb_first_i) ? SHIFT_REG_STD[0] : SHIFT_REG_STD[PACKET_SIZE-1];
+rtl/vip/i2s/i2s_vip_channel.sv:776:assign clk_snap = (clk_snap_en) ? clk_gen : 1'b0;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:98:    assign WPNeg_in = (WPNeg_ipd === 1'bx) ? 1'b1 : WPNeg_ipd;
+rtl/vip/spi_flash/S25fs256s/model/s25fs256s.v:105:    assign RESETNeg_in = (RESETNeg_ipd === 1'bx) ? 1'b1 : RESETNeg_ipd;
+rtl/vip/spi_flash/S25fs256s/utilities/CreateSDF/testbench.vhd:419:            tdevice_HANG        => 400 ms, --?
+sim/modelsim_libs/fpu_lib/_info:455:!s100 H:?ImXbz5f=2`5:0fG?f:2
+sim/modelsim_libs/fpu_lib/_info:832:!s100 @[GNDR=DB>??AKMBSmP4:3
+sim/modelsim_libs/fpu_lib/_info:1012:I_T@mK==nG1MRdQPoBF?NK2
+sim/modelsim_libs/fpu_lib/_info:1261:DXx4 work 18 preprocess_sv_unit 0 22 ]UPOHO=XH[[0<4PA?6zi<0
+sim/modelsim_libs/fpu_lib/_info:1338:V]UPOHO=XH[[0<4PA?6zi<0
+sim/modelsim_libs/fpu_lib/_info:1344:I]UPOHO=XH[[0<4PA?6zi<0
+sim/modelsim_libs/fpu_lib/_info:1370:IBme_X8=oRo>2HnBZ4J`I?1
+sim/modelsim_libs/fpu_lib/_info:1445:!s100 V;V^bm=JOKY?;9gg9VN=:1
+sim/modelsim_libs/pulp_soc_lib/_info:41:!s100 X6m[VJ=:1[mmk?8LnkZ5o1
+sim/modelsim_libs/pulp_soc_lib/_info:348:Ia9^N@eni18NI1QG=2Z?>40
+sim/modelsim_libs/pulp_soc_lib/_info:1182:I=4QS5U6?BIORS<MJiJz^O3
+sim/modelsim_libs/pulp_soc_lib/_info:1363:IK1=_7PTE:?Ec?l55;B8NK2
+sim/modelsim_libs/udma_qspi_lib/_info:39:!s100 Vd=O`W]a]P=S?Zl@bST5E1
+sim/modelsim_libs/jtag_pulp_lib/_info:191:IE:_=JHOaiEoF_m:3f[5?Y1
+sim/modelsim_libs/generic_FLL_lib/_info:206:V5::YSH2=]^k6YN?Ebak7n3
+sim/modelsim_libs/generic_FLL_lib/_info:271:VY<G6I0b=z]Gc@?:<>V>V=2
+sim/modelsim_libs/generic_FLL_lib/_info:287:DEx4 work 21 fll_glitchfree_clkmux 0 22 Y<G6I0b=z]Gc@?:<>V>V=2
+sim/modelsim_libs/generic_FLL_lib/_info:493:V=f8Gkj_nXg4EEDVfN;9?e3
+sim/modelsim_libs/generic_FLL_lib/_info:516:!s100 eYa8U27J=<5>c3ZCon?Va3
+sim/modelsim_libs/axi_slice_lib/_info:63:!s100 =;OAjA`1@dFn79[XA?PgC0
+sim/modelsim_libs/vip_lib/_info:16:I=LWB:ZSdIF`5h5lGd?9[S2
+sim/modelsim_libs/hwpe_stream_lib/_info:147:!s100 fCTUU?i]Q=`[N?RlzX>j@3
+sim/modelsim_libs/hwpe_stream_lib/_info:173:!s100 ^3zi=IJm?[j<^_EXLJXJi0
+sim/modelsim_libs/apb2per_lib/_info:16:IN?NM@VdGQBN^e=TMZd>?E3
+sim/modelsim_libs/udma_core_lib/_info:183:!s100 MWB6a@YnP9iW=LH=4?@c93
+sim/modelsim_libs/udma_core_lib/_info:208:Ic=TZEn[O`?T8`KJ^:=hY00
+sim/modelsim_libs/udma_core_lib/_info:375:!s100 kYo=1JXIbYz6jao7?M0Jl2
+sim/modelsim_libs/udma_core_lib/_info:447:!s100 f=QWiG?2W^OOmI7kYM[Yo1
+sim/modelsim_libs/L2_tcdm_hybrid_interco_lib/_info:288:IWb=38J2?oEiZ;Ph:5V^W:1
+sim/modelsim_libs/zero_riscy_lib/_info:536:!s100 ZKilA;NKSOG==AhjekX[?3
+sim/modelsim_libs/zero_riscy_lib/_info:634:!s100 Y86`?WcV=mnb2eC?MK0d[1
+sim/modelsim_libs/zero_riscy_lib/_info:787:IG<035=:C5b?3kg[Lf`<KA1
+sim/modelsim_libs/riscv_lib/_info:613:IH0OLjO=4WKj]37lET?H[;3
+sim/modelsim_libs/tb_lib/_info:15:!s100 cii`=3J=jTNbkcCH?<13g0
+sim/modelsim_libs/scm_lib/_info:111:!s100 Cg`Y=0C@W5lA<15o]mQ?M1
+sim/modelsim_libs/scm_lib/_info:112:IiznznOz=2ZU?8i8YW8LAc1
+sim/modelsim_libs/scm_lib/_info:472:I@R=oazm9U0MdDQ9e;Ko?D3
+sim/modelsim_libs/hwpe_ctrl_lib/_info:15:!s100 MC=XI_aJchLz6TznI?JJG2
+sim/modelsim_libs/hwpe_ctrl_lib/_info:16:I=^6kc1I?LnVN;4;JIbJ]U0
+sim/modelsim_libs/hwpe_ctrl_lib/_info:63:DXx4 work 25 hwpe_ctrl_regfile_sv_unit 0 22 5XgD=G]MEMP5ekcn?O0en2
+sim/modelsim_libs/hwpe_ctrl_lib/_info:114:V5XgD=G]MEMP5ekcn?O0en2
+sim/modelsim_libs/hwpe_ctrl_lib/_info:120:I5XgD=G]MEMP5ekcn?O0en2
+sim/modelsim_libs/tech_cells_generic_lib/_info:520:I8E8F=X4kRg>La>8@WO5?e0
+sim/modelsim_libs/apb_interrupt_cntrl_lib/_info:15:!s100 a7hd_@[1=gN34:z1?][K70
+sim/modelsim_libs/hwpe_mac_engine_lib/_info:66:!s100 Cna[jEYb=J@XLHdkP1o?>1
+sim/modelsim_libs/hwpe_mac_engine_lib/_info:408:DXx4 work 15 mac_top_sv_unit 0 22 dn==K]5j4DlX:13V>?V[:1
+sim/modelsim_libs/hwpe_mac_engine_lib/_info:436:Vdn==K]5j4DlX:13V>?V[:1
+sim/modelsim_libs/hwpe_mac_engine_lib/_info:442:Idn==K]5j4DlX:13V>?V[:1
+sim/modelsim_libs/hwpe_mac_engine_lib/_info:643:!s100 a^TZ_7d?jo77=GN1IIgI?1
+sim/modelsim_libs/axi_node_lib/_info:300:!s100 AeKdB^a=oDMg1?6bJ:G4`1
+sim/modelsim_libs/adv_dbg_if_lib/_info:316:IXo7MYe5nN=MU?j]L3X7fF0

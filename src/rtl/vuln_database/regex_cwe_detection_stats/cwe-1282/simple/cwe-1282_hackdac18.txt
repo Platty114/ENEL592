@@ -1,0 +1,96 @@
+ips/hwpe-mac-engine/rtl/f_permutation.v:37:      if (reset) i <= 0;
+ips/hwpe-mac-engine/rtl/f_permutation.v:41:      if (reset) calc <= 0;
+ips/hwpe-mac-engine/rtl/padder.v:56:/*    if (f_ack)  i <= 0; */
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:336:      if(!rd_wrn_i) data_in_reg <= swapped_data_i;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:345:    if(~trstn_i)               str_sync <= 1'b0;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:346:    else if(strobe_i && rdy_o) str_sync <= ~str_sync;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:475:      if(!axi_aresetn) err_reg <= 1'b0;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:476:      else if(err_en) err_reg <= wr_reg ? ((axi_master_b_resp == 2'b00) ? 1'b0 : 1'b1) : ((axi_master_r_resp == 2'b00) ? 1'b0 : 1'b1);
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:482:    if(!axi_aresetn)   data_out_reg <= 32'h0;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:483:    else if(data_o_en) data_out_reg <= swapped_data_out;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:489:    if(!axi_aresetn)     rdy_sync <= 1'b0;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:490:    else if(rdy_sync_en) rdy_sync <= ~rdy_sync;
+ips/adv_dbg_if/rtl/adbg_axi_biu.sv:502:    if(~axi_aresetn) axi_fsm_state <= S_IDLE;
+ips/adv_dbg_if/rtl/syncflop.v:96:	if(~RESETN) sync1 <= 1'b0;
+ips/adv_dbg_if/rtl/syncflop.v:104:	if(~RESETN) sync2 <= 1'b0;
+ips/adv_dbg_if/rtl/syncflop.v:112:	if(~RESETN) syncprev <= 1'b0;
+ips/adv_dbg_if/rtl/syncflop.v:120:	if(~RESETN)         srflop <= 1'b0;
+ips/adv_dbg_if/rtl/syncflop.v:121:	else if(D_RST)    srflop <= 1'b0;
+ips/adv_dbg_if/rtl/syncflop.v:122:	else if (srinput) srflop <= 1'b1;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:411:      if(~trstn_i)          bit_count <= 6'h0;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:412:      else if(bit_ct_rst)   bit_count <= 6'h0;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:413:      else if(bit_ct_en)    bit_count <= bit_count + 6'h1;
+ips/adv_dbg_if/rtl/adbg_axi_module.sv:445:      else if(out_reg_ld_en) data_out_shift_reg <= out_reg_data;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:249:      if(!rd_wrn_i) data_in_reg <= swapped_data_i;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:258:    if(~trstn_i)               str_sync <= 1'b0;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:259:    else if(strobe_i && rdy_o) str_sync <= ~str_sync;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:331:      if(!rstn_i) err_reg <= 1'b0;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:332:      else if(err_en) err_reg <= 1'b0; //TODO check if lint can return err
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:338:    if(!rstn_i)   data_out_reg <= 32'h0;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:339:    else if(data_o_en) data_out_reg <= swapped_data_out;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:345:    if(!rstn_i)     rdy_sync <= 1'b0;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:346:    else if(rdy_sync_en) rdy_sync <= ~rdy_sync;
+ips/adv_dbg_if/rtl/adbg_lint_biu.sv:358:    if(~rstn_i) lint_fsm_state <= S_IDLE;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:456:           if(word_count_zero) module_next_state <= STATE_idle;  // set up a burst of size 0, illegal.
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:461:           if(module_select_i && capture_dr_i) module_next_state <= STATE_Rstatus;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:466:           if(update_dr_i) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:467:           else if (biu_ready) module_next_state <= STATE_Rburst;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:472:           if(update_dr_i) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:473:           else if(bit_count_max && word_count_zero) module_next_state <= STATE_Rcrc;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:478:           if(update_dr_i) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:485:           if(word_count_zero) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:486:           else if(module_select_i && capture_dr_i) module_next_state <= STATE_Wwait;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:491:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:492:           else if(module_select_i && data_register_i[56]) module_next_state <= STATE_Wburst; // Got a start bit
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:497:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:500:                if(word_count_zero) module_next_state <= STATE_Wcrc;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:507:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:508:           else if(word_count_zero) module_next_state <= STATE_Wcrc;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:517:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:518:           else if(bit_count_32) module_next_state <= STATE_Wmatch;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:524:           if(update_dr_i)  module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:568:           if(module_select_i & shift_dr_i) out_reg_shift_en <= 1'b1; // For module regs
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:575:             if(intreg_instruction) regsel_ld_en <= 1'b1;  // For module regs
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:576:             if(intreg_write)       intreg_ld_en <= 1'b1;  // For module regs
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:577:             if(burst_instruction)  cpusel_ld_en <= 1'b1;
+ips/adv_dbg_if/rtl/adbg_or1k_module.sv:712:               if(module_next_state == STATE_Wmatch) tdo_output_sel <= 2'h2;  // This is when the 'match' bit is actually read
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:304:    if(~trstn_i)             bit_count <= 6'h0;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:305:    else if(bit_ct_rst)  bit_count <= 6'h0;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:306:    else if(bit_ct_en)    bit_count <= bit_count + 6'h1;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:339:    else if(out_reg_ld_en) data_out_shift_reg <= out_reg_data;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:346:    if(tdo_output_sel == 2'h0) module_tdo_o <= biu_ready;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:347:    else if(tdo_output_sel == 2'h1) module_tdo_o <= data_out_shift_reg[0];
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:348:    else if(tdo_output_sel == 2'h2) module_tdo_o <= crc_match;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:447:           if(word_count_zero) module_next_state <= STATE_idle;  // set up a burst of size 0, illegal.
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:452:           if(module_select_i && capture_dr_i) module_next_state <= STATE_Rstatus;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:457:           if(update_dr_i) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:458:           else if (biu_ready) module_next_state <= STATE_Rburst;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:463:           if(update_dr_i) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:464:           else if(bit_count_max && word_count_zero) module_next_state <= STATE_Rcrc;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:469:           if(update_dr_i) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:476:           if(word_count_zero) module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:477:           else if(module_select_i && capture_dr_i) module_next_state <= STATE_Wwait;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:482:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:483:           else if(module_select_i && data_register_i[63]) module_next_state <= STATE_Wburst; // Got a start bit
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:488:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:491:            if(word_count_zero) module_next_state <= STATE_Wcrc;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:498:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:499:           else if(word_count_zero) module_next_state <= STATE_Wcrc;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:508:           if(update_dr_i)  module_next_state <= STATE_idle;  // client terminated early
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:509:           else if(bit_count_32) module_next_state <= STATE_Wmatch;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:515:           if(update_dr_i)  module_next_state <= STATE_idle;
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:711:           if(module_next_state == STATE_Wmatch) tdo_output_sel <= 2'h2;  // This is when the 'match' bit is actually read
+ips/adv_dbg_if/rtl/adbg_lint_module.sv:720:           if(module_next_state == STATE_idle) error_reg_en <= 1'b1;
+ips/adv_dbg_if/rtl/bytefifo.v:200:	if(~RSTN)             counter <= 4'h0;
+ips/adv_dbg_if/rtl/bytefifo.v:201:	else if(EN & PUSH_POPn & push_ok)  counter <= counter + 4'h1;
+ips/adv_dbg_if/rtl/bytefifo.v:202:	else if(EN & (~PUSH_POPn) & pop_ok)    counter <= counter - 4'h1;
+ips/adv_dbg_if/rtl/adbg_or1k_biu.sv:136:         if(!rd_wrn_i) data_in_reg <= data_i;
+rtl/pulpissimo/safe_domain_reg_if.sv:290:	  				if(s_extwake_rise)      r_extevent <= 1'b1;
+rtl/pulpissimo/safe_domain_reg_if.sv:292:	  				if(s_extwake_fall)      r_extevent <= 1'b1;
+rtl/pulpissimo/safe_domain_reg_if.sv:294:	  				if(r_extevent_sync[0])  r_extevent <= 1'b1;
+rtl/pulpissimo/safe_domain_reg_if.sv:296:	  				if(!r_extevent_sync[0]) r_extevent <= 1'b1;
+rtl/vip/i2s/i2c_if.v:268:      if (BitCounter < 10) BitCounter <= BitCounter + 1;
+rtl/vip/i2s/i2c_if.v:278:            if (ShiftRegister[00] == 0) WrCycle <= 1;
+rtl/vip/i2s/i2c_if.v:279:            if (ShiftRegister[00] == 1) RdCycle <= 1;
+rtl/vip/i2s/i2c_if.v:374:         if ((SDA == 0) & (SDA_OE == 0)) MACK_Rcvd <= 1;
+rtl/vip/i2s/i2c_if.v:441:            if (MACK_Rcvd) SDA_OE <= 1;

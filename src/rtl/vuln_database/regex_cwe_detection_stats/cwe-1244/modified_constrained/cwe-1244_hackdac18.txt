@@ -1,0 +1,20 @@
+install/tb_pulp.sv:646:            r_stdout_pready <= (i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.psel & i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.penable);
+ips/pulp_soc/rtl/pulpemu/pulpemu_apb_demux.sv:72:  assign zynq2pulp_apb_prdata = (last_sel == `Z2P_SPI_SLAVE) ? zynq2pulp_spi_slave_prdata :
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:118:      assign tcdm_prefifo[ii].req  = (cs == STREAM_WORKING) ? split_streams[ii].valid : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:119:      assign tcdm_prefifo[ii].add  = (cs == STREAM_WORKING) ? gen_addr + ii*4        : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:120:      assign tcdm_prefifo[ii].wen  = (cs == STREAM_WORKING) ? 1'b0                   : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:121:      assign tcdm_prefifo[ii].be   = (cs == STREAM_WORKING) ? split_streams[ii].strb  : '0;
+ips/hwpe-stream/rtl/hwpe_stream_sink.sv:122:      assign tcdm_prefifo[ii].data = (cs == STREAM_WORKING) ? split_streams[ii].data  : '0;
+ips/riscv/riscv_compressed_decoder.sv:297:  assign is_compressed_o = (instr_i[1:0] != 2'b11);
+ips/riscv/riscv_cs_registers.sv:354:      12'h006: if (csr_we_int) fprec_n = (FPU == 1) ? csr_wdata_int[C_PC-1:0]    : '0;
+ips/riscv/riscv_cs_registers.sv:529:      12'h006: if (csr_we_int) fprec_n = (FPU == 1) ? csr_wdata_int[C_PC-1:0]    : '0;
+ips/riscv/riscv_cs_registers.sv:630:  assign fprec_o         = (FPU == 1) ? fprec_q : '0;
+ips/zero-riscy/zeroriscy_compressed_decoder.sv:232:  assign is_compressed_o = (instr_i[1:0] != 2'b11);
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:99:   assign Mant_a_prenorm_zero_S=(Operand_a_DI[C_DIV_MANT-1:0] == C_DIV_MANT_ZERO);
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:100:   assign Mant_b_prenorm_zero_S=(Operand_b_DI[C_DIV_MANT-1:0] == C_DIV_MANT_ZERO);
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:104:   assign Exp_a_prenorm_zero_S=(Exp_a_D == C_DIV_EXP_ZERO);
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:105:   assign Exp_b_prenorm_zero_S=(Exp_b_D == C_DIV_EXP_ZERO);
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:109:   assign Exp_a_prenorm_Inf_NaN_S=(Exp_a_D == C_DIV_EXP_INF);
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/preprocess.sv:110:   assign Exp_b_prenorm_Inf_NaN_S=(Exp_b_D == C_DIV_EXP_INF);
+ips/fpu/hdl/fpu_div_sqrt_tp_nlp/control_tp.sv:803:     assign Exp_result_prenorm_DN  = (Start_dly_S)?{Exp_add_a_D + Exp_add_b_D + Exp_add_c_D}:Exp_result_prenorm_DP;
+rtl/tb/tb_pulp.sv:677:            r_stdout_pready <= (i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.psel & i_dut.soc_domain_i.pulp_soc_i.soc_peripherals_i.s_stdout_bus.penable);
