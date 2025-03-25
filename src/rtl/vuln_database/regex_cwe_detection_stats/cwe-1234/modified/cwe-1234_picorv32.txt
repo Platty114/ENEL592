@@ -1,0 +1,394 @@
+dhrystone/testbench.v:109:		if (resetn && trap) begin
+dhrystone/stdlib.c:135:			dst[0] = v & 0xff;
+dhrystone/stdlib.c:136:			if ((v & 0xff) == 0)
+dhrystone/stdlib.c:140:			dst[1] = v & 0xff;
+dhrystone/stdlib.c:141:			if ((v & 0xff) == 0)
+dhrystone/stdlib.c:145:			dst[2] = v & 0xff;
+dhrystone/stdlib.c:146:			if ((v & 0xff) == 0)
+dhrystone/stdlib.c:150:			dst[3] = v & 0xff;
+dhrystone/stdlib.c:182:			c1 = v1 & 0xff, c2 = v2 & 0xff;
+dhrystone/stdlib.c:187:			c1 = v1 & 0xff, c2 = v2 & 0xff;
+dhrystone/stdlib.c:192:			c1 = v1 & 0xff, c2 = v2 & 0xff;
+dhrystone/stdlib.c:197:			c1 = v1 & 0xff, c2 = v2 & 0xff;
+dhrystone/testbench_nola.v:89:		if (resetn && trap) begin
+firmware/irq.c:17:	if ((irqs & 6) != 0) {
+firmware/irq.c:21:		if ((instr & 3) == 3)
+firmware/irq.c:24:		if (((instr & 3) != 3) != (regs[0] & 1)) {
+firmware/irq.c:28:			if ((instr & 3) == 3)
+firmware/irq.c:37:	if ((irqs & (1<<4)) != 0) {
+firmware/irq.c:42:	if ((irqs & (1<<5)) != 0) {
+firmware/irq.c:47:	if ((irqs & 1) != 0) {
+firmware/irq.c:52:	if ((irqs & 6) != 0)
+firmware/irq.c:57:		if ((instr & 3) == 3)
+firmware/irq.c:63:		if ((irqs & 2) != 0) {
+firmware/irq.c:72:				print_hex(instr, ((instr & 3) == 3) ? 8 : 4);
+firmware/irq.c:77:		if ((irqs & 4) != 0) {
+firmware/irq.c:81:			print_hex(instr, ((instr & 3) == 3) ? 8 : 4);
+picorv32.v:328:		pcpi_int_wait  = |{ENABLE_PCPI && pcpi_wait,  (ENABLE_MUL || ENABLE_FAST_MUL) && pcpi_mul_wait,  ENABLE_DIV && pcpi_div_wait};
+picorv32.v:329:		pcpi_int_ready = |{ENABLE_PCPI && pcpi_ready, (ENABLE_MUL || ENABLE_FAST_MUL) && pcpi_mul_ready, ENABLE_DIV && pcpi_div_ready};
+picorv32.v:333:			ENABLE_PCPI && pcpi_ready: begin
+picorv32.v:341:			ENABLE_DIV && pcpi_div_ready: begin
+picorv32.v:359:	wire softresetn = ~(mem_do_rdata && mem_do_wdata);
+picorv32.v:363:	wire mem_la_firstword = COMPRESSED_ISA && (mem_do_prefetch || mem_do_rinst) && next_pc[1] && !mem_la_secondword;
+picorv32.v:364:	wire mem_la_firstword_xfer = COMPRESSED_ISA && mem_xfer && (!last_mem_valid ? mem_la_firstword : mem_la_firstword_reg);
+picorv32.v:373:	wire mem_la_use_prefetched_high_word = COMPRESSED_ISA && mem_la_firstword && prefetched_high_word && !clear_prefetched_high_word;
+picorv32.v:377:	// By modifying the original (mem_valid && mem_ready) logic to use
+picorv32.v:380:	assign mem_xfer = (mem_valid || mem_ready) || (mem_la_use_prefetched_high_word && mem_do_rinst);
+picorv32.v:383:	wire mem_done = resetn && ((mem_xfer && |mem_state && (mem_do_rinst || mem_do_rdata || mem_do_wdata)) || (&mem_state && mem_do_rinst)) &&
+picorv32.v:384:			(!mem_la_firstword || (~&mem_rdata_latched[1:0] && mem_xfer));
+picorv32.v:386:	assign mem_la_write = resetn && !mem_state && mem_do_wdata;
+picorv32.v:387:	assign mem_la_read = resetn && ((!mem_la_use_prefetched_high_word && !mem_state && (mem_do_rinst || mem_do_prefetch || mem_do_rdata)) ||
+picorv32.v:388:			(COMPRESSED_ISA && mem_xfer && (!last_mem_valid ? mem_la_firstword : mem_la_firstword_reg) && !mem_la_secondword && &mem_rdata_latched[1:0]));
+picorv32.v:393:	assign mem_rdata_latched = COMPRESSED_ISA && mem_la_use_prefetched_high_word ? {16'bx, mem_16bit_buffer} :
+picorv32.v:394:			COMPRESSED_ISA && mem_la_secondword ? {mem_rdata_latched_noshuffle[15:0], mem_16bit_buffer} :
+picorv32.v:395:			COMPRESSED_ISA && mem_la_firstword ? {16'bx, mem_rdata_latched_noshuffle[31:16]} : mem_rdata_latched_noshuffle;
+picorv32.v:406:		if (!(resetn && ~mem_la_write && ~softresetn)) begin
+picorv32.v:451:		if (COMPRESSED_ISA && mem_done && (mem_do_prefetch || mem_do_rinst)) begin
+picorv32.v:534:							if (mem_rdata_latched[12] == 0 && mem_rdata_latched[6:2] == 0) begin // C.JR
+picorv32.v:538:							if (mem_rdata_latched[12] == 0 && mem_rdata_latched[6:2] != 0) begin // C.MV
+picorv32.v:542:							if (mem_rdata_latched[12] != 0 && mem_rdata_latched[11:7] != 0 && mem_rdata_latched[6:2] == 0) begin // C.JALR
+picorv32.v:546:							if (mem_rdata_latched[12] != 0 && mem_rdata_latched[6:2] != 0) begin // C.ADD
+picorv32.v:616:						if (COMPRESSED_ISA && mem_la_read) begin
+picorv32.v:625:								if (~&mem_rdata[1:0] || mem_la_secondword) begin
+picorv32.v:881:		if (mem_do_rinst && mem_done) begin
+picorv32.v:885:			instr_jalr    <= mem_rdata_latched[6:0] == 7'b1100111 && mem_rdata_latched[14:12] == 3'b000;
+picorv32.v:886:			instr_retirq  <= mem_rdata_latched[6:0] == 7'b0001011 && mem_rdata_latched[31:25] == 7'b0000010 && ENABLE_IRQ;
+picorv32.v:887:			instr_waitirq <= mem_rdata_latched[6:0] == 7'b0001011 && mem_rdata_latched[31:25] == 7'b0000100 && ENABLE_IRQ;
+picorv32.v:901:			if (mem_rdata_latched[6:0] == 7'b0001011 && mem_rdata_latched[31:25] == 7'b0000000 && ENABLE_IRQ && ENABLE_IRQ_QREGS)
+picorv32.v:904:			if (mem_rdata_latched[6:0] == 7'b0001011 && mem_rdata_latched[31:25] == 7'b0000010 && ENABLE_IRQ)
+picorv32.v:908:			if (COMPRESSED_ISA && mem_rdata_latched[1:0] != 2'b11) begin
+picorv32.v:1018:								if (mem_rdata_latched[12] == 0 && mem_rdata_latched[11:7] != 0 && mem_rdata_latched[6:2] == 0) begin // C.JR
+picorv32.v:1023:								if (mem_rdata_latched[12] == 0 && mem_rdata_latched[6:2] != 0) begin // C.MV
+picorv32.v:1029:								if (mem_rdata_latched[12] != 0 && mem_rdata_latched[11:7] != 0 && mem_rdata_latched[6:2] == 0) begin // C.JALR
+picorv32.v:1034:								if (mem_rdata_latched[12] != 0 && mem_rdata_latched[6:2] != 0) begin // C.ADD
+picorv32.v:1055:			instr_beq   <= is_beq_bne_blt_bge_bltu_bgeu && mem_rdata_q[14:12] == 3'b000;
+picorv32.v:1056:			instr_bne   <= is_beq_bne_blt_bge_bltu_bgeu && mem_rdata_q[14:12] == 3'b001;
+picorv32.v:1057:			instr_blt   <= is_beq_bne_blt_bge_bltu_bgeu && mem_rdata_q[14:12] == 3'b100;
+picorv32.v:1058:			instr_bge   <= is_beq_bne_blt_bge_bltu_bgeu && mem_rdata_q[14:12] == 3'b101;
+picorv32.v:1059:			instr_bltu  <= is_beq_bne_blt_bge_bltu_bgeu && mem_rdata_q[14:12] == 3'b110;
+picorv32.v:1060:			instr_bgeu  <= is_beq_bne_blt_bge_bltu_bgeu && mem_rdata_q[14:12] == 3'b111;
+picorv32.v:1062:			instr_lb    <= is_lb_lh_lw_lbu_lhu && mem_rdata_q[14:12] == 3'b000;
+picorv32.v:1063:			instr_lh    <= is_lb_lh_lw_lbu_lhu && mem_rdata_q[14:12] == 3'b001;
+picorv32.v:1064:			instr_lw    <= is_lb_lh_lw_lbu_lhu && mem_rdata_q[14:12] == 3'b010;
+picorv32.v:1065:			instr_lbu   <= is_lb_lh_lw_lbu_lhu && mem_rdata_q[14:12] == 3'b100;
+picorv32.v:1066:			instr_lhu   <= is_lb_lh_lw_lbu_lhu && mem_rdata_q[14:12] == 3'b101;
+picorv32.v:1068:			instr_sb    <= is_sb_sh_sw && mem_rdata_q[14:12] == 3'b000;
+picorv32.v:1069:			instr_sh    <= is_sb_sh_sw && mem_rdata_q[14:12] == 3'b001;
+picorv32.v:1070:			instr_sw    <= is_sb_sh_sw && mem_rdata_q[14:12] == 3'b010;
+picorv32.v:1072:			instr_addi  <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b000;
+picorv32.v:1073:			instr_slti  <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b010;
+picorv32.v:1074:			instr_sltiu <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b011;
+picorv32.v:1075:			instr_xori  <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b100;
+picorv32.v:1076:			instr_ori   <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b110;
+picorv32.v:1077:			instr_andi  <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b111;
+picorv32.v:1079:			instr_slli  <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b001 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1080:			instr_srli  <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1081:			instr_srai  <= is_alu_reg_imm && mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0100000;
+picorv32.v:1083:			instr_add   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b000 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1084:			instr_sub   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b000 && mem_rdata_q[31:25] == 7'b0100000;
+picorv32.v:1085:			instr_sll   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b001 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1086:			instr_slt   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b010 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1087:			instr_sltu  <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b011 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1088:			instr_xor   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b100 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1089:			instr_srl   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1090:			instr_sra   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0100000;
+picorv32.v:1091:			instr_or    <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b110 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1092:			instr_and   <= is_alu_reg_reg && mem_rdata_q[14:12] == 3'b111 && mem_rdata_q[31:25] == 7'b0000000;
+picorv32.v:1094:			instr_rdcycle  <= ((mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11000000000000000010) ||
+picorv32.v:1095:			                   (mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11000000000100000010)) && ENABLE_COUNTERS;
+picorv32.v:1096:			instr_rdcycleh <= ((mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11001000000000000010) ||
+picorv32.v:1097:			                   (mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11001000000100000010)) && ENABLE_COUNTERS && ENABLE_COUNTERS64;
+picorv32.v:1098:			instr_rdinstr  <=  (mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11000000001000000010) && ENABLE_COUNTERS;
+picorv32.v:1099:			instr_rdinstrh <=  (mem_rdata_q[6:0] == 7'b1110011 && mem_rdata_q[31:12] == 'b11001000001000000010) && ENABLE_COUNTERS && ENABLE_COUNTERS64;
+picorv32.v:1102:					(COMPRESSED_ISA && mem_rdata_q[15:0] == 16'h9002));
+picorv32.v:1105:			instr_getq    <= mem_rdata_q[6:0] == 7'b0001011 && mem_rdata_q[31:25] == 7'b0000000 && ENABLE_IRQ && ENABLE_IRQ_QREGS;
+picorv32.v:1106:			instr_setq    <= mem_rdata_q[6:0] == 7'b0001011 && mem_rdata_q[31:25] == 7'b0000001 && ENABLE_IRQ && ENABLE_IRQ_QREGS;
+picorv32.v:1107:			instr_maskirq <= mem_rdata_q[6:0] == 7'b0001011 && mem_rdata_q[31:25] == 7'b0000011 && ENABLE_IRQ;
+picorv32.v:1108:			instr_timer   <= mem_rdata_q[6:0] == 7'b0001011 && mem_rdata_q[31:25] == 7'b0000101 && ENABLE_IRQ && ENABLE_IRQ_TIMER;
+picorv32.v:1111:				mem_rdata_q[14:12] == 3'b001 && mem_rdata_q[31:25] == 7'b0000000,
+picorv32.v:1112:				mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0000000,
+picorv32.v:1113:				mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0100000
+picorv32.v:1126:				mem_rdata_q[14:12] == 3'b001 && mem_rdata_q[31:25] == 7'b0000000,
+picorv32.v:1127:				mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0000000,
+picorv32.v:1128:				mem_rdata_q[14:12] == 3'b101 && mem_rdata_q[31:25] == 7'b0100000
+picorv32.v:1228:	assign next_pc = latched_store && latched_branch ? reg_out & ~1 : reg_next_pc;
+picorv32.v:1294:				alu_out = reg_op1 & reg_op2;
+picorv32.v:1295:			BARREL_SHIFTER && (instr_sll || instr_slli):
+picorv32.v:1297:			BARREL_SHIFTER && (instr_srl || instr_srli || instr_sra || instr_srai):
+picorv32.v:1339:				ENABLE_IRQ && irq_state[0]: begin
+picorv32.v:1343:				ENABLE_IRQ && irq_state[1]: begin
+picorv32.v:1344:					cpuregs_wrdata = irq_pending & ~irq_mask;
+picorv32.v:1353:		if (resetn && cpuregs_write && latched_rd)
+picorv32.v:1393:		.wen(resetn && cpuregs_write && latched_rd),
+picorv32.v:1415:	assign launch_next_insn = cpu_state == cpu_state_fetch && decoder_trigger && (!ENABLE_IRQ || irq_delay || irq_active || !(irq_pending & ~irq_mask));
+picorv32.v:1438:		if (WITH_PCPI && CATCH_ILLINSN) begin
+picorv32.v:1439:			if (resetn && pcpi_valid && !pcpi_int_wait) begin
+picorv32.v:1455:		next_irq_pending = ENABLE_IRQ ? irq_pending & LATCHED_IRQ : 'bx;
+picorv32.v:1457:		if (ENABLE_IRQ && ENABLE_IRQ_TIMER && timer) begin
+picorv32.v:1461:		decoder_trigger <= mem_do_rinst && mem_done;
+picorv32.v:1521:					ENABLE_IRQ && irq_state[0]: begin
+picorv32.v:1526:					ENABLE_IRQ && irq_state[1]: begin
+picorv32.v:1527:						eoi <= irq_pending & ~irq_mask;
+picorv32.v:1528:						next_irq_pending = next_irq_pending & irq_mask;
+picorv32.v:1532:				if (ENABLE_TRACE && latched_trace) begin
+picorv32.v:1536:						trace_data <= (irq_active ? TRACE_IRQ : 0) | TRACE_BRANCH | (current_pc & 32'hfffffffe);
+picorv32.v:1553:				if (ENABLE_IRQ && ((decoder_trigger && !irq_active && !irq_delay && |(irq_pending & ~irq_mask)) || irq_state)) begin
+picorv32.v:1563:				if (ENABLE_IRQ && (decoder_trigger || do_waitirq) && instr_waitirq) begin
+picorv32.v:1620:								if (CATCH_ILLINSN && (pcpi_timeout || instr_ecall_ebreak)) begin
+picorv32.v:1641:					ENABLE_COUNTERS && is_rdcycle_rdcycleh_rdinstr_rdinstrh: begin
+picorv32.v:1646:							instr_rdcycleh && ENABLE_COUNTERS64:
+picorv32.v:1650:							instr_rdinstrh && ENABLE_COUNTERS64:
+picorv32.v:1665:					ENABLE_IRQ && ENABLE_IRQ_QREGS && instr_getq: begin
+picorv32.v:1673:					ENABLE_IRQ && ENABLE_IRQ_QREGS && instr_setq: begin
+picorv32.v:1682:					ENABLE_IRQ && instr_retirq: begin
+picorv32.v:1688:						reg_out <= CATCH_MISALIGN ? (cpuregs_rs1 & 32'h fffffffe) : cpuregs_rs1;
+picorv32.v:1693:					ENABLE_IRQ && instr_maskirq: begin
+picorv32.v:1702:					ENABLE_IRQ && ENABLE_IRQ_TIMER && instr_timer: begin
+picorv32.v:1727:					is_jalr_addi_slti_sltiu_xori_ori_andi, is_slli_srli_srai && BARREL_SHIFTER: begin
+picorv32.v:1732:						reg_op2 <= is_slli_srli_srai && BARREL_SHIFTER ? decoded_rs2 : decoded_imm;
+picorv32.v:1760:									if (TWO_CYCLE_ALU || (TWO_CYCLE_COMPARE && is_beq_bne_blt_bge_bltu_bgeu)) begin
+picorv32.v:1761:										alu_wait_2 <= TWO_CYCLE_ALU && (TWO_CYCLE_COMPARE && is_beq_bne_blt_bge_bltu_bgeu);
+picorv32.v:1783:					WITH_PCPI && instr_trap: begin
+picorv32.v:1792:						if (CATCH_ILLINSN && (pcpi_timeout || instr_ecall_ebreak)) begin
+picorv32.v:1810:						if (TWO_CYCLE_ALU || (TWO_CYCLE_COMPARE && is_beq_bne_blt_bge_bltu_bgeu)) begin
+picorv32.v:1811:							alu_wait_2 <= TWO_CYCLE_ALU && (TWO_CYCLE_COMPARE && is_beq_bne_blt_bge_bltu_bgeu);
+picorv32.v:1850:				end else if (TWO_STAGE_SHIFT && reg_sh >= 4) begin
+picorv32.v:1887:					if (!mem_do_prefetch && mem_done) begin
+picorv32.v:1915:					if (!mem_do_prefetch && mem_done) begin
+picorv32.v:1932:			if(ENABLE_IRQ_TIMER && timer)
+picorv32.v:1937:		if (CATCH_MISALIGN && resetn && (mem_do_rdata || mem_do_wdata)) begin
+picorv32.v:1938:			if (mem_wordsize == 0 && reg_op1[1:0] != 0) begin
+picorv32.v:1945:			if (mem_wordsize == 1 && reg_op1[0] != 0) begin
+picorv32.v:1953:		if (CATCH_MISALIGN && resetn && mem_do_rinst && (COMPRESSED_ISA ? reg_pc[0] : |reg_pc[1:0])) begin
+picorv32.v:1960:		if (!CATCH_ILLINSN && decoder_trigger_q && !decoder_pseudo_trigger_q && instr_ecall_ebreak) begin
+picorv32.v:1978:		irq_pending <= next_irq_pending & ~MASKED_IRQ;
+picorv32.v:1997:		rvfi_valid <= resetn && (launch_next_insn || trap) && dbg_valid_insn;
+picorv32.v:2069:			if (dbg_mem_valid && dbg_mem_ready) begin
+picorv32.v:2096:		if (rvfi_valid && rvfi_insn[6:0] == 7'b 1110011 && rvfi_insn[13:12] == 3'b010) begin
+picorv32.v:2136:			if (mem_valid && mem_instr)
+picorv32.v:2242:		if (resetn && pcpi_valid && pcpi_insn[6:0] == 7'b0110011 && pcpi_insn[31:25] == 7'b0000001) begin
+picorv32.v:2274:				next_rdx = ((next_rd & next_rdx) | (next_rd & this_rs2) | (next_rdx & this_rs2)) << 1;
+picorv32.v:2325:		if (mul_finish && resetn) begin
+picorv32.v:2360:	wire pcpi_insn_valid = pcpi_valid && pcpi_insn[6:0] == 7'b0110011 && pcpi_insn[31:25] == 7'b0000001;
+picorv32.v:2369:		if (resetn && (EXTRA_INSN_FFS ? pcpi_insn_valid_q : pcpi_insn_valid)) begin
+picorv32.v:2459:		if (resetn && pcpi_valid && !pcpi_ready && pcpi_insn[6:0] == 7'b0110011 && pcpi_insn[31:25] == 7'b0000001) begin
+picorv32.v:2468:		pcpi_wait <= instr_any_div_rem && resetn;
+picorv32.v:2469:		pcpi_wait_q <= pcpi_wait && resetn;
+picorv32.v:2491:			outsign <= (instr_div && (pcpi_rs1[31] != pcpi_rs2[31]) && |pcpi_rs2) || (instr_rem && pcpi_rs1[31]);
+picorv32.v:2495:		if (!quotient_msk && running) begin
+picorv32.v:2809:			xfer_done <= mem_valid && mem_ready;
+picorv32.v:2810:			if (mem_axi_awready && mem_axi_awvalid)
+picorv32.v:2812:			if (mem_axi_arready && mem_axi_arvalid)
+picorv32.v:2814:			if (mem_axi_wready && mem_axi_wvalid)
+picosoc/picosoc.v:112:	assign iomem_valid = mem_valid && (mem_addr[31:24] > 8'h 01);
+picosoc/picosoc.v:117:	wire spimemio_cfgreg_sel = mem_valid && (mem_addr == 32'h 0200_0000);
+picosoc/picosoc.v:120:	wire        simpleuart_reg_div_sel = mem_valid && (mem_addr == 32'h 0200_0004);
+picosoc/picosoc.v:123:	wire        simpleuart_reg_dat_sel = mem_valid && (mem_addr == 32'h 0200_0008);
+picosoc/picosoc.v:127:	assign mem_ready = (iomem_valid && iomem_ready) || spimem_ready || ram_ready || spimemio_cfgreg_sel ||
+picosoc/picosoc.v:130:	assign mem_rdata = (iomem_valid && iomem_ready) ? iomem_rdata : spimem_ready ? spimem_rdata : ram_ready ? ram_rdata :
+picosoc/picosoc.v:162:		.valid  (mem_valid && mem_addr >= 4*MEM_WORDS && mem_addr < 32'h 0200_0000),
+picosoc/picosoc.v:209:		ram_ready <= mem_valid && !mem_ready && mem_addr < 4*MEM_WORDS;
+picosoc/picosoc.v:215:		.wen((mem_valid && !mem_ready && mem_addr < 4*MEM_WORDS) ? mem_wstrb : 4'b0),
+picosoc/hx8kdemo.v:82:			if (iomem_valid && !iomem_ready && iomem_addr[31:24] == 8'h 03) begin
+picosoc/simpleuart.v:52:	assign reg_dat_wait = reg_dat_we && (send_bitcnt || send_dummy);
+picosoc/simpleuart.v:130:			if (send_divcnt > cfg_divider && send_bitcnt) begin
+picosoc/icebreaker.v:98:			if (iomem_valid && !iomem_ready && iomem_addr[31:24] == 8'h 03) begin
+picosoc/spimemio.v:71:	assign ready = valid && (addr == rd_addr) && rd_valid;
+picosoc/spimemio.v:72:	wire jump = valid && !ready && (addr != rd_addr+4) && rd_valid;
+picosoc/spimemio.v:176:	wire xfer_ddr = din_ddr && din_qspi;
+picosoc/spimemio.v:220:		if (!resetn && softreset) begin
+picosoc/spimemio.v:230:			if (dout_valid && dout_tag == 1) buffer[ 7: 0] <= dout_data;
+picosoc/spimemio.v:231:			if (dout_valid && dout_tag == 2) buffer[15: 8] <= dout_data;
+picosoc/spimemio.v:232:			if (dout_valid && dout_tag == 3) buffer[23:16] <= dout_data;
+picosoc/spimemio.v:233:			if (dout_valid && dout_tag == 4) begin
+picosoc/spimemio.v:450:	assign din_ready = din_valid && resetn && next_fetch;
+picosoc/spimemio.v:571:			if (din_valid && din_ready) begin
+picosoc/firmware.c:47:	uint32_t func[&flashio_worker_end - &flashio_worker_begin];
+picosoc/firmware.c:85:	reg_spictrl = (reg_spictrl & ~0x007f0000) | ((value & 15) << 16);
+picosoc/firmware.c:94:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00000000;
+picosoc/firmware.c:99:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00400000;
+picosoc/firmware.c:104:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00200000;
+picosoc/firmware.c:109:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00600000;
+picosoc/firmware.c:132:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00000000;
+picosoc/firmware.c:137:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00400000;
+picosoc/firmware.c:142:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00240000;
+picosoc/firmware.c:147:	reg_spictrl = (reg_spictrl & ~0x007f0000) | 0x00670000;
+picosoc/firmware.c:262:	if ((reg_spictrl & (1 << 22)) != 0)
+picosoc/firmware.c:268:	if ((reg_spictrl & (1 << 21)) != 0)
+picosoc/firmware.c:274:	if ((reg_spictrl & (1 << 20)) != 0)
+picosoc/firmware.c:418:	print_reg_bit(sr1 & 0x01, "S0  (BUSY)");
+picosoc/firmware.c:419:	print_reg_bit(sr1 & 0x02, "S1  (WEL)");
+picosoc/firmware.c:420:	print_reg_bit(sr1 & 0x04, "S2  (BP0)");
+picosoc/firmware.c:421:	print_reg_bit(sr1 & 0x08, "S3  (BP1)");
+picosoc/firmware.c:422:	print_reg_bit(sr1 & 0x10, "S4  (BP2)");
+picosoc/firmware.c:423:	print_reg_bit(sr1 & 0x20, "S5  (TB)");
+picosoc/firmware.c:424:	print_reg_bit(sr1 & 0x40, "S6  (SEC)");
+picosoc/firmware.c:425:	print_reg_bit(sr1 & 0x80, "S7  (SRP)");
+picosoc/firmware.c:428:	print_reg_bit(sr2 & 0x01, "S8  (SRL)");
+picosoc/firmware.c:429:	print_reg_bit(sr2 & 0x02, "S9  (QE)");
+picosoc/firmware.c:430:	print_reg_bit(sr2 & 0x04, "S10 ----");
+picosoc/firmware.c:431:	print_reg_bit(sr2 & 0x08, "S11 (LB1)");
+picosoc/firmware.c:432:	print_reg_bit(sr2 & 0x10, "S12 (LB2)");
+picosoc/firmware.c:433:	print_reg_bit(sr2 & 0x20, "S13 (LB3)");
+picosoc/firmware.c:434:	print_reg_bit(sr2 & 0x40, "S14 (CMP)");
+picosoc/firmware.c:435:	print_reg_bit(sr2 & 0x80, "S15 (SUS)");
+picosoc/firmware.c:438:	print_reg_bit(sr3 & 0x01, "S16 ----");
+picosoc/firmware.c:439:	print_reg_bit(sr3 & 0x02, "S17 ----");
+picosoc/firmware.c:440:	print_reg_bit(sr3 & 0x04, "S18 (WPS)");
+picosoc/firmware.c:441:	print_reg_bit(sr3 & 0x08, "S19 ----");
+picosoc/firmware.c:442:	print_reg_bit(sr3 & 0x10, "S20 ----");
+picosoc/firmware.c:443:	print_reg_bit(sr3 & 0x20, "S21 (DRV0)");
+picosoc/firmware.c:444:	print_reg_bit(sr3 & 0x40, "S22 (DRV1)");
+picosoc/firmware.c:445:	print_reg_bit(sr3 & 0x80, "S23 (HOLD)");
+picosoc/firmware.c:518:	reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00000000;
+picosoc/firmware.c:530:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00400000;
+picosoc/firmware.c:544:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00500000;
+picosoc/firmware.c:558:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00200000;
+picosoc/firmware.c:572:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00300000;
+picosoc/firmware.c:586:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00600000;
+picosoc/firmware.c:600:		reg_spictrl = (reg_spictrl & ~0x00700000) | 0x00700000;
+picosoc/firmware.c:721:			if (cmd > 32 && cmd < 127)
+picosoc/spiflash.v:128:			if (powered_up && spi_cmd == 'h 03) begin
+picosoc/spiflash.v:144:			if (powered_up && spi_cmd == 'h bb) begin
+picosoc/spiflash.v:169:			if (powered_up && spi_cmd == 'h eb) begin
+picosoc/spiflash.v:194:			if (powered_up && spi_cmd == 'h ed) begin
+README.md:184:`mem_rdata` input to be valid in the cycle with `mem_valid && mem_ready` and
+scripts/quartus/system_tb.v:30:		if (resetn && out_byte_en) begin
+scripts/quartus/system_tb.v:34:		if (resetn && trap) begin
+scripts/quartus/Makefile:30:	-cd $@_build && grep -A3 "Total logic elements" output_files/$@.fit.summary
+scripts/quartus/Makefile:31:	-cd $@_build && grep -B1 "Slack" output_files/$@.sta.summary
+scripts/quartus/system.v:59:			if (mem_la_write && (mem_la_addr >> 2) < MEM_SIZE) begin
+scripts/quartus/system.v:66:			if (mem_la_write && mem_la_addr == 32'h1000_0000) begin
+scripts/quartus/system.v:74:			mem_ready <= mem_valid && !mem_ready && m_read_en;
+scripts/quartus/system.v:83:				mem_valid && !mem_ready && !mem_wstrb && (mem_addr >> 2) < MEM_SIZE: begin
+scripts/quartus/system.v:86:				mem_valid && !mem_ready && |mem_wstrb && (mem_addr >> 2) < MEM_SIZE: begin
+scripts/quartus/system.v:93:				mem_valid && !mem_ready && |mem_wstrb && mem_addr == 32'h1000_0000: begin
+scripts/vivado/system_tb.v:30:		if (resetn && out_byte_en) begin
+scripts/vivado/system_tb.v:34:		if (resetn && trap) begin
+scripts/vivado/Makefile:34:	-grep -B1 -A9 ^Slack $@.log && echo
+scripts/vivado/system.v:59:			if (mem_la_write && (mem_la_addr >> 2) < MEM_SIZE) begin
+scripts/vivado/system.v:66:			if (mem_la_write && mem_la_addr == 32'h1000_0000) begin
+scripts/vivado/system.v:74:			mem_ready <= mem_valid && !mem_ready && m_read_en;
+scripts/vivado/system.v:83:				mem_valid && !mem_ready && !mem_wstrb && (mem_addr >> 2) < MEM_SIZE: begin
+scripts/vivado/system.v:86:				mem_valid && !mem_ready && |mem_wstrb && (mem_addr >> 2) < MEM_SIZE: begin
+scripts/vivado/system.v:93:				mem_valid && !mem_ready && |mem_wstrb && mem_addr == 32'h1000_0000: begin
+scripts/icestorm/example.v:59:		if (resetn && mem_valid && !mem_ready) begin
+scripts/icestorm/example.v:62:				!mem_wstrb && (mem_addr >> 2) < MEM_SIZE: begin
+scripts/icestorm/example.v:66:				|mem_wstrb && (mem_addr >> 2) < MEM_SIZE: begin
+scripts/icestorm/example.v:73:				|mem_wstrb && mem_addr == 32'h1000_0000: begin
+scripts/icestorm/Makefile:29:## main flow: synth/p&r/bitstream
+scripts/icestorm/firmware.c:21:		if ((in_buf & 1) ^ ((in_buf >> 1) & 1))
+scripts/icestorm/firmware.c:55:		if ((counter & ~(~0 << SHIFT_COUNTER_BITS)) == 0)
+scripts/romload/testbench.v:104:		if (mem_valid && mem_ready) begin
+scripts/romload/testbench.v:134:		if (resetn && trap) begin
+scripts/torture/riscv-isa-sim-notrap.diff:7: void processor_t::take_trap(trap_t& t, reg_t epc)
+scripts/torture/Makefile:14:	cd riscv-torture && git checkout 2bc0c42
+scripts/torture/Makefile:15:	cd riscv-torture && patch -p1 < ../riscv-torture-rv32.diff
+scripts/torture/Makefile:16:	cd riscv-torture && patch -p1 < ../riscv-torture-genloop.diff
+scripts/torture/Makefile:17:	cd riscv-torture && ./sbt generator/run && touch build.ok
+scripts/torture/Makefile:22:	+cd riscv-fesvr && git checkout 1c02bd6 && ./configure && make && touch build.ok
+scripts/torture/Makefile:27:	cd riscv-isa-sim && git checkout 10ae74e
+scripts/torture/Makefile:28:	cd riscv-isa-sim && patch -p1 < ../riscv-isa-sim-sbreak.diff
+scripts/torture/Makefile:29:	cd riscv-isa-sim && patch -p1 < ../riscv-isa-sim-notrap.diff
+scripts/torture/Makefile:30:	cd riscv-isa-sim && LDFLAGS="-L../riscv-fesvr" ./configure --with-isa=RV32IMC
+scripts/torture/Makefile:31:	+cd riscv-isa-sim && ln -s ../riscv-fesvr/fesvr . && make && touch build.ok
+scripts/torture/Makefile:52:	cd riscv-torture && ./sbt 'generator/run -C config/test.config -n $(batch_size)'
+scripts/tomthumbtg/testbench.v:55:		if (resetn && trap) begin
+scripts/presyn/testbench.v:40:		if (resetn && mem_valid && !mem_ready) begin
+scripts/presyn/testbench.v:57:		if (resetn && trap) begin
+scripts/cxxdemo/testbench.v:82:		if (mem_valid && mem_ready) begin
+scripts/cxxdemo/testbench.v:108:		if (resetn && trap) begin
+scripts/smtbmc/mulcmp.v:59:			if (pcpi_ready_0 && pcpi_ready_1) begin
+scripts/smtbmc/notrap_validop.v:17:		if (resetn && mem_valid && mem_ready) begin
+scripts/smtbmc/notrap_validop.v:31:		if (mem_instr && mem_ready && mem_valid) begin
+scripts/smtbmc/opcode.v:6:		if (opcode[14:12] == 3'b000 && opcode[6:0] == 7'b1100111) opcode_jump = 1; // JALR
+scripts/smtbmc/opcode.v:14:		if (opcode[14:12] == 3'b000 && opcode[6:0] == 7'b1100011) opcode_branch = 1; // BEQ
+scripts/smtbmc/opcode.v:15:		if (opcode[14:12] == 3'b001 && opcode[6:0] == 7'b1100011) opcode_branch = 1; // BNE
+scripts/smtbmc/opcode.v:16:		if (opcode[14:12] == 3'b100 && opcode[6:0] == 7'b1100011) opcode_branch = 1; // BLT
+scripts/smtbmc/opcode.v:17:		if (opcode[14:12] == 3'b101 && opcode[6:0] == 7'b1100011) opcode_branch = 1; // BGE
+scripts/smtbmc/opcode.v:18:		if (opcode[14:12] == 3'b110 && opcode[6:0] == 7'b1100011) opcode_branch = 1; // BLTU
+scripts/smtbmc/opcode.v:19:		if (opcode[14:12] == 3'b111 && opcode[6:0] == 7'b1100011) opcode_branch = 1; // BGEU
+scripts/smtbmc/opcode.v:27:		if (opcode[14:12] == 3'b000 && opcode[6:0] == 7'b0000011) opcode_load = 1; // LB
+scripts/smtbmc/opcode.v:28:		if (opcode[14:12] == 3'b001 && opcode[6:0] == 7'b0000011) opcode_load = 1; // LH
+scripts/smtbmc/opcode.v:29:		if (opcode[14:12] == 3'b010 && opcode[6:0] == 7'b0000011) opcode_load = 1; // LW
+scripts/smtbmc/opcode.v:30:		if (opcode[14:12] == 3'b100 && opcode[6:0] == 7'b0000011) opcode_load = 1; // LBU
+scripts/smtbmc/opcode.v:31:		if (opcode[14:12] == 3'b101 && opcode[6:0] == 7'b0000011) opcode_load = 1; // LHU
+scripts/smtbmc/opcode.v:39:		if (opcode[14:12] == 3'b000 && opcode[6:0] == 7'b0100011) opcode_store = 1; // SB
+scripts/smtbmc/opcode.v:40:		if (opcode[14:12] == 3'b001 && opcode[6:0] == 7'b0100011) opcode_store = 1; // SH
+scripts/smtbmc/opcode.v:41:		if (opcode[14:12] == 3'b010 && opcode[6:0] == 7'b0100011) opcode_store = 1; // SW
+scripts/smtbmc/opcode.v:49:		if (opcode[14:12] == 3'b000 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // ADDI
+scripts/smtbmc/opcode.v:50:		if (opcode[14:12] == 3'b010 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // SLTI
+scripts/smtbmc/opcode.v:51:		if (opcode[14:12] == 3'b011 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // SLTIU
+scripts/smtbmc/opcode.v:52:		if (opcode[14:12] == 3'b100 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // XORI
+scripts/smtbmc/opcode.v:53:		if (opcode[14:12] == 3'b110 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // ORI
+scripts/smtbmc/opcode.v:54:		if (opcode[14:12] == 3'b111 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // ANDI
+scripts/smtbmc/opcode.v:55:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b001 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // SLLI
+scripts/smtbmc/opcode.v:56:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b101 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // SRLI
+scripts/smtbmc/opcode.v:57:		if (opcode[31:25] == 7'b0100000 && opcode[14:12] == 3'b101 && opcode[6:0] == 7'b0010011) opcode_alui = 1; // SRAI
+scripts/smtbmc/opcode.v:65:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b000 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // ADD
+scripts/smtbmc/opcode.v:66:		if (opcode[31:25] == 7'b0100000 && opcode[14:12] == 3'b000 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // SUB
+scripts/smtbmc/opcode.v:67:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b001 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // SLL
+scripts/smtbmc/opcode.v:68:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b010 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // SLT
+scripts/smtbmc/opcode.v:69:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b011 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // SLTU
+scripts/smtbmc/opcode.v:70:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b100 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // XOR
+scripts/smtbmc/opcode.v:71:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b101 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // SRL
+scripts/smtbmc/opcode.v:72:		if (opcode[31:25] == 7'b0100000 && opcode[14:12] == 3'b101 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // SRA
+scripts/smtbmc/opcode.v:73:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b110 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // OR
+scripts/smtbmc/opcode.v:74:		if (opcode[31:25] == 7'b0000000 && opcode[14:12] == 3'b111 && opcode[6:0] == 7'b0110011) opcode_alu = 1; // AND
+scripts/smtbmc/opcode.v:82:		if (opcode[31:20] == 12'hC00 && opcode[19:12] == 3'b010 && opcode[6:0] == 7'b1110011) opcode_sys = 1; // RDCYCLE
+scripts/smtbmc/opcode.v:83:		if (opcode[31:20] == 12'hC01 && opcode[19:12] == 3'b010 && opcode[6:0] == 7'b1110011) opcode_sys = 1; // RDTIME
+scripts/smtbmc/opcode.v:84:		if (opcode[31:20] == 12'hC02 && opcode[19:12] == 3'b010 && opcode[6:0] == 7'b1110011) opcode_sys = 1; // RDINSTRET
+scripts/smtbmc/opcode.v:85:		if (opcode[31:20] == 12'hC80 && opcode[19:12] == 3'b010 && opcode[6:0] == 7'b1110011) opcode_sys = 1; // RDCYCLEH
+scripts/smtbmc/opcode.v:86:		if (opcode[31:20] == 12'hC81 && opcode[19:12] == 3'b010 && opcode[6:0] == 7'b1110011) opcode_sys = 1; // RDTIMEH
+scripts/smtbmc/opcode.v:87:		if (opcode[31:20] == 12'hC82 && opcode[19:12] == 3'b010 && opcode[6:0] == 7'b1110011) opcode_sys = 1; // RDINSTRETH
+scripts/smtbmc/tracecmp2.v:26:	wire mem_xfer_0 = resetn && mem_valid_0 && mem_ready_0;
+scripts/smtbmc/tracecmp2.v:27:	wire mem_xfer_1 = resetn && mem_valid_1 && mem_ready_1;
+scripts/smtbmc/tracecmp3.v:43:	assign mem_ready = cpu0_mem_valid && cpu1_mem_valid;
+scripts/smtbmc/tracecmp3.v:66:			if (!cpu0_trace_valid && cpu1_trace_valid)
+scripts/smtbmc/tracecmp3.v:72:		if (resetn && cpu0_mem_ready) begin
+scripts/smtbmc/tracecmp.v:25:		if (resetn && mem_valid_0 && mem_ready_0) begin
+scripts/smtbmc/tracecmp.v:31:		if (resetn && mem_valid_1 && mem_ready_1) begin
+scripts/smtbmc/axicheck.v:117:				expect_bvalid_aw = expect_bvalid_aw || (mem_axi_awvalid && mem_axi_awready);
+scripts/smtbmc/axicheck.v:118:				expect_bvalid_w  = expect_bvalid_w  || (mem_axi_wvalid  && mem_axi_wready );
+scripts/smtbmc/axicheck.v:119:				expect_rvalid    = expect_rvalid    || (mem_axi_arvalid && mem_axi_arready);
+scripts/smtbmc/axicheck.v:138:				if (mem_axi_bvalid && mem_axi_bready) begin
+scripts/smtbmc/axicheck.v:143:				if (mem_axi_rvalid && mem_axi_rready) begin
+scripts/csmith/testbench.v:78:		if (mem_valid && mem_ready) begin
+scripts/csmith/testbench.v:79:			if (mem_wstrb && mem_addr == 'h10000000) begin
+scripts/csmith/testbench.v:94:		if (resetn && trap) begin
+scripts/csmith/Makefile:20:	timeout 2 ./test_ref > output_ref.txt && cat output_ref.txt
+scripts/csmith/Makefile:25:	timeout 2 ./test_ref > output_ref.txt && cat output_ref.txt
+scripts/csmith/Makefile:30:	timeout 2 ./test_ref > output_ref.txt && cat output_ref.txt
+scripts/csmith/Makefile:37:	+cd riscv-fesvr && git checkout 1c02bd6 && ./configure && make && touch build.ok
+scripts/csmith/Makefile:42:	cd riscv-isa-sim && git checkout 10ae74e
+scripts/csmith/Makefile:43:	cd riscv-isa-sim && patch -p1 < ../riscv-isa-sim.diff
+scripts/csmith/Makefile:44:	cd riscv-isa-sim && LDFLAGS="-L../riscv-fesvr" ./configure --with-isa=RV32IMC
+scripts/csmith/Makefile:45:	+cd riscv-isa-sim && ln -s ../riscv-fesvr/fesvr . && make && touch build.ok
+scripts/csmith/riscv-isa-sim.diff:37:       if (addr & (sizeof(type##_t)-1)) \
+scripts/csmith/riscv-isa-sim.diff:52: void processor_t::take_trap(trap_t& t, reg_t epc)
+shell.nix:78:# be P&R'd with arachne-pnr and nextpnr, respectively.
+showtrace.py:22:        payload = raw_data & 0xffffffff
+showtrace.py:23:        irq_active = (raw_data & 0x800000000) != 0
+showtrace.py:24:        is_addr = (raw_data & 0x200000000) != 0
+showtrace.py:25:        is_branch = (raw_data & 0x100000000) != 0
+showtrace.py:49:                opcode_fmt = "%08x" if (insn_opcode & 3) == 3 else "    %04x"
+showtrace.py:52:                    pc += 4 if (insn_opcode & 3) == 3 else 2
+testbench.cc:15:	if (flag_vcd && 0==strcmp(flag_vcd, "+vcd")) {
+testbench.cc:25:	if (flag_trace && 0==strcmp(flag_trace, "+trace")) {
+testbench.cc:37:		if (trace_fd && top->clk && top->trace_valid) fprintf(trace_fd, "%9.9lx\n", top->trace_data);
+testbench_ez.v:37:		if (mem_valid && mem_ready) begin
+testbench.v:259:		if (resetn && trap) begin
+testbench.v:407:				if (32 <= latched_wdata && latched_wdata < 128)
+testbench.v:434:		if (!mem_axi_rvalid && latched_raddr_en && async_axi_transaction[3]) handle_axi_rvalid;
+testbench.v:435:		if (!mem_axi_bvalid && latched_waddr_en && latched_wdata_en && async_axi_transaction[4]) handle_axi_bvalid;
+testbench.v:447:		if (mem_axi_rvalid && mem_axi_rready) begin
+testbench.v:451:		if (mem_axi_bvalid && mem_axi_bready) begin
+testbench.v:455:		if (mem_axi_arvalid && mem_axi_arready && !fast_raddr) begin
+testbench.v:461:		if (mem_axi_awvalid && mem_axi_awready && !fast_waddr) begin
+testbench.v:466:		if (mem_axi_wvalid && mem_axi_wready && !fast_wdata) begin
+testbench.v:476:		if (!mem_axi_rvalid && latched_raddr_en && !delay_axi_transaction[3]) handle_axi_rvalid;
+testbench.v:477:		if (!mem_axi_bvalid && latched_waddr_en && latched_wdata_en && !delay_axi_transaction[4]) handle_axi_bvalid;
+testbench_wb.v:152:		if (!wb_rst && trap) begin
+testbench_wb.v:217:	wire valid = wb_cyc_i & wb_stb_i;
+testbench_wb.v:230:	wire ram_we = wb_we_i & valid & wb_ack_o;
+testbench_wb.v:282:		if (valid & wb_ack_o & !ram_we)

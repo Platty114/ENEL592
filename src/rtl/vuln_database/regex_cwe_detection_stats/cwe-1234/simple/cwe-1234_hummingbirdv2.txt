@@ -1,0 +1,17 @@
+riscv-tools/riscv-tests/debug/gdbserver.py:220:        assertEqual(mstatus & (MSTATUS_MIE | MSTATUS_MPRV |
+rtl/e203/perips/sirv_pmu_core.v:339:  assign T_394 = io_regs_ie_write_valid & (unlocked | io_debug_mode);
+rtl/e203/debug/sirv_debug_module.v:421:  wire dtm_wr_interrupt_ena = i_dtm_req_hsked & (dtm_wr_dmcontrol | dtm_wr_dbgram) & dtm_req_bits_data[33];//W1
+rtl/e203/debug/sirv_debug_module.v:422:  wire dtm_wr_haltnot_ena   = i_dtm_req_hsked & (dtm_wr_dmcontrol | dtm_wr_dbgram) & (~dtm_req_bits_data[32]);//W0
+rtl/e203/core/e203_exu_alu_lsuagu.v:303:  assign state_1st_exit_ena = icb_sta_is_1st & (agu_icb_rsp_hsked | flush_pulse);
+rtl/e203/core/e203_exu_alu_lsuagu.v:329:  assign state_wait2nd_exit_ena = icb_sta_is_wait2nd & (agu_icb_cmd_ready | flush_pulse);
+rtl/e203/core/e203_exu_alu_lsuagu.v:335:  assign state_2nd_exit_ena = icb_sta_is_2nd & (agu_icb_rsp_hsked | flush_pulse);
+rtl/e203/core/e203_exu_alu_lsuagu.v:343:  assign state_wbck_exit_ena = icb_sta_is_wbck & (agu_o_ready | flush_pulse);
+rtl/e203/core/e203_exu_alu_lsuagu.v:475:                           | (agu_i_amo & (icb_sta_is_wait2nd | icb_sta_is_2nd | icb_sta_is_wbck))
+rtl/e203/core/e203_exu_alu_lsuagu.v:486:                          : (agu_i_amo & (icb_sta_is_wait2nd | icb_sta_is_2nd | icb_sta_is_wbck)) ? agu_i_rs1
+rtl/e203/core/e203_exu_alu_lsuagu.v:498:                          : (agu_i_amo & (icb_sta_is_wait2nd | icb_sta_is_2nd | icb_sta_is_wbck)) ? agu_addr_gen_op2
+rtl/e203/core/e203_exu_alu_muldiv.v:207:  assign state_quot_corr_exit_ena = (muldiv_sta_is_quot_corr & (flush_pulse | 1'b1));
+rtl/e203/core/e203_exu_alu_muldiv.v:213:  assign state_remd_corr_exit_ena = (muldiv_sta_is_remd_corr & (flush_pulse | muldiv_o_hsked));
+rtl/e203/core/e203_exu_alu_muldiv.v:437:  wire div_special_cases = i_op_div & (div_by_0 | div_ovf);
+rtl/e203/core/e203_exu_alu_muldiv.v:487:  wire req_alu_sel2 = i_op_div & (muldiv_sta_is_0th | muldiv_sta_is_exec);
+rtl/e203/core/e203_exu_decode.v:285:  wire rv16_lui_ilgl = rv16_lui & (rv16_rd_x0 | rv16_rd_x2 | (rv16_instr_6_2_is0s & rv16_instr_12_is0));
+rtl/e203/core/e203_exu_decode.v:1089:  wire rv16_need_cb_rss2  = rv16_format_cb & (rv16_beqz | rv16_bnez);

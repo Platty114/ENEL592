@@ -15,8 +15,6 @@ occur even if the lock is prohibiting it.
 modified
  [~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
 
-modified constrained
-
 simple
 [~a-zA-Z0-9_\-\.]+ *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+
 

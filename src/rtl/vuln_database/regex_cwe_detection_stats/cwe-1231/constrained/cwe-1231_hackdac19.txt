@@ -1,0 +1,33 @@
+src/register_interface/src/axi_lite_to_reg.sv:114:      if (reg_wr_ack && wr2_ready)
+src/register_interface/src/axi_lite_to_reg.sv:179:      if (reg_rd_ack && rd1_ready) begin
+src/register_interface/src/axi_lite_to_reg.sv:254:    if (reg_wr_req && reg_rd_req)
+src/csr_regfile.sv:642:            if (debug_req_i && commit_instr_i[0].valid) begin
+src/decoder.sv:459:                            if (~allow_replication & instr.rvftype.repl) illegal_instr = 1'b1;
+src/axi_node/src/axi_RR_Flag_Req.sv:66:          if( data_req_i  & data_gnt_i )
+src/axi_node/src/axi_regs_top.sv:202:    if (!s_axi_aresetn && s_axi_local_reset)
+src/axi_node/src/axi_regs_top.sv:225:      if (awready && s_axi_awvalid)
+src/axi_node/src/axi_regs_top.sv:232:      else if (awaddr_done_reg && wresp_done_reg)
+src/axi_node/src/axi_regs_top.sv:253:      if (wready && s_axi_wvalid)
+src/axi_node/src/axi_regs_top.sv:260:      else if (wdata_done_reg && wresp_done_reg)
+src/axi_node/src/axi_regs_top.sv:279:      if (awaddr_done_reg && wdata_done_reg && !wresp_done_reg)
+src/axi_node/src/axi_regs_top.sv:313:      if (arready && s_axi_arvalid)
+src/axi_node/src/axi_regs_top.sv:319:      else if (araddr_done_reg && rresp_done_reg)
+src/debug/dmi_jtag.sv:176:        if (capture_dr && state_q inside {Read, WaitReadValid}) begin
+src/debug/dmi_jtag.sv:190:        if (dmi_reset && dtmcs_select && rst_ni) begin
+src/debug/dm_sba.sv:73:                if (sbaddress_write_valid_i && sbreadonaddr_i)  state_d = Read;
+src/debug/dm_sba.sv:77:                if (sbdata_read_valid_i && sbreadondata_i) state_d = Read;
+src/debug/dm_csrs.sv:224:        if (dmi_req_ready_o && dmi_req_valid_i && dtm_op == dm::DTM_READ) begin
+src/debug/dm_csrs.sv:297:        if (dmi_req_ready_o && dmi_req_valid_i && dtm_op == dm::DTM_WRITE) begin
+src/store_unit.sv:143:                if (st_ready && dtlb_hit_i) begin
+src/fpga-support/rtl/AxiToAxiLitePc.sv:98:          if (AxiLite_PM.w_ready && AxiLite_PM.aw_ready) begin // Both AW and W channels fire.
+src/fpga-support/rtl/AxiToAxiLitePc.sv:130:        if (Axi_PS.b_ready && AxiLite_PM.b_valid) begin
+src/cache_subsystem/std_icache.sv:351:                if (axi_resp_i.r_valid && axi_resp_i.r.last) begin
+src/cache_subsystem/serpent_dcache_mem.sv:342:                if(vld_req[i] & vld_we) begin
+src/cache_subsystem/serpent_dcache_wbuffer.sv:430:    if(miss_req_o & miss_ack_i) begin
+src/cache_subsystem/serpent_dcache_wbuffer.sv:441:    if(req_port_i.data_req & rdy) begin
+src/branch_unit.sv:83:                    if (branch_predict_i.predict_taken && target_address != branch_predict_i.predict_address) begin
+src/perf_counters.sv:100:            if (resolved_branch_i.valid && resolved_branch_i.is_mispredict)
+src/axi/src/axi_arbiter.sv:50:    end else if (arb.out_req && arb.out_ack) begin
+src/axi/src/axi_arbiter.sv:105:        if (in_req_i[iA] && in_req_i[iB])
+src/load_unit.sv:239:        if (req_port_i.data_rvalid && state_q != WAIT_FLUSH) begin
+tb/tb_serpent_icache/hdl/tlb_emul.sv:64:  if (req_i.fetch_req && tlb_ready_q) begin

@@ -1,0 +1,14 @@
+src/common_cells/src/lfsr_8bit.sv:59:        if (en_i) shift_q <= shift_d;
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:117:          if(BEn_SI[0]) Mem_DP[Addr_DI][0] <= WrData_DI[7:0];
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:118:          if(BEn_SI[1]) Mem_DP[Addr_DI][1] <= WrData_DI[15:8];
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:119:          if(BEn_SI[2]) Mem_DP[Addr_DI][2] <= WrData_DI[23:16];
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:120:          if(BEn_SI[3]) Mem_DP[Addr_DI][3] <= WrData_DI[31:24];
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:121:          if(BEn_SI[4]) Mem_DP[Addr_DI][4] <= WrData_DI[39:32];
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:122:          if(BEn_SI[5]) Mem_DP[Addr_DI][5] <= WrData_DI[47:40];
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:123:          if(BEn_SI[6]) Mem_DP[Addr_DI][6] <= WrData_DI[55:48];
+src/fpga-support/rtl/SyncSpRamBeNx64.sv:124:          if(BEn_SI[7]) Mem_DP[Addr_DI][7] <= WrData_DI[63:56];
+src/fpga-support/rtl/SyncSpRamBeNx32.sv:113:          if(BEn_SI[0]) Mem_DP[Addr_DI][0] <= WrData_DI[7:0];
+src/fpga-support/rtl/SyncSpRamBeNx32.sv:114:          if(BEn_SI[1]) Mem_DP[Addr_DI][1] <= WrData_DI[15:8];
+src/fpga-support/rtl/SyncSpRamBeNx32.sv:115:          if(BEn_SI[2]) Mem_DP[Addr_DI][2] <= WrData_DI[23:16];
+src/fpga-support/rtl/SyncSpRamBeNx32.sv:116:          if(BEn_SI[3]) Mem_DP[Addr_DI][3] <= WrData_DI[31:24];
+tb/common/mock_uart.sv:96:                        if (pwdata_i[0]) fifo_enabled <= 1'b1;

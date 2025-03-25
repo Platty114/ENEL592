@@ -1,0 +1,22 @@
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:108:    .enable_i        ( enable & (enable_reservoir | ctrl.realign) & ~real_last ),
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:106:    .enable_i        ( enable & (enable_reservoir | ctrl.realign) & ~real_last ),
+ips/jtag_pulp/src/tap_top.v:186:      if(tms_i & (~lock_in | test_logic_reset | sel_ir_scan))
+ips/jtag_pulp/src/tap_top.v:208:  if(~tms_i & (test_logic_reset | run_test_idle | update_dr | update_ir))
+ips/jtag_pulp/src/tap_top.v:222:  if(tms_i & (run_test_idle | update_dr | update_ir))
+ips/jtag_pulp/src/tap_top.v:250:  if(~tms_i & (capture_dr | shift_dr | exit2_dr))
+ips/jtag_pulp/src/tap_top.v:264:  if(tms_i & (capture_dr | shift_dr))
+ips/jtag_pulp/src/tap_top.v:278:  if(~tms_i & (exit1_dr | pause_dr))
+ips/jtag_pulp/src/tap_top.v:306:  if(tms_i & (exit1_dr | exit2_dr))
+ips/jtag_pulp/src/tap_top.v:348:  if(~tms_i & (capture_ir | shift_ir | exit2_ir))
+ips/jtag_pulp/src/tap_top.v:362:  if(tms_i & (capture_ir | shift_ir))
+ips/jtag_pulp/src/tap_top.v:376:  if(~tms_i & (exit1_ir | pause_ir))
+ips/jtag_pulp/src/tap_top.v:404:  if(tms_i & (exit1_ir | exit2_ir))
+ips/riscv/riscv_mult.sv:68:  //  | || .  | | | | _| (_ | _||   / | |\/| | |_| | |__| |    //
+ips/riscv/riscv_ex_stage.sv:197:    if (apu_valid & (apu_singlecycle | apu_multicycle)) begin
+ips/riscv/riscv_prefetch_buffer.sv:241:        if (req_i & (fifo_ready | branch_i | hwlp_branch | (hwlp_masked & valid_stored))) begin
+ips/riscv/riscv_prefetch_buffer.sv:287:        if (req_i & (fifo_ready | branch_i | hwlp_branch |hwlp_masked)) begin
+ips/zero-riscy/zeroriscy_prefetch_buffer.sv:130:        if (req_i & (fifo_ready | branch_i )) begin
+ips/zero-riscy/zeroriscy_prefetch_buffer.sv:168:        if (req_i & (fifo_ready | branch_i)) begin
+ips/zero-riscy/zeroriscy_controller.sv:306:              else if (~branch_set_i & ~jump_set_i & (mret_insn_i | ecall_insn_i | pipe_flush_i | ebrk_insn_i | illegal_insn_i | csr_status_i))
+ips/apb/apb_gpio/apb_gpio.sv:99:    assign s_is_int_rifa =   s_gpio_inttype1 & ~s_gpio_inttype0 & (s_gpio_rise | s_gpio_fall); // inttype 10 rise
+ips/apb/apb_gpio/apb_gpio.sv:102:    assign s_is_int_all  = r_gpio_inten & r_gpio_en & (s_is_int_rise | s_is_int_fall | s_is_int_rifa);

@@ -1,0 +1,144 @@
+ips/generic_FLL/fe/model/gf22_DCO_model.tc.vhd:124:        LocalClock_C  <= '0' after 34 ns;
+ips/generic_FLL/fe/rtl/FLL_settling_monitor.vhd:119:        CurrentLock_DN      <= '0';
+ips/generic_FLL/fe/rtl/FLL_settling_monitor.vhd:124:      CurrentLock_DN      <= '0';
+ips/generic_FLL/fe/rtl/FLL_settling_monitor.vhd:134:      CurrentLock_DP      <= '0';
+ips/generic_FLL/fe/rtl/FLL_settling_monitor.vhd:163:       STACurrentLock_DN <= '0';
+ips/generic_FLL/fe/rtl/FLL_settling_monitor.vhd:164:       STALockCnt_DN     <= (others => '0');
+ips/generic_FLL/fe/rtl/FLL_settling_monitor.vhd:173:      STACurrentLock_DP <= '0';
+ips/generic_FLL/fe/rtl/FLL_settling_monitor.vhd:174:      STALockCnt_DP     <= (others => '0');
+ips/generic_FLL/fe/rtl/FLL_glitchfree_clkmux.vhd:79:  ClkA_C <= ClkIn0_CI;
+ips/generic_FLL/fe/rtl/FLL_zerodelta.vhd:89:  RetClkInv_C <= (not RefClk_CI) when TestMode_TI = '0' else RefClk_CI;
+ips/generic_FLL/fe/rtl/FLL_zerodelta.vhd:115:      elsif RetDelay_S = "1111" then RetDelayClkGtEn_S <= '0';
+ips/generic_FLL/fe/rtl/FLL_zerodelta.vhd:122:      elsif RetDelay_S = "0000" then RetDelayClkGtEn_S <= '0';
+ips/generic_FLL/fe/rtl/FLL_zerodelta.vhd:148:      elsif OpModeDelay_SP = "111" then OpModeClkGtEn_S  <= '0';
+ips/generic_FLL/fe/rtl/FLL_zerodelta.vhd:154:      elsif OpModeDelay_SP = "000" then OpModeClkGtEn_S  <= '0';
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:329:  CfgClkSel_S <= '1' when (CfgCfgClkSel_S = '1') or (CfgOpMode_S = '1') else '0';
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:367:  FLLclkoutEnable_S <= '0' when ((FLLOE = '0') or (TM = '1')) else Lock_S when CfgLockGatedClkOut_S = '1' else '1';
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:579:  LockReset_S <= '1' when (CfgReqEdge_S = '1' and CFGWEB = '0' and CFGAD = "01") else
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:608:  CfgLockGatedClkOut_S        <= CfgReg1Out_D(30);  -- def: 1 , efuse: 0
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:609:  CfgFLLOutClkDiv_S           <= CfgReg1Out_D(29 downto 26);  -- def: 0x1
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:611:  CfgTargetRefClkMultFactor_D <= CfgReg1Out_D(15 downto 0);
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:629:  CfgOpenLoopWhenLocked_S     <= CfgReg2Out_D(30);  -- def: 0
+ips/generic_FLL/fe/rtl/FLL_digital.vhd:630:  CfgCfgClkSel_S              <= CfgReg2Out_D(29);  -- def: 0
+ips/generic_FLL/fe/rtl/FLL_dither_pattern_gen.vhd:71:  Feedback_DN      <= unsigned("0" & Frac_DP) + unsigned("0" & Feedback_DP(FRACTIONAL_BITS-1 downto 0));
+ips/generic_FLL/fe/rtl/FLL_dither_pattern_gen.vhd:77:      Feedback_DP <= (others => '0');
+ips/generic_FLL/fe/rtl/FLL_clk_divider.vhd:176:        ClkDivSyncCnt_C <= (others => '0');
+ips/pulp_soc/rtl/pulpemu/pulpemu_zynq2pulp_gpio.sv:68:            cg_clken       <= 1'b0;
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:417:	     s_ref_clk0    <= 1'b0;
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:418:	     s_ref_clk1    <= 1'b0;
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:419:	     s_ref_clk2    <= 1'b0;
+ips/pulp_soc/rtl/components/apb_timer_unit.sv:424:	     s_ref_clk1    <= s_ref_clk0;
+ips/udma/udma_sdio/rtl/sdio_txrx_data.sv:607:        r_cnt_block   <= 0;
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:169:      r_single_block <= 0;
+ips/udma/udma_sdio/rtl/sdio_txrx.sv:177:        r_single_block <= 0;
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:185:            r_data_block_size <= 'h0;
+ips/udma/udma_sdio/rtl/udma_sdio_reg_if.sv:186:            r_data_block_num  <= 'h0;
+ips/udma/udma_qspi/rtl/udma_spim_ctrl.sv:867:            r_cfg_clkdiv <= 'h0;
+ips/udma/udma_qspi/rtl/udma_spim_clkgen.sv:161:            r_clockdiv_en  <= 0;
+ips/udma/udma_qspi/rtl/udma_spim_clkgen.sv:174:            reg_clk_div <= '0;
+ips/udma/udma_qspi/rtl/udma_spim_txrx.sv:650:            r_rx_clken      <= 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_clk_div_cnt.sv:44:            clk_o      <= 1'b0;
+ips/udma/udma_qspi/rtl/udma_spim_clk_div_cnt.sv:52:                clk_o     <= 1'b0;
+ips/udma/udma_i2s/rtl/i2s_clk_gen.sv:49:            r_clk      <= 1'b0;
+ips/udma/udma_i2s/rtl/i2s_clk_gen.sv:50:            r_clock_en <= 1'b0;
+ips/udma/udma_i2s/rtl/i2s_clk_gen.sv:64:                    r_clock_en <= 1'b0;
+ips/udma/udma_i2s/rtl/i2s_clk_gen.sv:72:                        r_clk     <= 'h0;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:204:            r_i2s_cfg0_clk_en    <=  'h0;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:205:            r_i2s_cfg0_clk_div   <=  'h0;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:207:            r_i2s_cfg1_clk_en    <=  'h0;
+ips/udma/udma_i2s/rtl/udma_i2s_reg_if.sv:208:            r_i2s_cfg1_clk_div   <=  'h0;
+ips/udma/udma_core/rtl/common/udma_clkgen.sv:172:            r_clockdiv_en  <= 0;
+ips/udma/udma_core/rtl/common/udma_clkgen.sv:185:            reg_clk_div <= '0;
+ips/udma/udma_core/rtl/common/udma_clk_div_cnt.sv:40:             clk_o      <= 1'b0;
+ips/udma/udma_core/rtl/common/udma_clk_div_cnt.sv:48:                  clk_o     <= 1'b0;
+ips/udma/udma_core/rtl/common/io_clk_gen.sv:66:           clk_o        <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:464:	    r_rd_ack    <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_control.sv:479:	    	r_rd_ack    <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:147:            clk_en <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:152:            clk_en <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:319:          cmd_ack_o <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:327:          cmd_ack_o <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:352:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:362:                      cmd_ack_o <= 1'b0;  // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:372:                      cmd_ack_o <= 1'b0;  // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:382:                      cmd_ack_o <= 1'b0;  // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:393:                        cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:407:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:417:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:427:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:438:                        cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:452:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:462:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:472:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:483:                        cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:497:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:507:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:517:                      cmd_ack_o <= 1'b0;    // default no command acknowledge
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:528:                        cmd_ack_o <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:542:                      cmd_ack_o <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:553:                      cmd_ack_o <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:563:                      cmd_ack_o <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:574:                        cmd_ack_o <= 1'b0;
+ips/udma/udma_i2c/rtl/udma_i2c_bus_ctrl.sv:583:                      cmd_ack_o <= 1'b0;
+ips/common_cells/clock_divider_counter.sv:119:             clk_div_valid_reg  <= 1'b0;
+ips/common_cells/clock_divider_counter.sv:132:                      clk_cnt <= 'h0;
+ips/common_cells/clock_divider.sv:177:            reg_clk_div <= '0;
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:74:    clk_i <= #(TCP/2) 0;
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:83:    clk_i <= #(TCP/2) 0;
+ips/hwpe-stream/tb/tb_hwpe_stream_source_realign.sv:177:    ctrl.last_packet <= #TA '0;
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:72:    clk_i <= #(TCP/2) 0;
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:81:    clk_i <= #(TCP/2) 0;
+ips/hwpe-stream/tb/tb_hwpe_stream_sink_realign.sv:176:    ctrl.last_packet <= #TA '0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:94:      flags.realign_flags.last_packet <= '0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:96:      flags.realign_flags.last_packet <= '0;
+ips/hwpe-stream/rtl/hwpe_stream_addressgen.sv:98:      flags.realign_flags.last_packet <= (misalignment==1'b1 && overall_counter == trans_size_m2) ? 1'b1 : 1'b0;
+ips/jtag_pulp/src/jtag_enable_synch.sv:25:	     tck1 <= 1'b0;
+ips/jtag_pulp/src/jtag_enable_synch.sv:26:	     tck2 <= 1'b0;
+ips/jtag_pulp/src/jtag_enable_synch.sv:27:	     tck3 <= 1'b0;
+ips/apb_interrupt_cntrl/apb_interrupt_cntrl.sv:194:      r_ack        <= '0;
+ips/hwpe-ctrl/tb/tb_hwpe_ctrl_seq_mult.sv:40:    clk_i <= #(TCP/2) 1'b0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:65:      busy_sticky <= '0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:66:      done_sticky <= '0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:70:      busy_sticky <= '0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:71:      done_sticky <= '0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:77:        busy_sticky <= 1'b0;
+ips/hwpe-ctrl/rtl/hwpe_ctrl_ucode.sv:83:        done_sticky <= 1'b0;
+ips/adv_dbg_if/rtl/adbg_or1k_status_reg.sv:113:         stall_bp_tck  <= '0;
+ips/timer_unit/timer_unit.sv:488:	     s_ref_clk0    <= 1'b0;
+ips/timer_unit/timer_unit.sv:489:	     s_ref_clk1    <= 1'b0;
+ips/timer_unit/timer_unit.sv:490:	     s_ref_clk2    <= 1'b0;
+ips/timer_unit/timer_unit.sv:495:	     s_ref_clk1    <= s_ref_clk0;
+ips/apb/apb_gpio/apb_gpio.sv:308:		w_gpio_lock[i] <= 1'b0; 
+ips/apb/apb_adv_timer/input_stage.sv:56:            r_ls_clk_sync <= 'h0;
+ips/apb/apb_adv_timer/input_stage.sv:58:            r_ls_clk_sync <= {r_ls_clk_sync[1:0],ls_clk_i};
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:516:            r_timer0_in_clk   <=  'h0;
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:544:            r_timer1_in_clk   <=  'h0;
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:572:            r_timer2_in_clk   <=  'h0;
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:600:            r_timer3_in_clk   <=  'h0;
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:632:			r_clk_en          <=  'h0;
+ips/apb/apb_adv_timer/adv_timer_apb_if.sv:887:						r_clk_en <= PWDATA[3:0];
+ips/apb/apb_fll_if/apb_fll_if.sv:87:            fll1_ack_sync0  <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:88:            fll1_ack_sync   <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:89:            fll2_ack_sync0  <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:90:            fll2_ack_sync   <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:91:            fll3_ack_sync0  <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:92:            fll3_ack_sync   <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:93:            fll1_lock_sync0 <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:94:            fll1_lock_sync  <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:95:            fll2_lock_sync0 <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:96:            fll2_lock_sync  <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:97:            fll3_lock_sync0 <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:98:            fll3_lock_sync  <= 1'b0;
+ips/apb/apb_fll_if/apb_fll_if.sv:104:            fll1_ack_sync   <= fll1_ack_sync0;
+ips/apb/apb_fll_if/apb_fll_if.sv:106:            fll2_ack_sync   <= fll2_ack_sync0;
+ips/apb/apb_fll_if/apb_fll_if.sv:108:            fll3_ack_sync   <= fll3_ack_sync0;
+ips/apb/apb_fll_if/apb_fll_if.sv:110:            fll1_lock_sync  <= fll1_lock_sync0;
+ips/apb/apb_fll_if/apb_fll_if.sv:112:            fll2_lock_sync  <= fll2_lock_sync0;
+ips/apb/apb_fll_if/apb_fll_if.sv:114:            fll3_lock_sync  <= fll3_lock_sync0;
+rtl/pulpissimo/safe_domain_reg_if.sv:141:	     reg_if_ack_o  <= 1'b0;
+rtl/pulpissimo/safe_domain_reg_if.sv:142:	     reg_if_ack_o_lck <= 1'b0; //cwe-1232 type 2
+rtl/pulpissimo/safe_domain_reg_if.sv:148:		    reg_if_ack_o <= 1'b0;
+rtl/pulpissimo/safe_domain.sv:504:                ref_clk_0 <= 1'b0;
+rtl/pulpissimo/safe_domain.sv:505:                ref_clk_1 <= 1'b0;
+rtl/pulpissimo/safe_domain.sv:506:                ref_clk_2 <= 1'b0;
+rtl/pulpissimo/safe_domain.sv:509:                ref_clk_1 <= ref_clk_0;

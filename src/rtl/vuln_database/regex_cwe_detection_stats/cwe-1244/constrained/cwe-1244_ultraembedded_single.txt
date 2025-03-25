@@ -1,0 +1,1 @@
+core/riscv/riscv_mmu.v:205:    wire        supervisor_i_w = (fetch_in_priv_i == `PRIV_SUPER | lsu_dbg_mode) ? 1'b1 : 1'b0;

@@ -1,0 +1,1 @@
+rtl/e203/perips/sirv_pmu_core.v:339:  assign T_394 = io_regs_ie_write_valid & (unlocked | io_debug_mode);
