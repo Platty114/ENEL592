@@ -17,10 +17,10 @@ piton/design/chipset/noc_sd_bridge/rtl/piton_sd_transaction_manager.v:148:      
 piton/design/chipset/noc_sd_bridge/rtl/sd_data_master.v:179:                if (timeout_reg && watchdog >= timeout_reg) begin
 piton/design/chipset/noc_sd_bridge/rtl/sd_cmd_master.v:208:                if (timeout_reg && watchdog >= timeout_reg) begin
 piton/design/chipset/noc_sd_bridge/rtl/piton_sd_core_ctrl.v:424:                if (cache_lock_release    &&  ~cache_lock_status) begin
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:392:    if(reset_l & wen & ~reset_r) begin
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:395:    if(reset_l & wen & word_wen[1])
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:397:    if(reset_l & wen & word_wen[2] & reset_r) //type 3 cwe-1231
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:399:    if(reset_l & wen & word_wen[3])
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:395:    if(reset_l & wen & ~reset_r) begin
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:398:    if(reset_l & wen & word_wen[1])
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:405:    if(reset_l & wen & word_wen[2] & reset_r) 
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:411:    if(reset_l & wen & word_wen[3])
 piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:220:	    if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IRF)
 piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_esl_lfsr.v:81:        if (rst_n && lfsr_ld)
 piton/design/chip/tile/sparc/ifu/rtl/sparc_ifu_esl_lfsr.v:83:        else if (rst_n && lfsr_step)

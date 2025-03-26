@@ -6,6 +6,13 @@ CWE-1231
 		2. Type 3, axi_regs_top.sv, 202, hackdac19
 	    undetected:
 		3. Type 4, dmi_jtag.sv, 224, hackdac19
+    SIMPLE 
+    	HackDac19: 168 total detections
+	    detected:
+		1. Type 2, dmi_jtag.sv, 172, hackdac19
+		2. Type 3, axi_regs_top.sv, 202, hackdac19
+	    undetected:
+		3. Type 4, dmi_jtag.sv, 224, hackdac19
 CWE-1232
 
 CWE-1234

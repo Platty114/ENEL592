@@ -1,0 +1,182 @@
+CWE-1231
+    - HACKDAC18
+	CONSTRAINED: 64 detections
+	    detected:
+		1. Type 3, tap_top.sv, 173, hackdac18
+		2. Type 2, tap_top.sv, 196, hackdac18
+	    undetected:
+		3. Type 4, hwpe_stream_fifo_earlystall_sidech.sv, 62, hackdac18
+
+	SIMPLE: 300 detections
+	    detected:
+		1. Type 3, tap_top.sv, 173, hackdac18
+		2. Type 2, tap_top.sv, 196, hackdac18
+	    undetected:
+		3. Type 4, hwpe_stream_fifo_earlystall_sidech.sv, 62, hackdac18
+
+    - HACKDAC19
+	CONSTRAINED: 33 total detections
+	    detected:
+		1. Type 2, dmi_jtag.sv, 172, hackdac19
+		2. Type 3, axi_regs_top.sv, 202, hackdac19
+	    undetected:
+		3. Type 4, dmi_jtag.sv, 224, hackdac19
+
+	SIMPLE: 168 total detections
+	    detected:
+		1. Type 2, dmi_jtag.sv, 172, hackdac19
+		2. Type 3, axi_regs_top.sv, 202, hackdac19
+	    undetected:
+		3. Type 4, dmi_jtag.sv, 224, hackdac19
+
+    - HACKDAC21
+	CONSTRAINED: 197 total detections 
+	    detected:
+		1. Type 2, bw_r_rf16x160.v, 395, hackdac21
+		2. Type 3, bw_r_rf16x160.v, 405, hackdac21
+		3. Type 4, bw_r_rf16x160.v, 411, hackdac21
+	    undetected:
+		4. Type 3, bw_r_rf32x80.v, 277, hackdac21
+	SIMPLE: 1126 Total detections
+	    detected:
+		1. Type 2, bw_r_rf16x160.v, 395, hackdac21
+		2. Type 3, bw_r_rf16x160.v, 405, hackdac21
+		3. Type 4, bw_r_rf16x160.v, 411, hackdac21
+		4. Type 3, bw_r_rf32x80.v, 277, hackdac21
+	    undetected:
+		none
+
+    - PICORV32
+	CONSTRAINED: 35 Total detections
+	    detected:
+		1. Type 3, spimemio.sv, 215, picorv32 
+		2. Type 2, picorv32.v, 400, picorv32 	
+	    undetected:
+		none
+	SIMPLE: 99 Total detections
+	    detected:
+		1. Type 3, spimemio.sv, 215, picorv32 
+		2. Type 2, picorv32.v, 400, picorv32 	
+	    undetected:
+		none
+
+    - HUMMINGBIRDV2
+	CONSTRAINED: 15 total detections
+	    detected: 
+		none
+	    undetected:
+		1. Type 3, spi_master_fifo.v, 47, hummingbirdv2
+		2. Type 4, sirv_qspi_arbiter.v, 218, hummingbirdv2
+		3. Type 3, e203_subsys_hclkgen_rstsync.v, 51, hummingbirdv2
+
+	SIMPLE: 44 total detections 
+	    detected:
+		none
+	    undetected:
+		1. Type 3, spi_master_fifo.v, 47, hummingbirdv2
+		2. Type 4, sirv_qspi_arbiter.v, 218, hummingbirdv2
+		3. Type 3, e203_subsys_hclkgen_rstsync.v, 51, hummingbirdv2
+
+    - ULTRAEMBEDDED_SINGLE
+	CONSTRAINED: 256 Total Detections
+	    detected:
+		1. Type 3, dcache_axi.v, 308, ultraembeddedold
+	    undetected:
+		
+	SIMPLE:
+	    detected:
+		1. Type 3, dcache_axi.v, 308, ultraembeddedold
+	    undetected:
+    - ULTRAEMBEDDED_DUAL
+	CONSTRAINED: 24 Total Detections
+	    detected:
+		1. Type 2, icache.v, 172, ultraembeddedNew
+	    undetected:
+		
+	SIMPLE: 133 Total Detections
+	    detected:
+		1. Type 2, icache.v, 172, ultraembeddedNew
+	    undetected:
+
+CWE-1232
+    - HACKDAC18
+	CONSTRAINED: 144 total detections
+	    detected:
+		1. Type 3, apb_gpio.sv, 305, hackdac18
+		2. Type 2, safe_domain_reg_if.sv, 142, hackdac18
+	    undetected:
+		3. Type 4, apb_gpio.sv, 301, hackdac18
+
+	SIMPLE: 2771 total detections
+	    detected:
+		1. Type 3, apb_gpio.sv, 305, hackdac18
+		2. Type 2, safe_domain_reg_if.sv, 142, hackdac18
+	    undetected:
+		3. Type 4, apb_gpio.sv, 301, hackdac18
+
+    - HACKDAC19
+	CONSTRAINED: 38 total detections
+	    detected:
+
+	    undetected:
+		1. Type 3, rrabiter.sv, 137, hackdac19 
+
+	SIMPLE: 1327 total detections
+	    detected:
+
+	    undetected:
+		1. Type 3, rrabiter.sv, 137, hackdac19 
+
+    - HACKDAC21
+	CONSTRAINED: 226 total detections
+	    detected:
+
+	    undetected:
+		1. Type 3, piton_sd_cache_manager.v, 171, hackdac21
+
+	SIMPLE: 5536 total detections
+	    detected:
+
+	    undetected:
+		1. Type 3, piton_sd_cache_manager.v, 171, hackdac21
+
+    - PICORV32
+	CONSTRAINED:
+	    detected:
+	    undetected:
+	SIMPLE:
+	    detected:
+	    undetected:
+
+    - HUMMINGBIRDV2
+	CONSTRAINED: 34 total detections
+	    detected:
+	    undetected:
+		1. Type 3, sirv_pmu_core.sv, 500, hummingbirdv2
+
+	SIMPLE: 646 total detections
+	    detected:
+	    undetected:
+		1. Type 3, sirv_pmu_core.sv, 500, hummingbirdv2
+    
+    - ULTRAEMBEDDED_SINGLE
+	CONSTRAINED: 13 total detections
+	    detected:
+	    undetected:
+		1. Type 4, tcm_mem_pmem.sv, 165, ultraembedded(old)
+
+	SIMPLE: 471 Total Detections
+	    detected:
+	    undetected:
+		1. Type 4, tcm_mem_pmem.sv, 165, ultraembedded(old)
+
+CWE-1234
+
+CWE-1244
+
+CWE-1262
+
+CWE-1271
+
+CWE-1282
+

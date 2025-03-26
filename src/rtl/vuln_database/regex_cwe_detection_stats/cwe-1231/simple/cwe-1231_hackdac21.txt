@@ -153,10 +153,10 @@ piton/design/chip/tile/l2/rtl/l2_smc.v.pyv:426:        if (rd_en && ~rd_diag_en 
 piton/design/chip/tile/l2/rtl/l2_smc.v.pyv:431:    else if (rd_en && ~rd_diag_en && hit)
 piton/design/chip/tile/l2/rtl/l2_smc.v.pyv:519:    if (wr_en && wr_diag_en)
 piton/design/chip/tile/l2/rtl/l2_state.v.pyv:92:    if (rd_en && wr_en && (rd_addr == wr_addr))
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:392:    if(reset_l & wen & ~reset_r) begin
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:395:    if(reset_l & wen & word_wen[1])
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:397:    if(reset_l & wen & word_wen[2] & reset_r) //type 3 cwe-1231
-piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:399:    if(reset_l & wen & word_wen[3])
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:395:    if(reset_l & wen & ~reset_r) begin
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:398:    if(reset_l & wen & word_wen[1])
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:405:    if(reset_l & wen & word_wen[2] & reset_r) 
+piton/design/chip/tile/common/srams/rtl/bw_r_rf16x160.v:411:    if(reset_l & wen & word_wen[3])
 piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:220:	    if (rtap_core_val && rtap_core_id == `JTAG_CORE_ID_IRF)
 piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:354:	  if ((ecl_irf_wen_w & ecl_irf_wen_w2) & (thr_rd_w[6:0] ==
 piton/design/chip/tile/sparc/exu/bw_r_irf/rtl/bw_r_irf.v:1391:      if (ecl_irf_wen_w & ecl_irf_wen_w2 & (thr_rd_w[6:0] == thr_rd_w2[6:0])) begin
@@ -212,7 +212,7 @@ piton/design/chip/tile/sparc/srams/rtl/bw_r_scm.v:336:		if(rptr_vld & ~scan_ena)
 piton/design/chip/tile/sparc/srams/rtl/bw_r_scm.v:337:			if (rptr_vld & wptr_vld & ~rst_tri_en) begin
 piton/design/chip/tile/sparc/srams/rtl/bw_r_scm.v:347:			if (rw_wdline[k] & rptr_vld & ~scan_ena)
 piton/design/chip/tile/sparc/srams/rtl/bw_r_scm.v:349:				if (rptr_vld & wptr_vld & ~rst_tri_en) // INNO - write-thru
-piton/design/chip/tile/sparc/srams/rtl/bw_r_rf32x80.v:272:	if (wr_vld & reset_l || rst_tri_en) begin // type 3 cwe-1231
+piton/design/chip/tile/sparc/srams/rtl/bw_r_rf32x80.v:277:	if (wr_vld & reset_l || rst_tri_en) begin // type 3 cwe-1231
 piton/design/chip/tile/sparc/srams/rtl/bw_r_itlb.v.pyv:422:                                if (demap_auto & demap_other) 
 piton/design/chip/tile/sparc/srams/rtl/bw_r_itlb.v.pyv:456:	if (((rw_index_vld & rw_wdline[r]) | (~rw_index_vld & tlb_entry_replace_d2[r])) & 
 piton/design/chip/tile/sparc/srams/rtl/bw_r_itlb.v.pyv:460:		if (ademap_hit[r] & wr_vld)			// autodemap specifically
