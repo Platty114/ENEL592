@@ -171,8 +171,252 @@ CWE-1232
 		1. Type 4, tcm_mem_pmem.sv, 165, ultraembedded(old)
 
 CWE-1234
+    - HACKDAC18
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 2, tap_top.v, 186, hackdac18
+
+	SIMPLE: 22 total detections
+	    detected:
+		1. Type 2, tap_top.v, 186, hackdac18
+	    undetected:
+	
+	MODIFIED: 1120 total detections
+	    detected:
+		1. Type 2, tap_top.v, 186, hackdac18
+	    undetected:
+    
+    -HACKDAC19
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 4, dmi_jtag.sv, 127, hackdac19
+
+	SIMPLE: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 4, dmi_jtag.sv, 127, hackdac19
+	
+	MODIFIED: 533 total detections
+	    detected:
+	    undetected:
+		1. Type 4, dmi_jtag.sv, 127, hackdac19
+
+    -HACKDAC21
+	CONSTRAINED: 4 total detections
+	    detected:
+	    undetected:
+		1. Type 3, bw_r_rf16x160.v, 412, hackdac21
+
+	SIMPLE: 121 total detections
+	    detected:
+	    undetected:
+		1. Type 3, bw_r_rf16x160.v, 412, hackdac21
+	
+	MODIFIED: 9016 total detections
+	    detected:
+		1. Type 3, bw_r_rf16x160.v, 412, hackdac21
+	    undetected:
+    - PICORV32
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 3, spimemo.v, 117, picorv32
+
+	SIMPLE: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 3, spimemo.v, 117, picorv32
+	
+	MODIFIED: 394 total detections
+	    detected:
+	    undetected:
+		1. Type 3, spimemo.v, 117, picorv32
+
+    - HUMMINGBIRDV2
+	CONSTRAINED: 1 total detections
+	    detected:
+		1. Type 4, sirv_pmu_core.v, 339, humingbirdv2 
+	    undetected:
+
+	SIMPLE: 17 total detections
+	    detected:
+		1. Type 4, sirv_pmu_core.v, 339, humingbirdv2 
+	    undetected:
+	
+	MODIFIED: 1936 total detections
+	    detected:
+		1. Type 4, sirv_pmu_core.v, 339, humingbirdv2 
+	    undetected:
+
+    - ULTRAEMBEDDED_SINGLE
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 2, dcache_axi_axi.v, 115, ultraembedded(old)
+
+	SIMPLE: 8 total detections
+	    detected:
+	    undetected:
+		1. Type 2, dcache_axi_axi.v, 115, ultraembedded(old)
+	
+	MODIFIED: 608 total detections
+	    detected:
+		1. Type 2, dcache_axi_axi.v, 115, ultraembedded(old)
+	    undetected:
+
+    - ULTRAEMBEDDED_DUAL
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 4, biriscv_lsu.v, 311, ultraemebedded(new)
+
+	SIMPLE: 2 total detections
+	    detected:
+	    undetected:
+		1. Type 4, biriscv_lsu.v, 311, ultraemebedded(new)
+	
+	MODIFIED: 409 total detections
+	    detected:
+	    undetected:
+		1. Type 4, biriscv_lsu.v, 311, ultraemebedded(new)
 
 CWE-1244
+    - HACKDAC18
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 3, adbg_or1k_module.sv, 258, hackdac18
+		2. Type 3, dc_token_ring_fifo_din.sv, 39, hackdac18
+
+	SIMPLE: 1187 total detections
+	    detected:
+	    undetected:
+		1. Type 3, adbg_or1k_module.sv, 258, hackdac18
+		2. Type 3, dc_token_ring_fifo_din.sv, 39, hackdac18
+	
+	MODIFIED: 711 total detections
+	    detected:
+		1. Type 3, adbg_or1k_module.sv, 258, hackdac18
+		2. Type 3, dc_token_ring_fifo_din.sv, 39, hackdac18
+	    undetected:
+
+	MODIFIED_CONSTRAINED: 20 total detections
+	    detected:
+	    undetected:
+		1. Type 3, adbg_or1k_module.sv, 258, hackdac18
+		2. Type 3, dc_token_ring_fifo_din.sv, 39, hackdac18
+    
+    -HACKDAC19
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+		1. Type 2, csr_regfile.sv, 963, hackdac19
+
+	SIMPLE: 696 total detections
+	    detected:
+		1. Type 2, csr_regfile.sv, 963, hackdac19
+	    undetected:
+	
+	MODIFIED: 26 total detections
+	    detected:
+		1. Type 2, csr_regfile.sv, 963, hackdac19
+	    undetected:
+
+	MODIFIED_CONSTRAINED: 1120 total detections
+	    detected:
+		1. Type 2, csr_regfile.sv, 963, hackdac19
+	    undetected:
+
+    -HACKDAC21
+	CONSTRAINED: 1 total detections
+	    detected:
+	    undetected:
+		1. Type 4, sparc_ifu_fcl.v, 2134, hackdac21
+
+	SIMPLE: 3353 total detections
+	    detected:
+	    undetected:
+		1. Type 4, sparc_ifu_fcl.v, 2134, hackdac21
+	
+	MODIFIED: 3001 total detections
+	    detected:
+		1. Type 4, sparc_ifu_fcl.v, 2134, hackdac21
+	    undetected:
+
+	MODIFIED_CONSTRAINED: 109 total detections
+	    detected:
+		1. Type 4, sparc_ifu_fcl.v, 2134, hackdac21
+	    undetected:
+
+    - PICORV32
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+
+	SIMPLE: 0 total detections
+	    detected:
+	    undetected:
+	
+	MODIFIED: 394 total detections
+	    detected:
+	    undetected:
+
+	MODIFIED_CONSTRAINED: 1120 total detections
+	    detected:
+	    undetected:
+
+    - HUMMINGBIRDV2
+	CONSTRAINED: 1 total detections
+	    detected:
+	    undetected:
+
+	SIMPLE: 17 total detections
+	    detected:
+	    undetected:
+	
+	MODIFIED: 1936 total detections
+	    detected:
+	    undetected:
+
+	MODIFIED_CONSTRAINED: 1120 total detections
+	    detected:
+	    undetected:
+
+    - ULTRAEMBEDDED_SINGLE
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+
+	SIMPLE: 8 total detections
+	    detected:
+	    undetected:
+	
+	MODIFIED: 608 total detections
+	    detected:
+	    undetected:
+
+	MODIFIED_CONSTRAINED: 1120 total detections
+	    detected:
+	    undetected:
+
+    - ULTRAEMBEDDED_DUAL
+	CONSTRAINED: 0 total detections
+	    detected:
+	    undetected:
+
+	SIMPLE: 2 total detections
+	    detected:
+	    undetected:
+	
+	MODIFIED: 409 total detections
+	    detected:
+	    undetected:
+
+	MODIFIED_CONSTRAINED: 1120 total detections
+	    detected:
+	    undetected:
 
 CWE-1262
 

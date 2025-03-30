@@ -66,4 +66,4 @@ ultraembedded(old)
 1. Type 2, dcache_axi_axi.v, 115, ultraembedded(old)
 
 ultraembedded(new)
-1. Type 3, biriscv_lsu.v, 311, ultraemebedded(new)
+1. Type 4, biriscv_lsu.v, 311, ultraemebedded(new)
