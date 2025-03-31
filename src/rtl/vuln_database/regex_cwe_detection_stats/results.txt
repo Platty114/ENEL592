@@ -354,73 +354,178 @@ CWE-1244
 	CONSTRAINED: 0 total detections
 	    detected:
 	    undetected:
+		1. Type 3, picorv32.v, 380, picorv32
 
-	SIMPLE: 0 total detections
+	SIMPLE: 3353 total detections
 	    detected:
 	    undetected:
+		1. Type 3, picorv32.v, 380, picorv32
 	
-	MODIFIED: 394 total detections
+	MODIFIED: 91 total detections
 	    detected:
+		1. Type 3, picorv32.v, 380, picorv32
 	    undetected:
 
-	MODIFIED_CONSTRAINED: 1120 total detections
+	MODIFIED_CONSTRAINED: 0 total detections
 	    detected:
 	    undetected:
+		1. Type 3, picorv32.v, 380, picorv32
 
     - HUMMINGBIRDV2
 	CONSTRAINED: 1 total detections
 	    detected:
 	    undetected:
+		1. type 4, spi_master_apb_if.v, 181-181, hummingbirdv2   
+		2. typ3 3, e203_exu_csr.v, 304, hummingbirdv2
 
-	SIMPLE: 17 total detections
+	SIMPLE: 1831 total detections
 	    detected:
 	    undetected:
+		1. type 4, spi_master_apb_if.v, 181-181, hummingbirdv2   
+		2. typ3 3, e203_exu_csr.v, 304, hummingbirdv2
 	
-	MODIFIED: 1936 total detections
+	MODIFIED: 593 total detections
 	    detected:
 	    undetected:
+		1. type 4, spi_master_apb_if.v, 181-181, hummingbirdv2   
+		2. typ3 3, e203_exu_csr.v, 304, hummingbirdv2
 
-	MODIFIED_CONSTRAINED: 1120 total detections
+	MODIFIED_CONSTRAINED: 16 total detections
 	    detected:
 	    undetected:
+		1. type 4, spi_master_apb_if.v, 181-181, hummingbirdv2   
+		2. typ3 3, e203_exu_csr.v, 304, hummingbirdv2
 
     - ULTRAEMBEDDED_SINGLE
-	CONSTRAINED: 0 total detections
+	CONSTRAINED: 1 total detections
 	    detected:
+		1. Type 2, riscv_mmu.v, 205, ultraemebedded(old)
 	    undetected:
 
-	SIMPLE: 8 total detections
+	SIMPLE: 182 total detections
 	    detected:
+		1. Type 2, riscv_mmu.v, 205, ultraemebedded(old)
 	    undetected:
 	
-	MODIFIED: 608 total detections
+	MODIFIED: 215 total detections
 	    detected:
+		1. Type 2, riscv_mmu.v, 205, ultraemebedded(old)
 	    undetected:
 
-	MODIFIED_CONSTRAINED: 1120 total detections
+	MODIFIED_CONSTRAINED: 1 total detections
 	    detected:
 	    undetected:
+		1. Type 2, riscv_mmu.v, 205, ultraemebedded(old)
 
     - ULTRAEMBEDDED_DUAL
 	CONSTRAINED: 0 total detections
 	    detected:
 	    undetected:
+		1. Type 4, birisc_csr.v, 220, ultraembedded(new)
 
-	SIMPLE: 2 total detections
+	SIMPLE: 193 total detections
 	    detected:
 	    undetected:
+		1. Type 4, birisc_csr.v, 220, ultraembedded(new)
 	
-	MODIFIED: 409 total detections
+	MODIFIED: 182 total detections
 	    detected:
+		1. Type 4, birisc_csr.v, 220, ultraembedded(new)
 	    undetected:
 
-	MODIFIED_CONSTRAINED: 1120 total detections
+	MODIFIED_CONSTRAINED: 0 total detections
 	    detected:
 	    undetected:
+		1. Type 4, birisc_csr.v, 220, ultraembedded(new)
 
 CWE-1262
+    - HACKDAC18
+	MODIFIED: 1120 Total Detections
+	    datected:
+	    undetected:
+		1. Type 4, riscv_cs_registers.sv, 377, hackdac18
+
+	STANDARD: 0 Total Detections
+	    datected:
+	    undetected:
+		1. Type 4, riscv_cs_registers.sv, 377, hackdac18
+
+    - HACKDAC19
+	MODIFIED: 533 Total Detections
+	    datected:
+	    undetected:
+		1. Type 3, csr_regfile.sv, 865, hackatdac19
+
+	STANDARD: 7 Total Detections
+	    datected:
+	    undetected:
+		1. Type 3, csr_regfile.sv, 865, hackatdac19
+
+    - HACKDAC21
+	MODIFIED: 9016 Total Detections
+	    datected:
+		1. Type 2, csr_regfile.sv, 248, hackatdac21
+	    undetected:
+
+	STANDARD: 14 Total Detections
+	    datected:
+	    undetected:
+		1. Type 2, csr_regfile.sv, 248, hackatdac21
 
 CWE-1271
+    - HACKDAC18
+	CONSTRAINED: 54 Total Detections
+	    datected:
+	    undetected:
+		1. Type 4, cs_registers.sv, 637-700, hackdac18
+
+	SIMPLIFIED: 96 Total Detections
+	    datected:
+	    undetected:
+		1. Type 4, cs_registers.sv, 637-700, hackdac18
+
+    - HACKDAC19
+	CONSTRAINED: 14 Total Detections
+	    datected:
+	    undetected:
+		1. Type 3, csr_regfile.sv, 980-1020, hackdac19 
+
+	SIMPLIFIED: 17 Total Detections
+	    datected:
+		1. Type 3, csr_regfile.sv, 980-1020, hackdac19 
+	    undetected:
+
+    - HACKDAC21
+	CONSTRAINED: 91 Total Detections
+	    datected:
+		1. Type 2, jtag_ctap.v, 115-151, hackdac21
+	    undetected:
+
+	SIMPLIFIED: 142 Total Detections
+	    datected:
+		1. Type 2, jtag_ctap.v, 115-151, hackdac21
+	    undetected:
 
 CWE-1282
+    - HACKDAC19
+	CONSTRAINED: 0 Total Detections
+	    datected:
+	    undetected:
+		1. Type 4, sram.sv, 31-57, hackdac19
+
+	SIMPLE: 17 Total Detections
+	    datected:
+	    undetected:
+		1. Type 4, sram.sv, 31-57, hackdac19
+
+    - HACKDAC21
+	CONSTRAINED: 1 Total Detections
+	    datected:
+	    undetected:
+		1. Type 3, sram.sv, 28-51, hackdac21
+
+	SIMPLE: 142 Total Detections
+	    datected:
+	    undetected:
+		1. Type 3, sram.sv, 28-51, hackdac21
 
