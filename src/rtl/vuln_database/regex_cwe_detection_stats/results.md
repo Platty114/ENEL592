@@ -1,4 +1,4 @@
-CWE-1231
+## CWE-1231
     - HACKDAC18
 	CONSTRAINED: 64 detections
 	    detected:
@@ -98,7 +98,7 @@ CWE-1231
 		1. Type 2, icache.v, 172, ultraembeddedNew
 	    undetected:
 
-CWE-1232
+## CWE-1232
     - HACKDAC18
 	CONSTRAINED: 144 total detections
 	    detected:
@@ -170,7 +170,7 @@ CWE-1232
 	    undetected:
 		1. Type 4, tcm_mem_pmem.sv, 165, ultraembedded(old)
 
-CWE-1234
+## CWE-1234
     - HACKDAC18
 	CONSTRAINED: 0 total detections
 	    detected:
@@ -283,7 +283,7 @@ CWE-1234
 	    undetected:
 		1. Type 4, biriscv_lsu.v, 311, ultraemebedded(new)
 
-CWE-1244
+## CWE-1244
     - HACKDAC18
 	CONSTRAINED: 0 total detections
 	    detected:
