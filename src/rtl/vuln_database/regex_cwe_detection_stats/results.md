@@ -320,12 +320,12 @@
 		1. Type 2, csr_regfile.sv, 963, hackdac19
 	    undetected:
 	
-	MODIFIED: 26 total detections
+	MODIFIED: 1120 total detections
 	    detected:
 		1. Type 2, csr_regfile.sv, 963, hackdac19
 	    undetected:
 
-	MODIFIED_CONSTRAINED: 1120 total detections
+	MODIFIED_CONSTRAINED: 26 total detections
 	    detected:
 		1. Type 2, csr_regfile.sv, 963, hackdac19
 	    undetected:
@@ -439,7 +439,7 @@
 	    undetected:
 		1. Type 4, birisc_csr.v, 220, ultraembedded(new)
 
-CWE-1262
+## CWE-1262
     - HACKDAC18
 	MODIFIED: 1120 Total Detections
 	    datected:
@@ -473,7 +473,7 @@ CWE-1262
 	    undetected:
 		1. Type 2, csr_regfile.sv, 248, hackatdac21
 
-CWE-1271
+## CWE-1271
     - HACKDAC18
 	CONSTRAINED: 54 Total Detections
 	    datected:
@@ -507,7 +507,7 @@ CWE-1271
 		1. Type 2, jtag_ctap.v, 115-151, hackdac21
 	    undetected:
 
-CWE-1282
+## CWE-1282
     - HACKDAC19
 	CONSTRAINED: 0 Total Detections
 	    datected:
