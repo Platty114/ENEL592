@@ -67,3 +67,8 @@ graph_flists = [
     ("cwe-226", "cwe-226.f"),
     ("cwe-226", "cwe-226_patched.f"),
 ]
+
+
+isolated_insertions = [
+    ("HackDac18_tap_top_1231_Type2", "cwe-1231/type2", "HackDac18_tap_top_1231_Type2.f"),
+]
