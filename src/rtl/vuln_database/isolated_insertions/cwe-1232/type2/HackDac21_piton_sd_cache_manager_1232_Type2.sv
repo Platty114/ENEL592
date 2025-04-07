@@ -5,7 +5,7 @@
 module HackDac21_piton_sd_cache_manager_1232_Type2 (
     input logic clk,
     input logic rst,
-    input logic lock_aquire,
+    input logic lock_acquire,
     input logic lock_release,
     output logic lock,
     output logic unlock

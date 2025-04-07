@@ -1,8 +1,71 @@
 Syntax Tree #1
 	START###########################################
-		l_ids: [156]
+		l_ids: [490]
+		r_ids: [491]
+		[nid = 491]  addr_i
+		[('req_i', True), ('!we_i', True)]
+		raddr_q <= addr_i
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		HackDac19_sram_1282_type4.addr_i --E--> HackDac19_sram_1282_type4.raddr_q
+
+		HackDac19_sram_1282_type4.we_i --I--> HackDac19_sram_1282_type4.raddr_q
+		HackDac19_sram_1282_type4.req_i --I--> HackDac19_sram_1282_type4.raddr_q
+	END#############################################
+	START###########################################
+		l_ids: [492]
 		r_ids: []
-		HackDac18_tap_top_Type2.rst_ni --I--> HackDac18_tap_top_Type2.run_test_idle
-		HackDac18_tap_top_Type2.tms_reset --I--> HackDac18_tap_top_Type2.run_test_idle
-		HackDac18_tap_top_Type2.tms_i --I--> HackDac18_tap_top_Type2.run_test_idle
+		HackDac19_sram_1282_type4.we_i --I--> HackDac19_sram_1282_type4.address_100_write
+		HackDac19_sram_1282_type4.req_i --I--> HackDac19_sram_1282_type4.address_100_write
+	END#############################################
+	START###########################################
+		l_ids: [585]
+		r_ids: [587]
+		[nid = 587]  wdata_i
+		[('req_i', True), ('!we_i', False), ('be_i[i]', True), ("address_100_write == 0 && addr_i == 16'h0064", True)]
+		ram[addr_i][i] <= wdata_i[i]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		HackDac19_sram_1282_type4.wdata_i --E--> HackDac19_sram_1282_type4.ram
+
+		HackDac19_sram_1282_type4.address_100_write --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.addr_i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.be_i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.we_i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.req_i --I--> HackDac19_sram_1282_type4.ram
+	END#############################################
+	START###########################################
+		l_ids: [589]
+		r_ids: []
+		HackDac19_sram_1282_type4.address_100_write --I--> HackDac19_sram_1282_type4.address_100_write
+		HackDac19_sram_1282_type4.addr_i --I--> HackDac19_sram_1282_type4.address_100_write
+		HackDac19_sram_1282_type4.be_i --I--> HackDac19_sram_1282_type4.address_100_write
+		HackDac19_sram_1282_type4.i --I--> HackDac19_sram_1282_type4.address_100_write
+		HackDac19_sram_1282_type4.we_i --I--> HackDac19_sram_1282_type4.address_100_write
+		HackDac19_sram_1282_type4.req_i --I--> HackDac19_sram_1282_type4.address_100_write
+	END#############################################
+	START###########################################
+		l_ids: [604]
+		r_ids: [606]
+		[nid = 606]  wdata_i
+		[('req_i', True), ('!we_i', False), ('be_i[i]', True), ("address_100_write == 0 && addr_i == 16'h0064", False)]
+		ram[addr_i][i] <= wdata_i[i]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		HackDac19_sram_1282_type4.wdata_i --E--> HackDac19_sram_1282_type4.ram
+
+		HackDac19_sram_1282_type4.address_100_write --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.addr_i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.be_i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.we_i --I--> HackDac19_sram_1282_type4.ram
+		HackDac19_sram_1282_type4.req_i --I--> HackDac19_sram_1282_type4.ram
+	END#############################################
+	START###########################################
+		l_ids: [218]
+		r_ids: [219]
+		[nid = 219]  ram
+		[]
+		rdata_o = ram[raddr_q]
+		assert len(r_hps) (1) == len(l_hps) (1) == TRUE
+		HackDac19_sram_1282_type4.ram --E--> HackDac19_sram_1282_type4.rdata_o
+
 	END#############################################

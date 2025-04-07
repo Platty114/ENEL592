@@ -16,7 +16,7 @@ logic req_rd_q;
 logic req_rd_q_default;
 assign req_rd_q_default = 1'b1;
 
-asssign addr_w   = ((req_wr_q || req_rd_q) ? req_addr_q:
+assign addr_w   = ((req_wr_q || req_rd_q) ? req_addr_q:
                         write_active_w ? axi_awaddr_i : axi_araddr_i);
 
 //-----------------------------------------------------------------

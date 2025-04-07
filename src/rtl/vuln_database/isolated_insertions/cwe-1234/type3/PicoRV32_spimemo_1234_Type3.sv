@@ -4,6 +4,7 @@
 
 
 module PicoRV32_spimemo_1234_Type3 (
+    input logic clk,
     input logic [3:0] cfgreg_we,
     input logic config_en,
     input logic [31:0] cfgreg_di,

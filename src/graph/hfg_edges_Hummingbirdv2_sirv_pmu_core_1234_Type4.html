@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+		{ data: { id: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.io_regs_ie_write_valid' } },
+		{ data: { id: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.T_394' } },
+		{ data: { id: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.unlocked' } },
+		{ data: { id: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.io_debug_mode' } },
+		{
+			data: {
+				id: '0',
+				source: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.io_regs_ie_write_valid',
+				target: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.T_394',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.unlocked',
+				target: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.T_394',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.io_debug_mode',
+				target: 'Hummingbirdv2_sirv_pmu_core_1234_Type4.T_394',
+			}
+		},
+],
+      style: [
+          {
+              selector: 'node',
+              style: {
+                  shape: 'hexagon',
+                  'background-color': 'red',
+                  label: 'data(id)'
+              }
+          }],
+      layout: {
+          name: 'circle'
+      }
+      });
+    </script>
+</body>
+</html>

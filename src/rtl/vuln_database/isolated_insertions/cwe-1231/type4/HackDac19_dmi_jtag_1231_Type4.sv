@@ -5,7 +5,8 @@
 
 module HackDac19_dmi_jtag_Type4 (
     input logic tck_i,
-    input logic trst_ni
+    input logic trst_ni,
+    input logic rst_ni
 );
     localparam logic [1:0] DMINoError = 2'h0;
     enum logic [2:0] { Idle, Read, WaitReadValid, Write, WaitWriteValid } state_d, state_q;

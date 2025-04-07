@@ -15,6 +15,7 @@ module PicoRV32_spimemio_1231_Type3(
     logic din_qspi;
     logic din_ddr;
     logic din_rd;
+    logic din_valid;
     logic softreset;
 
 always @(posedge clk) begin

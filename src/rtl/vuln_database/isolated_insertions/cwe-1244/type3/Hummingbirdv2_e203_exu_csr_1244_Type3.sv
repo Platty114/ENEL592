@@ -3,7 +3,8 @@
 
 module Hummingbirdv2_e203_exu_csr_1244_Type3 (
     input logic sel_mtvec,
-    input logic csr_wr_en
+    input logic csr_wr_en,
+    output logic wbck_csr_wen
 );
 
 //cwe-1244 Type 3 insertion

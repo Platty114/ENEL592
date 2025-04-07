@@ -9,7 +9,7 @@ module HackDac19_csr_regfile_1262_Type3 (
     input logic [63:0] csr_addr_i,
     input logic debug_mode_q,
     output logic [63:0] csr_exception_o_cause,
-    output logic csr_exeception_o_valid
+    output logic csr_exception_o_valid
 );
 
     localparam logic [63:0] ILLEGAL_INSTR = 2;

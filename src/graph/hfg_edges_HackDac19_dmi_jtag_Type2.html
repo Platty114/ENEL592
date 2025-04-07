@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+		{ data: { id: 'HackDac19_dmi_jtag_Type2.DMINoError' } },
+		{ data: { id: 'HackDac19_dmi_jtag_Type2.error_d' } },
+		{ data: { id: 'HackDac19_dmi_jtag_Type2.rst_ni' } },
+		{ data: { id: 'HackDac19_dmi_jtag_Type2.dmi_reset' } },
+		{ data: { id: 'HackDac19_dmi_jtag_Type2.dtmcs_select' } },
+		{
+			data: {
+				id: '0',
+				source: 'HackDac19_dmi_jtag_Type2.DMINoError',
+				target: 'HackDac19_dmi_jtag_Type2.error_d',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'HackDac19_dmi_jtag_Type2.rst_ni',
+				target: 'HackDac19_dmi_jtag_Type2.error_d',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'HackDac19_dmi_jtag_Type2.dmi_reset',
+				target: 'HackDac19_dmi_jtag_Type2.error_d',
+			}
+		},
+		{
+			data: {
+				id: '3',
+				source: 'HackDac19_dmi_jtag_Type2.dtmcs_select',
+				target: 'HackDac19_dmi_jtag_Type2.error_d',
+			}
+		},
+],
+      style: [
+          {
+              selector: 'node',
+              style: {
+                  shape: 'hexagon',
+                  'background-color': 'red',
+                  label: 'data(id)'
+              }
+          }],
+      layout: {
+          name: 'circle'
+      }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+type2
+num_exp_edges: 3
+num_imp_edges: 21
+num_exp_conds: 3
+avg_num_conds: 1.0
+num_flows: 24
+tot_flow_len: 24
+avg_flow_len: 1.0
+
+
+type3
+num_exp_edges: 9
+num_imp_edges: 45
+num_exp_conds: 9
+avg_num_conds: 1.0
+num_flows: 54
+tot_flow_len: 54
+avg_flow_len: 1.0
+
+
+type4
+num_exp_edges: 19
+num_imp_edges: 41
+num_exp_conds: 24
+avg_num_conds: 1.263157894736842
+num_flows: 58
+tot_flow_len: 60
+avg_flow_len: 1.0344827586206897
+
+

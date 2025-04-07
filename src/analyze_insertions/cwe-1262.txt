@@ -1,0 +1,30 @@
+type2
+num_exp_edges: 1
+num_imp_edges: 8
+num_exp_conds: 1
+avg_num_conds: 1.0
+num_flows: 9
+tot_flow_len: 9
+avg_flow_len: 1.0
+
+
+type3
+num_exp_edges: 1
+num_imp_edges: 8
+num_exp_conds: 2
+avg_num_conds: 2.0
+num_flows: 9
+tot_flow_len: 9
+avg_flow_len: 1.0
+
+
+type4
+num_exp_edges: 1
+num_imp_edges: 0
+num_exp_conds: 0
+avg_num_conds: 0.0
+num_flows: 1
+tot_flow_len: 1
+avg_flow_len: 1.0
+
+

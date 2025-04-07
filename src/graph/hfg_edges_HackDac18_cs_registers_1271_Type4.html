@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+		{ data: { id: 'HackDac18_cs_registers_1271_Type4.csr_we_int_n' } },
+		{ data: { id: 'HackDac18_cs_registers_1271_Type4.csr_we_int' } },
+		{ data: { id: 'HackDac18_cs_registers_1271_Type4.csr_op_i' } },
+		{ data: { id: 'HackDac18_cs_registers_1271_Type4.CSR_OP_NONE' } },
+		{ data: { id: 'HackDac18_cs_registers_1271_Type4.rst_n' } },
+		{ data: { id: 'HackDac18_cs_registers_1271_Type4.csr_access_i' } },
+		{
+			data: {
+				id: '0',
+				source: 'HackDac18_cs_registers_1271_Type4.csr_we_int_n',
+				target: 'HackDac18_cs_registers_1271_Type4.csr_we_int',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'HackDac18_cs_registers_1271_Type4.csr_op_i',
+				target: 'HackDac18_cs_registers_1271_Type4.csr_we_int',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'HackDac18_cs_registers_1271_Type4.CSR_OP_NONE',
+				target: 'HackDac18_cs_registers_1271_Type4.csr_we_int',
+			}
+		},
+		{
+			data: {
+				id: '3',
+				source: 'HackDac18_cs_registers_1271_Type4.rst_n',
+				target: 'HackDac18_cs_registers_1271_Type4.csr_we_int',
+			}
+		},
+		{
+			data: {
+				id: '4',
+				source: 'HackDac18_cs_registers_1271_Type4.csr_access_i',
+				target: 'HackDac18_cs_registers_1271_Type4.csr_we_int_n',
+			}
+		},
+],
+      style: [
+          {
+              selector: 'node',
+              style: {
+                  shape: 'hexagon',
+                  'background-color': 'red',
+                  label: 'data(id)'
+              }
+          }],
+      layout: {
+          name: 'circle'
+      }
+      });
+    </script>
+</body>
+</html>

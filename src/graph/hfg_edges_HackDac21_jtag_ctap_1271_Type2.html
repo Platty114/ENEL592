@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+		{ data: { id: 'HackDac21_jtag_ctap_1271_Type2.inst_wr_en_next' } },
+		{ data: { id: 'HackDac21_jtag_ctap_1271_Type2.inst_wr_en' } },
+		{ data: { id: 'HackDac21_jtag_ctap_1271_Type2.addr_wr_en' } },
+		{ data: { id: 'HackDac21_jtag_ctap_1271_Type2.rst_n' } },
+		{
+			data: {
+				id: '0',
+				source: 'HackDac21_jtag_ctap_1271_Type2.inst_wr_en_next',
+				target: 'HackDac21_jtag_ctap_1271_Type2.inst_wr_en',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'HackDac21_jtag_ctap_1271_Type2.addr_wr_en',
+				target: 'HackDac21_jtag_ctap_1271_Type2.inst_wr_en',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'HackDac21_jtag_ctap_1271_Type2.rst_n',
+				target: 'HackDac21_jtag_ctap_1271_Type2.inst_wr_en',
+			}
+		},
+],
+      style: [
+          {
+              selector: 'node',
+              style: {
+                  shape: 'hexagon',
+                  'background-color': 'red',
+                  label: 'data(id)'
+              }
+          }],
+      layout: {
+          name: 'circle'
+      }
+      });
+    </script>
+</body>
+</html>

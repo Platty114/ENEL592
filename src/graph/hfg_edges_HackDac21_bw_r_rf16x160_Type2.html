@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.min.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+		{ data: { id: 'HackDac21_bw_r_rf16x160_Type2.wr_data' } },
+		{ data: { id: 'HackDac21_bw_r_rf16x160_Type2.inq_ary0' } },
+		{ data: { id: 'HackDac21_bw_r_rf16x160_Type2.reset_l' } },
+		{ data: { id: 'HackDac21_bw_r_rf16x160_Type2.wen' } },
+		{ data: { id: 'HackDac21_bw_r_rf16x160_Type2.reset_r' } },
+		{
+			data: {
+				id: '0',
+				source: 'HackDac21_bw_r_rf16x160_Type2.wr_data',
+				target: 'HackDac21_bw_r_rf16x160_Type2.inq_ary0',
+			}
+		},
+		{
+			data: {
+				id: '1',
+				source: 'HackDac21_bw_r_rf16x160_Type2.wr_data',
+				target: 'HackDac21_bw_r_rf16x160_Type2.inq_ary0',
+			}
+		},
+		{
+			data: {
+				id: '2',
+				source: 'HackDac21_bw_r_rf16x160_Type2.reset_l',
+				target: 'HackDac21_bw_r_rf16x160_Type2.inq_ary0',
+			}
+		},
+		{
+			data: {
+				id: '3',
+				source: 'HackDac21_bw_r_rf16x160_Type2.wen',
+				target: 'HackDac21_bw_r_rf16x160_Type2.inq_ary0',
+			}
+		},
+		{
+			data: {
+				id: '4',
+				source: 'HackDac21_bw_r_rf16x160_Type2.reset_r',
+				target: 'HackDac21_bw_r_rf16x160_Type2.inq_ary0',
+			}
+		},
+],
+      style: [
+          {
+              selector: 'node',
+              style: {
+                  shape: 'hexagon',
+                  'background-color': 'red',
+                  label: 'data(id)'
+              }
+          }],
+      layout: {
+          name: 'circle'
+      }
+      });
+    </script>
+</body>
+</html>

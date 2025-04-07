@@ -2,6 +2,8 @@
 
 
 module HackDac18_tap_top_1234_Type2 (
+    input logic tck_i,
+    input logic rst_ni,
     input logic tms_i,
     input logic lock_in,
     input logic tms_q1,
