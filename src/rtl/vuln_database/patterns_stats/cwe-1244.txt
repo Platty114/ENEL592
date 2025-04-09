@@ -12,17 +12,18 @@ on debug mode and password, or just password. to capture this, we want to use a
 regex that identifies a signal being assigned using an or to select the value. The following
 regex fufills this need
 
-modified
-[~a-zA-Z0-9_\-\.]+ *(=|<=) *[(] *[~a-zA-Z0-9_\-\.]+ *(\||\|\|)* *[(]* *[~a-zA-Z0-9_\-\.]*
-
-modified constrained
-[a-zA-Z0-9_\-\.\[\]]*(pr|pri|priv)[a-zA-Z0-9_\-\.\[\]]* *(=|<=) *[(] *[~a-zA-Z0-9_\-\.]+ *(\||\|\|)* *[(]* *[~a-zA-Z0-9_\-\.]*
-
-simple 
+simple regex:
 [a-zA-Z0-9_\-\.\[\]]+ *(<=|=).*([a-zA-Z0-9_\-\.\[\]]+ *([|]|[|][|])* *[a-zA-Z0-9_\-\.\[\]]+.*[?])+
 
-constrained 
+constrained regex:
 [a-zA-Z0-9_\-\.\[\]]*(pr|pri|priv)[a-zA-Z0-9_\-\.\[\]]* (<=|=).*([a-zA-Z0-9_\-\.\[\]]+ *([|]|[|][|]) *[a-zA-Z0-9_\-\.\[\]]+.*[?])+
+
+modified simple regex:
+[~a-zA-Z0-9_\-\.]+ *(=|<=) *[(] *[~a-zA-Z0-9_\-\.]+ *(\||\|\|)* *[(]* *[~a-zA-Z0-9_\-\.]*
+
+modified constrained regex:
+[a-zA-Z0-9_\-\.\[\]]*(pr|pri|priv)[a-zA-Z0-9_\-\.\[\]]* *(=|<=) *[(] *[~a-zA-Z0-9_\-\.]+ *(\||\|\|)* *[(]* *[~a-zA-Z0-9_\-\.]*
+
 
 ----------------------------------- occurance stats -----------------------------------------
 

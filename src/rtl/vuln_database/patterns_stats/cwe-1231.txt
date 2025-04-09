@@ -14,10 +14,11 @@ this vulnerability in the wild, we mostly care about the 'if(...)' statement, sp
 that are responsible for reseting another register using a flip flop. Thus, the following pattern
 is used 
 
-simple
+simple regex:
+
 if *[(][~!]*[(]*( *[~a-zA-Z0-9_\-\.\[\]]+ *(&&|&) *[~a-zA-Z0-9_\-\.\[\]]+)+( *(&&|&) *[~a-zA-Z0-9_\-\.\[\]]+)* *[)]*
 
-constrained
+constrained regex:
 if *[(][~!]*[(]*( *([~a-zA-Z0-9_\-\.\[\]]*(re|res|reset|rst)[~a-zA-Z0-9_\-\.\[\]]*) *(&&|&) *[~a-zA-Z0-9_\-\.\[\]]+)+( *(&&|&) *([~a-zA-Z0-9_\-\.\[\]]*(re|res|reset|rst)[~a-zA-Z0-9_\-\.\[\]]*))* *[)]*
 
 

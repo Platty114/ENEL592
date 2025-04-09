@@ -10,8 +10,6 @@ module HackDac18_tap_top_Type2 (
 
 logic tms_reset;
 logic run_test_idle;
-//ASK: ask Dr.Tan whether he thinks includinng reset logic is important
-//assign tms_reset = tms_q1 & tms_q2 & tms_q3 & tms_q4 & tms_i;
 
 // run_test_idle state
 always @ (posedge tck_i or negedge rst_ni)

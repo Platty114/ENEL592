@@ -23,14 +23,15 @@ then preventing a write from occuring at the address which stores the hash key, 
 or is used, allowing a write to happen anywhere in memory, as long as the write signal is
 held high. To detect this pattern using a regex, we will look for the following pattern
 
-modified
-(\[).*(\]) *[~a-zA-Z0-9_\-\.\[\]]+ *(\[).*(\])
-,
-simple
+simple regex:
 [~a-zA-Z0-9_\-\.\[\]]+ *(==|!=) *(1'b1|1'b0) *[|]+[|]* *[~a-zA-Z0-9_\-\.\[\]:]+ (==|!=) *[~a-zA-Z0-9_\-\.\'\[\]]+
 
-constrained
+constrained regex:
 [~a-zA-Z0-9_\-\.\[\]~]*(wr|write|en)[~a-zA-Z0-9_\-\.\[\]]* *(==|!=) *(1'b1|1'b0) *[|]+[|]* *[~a-zA-Z0-9_\-\.\[\]:]+ (==|!=) *[~a-zA-Z0-9_\-\.\']+
+
+modified simple regex:
+(\[).*(\]) *[~a-zA-Z0-9_\-\.\[\]]+ *(\[).*(\])
+
 ----------------------------------- occurance stats -----------------------------------------
 
 simple
@@ -60,6 +61,4 @@ hackdac21
 
 hackdac19
 1. Type 4, sram.sv, 31-57, hackdac19
-
-hackdac18
 

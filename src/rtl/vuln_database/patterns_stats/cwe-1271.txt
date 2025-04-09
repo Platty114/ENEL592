@@ -25,10 +25,10 @@ of occurances of this pattern, we can first find the number of signals written t
 an enable signal, and then remove the number that don't feature an associated reset clause.
 This can be found using the following two regexs.
 
-Simple
+Simple regex:
 if *[(]+.*[)]+ *[~a-zA-Z0-9_\-\.\[\]]+ *<= *[~a-zA-Z0-9_\-\.\[\]]+
 
-Constrained
+Constrained regex:
 if *[(]+((?!(reset|re|res))[~a-zA-Z0-9_\-\.\[\]])+[)]+ *[~a-zA-Z0-9_\-\.\[\]]+ * <= *[~a-zA-Z0-9_\-\.\[\]]+
 
 ----------------------------------- occurance stats -----------------------------------------
@@ -64,14 +64,3 @@ hackdac19
 hackdac18
 1. Type 4, cs_registers.sv, 637-700, hackdac18
 
-picorv32
-1. Type 2, 
-
-hummingbird
-1. Type 3,    
-
-ultraembedded(old)
-1. Type 4, 
-
-ultraembedded(new)
-1. Type 2,
