@@ -12,14 +12,15 @@ Ultimately, this vulnerability is bassed on a write to some data register being 
 by a lock, and that lock is held in a conditional with other signals, allowing a write to
 occur even if the lock is prohibiting it.
 
-modified
- [~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
 
-simple
+simple regex:
 [~a-zA-Z0-9_\-\.]+ *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+
 
-constrained
+constrained regex:
 [~a-zA-Z0-9_\-\.]*(wr|write|wri)+[~a-zA-Z0-9_\-\.]* *[&|&&] *[(]( *([~a-zA-Z0-9_\-\.]+ *[|])+ *[~a-zA-Z0-9_\-\.]+ *[|]* *[~a-zA-Z0-9_\-\.]*)+
+
+modified simple regex:
+[~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
 
 ----------------------------------- occurance stats -----------------------------------------
 

@@ -1,3 +1,7 @@
+## INSERTION DESCRIPTION FORMAT
+    Type, file_name, line location, Design 
+ie  Type 3, tap_top.sv, 173, hackdac18
+        
 ## CWE-1231
     - HACKDAC18
 	CONSTRAINED: 64 detections

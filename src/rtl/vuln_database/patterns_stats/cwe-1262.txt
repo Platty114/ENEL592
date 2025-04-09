@@ -12,13 +12,11 @@ specific protected register in a csr unit. Instead, the vulnerability should be 
 to access the register. To detect this pattern, we use a regex that is looking for a condition check
 paired with another check. This can be found using the following regex
 
-modified
-[~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
-
-(&&|&) *!*~*[(]*[~a-zA-Z0-9_\-\.\[\]]+ *(!=|==) *[~a-zA-Z0-9_\-\.\[\]:]+[)]*
-
-standard
+standard regex:
 [(]*[~a-zA-Z0-9_\-\.\[\]]+ *(&|&&) *[~a-zA-Z0-9_\-\.\[\]].* *(==|!=) *[~a-zA-Z0-9_\-\.\[\]]+[)]* *(&&|&) *!*[(]*[~a-za-z0-9_\-\.\[\]]+ *(!=|==) *[~a-za-z0-9_\-\.\[\]]+[)]*
+
+modified standard regex:
+[~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
 
 ----------------------------------- occurance stats -----------------------------------------
 
@@ -52,14 +50,3 @@ hackdac19
 hackdac18
 1. Type 4, riscv_cs_registers.sv, 377, hackdac18
 
-picorv32
-1. Type 2, 
-
-hummingbird
-1. Type 3,    
-
-ultraembedded(old)
-1. Type 4, 
-
-ultraembedded(new)
-1. Type 2,
