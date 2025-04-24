@@ -15,9 +15,6 @@ paired with another check. This can be found using the following regex
 standard regex:
 [(]*[~a-zA-Z0-9_\-\.\[\]]+ *(&|&&) *[~a-zA-Z0-9_\-\.\[\]].* *(==|!=) *[~a-zA-Z0-9_\-\.\[\]]+[)]* *(&&|&) *!*[(]*[~a-za-z0-9_\-\.\[\]]+ *(!=|==) *[~a-za-z0-9_\-\.\[\]]+[)]*
 
-modified standard regex:
-[~a-zA-Z0-9_\-\.]+ *(&|&&) *[(]* *[~a-zA-Z0-9_\-\.]+
-
 ----------------------------------- occurance stats -----------------------------------------
 
 Standard

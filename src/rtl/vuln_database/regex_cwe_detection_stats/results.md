@@ -186,11 +186,6 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 		1. Type 2, tap_top.v, 186, hackdac18
 	    undetected:
 	
-	MODIFIED: 1120 total detections
-	    detected:
-		1. Type 2, tap_top.v, 186, hackdac18
-	    undetected:
-    
     -HACKDAC19
 	CONSTRAINED: 0 total detections
 	    detected:
@@ -202,11 +197,6 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 	    undetected:
 		1. Type 4, dmi_jtag.sv, 127, hackdac19
 	
-	MODIFIED: 533 total detections
-	    detected:
-	    undetected:
-		1. Type 4, dmi_jtag.sv, 127, hackdac19
-
     -HACKDAC21
 	CONSTRAINED: 4 total detections
 	    detected:
@@ -218,11 +208,6 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 	    undetected:
 		1. Type 3, bw_r_rf16x160.v, 412, hackdac21
 	
-	MODIFIED: 9016 total detections
-	    detected:
-		1. Type 3, bw_r_rf16x160.v, 412, hackdac21
-	    undetected:
-
     - PICORV32
 	CONSTRAINED: 0 total detections
 	    detected:
@@ -234,11 +219,6 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 	    undetected:
 		1. Type 3, spimemo.v, 117, picorv32
 	
-	MODIFIED: 394 total detections
-	    detected:
-	    undetected:
-		1. Type 3, spimemo.v, 117, picorv32
-
     - HUMMINGBIRDV2
 	CONSTRAINED: 1 total detections
 	    detected:
@@ -250,11 +230,6 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 		1. Type 4, sirv_pmu_core.v, 339, humingbirdv2 
 	    undetected:
 	
-	MODIFIED: 1936 total detections
-	    detected:
-		1. Type 4, sirv_pmu_core.v, 339, humingbirdv2 
-	    undetected:
-
     - ULTRAEMBEDDED_SINGLE
 	CONSTRAINED: 0 total detections
 	    detected:
@@ -266,11 +241,6 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 	    undetected:
 		1. Type 2, dcache_axi_axi.v, 115, ultraembedded(old)
 	
-	MODIFIED: 608 total detections
-	    detected:
-		1. Type 2, dcache_axi_axi.v, 115, ultraembedded(old)
-	    undetected:
-
     - ULTRAEMBEDDED_DUAL
 	CONSTRAINED: 0 total detections
 	    detected:
@@ -282,11 +252,6 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 	    undetected:
 		1. Type 4, biriscv_lsu.v, 311, ultraemebedded(new)
 	
-	MODIFIED: 409 total detections
-	    detected:
-	    undetected:
-		1. Type 4, biriscv_lsu.v, 311, ultraemebedded(new)
-
 ## CWE-1244
     - HACKDAC18
 	CONSTRAINED: 0 total detections
@@ -445,33 +410,18 @@ ie  Type 3, tap_top.sv, 173, hackdac18
 
 ## CWE-1262
     - HACKDAC18
-	MODIFIED: 1120 Total Detections
-	    datected:
-	    undetected:
-		1. Type 4, riscv_cs_registers.sv, 377, hackdac18
-
 	STANDARD: 0 Total Detections
 	    datected:
 	    undetected:
 		1. Type 4, riscv_cs_registers.sv, 377, hackdac18
 
     - HACKDAC19
-	MODIFIED: 533 Total Detections
-	    datected:
-	    undetected:
-		1. Type 3, csr_regfile.sv, 865, hackatdac19
-
 	STANDARD: 7 Total Detections
 	    datected:
 	    undetected:
 		1. Type 3, csr_regfile.sv, 865, hackatdac19
 
     - HACKDAC21
-	MODIFIED: 9016 Total Detections
-	    datected:
-		1. Type 2, csr_regfile.sv, 248, hackatdac21
-	    undetected:
-
 	STANDARD: 14 Total Detections
 	    datected:
 	    undetected:

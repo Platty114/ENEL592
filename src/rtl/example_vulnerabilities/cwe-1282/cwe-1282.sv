@@ -19,6 +19,8 @@ module cwe_1282(
         if(reset == 1'b1) begin
             ram[HASH_ADDR] <= HASH_KEY;
         end
+	//This should use an && rather than an or, as writes to the
+	//HASH_ADDR should be prevented.
         else if(write == 1'b1 || addr[31:2] != HASH_ADDR) begin
             ram[addr[31:2]] <= write_data;
         end
